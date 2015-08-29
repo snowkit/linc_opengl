@@ -544,838 +544,383 @@ extern class GL {
 
 
     @:native('glAccum')
-    static function glAccum(op:Int, value:Float) : Void;
-
-    @:native('glAlphaFunc')
-    static function glAlphaFunc(func:Int, ref:Float) : Void;
-
-    @:native('glArrayElement')
-    static function glArrayElement(i:Int) : Void;
-
-    @:native('glBegin')
-    static function glBegin(mode:Int) : Void;
-
-    @:native('glBindTexture')
-    static function glBindTexture(target:Int, texture:UInt) : Void;
-
-    @:native('glBlendFunc')
-    static function glBlendFunc(sfactor:Int, dfactor:Int) : Void;
-
-    @:native('glCallList')
-    static function glCallList(list:UInt) : Void;
-
-    @:native('glClear')
-    static function glClear(mask:Int) : Void;
-
-    @:native('glClearAccum')
-    static function glClearAccum(red:Float, green:Float, blue:Float, alpha:Float) : Void;
-
-    @:native('glClearColor')
-    static function glClearColor(red:Float, green:Float, blue:Float, alpha:Float) : Void;
-
-    @:native('glClearDepth')
-    static function glClearDepth(depth:Float) : Void;
-
-    @:native('glClearIndex')
-    static function glClearIndex(c:Float) : Void;
-
-    @:native('glClearStencil')
-    static function glClearStencil(s:Int) : Void;
-
-    @:native('glColor3b')
-    static function glColor3b(red:String, green:String, blue:String) : Void;
-
-    @:native('glColor3d')
-    static function glColor3d(red:Float, green:Float, blue:Float) : Void;
-
-    @:native('glColor3f')
-    static function glColor3f(red:Float, green:Float, blue:Float) : Void;
-
-    @:native('glColor3i')
-    static function glColor3i(red:Int, green:Int, blue:Int) : Void;
-
-    @:native('glColor3s')
-    static function glColor3s(red:Int, green:Int, blue:Int) : Void;
-
-    @:native('glColor3ub')
-    static function glColor3ub(red:String, green:String, blue:String) : Void;
-
-    @:native('glColor3ui')
-    static function glColor3ui(red:UInt, green:UInt, blue:UInt) : Void;
-
-    @:native('glColor3us')
-    static function glColor3us(red:UInt, green:UInt, blue:UInt) : Void;
-
-    @:native('glColor4b')
-    static function glColor4b(red:String, green:String, blue:String, alpha:String) : Void;
-
-    @:native('glColor4d')
-    static function glColor4d(red:Float, green:Float, blue:Float, alpha:Float) : Void;
-
-    @:native('glColor4f')
-    static function glColor4f(red:Float, green:Float, blue:Float, alpha:Float) : Void;
-
-    @:native('glColor4i')
-    static function glColor4i(red:Int, green:Int, blue:Int, alpha:Int) : Void;
-
-    @:native('glColor4s')
-    static function glColor4s(red:Int, green:Int, blue:Int, alpha:Int) : Void;
-
-    @:native('glColor4ub')
-    static function glColor4ub(red:String, green:String, blue:String, alpha:String) : Void;
-
-    @:native('glColor4ui')
-    static function glColor4ui(red:UInt, green:UInt, blue:UInt, alpha:UInt) : Void;
-
-    @:native('glColor4us')
-    static function glColor4us(red:UInt, green:UInt, blue:UInt, alpha:UInt) : Void;
-
-    @:native('glColorMask')
-    static function glColorMask(red:Bool, green:Bool, blue:Bool, alpha:Bool) : Void;
-
-    @:native('glColorMaterial')
-    static function glColorMaterial(face:Int, mode:Int) : Void;
-
-    @:native('glCopyPixels')
-    static function glCopyPixels(x:Int, y:Int, width:Int, height:Int, type:Int) : Void;
-
-    @:native('glCopyTexImage1D')
-    static function glCopyTexImage1D(target:Int, level:Int, internalFormat:Int, x:Int, y:Int, width:Int, border:Int) : Void;
-
-    @:native('glCopyTexImage2D')
-    static function glCopyTexImage2D(target:Int, level:Int, internalFormat:Int, x:Int, y:Int, width:Int, height:Int, border:Int) : Void;
-
-    @:native('glCopyTexSubImage1D')
-    static function glCopyTexSubImage1D(target:Int, level:Int, xoffset:Int, x:Int, y:Int, width:Int) : Void;
-
-    @:native('glCopyTexSubImage2D')
-    static function glCopyTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-    @:native('glCullFace')
-    static function glCullFace(mode:Int) : Void;
-
-    @:native('glDeleteLists')
-    static function glDeleteLists(list:UInt, range:Int) : Void;
-
-    @:native('glDepthFunc')
-    static function glDepthFunc(func:Int) : Void;
-
-    @:native('glDepthMask')
-    static function glDepthMask(flag:Bool) : Void;
-
-    @:native('glDepthRange')
-    static function glDepthRange(zNear:Float, zFar:Float) : Void;
-
-    @:native('glDisable')
-    static function glDisable(cap:Int) : Void;
-
-    @:native('glDisableClientState')
-    static function glDisableClientState(array:Int) : Void;
-
-    @:native('glDrawArrays')
-    static function glDrawArrays(mode:Int, first:Int, count:Int) : Void;
-
-    @:native('glDrawBuffer')
-    static function glDrawBuffer(mode:Int) : Void;
-
-    @:native('glEdgeFlag')
-    static function glEdgeFlag(flag:Bool) : Void;
-
-    @:native('glEnable')
-    static function glEnable(cap:Int) : Void;
-
-    @:native('glEnableClientState')
-    static function glEnableClientState(array:Int) : Void;
-
-    @:native('glEnd')
-    static function glEnd() : Void;
-
-    @:native('glEndList')
-    static function glEndList() : Void;
-
-    @:native('glEvalCoord1d')
-    static function glEvalCoord1d(u:Float) : Void;
-
-    @:native('glEvalCoord1f')
-    static function glEvalCoord1f(u:Float) : Void;
-
-    @:native('glEvalCoord2d')
-    static function glEvalCoord2d(u:Float, v:Float) : Void;
-
-    @:native('glEvalCoord2f')
-    static function glEvalCoord2f(u:Float, v:Float) : Void;
-
-    @:native('glEvalMesh1')
-    static function glEvalMesh1(mode:Int, i1:Int, i2:Int) : Void;
-
-    @:native('glEvalMesh2')
-    static function glEvalMesh2(mode:Int, i1:Int, i2:Int, j1:Int, j2:Int) : Void;
-
-    @:native('glEvalPoint1')
-    static function glEvalPoint1(i:Int) : Void;
-
-    @:native('glEvalPoint2')
-    static function glEvalPoint2(i:Int, j:Int) : Void;
-
-    @:native('glFinish')
-    static function glFinish() : Void;
-
-    @:native('glFlush')
-    static function glFlush() : Void;
-
-    @:native('glFogf')
-    static function glFogf(pname:Int, param:Float) : Void;
-
-    @:native('glFogi')
-    static function glFogi(pname:Int, param:Int) : Void;
-
-    @:native('glFrontFace')
-    static function glFrontFace(mode:Int) : Void;
-
-    @:native('glFrustum')
-    static function glFrustum(left:Float, right:Float, bottom:Float, top:Float, zNear:Float, zFar:Float) : Void;
-
-    @:native('glGenLists')
-    static function glGenLists(range:Int) : UInt;
-
-    @:native('glGetError')
-    static function glGetError() : Int;
-
-    @:native('glHint')
-    static function glHint(target:Int, mode:Int) : Void;
-
-    @:native('glIndexMask')
-    static function glIndexMask(mask:UInt) : Void;
-
-    @:native('glIndexd')
-    static function glIndexd(c:Float) : Void;
-
-    @:native('glIndexf')
-    static function glIndexf(c:Float) : Void;
-
-    @:native('glIndexi')
-    static function glIndexi(c:Int) : Void;
-
-    @:native('glIndexs')
-    static function glIndexs(c:Int) : Void;
-
-    @:native('glIndexub')
-    static function glIndexub(c:String) : Void;
-
-    @:native('glInitNames')
-    static function glInitNames() : Void;
-
-    @:native('glIsEnabled')
-    static function glIsEnabled(cap:Int) : Bool;
-
-    @:native('glIsList')
-    static function glIsList(list:UInt) : Bool;
-
-    @:native('glIsTexture')
-    static function glIsTexture(texture:UInt) : Bool;
-
-    @:native('glLightModelf')
-    static function glLightModelf(pname:Int, param:Float) : Void;
-
-    @:native('glLightModeli')
-    static function glLightModeli(pname:Int, param:Int) : Void;
-
-    @:native('glLightf')
-    static function glLightf(light:Int, pname:Int, param:Float) : Void;
-
-    @:native('glLighti')
-    static function glLighti(light:Int, pname:Int, param:Int) : Void;
-
-    @:native('glLineStipple')
-    static function glLineStipple(factor:Int, pattern:UInt) : Void;
-
-    @:native('glLineWidth')
-    static function glLineWidth(width:Float) : Void;
-
-    @:native('glListBase')
-    static function glListBase(base:UInt) : Void;
-
-    @:native('glLoadIdentity')
-    static function glLoadIdentity() : Void;
-
-    @:native('glLoadName')
-    static function glLoadName(name:UInt) : Void;
-
-    @:native('glLogicOp')
-    static function glLogicOp(opcode:Int) : Void;
-
-    @:native('glMapGrid1d')
-    static function glMapGrid1d(un:Int, u1:Float, u2:Float) : Void;
-
-    @:native('glMapGrid1f')
-    static function glMapGrid1f(un:Int, u1:Float, u2:Float) : Void;
-
-    @:native('glMapGrid2d')
-    static function glMapGrid2d(un:Int, u1:Float, u2:Float, vn:Int, v1:Float, v2:Float) : Void;
-
-    @:native('glMapGrid2f')
-    static function glMapGrid2f(un:Int, u1:Float, u2:Float, vn:Int, v1:Float, v2:Float) : Void;
-
-    @:native('glMaterialf')
-    static function glMaterialf(face:Int, pname:Int, param:Float) : Void;
-
-    @:native('glMateriali')
-    static function glMateriali(face:Int, pname:Int, param:Int) : Void;
-
-    @:native('glMatrixMode')
-    static function glMatrixMode(mode:Int) : Void;
-
-    @:native('glNewList')
-    static function glNewList(list:UInt, mode:Int) : Void;
-
-    @:native('glNormal3b')
-    static function glNormal3b(nx:String, ny:String, nz:String) : Void;
-
-    @:native('glNormal3d')
-    static function glNormal3d(nx:Float, ny:Float, nz:Float) : Void;
-
-    @:native('glNormal3f')
-    static function glNormal3f(nx:Float, ny:Float, nz:Float) : Void;
-
-    @:native('glNormal3i')
-    static function glNormal3i(nx:Int, ny:Int, nz:Int) : Void;
-
-    @:native('glNormal3s')
-    static function glNormal3s(nx:Int, ny:Int, nz:Int) : Void;
-
-    @:native('glOrtho')
-    static function glOrtho(left:Float, right:Float, bottom:Float, top:Float, zNear:Float, zFar:Float) : Void;
-
-    @:native('glPassThrough')
-    static function glPassThrough(token:Float) : Void;
-
-    @:native('glPixelStoref')
-    static function glPixelStoref(pname:Int, param:Float) : Void;
-
-    @:native('glPixelStorei')
-    static function glPixelStorei(pname:Int, param:Int) : Void;
-
-    @:native('glPixelTransferf')
-    static function glPixelTransferf(pname:Int, param:Float) : Void;
-
-    @:native('glPixelTransferi')
-    static function glPixelTransferi(pname:Int, param:Int) : Void;
-
-    @:native('glPixelZoom')
-    static function glPixelZoom(xfactor:Float, yfactor:Float) : Void;
-
-    @:native('glPointSize')
-    static function glPointSize(size:Float) : Void;
-
-    @:native('glPolygonMode')
-    static function glPolygonMode(face:Int, mode:Int) : Void;
-
-    @:native('glPolygonOffset')
-    static function glPolygonOffset(factor:Float, units:Float) : Void;
-
-    @:native('glPopAttrib')
-    static function glPopAttrib() : Void;
-
-    @:native('glPopClientAttrib')
-    static function glPopClientAttrib() : Void;
-
-    @:native('glPopMatrix')
-    static function glPopMatrix() : Void;
-
-    @:native('glPopName')
-    static function glPopName() : Void;
-
-    @:native('glPushAttrib')
-    static function glPushAttrib(mask:Int) : Void;
-
-    @:native('glPushClientAttrib')
-    static function glPushClientAttrib(mask:Int) : Void;
-
-    @:native('glPushMatrix')
-    static function glPushMatrix() : Void;
-
-    @:native('glPushName')
-    static function glPushName(name:UInt) : Void;
-
-    @:native('glRasterPos2d')
-    static function glRasterPos2d(x:Float, y:Float) : Void;
-
-    @:native('glRasterPos2f')
-    static function glRasterPos2f(x:Float, y:Float) : Void;
-
-    @:native('glRasterPos2i')
-    static function glRasterPos2i(x:Int, y:Int) : Void;
-
-    @:native('glRasterPos2s')
-    static function glRasterPos2s(x:Int, y:Int) : Void;
-
-    @:native('glRasterPos3d')
-    static function glRasterPos3d(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glRasterPos3f')
-    static function glRasterPos3f(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glRasterPos3i')
-    static function glRasterPos3i(x:Int, y:Int, z:Int) : Void;
-
-    @:native('glRasterPos3s')
-    static function glRasterPos3s(x:Int, y:Int, z:Int) : Void;
-
-    @:native('glRasterPos4d')
-    static function glRasterPos4d(x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glRasterPos4f')
-    static function glRasterPos4f(x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glRasterPos4i')
-    static function glRasterPos4i(x:Int, y:Int, z:Int, w:Int) : Void;
-
-    @:native('glRasterPos4s')
-    static function glRasterPos4s(x:Int, y:Int, z:Int, w:Int) : Void;
-
-    @:native('glReadBuffer')
-    static function glReadBuffer(mode:Int) : Void;
-
-    @:native('glRectd')
-    static function glRectd(x1:Float, y1:Float, x2:Float, y2:Float) : Void;
-
-    @:native('glRectf')
-    static function glRectf(x1:Float, y1:Float, x2:Float, y2:Float) : Void;
-
-    @:native('glRecti')
-    static function glRecti(x1:Int, y1:Int, x2:Int, y2:Int) : Void;
-
-    @:native('glRects')
-    static function glRects(x1:Int, y1:Int, x2:Int, y2:Int) : Void;
-
-    @:native('glRenderMode')
-    static function glRenderMode(mode:Int) : Int;
-
-    @:native('glRotated')
-    static function glRotated(angle:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glRotatef')
-    static function glRotatef(angle:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glScaled')
-    static function glScaled(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glScalef')
-    static function glScalef(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glScissor')
-    static function glScissor(x:Int, y:Int, width:Int, height:Int) : Void;
-
-    @:native('glShadeModel')
-    static function glShadeModel(mode:Int) : Void;
-
-    @:native('glStencilFunc')
-    static function glStencilFunc(func:Int, ref:Int, mask:UInt) : Void;
-
-    @:native('glStencilMask')
-    static function glStencilMask(mask:UInt) : Void;
-
-    @:native('glStencilOp')
-    static function glStencilOp(fail:Int, zfail:Int, zpass:Int) : Void;
-
-    @:native('glTexCoord1d')
-    static function glTexCoord1d(s:Float) : Void;
-
-    @:native('glTexCoord1f')
-    static function glTexCoord1f(s:Float) : Void;
-
-    @:native('glTexCoord1i')
-    static function glTexCoord1i(s:Int) : Void;
-
-    @:native('glTexCoord1s')
-    static function glTexCoord1s(s:Int) : Void;
-
-    @:native('glTexCoord2d')
-    static function glTexCoord2d(s:Float, t:Float) : Void;
-
-    @:native('glTexCoord2f')
-    static function glTexCoord2f(s:Float, t:Float) : Void;
-
-    @:native('glTexCoord2i')
-    static function glTexCoord2i(s:Int, t:Int) : Void;
-
-    @:native('glTexCoord2s')
-    static function glTexCoord2s(s:Int, t:Int) : Void;
-
-    @:native('glTexCoord3d')
-    static function glTexCoord3d(s:Float, t:Float, r:Float) : Void;
-
-    @:native('glTexCoord3f')
-    static function glTexCoord3f(s:Float, t:Float, r:Float) : Void;
-
-    @:native('glTexCoord3i')
-    static function glTexCoord3i(s:Int, t:Int, r:Int) : Void;
-
-    @:native('glTexCoord3s')
-    static function glTexCoord3s(s:Int, t:Int, r:Int) : Void;
-
-    @:native('glTexCoord4d')
-    static function glTexCoord4d(s:Float, t:Float, r:Float, q:Float) : Void;
-
-    @:native('glTexCoord4f')
-    static function glTexCoord4f(s:Float, t:Float, r:Float, q:Float) : Void;
-
-    @:native('glTexCoord4i')
-    static function glTexCoord4i(s:Int, t:Int, r:Int, q:Int) : Void;
-
-    @:native('glTexCoord4s')
-    static function glTexCoord4s(s:Int, t:Int, r:Int, q:Int) : Void;
-
-    @:native('glTexEnvf')
-    static function glTexEnvf(target:Int, pname:Int, param:Float) : Void;
-
-    @:native('glTexEnvi')
-    static function glTexEnvi(target:Int, pname:Int, param:Int) : Void;
-
-    @:native('glTexGend')
-    static function glTexGend(coord:Int, pname:Int, param:Float) : Void;
-
-    @:native('glTexGenf')
-    static function glTexGenf(coord:Int, pname:Int, param:Float) : Void;
-
-    @:native('glTexGeni')
-    static function glTexGeni(coord:Int, pname:Int, param:Int) : Void;
-
-    @:native('glTexParameterf')
-    static function glTexParameterf(target:Int, pname:Int, param:Float) : Void;
-
-    @:native('glTexParameteri')
-    static function glTexParameteri(target:Int, pname:Int, param:Int) : Void;
-
-    @:native('glTranslated')
-    static function glTranslated(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glTranslatef')
-    static function glTranslatef(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glVertex2d')
-    static function glVertex2d(x:Float, y:Float) : Void;
-
-    @:native('glVertex2f')
-    static function glVertex2f(x:Float, y:Float) : Void;
-
-    @:native('glVertex2i')
-    static function glVertex2i(x:Int, y:Int) : Void;
-
-    @:native('glVertex2s')
-    static function glVertex2s(x:Int, y:Int) : Void;
-
-    @:native('glVertex3d')
-    static function glVertex3d(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glVertex3f')
-    static function glVertex3f(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glVertex3i')
-    static function glVertex3i(x:Int, y:Int, z:Int) : Void;
-
-    @:native('glVertex3s')
-    static function glVertex3s(x:Int, y:Int, z:Int) : Void;
-
-    @:native('glVertex4d')
-    static function glVertex4d(x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glVertex4f')
-    static function glVertex4f(x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glVertex4i')
-    static function glVertex4i(x:Int, y:Int, z:Int, w:Int) : Void;
-
-    @:native('glVertex4s')
-    static function glVertex4s(x:Int, y:Int, z:Int, w:Int) : Void;
-
-    @:native('glViewport')
+    static function glAccum(op:Int, value:Float) : Void;    @:native('glAlphaFunc')
+    static function glAlphaFunc(func:Int, ref:Float) : Void;    @:native('glArrayElement')
+    static function glArrayElement(i:Int) : Void;    @:native('glBegin')
+    static function glBegin(mode:Int) : Void;    @:native('glBindTexture')
+    static function glBindTexture(target:Int, texture:UInt) : Void;    @:native('glBlendFunc')
+    static function glBlendFunc(sfactor:Int, dfactor:Int) : Void;    @:native('glCallList')
+    static function glCallList(list:UInt) : Void;    @:native('glClear')
+    static function glClear(mask:Int) : Void;    @:native('glClearAccum')
+    static function glClearAccum(red:Float, green:Float, blue:Float, alpha:Float) : Void;    @:native('glClearColor')
+    static function glClearColor(red:Float, green:Float, blue:Float, alpha:Float) : Void;    @:native('glClearDepth')
+    static function glClearDepth(depth:Float) : Void;    @:native('glClearIndex')
+    static function glClearIndex(c:Float) : Void;    @:native('glClearStencil')
+    static function glClearStencil(s:Int) : Void;    @:native('glColor3b')
+    static function glColor3b(red:String, green:String, blue:String) : Void;    @:native('glColor3d')
+    static function glColor3d(red:Float, green:Float, blue:Float) : Void;    @:native('glColor3f')
+    static function glColor3f(red:Float, green:Float, blue:Float) : Void;    @:native('glColor3i')
+    static function glColor3i(red:Int, green:Int, blue:Int) : Void;    @:native('glColor3s')
+    static function glColor3s(red:Int, green:Int, blue:Int) : Void;    @:native('glColor3ub')
+    static function glColor3ub(red:String, green:String, blue:String) : Void;    @:native('glColor3ui')
+    static function glColor3ui(red:UInt, green:UInt, blue:UInt) : Void;    @:native('glColor3us')
+    static function glColor3us(red:UInt, green:UInt, blue:UInt) : Void;    @:native('glColor4b')
+    static function glColor4b(red:String, green:String, blue:String, alpha:String) : Void;    @:native('glColor4d')
+    static function glColor4d(red:Float, green:Float, blue:Float, alpha:Float) : Void;    @:native('glColor4f')
+    static function glColor4f(red:Float, green:Float, blue:Float, alpha:Float) : Void;    @:native('glColor4i')
+    static function glColor4i(red:Int, green:Int, blue:Int, alpha:Int) : Void;    @:native('glColor4s')
+    static function glColor4s(red:Int, green:Int, blue:Int, alpha:Int) : Void;    @:native('glColor4ub')
+    static function glColor4ub(red:String, green:String, blue:String, alpha:String) : Void;    @:native('glColor4ui')
+    static function glColor4ui(red:UInt, green:UInt, blue:UInt, alpha:UInt) : Void;    @:native('glColor4us')
+    static function glColor4us(red:UInt, green:UInt, blue:UInt, alpha:UInt) : Void;    @:native('glColorMask')
+    static function glColorMask(red:Bool, green:Bool, blue:Bool, alpha:Bool) : Void;    @:native('glColorMaterial')
+    static function glColorMaterial(face:Int, mode:Int) : Void;    @:native('glCopyPixels')
+    static function glCopyPixels(x:Int, y:Int, width:Int, height:Int, type:Int) : Void;    @:native('glCopyTexImage1D')
+    static function glCopyTexImage1D(target:Int, level:Int, internalFormat:Int, x:Int, y:Int, width:Int, border:Int) : Void;    @:native('glCopyTexImage2D')
+    static function glCopyTexImage2D(target:Int, level:Int, internalFormat:Int, x:Int, y:Int, width:Int, height:Int, border:Int) : Void;    @:native('glCopyTexSubImage1D')
+    static function glCopyTexSubImage1D(target:Int, level:Int, xoffset:Int, x:Int, y:Int, width:Int) : Void;    @:native('glCopyTexSubImage2D')
+    static function glCopyTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;    @:native('glCullFace')
+    static function glCullFace(mode:Int) : Void;    @:native('glDeleteLists')
+    static function glDeleteLists(list:UInt, range:Int) : Void;    @:native('glDepthFunc')
+    static function glDepthFunc(func:Int) : Void;    @:native('glDepthMask')
+    static function glDepthMask(flag:Bool) : Void;    @:native('glDepthRange')
+    static function glDepthRange(zNear:Float, zFar:Float) : Void;    @:native('glDisable')
+    static function glDisable(cap:Int) : Void;    @:native('glDisableClientState')
+    static function glDisableClientState(array:Int) : Void;    @:native('glDrawArrays')
+    static function glDrawArrays(mode:Int, first:Int, count:Int) : Void;    @:native('glDrawBuffer')
+    static function glDrawBuffer(mode:Int) : Void;    @:native('glEdgeFlag')
+    static function glEdgeFlag(flag:Bool) : Void;    @:native('glEnable')
+    static function glEnable(cap:Int) : Void;    @:native('glEnableClientState')
+    static function glEnableClientState(array:Int) : Void;    @:native('glEnd')
+    static function glEnd() : Void;    @:native('glEndList')
+    static function glEndList() : Void;    @:native('glEvalCoord1d')
+    static function glEvalCoord1d(u:Float) : Void;    @:native('glEvalCoord1f')
+    static function glEvalCoord1f(u:Float) : Void;    @:native('glEvalCoord2d')
+    static function glEvalCoord2d(u:Float, v:Float) : Void;    @:native('glEvalCoord2f')
+    static function glEvalCoord2f(u:Float, v:Float) : Void;    @:native('glEvalMesh1')
+    static function glEvalMesh1(mode:Int, i1:Int, i2:Int) : Void;    @:native('glEvalMesh2')
+    static function glEvalMesh2(mode:Int, i1:Int, i2:Int, j1:Int, j2:Int) : Void;    @:native('glEvalPoint1')
+    static function glEvalPoint1(i:Int) : Void;    @:native('glEvalPoint2')
+    static function glEvalPoint2(i:Int, j:Int) : Void;    @:native('glFinish')
+    static function glFinish() : Void;    @:native('glFlush')
+    static function glFlush() : Void;    @:native('glFogf')
+    static function glFogf(pname:Int, param:Float) : Void;    @:native('glFogi')
+    static function glFogi(pname:Int, param:Int) : Void;    @:native('glFrontFace')
+    static function glFrontFace(mode:Int) : Void;    @:native('glFrustum')
+    static function glFrustum(left:Float, right:Float, bottom:Float, top:Float, zNear:Float, zFar:Float) : Void;    @:native('glGenLists')
+    static function glGenLists(range:Int) : UInt;    @:native('glGetError')
+    static function glGetError() : Int;    @:native('glHint')
+    static function glHint(target:Int, mode:Int) : Void;    @:native('glIndexMask')
+    static function glIndexMask(mask:UInt) : Void;    @:native('glIndexd')
+    static function glIndexd(c:Float) : Void;    @:native('glIndexf')
+    static function glIndexf(c:Float) : Void;    @:native('glIndexi')
+    static function glIndexi(c:Int) : Void;    @:native('glIndexs')
+    static function glIndexs(c:Int) : Void;    @:native('glIndexub')
+    static function glIndexub(c:String) : Void;    @:native('glInitNames')
+    static function glInitNames() : Void;    @:native('glIsEnabled')
+    static function glIsEnabled(cap:Int) : Bool;    @:native('glIsList')
+    static function glIsList(list:UInt) : Bool;    @:native('glIsTexture')
+    static function glIsTexture(texture:UInt) : Bool;    @:native('glLightModelf')
+    static function glLightModelf(pname:Int, param:Float) : Void;    @:native('glLightModeli')
+    static function glLightModeli(pname:Int, param:Int) : Void;    @:native('glLightf')
+    static function glLightf(light:Int, pname:Int, param:Float) : Void;    @:native('glLighti')
+    static function glLighti(light:Int, pname:Int, param:Int) : Void;    @:native('glLineStipple')
+    static function glLineStipple(factor:Int, pattern:UInt) : Void;    @:native('glLineWidth')
+    static function glLineWidth(width:Float) : Void;    @:native('glListBase')
+    static function glListBase(base:UInt) : Void;    @:native('glLoadIdentity')
+    static function glLoadIdentity() : Void;    @:native('glLoadName')
+    static function glLoadName(name:UInt) : Void;    @:native('glLogicOp')
+    static function glLogicOp(opcode:Int) : Void;    @:native('glMapGrid1d')
+    static function glMapGrid1d(un:Int, u1:Float, u2:Float) : Void;    @:native('glMapGrid1f')
+    static function glMapGrid1f(un:Int, u1:Float, u2:Float) : Void;    @:native('glMapGrid2d')
+    static function glMapGrid2d(un:Int, u1:Float, u2:Float, vn:Int, v1:Float, v2:Float) : Void;    @:native('glMapGrid2f')
+    static function glMapGrid2f(un:Int, u1:Float, u2:Float, vn:Int, v1:Float, v2:Float) : Void;    @:native('glMaterialf')
+    static function glMaterialf(face:Int, pname:Int, param:Float) : Void;    @:native('glMateriali')
+    static function glMateriali(face:Int, pname:Int, param:Int) : Void;    @:native('glMatrixMode')
+    static function glMatrixMode(mode:Int) : Void;    @:native('glNewList')
+    static function glNewList(list:UInt, mode:Int) : Void;    @:native('glNormal3b')
+    static function glNormal3b(nx:String, ny:String, nz:String) : Void;    @:native('glNormal3d')
+    static function glNormal3d(nx:Float, ny:Float, nz:Float) : Void;    @:native('glNormal3f')
+    static function glNormal3f(nx:Float, ny:Float, nz:Float) : Void;    @:native('glNormal3i')
+    static function glNormal3i(nx:Int, ny:Int, nz:Int) : Void;    @:native('glNormal3s')
+    static function glNormal3s(nx:Int, ny:Int, nz:Int) : Void;    @:native('glOrtho')
+    static function glOrtho(left:Float, right:Float, bottom:Float, top:Float, zNear:Float, zFar:Float) : Void;    @:native('glPassThrough')
+    static function glPassThrough(token:Float) : Void;    @:native('glPixelStoref')
+    static function glPixelStoref(pname:Int, param:Float) : Void;    @:native('glPixelStorei')
+    static function glPixelStorei(pname:Int, param:Int) : Void;    @:native('glPixelTransferf')
+    static function glPixelTransferf(pname:Int, param:Float) : Void;    @:native('glPixelTransferi')
+    static function glPixelTransferi(pname:Int, param:Int) : Void;    @:native('glPixelZoom')
+    static function glPixelZoom(xfactor:Float, yfactor:Float) : Void;    @:native('glPointSize')
+    static function glPointSize(size:Float) : Void;    @:native('glPolygonMode')
+    static function glPolygonMode(face:Int, mode:Int) : Void;    @:native('glPolygonOffset')
+    static function glPolygonOffset(factor:Float, units:Float) : Void;    @:native('glPopAttrib')
+    static function glPopAttrib() : Void;    @:native('glPopClientAttrib')
+    static function glPopClientAttrib() : Void;    @:native('glPopMatrix')
+    static function glPopMatrix() : Void;    @:native('glPopName')
+    static function glPopName() : Void;    @:native('glPushAttrib')
+    static function glPushAttrib(mask:Int) : Void;    @:native('glPushClientAttrib')
+    static function glPushClientAttrib(mask:Int) : Void;    @:native('glPushMatrix')
+    static function glPushMatrix() : Void;    @:native('glPushName')
+    static function glPushName(name:UInt) : Void;    @:native('glRasterPos2d')
+    static function glRasterPos2d(x:Float, y:Float) : Void;    @:native('glRasterPos2f')
+    static function glRasterPos2f(x:Float, y:Float) : Void;    @:native('glRasterPos2i')
+    static function glRasterPos2i(x:Int, y:Int) : Void;    @:native('glRasterPos2s')
+    static function glRasterPos2s(x:Int, y:Int) : Void;    @:native('glRasterPos3d')
+    static function glRasterPos3d(x:Float, y:Float, z:Float) : Void;    @:native('glRasterPos3f')
+    static function glRasterPos3f(x:Float, y:Float, z:Float) : Void;    @:native('glRasterPos3i')
+    static function glRasterPos3i(x:Int, y:Int, z:Int) : Void;    @:native('glRasterPos3s')
+    static function glRasterPos3s(x:Int, y:Int, z:Int) : Void;    @:native('glRasterPos4d')
+    static function glRasterPos4d(x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glRasterPos4f')
+    static function glRasterPos4f(x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glRasterPos4i')
+    static function glRasterPos4i(x:Int, y:Int, z:Int, w:Int) : Void;    @:native('glRasterPos4s')
+    static function glRasterPos4s(x:Int, y:Int, z:Int, w:Int) : Void;    @:native('glReadBuffer')
+    static function glReadBuffer(mode:Int) : Void;    @:native('glRectd')
+    static function glRectd(x1:Float, y1:Float, x2:Float, y2:Float) : Void;    @:native('glRectf')
+    static function glRectf(x1:Float, y1:Float, x2:Float, y2:Float) : Void;    @:native('glRecti')
+    static function glRecti(x1:Int, y1:Int, x2:Int, y2:Int) : Void;    @:native('glRects')
+    static function glRects(x1:Int, y1:Int, x2:Int, y2:Int) : Void;    @:native('glRenderMode')
+    static function glRenderMode(mode:Int) : Int;    @:native('glRotated')
+    static function glRotated(angle:Float, x:Float, y:Float, z:Float) : Void;    @:native('glRotatef')
+    static function glRotatef(angle:Float, x:Float, y:Float, z:Float) : Void;    @:native('glScaled')
+    static function glScaled(x:Float, y:Float, z:Float) : Void;    @:native('glScalef')
+    static function glScalef(x:Float, y:Float, z:Float) : Void;    @:native('glScissor')
+    static function glScissor(x:Int, y:Int, width:Int, height:Int) : Void;    @:native('glShadeModel')
+    static function glShadeModel(mode:Int) : Void;    @:native('glStencilFunc')
+    static function glStencilFunc(func:Int, ref:Int, mask:UInt) : Void;    @:native('glStencilMask')
+    static function glStencilMask(mask:UInt) : Void;    @:native('glStencilOp')
+    static function glStencilOp(fail:Int, zfail:Int, zpass:Int) : Void;    @:native('glTexCoord1d')
+    static function glTexCoord1d(s:Float) : Void;    @:native('glTexCoord1f')
+    static function glTexCoord1f(s:Float) : Void;    @:native('glTexCoord1i')
+    static function glTexCoord1i(s:Int) : Void;    @:native('glTexCoord1s')
+    static function glTexCoord1s(s:Int) : Void;    @:native('glTexCoord2d')
+    static function glTexCoord2d(s:Float, t:Float) : Void;    @:native('glTexCoord2f')
+    static function glTexCoord2f(s:Float, t:Float) : Void;    @:native('glTexCoord2i')
+    static function glTexCoord2i(s:Int, t:Int) : Void;    @:native('glTexCoord2s')
+    static function glTexCoord2s(s:Int, t:Int) : Void;    @:native('glTexCoord3d')
+    static function glTexCoord3d(s:Float, t:Float, r:Float) : Void;    @:native('glTexCoord3f')
+    static function glTexCoord3f(s:Float, t:Float, r:Float) : Void;    @:native('glTexCoord3i')
+    static function glTexCoord3i(s:Int, t:Int, r:Int) : Void;    @:native('glTexCoord3s')
+    static function glTexCoord3s(s:Int, t:Int, r:Int) : Void;    @:native('glTexCoord4d')
+    static function glTexCoord4d(s:Float, t:Float, r:Float, q:Float) : Void;    @:native('glTexCoord4f')
+    static function glTexCoord4f(s:Float, t:Float, r:Float, q:Float) : Void;    @:native('glTexCoord4i')
+    static function glTexCoord4i(s:Int, t:Int, r:Int, q:Int) : Void;    @:native('glTexCoord4s')
+    static function glTexCoord4s(s:Int, t:Int, r:Int, q:Int) : Void;    @:native('glTexEnvf')
+    static function glTexEnvf(target:Int, pname:Int, param:Float) : Void;    @:native('glTexEnvi')
+    static function glTexEnvi(target:Int, pname:Int, param:Int) : Void;    @:native('glTexGend')
+    static function glTexGend(coord:Int, pname:Int, param:Float) : Void;    @:native('glTexGenf')
+    static function glTexGenf(coord:Int, pname:Int, param:Float) : Void;    @:native('glTexGeni')
+    static function glTexGeni(coord:Int, pname:Int, param:Int) : Void;    @:native('glTexParameterf')
+    static function glTexParameterf(target:Int, pname:Int, param:Float) : Void;    @:native('glTexParameteri')
+    static function glTexParameteri(target:Int, pname:Int, param:Int) : Void;    @:native('glTranslated')
+    static function glTranslated(x:Float, y:Float, z:Float) : Void;    @:native('glTranslatef')
+    static function glTranslatef(x:Float, y:Float, z:Float) : Void;    @:native('glVertex2d')
+    static function glVertex2d(x:Float, y:Float) : Void;    @:native('glVertex2f')
+    static function glVertex2f(x:Float, y:Float) : Void;    @:native('glVertex2i')
+    static function glVertex2i(x:Int, y:Int) : Void;    @:native('glVertex2s')
+    static function glVertex2s(x:Int, y:Int) : Void;    @:native('glVertex3d')
+    static function glVertex3d(x:Float, y:Float, z:Float) : Void;    @:native('glVertex3f')
+    static function glVertex3f(x:Float, y:Float, z:Float) : Void;    @:native('glVertex3i')
+    static function glVertex3i(x:Int, y:Int, z:Int) : Void;    @:native('glVertex3s')
+    static function glVertex3s(x:Int, y:Int, z:Int) : Void;    @:native('glVertex4d')
+    static function glVertex4d(x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glVertex4f')
+    static function glVertex4f(x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glVertex4i')
+    static function glVertex4i(x:Int, y:Int, z:Int, w:Int) : Void;    @:native('glVertex4s')
+    static function glVertex4s(x:Int, y:Int, z:Int, w:Int) : Void;    @:native('glViewport')
     static function glViewport(x:Int, y:Int, width:Int, height:Int) : Void;
-
-
-    @:native('linc::opengl::glColor3bv')
-    static function glColor3bv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor3dv')
-    static function glColor3dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor3fv')
-    static function glColor3fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor3iv')
-    static function glColor3iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor3sv')
-    static function glColor3sv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor3ubv')
-    static function glColor3ubv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor3uiv')
-    static function glColor3uiv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor3usv')
-    static function glColor3usv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor4bv')
-    static function glColor4bv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor4dv')
-    static function glColor4dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor4fv')
-    static function glColor4fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor4iv')
-    static function glColor4iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor4sv')
-    static function glColor4sv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor4ubv')
-    static function glColor4ubv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor4uiv')
-    static function glColor4uiv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glColor4usv')
-    static function glColor4usv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glGetMapdv')
-    static function glGetMapdv(target:Int, query:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glGetMapfv')
-    static function glGetMapfv(target:Int, query:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glGetMapiv')
-    static function glGetMapiv(target:Int, query:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glNormal3bv')
-    static function glNormal3bv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glNormal3dv')
-    static function glNormal3dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glNormal3fv')
-    static function glNormal3fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glNormal3iv')
-    static function glNormal3iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glNormal3sv')
-    static function glNormal3sv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glRasterPos2dv')
-    static function glRasterPos2dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glRasterPos2fv')
-    static function glRasterPos2fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glRasterPos2iv')
-    static function glRasterPos2iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glRasterPos2sv')
-    static function glRasterPos2sv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glRasterPos3dv')
-    static function glRasterPos3dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glRasterPos3fv')
-    static function glRasterPos3fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glRasterPos3iv')
-    static function glRasterPos3iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glRasterPos3sv')
-    static function glRasterPos3sv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glRasterPos4dv')
-    static function glRasterPos4dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glRasterPos4fv')
-    static function glRasterPos4fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glRasterPos4iv')
-    static function glRasterPos4iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glRasterPos4sv')
-    static function glRasterPos4sv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord1dv')
-    static function glTexCoord1dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord1fv')
-    static function glTexCoord1fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord1iv')
-    static function glTexCoord1iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord1sv')
-    static function glTexCoord1sv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord2dv')
-    static function glTexCoord2dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord2fv')
-    static function glTexCoord2fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord2iv')
-    static function glTexCoord2iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord2sv')
-    static function glTexCoord2sv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord3dv')
-    static function glTexCoord3dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord3fv')
-    static function glTexCoord3fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord3iv')
-    static function glTexCoord3iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord3sv')
-    static function glTexCoord3sv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord4dv')
-    static function glTexCoord4dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord4fv')
-    static function glTexCoord4fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord4iv')
-    static function glTexCoord4iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glTexCoord4sv')
-    static function glTexCoord4sv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertex2dv')
-    static function glVertex2dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertex2fv')
-    static function glVertex2fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertex2iv')
-    static function glVertex2iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertex2sv')
-    static function glVertex2sv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertex3dv')
-    static function glVertex3dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertex3fv')
-    static function glVertex3fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertex3iv')
-    static function glVertex3iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertex3sv')
-    static function glVertex3sv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertex4dv')
-    static function glVertex4dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertex4fv')
-    static function glVertex4fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertex4iv')
-    static function glVertex4iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertex4sv')
-    static function glVertex4sv(bOffset:Int, v:BytesData) : Void;
-
-
-    // static function glAreTexturesResident(n:Int, *textures:const GLuint, *residences:Bool) : Bool;
-    // static function glBitmap(width:Int, height:Int, xorig:Float, yorig:Float, xmove:Float, ymove:Float, *bitmap:const GLubyte) : Void;
-    // static function glCallLists(n:Int, type:Int, *lists:const void) : Void;
-    // static function glClipPlane(plane:Int, *equation:const GLdouble) : Void;
-    // static function glColorPointer(size:Int, type:Int, stride:Int, *pointer:const void) : Void;
-    // static function glDeleteTextures(n:Int, *textures:const GLuint) : Void;
-    // static function glDrawElements(mode:Int, count:Int, type:Int, *indices:const void) : Void;
-    // static function glDrawPixels(width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glEdgeFlagPointer(stride:Int, *pointer:const void) : Void;
-    // static function glEdgeFlagv(*flag:const GLboolean) : Void;
-    // static function glEvalCoord1dv(*u:const GLdouble) : Void;
-    // static function glEvalCoord1fv(*u:const GLfloat) : Void;
-    // static function glEvalCoord2dv(*u:const GLdouble) : Void;
-    // static function glEvalCoord2fv(*u:const GLfloat) : Void;
-    // static function glFeedbackBuffer(size:Int, type:Int, *buffer:Float) : Void;
-    // static function glFogfv(pname:Int, *params:const GLfloat) : Void;
-    // static function glFogiv(pname:Int, *params:const GLint) : Void;
-    // static function glGenTextures(n:Int, *textures:UInt) : Void;
-    // static function glGetBooleanv(pname:Int, *params:Bool) : Void;
-    // static function glGetClipPlane(plane:Int, *equation:Float) : Void;
-    // static function glGetDoublev(pname:Int, *params:Float) : Void;
-    // static function glGetFloatv(pname:Int, *params:Float) : Void;
-    // static function glGetIntegerv(pname:Int, *params:Int) : Void;
-    // static function glGetLightfv(light:Int, pname:Int, *params:Float) : Void;
-    // static function glGetLightiv(light:Int, pname:Int, *params:Int) : Void;
-    // static function glGetMaterialfv(face:Int, pname:Int, *params:Float) : Void;
-    // static function glGetMaterialiv(face:Int, pname:Int, *params:Int) : Void;
-    // static function glGetPixelMapfv(map:Int, *values:Float) : Void;
-    // static function glGetPixelMapuiv(map:Int, *values:UInt) : Void;
-    // static function glGetPixelMapusv(map:Int, *values:UInt) : Void;
-    // static function glGetPointerv(pname:Int, *params:void*) : Void;
-    // static function glGetPolygonStipple(*mask:String) : Void;
-    // static function glGetString(name:Int) : const GLubyte *;
-    // static function glGetTexEnvfv(target:Int, pname:Int, *params:Float) : Void;
-    // static function glGetTexEnviv(target:Int, pname:Int, *params:Int) : Void;
-    // static function glGetTexGendv(coord:Int, pname:Int, *params:Float) : Void;
-    // static function glGetTexGenfv(coord:Int, pname:Int, *params:Float) : Void;
-    // static function glGetTexGeniv(coord:Int, pname:Int, *params:Int) : Void;
-    // static function glGetTexImage(target:Int, level:Int, format:Int, type:Int, *pixels:Void) : Void;
-    // static function glGetTexLevelParameterfv(target:Int, level:Int, pname:Int, *params:Float) : Void;
-    // static function glGetTexLevelParameteriv(target:Int, level:Int, pname:Int, *params:Int) : Void;
-    // static function glGetTexParameterfv(target:Int, pname:Int, *params:Float) : Void;
-    // static function glGetTexParameteriv(target:Int, pname:Int, *params:Int) : Void;
-    // static function glIndexPointer(type:Int, stride:Int, *pointer:const void) : Void;
-    // static function glIndexdv(*c:const GLdouble) : Void;
-    // static function glIndexfv(*c:const GLfloat) : Void;
-    // static function glIndexiv(*c:const GLint) : Void;
-    // static function glIndexsv(*c:const GLshort) : Void;
-    // static function glIndexubv(*c:const GLubyte) : Void;
-    // static function glInterleavedArrays(format:Int, stride:Int, *pointer:const void) : Void;
-    // static function glLightModelfv(pname:Int, *params:const GLfloat) : Void;
-    // static function glLightModeliv(pname:Int, *params:const GLint) : Void;
-    // static function glLightfv(light:Int, pname:Int, *params:const GLfloat) : Void;
-    // static function glLightiv(light:Int, pname:Int, *params:const GLint) : Void;
-    // static function glLoadMatrixd(*m:const GLdouble) : Void;
-    // static function glLoadMatrixf(*m:const GLfloat) : Void;
-    // static function glMap1d(target:Int, u1:Float, u2:Float, stride:Int, order:Int, *points:const GLdouble) : Void;
-    // static function glMap1f(target:Int, u1:Float, u2:Float, stride:Int, order:Int, *points:const GLfloat) : Void;
-    // static function glMap2d(target:Int, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, *points:const GLdouble) : Void;
-    // static function glMap2f(target:Int, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, *points:const GLfloat) : Void;
-    // static function glMaterialfv(face:Int, pname:Int, *params:const GLfloat) : Void;
-    // static function glMaterialiv(face:Int, pname:Int, *params:const GLint) : Void;
-    // static function glMultMatrixd(*m:const GLdouble) : Void;
-    // static function glMultMatrixf(*m:const GLfloat) : Void;
-    // static function glNormalPointer(type:Int, stride:Int, *pointer:const void) : Void;
-    // static function glPixelMapfv(map:Int, mapsize:Int, *values:const GLfloat) : Void;
-    // static function glPixelMapuiv(map:Int, mapsize:Int, *values:const GLuint) : Void;
-    // static function glPixelMapusv(map:Int, mapsize:Int, *values:const GLushort) : Void;
-    // static function glPolygonStipple(*mask:const GLubyte) : Void;
-    // static function glPrioritizeTextures(n:Int, *textures:const GLuint, *priorities:const GLclampf) : Void;
-    // static function glReadPixels(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, *pixels:Void) : Void;
-    // static function glRectdv(*v1:const GLdouble, *v2:const GLdouble) : Void;
-    // static function glRectfv(*v1:const GLfloat, *v2:const GLfloat) : Void;
-    // static function glRectiv(*v1:const GLint, *v2:const GLint) : Void;
-    // static function glRectsv(*v1:const GLshort, *v2:const GLshort) : Void;
-    // static function glSelectBuffer(size:Int, *buffer:UInt) : Void;
-    // static function glTexCoordPointer(size:Int, type:Int, stride:Int, *pointer:const void) : Void;
-    // static function glTexEnvfv(target:Int, pname:Int, *params:const GLfloat) : Void;
-    // static function glTexEnviv(target:Int, pname:Int, *params:const GLint) : Void;
-    // static function glTexGendv(coord:Int, pname:Int, *params:const GLdouble) : Void;
-    // static function glTexGenfv(coord:Int, pname:Int, *params:const GLfloat) : Void;
-    // static function glTexGeniv(coord:Int, pname:Int, *params:const GLint) : Void;
-    // static function glTexImage1D(target:Int, level:Int, internalformat:Int, width:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTexImage2D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTexParameterfv(target:Int, pname:Int, *params:const GLfloat) : Void;
-    // static function glTexParameteriv(target:Int, pname:Int, *params:const GLint) : Void;
-    // static function glTexSubImage1D(target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glVertexPointer(size:Int, type:Int, stride:Int, *pointer:const void) : Void;
-
+    
+    inline static function glColor3bv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor3bv((const GLbyte*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor3dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor3fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor3iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor3iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor3sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor3ubv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor3ubv((const GLubyte*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor3uiv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor3uiv((const GLuint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor3usv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor3usv((const GLushort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor4bv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor4bv((const GLbyte*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor4dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor4dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor4fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor4fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor4iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor4iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor4sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor4sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor4ubv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor4ubv((const GLubyte*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor4uiv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor4uiv((const GLuint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glColor4usv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glColor4usv((const GLushort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glGetMapdv(target:Int, query:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glGetMapdv((GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glGetMapfv(target:Int, query:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glGetMapfv((GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glGetMapiv(target:Int, query:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glGetMapiv((GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glNormal3bv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glNormal3bv((const GLbyte*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glNormal3dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glNormal3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glNormal3fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glNormal3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glNormal3iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glNormal3iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glNormal3sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glNormal3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glRasterPos2dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glRasterPos2dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glRasterPos2fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glRasterPos2fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glRasterPos2iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glRasterPos2iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glRasterPos2sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glRasterPos2sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glRasterPos3dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glRasterPos3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glRasterPos3fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glRasterPos3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glRasterPos3iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glRasterPos3iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glRasterPos3sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glRasterPos3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glRasterPos4dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glRasterPos4dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glRasterPos4fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glRasterPos4fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glRasterPos4iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glRasterPos4iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glRasterPos4sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glRasterPos4sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord1dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord1dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord1fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord1fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord1iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord1iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord1sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord1sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord2dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord2dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord2fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord2fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord2iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord2iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord2sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord2sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord3dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord3fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord3iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord3iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord3sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord4dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord4dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord4fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord4fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord4iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord4iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glTexCoord4sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glTexCoord4sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertex2dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertex2dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertex2fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertex2fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertex2iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertex2iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertex2sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertex2sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertex3dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertex3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertex3fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertex3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertex3iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertex3iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertex3sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertex3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertex4dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertex4dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertex4fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertex4fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertex4iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertex4iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertex4sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertex4sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+
+    // static function glAreTexturesResident(n:Int, *textures:const GLuint, *residences:Bool) : Bool;    // static function glBitmap(width:Int, height:Int, xorig:Float, yorig:Float, xmove:Float, ymove:Float, *bitmap:const GLubyte) : Void;    // static function glCallLists(n:Int, type:Int, *lists:const void) : Void;    // static function glClipPlane(plane:Int, *equation:const GLdouble) : Void;    // static function glColorPointer(size:Int, type:Int, stride:Int, *pointer:const void) : Void;    // static function glDeleteTextures(n:Int, *textures:const GLuint) : Void;    // static function glDrawElements(mode:Int, count:Int, type:Int, *indices:const void) : Void;    // static function glDrawPixels(width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glEdgeFlagPointer(stride:Int, *pointer:const void) : Void;    // static function glEdgeFlagv(*flag:const GLboolean) : Void;    // static function glEvalCoord1dv(*u:const GLdouble) : Void;    // static function glEvalCoord1fv(*u:const GLfloat) : Void;    // static function glEvalCoord2dv(*u:const GLdouble) : Void;    // static function glEvalCoord2fv(*u:const GLfloat) : Void;    // static function glFeedbackBuffer(size:Int, type:Int, *buffer:Float) : Void;    // static function glFogfv(pname:Int, *params:const GLfloat) : Void;    // static function glFogiv(pname:Int, *params:const GLint) : Void;    // static function glGenTextures(n:Int, *textures:UInt) : Void;    // static function glGetBooleanv(pname:Int, *params:Bool) : Void;    // static function glGetClipPlane(plane:Int, *equation:Float) : Void;    // static function glGetDoublev(pname:Int, *params:Float) : Void;    // static function glGetFloatv(pname:Int, *params:Float) : Void;    // static function glGetIntegerv(pname:Int, *params:Int) : Void;    // static function glGetLightfv(light:Int, pname:Int, *params:Float) : Void;    // static function glGetLightiv(light:Int, pname:Int, *params:Int) : Void;    // static function glGetMaterialfv(face:Int, pname:Int, *params:Float) : Void;    // static function glGetMaterialiv(face:Int, pname:Int, *params:Int) : Void;    // static function glGetPixelMapfv(map:Int, *values:Float) : Void;    // static function glGetPixelMapuiv(map:Int, *values:UInt) : Void;    // static function glGetPixelMapusv(map:Int, *values:UInt) : Void;    // static function glGetPointerv(pname:Int, *params:void*) : Void;    // static function glGetPolygonStipple(*mask:String) : Void;    // static function glGetString(name:Int) : const GLubyte *;    // static function glGetTexEnvfv(target:Int, pname:Int, *params:Float) : Void;    // static function glGetTexEnviv(target:Int, pname:Int, *params:Int) : Void;    // static function glGetTexGendv(coord:Int, pname:Int, *params:Float) : Void;    // static function glGetTexGenfv(coord:Int, pname:Int, *params:Float) : Void;    // static function glGetTexGeniv(coord:Int, pname:Int, *params:Int) : Void;    // static function glGetTexImage(target:Int, level:Int, format:Int, type:Int, *pixels:Void) : Void;    // static function glGetTexLevelParameterfv(target:Int, level:Int, pname:Int, *params:Float) : Void;    // static function glGetTexLevelParameteriv(target:Int, level:Int, pname:Int, *params:Int) : Void;    // static function glGetTexParameterfv(target:Int, pname:Int, *params:Float) : Void;    // static function glGetTexParameteriv(target:Int, pname:Int, *params:Int) : Void;    // static function glIndexPointer(type:Int, stride:Int, *pointer:const void) : Void;    // static function glIndexdv(*c:const GLdouble) : Void;    // static function glIndexfv(*c:const GLfloat) : Void;    // static function glIndexiv(*c:const GLint) : Void;    // static function glIndexsv(*c:const GLshort) : Void;    // static function glIndexubv(*c:const GLubyte) : Void;    // static function glInterleavedArrays(format:Int, stride:Int, *pointer:const void) : Void;    // static function glLightModelfv(pname:Int, *params:const GLfloat) : Void;    // static function glLightModeliv(pname:Int, *params:const GLint) : Void;    // static function glLightfv(light:Int, pname:Int, *params:const GLfloat) : Void;    // static function glLightiv(light:Int, pname:Int, *params:const GLint) : Void;    // static function glLoadMatrixd(*m:const GLdouble) : Void;    // static function glLoadMatrixf(*m:const GLfloat) : Void;    // static function glMap1d(target:Int, u1:Float, u2:Float, stride:Int, order:Int, *points:const GLdouble) : Void;    // static function glMap1f(target:Int, u1:Float, u2:Float, stride:Int, order:Int, *points:const GLfloat) : Void;    // static function glMap2d(target:Int, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, *points:const GLdouble) : Void;    // static function glMap2f(target:Int, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, *points:const GLfloat) : Void;    // static function glMaterialfv(face:Int, pname:Int, *params:const GLfloat) : Void;    // static function glMaterialiv(face:Int, pname:Int, *params:const GLint) : Void;    // static function glMultMatrixd(*m:const GLdouble) : Void;    // static function glMultMatrixf(*m:const GLfloat) : Void;    // static function glNormalPointer(type:Int, stride:Int, *pointer:const void) : Void;    // static function glPixelMapfv(map:Int, mapsize:Int, *values:const GLfloat) : Void;    // static function glPixelMapuiv(map:Int, mapsize:Int, *values:const GLuint) : Void;    // static function glPixelMapusv(map:Int, mapsize:Int, *values:const GLushort) : Void;    // static function glPolygonStipple(*mask:const GLubyte) : Void;    // static function glPrioritizeTextures(n:Int, *textures:const GLuint, *priorities:const GLclampf) : Void;    // static function glReadPixels(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, *pixels:Void) : Void;    // static function glRectdv(*v1:const GLdouble, *v2:const GLdouble) : Void;    // static function glRectfv(*v1:const GLfloat, *v2:const GLfloat) : Void;    // static function glRectiv(*v1:const GLint, *v2:const GLint) : Void;    // static function glRectsv(*v1:const GLshort, *v2:const GLshort) : Void;    // static function glSelectBuffer(size:Int, *buffer:UInt) : Void;    // static function glTexCoordPointer(size:Int, type:Int, stride:Int, *pointer:const void) : Void;    // static function glTexEnvfv(target:Int, pname:Int, *params:const GLfloat) : Void;    // static function glTexEnviv(target:Int, pname:Int, *params:const GLint) : Void;    // static function glTexGendv(coord:Int, pname:Int, *params:const GLdouble) : Void;    // static function glTexGenfv(coord:Int, pname:Int, *params:const GLfloat) : Void;    // static function glTexGeniv(coord:Int, pname:Int, *params:const GLint) : Void;    // static function glTexImage1D(target:Int, level:Int, internalformat:Int, width:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTexImage2D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTexParameterfv(target:Int, pname:Int, *params:const GLfloat) : Void;    // static function glTexParameteriv(target:Int, pname:Int, *params:const GLint) : Void;    // static function glTexSubImage1D(target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glVertexPointer(size:Int, type:Int, stride:Int, *pointer:const void) : Void;
 
 //GL 1.2
     inline static var GL_SMOOTH_POINT_SIZE_RANGE                                      = 0x0B12;
@@ -1423,12 +968,7 @@ extern class GL {
     @:native('glCopyTexSubImage3D')
     static function glCopyTexSubImage3D(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
 
-
-
-    // static function glDrawRangeElements(mode:Int, start:UInt, end:UInt, count:Int, type:Int, *indices:const void) : Void;
-    // static function glTexImage3D(target:Int, level:Int, internalFormat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTexSubImage3D(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;
-
+    // static function glDrawRangeElements(mode:Int, start:UInt, end:UInt, count:Int, type:Int, *indices:const void) : Void;    // static function glTexImage3D(target:Int, level:Int, internalFormat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTexSubImage3D(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;
 
 //GL 1.2
     inline static var GL_MULTISAMPLE                                                  = 0x809D;
@@ -1530,124 +1070,75 @@ extern class GL {
 
 
     @:native('glActiveTexture')
-    static function glActiveTexture(texture:Int) : Void;
-
-    @:native('glClientActiveTexture')
-    static function glClientActiveTexture(texture:Int) : Void;
-
-    @:native('glMultiTexCoord1d')
-    static function glMultiTexCoord1d(target:Int, s:Float) : Void;
-
-    @:native('glMultiTexCoord1f')
-    static function glMultiTexCoord1f(target:Int, s:Float) : Void;
-
-    @:native('glMultiTexCoord1i')
-    static function glMultiTexCoord1i(target:Int, s:Int) : Void;
-
-    @:native('glMultiTexCoord1s')
-    static function glMultiTexCoord1s(target:Int, s:Int) : Void;
-
-    @:native('glMultiTexCoord2d')
-    static function glMultiTexCoord2d(target:Int, s:Float, t:Float) : Void;
-
-    @:native('glMultiTexCoord2f')
-    static function glMultiTexCoord2f(target:Int, s:Float, t:Float) : Void;
-
-    @:native('glMultiTexCoord2i')
-    static function glMultiTexCoord2i(target:Int, s:Int, t:Int) : Void;
-
-    @:native('glMultiTexCoord2s')
-    static function glMultiTexCoord2s(target:Int, s:Int, t:Int) : Void;
-
-    @:native('glMultiTexCoord3d')
-    static function glMultiTexCoord3d(target:Int, s:Float, t:Float, r:Float) : Void;
-
-    @:native('glMultiTexCoord3f')
-    static function glMultiTexCoord3f(target:Int, s:Float, t:Float, r:Float) : Void;
-
-    @:native('glMultiTexCoord3i')
-    static function glMultiTexCoord3i(target:Int, s:Int, t:Int, r:Int) : Void;
-
-    @:native('glMultiTexCoord3s')
-    static function glMultiTexCoord3s(target:Int, s:Int, t:Int, r:Int) : Void;
-
-    @:native('glMultiTexCoord4d')
-    static function glMultiTexCoord4d(target:Int, s:Float, t:Float, r:Float, q:Float) : Void;
-
-    @:native('glMultiTexCoord4f')
-    static function glMultiTexCoord4f(target:Int, s:Float, t:Float, r:Float, q:Float) : Void;
-
-    @:native('glMultiTexCoord4i')
-    static function glMultiTexCoord4i(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;
-
-    @:native('glMultiTexCoord4s')
-    static function glMultiTexCoord4s(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;
-
-    @:native('glSampleCoverage')
+    static function glActiveTexture(texture:Int) : Void;    @:native('glClientActiveTexture')
+    static function glClientActiveTexture(texture:Int) : Void;    @:native('glMultiTexCoord1d')
+    static function glMultiTexCoord1d(target:Int, s:Float) : Void;    @:native('glMultiTexCoord1f')
+    static function glMultiTexCoord1f(target:Int, s:Float) : Void;    @:native('glMultiTexCoord1i')
+    static function glMultiTexCoord1i(target:Int, s:Int) : Void;    @:native('glMultiTexCoord1s')
+    static function glMultiTexCoord1s(target:Int, s:Int) : Void;    @:native('glMultiTexCoord2d')
+    static function glMultiTexCoord2d(target:Int, s:Float, t:Float) : Void;    @:native('glMultiTexCoord2f')
+    static function glMultiTexCoord2f(target:Int, s:Float, t:Float) : Void;    @:native('glMultiTexCoord2i')
+    static function glMultiTexCoord2i(target:Int, s:Int, t:Int) : Void;    @:native('glMultiTexCoord2s')
+    static function glMultiTexCoord2s(target:Int, s:Int, t:Int) : Void;    @:native('glMultiTexCoord3d')
+    static function glMultiTexCoord3d(target:Int, s:Float, t:Float, r:Float) : Void;    @:native('glMultiTexCoord3f')
+    static function glMultiTexCoord3f(target:Int, s:Float, t:Float, r:Float) : Void;    @:native('glMultiTexCoord3i')
+    static function glMultiTexCoord3i(target:Int, s:Int, t:Int, r:Int) : Void;    @:native('glMultiTexCoord3s')
+    static function glMultiTexCoord3s(target:Int, s:Int, t:Int, r:Int) : Void;    @:native('glMultiTexCoord4d')
+    static function glMultiTexCoord4d(target:Int, s:Float, t:Float, r:Float, q:Float) : Void;    @:native('glMultiTexCoord4f')
+    static function glMultiTexCoord4f(target:Int, s:Float, t:Float, r:Float, q:Float) : Void;    @:native('glMultiTexCoord4i')
+    static function glMultiTexCoord4i(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;    @:native('glMultiTexCoord4s')
+    static function glMultiTexCoord4s(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;    @:native('glSampleCoverage')
     static function glSampleCoverage(value:Float, invert:Bool) : Void;
+    
+    inline static function glMultiTexCoord1dv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord1dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord1fv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord1fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord1iv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord1iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord1sv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord1sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord2dv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord2dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord2fv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord2fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord2iv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord2iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord2sv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord2sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord3dv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord3fv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord3iv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord3iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord3sv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord4dv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord4dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord4fv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord4fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord4iv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord4iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord4sv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord4sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
 
-
-    @:native('linc::opengl::glMultiTexCoord1dv')
-    static function glMultiTexCoord1dv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord1fv')
-    static function glMultiTexCoord1fv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord1iv')
-    static function glMultiTexCoord1iv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord1sv')
-    static function glMultiTexCoord1sv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord2dv')
-    static function glMultiTexCoord2dv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord2fv')
-    static function glMultiTexCoord2fv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord2iv')
-    static function glMultiTexCoord2iv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord2sv')
-    static function glMultiTexCoord2sv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord3dv')
-    static function glMultiTexCoord3dv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord3fv')
-    static function glMultiTexCoord3fv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord3iv')
-    static function glMultiTexCoord3iv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord3sv')
-    static function glMultiTexCoord3sv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord4dv')
-    static function glMultiTexCoord4dv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord4fv')
-    static function glMultiTexCoord4fv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord4iv')
-    static function glMultiTexCoord4iv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord4sv')
-    static function glMultiTexCoord4sv(target:Int, bOffset:Int, v:BytesData) : Void;
-
-
-    // static function glCompressedTexImage1D(target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTexImage2D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTexImage3D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTexSubImage1D(target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTexSubImage3D(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glGetCompressedTexImage(target:Int, lod:Int, *img:Void) : Void;
-    // static function glLoadTransposeMatrixd(m:Array<const GLdouble>) : Void;
-    // static function glLoadTransposeMatrixf(m:Array<const GLfloat>) : Void;
-    // static function glMultTransposeMatrixd(m:Array<const GLdouble>) : Void;
-    // static function glMultTransposeMatrixf(m:Array<const GLfloat>) : Void;
-
+    // static function glCompressedTexImage1D(target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTexImage2D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTexImage3D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTexSubImage1D(target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTexSubImage3D(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glGetCompressedTexImage(target:Int, lod:Int, *img:Void) : Void;    // static function glLoadTransposeMatrixd(m:Array<const GLdouble>) : Void;    // static function glLoadTransposeMatrixf(m:Array<const GLfloat>) : Void;    // static function glMultTransposeMatrixd(m:Array<const GLdouble>) : Void;    // static function glMultTransposeMatrixf(m:Array<const GLfloat>) : Void;
 
 //GL 1.4
     inline static var GL_BLEND_DST_RGB                                                = 0x80C8;
@@ -1692,117 +1183,55 @@ extern class GL {
 
 
     @:native('glBlendColor')
-    static function glBlendColor(red:Float, green:Float, blue:Float, alpha:Float) : Void;
-
-    @:native('glBlendEquation')
-    static function glBlendEquation(mode:Int) : Void;
-
-    @:native('glBlendFuncSeparate')
-    static function glBlendFuncSeparate(sfactorRGB:Int, dfactorRGB:Int, sfactorAlpha:Int, dfactorAlpha:Int) : Void;
-
-    @:native('glFogCoordd')
-    static function glFogCoordd(coord:Float) : Void;
-
-    @:native('glFogCoordf')
-    static function glFogCoordf(coord:Float) : Void;
-
-    @:native('glPointParameterf')
-    static function glPointParameterf(pname:Int, param:Float) : Void;
-
-    @:native('glPointParameteri')
-    static function glPointParameteri(pname:Int, param:Int) : Void;
-
-    @:native('glSecondaryColor3b')
-    static function glSecondaryColor3b(red:String, green:String, blue:String) : Void;
-
-    @:native('glSecondaryColor3d')
-    static function glSecondaryColor3d(red:Float, green:Float, blue:Float) : Void;
-
-    @:native('glSecondaryColor3f')
-    static function glSecondaryColor3f(red:Float, green:Float, blue:Float) : Void;
-
-    @:native('glSecondaryColor3i')
-    static function glSecondaryColor3i(red:Int, green:Int, blue:Int) : Void;
-
-    @:native('glSecondaryColor3s')
-    static function glSecondaryColor3s(red:Int, green:Int, blue:Int) : Void;
-
-    @:native('glSecondaryColor3ub')
-    static function glSecondaryColor3ub(red:String, green:String, blue:String) : Void;
-
-    @:native('glSecondaryColor3ui')
-    static function glSecondaryColor3ui(red:UInt, green:UInt, blue:UInt) : Void;
-
-    @:native('glSecondaryColor3us')
-    static function glSecondaryColor3us(red:UInt, green:UInt, blue:UInt) : Void;
-
-    @:native('glWindowPos2d')
-    static function glWindowPos2d(x:Float, y:Float) : Void;
-
-    @:native('glWindowPos2f')
-    static function glWindowPos2f(x:Float, y:Float) : Void;
-
-    @:native('glWindowPos2i')
-    static function glWindowPos2i(x:Int, y:Int) : Void;
-
-    @:native('glWindowPos2s')
-    static function glWindowPos2s(x:Int, y:Int) : Void;
-
-    @:native('glWindowPos3d')
-    static function glWindowPos3d(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glWindowPos3f')
-    static function glWindowPos3f(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glWindowPos3i')
-    static function glWindowPos3i(x:Int, y:Int, z:Int) : Void;
-
-    @:native('glWindowPos3s')
+    static function glBlendColor(red:Float, green:Float, blue:Float, alpha:Float) : Void;    @:native('glBlendEquation')
+    static function glBlendEquation(mode:Int) : Void;    @:native('glBlendFuncSeparate')
+    static function glBlendFuncSeparate(sfactorRGB:Int, dfactorRGB:Int, sfactorAlpha:Int, dfactorAlpha:Int) : Void;    @:native('glFogCoordd')
+    static function glFogCoordd(coord:Float) : Void;    @:native('glFogCoordf')
+    static function glFogCoordf(coord:Float) : Void;    @:native('glPointParameterf')
+    static function glPointParameterf(pname:Int, param:Float) : Void;    @:native('glPointParameteri')
+    static function glPointParameteri(pname:Int, param:Int) : Void;    @:native('glSecondaryColor3b')
+    static function glSecondaryColor3b(red:String, green:String, blue:String) : Void;    @:native('glSecondaryColor3d')
+    static function glSecondaryColor3d(red:Float, green:Float, blue:Float) : Void;    @:native('glSecondaryColor3f')
+    static function glSecondaryColor3f(red:Float, green:Float, blue:Float) : Void;    @:native('glSecondaryColor3i')
+    static function glSecondaryColor3i(red:Int, green:Int, blue:Int) : Void;    @:native('glSecondaryColor3s')
+    static function glSecondaryColor3s(red:Int, green:Int, blue:Int) : Void;    @:native('glSecondaryColor3ub')
+    static function glSecondaryColor3ub(red:String, green:String, blue:String) : Void;    @:native('glSecondaryColor3ui')
+    static function glSecondaryColor3ui(red:UInt, green:UInt, blue:UInt) : Void;    @:native('glSecondaryColor3us')
+    static function glSecondaryColor3us(red:UInt, green:UInt, blue:UInt) : Void;    @:native('glWindowPos2d')
+    static function glWindowPos2d(x:Float, y:Float) : Void;    @:native('glWindowPos2f')
+    static function glWindowPos2f(x:Float, y:Float) : Void;    @:native('glWindowPos2i')
+    static function glWindowPos2i(x:Int, y:Int) : Void;    @:native('glWindowPos2s')
+    static function glWindowPos2s(x:Int, y:Int) : Void;    @:native('glWindowPos3d')
+    static function glWindowPos3d(x:Float, y:Float, z:Float) : Void;    @:native('glWindowPos3f')
+    static function glWindowPos3f(x:Float, y:Float, z:Float) : Void;    @:native('glWindowPos3i')
+    static function glWindowPos3i(x:Int, y:Int, z:Int) : Void;    @:native('glWindowPos3s')
     static function glWindowPos3s(x:Int, y:Int, z:Int) : Void;
+    
+    inline static function glSecondaryColor3bv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3bv((const GLbyte*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3dv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3fv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3iv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3iv((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3sv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3ubv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3ubv((const GLubyte*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3uiv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3uiv((const GLuint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3usv(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3usv((const GLushort*)&{1}[0] + {0})", bOffset, v); };
 
-
-    @:native('linc::opengl::glSecondaryColor3bv')
-    static function glSecondaryColor3bv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3dv')
-    static function glSecondaryColor3dv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3fv')
-    static function glSecondaryColor3fv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3iv')
-    static function glSecondaryColor3iv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3sv')
-    static function glSecondaryColor3sv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3ubv')
-    static function glSecondaryColor3ubv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3uiv')
-    static function glSecondaryColor3uiv(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3usv')
-    static function glSecondaryColor3usv(bOffset:Int, v:BytesData) : Void;
-
-
-    // static function glFogCoordPointer(type:Int, stride:Int, *pointer:const void) : Void;
-    // static function glFogCoorddv(*coord:const GLdouble) : Void;
-    // static function glFogCoordfv(*coord:const GLfloat) : Void;
-    // static function glMultiDrawArrays(mode:Int, *first:const GLint, *count:const GLsizei, drawcount:Int) : Void;
-    // static function glMultiDrawElements(mode:Int, *count:const GLsizei, type:Int, indices:const void *const*, drawcount:Int) : Void;
-    // static function glPointParameterfv(pname:Int, *params:const GLfloat) : Void;
-    // static function glPointParameteriv(pname:Int, *params:const GLint) : Void;
-    // static function glSecondaryColorPointer(size:Int, type:Int, stride:Int, *pointer:const void) : Void;
-    // static function glWindowPos2dv(*p:const GLdouble) : Void;
-    // static function glWindowPos2fv(*p:const GLfloat) : Void;
-    // static function glWindowPos2iv(*p:const GLint) : Void;
-    // static function glWindowPos2sv(*p:const GLshort) : Void;
-    // static function glWindowPos3dv(*p:const GLdouble) : Void;
-    // static function glWindowPos3fv(*p:const GLfloat) : Void;
-    // static function glWindowPos3iv(*p:const GLint) : Void;
-    // static function glWindowPos3sv(*p:const GLshort) : Void;
-
+    // static function glFogCoordPointer(type:Int, stride:Int, *pointer:const void) : Void;    // static function glFogCoorddv(*coord:const GLdouble) : Void;    // static function glFogCoordfv(*coord:const GLfloat) : Void;    // static function glMultiDrawArrays(mode:Int, *first:const GLint, *count:const GLsizei, drawcount:Int) : Void;    // static function glMultiDrawElements(mode:Int, *count:const GLsizei, type:Int, indices:const void *const*, drawcount:Int) : Void;    // static function glPointParameterfv(pname:Int, *params:const GLfloat) : Void;    // static function glPointParameteriv(pname:Int, *params:const GLint) : Void;    // static function glSecondaryColorPointer(size:Int, type:Int, stride:Int, *pointer:const void) : Void;    // static function glWindowPos2dv(*p:const GLdouble) : Void;    // static function glWindowPos2fv(*p:const GLfloat) : Void;    // static function glWindowPos2iv(*p:const GLint) : Void;    // static function glWindowPos2sv(*p:const GLshort) : Void;    // static function glWindowPos3dv(*p:const GLdouble) : Void;    // static function glWindowPos3fv(*p:const GLfloat) : Void;    // static function glWindowPos3iv(*p:const GLint) : Void;    // static function glWindowPos3sv(*p:const GLshort) : Void;
 
 //GL 1.5
     inline static var GL_CURRENT_FOG_COORD                                            = GL_CURRENT_FOG_COORDINATE;
@@ -1858,39 +1287,14 @@ extern class GL {
 
 
     @:native('glBeginQuery')
-    static function glBeginQuery(target:Int, id:UInt) : Void;
-
-    @:native('glBindBuffer')
-    static function glBindBuffer(target:Int, buffer:UInt) : Void;
-
-    @:native('glEndQuery')
-    static function glEndQuery(target:Int) : Void;
-
-    @:native('glIsBuffer')
-    static function glIsBuffer(buffer:UInt) : Bool;
-
-    @:native('glIsQuery')
-    static function glIsQuery(id:UInt) : Bool;
-
-    @:native('glUnmapBuffer')
+    static function glBeginQuery(target:Int, id:UInt) : Void;    @:native('glBindBuffer')
+    static function glBindBuffer(target:Int, buffer:UInt) : Void;    @:native('glEndQuery')
+    static function glEndQuery(target:Int) : Void;    @:native('glIsBuffer')
+    static function glIsBuffer(buffer:UInt) : Bool;    @:native('glIsQuery')
+    static function glIsQuery(id:UInt) : Bool;    @:native('glUnmapBuffer')
     static function glUnmapBuffer(target:Int) : Bool;
 
-
-
-    // static function glBufferData(target:Int, size:GLsizeiptr, data:const void*, usage:Int) : Void;
-    // static function glBufferSubData(target:Int, offset:GLintptr, size:GLsizeiptr, data:const void*) : Void;
-    // static function glDeleteBuffers(n:Int, buffers:const GLuint*) : Void;
-    // static function glDeleteQueries(n:Int, ids:const GLuint*) : Void;
-    // static function glGenBuffers(n:Int, buffers:GLuint*) : Void;
-    // static function glGenQueries(n:Int, ids:GLuint*) : Void;
-    // static function glGetBufferParameteriv(target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetBufferPointerv(target:Int, pname:Int, params:void**) : Void;
-    // static function glGetBufferSubData(target:Int, offset:GLintptr, size:GLsizeiptr, data:void*) : Void;
-    // static function glGetQueryObjectiv(id:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetQueryObjectuiv(id:UInt, pname:Int, params:GLuint*) : Void;
-    // static function glGetQueryiv(target:Int, pname:Int, params:GLint*) : Void;
-    // static function glMapBuffer(target:Int, access:Int) : void*;
-
+    // static function glBufferData(target:Int, size:GLsizeiptr, data:const void*, usage:Int) : Void;    // static function glBufferSubData(target:Int, offset:GLintptr, size:GLsizeiptr, data:const void*) : Void;    // static function glDeleteBuffers(n:Int, buffers:const GLuint*) : Void;    // static function glDeleteQueries(n:Int, ids:const GLuint*) : Void;    // static function glGenBuffers(n:Int, buffers:GLuint*) : Void;    // static function glGenQueries(n:Int, ids:GLuint*) : Void;    // static function glGetBufferParameteriv(target:Int, pname:Int, params:GLint*) : Void;    // static function glGetBufferPointerv(target:Int, pname:Int, params:void**) : Void;    // static function glGetBufferSubData(target:Int, offset:GLintptr, size:GLsizeiptr, data:void*) : Void;    // static function glGetQueryObjectiv(id:UInt, pname:Int, params:GLint*) : Void;    // static function glGetQueryObjectuiv(id:UInt, pname:Int, params:GLuint*) : Void;    // static function glGetQueryiv(target:Int, pname:Int, params:GLint*) : Void;    // static function glMapBuffer(target:Int, access:Int) : void*;
 
 //GL 2.0
     inline static var GL_BLEND_EQUATION_RGB                                           = GL_BLEND_EQUATION;
@@ -1980,185 +1384,50 @@ extern class GL {
 
 
     @:native('glAttachShader')
-    static function glAttachShader(program:UInt, shader:UInt) : Void;
-
-    @:native('glBindAttribLocation')
-    static function glBindAttribLocation(program:UInt, index:UInt, name:String) : Void;
-
-    @:native('glBlendEquationSeparate')
-    static function glBlendEquationSeparate(modeRGB:Int, modeAlpha:Int) : Void;
-
-    @:native('glCompileShader')
-    static function glCompileShader(shader:UInt) : Void;
-
-    @:native('glCreateProgram')
-    static function glCreateProgram() : UInt;
-
-    @:native('glCreateShader')
-    static function glCreateShader(type:Int) : UInt;
-
-    @:native('glDeleteProgram')
-    static function glDeleteProgram(program:UInt) : Void;
-
-    @:native('glDeleteShader')
-    static function glDeleteShader(shader:UInt) : Void;
-
-    @:native('glDetachShader')
-    static function glDetachShader(program:UInt, shader:UInt) : Void;
-
-    @:native('glDisableVertexAttribArray')
-    static function glDisableVertexAttribArray(index:UInt) : Void;
-
-    @:native('glEnableVertexAttribArray')
-    static function glEnableVertexAttribArray(index:UInt) : Void;
-
-    @:native('glGetAttribLocation')
-    static function glGetAttribLocation(program:UInt, name:String) : Int;
-
-    @:native('glGetUniformLocation')
-    static function glGetUniformLocation(program:UInt, name:String) : Int;
-
-    @:native('glIsProgram')
-    static function glIsProgram(program:UInt) : Bool;
-
-    @:native('glIsShader')
-    static function glIsShader(shader:UInt) : Bool;
-
-    @:native('glLinkProgram')
-    static function glLinkProgram(program:UInt) : Void;
-
-    @:native('glStencilFuncSeparate')
-    static function glStencilFuncSeparate(frontfunc:Int, backfunc:Int, ref:Int, mask:UInt) : Void;
-
-    @:native('glStencilMaskSeparate')
-    static function glStencilMaskSeparate(face:Int, mask:UInt) : Void;
-
-    @:native('glStencilOpSeparate')
-    static function glStencilOpSeparate(face:Int, sfail:Int, dpfail:Int, dppass:Int) : Void;
-
-    @:native('glUniform1f')
-    static function glUniform1f(location:Int, v0:Float) : Void;
-
-    @:native('glUniform1i')
-    static function glUniform1i(location:Int, v0:Int) : Void;
-
-    @:native('glUniform2f')
-    static function glUniform2f(location:Int, v0:Float, v1:Float) : Void;
-
-    @:native('glUniform2i')
-    static function glUniform2i(location:Int, v0:Int, v1:Int) : Void;
-
-    @:native('glUniform3f')
-    static function glUniform3f(location:Int, v0:Float, v1:Float, v2:Float) : Void;
-
-    @:native('glUniform3i')
-    static function glUniform3i(location:Int, v0:Int, v1:Int, v2:Int) : Void;
-
-    @:native('glUniform4f')
-    static function glUniform4f(location:Int, v0:Float, v1:Float, v2:Float, v3:Float) : Void;
-
-    @:native('glUniform4i')
-    static function glUniform4i(location:Int, v0:Int, v1:Int, v2:Int, v3:Int) : Void;
-
-    @:native('glUseProgram')
-    static function glUseProgram(program:UInt) : Void;
-
-    @:native('glValidateProgram')
-    static function glValidateProgram(program:UInt) : Void;
-
-    @:native('glVertexAttrib1d')
-    static function glVertexAttrib1d(index:UInt, x:Float) : Void;
-
-    @:native('glVertexAttrib1f')
-    static function glVertexAttrib1f(index:UInt, x:Float) : Void;
-
-    @:native('glVertexAttrib1s')
-    static function glVertexAttrib1s(index:UInt, x:Int) : Void;
-
-    @:native('glVertexAttrib2d')
-    static function glVertexAttrib2d(index:UInt, x:Float, y:Float) : Void;
-
-    @:native('glVertexAttrib2f')
-    static function glVertexAttrib2f(index:UInt, x:Float, y:Float) : Void;
-
-    @:native('glVertexAttrib2s')
-    static function glVertexAttrib2s(index:UInt, x:Int, y:Int) : Void;
-
-    @:native('glVertexAttrib3d')
-    static function glVertexAttrib3d(index:UInt, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glVertexAttrib3f')
-    static function glVertexAttrib3f(index:UInt, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glVertexAttrib3s')
-    static function glVertexAttrib3s(index:UInt, x:Int, y:Int, z:Int) : Void;
-
-    @:native('glVertexAttrib4Nub')
-    static function glVertexAttrib4Nub(index:UInt, x:String, y:String, z:String, w:String) : Void;
-
-    @:native('glVertexAttrib4d')
-    static function glVertexAttrib4d(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glVertexAttrib4f')
-    static function glVertexAttrib4f(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glVertexAttrib4s')
+    static function glAttachShader(program:UInt, shader:UInt) : Void;    @:native('glBindAttribLocation')
+    static function glBindAttribLocation(program:UInt, index:UInt, name:String) : Void;    @:native('glBlendEquationSeparate')
+    static function glBlendEquationSeparate(modeRGB:Int, modeAlpha:Int) : Void;    @:native('glCompileShader')
+    static function glCompileShader(shader:UInt) : Void;    @:native('glCreateProgram')
+    static function glCreateProgram() : UInt;    @:native('glCreateShader')
+    static function glCreateShader(type:Int) : UInt;    @:native('glDeleteProgram')
+    static function glDeleteProgram(program:UInt) : Void;    @:native('glDeleteShader')
+    static function glDeleteShader(shader:UInt) : Void;    @:native('glDetachShader')
+    static function glDetachShader(program:UInt, shader:UInt) : Void;    @:native('glDisableVertexAttribArray')
+    static function glDisableVertexAttribArray(index:UInt) : Void;    @:native('glEnableVertexAttribArray')
+    static function glEnableVertexAttribArray(index:UInt) : Void;    @:native('glGetAttribLocation')
+    static function glGetAttribLocation(program:UInt, name:String) : Int;    @:native('glGetUniformLocation')
+    static function glGetUniformLocation(program:UInt, name:String) : Int;    @:native('glIsProgram')
+    static function glIsProgram(program:UInt) : Bool;    @:native('glIsShader')
+    static function glIsShader(shader:UInt) : Bool;    @:native('glLinkProgram')
+    static function glLinkProgram(program:UInt) : Void;    @:native('glStencilFuncSeparate')
+    static function glStencilFuncSeparate(frontfunc:Int, backfunc:Int, ref:Int, mask:UInt) : Void;    @:native('glStencilMaskSeparate')
+    static function glStencilMaskSeparate(face:Int, mask:UInt) : Void;    @:native('glStencilOpSeparate')
+    static function glStencilOpSeparate(face:Int, sfail:Int, dpfail:Int, dppass:Int) : Void;    @:native('glUniform1f')
+    static function glUniform1f(location:Int, v0:Float) : Void;    @:native('glUniform1i')
+    static function glUniform1i(location:Int, v0:Int) : Void;    @:native('glUniform2f')
+    static function glUniform2f(location:Int, v0:Float, v1:Float) : Void;    @:native('glUniform2i')
+    static function glUniform2i(location:Int, v0:Int, v1:Int) : Void;    @:native('glUniform3f')
+    static function glUniform3f(location:Int, v0:Float, v1:Float, v2:Float) : Void;    @:native('glUniform3i')
+    static function glUniform3i(location:Int, v0:Int, v1:Int, v2:Int) : Void;    @:native('glUniform4f')
+    static function glUniform4f(location:Int, v0:Float, v1:Float, v2:Float, v3:Float) : Void;    @:native('glUniform4i')
+    static function glUniform4i(location:Int, v0:Int, v1:Int, v2:Int, v3:Int) : Void;    @:native('glUseProgram')
+    static function glUseProgram(program:UInt) : Void;    @:native('glValidateProgram')
+    static function glValidateProgram(program:UInt) : Void;    @:native('glVertexAttrib1d')
+    static function glVertexAttrib1d(index:UInt, x:Float) : Void;    @:native('glVertexAttrib1f')
+    static function glVertexAttrib1f(index:UInt, x:Float) : Void;    @:native('glVertexAttrib1s')
+    static function glVertexAttrib1s(index:UInt, x:Int) : Void;    @:native('glVertexAttrib2d')
+    static function glVertexAttrib2d(index:UInt, x:Float, y:Float) : Void;    @:native('glVertexAttrib2f')
+    static function glVertexAttrib2f(index:UInt, x:Float, y:Float) : Void;    @:native('glVertexAttrib2s')
+    static function glVertexAttrib2s(index:UInt, x:Int, y:Int) : Void;    @:native('glVertexAttrib3d')
+    static function glVertexAttrib3d(index:UInt, x:Float, y:Float, z:Float) : Void;    @:native('glVertexAttrib3f')
+    static function glVertexAttrib3f(index:UInt, x:Float, y:Float, z:Float) : Void;    @:native('glVertexAttrib3s')
+    static function glVertexAttrib3s(index:UInt, x:Int, y:Int, z:Int) : Void;    @:native('glVertexAttrib4Nub')
+    static function glVertexAttrib4Nub(index:UInt, x:String, y:String, z:String, w:String) : Void;    @:native('glVertexAttrib4d')
+    static function glVertexAttrib4d(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glVertexAttrib4f')
+    static function glVertexAttrib4f(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glVertexAttrib4s')
     static function glVertexAttrib4s(index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
 
-
-
-    // static function glDrawBuffers(n:Int, bufs:const GLenum*) : Void;
-    // static function glGetActiveAttrib(program:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:GLint*, type:GLenum*, name:String) : Void;
-    // static function glGetActiveUniform(program:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:GLint*, type:GLenum*, name:String) : Void;
-    // static function glGetAttachedShaders(program:UInt, maxCount:Int, count:GLsizei*, shaders:GLuint*) : Void;
-    // static function glGetProgramInfoLog(program:UInt, bufSize:Int, length:GLsizei*, infoLog:String) : Void;
-    // static function glGetProgramiv(program:UInt, pname:Int, param:GLint*) : Void;
-    // static function glGetShaderInfoLog(shader:UInt, bufSize:Int, length:GLsizei*, infoLog:String) : Void;
-    // static function glGetShaderSource(obj:UInt, maxLength:Int, length:GLsizei*, source:String) : Void;
-    // static function glGetShaderiv(shader:UInt, pname:Int, param:GLint*) : Void;
-    // static function glGetUniformfv(program:UInt, location:Int, params:GLfloat*) : Void;
-    // static function glGetUniformiv(program:UInt, location:Int, params:GLint*) : Void;
-    // static function glGetVertexAttribPointerv(index:UInt, pname:Int, pointer:void**) : Void;
-    // static function glGetVertexAttribdv(index:UInt, pname:Int, params:GLdouble*) : Void;
-    // static function glGetVertexAttribfv(index:UInt, pname:Int, params:GLfloat*) : Void;
-    // static function glGetVertexAttribiv(index:UInt, pname:Int, params:GLint*) : Void;
-    // static function glShaderSource(shader:UInt, count:Int, string:const GLchar *const*, length:const GLint*) : Void;
-    // static function glUniform1fv(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform1iv(location:Int, count:Int, value:const GLint*) : Void;
-    // static function glUniform2fv(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform2iv(location:Int, count:Int, value:const GLint*) : Void;
-    // static function glUniform3fv(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform3iv(location:Int, count:Int, value:const GLint*) : Void;
-    // static function glUniform4fv(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform4iv(location:Int, count:Int, value:const GLint*) : Void;
-    // static function glUniformMatrix2fv(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glUniformMatrix3fv(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glUniformMatrix4fv(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glVertexAttrib1dv(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttrib1fv(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib1sv(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib2dv(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttrib2fv(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib2sv(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib3dv(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttrib3fv(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib3sv(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib4Nbv(index:UInt, v:const GLbyte*) : Void;
-    // static function glVertexAttrib4Niv(index:UInt, v:const GLint*) : Void;
-    // static function glVertexAttrib4Nsv(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib4Nubv(index:UInt, v:const GLubyte*) : Void;
-    // static function glVertexAttrib4Nuiv(index:UInt, v:const GLuint*) : Void;
-    // static function glVertexAttrib4Nusv(index:UInt, v:const GLushort*) : Void;
-    // static function glVertexAttrib4bv(index:UInt, v:const GLbyte*) : Void;
-    // static function glVertexAttrib4dv(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttrib4fv(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib4iv(index:UInt, v:const GLint*) : Void;
-    // static function glVertexAttrib4sv(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib4ubv(index:UInt, v:const GLubyte*) : Void;
-    // static function glVertexAttrib4uiv(index:UInt, v:const GLuint*) : Void;
-    // static function glVertexAttrib4usv(index:UInt, v:const GLushort*) : Void;
-    // static function glVertexAttribPointer(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, pointer:const void*) : Void;
-
+    // static function glDrawBuffers(n:Int, bufs:const GLenum*) : Void;    // static function glGetActiveAttrib(program:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:GLint*, type:GLenum*, name:String) : Void;    // static function glGetActiveUniform(program:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:GLint*, type:GLenum*, name:String) : Void;    // static function glGetAttachedShaders(program:UInt, maxCount:Int, count:GLsizei*, shaders:GLuint*) : Void;    // static function glGetProgramInfoLog(program:UInt, bufSize:Int, length:GLsizei*, infoLog:String) : Void;    // static function glGetProgramiv(program:UInt, pname:Int, param:GLint*) : Void;    // static function glGetShaderInfoLog(shader:UInt, bufSize:Int, length:GLsizei*, infoLog:String) : Void;    // static function glGetShaderSource(obj:UInt, maxLength:Int, length:GLsizei*, source:String) : Void;    // static function glGetShaderiv(shader:UInt, pname:Int, param:GLint*) : Void;    // static function glGetUniformfv(program:UInt, location:Int, params:GLfloat*) : Void;    // static function glGetUniformiv(program:UInt, location:Int, params:GLint*) : Void;    // static function glGetVertexAttribPointerv(index:UInt, pname:Int, pointer:void**) : Void;    // static function glGetVertexAttribdv(index:UInt, pname:Int, params:GLdouble*) : Void;    // static function glGetVertexAttribfv(index:UInt, pname:Int, params:GLfloat*) : Void;    // static function glGetVertexAttribiv(index:UInt, pname:Int, params:GLint*) : Void;    // static function glShaderSource(shader:UInt, count:Int, string:const GLchar *const*, length:const GLint*) : Void;    // static function glUniform1fv(location:Int, count:Int, value:const GLfloat*) : Void;    // static function glUniform1iv(location:Int, count:Int, value:const GLint*) : Void;    // static function glUniform2fv(location:Int, count:Int, value:const GLfloat*) : Void;    // static function glUniform2iv(location:Int, count:Int, value:const GLint*) : Void;    // static function glUniform3fv(location:Int, count:Int, value:const GLfloat*) : Void;    // static function glUniform3iv(location:Int, count:Int, value:const GLint*) : Void;    // static function glUniform4fv(location:Int, count:Int, value:const GLfloat*) : Void;    // static function glUniform4iv(location:Int, count:Int, value:const GLint*) : Void;    // static function glUniformMatrix2fv(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glUniformMatrix3fv(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glUniformMatrix4fv(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glVertexAttrib1dv(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttrib1fv(index:UInt, v:const GLfloat*) : Void;    // static function glVertexAttrib1sv(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib2dv(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttrib2fv(index:UInt, v:const GLfloat*) : Void;    // static function glVertexAttrib2sv(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib3dv(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttrib3fv(index:UInt, v:const GLfloat*) : Void;    // static function glVertexAttrib3sv(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib4Nbv(index:UInt, v:const GLbyte*) : Void;    // static function glVertexAttrib4Niv(index:UInt, v:const GLint*) : Void;    // static function glVertexAttrib4Nsv(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib4Nubv(index:UInt, v:const GLubyte*) : Void;    // static function glVertexAttrib4Nuiv(index:UInt, v:const GLuint*) : Void;    // static function glVertexAttrib4Nusv(index:UInt, v:const GLushort*) : Void;    // static function glVertexAttrib4bv(index:UInt, v:const GLbyte*) : Void;    // static function glVertexAttrib4dv(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttrib4fv(index:UInt, v:const GLfloat*) : Void;    // static function glVertexAttrib4iv(index:UInt, v:const GLint*) : Void;    // static function glVertexAttrib4sv(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib4ubv(index:UInt, v:const GLubyte*) : Void;    // static function glVertexAttrib4uiv(index:UInt, v:const GLuint*) : Void;    // static function glVertexAttrib4usv(index:UInt, v:const GLushort*) : Void;    // static function glVertexAttribPointer(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, pointer:const void*) : Void;
 
 //GL 2.1
     inline static var GL_CURRENT_RASTER_SECONDARY_COLOR                               = 0x845F;
@@ -2188,13 +1457,7 @@ extern class GL {
 
 
 
-    // static function glUniformMatrix2x3fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;
-    // static function glUniformMatrix2x4fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;
-    // static function glUniformMatrix3x2fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;
-    // static function glUniformMatrix3x4fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;
-    // static function glUniformMatrix4x2fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;
-    // static function glUniformMatrix4x3fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;
-
+    // static function glUniformMatrix2x3fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;    // static function glUniformMatrix2x4fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;    // static function glUniformMatrix3x2fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;    // static function glUniformMatrix3x4fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;    // static function glUniformMatrix4x2fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;    // static function glUniformMatrix4x3fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;
 
 //GL 3.0
     inline static var GL_CLIP_DISTANCE0                                               = GL_CLIP_PLANE0;
@@ -2305,111 +1568,32 @@ extern class GL {
 
 
     @:native('glBeginConditionalRender')
-    static function glBeginConditionalRender(id:UInt, mode:Int) : Void;
-
-    @:native('glBeginTransformFeedback')
-    static function glBeginTransformFeedback(primitiveMode:Int) : Void;
-
-    @:native('glBindFragDataLocation')
-    static function glBindFragDataLocation(program:UInt, colorNumber:UInt, name:String) : Void;
-
-    @:native('glClampColor')
-    static function glClampColor(target:Int, clamp:Int) : Void;
-
-    @:native('glClearBufferfi')
-    static function glClearBufferfi(buffer:Int, drawBuffer:Int, depth:Float, stencil:Int) : Void;
-
-    @:native('glColorMaski')
-    static function glColorMaski(buf:UInt, red:Bool, green:Bool, blue:Bool, alpha:Bool) : Void;
-
-    @:native('glDisablei')
-    static function glDisablei(cap:Int, index:UInt) : Void;
-
-    @:native('glEnablei')
-    static function glEnablei(cap:Int, index:UInt) : Void;
-
-    @:native('glEndConditionalRender')
-    static function glEndConditionalRender() : Void;
-
-    @:native('glEndTransformFeedback')
-    static function glEndTransformFeedback() : Void;
-
-    @:native('glGetFragDataLocation')
-    static function glGetFragDataLocation(program:UInt, name:String) : Int;
-
-    @:native('glIsEnabledi')
-    static function glIsEnabledi(cap:Int, index:UInt) : Bool;
-
-    @:native('glUniform1ui')
-    static function glUniform1ui(location:Int, v0:UInt) : Void;
-
-    @:native('glUniform2ui')
-    static function glUniform2ui(location:Int, v0:UInt, v1:UInt) : Void;
-
-    @:native('glUniform3ui')
-    static function glUniform3ui(location:Int, v0:UInt, v1:UInt, v2:UInt) : Void;
-
-    @:native('glUniform4ui')
-    static function glUniform4ui(location:Int, v0:UInt, v1:UInt, v2:UInt, v3:UInt) : Void;
-
-    @:native('glVertexAttribI1i')
-    static function glVertexAttribI1i(index:UInt, v0:Int) : Void;
-
-    @:native('glVertexAttribI1ui')
-    static function glVertexAttribI1ui(index:UInt, v0:UInt) : Void;
-
-    @:native('glVertexAttribI2i')
-    static function glVertexAttribI2i(index:UInt, v0:Int, v1:Int) : Void;
-
-    @:native('glVertexAttribI2ui')
-    static function glVertexAttribI2ui(index:UInt, v0:UInt, v1:UInt) : Void;
-
-    @:native('glVertexAttribI3i')
-    static function glVertexAttribI3i(index:UInt, v0:Int, v1:Int, v2:Int) : Void;
-
-    @:native('glVertexAttribI3ui')
-    static function glVertexAttribI3ui(index:UInt, v0:UInt, v1:UInt, v2:UInt) : Void;
-
-    @:native('glVertexAttribI4i')
-    static function glVertexAttribI4i(index:UInt, v0:Int, v1:Int, v2:Int, v3:Int) : Void;
-
-    @:native('glVertexAttribI4ui')
+    static function glBeginConditionalRender(id:UInt, mode:Int) : Void;    @:native('glBeginTransformFeedback')
+    static function glBeginTransformFeedback(primitiveMode:Int) : Void;    @:native('glBindFragDataLocation')
+    static function glBindFragDataLocation(program:UInt, colorNumber:UInt, name:String) : Void;    @:native('glClampColor')
+    static function glClampColor(target:Int, clamp:Int) : Void;    @:native('glClearBufferfi')
+    static function glClearBufferfi(buffer:Int, drawBuffer:Int, depth:Float, stencil:Int) : Void;    @:native('glColorMaski')
+    static function glColorMaski(buf:UInt, red:Bool, green:Bool, blue:Bool, alpha:Bool) : Void;    @:native('glDisablei')
+    static function glDisablei(cap:Int, index:UInt) : Void;    @:native('glEnablei')
+    static function glEnablei(cap:Int, index:UInt) : Void;    @:native('glEndConditionalRender')
+    static function glEndConditionalRender() : Void;    @:native('glEndTransformFeedback')
+    static function glEndTransformFeedback() : Void;    @:native('glGetFragDataLocation')
+    static function glGetFragDataLocation(program:UInt, name:String) : Int;    @:native('glIsEnabledi')
+    static function glIsEnabledi(cap:Int, index:UInt) : Bool;    @:native('glUniform1ui')
+    static function glUniform1ui(location:Int, v0:UInt) : Void;    @:native('glUniform2ui')
+    static function glUniform2ui(location:Int, v0:UInt, v1:UInt) : Void;    @:native('glUniform3ui')
+    static function glUniform3ui(location:Int, v0:UInt, v1:UInt, v2:UInt) : Void;    @:native('glUniform4ui')
+    static function glUniform4ui(location:Int, v0:UInt, v1:UInt, v2:UInt, v3:UInt) : Void;    @:native('glVertexAttribI1i')
+    static function glVertexAttribI1i(index:UInt, v0:Int) : Void;    @:native('glVertexAttribI1ui')
+    static function glVertexAttribI1ui(index:UInt, v0:UInt) : Void;    @:native('glVertexAttribI2i')
+    static function glVertexAttribI2i(index:UInt, v0:Int, v1:Int) : Void;    @:native('glVertexAttribI2ui')
+    static function glVertexAttribI2ui(index:UInt, v0:UInt, v1:UInt) : Void;    @:native('glVertexAttribI3i')
+    static function glVertexAttribI3i(index:UInt, v0:Int, v1:Int, v2:Int) : Void;    @:native('glVertexAttribI3ui')
+    static function glVertexAttribI3ui(index:UInt, v0:UInt, v1:UInt, v2:UInt) : Void;    @:native('glVertexAttribI4i')
+    static function glVertexAttribI4i(index:UInt, v0:Int, v1:Int, v2:Int, v3:Int) : Void;    @:native('glVertexAttribI4ui')
     static function glVertexAttribI4ui(index:UInt, v0:UInt, v1:UInt, v2:UInt, v3:UInt) : Void;
 
-
-
-    // static function glClearBufferfv(buffer:Int, drawBuffer:Int, value:const GLfloat*) : Void;
-    // static function glClearBufferiv(buffer:Int, drawBuffer:Int, value:const GLint*) : Void;
-    // static function glClearBufferuiv(buffer:Int, drawBuffer:Int, value:const GLuint*) : Void;
-    // static function glGetBooleani_v(pname:Int, index:UInt, data:GLboolean*) : Void;
-    // static function glGetStringi(name:Int, index:UInt) : const GLubyte*;
-    // static function glGetTexParameterIiv(target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetTexParameterIuiv(target:Int, pname:Int, params:GLuint*) : Void;
-    // static function glGetTransformFeedbackVarying(program:UInt, index:UInt, bufSize:Int, length:GLsizei *, size:GLsizei *, type:GLenum *, name:GLchar *) : Void;
-    // static function glGetUniformuiv(program:UInt, location:Int, params:GLuint*) : Void;
-    // static function glGetVertexAttribIiv(index:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetVertexAttribIuiv(index:UInt, pname:Int, params:GLuint*) : Void;
-    // static function glTexParameterIiv(target:Int, pname:Int, params:const GLint*) : Void;
-    // static function glTexParameterIuiv(target:Int, pname:Int, params:const GLuint*) : Void;
-    // static function glTransformFeedbackVaryings(program:UInt, count:Int, varyings:const GLchar *const*, bufferMode:Int) : Void;
-    // static function glUniform1uiv(location:Int, count:Int, value:const GLuint*) : Void;
-    // static function glUniform2uiv(location:Int, count:Int, value:const GLuint*) : Void;
-    // static function glUniform3uiv(location:Int, count:Int, value:const GLuint*) : Void;
-    // static function glUniform4uiv(location:Int, count:Int, value:const GLuint*) : Void;
-    // static function glVertexAttribI1iv(index:UInt, v0:const GLint*) : Void;
-    // static function glVertexAttribI1uiv(index:UInt, v0:const GLuint*) : Void;
-    // static function glVertexAttribI2iv(index:UInt, v0:const GLint*) : Void;
-    // static function glVertexAttribI2uiv(index:UInt, v0:const GLuint*) : Void;
-    // static function glVertexAttribI3iv(index:UInt, v0:const GLint*) : Void;
-    // static function glVertexAttribI3uiv(index:UInt, v0:const GLuint*) : Void;
-    // static function glVertexAttribI4bv(index:UInt, v0:const GLbyte*) : Void;
-    // static function glVertexAttribI4iv(index:UInt, v0:const GLint*) : Void;
-    // static function glVertexAttribI4sv(index:UInt, v0:const GLshort*) : Void;
-    // static function glVertexAttribI4ubv(index:UInt, v0:const GLubyte*) : Void;
-    // static function glVertexAttribI4uiv(index:UInt, v0:const GLuint*) : Void;
-    // static function glVertexAttribI4usv(index:UInt, v0:const GLushort*) : Void;
-    // static function glVertexAttribIPointer(index:UInt, size:Int, type:Int, stride:Int, void*pointer:const) : Void;
-
+    // static function glClearBufferfv(buffer:Int, drawBuffer:Int, value:const GLfloat*) : Void;    // static function glClearBufferiv(buffer:Int, drawBuffer:Int, value:const GLint*) : Void;    // static function glClearBufferuiv(buffer:Int, drawBuffer:Int, value:const GLuint*) : Void;    // static function glGetBooleani_v(pname:Int, index:UInt, data:GLboolean*) : Void;    // static function glGetStringi(name:Int, index:UInt) : const GLubyte*;    // static function glGetTexParameterIiv(target:Int, pname:Int, params:GLint*) : Void;    // static function glGetTexParameterIuiv(target:Int, pname:Int, params:GLuint*) : Void;    // static function glGetTransformFeedbackVarying(program:UInt, index:UInt, bufSize:Int, length:GLsizei *, size:GLsizei *, type:GLenum *, name:GLchar *) : Void;    // static function glGetUniformuiv(program:UInt, location:Int, params:GLuint*) : Void;    // static function glGetVertexAttribIiv(index:UInt, pname:Int, params:GLint*) : Void;    // static function glGetVertexAttribIuiv(index:UInt, pname:Int, params:GLuint*) : Void;    // static function glTexParameterIiv(target:Int, pname:Int, params:const GLint*) : Void;    // static function glTexParameterIuiv(target:Int, pname:Int, params:const GLuint*) : Void;    // static function glTransformFeedbackVaryings(program:UInt, count:Int, varyings:const GLchar *const*, bufferMode:Int) : Void;    // static function glUniform1uiv(location:Int, count:Int, value:const GLuint*) : Void;    // static function glUniform2uiv(location:Int, count:Int, value:const GLuint*) : Void;    // static function glUniform3uiv(location:Int, count:Int, value:const GLuint*) : Void;    // static function glUniform4uiv(location:Int, count:Int, value:const GLuint*) : Void;    // static function glVertexAttribI1iv(index:UInt, v0:const GLint*) : Void;    // static function glVertexAttribI1uiv(index:UInt, v0:const GLuint*) : Void;    // static function glVertexAttribI2iv(index:UInt, v0:const GLint*) : Void;    // static function glVertexAttribI2uiv(index:UInt, v0:const GLuint*) : Void;    // static function glVertexAttribI3iv(index:UInt, v0:const GLint*) : Void;    // static function glVertexAttribI3uiv(index:UInt, v0:const GLuint*) : Void;    // static function glVertexAttribI4bv(index:UInt, v0:const GLbyte*) : Void;    // static function glVertexAttribI4iv(index:UInt, v0:const GLint*) : Void;    // static function glVertexAttribI4sv(index:UInt, v0:const GLshort*) : Void;    // static function glVertexAttribI4ubv(index:UInt, v0:const GLubyte*) : Void;    // static function glVertexAttribI4uiv(index:UInt, v0:const GLuint*) : Void;    // static function glVertexAttribI4usv(index:UInt, v0:const GLushort*) : Void;    // static function glVertexAttribIPointer(index:UInt, size:Int, type:Int, stride:Int, void*pointer:const) : Void;
 
 //GL 3.1
     inline static var GL_TEXTURE_RECTANGLE                                            = 0x84F5;
@@ -2449,18 +1633,11 @@ extern class GL {
 
 
     @:native('glDrawArraysInstanced')
-    static function glDrawArraysInstanced(mode:Int, first:Int, count:Int, primcount:Int) : Void;
-
-    @:native('glPrimitiveRestartIndex')
-    static function glPrimitiveRestartIndex(buffer:UInt) : Void;
-
-    @:native('glTexBuffer')
+    static function glDrawArraysInstanced(mode:Int, first:Int, count:Int, primcount:Int) : Void;    @:native('glPrimitiveRestartIndex')
+    static function glPrimitiveRestartIndex(buffer:UInt) : Void;    @:native('glTexBuffer')
     static function glTexBuffer(target:Int, internalFormat:Int, buffer:UInt) : Void;
 
-
-
     // static function glDrawElementsInstanced(mode:Int, count:Int, type:Int, indices:const void*, primcount:Int) : Void;
-
 
 //GL 3.2
     inline static var GL_CONTEXT_CORE_PROFILE_BIT                                     = 0x00000001;
@@ -2490,11 +1667,7 @@ extern class GL {
     @:native('glFramebufferTexture')
     static function glFramebufferTexture(target:Int, attachment:Int, texture:UInt, level:Int) : Void;
 
-
-
-    // static function glGetBufferParameteri64v(target:Int, value:Int, data:GLint64 *) : Void;
-    // static function glGetInteger64i_v(pname:Int, index:UInt, data:GLint64 *) : Void;
-
+    // static function glGetBufferParameteri64v(target:Int, value:Int, data:GLint64 *) : Void;    // static function glGetInteger64i_v(pname:Int, index:UInt, data:GLint64 *) : Void;
 
 //GL 3.3
     inline static var GL_VERTEX_ATTRIB_ARRAY_DIVISOR                                  = 0x88FE;
@@ -2503,8 +1676,6 @@ extern class GL {
 
     @:native('glVertexAttribDivisor')
     static function glVertexAttribDivisor(index:UInt, divisor:UInt) : Void;
-
-
 
 
 
@@ -2524,21 +1695,11 @@ extern class GL {
 
 
     @:native('glBlendEquationSeparatei')
-    static function glBlendEquationSeparatei(buf:UInt, modeRGB:Int, modeAlpha:Int) : Void;
-
-    @:native('glBlendEquationi')
-    static function glBlendEquationi(buf:UInt, mode:Int) : Void;
-
-    @:native('glBlendFuncSeparatei')
-    static function glBlendFuncSeparatei(buf:UInt, srcRGB:Int, dstRGB:Int, srcAlpha:Int, dstAlpha:Int) : Void;
-
-    @:native('glBlendFunci')
-    static function glBlendFunci(buf:UInt, src:Int, dst:Int) : Void;
-
-    @:native('glMinSampleShading')
+    static function glBlendEquationSeparatei(buf:UInt, modeRGB:Int, modeAlpha:Int) : Void;    @:native('glBlendEquationi')
+    static function glBlendEquationi(buf:UInt, mode:Int) : Void;    @:native('glBlendFuncSeparatei')
+    static function glBlendFuncSeparatei(buf:UInt, srcRGB:Int, dstRGB:Int, srcAlpha:Int, dstAlpha:Int) : Void;    @:native('glBlendFunci')
+    static function glBlendFunci(buf:UInt, src:Int, dst:Int) : Void;    @:native('glMinSampleShading')
     static function glMinSampleShading(value:Float) : Void;
-
-
 
 
 
@@ -2591,8 +1752,6 @@ extern class GL {
 
 
 
-
-
 //GL_3DFX_multisample
     inline static var GL_3DFX_multisample                                             = 1;
     inline static var GL_MULTISAMPLE_3DFX                                             = 0x86B2;
@@ -2615,8 +1774,6 @@ extern class GL {
 
     @:native('glTbufferMask3DFX')
     static function glTbufferMask3DFX(mask:UInt) : Void;
-
-
 
 
 
@@ -2677,12 +1834,7 @@ extern class GL {
     @:native('glDebugMessageInsertAMD')
     static function glDebugMessageInsertAMD(category:Int, severity:Int, id:UInt, length:Int, buf:String) : Void;
 
-
-
-    // static function glDebugMessageCallbackAMD(callback:GLDEBUGPROCAMD, *userParam:Void) : Void;
-    // static function glDebugMessageEnableAMD(category:Int, severity:Int, count:Int, ids:const GLuint*, enabled:Bool) : Void;
-    // static function glGetDebugMessageLogAMD(count:UInt, bufsize:Int, categories:GLenum*, severities:GLuint*, ids:GLuint*, lengths:GLsizei*, message:String) : UInt;
-
+    // static function glDebugMessageCallbackAMD(callback:GLDEBUGPROCAMD, *userParam:Void) : Void;    // static function glDebugMessageEnableAMD(category:Int, severity:Int, count:Int, ids:const GLuint*, enabled:Bool) : Void;    // static function glGetDebugMessageLogAMD(count:UInt, bufsize:Int, categories:GLenum*, severities:GLuint*, ids:GLuint*, lengths:GLsizei*, message:String) : UInt;
 
 //GL_AMD_depth_clamp_separate
     inline static var GL_AMD_depth_clamp_separate                                     = 1;
@@ -2703,18 +1855,10 @@ extern class GL {
 
 
     @:native('glBlendEquationIndexedAMD')
-    static function glBlendEquationIndexedAMD(buf:UInt, mode:Int) : Void;
-
-    @:native('glBlendEquationSeparateIndexedAMD')
-    static function glBlendEquationSeparateIndexedAMD(buf:UInt, modeRGB:Int, modeAlpha:Int) : Void;
-
-    @:native('glBlendFuncIndexedAMD')
-    static function glBlendFuncIndexedAMD(buf:UInt, src:Int, dst:Int) : Void;
-
-    @:native('glBlendFuncSeparateIndexedAMD')
+    static function glBlendEquationIndexedAMD(buf:UInt, mode:Int) : Void;    @:native('glBlendEquationSeparateIndexedAMD')
+    static function glBlendEquationSeparateIndexedAMD(buf:UInt, modeRGB:Int, modeAlpha:Int) : Void;    @:native('glBlendFuncIndexedAMD')
+    static function glBlendFuncIndexedAMD(buf:UInt, src:Int, dst:Int) : Void;    @:native('glBlendFuncSeparateIndexedAMD')
     static function glBlendFuncSeparateIndexedAMD(buf:UInt, srcRGB:Int, dstRGB:Int, srcAlpha:Int, dstAlpha:Int) : Void;
-
-
 
 
 
@@ -2753,8 +1897,6 @@ extern class GL {
 
 
 
-
-
 //GL_AMD_multi_draw_indirect
     inline static var GL_AMD_multi_draw_indirect                                      = 1;
 
@@ -2763,9 +1905,7 @@ extern class GL {
 
 
 
-    // static function glMultiDrawArraysIndirectAMD(mode:Int, *indirect:const void, primcount:Int, stride:Int) : Void;
-    // static function glMultiDrawElementsIndirectAMD(mode:Int, type:Int, *indirect:const void, primcount:Int, stride:Int) : Void;
-
+    // static function glMultiDrawArraysIndirectAMD(mode:Int, *indirect:const void, primcount:Int, stride:Int) : Void;    // static function glMultiDrawElementsIndirectAMD(mode:Int, type:Int, *indirect:const void, primcount:Int, stride:Int) : Void;
 
 //GL_AMD_name_gen_delete
     inline static var GL_AMD_name_gen_delete                                          = 1;
@@ -2781,11 +1921,7 @@ extern class GL {
     @:native('glIsNameAMD')
     static function glIsNameAMD(identifier:Int, name:UInt) : Bool;
 
-
-
-    // static function glDeleteNamesAMD(identifier:Int, num:UInt, names:const GLuint*) : Void;
-    // static function glGenNamesAMD(identifier:Int, num:UInt, names:GLuint*) : Void;
-
+    // static function glDeleteNamesAMD(identifier:Int, num:UInt, names:const GLuint*) : Void;    // static function glGenNamesAMD(identifier:Int, num:UInt, names:GLuint*) : Void;
 
 //GL_AMD_occlusion_query_event
     inline static var GL_AMD_occlusion_query_event                                    = 1;
@@ -2804,8 +1940,6 @@ extern class GL {
 
 
 
-
-
 //GL_AMD_performance_monitor
     inline static var GL_AMD_performance_monitor                                      = 1;
     inline static var GL_COUNTER_TYPE_AMD                                             = 0x8BC0;
@@ -2820,23 +1954,10 @@ extern class GL {
 
 
     @:native('glBeginPerfMonitorAMD')
-    static function glBeginPerfMonitorAMD(monitor:UInt) : Void;
-
-    @:native('glEndPerfMonitorAMD')
+    static function glBeginPerfMonitorAMD(monitor:UInt) : Void;    @:native('glEndPerfMonitorAMD')
     static function glEndPerfMonitorAMD(monitor:UInt) : Void;
 
-
-
-    // static function glDeletePerfMonitorsAMD(n:Int, monitors:GLuint*) : Void;
-    // static function glGenPerfMonitorsAMD(n:Int, monitors:GLuint*) : Void;
-    // static function glGetPerfMonitorCounterDataAMD(monitor:UInt, pname:Int, dataSize:Int, data:GLuint*, *bytesWritten:Int) : Void;
-    // static function glGetPerfMonitorCounterInfoAMD(group:UInt, counter:UInt, pname:Int, *data:Void) : Void;
-    // static function glGetPerfMonitorCounterStringAMD(group:UInt, counter:UInt, bufSize:Int, length:GLsizei*, *counterString:GLchar) : Void;
-    // static function glGetPerfMonitorCountersAMD(group:UInt, numCounters:GLint*, *maxActiveCounters:Int, countersSize:Int, *counters:UInt) : Void;
-    // static function glGetPerfMonitorGroupStringAMD(group:UInt, bufSize:Int, length:GLsizei*, *groupString:GLchar) : Void;
-    // static function glGetPerfMonitorGroupsAMD(numGroups:GLint*, groupsSize:Int, *groups:UInt) : Void;
-    // static function glSelectPerfMonitorCountersAMD(monitor:UInt, enable:Bool, group:UInt, numCounters:Int, counterList:GLuint*) : Void;
-
+    // static function glDeletePerfMonitorsAMD(n:Int, monitors:GLuint*) : Void;    // static function glGenPerfMonitorsAMD(n:Int, monitors:GLuint*) : Void;    // static function glGetPerfMonitorCounterDataAMD(monitor:UInt, pname:Int, dataSize:Int, data:GLuint*, *bytesWritten:Int) : Void;    // static function glGetPerfMonitorCounterInfoAMD(group:UInt, counter:UInt, pname:Int, *data:Void) : Void;    // static function glGetPerfMonitorCounterStringAMD(group:UInt, counter:UInt, bufSize:Int, length:GLsizei*, *counterString:GLchar) : Void;    // static function glGetPerfMonitorCountersAMD(group:UInt, numCounters:GLint*, *maxActiveCounters:Int, countersSize:Int, *counters:UInt) : Void;    // static function glGetPerfMonitorGroupStringAMD(group:UInt, bufSize:Int, length:GLsizei*, *groupString:GLchar) : Void;    // static function glGetPerfMonitorGroupsAMD(numGroups:GLint*, groupsSize:Int, *groups:UInt) : Void;    // static function glSelectPerfMonitorCountersAMD(monitor:UInt, enable:Bool, group:UInt, numCounters:Int, counterList:GLuint*) : Void;
 
 //GL_AMD_pinned_memory
     inline static var GL_AMD_pinned_memory                                            = 1;
@@ -2872,7 +1993,6 @@ extern class GL {
 
 
     // static function glSetMultisamplefvAMD(pname:Int, index:UInt, val:const GLfloat*) : Void;
-
 
 //GL_AMD_seamless_cubemap_per_texture
     inline static var GL_AMD_seamless_cubemap_per_texture                             = 1;
@@ -2941,12 +2061,8 @@ extern class GL {
 
 
     @:native('glTexStorageSparseAMD')
-    static function glTexStorageSparseAMD(target:Int, internalFormat:Int, width:Int, height:Int, depth:Int, layers:Int, flags:Int) : Void;
-
-    @:native('glTextureStorageSparseAMD')
+    static function glTexStorageSparseAMD(target:Int, internalFormat:Int, width:Int, height:Int, depth:Int, layers:Int, flags:Int) : Void;    @:native('glTextureStorageSparseAMD')
     static function glTextureStorageSparseAMD(texture:UInt, target:Int, internalFormat:Int, width:Int, height:Int, depth:Int, layers:Int, flags:Int) : Void;
-
-
 
 
 
@@ -2962,8 +2078,6 @@ extern class GL {
 
     @:native('glStencilOpValueAMD')
     static function glStencilOpValueAMD(face:Int, value:UInt) : Void;
-
-
 
 
 
@@ -3022,12 +2136,8 @@ extern class GL {
 
 
     @:native('glTessellationFactorAMD')
-    static function glTessellationFactorAMD(factor:Float) : Void;
-
-    @:native('glTessellationModeAMD')
+    static function glTessellationFactorAMD(factor:Float) : Void;    @:native('glTessellationModeAMD')
     static function glTessellationModeAMD(mode:Int) : Void;
-
-
 
 
 
@@ -3066,8 +2176,6 @@ extern class GL {
 
 
 
-
-
 //GL_ANGLE_framebuffer_multisample
     inline static var GL_ANGLE_framebuffer_multisample                                = 1;
     inline static var GL_RENDERBUFFER_SAMPLES_ANGLE                                   = 0x8CAB;
@@ -3082,8 +2190,6 @@ extern class GL {
 
 
 
-
-
 //GL_ANGLE_instanced_arrays
     inline static var GL_ANGLE_instanced_arrays                                       = 1;
     inline static var GL_VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE                            = 0x88FE;
@@ -3092,15 +2198,10 @@ extern class GL {
 
 
     @:native('glDrawArraysInstancedANGLE')
-    static function glDrawArraysInstancedANGLE(mode:Int, first:Int, count:Int, primcount:Int) : Void;
-
-    @:native('glVertexAttribDivisorANGLE')
+    static function glDrawArraysInstancedANGLE(mode:Int, first:Int, count:Int, primcount:Int) : Void;    @:native('glVertexAttribDivisorANGLE')
     static function glVertexAttribDivisorANGLE(index:UInt, divisor:UInt) : Void;
 
-
-
     // static function glDrawElementsInstancedANGLE(mode:Int, count:Int, type:Int, *indices:const void, primcount:Int) : Void;
-
 
 //GL_ANGLE_pack_reverse_row_order
     inline static var GL_ANGLE_pack_reverse_row_order                                 = 1;
@@ -3183,27 +2284,12 @@ extern class GL {
 
 
     @:native('glBeginQueryANGLE')
-    static function glBeginQueryANGLE(target:Int, id:UInt) : Void;
-
-    @:native('glEndQueryANGLE')
-    static function glEndQueryANGLE(target:Int) : Void;
-
-    @:native('glIsQueryANGLE')
-    static function glIsQueryANGLE(id:UInt) : Bool;
-
-    @:native('glQueryCounterANGLE')
+    static function glBeginQueryANGLE(target:Int, id:UInt) : Void;    @:native('glEndQueryANGLE')
+    static function glEndQueryANGLE(target:Int) : Void;    @:native('glIsQueryANGLE')
+    static function glIsQueryANGLE(id:UInt) : Bool;    @:native('glQueryCounterANGLE')
     static function glQueryCounterANGLE(id:UInt, target:Int) : Void;
 
-
-
-    // static function glDeleteQueriesANGLE(n:Int, ids:const GLuint*) : Void;
-    // static function glGenQueriesANGLE(n:Int, ids:GLuint*) : Void;
-    // static function glGetQueryObjecti64vANGLE(id:UInt, pname:Int, params:GLint64*) : Void;
-    // static function glGetQueryObjectivANGLE(id:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetQueryObjectui64vANGLE(id:UInt, pname:Int, params:GLuint64*) : Void;
-    // static function glGetQueryObjectuivANGLE(id:UInt, pname:Int, params:GLuint*) : Void;
-    // static function glGetQueryivANGLE(target:Int, pname:Int, params:GLint*) : Void;
-
+    // static function glDeleteQueriesANGLE(n:Int, ids:const GLuint*) : Void;    // static function glGenQueriesANGLE(n:Int, ids:GLuint*) : Void;    // static function glGetQueryObjecti64vANGLE(id:UInt, pname:Int, params:GLint64*) : Void;    // static function glGetQueryObjectivANGLE(id:UInt, pname:Int, params:GLint*) : Void;    // static function glGetQueryObjectui64vANGLE(id:UInt, pname:Int, params:GLuint64*) : Void;    // static function glGetQueryObjectuivANGLE(id:UInt, pname:Int, params:GLuint*) : Void;    // static function glGetQueryivANGLE(target:Int, pname:Int, params:GLint*) : Void;
 
 //GL_ANGLE_translated_shader_source
     inline static var GL_ANGLE_translated_shader_source                               = 1;
@@ -3215,7 +2301,6 @@ extern class GL {
 
 
     // static function glGetTranslatedShaderSourceANGLE(shader:UInt, bufsize:Int, length:GLsizei*, source:String) : Void;
-
 
 //GL_APPLE_aux_depth_stencil
     inline static var GL_APPLE_aux_depth_stencil                                      = 1;
@@ -3249,17 +2334,10 @@ extern class GL {
 
 
     @:native('glDrawElementArrayAPPLE')
-    static function glDrawElementArrayAPPLE(mode:Int, first:Int, count:Int) : Void;
-
-    @:native('glDrawRangeElementArrayAPPLE')
+    static function glDrawElementArrayAPPLE(mode:Int, first:Int, count:Int) : Void;    @:native('glDrawRangeElementArrayAPPLE')
     static function glDrawRangeElementArrayAPPLE(mode:Int, start:UInt, end:UInt, first:Int, count:Int) : Void;
 
-
-
-    // static function glElementPointerAPPLE(type:Int, *pointer:const void) : Void;
-    // static function glMultiDrawElementArrayAPPLE(mode:Int, first:const GLint*, *count:const GLsizei, primcount:Int) : Void;
-    // static function glMultiDrawRangeElementArrayAPPLE(mode:Int, start:UInt, end:UInt, first:const GLint*, *count:const GLsizei, primcount:Int) : Void;
-
+    // static function glElementPointerAPPLE(type:Int, *pointer:const void) : Void;    // static function glMultiDrawElementArrayAPPLE(mode:Int, first:const GLint*, *count:const GLsizei, primcount:Int) : Void;    // static function glMultiDrawRangeElementArrayAPPLE(mode:Int, start:UInt, end:UInt, first:const GLint*, *count:const GLsizei, primcount:Int) : Void;
 
 //GL_APPLE_fence
     inline static var GL_APPLE_fence                                                  = 1;
@@ -3270,28 +2348,14 @@ extern class GL {
 
 
     @:native('glFinishFenceAPPLE')
-    static function glFinishFenceAPPLE(fence:UInt) : Void;
-
-    @:native('glFinishObjectAPPLE')
-    static function glFinishObjectAPPLE(object:Int, name:Int) : Void;
-
-    @:native('glIsFenceAPPLE')
-    static function glIsFenceAPPLE(fence:UInt) : Bool;
-
-    @:native('glSetFenceAPPLE')
-    static function glSetFenceAPPLE(fence:UInt) : Void;
-
-    @:native('glTestFenceAPPLE')
-    static function glTestFenceAPPLE(fence:UInt) : Bool;
-
-    @:native('glTestObjectAPPLE')
+    static function glFinishFenceAPPLE(fence:UInt) : Void;    @:native('glFinishObjectAPPLE')
+    static function glFinishObjectAPPLE(object:Int, name:Int) : Void;    @:native('glIsFenceAPPLE')
+    static function glIsFenceAPPLE(fence:UInt) : Bool;    @:native('glSetFenceAPPLE')
+    static function glSetFenceAPPLE(fence:UInt) : Void;    @:native('glTestFenceAPPLE')
+    static function glTestFenceAPPLE(fence:UInt) : Bool;    @:native('glTestObjectAPPLE')
     static function glTestObjectAPPLE(object:Int, name:UInt) : Bool;
 
-
-
-    // static function glDeleteFencesAPPLE(n:Int, fences:const GLuint*) : Void;
-    // static function glGenFencesAPPLE(n:Int, fences:GLuint*) : Void;
-
+    // static function glDeleteFencesAPPLE(n:Int, fences:const GLuint*) : Void;    // static function glGenFencesAPPLE(n:Int, fences:GLuint*) : Void;
 
 //GL_APPLE_float_pixels
     inline static var GL_APPLE_float_pixels                                           = 1;
@@ -3328,10 +2392,7 @@ extern class GL {
     @:native('glBufferParameteriAPPLE')
     static function glBufferParameteriAPPLE(target:Int, pname:Int, param:Int) : Void;
 
-
-
     // static function glFlushMappedBufferRangeAPPLE(target:Int, offset:GLintptr, size:GLsizeiptr) : Void;
-
 
 //GL_APPLE_object_purgeable
     inline static var GL_APPLE_object_purgeable                                       = 1;
@@ -3346,15 +2407,10 @@ extern class GL {
 
 
     @:native('glObjectPurgeableAPPLE')
-    static function glObjectPurgeableAPPLE(objectType:Int, name:UInt, option:Int) : Int;
-
-    @:native('glObjectUnpurgeableAPPLE')
+    static function glObjectPurgeableAPPLE(objectType:Int, name:UInt, option:Int) : Int;    @:native('glObjectUnpurgeableAPPLE')
     static function glObjectUnpurgeableAPPLE(objectType:Int, name:UInt, option:Int) : Int;
 
-
-
     // static function glGetObjectParameterivAPPLE(objectType:Int, name:UInt, pname:Int, params:GLint*) : Void;
-
 
 //GL_APPLE_pixel_buffer
     inline static var GL_APPLE_pixel_buffer                                           = 1;
@@ -3418,9 +2474,7 @@ extern class GL {
 
 
 
-    // static function glGetTexParameterPointervAPPLE(target:Int, pname:Int, **params:Void) : Void;
-    // static function glTextureRangeAPPLE(target:Int, length:Int, *pointer:Void) : Void;
-
+    // static function glGetTexParameterPointervAPPLE(target:Int, pname:Int, **params:Void) : Void;    // static function glTextureRangeAPPLE(target:Int, length:Int, *pointer:Void) : Void;
 
 //GL_APPLE_transform_hint
     inline static var GL_APPLE_transform_hint                                         = 1;
@@ -3441,16 +2495,10 @@ extern class GL {
 
 
     @:native('glBindVertexArrayAPPLE')
-    static function glBindVertexArrayAPPLE(array:UInt) : Void;
-
-    @:native('glIsVertexArrayAPPLE')
+    static function glBindVertexArrayAPPLE(array:UInt) : Void;    @:native('glIsVertexArrayAPPLE')
     static function glIsVertexArrayAPPLE(array:UInt) : Bool;
 
-
-
-    // static function glDeleteVertexArraysAPPLE(n:Int, arrays:const GLuint*) : Void;
-    // static function glGenVertexArraysAPPLE(n:Int, arrays:const GLuint*) : Void;
-
+    // static function glDeleteVertexArraysAPPLE(n:Int, arrays:const GLuint*) : Void;    // static function glGenVertexArraysAPPLE(n:Int, arrays:const GLuint*) : Void;
 
 //GL_APPLE_vertex_array_range
     inline static var GL_APPLE_vertex_array_range                                     = 1;
@@ -3467,11 +2515,7 @@ extern class GL {
     @:native('glVertexArrayParameteriAPPLE')
     static function glVertexArrayParameteriAPPLE(pname:Int, param:Int) : Void;
 
-
-
-    // static function glFlushVertexArrayRangeAPPLE(length:Int, *pointer:Void) : Void;
-    // static function glVertexArrayRangeAPPLE(length:Int, *pointer:Void) : Void;
-
+    // static function glFlushVertexArrayRangeAPPLE(length:Int, *pointer:Void) : Void;    // static function glVertexArrayRangeAPPLE(length:Int, *pointer:Void) : Void;
 
 //GL_APPLE_vertex_program_evaluators
     inline static var GL_APPLE_vertex_program_evaluators                              = 1;
@@ -3490,21 +2534,11 @@ extern class GL {
 
 
     @:native('glDisableVertexAttribAPPLE')
-    static function glDisableVertexAttribAPPLE(index:UInt, pname:Int) : Void;
-
-    @:native('glEnableVertexAttribAPPLE')
-    static function glEnableVertexAttribAPPLE(index:UInt, pname:Int) : Void;
-
-    @:native('glIsVertexAttribEnabledAPPLE')
+    static function glDisableVertexAttribAPPLE(index:UInt, pname:Int) : Void;    @:native('glEnableVertexAttribAPPLE')
+    static function glEnableVertexAttribAPPLE(index:UInt, pname:Int) : Void;    @:native('glIsVertexAttribEnabledAPPLE')
     static function glIsVertexAttribEnabledAPPLE(index:UInt, pname:Int) : Bool;
 
-
-
-    // static function glMapVertexAttrib1dAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, stride:Int, order:Int, points:const GLdouble*) : Void;
-    // static function glMapVertexAttrib1fAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, stride:Int, order:Int, points:const GLfloat*) : Void;
-    // static function glMapVertexAttrib2dAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, points:const GLdouble*) : Void;
-    // static function glMapVertexAttrib2fAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, points:const GLfloat*) : Void;
-
+    // static function glMapVertexAttrib1dAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, stride:Int, order:Int, points:const GLdouble*) : Void;    // static function glMapVertexAttrib1fAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, stride:Int, order:Int, points:const GLfloat*) : Void;    // static function glMapVertexAttrib2dAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, points:const GLdouble*) : Void;    // static function glMapVertexAttrib2fAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, points:const GLfloat*) : Void;
 
 //GL_APPLE_ycbcr_422
     inline static var GL_APPLE_ycbcr_422                                              = 1;
@@ -3540,19 +2574,11 @@ extern class GL {
 
 
     @:native('glClearDepthf')
-    static function glClearDepthf(d:Float) : Void;
-
-    @:native('glDepthRangef')
-    static function glDepthRangef(n:Float, f:Float) : Void;
-
-    @:native('glReleaseShaderCompiler')
+    static function glClearDepthf(d:Float) : Void;    @:native('glDepthRangef')
+    static function glDepthRangef(n:Float, f:Float) : Void;    @:native('glReleaseShaderCompiler')
     static function glReleaseShaderCompiler() : Void;
 
-
-
-    // static function glGetShaderPrecisionFormat(shadertype:Int, precisiontype:Int, range:GLint*, *precision:Int) : Void;
-    // static function glShaderBinary(count:Int, shaders:const GLuint*, binaryformat:Int, void*binary:const, length:Int) : Void;
-
+    // static function glGetShaderPrecisionFormat(shadertype:Int, precisiontype:Int, range:GLint*, *precision:Int) : Void;    // static function glShaderBinary(count:Int, shaders:const GLuint*, binaryformat:Int, void*binary:const, length:Int) : Void;
 
 //GL_ARB_ES3_1_compatibility
     inline static var GL_ARB_ES3_1_compatibility                                      = 1;
@@ -3562,8 +2588,6 @@ extern class GL {
 
     @:native('glMemoryBarrierByRegion')
     static function glMemoryBarrierByRegion(barriers:Int) : Void;
-
-
 
 
 
@@ -3610,11 +2634,7 @@ extern class GL {
     @:native('glDrawArraysInstancedBaseInstance')
     static function glDrawArraysInstancedBaseInstance(mode:Int, first:Int, count:Int, primcount:Int, baseinstance:UInt) : Void;
 
-
-
-    // static function glDrawElementsInstancedBaseInstance(mode:Int, count:Int, type:Int, *indices:const void, primcount:Int, baseinstance:UInt) : Void;
-    // static function glDrawElementsInstancedBaseVertexBaseInstance(mode:Int, count:Int, type:Int, *indices:const void, primcount:Int, basevertex:Int, baseinstance:UInt) : Void;
-
+    // static function glDrawElementsInstancedBaseInstance(mode:Int, count:Int, type:Int, *indices:const void, primcount:Int, baseinstance:UInt) : Void;    // static function glDrawElementsInstancedBaseVertexBaseInstance(mode:Int, count:Int, type:Int, *indices:const void, primcount:Int, basevertex:Int, baseinstance:UInt) : Void;
 
 //GL_ARB_bindless_texture
     inline static var GL_ARB_bindless_texture                                         = 1;
@@ -3624,30 +2644,11 @@ extern class GL {
 
 
     @:native('glGetImageHandleARB')
-    static function glGetImageHandleARB(texture:UInt, level:Int, layered:Bool, layer:Int, format:Int) : cpp.UInt64;
-
-    @:native('glGetTextureHandleARB')
-    static function glGetTextureHandleARB(texture:UInt) : cpp.UInt64;
-
-    @:native('glGetTextureSamplerHandleARB')
+    static function glGetImageHandleARB(texture:UInt, level:Int, layered:Bool, layer:Int, format:Int) : cpp.UInt64;    @:native('glGetTextureHandleARB')
+    static function glGetTextureHandleARB(texture:UInt) : cpp.UInt64;    @:native('glGetTextureSamplerHandleARB')
     static function glGetTextureSamplerHandleARB(texture:UInt, sampler:UInt) : cpp.UInt64;
 
-
-
-    // static function glGetVertexAttribLui64vARB(index:UInt, pname:Int, params:GLuint64EXT*) : Void;
-    // static function glIsImageHandleResidentARB(handle:cpp.UInt64) : Bool;
-    // static function glIsTextureHandleResidentARB(handle:cpp.UInt64) : Bool;
-    // static function glMakeImageHandleNonResidentARB(handle:cpp.UInt64) : Void;
-    // static function glMakeImageHandleResidentARB(handle:cpp.UInt64, access:Int) : Void;
-    // static function glMakeTextureHandleNonResidentARB(handle:cpp.UInt64) : Void;
-    // static function glMakeTextureHandleResidentARB(handle:cpp.UInt64) : Void;
-    // static function glProgramUniformHandleui64ARB(program:UInt, location:Int, value:cpp.UInt64) : Void;
-    // static function glProgramUniformHandleui64vARB(program:UInt, location:Int, count:Int, values:const GLuint64*) : Void;
-    // static function glUniformHandleui64ARB(location:Int, value:cpp.UInt64) : Void;
-    // static function glUniformHandleui64vARB(location:Int, count:Int, value:const GLuint64*) : Void;
-    // static function glVertexAttribL1ui64ARB(index:UInt, x:cpp.UInt64) : Void;
-    // static function glVertexAttribL1ui64vARB(index:UInt, v:const GLuint64EXT*) : Void;
-
+    // static function glGetVertexAttribLui64vARB(index:UInt, pname:Int, params:GLuint64EXT*) : Void;    // static function glIsImageHandleResidentARB(handle:cpp.UInt64) : Bool;    // static function glIsTextureHandleResidentARB(handle:cpp.UInt64) : Bool;    // static function glMakeImageHandleNonResidentARB(handle:cpp.UInt64) : Void;    // static function glMakeImageHandleResidentARB(handle:cpp.UInt64, access:Int) : Void;    // static function glMakeTextureHandleNonResidentARB(handle:cpp.UInt64) : Void;    // static function glMakeTextureHandleResidentARB(handle:cpp.UInt64) : Void;    // static function glProgramUniformHandleui64ARB(program:UInt, location:Int, value:cpp.UInt64) : Void;    // static function glProgramUniformHandleui64vARB(program:UInt, location:Int, count:Int, values:const GLuint64*) : Void;    // static function glUniformHandleui64ARB(location:Int, value:cpp.UInt64) : Void;    // static function glUniformHandleui64vARB(location:Int, count:Int, value:const GLuint64*) : Void;    // static function glVertexAttribL1ui64ARB(index:UInt, x:cpp.UInt64) : Void;    // static function glVertexAttribL1ui64vARB(index:UInt, v:const GLuint64EXT*) : Void;
 
 //GL_ARB_blend_func_extended
     inline static var GL_ARB_blend_func_extended                                      = 1;
@@ -3661,9 +2662,7 @@ extern class GL {
 
 
 
-    // static function glBindFragDataLocationIndexed(program:UInt, colorNumber:UInt, index:UInt, name:const GLchar *) : Void;
-    // static function glGetFragDataIndex(program:UInt, name:const GLchar *) : Int;
-
+    // static function glBindFragDataLocationIndexed(program:UInt, colorNumber:UInt, index:UInt, name:const GLchar *) : Void;    // static function glGetFragDataIndex(program:UInt, name:const GLchar *) : Int;
 
 //GL_ARB_buffer_storage
     inline static var GL_ARB_buffer_storage                                           = 1;
@@ -3682,9 +2681,7 @@ extern class GL {
 
 
 
-    // static function glBufferStorage(target:Int, size:GLsizeiptr, *data:const void, flags:Int) : Void;
-    // static function glNamedBufferStorageEXT(buffer:UInt, size:GLsizeiptr, *data:const void, flags:Int) : Void;
-
+    // static function glBufferStorage(target:Int, size:GLsizeiptr, *data:const void, flags:Int) : Void;    // static function glNamedBufferStorageEXT(buffer:UInt, size:GLsizeiptr, *data:const void, flags:Int) : Void;
 
 //GL_ARB_cl_event
     inline static var GL_ARB_cl_event                                                 = 1;
@@ -3698,7 +2695,6 @@ extern class GL {
 
     // static function glCreateSyncFromCLeventARB(context:cl_context, event:cl_event, flags:Int) : GLsync;
 
-
 //GL_ARB_clear_buffer_object
     inline static var GL_ARB_clear_buffer_object                                      = 1;
 
@@ -3707,11 +2703,7 @@ extern class GL {
 
 
 
-    // static function glClearBufferData(target:Int, internalformat:Int, format:Int, type:Int, *data:const void) : Void;
-    // static function glClearBufferSubData(target:Int, internalformat:Int, offset:GLintptr, size:GLsizeiptr, format:Int, type:Int, *data:const void) : Void;
-    // static function glClearNamedBufferDataEXT(buffer:UInt, internalformat:Int, format:Int, type:Int, *data:const void) : Void;
-    // static function glClearNamedBufferSubDataEXT(buffer:UInt, internalformat:Int, offset:GLintptr, size:GLsizeiptr, format:Int, type:Int, *data:const void) : Void;
-
+    // static function glClearBufferData(target:Int, internalformat:Int, format:Int, type:Int, *data:const void) : Void;    // static function glClearBufferSubData(target:Int, internalformat:Int, offset:GLintptr, size:GLsizeiptr, format:Int, type:Int, *data:const void) : Void;    // static function glClearNamedBufferDataEXT(buffer:UInt, internalformat:Int, format:Int, type:Int, *data:const void) : Void;    // static function glClearNamedBufferSubDataEXT(buffer:UInt, internalformat:Int, offset:GLintptr, size:GLsizeiptr, format:Int, type:Int, *data:const void) : Void;
 
 //GL_ARB_clear_texture
     inline static var GL_ARB_clear_texture                                            = 1;
@@ -3722,9 +2714,7 @@ extern class GL {
 
 
 
-    // static function glClearTexImage(texture:UInt, level:Int, format:Int, type:Int, *data:const void) : Void;
-    // static function glClearTexSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *data:const void) : Void;
-
+    // static function glClearTexImage(texture:UInt, level:Int, format:Int, type:Int, *data:const void) : Void;    // static function glClearTexSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *data:const void) : Void;
 
 //GL_ARB_clip_control
     inline static var GL_ARB_clip_control                                             = 1;
@@ -3741,8 +2731,6 @@ extern class GL {
 
 
 
-
-
 //GL_ARB_color_buffer_float
     inline static var GL_ARB_color_buffer_float                                       = 1;
     inline static var GL_RGBA_FLOAT_MODE_ARB                                          = 0x8820;
@@ -3756,8 +2744,6 @@ extern class GL {
 
     @:native('glClampColorARB')
     static function glClampColorARB(target:Int, clamp:Int) : Void;
-
-
 
 
 
@@ -3816,10 +2802,7 @@ extern class GL {
     @:native('glDispatchCompute')
     static function glDispatchCompute(num_groups_x:UInt, num_groups_y:UInt, num_groups_z:UInt) : Void;
 
-
-
     // static function glDispatchComputeIndirect(indirect:GLintptr) : Void;
-
 
 //GL_ARB_compute_variable_group_size
     inline static var GL_ARB_compute_variable_group_size                              = 1;
@@ -3833,8 +2816,6 @@ extern class GL {
 
     @:native('glDispatchComputeGroupSizeARB')
     static function glDispatchComputeGroupSizeARB(num_groups_x:UInt, num_groups_y:UInt, num_groups_z:UInt, group_size_x:UInt, group_size_y:UInt, group_size_z:UInt) : Void;
-
-
 
 
 
@@ -3874,7 +2855,6 @@ extern class GL {
 
     // static function glCopyBufferSubData(readtarget:Int, writetarget:Int, readoffset:GLintptr, writeoffset:GLintptr, size:GLsizeiptr) : Void;
 
-
 //GL_ARB_copy_image
     inline static var GL_ARB_copy_image                                               = 1;
 
@@ -3883,8 +2863,6 @@ extern class GL {
 
     @:native('glCopyImageSubData')
     static function glCopyImageSubData(srcName:UInt, srcTarget:Int, srcLevel:Int, srcX:Int, srcY:Int, srcZ:Int, dstName:UInt, dstTarget:Int, dstLevel:Int, dstX:Int, dstY:Int, dstZ:Int, srcWidth:Int, srcHeight:Int, srcDepth:Int) : Void;
-
-
 
 
 
@@ -3931,12 +2909,7 @@ extern class GL {
     @:native('glDebugMessageInsertARB')
     static function glDebugMessageInsertARB(source:Int, type:Int, id:UInt, severity:Int, length:Int, buf:String) : Void;
 
-
-
-    // static function glDebugMessageCallbackARB(callback:GLDEBUGPROCARB, *userParam:const void) : Void;
-    // static function glDebugMessageControlARB(source:Int, type:Int, severity:Int, count:Int, ids:const GLuint*, enabled:Bool) : Void;
-    // static function glGetDebugMessageLogARB(count:UInt, bufSize:Int, sources:GLenum*, types:GLenum*, ids:GLuint*, severities:GLenum*, lengths:GLsizei*, messageLog:String) : UInt;
-
+    // static function glDebugMessageCallbackARB(callback:GLDEBUGPROCARB, *userParam:const void) : Void;    // static function glDebugMessageControlARB(source:Int, type:Int, severity:Int, count:Int, ids:const GLuint*, enabled:Bool) : Void;    // static function glGetDebugMessageLogARB(count:UInt, bufSize:Int, sources:GLenum*, types:GLenum*, ids:GLuint*, severities:GLenum*, lengths:GLsizei*, messageLog:String) : UInt;
 
 //GL_ARB_depth_buffer_float
     inline static var GL_ARB_depth_buffer_float                                       = 1;
@@ -3996,173 +2969,42 @@ extern class GL {
 
 
     @:native('glBindTextureUnit')
-    static function glBindTextureUnit(unit:UInt, texture:UInt) : Void;
-
-    @:native('glBlitNamedFramebuffer')
-    static function glBlitNamedFramebuffer(readFramebuffer:UInt, drawFramebuffer:UInt, srcX0:Int, srcY0:Int, srcX1:Int, srcY1:Int, dstX0:Int, dstY0:Int, dstX1:Int, dstY1:Int, mask:Int, filter:Int) : Void;
-
-    @:native('glCheckNamedFramebufferStatus')
-    static function glCheckNamedFramebufferStatus(framebuffer:UInt, target:Int) : Int;
-
-    @:native('glClearNamedFramebufferfi')
-    static function glClearNamedFramebufferfi(framebuffer:UInt, buffer:Int, depth:Float, stencil:Int) : Void;
-
-    @:native('glCopyTextureSubImage1D')
-    static function glCopyTextureSubImage1D(texture:UInt, level:Int, xoffset:Int, x:Int, y:Int, width:Int) : Void;
-
-    @:native('glCopyTextureSubImage2D')
-    static function glCopyTextureSubImage2D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-    @:native('glCopyTextureSubImage3D')
-    static function glCopyTextureSubImage3D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-    @:native('glDisableVertexArrayAttrib')
-    static function glDisableVertexArrayAttrib(vaobj:UInt, index:UInt) : Void;
-
-    @:native('glEnableVertexArrayAttrib')
-    static function glEnableVertexArrayAttrib(vaobj:UInt, index:UInt) : Void;
-
-    @:native('glGenerateTextureMipmap')
-    static function glGenerateTextureMipmap(texture:UInt) : Void;
-
-    @:native('glNamedFramebufferDrawBuffer')
-    static function glNamedFramebufferDrawBuffer(framebuffer:UInt, mode:Int) : Void;
-
-    @:native('glNamedFramebufferParameteri')
-    static function glNamedFramebufferParameteri(framebuffer:UInt, pname:Int, param:Int) : Void;
-
-    @:native('glNamedFramebufferReadBuffer')
-    static function glNamedFramebufferReadBuffer(framebuffer:UInt, mode:Int) : Void;
-
-    @:native('glNamedFramebufferRenderbuffer')
-    static function glNamedFramebufferRenderbuffer(framebuffer:UInt, attachment:Int, renderbuffertarget:Int, renderbuffer:UInt) : Void;
-
-    @:native('glNamedFramebufferTexture')
-    static function glNamedFramebufferTexture(framebuffer:UInt, attachment:Int, texture:UInt, level:Int) : Void;
-
-    @:native('glNamedFramebufferTextureLayer')
-    static function glNamedFramebufferTextureLayer(framebuffer:UInt, attachment:Int, texture:UInt, level:Int, layer:Int) : Void;
-
-    @:native('glNamedRenderbufferStorage')
-    static function glNamedRenderbufferStorage(renderbuffer:UInt, internalformat:Int, width:Int, height:Int) : Void;
-
-    @:native('glNamedRenderbufferStorageMultisample')
-    static function glNamedRenderbufferStorageMultisample(renderbuffer:UInt, samples:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-    @:native('glTextureBuffer')
-    static function glTextureBuffer(texture:UInt, internalformat:Int, buffer:UInt) : Void;
-
-    @:native('glTextureParameterf')
-    static function glTextureParameterf(texture:UInt, pname:Int, param:Float) : Void;
-
-    @:native('glTextureParameteri')
-    static function glTextureParameteri(texture:UInt, pname:Int, param:Int) : Void;
-
-    @:native('glTextureStorage1D')
-    static function glTextureStorage1D(texture:UInt, levels:Int, internalformat:Int, width:Int) : Void;
-
-    @:native('glTextureStorage2D')
-    static function glTextureStorage2D(texture:UInt, levels:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-    @:native('glTextureStorage2DMultisample')
-    static function glTextureStorage2DMultisample(texture:UInt, samples:Int, internalformat:Int, width:Int, height:Int, fixedsamplelocations:Bool) : Void;
-
-    @:native('glTextureStorage3D')
-    static function glTextureStorage3D(texture:UInt, levels:Int, internalformat:Int, width:Int, height:Int, depth:Int) : Void;
-
-    @:native('glTextureStorage3DMultisample')
-    static function glTextureStorage3DMultisample(texture:UInt, samples:Int, internalformat:Int, width:Int, height:Int, depth:Int, fixedsamplelocations:Bool) : Void;
-
-    @:native('glTransformFeedbackBufferBase')
-    static function glTransformFeedbackBufferBase(xfb:UInt, index:UInt, buffer:UInt) : Void;
-
-    @:native('glUnmapNamedBuffer')
-    static function glUnmapNamedBuffer(buffer:UInt) : Bool;
-
-    @:native('glVertexArrayAttribBinding')
-    static function glVertexArrayAttribBinding(vaobj:UInt, attribindex:UInt, bindingindex:UInt) : Void;
-
-    @:native('glVertexArrayAttribFormat')
-    static function glVertexArrayAttribFormat(vaobj:UInt, attribindex:UInt, size:Int, type:Int, normalized:Bool, relativeoffset:UInt) : Void;
-
-    @:native('glVertexArrayAttribIFormat')
-    static function glVertexArrayAttribIFormat(vaobj:UInt, attribindex:UInt, size:Int, type:Int, relativeoffset:UInt) : Void;
-
-    @:native('glVertexArrayAttribLFormat')
-    static function glVertexArrayAttribLFormat(vaobj:UInt, attribindex:UInt, size:Int, type:Int, relativeoffset:UInt) : Void;
-
-    @:native('glVertexArrayBindingDivisor')
-    static function glVertexArrayBindingDivisor(vaobj:UInt, bindingindex:UInt, divisor:UInt) : Void;
-
-    @:native('glVertexArrayElementBuffer')
+    static function glBindTextureUnit(unit:UInt, texture:UInt) : Void;    @:native('glBlitNamedFramebuffer')
+    static function glBlitNamedFramebuffer(readFramebuffer:UInt, drawFramebuffer:UInt, srcX0:Int, srcY0:Int, srcX1:Int, srcY1:Int, dstX0:Int, dstY0:Int, dstX1:Int, dstY1:Int, mask:Int, filter:Int) : Void;    @:native('glCheckNamedFramebufferStatus')
+    static function glCheckNamedFramebufferStatus(framebuffer:UInt, target:Int) : Int;    @:native('glClearNamedFramebufferfi')
+    static function glClearNamedFramebufferfi(framebuffer:UInt, buffer:Int, depth:Float, stencil:Int) : Void;    @:native('glCopyTextureSubImage1D')
+    static function glCopyTextureSubImage1D(texture:UInt, level:Int, xoffset:Int, x:Int, y:Int, width:Int) : Void;    @:native('glCopyTextureSubImage2D')
+    static function glCopyTextureSubImage2D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;    @:native('glCopyTextureSubImage3D')
+    static function glCopyTextureSubImage3D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;    @:native('glDisableVertexArrayAttrib')
+    static function glDisableVertexArrayAttrib(vaobj:UInt, index:UInt) : Void;    @:native('glEnableVertexArrayAttrib')
+    static function glEnableVertexArrayAttrib(vaobj:UInt, index:UInt) : Void;    @:native('glGenerateTextureMipmap')
+    static function glGenerateTextureMipmap(texture:UInt) : Void;    @:native('glNamedFramebufferDrawBuffer')
+    static function glNamedFramebufferDrawBuffer(framebuffer:UInt, mode:Int) : Void;    @:native('glNamedFramebufferParameteri')
+    static function glNamedFramebufferParameteri(framebuffer:UInt, pname:Int, param:Int) : Void;    @:native('glNamedFramebufferReadBuffer')
+    static function glNamedFramebufferReadBuffer(framebuffer:UInt, mode:Int) : Void;    @:native('glNamedFramebufferRenderbuffer')
+    static function glNamedFramebufferRenderbuffer(framebuffer:UInt, attachment:Int, renderbuffertarget:Int, renderbuffer:UInt) : Void;    @:native('glNamedFramebufferTexture')
+    static function glNamedFramebufferTexture(framebuffer:UInt, attachment:Int, texture:UInt, level:Int) : Void;    @:native('glNamedFramebufferTextureLayer')
+    static function glNamedFramebufferTextureLayer(framebuffer:UInt, attachment:Int, texture:UInt, level:Int, layer:Int) : Void;    @:native('glNamedRenderbufferStorage')
+    static function glNamedRenderbufferStorage(renderbuffer:UInt, internalformat:Int, width:Int, height:Int) : Void;    @:native('glNamedRenderbufferStorageMultisample')
+    static function glNamedRenderbufferStorageMultisample(renderbuffer:UInt, samples:Int, internalformat:Int, width:Int, height:Int) : Void;    @:native('glTextureBuffer')
+    static function glTextureBuffer(texture:UInt, internalformat:Int, buffer:UInt) : Void;    @:native('glTextureParameterf')
+    static function glTextureParameterf(texture:UInt, pname:Int, param:Float) : Void;    @:native('glTextureParameteri')
+    static function glTextureParameteri(texture:UInt, pname:Int, param:Int) : Void;    @:native('glTextureStorage1D')
+    static function glTextureStorage1D(texture:UInt, levels:Int, internalformat:Int, width:Int) : Void;    @:native('glTextureStorage2D')
+    static function glTextureStorage2D(texture:UInt, levels:Int, internalformat:Int, width:Int, height:Int) : Void;    @:native('glTextureStorage2DMultisample')
+    static function glTextureStorage2DMultisample(texture:UInt, samples:Int, internalformat:Int, width:Int, height:Int, fixedsamplelocations:Bool) : Void;    @:native('glTextureStorage3D')
+    static function glTextureStorage3D(texture:UInt, levels:Int, internalformat:Int, width:Int, height:Int, depth:Int) : Void;    @:native('glTextureStorage3DMultisample')
+    static function glTextureStorage3DMultisample(texture:UInt, samples:Int, internalformat:Int, width:Int, height:Int, depth:Int, fixedsamplelocations:Bool) : Void;    @:native('glTransformFeedbackBufferBase')
+    static function glTransformFeedbackBufferBase(xfb:UInt, index:UInt, buffer:UInt) : Void;    @:native('glUnmapNamedBuffer')
+    static function glUnmapNamedBuffer(buffer:UInt) : Bool;    @:native('glVertexArrayAttribBinding')
+    static function glVertexArrayAttribBinding(vaobj:UInt, attribindex:UInt, bindingindex:UInt) : Void;    @:native('glVertexArrayAttribFormat')
+    static function glVertexArrayAttribFormat(vaobj:UInt, attribindex:UInt, size:Int, type:Int, normalized:Bool, relativeoffset:UInt) : Void;    @:native('glVertexArrayAttribIFormat')
+    static function glVertexArrayAttribIFormat(vaobj:UInt, attribindex:UInt, size:Int, type:Int, relativeoffset:UInt) : Void;    @:native('glVertexArrayAttribLFormat')
+    static function glVertexArrayAttribLFormat(vaobj:UInt, attribindex:UInt, size:Int, type:Int, relativeoffset:UInt) : Void;    @:native('glVertexArrayBindingDivisor')
+    static function glVertexArrayBindingDivisor(vaobj:UInt, bindingindex:UInt, divisor:UInt) : Void;    @:native('glVertexArrayElementBuffer')
     static function glVertexArrayElementBuffer(vaobj:UInt, buffer:UInt) : Void;
 
-
-
-    // static function glClearNamedBufferData(buffer:UInt, internalformat:Int, format:Int, type:Int, *data:const void) : Void;
-    // static function glClearNamedBufferSubData(buffer:UInt, internalformat:Int, offset:GLintptr, size:GLsizeiptr, format:Int, type:Int, *data:const void) : Void;
-    // static function glClearNamedFramebufferfv(framebuffer:UInt, buffer:Int, drawbuffer:Int, value:const GLfloat*) : Void;
-    // static function glClearNamedFramebufferiv(framebuffer:UInt, buffer:Int, drawbuffer:Int, value:const GLint*) : Void;
-    // static function glClearNamedFramebufferuiv(framebuffer:UInt, buffer:Int, drawbuffer:Int, value:const GLuint*) : Void;
-    // static function glCompressedTextureSubImage1D(texture:UInt, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTextureSubImage2D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTextureSubImage3D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCopyNamedBufferSubData(readBuffer:UInt, writeBuffer:UInt, readOffset:GLintptr, writeOffset:GLintptr, size:GLsizeiptr) : Void;
-    // static function glCreateBuffers(n:Int, buffers:GLuint*) : Void;
-    // static function glCreateFramebuffers(n:Int, framebuffers:GLuint*) : Void;
-    // static function glCreateProgramPipelines(n:Int, pipelines:GLuint*) : Void;
-    // static function glCreateQueries(target:Int, n:Int, ids:GLuint*) : Void;
-    // static function glCreateRenderbuffers(n:Int, renderbuffers:GLuint*) : Void;
-    // static function glCreateSamplers(n:Int, samplers:GLuint*) : Void;
-    // static function glCreateTextures(target:Int, n:Int, textures:GLuint*) : Void;
-    // static function glCreateTransformFeedbacks(n:Int, ids:GLuint*) : Void;
-    // static function glCreateVertexArrays(n:Int, arrays:GLuint*) : Void;
-    // static function glFlushMappedNamedBufferRange(buffer:UInt, offset:GLintptr, length:GLsizeiptr) : Void;
-    // static function glGetCompressedTextureImage(texture:UInt, level:Int, bufSize:Int, *pixels:Void) : Void;
-    // static function glGetNamedBufferParameteri64v(buffer:UInt, pname:Int, params:GLint64*) : Void;
-    // static function glGetNamedBufferParameteriv(buffer:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetNamedBufferPointerv(buffer:UInt, pname:Int, params:void**) : Void;
-    // static function glGetNamedBufferSubData(buffer:UInt, offset:GLintptr, size:GLsizeiptr, *data:Void) : Void;
-    // static function glGetNamedFramebufferAttachmentParameteriv(framebuffer:UInt, attachment:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetNamedFramebufferParameteriv(framebuffer:UInt, pname:Int, param:GLint*) : Void;
-    // static function glGetNamedRenderbufferParameteriv(renderbuffer:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetQueryBufferObjecti64v(id:UInt, buffer:UInt, pname:Int, offset:GLintptr) : Void;
-    // static function glGetQueryBufferObjectiv(id:UInt, buffer:UInt, pname:Int, offset:GLintptr) : Void;
-    // static function glGetQueryBufferObjectui64v(id:UInt, buffer:UInt, pname:Int, offset:GLintptr) : Void;
-    // static function glGetQueryBufferObjectuiv(id:UInt, buffer:UInt, pname:Int, offset:GLintptr) : Void;
-    // static function glGetTextureImage(texture:UInt, level:Int, format:Int, type:Int, bufSize:Int, *pixels:Void) : Void;
-    // static function glGetTextureLevelParameterfv(texture:UInt, level:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetTextureLevelParameteriv(texture:UInt, level:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetTextureParameterIiv(texture:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetTextureParameterIuiv(texture:UInt, pname:Int, params:GLuint*) : Void;
-    // static function glGetTextureParameterfv(texture:UInt, pname:Int, params:GLfloat*) : Void;
-    // static function glGetTextureParameteriv(texture:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetTransformFeedbacki64_v(xfb:UInt, pname:Int, index:UInt, param:GLint64*) : Void;
-    // static function glGetTransformFeedbacki_v(xfb:UInt, pname:Int, index:UInt, param:GLint*) : Void;
-    // static function glGetTransformFeedbackiv(xfb:UInt, pname:Int, param:GLint*) : Void;
-    // static function glGetVertexArrayIndexed64iv(vaobj:UInt, index:UInt, pname:Int, param:GLint64*) : Void;
-    // static function glGetVertexArrayIndexediv(vaobj:UInt, index:UInt, pname:Int, param:GLint*) : Void;
-    // static function glGetVertexArrayiv(vaobj:UInt, pname:Int, param:GLint*) : Void;
-    // static function glInvalidateNamedFramebufferData(framebuffer:UInt, numAttachments:Int, attachments:const GLenum*) : Void;
-    // static function glInvalidateNamedFramebufferSubData(framebuffer:UInt, numAttachments:Int, attachments:const GLenum*, x:Int, y:Int, width:Int, height:Int) : Void;
-    // static function glMapNamedBuffer(buffer:UInt, access:Int) : void *;
-    // static function glMapNamedBufferRange(buffer:UInt, offset:GLintptr, length:GLsizeiptr, access:Int) : void *;
-    // static function glNamedBufferData(buffer:UInt, size:GLsizeiptr, *data:const void, usage:Int) : Void;
-    // static function glNamedBufferStorage(buffer:UInt, size:GLsizeiptr, *data:const void, flags:Int) : Void;
-    // static function glNamedBufferSubData(buffer:UInt, offset:GLintptr, size:GLsizeiptr, *data:const void) : Void;
-    // static function glNamedFramebufferDrawBuffers(framebuffer:UInt, n:Int, bufs:const GLenum*) : Void;
-    // static function glTextureBufferRange(texture:UInt, internalformat:Int, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;
-    // static function glTextureParameterIiv(texture:UInt, pname:Int, params:const GLint*) : Void;
-    // static function glTextureParameterIuiv(texture:UInt, pname:Int, params:const GLuint*) : Void;
-    // static function glTextureParameterfv(texture:UInt, pname:Int, param:const GLfloat*) : Void;
-    // static function glTextureParameteriv(texture:UInt, pname:Int, param:const GLint*) : Void;
-    // static function glTextureSubImage1D(texture:UInt, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTextureSubImage2D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTextureSubImage3D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTransformFeedbackBufferRange(xfb:UInt, index:UInt, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;
-    // static function glVertexArrayVertexBuffer(vaobj:UInt, bindingindex:UInt, buffer:UInt, offset:GLintptr, stride:Int) : Void;
-    // static function glVertexArrayVertexBuffers(vaobj:UInt, first:UInt, count:Int, buffers:const GLuint*, *offsets:const GLintptr, *strides:const GLsizei) : Void;
-
+    // static function glClearNamedBufferData(buffer:UInt, internalformat:Int, format:Int, type:Int, *data:const void) : Void;    // static function glClearNamedBufferSubData(buffer:UInt, internalformat:Int, offset:GLintptr, size:GLsizeiptr, format:Int, type:Int, *data:const void) : Void;    // static function glClearNamedFramebufferfv(framebuffer:UInt, buffer:Int, drawbuffer:Int, value:const GLfloat*) : Void;    // static function glClearNamedFramebufferiv(framebuffer:UInt, buffer:Int, drawbuffer:Int, value:const GLint*) : Void;    // static function glClearNamedFramebufferuiv(framebuffer:UInt, buffer:Int, drawbuffer:Int, value:const GLuint*) : Void;    // static function glCompressedTextureSubImage1D(texture:UInt, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTextureSubImage2D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTextureSubImage3D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glCopyNamedBufferSubData(readBuffer:UInt, writeBuffer:UInt, readOffset:GLintptr, writeOffset:GLintptr, size:GLsizeiptr) : Void;    // static function glCreateBuffers(n:Int, buffers:GLuint*) : Void;    // static function glCreateFramebuffers(n:Int, framebuffers:GLuint*) : Void;    // static function glCreateProgramPipelines(n:Int, pipelines:GLuint*) : Void;    // static function glCreateQueries(target:Int, n:Int, ids:GLuint*) : Void;    // static function glCreateRenderbuffers(n:Int, renderbuffers:GLuint*) : Void;    // static function glCreateSamplers(n:Int, samplers:GLuint*) : Void;    // static function glCreateTextures(target:Int, n:Int, textures:GLuint*) : Void;    // static function glCreateTransformFeedbacks(n:Int, ids:GLuint*) : Void;    // static function glCreateVertexArrays(n:Int, arrays:GLuint*) : Void;    // static function glFlushMappedNamedBufferRange(buffer:UInt, offset:GLintptr, length:GLsizeiptr) : Void;    // static function glGetCompressedTextureImage(texture:UInt, level:Int, bufSize:Int, *pixels:Void) : Void;    // static function glGetNamedBufferParameteri64v(buffer:UInt, pname:Int, params:GLint64*) : Void;    // static function glGetNamedBufferParameteriv(buffer:UInt, pname:Int, params:GLint*) : Void;    // static function glGetNamedBufferPointerv(buffer:UInt, pname:Int, params:void**) : Void;    // static function glGetNamedBufferSubData(buffer:UInt, offset:GLintptr, size:GLsizeiptr, *data:Void) : Void;    // static function glGetNamedFramebufferAttachmentParameteriv(framebuffer:UInt, attachment:Int, pname:Int, params:GLint*) : Void;    // static function glGetNamedFramebufferParameteriv(framebuffer:UInt, pname:Int, param:GLint*) : Void;    // static function glGetNamedRenderbufferParameteriv(renderbuffer:UInt, pname:Int, params:GLint*) : Void;    // static function glGetQueryBufferObjecti64v(id:UInt, buffer:UInt, pname:Int, offset:GLintptr) : Void;    // static function glGetQueryBufferObjectiv(id:UInt, buffer:UInt, pname:Int, offset:GLintptr) : Void;    // static function glGetQueryBufferObjectui64v(id:UInt, buffer:UInt, pname:Int, offset:GLintptr) : Void;    // static function glGetQueryBufferObjectuiv(id:UInt, buffer:UInt, pname:Int, offset:GLintptr) : Void;    // static function glGetTextureImage(texture:UInt, level:Int, format:Int, type:Int, bufSize:Int, *pixels:Void) : Void;    // static function glGetTextureLevelParameterfv(texture:UInt, level:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetTextureLevelParameteriv(texture:UInt, level:Int, pname:Int, params:GLint*) : Void;    // static function glGetTextureParameterIiv(texture:UInt, pname:Int, params:GLint*) : Void;    // static function glGetTextureParameterIuiv(texture:UInt, pname:Int, params:GLuint*) : Void;    // static function glGetTextureParameterfv(texture:UInt, pname:Int, params:GLfloat*) : Void;    // static function glGetTextureParameteriv(texture:UInt, pname:Int, params:GLint*) : Void;    // static function glGetTransformFeedbacki64_v(xfb:UInt, pname:Int, index:UInt, param:GLint64*) : Void;    // static function glGetTransformFeedbacki_v(xfb:UInt, pname:Int, index:UInt, param:GLint*) : Void;    // static function glGetTransformFeedbackiv(xfb:UInt, pname:Int, param:GLint*) : Void;    // static function glGetVertexArrayIndexed64iv(vaobj:UInt, index:UInt, pname:Int, param:GLint64*) : Void;    // static function glGetVertexArrayIndexediv(vaobj:UInt, index:UInt, pname:Int, param:GLint*) : Void;    // static function glGetVertexArrayiv(vaobj:UInt, pname:Int, param:GLint*) : Void;    // static function glInvalidateNamedFramebufferData(framebuffer:UInt, numAttachments:Int, attachments:const GLenum*) : Void;    // static function glInvalidateNamedFramebufferSubData(framebuffer:UInt, numAttachments:Int, attachments:const GLenum*, x:Int, y:Int, width:Int, height:Int) : Void;    // static function glMapNamedBuffer(buffer:UInt, access:Int) : void *;    // static function glMapNamedBufferRange(buffer:UInt, offset:GLintptr, length:GLsizeiptr, access:Int) : void *;    // static function glNamedBufferData(buffer:UInt, size:GLsizeiptr, *data:const void, usage:Int) : Void;    // static function glNamedBufferStorage(buffer:UInt, size:GLsizeiptr, *data:const void, flags:Int) : Void;    // static function glNamedBufferSubData(buffer:UInt, offset:GLintptr, size:GLsizeiptr, *data:const void) : Void;    // static function glNamedFramebufferDrawBuffers(framebuffer:UInt, n:Int, bufs:const GLenum*) : Void;    // static function glTextureBufferRange(texture:UInt, internalformat:Int, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;    // static function glTextureParameterIiv(texture:UInt, pname:Int, params:const GLint*) : Void;    // static function glTextureParameterIuiv(texture:UInt, pname:Int, params:const GLuint*) : Void;    // static function glTextureParameterfv(texture:UInt, pname:Int, param:const GLfloat*) : Void;    // static function glTextureParameteriv(texture:UInt, pname:Int, param:const GLint*) : Void;    // static function glTextureSubImage1D(texture:UInt, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTextureSubImage2D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTextureSubImage3D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTransformFeedbackBufferRange(xfb:UInt, index:UInt, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;    // static function glVertexArrayVertexBuffer(vaobj:UInt, bindingindex:UInt, buffer:UInt, offset:GLintptr, stride:Int) : Void;    // static function glVertexArrayVertexBuffers(vaobj:UInt, first:UInt, count:Int, buffers:const GLuint*, *offsets:const GLintptr, *strides:const GLsizei) : Void;
 
 //GL_ARB_draw_buffers
     inline static var GL_ARB_draw_buffers                                             = 1;
@@ -4191,7 +3033,6 @@ extern class GL {
 
     // static function glDrawBuffersARB(n:Int, bufs:const GLenum*) : Void;
 
-
 //GL_ARB_draw_buffers_blend
     inline static var GL_ARB_draw_buffers_blend                                       = 1;
 
@@ -4199,18 +3040,10 @@ extern class GL {
 
 
     @:native('glBlendEquationSeparateiARB')
-    static function glBlendEquationSeparateiARB(buf:UInt, modeRGB:Int, modeAlpha:Int) : Void;
-
-    @:native('glBlendEquationiARB')
-    static function glBlendEquationiARB(buf:UInt, mode:Int) : Void;
-
-    @:native('glBlendFuncSeparateiARB')
-    static function glBlendFuncSeparateiARB(buf:UInt, srcRGB:Int, dstRGB:Int, srcAlpha:Int, dstAlpha:Int) : Void;
-
-    @:native('glBlendFunciARB')
+    static function glBlendEquationSeparateiARB(buf:UInt, modeRGB:Int, modeAlpha:Int) : Void;    @:native('glBlendEquationiARB')
+    static function glBlendEquationiARB(buf:UInt, mode:Int) : Void;    @:native('glBlendFuncSeparateiARB')
+    static function glBlendFuncSeparateiARB(buf:UInt, srcRGB:Int, dstRGB:Int, srcAlpha:Int, dstAlpha:Int) : Void;    @:native('glBlendFunciARB')
     static function glBlendFunciARB(buf:UInt, src:Int, dst:Int) : Void;
-
-
 
 
 
@@ -4222,11 +3055,7 @@ extern class GL {
 
 
 
-    // static function glDrawElementsBaseVertex(mode:Int, count:Int, type:Int, *indices:const void, basevertex:Int) : Void;
-    // static function glDrawElementsInstancedBaseVertex(mode:Int, count:Int, type:Int, *indices:const void, primcount:Int, basevertex:Int) : Void;
-    // static function glDrawRangeElementsBaseVertex(mode:Int, start:UInt, end:UInt, count:Int, type:Int, *indices:const void, basevertex:Int) : Void;
-    // static function glMultiDrawElementsBaseVertex(mode:Int, count:const GLsizei*, type:Int, *indices:const void *const, primcount:Int, *basevertex:const GLint) : Void;
-
+    // static function glDrawElementsBaseVertex(mode:Int, count:Int, type:Int, *indices:const void, basevertex:Int) : Void;    // static function glDrawElementsInstancedBaseVertex(mode:Int, count:Int, type:Int, *indices:const void, primcount:Int, basevertex:Int) : Void;    // static function glDrawRangeElementsBaseVertex(mode:Int, start:UInt, end:UInt, count:Int, type:Int, *indices:const void, basevertex:Int) : Void;    // static function glMultiDrawElementsBaseVertex(mode:Int, count:const GLsizei*, type:Int, *indices:const void *const, primcount:Int, *basevertex:const GLint) : Void;
 
 //GL_ARB_draw_indirect
     inline static var GL_ARB_draw_indirect                                            = 1;
@@ -4238,9 +3067,7 @@ extern class GL {
 
 
 
-    // static function glDrawArraysIndirect(mode:Int, *indirect:const void) : Void;
-    // static function glDrawElementsIndirect(mode:Int, type:Int, *indirect:const void) : Void;
-
+    // static function glDrawArraysIndirect(mode:Int, *indirect:const void) : Void;    // static function glDrawElementsIndirect(mode:Int, type:Int, *indirect:const void) : Void;
 
 //GL_ARB_draw_instanced
     inline static var GL_ARB_draw_instanced                                           = 1;
@@ -4370,16 +3197,10 @@ extern class GL {
 
 
     @:native('glFramebufferParameteri')
-    static function glFramebufferParameteri(target:Int, pname:Int, param:Int) : Void;
-
-    @:native('glNamedFramebufferParameteriEXT')
+    static function glFramebufferParameteri(target:Int, pname:Int, param:Int) : Void;    @:native('glNamedFramebufferParameteriEXT')
     static function glNamedFramebufferParameteriEXT(framebuffer:UInt, pname:Int, param:Int) : Void;
 
-
-
-    // static function glGetFramebufferParameteriv(target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetNamedFramebufferParameterivEXT(framebuffer:UInt, pname:Int, params:GLint*) : Void;
-
+    // static function glGetFramebufferParameteriv(target:Int, pname:Int, params:GLint*) : Void;    // static function glGetNamedFramebufferParameterivEXT(framebuffer:UInt, pname:Int, params:GLint*) : Void;
 
 //GL_ARB_framebuffer_object
     inline static var GL_ARB_framebuffer_object                                       = 1;
@@ -4461,56 +3282,22 @@ extern class GL {
 
 
     @:native('glBindFramebuffer')
-    static function glBindFramebuffer(target:Int, framebuffer:UInt) : Void;
-
-    @:native('glBindRenderbuffer')
-    static function glBindRenderbuffer(target:Int, renderbuffer:UInt) : Void;
-
-    @:native('glBlitFramebuffer')
-    static function glBlitFramebuffer(srcX0:Int, srcY0:Int, srcX1:Int, srcY1:Int, dstX0:Int, dstY0:Int, dstX1:Int, dstY1:Int, mask:Int, filter:Int) : Void;
-
-    @:native('glCheckFramebufferStatus')
-    static function glCheckFramebufferStatus(target:Int) : Int;
-
-    @:native('glFramebufferRenderbuffer')
-    static function glFramebufferRenderbuffer(target:Int, attachment:Int, renderbuffertarget:Int, renderbuffer:UInt) : Void;
-
-    @:native('glFramebufferTexture1D')
-    static function glFramebufferTexture1D(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;
-
-    @:native('glFramebufferTexture2D')
-    static function glFramebufferTexture2D(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;
-
-    @:native('glFramebufferTexture3D')
-    static function glFramebufferTexture3D(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int, layer:Int) : Void;
-
-    @:native('glFramebufferTextureLayer')
-    static function glFramebufferTextureLayer(target:Int, attachment:Int, texture:UInt, level:Int, layer:Int) : Void;
-
-    @:native('glGenerateMipmap')
-    static function glGenerateMipmap(target:Int) : Void;
-
-    @:native('glIsFramebuffer')
-    static function glIsFramebuffer(framebuffer:UInt) : Bool;
-
-    @:native('glIsRenderbuffer')
-    static function glIsRenderbuffer(renderbuffer:UInt) : Bool;
-
-    @:native('glRenderbufferStorage')
-    static function glRenderbufferStorage(target:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-    @:native('glRenderbufferStorageMultisample')
+    static function glBindFramebuffer(target:Int, framebuffer:UInt) : Void;    @:native('glBindRenderbuffer')
+    static function glBindRenderbuffer(target:Int, renderbuffer:UInt) : Void;    @:native('glBlitFramebuffer')
+    static function glBlitFramebuffer(srcX0:Int, srcY0:Int, srcX1:Int, srcY1:Int, dstX0:Int, dstY0:Int, dstX1:Int, dstY1:Int, mask:Int, filter:Int) : Void;    @:native('glCheckFramebufferStatus')
+    static function glCheckFramebufferStatus(target:Int) : Int;    @:native('glFramebufferRenderbuffer')
+    static function glFramebufferRenderbuffer(target:Int, attachment:Int, renderbuffertarget:Int, renderbuffer:UInt) : Void;    @:native('glFramebufferTexture1D')
+    static function glFramebufferTexture1D(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;    @:native('glFramebufferTexture2D')
+    static function glFramebufferTexture2D(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;    @:native('glFramebufferTexture3D')
+    static function glFramebufferTexture3D(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int, layer:Int) : Void;    @:native('glFramebufferTextureLayer')
+    static function glFramebufferTextureLayer(target:Int, attachment:Int, texture:UInt, level:Int, layer:Int) : Void;    @:native('glGenerateMipmap')
+    static function glGenerateMipmap(target:Int) : Void;    @:native('glIsFramebuffer')
+    static function glIsFramebuffer(framebuffer:UInt) : Bool;    @:native('glIsRenderbuffer')
+    static function glIsRenderbuffer(renderbuffer:UInt) : Bool;    @:native('glRenderbufferStorage')
+    static function glRenderbufferStorage(target:Int, internalformat:Int, width:Int, height:Int) : Void;    @:native('glRenderbufferStorageMultisample')
     static function glRenderbufferStorageMultisample(target:Int, samples:Int, internalformat:Int, width:Int, height:Int) : Void;
 
-
-
-    // static function glDeleteFramebuffers(n:Int, framebuffers:const GLuint*) : Void;
-    // static function glDeleteRenderbuffers(n:Int, renderbuffers:const GLuint*) : Void;
-    // static function glGenFramebuffers(n:Int, framebuffers:GLuint*) : Void;
-    // static function glGenRenderbuffers(n:Int, renderbuffers:GLuint*) : Void;
-    // static function glGetFramebufferAttachmentParameteriv(target:Int, attachment:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetRenderbufferParameteriv(target:Int, pname:Int, params:GLint*) : Void;
-
+    // static function glDeleteFramebuffers(n:Int, framebuffers:const GLuint*) : Void;    // static function glDeleteRenderbuffers(n:Int, renderbuffers:const GLuint*) : Void;    // static function glGenFramebuffers(n:Int, framebuffers:GLuint*) : Void;    // static function glGenRenderbuffers(n:Int, renderbuffers:GLuint*) : Void;    // static function glGetFramebufferAttachmentParameteriv(target:Int, attachment:Int, pname:Int, params:GLint*) : Void;    // static function glGetRenderbufferParameteriv(target:Int, pname:Int, params:GLint*) : Void;
 
 //GL_ARB_framebuffer_sRGB
     inline static var GL_ARB_framebuffer_sRGB                                         = 1;
@@ -4548,18 +3335,10 @@ extern class GL {
 
 
     @:native('glFramebufferTextureARB')
-    static function glFramebufferTextureARB(target:Int, attachment:Int, texture:UInt, level:Int) : Void;
-
-    @:native('glFramebufferTextureFaceARB')
-    static function glFramebufferTextureFaceARB(target:Int, attachment:Int, texture:UInt, level:Int, face:Int) : Void;
-
-    @:native('glFramebufferTextureLayerARB')
-    static function glFramebufferTextureLayerARB(target:Int, attachment:Int, texture:UInt, level:Int, layer:Int) : Void;
-
-    @:native('glProgramParameteriARB')
+    static function glFramebufferTextureARB(target:Int, attachment:Int, texture:UInt, level:Int) : Void;    @:native('glFramebufferTextureFaceARB')
+    static function glFramebufferTextureFaceARB(target:Int, attachment:Int, texture:UInt, level:Int, face:Int) : Void;    @:native('glFramebufferTextureLayerARB')
+    static function glFramebufferTextureLayerARB(target:Int, attachment:Int, texture:UInt, level:Int, layer:Int) : Void;    @:native('glProgramParameteriARB')
     static function glProgramParameteriARB(program:UInt, pname:Int, value:Int) : Void;
-
-
 
 
 
@@ -4576,11 +3355,7 @@ extern class GL {
     @:native('glProgramParameteri')
     static function glProgramParameteri(program:UInt, pname:Int, value:Int) : Void;
 
-
-
-    // static function glGetProgramBinary(program:UInt, bufSize:Int, length:GLsizei*, *binaryFormat:Int, void*binary:) : Void;
-    // static function glProgramBinary(program:UInt, binaryFormat:Int, *binary:const void, length:Int) : Void;
-
+    // static function glGetProgramBinary(program:UInt, bufSize:Int, length:GLsizei*, *binaryFormat:Int, void*binary:) : Void;    // static function glProgramBinary(program:UInt, binaryFormat:Int, *binary:const void, length:Int) : Void;
 
 //GL_ARB_get_texture_sub_image
     inline static var GL_ARB_get_texture_sub_image                                    = 1;
@@ -4590,9 +3365,7 @@ extern class GL {
 
 
 
-    // static function glGetCompressedTextureSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, bufSize:Int, *pixels:Void) : Void;
-    // static function glGetTextureSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, bufSize:Int, *pixels:Void) : Void;
-
+    // static function glGetCompressedTextureSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, bufSize:Int, *pixels:Void) : Void;    // static function glGetTextureSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, bufSize:Int, *pixels:Void) : Void;
 
 //GL_ARB_gpu_shader5
     inline static var GL_ARB_gpu_shader5                                              = 1;
@@ -4629,34 +3402,12 @@ extern class GL {
 
 
     @:native('glUniform1d')
-    static function glUniform1d(location:Int, x:Float) : Void;
-
-    @:native('glUniform2d')
-    static function glUniform2d(location:Int, x:Float, y:Float) : Void;
-
-    @:native('glUniform3d')
-    static function glUniform3d(location:Int, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glUniform4d')
+    static function glUniform1d(location:Int, x:Float) : Void;    @:native('glUniform2d')
+    static function glUniform2d(location:Int, x:Float, y:Float) : Void;    @:native('glUniform3d')
+    static function glUniform3d(location:Int, x:Float, y:Float, z:Float) : Void;    @:native('glUniform4d')
     static function glUniform4d(location:Int, x:Float, y:Float, z:Float, w:Float) : Void;
 
-
-
-    // static function glGetUniformdv(program:UInt, location:Int, params:GLdouble*) : Void;
-    // static function glUniform1dv(location:Int, count:Int, value:const GLdouble*) : Void;
-    // static function glUniform2dv(location:Int, count:Int, value:const GLdouble*) : Void;
-    // static function glUniform3dv(location:Int, count:Int, value:const GLdouble*) : Void;
-    // static function glUniform4dv(location:Int, count:Int, value:const GLdouble*) : Void;
-    // static function glUniformMatrix2dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glUniformMatrix2x3dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glUniformMatrix2x4dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glUniformMatrix3dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glUniformMatrix3x2dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glUniformMatrix3x4dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glUniformMatrix4dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glUniformMatrix4x2dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glUniformMatrix4x3dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-
+    // static function glGetUniformdv(program:UInt, location:Int, params:GLdouble*) : Void;    // static function glUniform1dv(location:Int, count:Int, value:const GLdouble*) : Void;    // static function glUniform2dv(location:Int, count:Int, value:const GLdouble*) : Void;    // static function glUniform3dv(location:Int, count:Int, value:const GLdouble*) : Void;    // static function glUniform4dv(location:Int, count:Int, value:const GLdouble*) : Void;    // static function glUniformMatrix2dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glUniformMatrix2x3dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glUniformMatrix2x4dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glUniformMatrix3dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glUniformMatrix3x2dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glUniformMatrix3x4dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glUniformMatrix4dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glUniformMatrix4x2dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glUniformMatrix4x3dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
 
 //GL_ARB_half_float_pixel
     inline static var GL_ARB_half_float_pixel                                         = 1;
@@ -4764,60 +3515,18 @@ extern class GL {
 
 
     @:native('glConvolutionParameterf')
-    static function glConvolutionParameterf(target:Int, pname:Int, params:Float) : Void;
-
-    @:native('glConvolutionParameteri')
-    static function glConvolutionParameteri(target:Int, pname:Int, params:Int) : Void;
-
-    @:native('glCopyColorSubTable')
-    static function glCopyColorSubTable(target:Int, start:Int, x:Int, y:Int, width:Int) : Void;
-
-    @:native('glCopyColorTable')
-    static function glCopyColorTable(target:Int, internalformat:Int, x:Int, y:Int, width:Int) : Void;
-
-    @:native('glCopyConvolutionFilter1D')
-    static function glCopyConvolutionFilter1D(target:Int, internalformat:Int, x:Int, y:Int, width:Int) : Void;
-
-    @:native('glCopyConvolutionFilter2D')
-    static function glCopyConvolutionFilter2D(target:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-    @:native('glHistogram')
-    static function glHistogram(target:Int, width:Int, internalformat:Int, sink:Bool) : Void;
-
-    @:native('glMinmax')
-    static function glMinmax(target:Int, internalformat:Int, sink:Bool) : Void;
-
-    @:native('glResetHistogram')
-    static function glResetHistogram(target:Int) : Void;
-
-    @:native('glResetMinmax')
+    static function glConvolutionParameterf(target:Int, pname:Int, params:Float) : Void;    @:native('glConvolutionParameteri')
+    static function glConvolutionParameteri(target:Int, pname:Int, params:Int) : Void;    @:native('glCopyColorSubTable')
+    static function glCopyColorSubTable(target:Int, start:Int, x:Int, y:Int, width:Int) : Void;    @:native('glCopyColorTable')
+    static function glCopyColorTable(target:Int, internalformat:Int, x:Int, y:Int, width:Int) : Void;    @:native('glCopyConvolutionFilter1D')
+    static function glCopyConvolutionFilter1D(target:Int, internalformat:Int, x:Int, y:Int, width:Int) : Void;    @:native('glCopyConvolutionFilter2D')
+    static function glCopyConvolutionFilter2D(target:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int) : Void;    @:native('glHistogram')
+    static function glHistogram(target:Int, width:Int, internalformat:Int, sink:Bool) : Void;    @:native('glMinmax')
+    static function glMinmax(target:Int, internalformat:Int, sink:Bool) : Void;    @:native('glResetHistogram')
+    static function glResetHistogram(target:Int) : Void;    @:native('glResetMinmax')
     static function glResetMinmax(target:Int) : Void;
 
-
-
-    // static function glColorSubTable(target:Int, start:Int, count:Int, format:Int, type:Int, *data:const void) : Void;
-    // static function glColorTable(target:Int, internalformat:Int, width:Int, format:Int, type:Int, *table:const void) : Void;
-    // static function glColorTableParameterfv(target:Int, pname:Int, *params:const GLfloat) : Void;
-    // static function glColorTableParameteriv(target:Int, pname:Int, *params:const GLint) : Void;
-    // static function glConvolutionFilter1D(target:Int, internalformat:Int, width:Int, format:Int, type:Int, *image:const void) : Void;
-    // static function glConvolutionFilter2D(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, *image:const void) : Void;
-    // static function glConvolutionParameterfv(target:Int, pname:Int, *params:const GLfloat) : Void;
-    // static function glConvolutionParameteriv(target:Int, pname:Int, *params:const GLint) : Void;
-    // static function glGetColorTable(target:Int, format:Int, type:Int, *table:Void) : Void;
-    // static function glGetColorTableParameterfv(target:Int, pname:Int, *params:Float) : Void;
-    // static function glGetColorTableParameteriv(target:Int, pname:Int, *params:Int) : Void;
-    // static function glGetConvolutionFilter(target:Int, format:Int, type:Int, *image:Void) : Void;
-    // static function glGetConvolutionParameterfv(target:Int, pname:Int, *params:Float) : Void;
-    // static function glGetConvolutionParameteriv(target:Int, pname:Int, *params:Int) : Void;
-    // static function glGetHistogram(target:Int, reset:Bool, format:Int, type:Int, *values:Void) : Void;
-    // static function glGetHistogramParameterfv(target:Int, pname:Int, *params:Float) : Void;
-    // static function glGetHistogramParameteriv(target:Int, pname:Int, *params:Int) : Void;
-    // static function glGetMinmax(target:Int, reset:Bool, format:Int, types:Int, *values:Void) : Void;
-    // static function glGetMinmaxParameterfv(target:Int, pname:Int, *params:Float) : Void;
-    // static function glGetMinmaxParameteriv(target:Int, pname:Int, *params:Int) : Void;
-    // static function glGetSeparableFilter(target:Int, format:Int, type:Int, *row:Void, *column:Void, *span:Void) : Void;
-    // static function glSeparableFilter2D(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, *row:const void, *column:const void) : Void;
-
+    // static function glColorSubTable(target:Int, start:Int, count:Int, format:Int, type:Int, *data:const void) : Void;    // static function glColorTable(target:Int, internalformat:Int, width:Int, format:Int, type:Int, *table:const void) : Void;    // static function glColorTableParameterfv(target:Int, pname:Int, *params:const GLfloat) : Void;    // static function glColorTableParameteriv(target:Int, pname:Int, *params:const GLint) : Void;    // static function glConvolutionFilter1D(target:Int, internalformat:Int, width:Int, format:Int, type:Int, *image:const void) : Void;    // static function glConvolutionFilter2D(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, *image:const void) : Void;    // static function glConvolutionParameterfv(target:Int, pname:Int, *params:const GLfloat) : Void;    // static function glConvolutionParameteriv(target:Int, pname:Int, *params:const GLint) : Void;    // static function glGetColorTable(target:Int, format:Int, type:Int, *table:Void) : Void;    // static function glGetColorTableParameterfv(target:Int, pname:Int, *params:Float) : Void;    // static function glGetColorTableParameteriv(target:Int, pname:Int, *params:Int) : Void;    // static function glGetConvolutionFilter(target:Int, format:Int, type:Int, *image:Void) : Void;    // static function glGetConvolutionParameterfv(target:Int, pname:Int, *params:Float) : Void;    // static function glGetConvolutionParameteriv(target:Int, pname:Int, *params:Int) : Void;    // static function glGetHistogram(target:Int, reset:Bool, format:Int, type:Int, *values:Void) : Void;    // static function glGetHistogramParameterfv(target:Int, pname:Int, *params:Float) : Void;    // static function glGetHistogramParameteriv(target:Int, pname:Int, *params:Int) : Void;    // static function glGetMinmax(target:Int, reset:Bool, format:Int, types:Int, *values:Void) : Void;    // static function glGetMinmaxParameterfv(target:Int, pname:Int, *params:Float) : Void;    // static function glGetMinmaxParameteriv(target:Int, pname:Int, *params:Int) : Void;    // static function glGetSeparableFilter(target:Int, format:Int, type:Int, *row:Void, *column:Void, *span:Void) : Void;    // static function glSeparableFilter2D(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, *row:const void, *column:const void) : Void;
 
 //GL_ARB_indirect_parameters
     inline static var GL_ARB_indirect_parameters                                      = 1;
@@ -4829,9 +3538,7 @@ extern class GL {
 
 
 
-    // static function glMultiDrawArraysIndirectCountARB(mode:Int, *indirect:const void, drawcount:GLintptr, maxdrawcount:Int, stride:Int) : Void;
-    // static function glMultiDrawElementsIndirectCountARB(mode:Int, type:Int, *indirect:const void, drawcount:GLintptr, maxdrawcount:Int, stride:Int) : Void;
-
+    // static function glMultiDrawArraysIndirectCountARB(mode:Int, *indirect:const void, drawcount:GLintptr, maxdrawcount:Int, stride:Int) : Void;    // static function glMultiDrawElementsIndirectCountARB(mode:Int, type:Int, *indirect:const void, drawcount:GLintptr, maxdrawcount:Int, stride:Int) : Void;
 
 //GL_ARB_instanced_arrays
     inline static var GL_ARB_instanced_arrays                                         = 1;
@@ -4841,15 +3548,10 @@ extern class GL {
 
 
     @:native('glDrawArraysInstancedARB')
-    static function glDrawArraysInstancedARB(mode:Int, first:Int, count:Int, primcount:Int) : Void;
-
-    @:native('glVertexAttribDivisorARB')
+    static function glDrawArraysInstancedARB(mode:Int, first:Int, count:Int, primcount:Int) : Void;    @:native('glVertexAttribDivisorARB')
     static function glVertexAttribDivisorARB(index:UInt, divisor:UInt) : Void;
 
-
-
     // static function glDrawElementsInstancedARB(mode:Int, count:Int, type:Int, indices:const void*, primcount:Int) : Void;
-
 
 //GL_ARB_internalformat_query
     inline static var GL_ARB_internalformat_query                                     = 1;
@@ -4861,7 +3563,6 @@ extern class GL {
 
 
     // static function glGetInternalformativ(target:Int, internalformat:Int, pname:Int, bufSize:Int, params:GLint*) : Void;
-
 
 //GL_ARB_internalformat_query2
     inline static var GL_ARB_internalformat_query2                                    = 1;
@@ -4972,7 +3673,6 @@ extern class GL {
 
     // static function glGetInternalformati64v(target:Int, internalformat:Int, pname:Int, bufSize:Int, params:GLint64*) : Void;
 
-
 //GL_ARB_invalidate_subdata
     inline static var GL_ARB_invalidate_subdata                                       = 1;
 
@@ -4980,20 +3680,11 @@ extern class GL {
 
 
     @:native('glInvalidateBufferData')
-    static function glInvalidateBufferData(buffer:UInt) : Void;
-
-    @:native('glInvalidateTexImage')
-    static function glInvalidateTexImage(texture:UInt, level:Int) : Void;
-
-    @:native('glInvalidateTexSubImage')
+    static function glInvalidateBufferData(buffer:UInt) : Void;    @:native('glInvalidateTexImage')
+    static function glInvalidateTexImage(texture:UInt, level:Int) : Void;    @:native('glInvalidateTexSubImage')
     static function glInvalidateTexSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int) : Void;
 
-
-
-    // static function glInvalidateBufferSubData(buffer:UInt, offset:GLintptr, length:GLsizeiptr) : Void;
-    // static function glInvalidateFramebuffer(target:Int, numAttachments:Int, attachments:const GLenum*) : Void;
-    // static function glInvalidateSubFramebuffer(target:Int, numAttachments:Int, attachments:const GLenum*, x:Int, y:Int, width:Int, height:Int) : Void;
-
+    // static function glInvalidateBufferSubData(buffer:UInt, offset:GLintptr, length:GLsizeiptr) : Void;    // static function glInvalidateFramebuffer(target:Int, numAttachments:Int, attachments:const GLenum*) : Void;    // static function glInvalidateSubFramebuffer(target:Int, numAttachments:Int, attachments:const GLenum*, x:Int, y:Int, width:Int, height:Int) : Void;
 
 //GL_ARB_map_buffer_alignment
     inline static var GL_ARB_map_buffer_alignment                                     = 1;
@@ -5018,9 +3709,7 @@ extern class GL {
 
 
 
-    // static function glFlushMappedBufferRange(target:Int, offset:GLintptr, length:GLsizeiptr) : Void;
-    // static function glMapBufferRange(target:Int, offset:GLintptr, length:GLsizeiptr, access:Int) : void *;
-
+    // static function glFlushMappedBufferRange(target:Int, offset:GLintptr, length:GLsizeiptr) : Void;    // static function glMapBufferRange(target:Int, offset:GLintptr, length:GLsizeiptr, access:Int) : void *;
 
 //GL_ARB_matrix_palette
     inline static var GL_ARB_matrix_palette                                           = 1;
@@ -5041,13 +3730,7 @@ extern class GL {
     @:native('glCurrentPaletteMatrixARB')
     static function glCurrentPaletteMatrixARB(index:Int) : Void;
 
-
-
-    // static function glMatrixIndexPointerARB(size:Int, type:Int, stride:Int, *pointer:Void) : Void;
-    // static function glMatrixIndexubvARB(size:Int, *indices:String) : Void;
-    // static function glMatrixIndexuivARB(size:Int, *indices:UInt) : Void;
-    // static function glMatrixIndexusvARB(size:Int, *indices:UInt) : Void;
-
+    // static function glMatrixIndexPointerARB(size:Int, type:Int, stride:Int, *pointer:Void) : Void;    // static function glMatrixIndexubvARB(size:Int, *indices:String) : Void;    // static function glMatrixIndexuivARB(size:Int, *indices:UInt) : Void;    // static function glMatrixIndexusvARB(size:Int, *indices:UInt) : Void;
 
 //GL_ARB_multi_bind
     inline static var GL_ARB_multi_bind                                               = 1;
@@ -5057,13 +3740,7 @@ extern class GL {
 
 
 
-    // static function glBindBuffersBase(target:Int, first:UInt, count:Int, buffers:const GLuint*) : Void;
-    // static function glBindBuffersRange(target:Int, first:UInt, count:Int, buffers:const GLuint*, *offsets:const GLintptr, *sizes:const GLsizeiptr) : Void;
-    // static function glBindImageTextures(first:UInt, count:Int, textures:const GLuint*) : Void;
-    // static function glBindSamplers(first:UInt, count:Int, samplers:const GLuint*) : Void;
-    // static function glBindTextures(first:UInt, count:Int, textures:const GLuint*) : Void;
-    // static function glBindVertexBuffers(first:UInt, count:Int, buffers:const GLuint*, *offsets:const GLintptr, *strides:const GLsizei) : Void;
-
+    // static function glBindBuffersBase(target:Int, first:UInt, count:Int, buffers:const GLuint*) : Void;    // static function glBindBuffersRange(target:Int, first:UInt, count:Int, buffers:const GLuint*, *offsets:const GLintptr, *sizes:const GLsizeiptr) : Void;    // static function glBindImageTextures(first:UInt, count:Int, textures:const GLuint*) : Void;    // static function glBindSamplers(first:UInt, count:Int, samplers:const GLuint*) : Void;    // static function glBindTextures(first:UInt, count:Int, textures:const GLuint*) : Void;    // static function glBindVertexBuffers(first:UInt, count:Int, buffers:const GLuint*, *offsets:const GLintptr, *strides:const GLsizei) : Void;
 
 //GL_ARB_multi_draw_indirect
     inline static var GL_ARB_multi_draw_indirect                                      = 1;
@@ -5073,9 +3750,7 @@ extern class GL {
 
 
 
-    // static function glMultiDrawArraysIndirect(mode:Int, *indirect:const void, primcount:Int, stride:Int) : Void;
-    // static function glMultiDrawElementsIndirect(mode:Int, type:Int, *indirect:const void, primcount:Int, stride:Int) : Void;
-
+    // static function glMultiDrawArraysIndirect(mode:Int, *indirect:const void, primcount:Int, stride:Int) : Void;    // static function glMultiDrawElementsIndirect(mode:Int, type:Int, *indirect:const void, primcount:Int, stride:Int) : Void;
 
 //GL_ARB_multisample
     inline static var GL_ARB_multisample                                              = 1;
@@ -5094,8 +3769,6 @@ extern class GL {
 
     @:native('glSampleCoverageARB')
     static function glSampleCoverageARB(value:Float, invert:Bool) : Void;
-
-
 
 
 
@@ -5141,108 +3814,72 @@ extern class GL {
 
 
     @:native('glActiveTextureARB')
-    static function glActiveTextureARB(texture:Int) : Void;
-
-    @:native('glClientActiveTextureARB')
-    static function glClientActiveTextureARB(texture:Int) : Void;
-
-    @:native('glMultiTexCoord1dARB')
-    static function glMultiTexCoord1dARB(target:Int, s:Float) : Void;
-
-    @:native('glMultiTexCoord1fARB')
-    static function glMultiTexCoord1fARB(target:Int, s:Float) : Void;
-
-    @:native('glMultiTexCoord1iARB')
-    static function glMultiTexCoord1iARB(target:Int, s:Int) : Void;
-
-    @:native('glMultiTexCoord1sARB')
-    static function glMultiTexCoord1sARB(target:Int, s:Int) : Void;
-
-    @:native('glMultiTexCoord2dARB')
-    static function glMultiTexCoord2dARB(target:Int, s:Float, t:Float) : Void;
-
-    @:native('glMultiTexCoord2fARB')
-    static function glMultiTexCoord2fARB(target:Int, s:Float, t:Float) : Void;
-
-    @:native('glMultiTexCoord2iARB')
-    static function glMultiTexCoord2iARB(target:Int, s:Int, t:Int) : Void;
-
-    @:native('glMultiTexCoord2sARB')
-    static function glMultiTexCoord2sARB(target:Int, s:Int, t:Int) : Void;
-
-    @:native('glMultiTexCoord3dARB')
-    static function glMultiTexCoord3dARB(target:Int, s:Float, t:Float, r:Float) : Void;
-
-    @:native('glMultiTexCoord3fARB')
-    static function glMultiTexCoord3fARB(target:Int, s:Float, t:Float, r:Float) : Void;
-
-    @:native('glMultiTexCoord3iARB')
-    static function glMultiTexCoord3iARB(target:Int, s:Int, t:Int, r:Int) : Void;
-
-    @:native('glMultiTexCoord3sARB')
-    static function glMultiTexCoord3sARB(target:Int, s:Int, t:Int, r:Int) : Void;
-
-    @:native('glMultiTexCoord4dARB')
-    static function glMultiTexCoord4dARB(target:Int, s:Float, t:Float, r:Float, q:Float) : Void;
-
-    @:native('glMultiTexCoord4fARB')
-    static function glMultiTexCoord4fARB(target:Int, s:Float, t:Float, r:Float, q:Float) : Void;
-
-    @:native('glMultiTexCoord4iARB')
-    static function glMultiTexCoord4iARB(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;
-
-    @:native('glMultiTexCoord4sARB')
+    static function glActiveTextureARB(texture:Int) : Void;    @:native('glClientActiveTextureARB')
+    static function glClientActiveTextureARB(texture:Int) : Void;    @:native('glMultiTexCoord1dARB')
+    static function glMultiTexCoord1dARB(target:Int, s:Float) : Void;    @:native('glMultiTexCoord1fARB')
+    static function glMultiTexCoord1fARB(target:Int, s:Float) : Void;    @:native('glMultiTexCoord1iARB')
+    static function glMultiTexCoord1iARB(target:Int, s:Int) : Void;    @:native('glMultiTexCoord1sARB')
+    static function glMultiTexCoord1sARB(target:Int, s:Int) : Void;    @:native('glMultiTexCoord2dARB')
+    static function glMultiTexCoord2dARB(target:Int, s:Float, t:Float) : Void;    @:native('glMultiTexCoord2fARB')
+    static function glMultiTexCoord2fARB(target:Int, s:Float, t:Float) : Void;    @:native('glMultiTexCoord2iARB')
+    static function glMultiTexCoord2iARB(target:Int, s:Int, t:Int) : Void;    @:native('glMultiTexCoord2sARB')
+    static function glMultiTexCoord2sARB(target:Int, s:Int, t:Int) : Void;    @:native('glMultiTexCoord3dARB')
+    static function glMultiTexCoord3dARB(target:Int, s:Float, t:Float, r:Float) : Void;    @:native('glMultiTexCoord3fARB')
+    static function glMultiTexCoord3fARB(target:Int, s:Float, t:Float, r:Float) : Void;    @:native('glMultiTexCoord3iARB')
+    static function glMultiTexCoord3iARB(target:Int, s:Int, t:Int, r:Int) : Void;    @:native('glMultiTexCoord3sARB')
+    static function glMultiTexCoord3sARB(target:Int, s:Int, t:Int, r:Int) : Void;    @:native('glMultiTexCoord4dARB')
+    static function glMultiTexCoord4dARB(target:Int, s:Float, t:Float, r:Float, q:Float) : Void;    @:native('glMultiTexCoord4fARB')
+    static function glMultiTexCoord4fARB(target:Int, s:Float, t:Float, r:Float, q:Float) : Void;    @:native('glMultiTexCoord4iARB')
+    static function glMultiTexCoord4iARB(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;    @:native('glMultiTexCoord4sARB')
     static function glMultiTexCoord4sARB(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;
-
-
-    @:native('linc::opengl::glMultiTexCoord1dvARB')
-    static function glMultiTexCoord1dvARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord1fvARB')
-    static function glMultiTexCoord1fvARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord1ivARB')
-    static function glMultiTexCoord1ivARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord1svARB')
-    static function glMultiTexCoord1svARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord2dvARB')
-    static function glMultiTexCoord2dvARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord2fvARB')
-    static function glMultiTexCoord2fvARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord2ivARB')
-    static function glMultiTexCoord2ivARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord2svARB')
-    static function glMultiTexCoord2svARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord3dvARB')
-    static function glMultiTexCoord3dvARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord3fvARB')
-    static function glMultiTexCoord3fvARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord3ivARB')
-    static function glMultiTexCoord3ivARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord3svARB')
-    static function glMultiTexCoord3svARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord4dvARB')
-    static function glMultiTexCoord4dvARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord4fvARB')
-    static function glMultiTexCoord4fvARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord4ivARB')
-    static function glMultiTexCoord4ivARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glMultiTexCoord4svARB')
-    static function glMultiTexCoord4svARB(target:Int, bOffset:Int, v:BytesData) : Void;
-
+    
+    inline static function glMultiTexCoord1dvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord1dvARB((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord1fvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord1fvARB((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord1ivARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord1ivARB((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord1svARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord1svARB((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord2dvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord2dvARB((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord2fvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord2fvARB((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord2ivARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord2ivARB((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord2svARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord2svARB((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord3dvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord3dvARB((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord3fvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord3fvARB((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord3ivARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord3ivARB((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord3svARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord3svARB((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord4dvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord4dvARB((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord4fvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord4fvARB((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord4ivARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord4ivARB((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glMultiTexCoord4svARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glMultiTexCoord4svARB((const GLshort*)&{1}[0] + {0})", bOffset, v); };
 
 
 
@@ -5258,22 +3895,11 @@ extern class GL {
 
 
     @:native('glBeginQueryARB')
-    static function glBeginQueryARB(target:Int, id:UInt) : Void;
-
-    @:native('glEndQueryARB')
-    static function glEndQueryARB(target:Int) : Void;
-
-    @:native('glIsQueryARB')
+    static function glBeginQueryARB(target:Int, id:UInt) : Void;    @:native('glEndQueryARB')
+    static function glEndQueryARB(target:Int) : Void;    @:native('glIsQueryARB')
     static function glIsQueryARB(id:UInt) : Bool;
 
-
-
-    // static function glDeleteQueriesARB(n:Int, ids:const GLuint*) : Void;
-    // static function glGenQueriesARB(n:Int, ids:GLuint*) : Void;
-    // static function glGetQueryObjectivARB(id:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetQueryObjectuivARB(id:UInt, pname:Int, params:GLuint*) : Void;
-    // static function glGetQueryivARB(target:Int, pname:Int, params:GLint*) : Void;
-
+    // static function glDeleteQueriesARB(n:Int, ids:const GLuint*) : Void;    // static function glGenQueriesARB(n:Int, ids:GLuint*) : Void;    // static function glGetQueryObjectivARB(id:UInt, pname:Int, params:GLint*) : Void;    // static function glGetQueryObjectuivARB(id:UInt, pname:Int, params:GLuint*) : Void;    // static function glGetQueryivARB(target:Int, pname:Int, params:GLint*) : Void;
 
 //GL_ARB_occlusion_query2
     inline static var GL_ARB_occlusion_query2                                         = 1;
@@ -5333,10 +3959,7 @@ extern class GL {
     @:native('glPointParameterfARB')
     static function glPointParameterfARB(pname:Int, param:Float) : Void;
 
-
-
     // static function glPointParameterfvARB(pname:Int, params:const GLfloat*) : Void;
-
 
 //GL_ARB_point_sprite
     inline static var GL_ARB_point_sprite                                             = 1;
@@ -5404,20 +4027,11 @@ extern class GL {
 
 
     @:native('glGetProgramResourceIndex')
-    static function glGetProgramResourceIndex(program:UInt, programInterface:Int, name:String) : UInt;
-
-    @:native('glGetProgramResourceLocation')
-    static function glGetProgramResourceLocation(program:UInt, programInterface:Int, name:String) : Int;
-
-    @:native('glGetProgramResourceLocationIndex')
+    static function glGetProgramResourceIndex(program:UInt, programInterface:Int, name:String) : UInt;    @:native('glGetProgramResourceLocation')
+    static function glGetProgramResourceLocation(program:UInt, programInterface:Int, name:String) : Int;    @:native('glGetProgramResourceLocationIndex')
     static function glGetProgramResourceLocationIndex(program:UInt, programInterface:Int, name:String) : Int;
 
-
-
-    // static function glGetProgramInterfaceiv(program:UInt, programInterface:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetProgramResourceName(program:UInt, programInterface:Int, index:UInt, bufSize:Int, length:GLsizei*, *name:GLchar) : Void;
-    // static function glGetProgramResourceiv(program:UInt, programInterface:Int, index:UInt, propCount:Int, props:const GLenum*, bufSize:Int, *length:Int, *params:Int) : Void;
-
+    // static function glGetProgramInterfaceiv(program:UInt, programInterface:Int, pname:Int, params:GLint*) : Void;    // static function glGetProgramResourceName(program:UInt, programInterface:Int, index:UInt, bufSize:Int, length:GLsizei*, *name:GLchar) : Void;    // static function glGetProgramResourceiv(program:UInt, programInterface:Int, index:UInt, propCount:Int, props:const GLenum*, bufSize:Int, *length:Int, *params:Int) : Void;
 
 //GL_ARB_provoking_vertex
     inline static var GL_ARB_provoking_vertex                                         = 1;
@@ -5431,8 +4045,6 @@ extern class GL {
 
     @:native('glProvokingVertex')
     static function glProvokingVertex(mode:Int) : Void;
-
-
 
 
 
@@ -5476,28 +4088,7 @@ extern class GL {
     @:native('glGetGraphicsResetStatusARB')
     static function glGetGraphicsResetStatusARB() : Int;
 
-
-
-    // static function glGetnColorTableARB(target:Int, format:Int, type:Int, bufSize:Int, table:void*) : Void;
-    // static function glGetnCompressedTexImageARB(target:Int, lod:Int, bufSize:Int, img:void*) : Void;
-    // static function glGetnConvolutionFilterARB(target:Int, format:Int, type:Int, bufSize:Int, image:void*) : Void;
-    // static function glGetnHistogramARB(target:Int, reset:Bool, format:Int, type:Int, bufSize:Int, values:void*) : Void;
-    // static function glGetnMapdvARB(target:Int, query:Int, bufSize:Int, v:GLdouble*) : Void;
-    // static function glGetnMapfvARB(target:Int, query:Int, bufSize:Int, v:GLfloat*) : Void;
-    // static function glGetnMapivARB(target:Int, query:Int, bufSize:Int, v:GLint*) : Void;
-    // static function glGetnMinmaxARB(target:Int, reset:Bool, format:Int, type:Int, bufSize:Int, values:void*) : Void;
-    // static function glGetnPixelMapfvARB(map:Int, bufSize:Int, values:GLfloat*) : Void;
-    // static function glGetnPixelMapuivARB(map:Int, bufSize:Int, values:GLuint*) : Void;
-    // static function glGetnPixelMapusvARB(map:Int, bufSize:Int, values:GLushort*) : Void;
-    // static function glGetnPolygonStippleARB(bufSize:Int, pattern:GLubyte*) : Void;
-    // static function glGetnSeparableFilterARB(target:Int, format:Int, type:Int, rowBufSize:Int, row:void*, columnBufSize:Int, void*column:, void*span:) : Void;
-    // static function glGetnTexImageARB(target:Int, level:Int, format:Int, type:Int, bufSize:Int, img:void*) : Void;
-    // static function glGetnUniformdvARB(program:UInt, location:Int, bufSize:Int, params:GLdouble*) : Void;
-    // static function glGetnUniformfvARB(program:UInt, location:Int, bufSize:Int, params:GLfloat*) : Void;
-    // static function glGetnUniformivARB(program:UInt, location:Int, bufSize:Int, params:GLint*) : Void;
-    // static function glGetnUniformuivARB(program:UInt, location:Int, bufSize:Int, params:GLuint*) : Void;
-    // static function glReadnPixelsARB(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, bufSize:Int, data:void*) : Void;
-
+    // static function glGetnColorTableARB(target:Int, format:Int, type:Int, bufSize:Int, table:void*) : Void;    // static function glGetnCompressedTexImageARB(target:Int, lod:Int, bufSize:Int, img:void*) : Void;    // static function glGetnConvolutionFilterARB(target:Int, format:Int, type:Int, bufSize:Int, image:void*) : Void;    // static function glGetnHistogramARB(target:Int, reset:Bool, format:Int, type:Int, bufSize:Int, values:void*) : Void;    // static function glGetnMapdvARB(target:Int, query:Int, bufSize:Int, v:GLdouble*) : Void;    // static function glGetnMapfvARB(target:Int, query:Int, bufSize:Int, v:GLfloat*) : Void;    // static function glGetnMapivARB(target:Int, query:Int, bufSize:Int, v:GLint*) : Void;    // static function glGetnMinmaxARB(target:Int, reset:Bool, format:Int, type:Int, bufSize:Int, values:void*) : Void;    // static function glGetnPixelMapfvARB(map:Int, bufSize:Int, values:GLfloat*) : Void;    // static function glGetnPixelMapuivARB(map:Int, bufSize:Int, values:GLuint*) : Void;    // static function glGetnPixelMapusvARB(map:Int, bufSize:Int, values:GLushort*) : Void;    // static function glGetnPolygonStippleARB(bufSize:Int, pattern:GLubyte*) : Void;    // static function glGetnSeparableFilterARB(target:Int, format:Int, type:Int, rowBufSize:Int, row:void*, columnBufSize:Int, void*column:, void*span:) : Void;    // static function glGetnTexImageARB(target:Int, level:Int, format:Int, type:Int, bufSize:Int, img:void*) : Void;    // static function glGetnUniformdvARB(program:UInt, location:Int, bufSize:Int, params:GLdouble*) : Void;    // static function glGetnUniformfvARB(program:UInt, location:Int, bufSize:Int, params:GLfloat*) : Void;    // static function glGetnUniformivARB(program:UInt, location:Int, bufSize:Int, params:GLint*) : Void;    // static function glGetnUniformuivARB(program:UInt, location:Int, bufSize:Int, params:GLuint*) : Void;    // static function glReadnPixelsARB(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, bufSize:Int, data:void*) : Void;
 
 //GL_ARB_robustness_application_isolation
     inline static var GL_ARB_robustness_application_isolation                         = 1;
@@ -5532,8 +4123,6 @@ extern class GL {
 
 
 
-
-
 //GL_ARB_sampler_objects
     inline static var GL_ARB_sampler_objects                                          = 1;
     inline static var GL_SAMPLER_BINDING                                              = 0x8919;
@@ -5542,30 +4131,12 @@ extern class GL {
 
 
     @:native('glBindSampler')
-    static function glBindSampler(unit:UInt, sampler:UInt) : Void;
-
-    @:native('glIsSampler')
-    static function glIsSampler(sampler:UInt) : Bool;
-
-    @:native('glSamplerParameterf')
-    static function glSamplerParameterf(sampler:UInt, pname:Int, param:Float) : Void;
-
-    @:native('glSamplerParameteri')
+    static function glBindSampler(unit:UInt, sampler:UInt) : Void;    @:native('glIsSampler')
+    static function glIsSampler(sampler:UInt) : Bool;    @:native('glSamplerParameterf')
+    static function glSamplerParameterf(sampler:UInt, pname:Int, param:Float) : Void;    @:native('glSamplerParameteri')
     static function glSamplerParameteri(sampler:UInt, pname:Int, param:Int) : Void;
 
-
-
-    // static function glDeleteSamplers(count:Int, samplers:const GLuint *) : Void;
-    // static function glGenSamplers(count:Int, samplers:GLuint*) : Void;
-    // static function glGetSamplerParameterIiv(sampler:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetSamplerParameterIuiv(sampler:UInt, pname:Int, params:GLuint*) : Void;
-    // static function glGetSamplerParameterfv(sampler:UInt, pname:Int, params:GLfloat*) : Void;
-    // static function glGetSamplerParameteriv(sampler:UInt, pname:Int, params:GLint*) : Void;
-    // static function glSamplerParameterIiv(sampler:UInt, pname:Int, params:const GLint*) : Void;
-    // static function glSamplerParameterIuiv(sampler:UInt, pname:Int, params:const GLuint*) : Void;
-    // static function glSamplerParameterfv(sampler:UInt, pname:Int, params:const GLfloat*) : Void;
-    // static function glSamplerParameteriv(sampler:UInt, pname:Int, params:const GLint*) : Void;
-
+    // static function glDeleteSamplers(count:Int, samplers:const GLuint *) : Void;    // static function glGenSamplers(count:Int, samplers:GLuint*) : Void;    // static function glGetSamplerParameterIiv(sampler:UInt, pname:Int, params:GLint*) : Void;    // static function glGetSamplerParameterIuiv(sampler:UInt, pname:Int, params:GLuint*) : Void;    // static function glGetSamplerParameterfv(sampler:UInt, pname:Int, params:GLfloat*) : Void;    // static function glGetSamplerParameteriv(sampler:UInt, pname:Int, params:GLint*) : Void;    // static function glSamplerParameterIiv(sampler:UInt, pname:Int, params:const GLint*) : Void;    // static function glSamplerParameterIuiv(sampler:UInt, pname:Int, params:const GLuint*) : Void;    // static function glSamplerParameterfv(sampler:UInt, pname:Int, params:const GLfloat*) : Void;    // static function glSamplerParameteriv(sampler:UInt, pname:Int, params:const GLint*) : Void;
 
 //GL_ARB_seamless_cube_map
     inline static var GL_ARB_seamless_cube_map                                        = 1;
@@ -5604,110 +4175,29 @@ extern class GL {
 
 
     @:native('glActiveShaderProgram')
-    static function glActiveShaderProgram(pipeline:UInt, program:UInt) : Void;
-
-    @:native('glBindProgramPipeline')
-    static function glBindProgramPipeline(pipeline:UInt) : Void;
-
-    @:native('glIsProgramPipeline')
-    static function glIsProgramPipeline(pipeline:UInt) : Bool;
-
-    @:native('glProgramUniform1d')
-    static function glProgramUniform1d(program:UInt, location:Int, x:Float) : Void;
-
-    @:native('glProgramUniform1f')
-    static function glProgramUniform1f(program:UInt, location:Int, x:Float) : Void;
-
-    @:native('glProgramUniform1i')
-    static function glProgramUniform1i(program:UInt, location:Int, x:Int) : Void;
-
-    @:native('glProgramUniform1ui')
-    static function glProgramUniform1ui(program:UInt, location:Int, x:UInt) : Void;
-
-    @:native('glProgramUniform2d')
-    static function glProgramUniform2d(program:UInt, location:Int, x:Float, y:Float) : Void;
-
-    @:native('glProgramUniform2f')
-    static function glProgramUniform2f(program:UInt, location:Int, x:Float, y:Float) : Void;
-
-    @:native('glProgramUniform2i')
-    static function glProgramUniform2i(program:UInt, location:Int, x:Int, y:Int) : Void;
-
-    @:native('glProgramUniform2ui')
-    static function glProgramUniform2ui(program:UInt, location:Int, x:UInt, y:UInt) : Void;
-
-    @:native('glProgramUniform3d')
-    static function glProgramUniform3d(program:UInt, location:Int, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glProgramUniform3f')
-    static function glProgramUniform3f(program:UInt, location:Int, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glProgramUniform3i')
-    static function glProgramUniform3i(program:UInt, location:Int, x:Int, y:Int, z:Int) : Void;
-
-    @:native('glProgramUniform3ui')
-    static function glProgramUniform3ui(program:UInt, location:Int, x:UInt, y:UInt, z:UInt) : Void;
-
-    @:native('glProgramUniform4d')
-    static function glProgramUniform4d(program:UInt, location:Int, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glProgramUniform4f')
-    static function glProgramUniform4f(program:UInt, location:Int, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glProgramUniform4i')
-    static function glProgramUniform4i(program:UInt, location:Int, x:Int, y:Int, z:Int, w:Int) : Void;
-
-    @:native('glProgramUniform4ui')
-    static function glProgramUniform4ui(program:UInt, location:Int, x:UInt, y:UInt, z:UInt, w:UInt) : Void;
-
-    @:native('glUseProgramStages')
-    static function glUseProgramStages(pipeline:UInt, stages:Int, program:UInt) : Void;
-
-    @:native('glValidateProgramPipeline')
+    static function glActiveShaderProgram(pipeline:UInt, program:UInt) : Void;    @:native('glBindProgramPipeline')
+    static function glBindProgramPipeline(pipeline:UInt) : Void;    @:native('glIsProgramPipeline')
+    static function glIsProgramPipeline(pipeline:UInt) : Bool;    @:native('glProgramUniform1d')
+    static function glProgramUniform1d(program:UInt, location:Int, x:Float) : Void;    @:native('glProgramUniform1f')
+    static function glProgramUniform1f(program:UInt, location:Int, x:Float) : Void;    @:native('glProgramUniform1i')
+    static function glProgramUniform1i(program:UInt, location:Int, x:Int) : Void;    @:native('glProgramUniform1ui')
+    static function glProgramUniform1ui(program:UInt, location:Int, x:UInt) : Void;    @:native('glProgramUniform2d')
+    static function glProgramUniform2d(program:UInt, location:Int, x:Float, y:Float) : Void;    @:native('glProgramUniform2f')
+    static function glProgramUniform2f(program:UInt, location:Int, x:Float, y:Float) : Void;    @:native('glProgramUniform2i')
+    static function glProgramUniform2i(program:UInt, location:Int, x:Int, y:Int) : Void;    @:native('glProgramUniform2ui')
+    static function glProgramUniform2ui(program:UInt, location:Int, x:UInt, y:UInt) : Void;    @:native('glProgramUniform3d')
+    static function glProgramUniform3d(program:UInt, location:Int, x:Float, y:Float, z:Float) : Void;    @:native('glProgramUniform3f')
+    static function glProgramUniform3f(program:UInt, location:Int, x:Float, y:Float, z:Float) : Void;    @:native('glProgramUniform3i')
+    static function glProgramUniform3i(program:UInt, location:Int, x:Int, y:Int, z:Int) : Void;    @:native('glProgramUniform3ui')
+    static function glProgramUniform3ui(program:UInt, location:Int, x:UInt, y:UInt, z:UInt) : Void;    @:native('glProgramUniform4d')
+    static function glProgramUniform4d(program:UInt, location:Int, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glProgramUniform4f')
+    static function glProgramUniform4f(program:UInt, location:Int, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glProgramUniform4i')
+    static function glProgramUniform4i(program:UInt, location:Int, x:Int, y:Int, z:Int, w:Int) : Void;    @:native('glProgramUniform4ui')
+    static function glProgramUniform4ui(program:UInt, location:Int, x:UInt, y:UInt, z:UInt, w:UInt) : Void;    @:native('glUseProgramStages')
+    static function glUseProgramStages(pipeline:UInt, stages:Int, program:UInt) : Void;    @:native('glValidateProgramPipeline')
     static function glValidateProgramPipeline(pipeline:UInt) : Void;
 
-
-
-    // static function glCreateShaderProgramv(type:Int, count:Int, strings:const GLchar * const *) : UInt;
-    // static function glDeleteProgramPipelines(n:Int, pipelines:const GLuint*) : Void;
-    // static function glGenProgramPipelines(n:Int, pipelines:GLuint*) : Void;
-    // static function glGetProgramPipelineInfoLog(pipeline:UInt, bufSize:Int, length:GLsizei*, *infoLog:GLchar) : Void;
-    // static function glGetProgramPipelineiv(pipeline:UInt, pname:Int, params:GLint*) : Void;
-    // static function glProgramUniform1dv(program:UInt, location:Int, count:Int, value:const GLdouble*) : Void;
-    // static function glProgramUniform1fv(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform1iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
-    // static function glProgramUniform1uiv(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
-    // static function glProgramUniform2dv(program:UInt, location:Int, count:Int, value:const GLdouble*) : Void;
-    // static function glProgramUniform2fv(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform2iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
-    // static function glProgramUniform2uiv(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
-    // static function glProgramUniform3dv(program:UInt, location:Int, count:Int, value:const GLdouble*) : Void;
-    // static function glProgramUniform3fv(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform3iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
-    // static function glProgramUniform3uiv(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
-    // static function glProgramUniform4dv(program:UInt, location:Int, count:Int, value:const GLdouble*) : Void;
-    // static function glProgramUniform4fv(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform4iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
-    // static function glProgramUniform4uiv(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
-    // static function glProgramUniformMatrix2dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glProgramUniformMatrix2fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix2x3dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glProgramUniformMatrix2x3fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix2x4dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glProgramUniformMatrix2x4fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix3dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glProgramUniformMatrix3fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix3x2dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glProgramUniformMatrix3x2fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix3x4dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glProgramUniformMatrix3x4fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix4dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glProgramUniformMatrix4fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix4x2dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glProgramUniformMatrix4x2fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix4x3dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
-    // static function glProgramUniformMatrix4x3fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-
+    // static function glCreateShaderProgramv(type:Int, count:Int, strings:const GLchar * const *) : UInt;    // static function glDeleteProgramPipelines(n:Int, pipelines:const GLuint*) : Void;    // static function glGenProgramPipelines(n:Int, pipelines:GLuint*) : Void;    // static function glGetProgramPipelineInfoLog(pipeline:UInt, bufSize:Int, length:GLsizei*, *infoLog:GLchar) : Void;    // static function glGetProgramPipelineiv(pipeline:UInt, pname:Int, params:GLint*) : Void;    // static function glProgramUniform1dv(program:UInt, location:Int, count:Int, value:const GLdouble*) : Void;    // static function glProgramUniform1fv(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;    // static function glProgramUniform1iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void;    // static function glProgramUniform1uiv(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;    // static function glProgramUniform2dv(program:UInt, location:Int, count:Int, value:const GLdouble*) : Void;    // static function glProgramUniform2fv(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;    // static function glProgramUniform2iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void;    // static function glProgramUniform2uiv(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;    // static function glProgramUniform3dv(program:UInt, location:Int, count:Int, value:const GLdouble*) : Void;    // static function glProgramUniform3fv(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;    // static function glProgramUniform3iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void;    // static function glProgramUniform3uiv(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;    // static function glProgramUniform4dv(program:UInt, location:Int, count:Int, value:const GLdouble*) : Void;    // static function glProgramUniform4fv(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;    // static function glProgramUniform4iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void;    // static function glProgramUniform4uiv(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;    // static function glProgramUniformMatrix2dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glProgramUniformMatrix2fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix2x3dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glProgramUniformMatrix2x3fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix2x4dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glProgramUniformMatrix2x4fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix3dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glProgramUniformMatrix3fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix3x2dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glProgramUniformMatrix3x2fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix3x4dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glProgramUniformMatrix3x4fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix4dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glProgramUniformMatrix4fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix4x2dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glProgramUniformMatrix4x2fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix4x3dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;    // static function glProgramUniformMatrix4x3fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
 
 //GL_ARB_shader_atomic_counters
     inline static var GL_ARB_shader_atomic_counters                                   = 1;
@@ -5747,7 +4237,6 @@ extern class GL {
 
 
     // static function glGetActiveAtomicCounterBufferiv(program:UInt, bufferIndex:UInt, pname:Int, params:GLint*) : Void;
-
 
 //GL_ARB_shader_bit_encoding
     inline static var GL_ARB_shader_bit_encoding                                      = 1;
@@ -5850,12 +4339,8 @@ extern class GL {
 
 
     @:native('glBindImageTexture')
-    static function glBindImageTexture(unit:UInt, texture:UInt, level:Int, layered:Bool, layer:Int, access:Int, format:Int) : Void;
-
-    @:native('glMemoryBarrier')
+    static function glBindImageTexture(unit:UInt, texture:UInt, level:Int, layered:Bool, layer:Int, access:Int, format:Int) : Void;    @:native('glMemoryBarrier')
     static function glMemoryBarrier(barriers:Int) : Void;
-
-
 
 
 
@@ -5910,83 +4395,26 @@ extern class GL {
 
 
     @:native('glAttachObjectARB')
-    static function glAttachObjectARB(containerObj:UInt, obj:UInt) : Void;
-
-    @:native('glCompileShaderARB')
-    static function glCompileShaderARB(shaderObj:UInt) : Void;
-
-    @:native('glCreateProgramObjectARB')
-    static function glCreateProgramObjectARB() : UInt;
-
-    @:native('glCreateShaderObjectARB')
-    static function glCreateShaderObjectARB(shaderType:Int) : UInt;
-
-    @:native('glDeleteObjectARB')
-    static function glDeleteObjectARB(obj:UInt) : Void;
-
-    @:native('glDetachObjectARB')
-    static function glDetachObjectARB(containerObj:UInt, attachedObj:UInt) : Void;
-
-    @:native('glGetHandleARB')
-    static function glGetHandleARB(pname:Int) : UInt;
-
-    @:native('glLinkProgramARB')
-    static function glLinkProgramARB(programObj:UInt) : Void;
-
-    @:native('glUniform1fARB')
-    static function glUniform1fARB(location:Int, v0:Float) : Void;
-
-    @:native('glUniform1iARB')
-    static function glUniform1iARB(location:Int, v0:Int) : Void;
-
-    @:native('glUniform2fARB')
-    static function glUniform2fARB(location:Int, v0:Float, v1:Float) : Void;
-
-    @:native('glUniform2iARB')
-    static function glUniform2iARB(location:Int, v0:Int, v1:Int) : Void;
-
-    @:native('glUniform3fARB')
-    static function glUniform3fARB(location:Int, v0:Float, v1:Float, v2:Float) : Void;
-
-    @:native('glUniform3iARB')
-    static function glUniform3iARB(location:Int, v0:Int, v1:Int, v2:Int) : Void;
-
-    @:native('glUniform4fARB')
-    static function glUniform4fARB(location:Int, v0:Float, v1:Float, v2:Float, v3:Float) : Void;
-
-    @:native('glUniform4iARB')
-    static function glUniform4iARB(location:Int, v0:Int, v1:Int, v2:Int, v3:Int) : Void;
-
-    @:native('glUseProgramObjectARB')
-    static function glUseProgramObjectARB(programObj:UInt) : Void;
-
-    @:native('glValidateProgramARB')
+    static function glAttachObjectARB(containerObj:UInt, obj:UInt) : Void;    @:native('glCompileShaderARB')
+    static function glCompileShaderARB(shaderObj:UInt) : Void;    @:native('glCreateProgramObjectARB')
+    static function glCreateProgramObjectARB() : UInt;    @:native('glCreateShaderObjectARB')
+    static function glCreateShaderObjectARB(shaderType:Int) : UInt;    @:native('glDeleteObjectARB')
+    static function glDeleteObjectARB(obj:UInt) : Void;    @:native('glDetachObjectARB')
+    static function glDetachObjectARB(containerObj:UInt, attachedObj:UInt) : Void;    @:native('glGetHandleARB')
+    static function glGetHandleARB(pname:Int) : UInt;    @:native('glLinkProgramARB')
+    static function glLinkProgramARB(programObj:UInt) : Void;    @:native('glUniform1fARB')
+    static function glUniform1fARB(location:Int, v0:Float) : Void;    @:native('glUniform1iARB')
+    static function glUniform1iARB(location:Int, v0:Int) : Void;    @:native('glUniform2fARB')
+    static function glUniform2fARB(location:Int, v0:Float, v1:Float) : Void;    @:native('glUniform2iARB')
+    static function glUniform2iARB(location:Int, v0:Int, v1:Int) : Void;    @:native('glUniform3fARB')
+    static function glUniform3fARB(location:Int, v0:Float, v1:Float, v2:Float) : Void;    @:native('glUniform3iARB')
+    static function glUniform3iARB(location:Int, v0:Int, v1:Int, v2:Int) : Void;    @:native('glUniform4fARB')
+    static function glUniform4fARB(location:Int, v0:Float, v1:Float, v2:Float, v3:Float) : Void;    @:native('glUniform4iARB')
+    static function glUniform4iARB(location:Int, v0:Int, v1:Int, v2:Int, v3:Int) : Void;    @:native('glUseProgramObjectARB')
+    static function glUseProgramObjectARB(programObj:UInt) : Void;    @:native('glValidateProgramARB')
     static function glValidateProgramARB(programObj:UInt) : Void;
 
-
-
-    // static function glGetActiveUniformARB(programObj:UInt, index:UInt, maxLength:Int, length:GLsizei*, *size:Int, *type:Int, *name:GLcharARB) : Void;
-    // static function glGetAttachedObjectsARB(containerObj:UInt, maxCount:Int, count:GLsizei*, *obj:UInt) : Void;
-    // static function glGetInfoLogARB(obj:UInt, maxLength:Int, length:GLsizei*, *infoLog:GLcharARB) : Void;
-    // static function glGetObjectParameterfvARB(obj:UInt, pname:Int, params:GLfloat*) : Void;
-    // static function glGetObjectParameterivARB(obj:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetShaderSourceARB(obj:UInt, maxLength:Int, length:GLsizei*, *source:GLcharARB) : Void;
-    // static function glGetUniformLocationARB(programObj:UInt, name:const GLcharARB*) : Int;
-    // static function glGetUniformfvARB(programObj:UInt, location:Int, params:GLfloat*) : Void;
-    // static function glGetUniformivARB(programObj:UInt, location:Int, params:GLint*) : Void;
-    // static function glShaderSourceARB(shaderObj:UInt, count:Int, string:const GLcharARB **, *length:const GLint) : Void;
-    // static function glUniform1fvARB(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform1ivARB(location:Int, count:Int, value:const GLint*) : Void;
-    // static function glUniform2fvARB(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform2ivARB(location:Int, count:Int, value:const GLint*) : Void;
-    // static function glUniform3fvARB(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform3ivARB(location:Int, count:Int, value:const GLint*) : Void;
-    // static function glUniform4fvARB(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform4ivARB(location:Int, count:Int, value:const GLint*) : Void;
-    // static function glUniformMatrix2fvARB(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glUniformMatrix3fvARB(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glUniformMatrix4fvARB(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-
+    // static function glGetActiveUniformARB(programObj:UInt, index:UInt, maxLength:Int, length:GLsizei*, *size:Int, *type:Int, *name:GLcharARB) : Void;    // static function glGetAttachedObjectsARB(containerObj:UInt, maxCount:Int, count:GLsizei*, *obj:UInt) : Void;    // static function glGetInfoLogARB(obj:UInt, maxLength:Int, length:GLsizei*, *infoLog:GLcharARB) : Void;    // static function glGetObjectParameterfvARB(obj:UInt, pname:Int, params:GLfloat*) : Void;    // static function glGetObjectParameterivARB(obj:UInt, pname:Int, params:GLint*) : Void;    // static function glGetShaderSourceARB(obj:UInt, maxLength:Int, length:GLsizei*, *source:GLcharARB) : Void;    // static function glGetUniformLocationARB(programObj:UInt, name:const GLcharARB*) : Int;    // static function glGetUniformfvARB(programObj:UInt, location:Int, params:GLfloat*) : Void;    // static function glGetUniformivARB(programObj:UInt, location:Int, params:GLint*) : Void;    // static function glShaderSourceARB(shaderObj:UInt, count:Int, string:const GLcharARB **, *length:const GLint) : Void;    // static function glUniform1fvARB(location:Int, count:Int, value:const GLfloat*) : Void;    // static function glUniform1ivARB(location:Int, count:Int, value:const GLint*) : Void;    // static function glUniform2fvARB(location:Int, count:Int, value:const GLfloat*) : Void;    // static function glUniform2ivARB(location:Int, count:Int, value:const GLint*) : Void;    // static function glUniform3fvARB(location:Int, count:Int, value:const GLfloat*) : Void;    // static function glUniform3ivARB(location:Int, count:Int, value:const GLint*) : Void;    // static function glUniform4fvARB(location:Int, count:Int, value:const GLfloat*) : Void;    // static function glUniform4ivARB(location:Int, count:Int, value:const GLint*) : Void;    // static function glUniformMatrix2fvARB(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glUniformMatrix3fvARB(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glUniformMatrix4fvARB(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
 
 //GL_ARB_shader_precision
     inline static var GL_ARB_shader_precision                                         = 1;
@@ -6035,8 +4463,6 @@ extern class GL {
 
 
 
-
-
 //GL_ARB_shader_subroutine
     inline static var GL_ARB_shader_subroutine                                        = 1;
     inline static var GL_ACTIVE_SUBROUTINES                                           = 0x8DE5;
@@ -6053,20 +4479,10 @@ extern class GL {
 
 
     @:native('glGetSubroutineIndex')
-    static function glGetSubroutineIndex(program:UInt, shadertype:Int, name:String) : UInt;
-
-    @:native('glGetSubroutineUniformLocation')
+    static function glGetSubroutineIndex(program:UInt, shadertype:Int, name:String) : UInt;    @:native('glGetSubroutineUniformLocation')
     static function glGetSubroutineUniformLocation(program:UInt, shadertype:Int, name:String) : Int;
 
-
-
-    // static function glGetActiveSubroutineName(program:UInt, shadertype:Int, index:UInt, bufsize:Int, length:GLsizei*, *name:GLchar) : Void;
-    // static function glGetActiveSubroutineUniformName(program:UInt, shadertype:Int, index:UInt, bufsize:Int, length:GLsizei*, *name:GLchar) : Void;
-    // static function glGetActiveSubroutineUniformiv(program:UInt, shadertype:Int, index:UInt, pname:Int, values:GLint*) : Void;
-    // static function glGetProgramStageiv(program:UInt, shadertype:Int, pname:Int, values:GLint*) : Void;
-    // static function glGetUniformSubroutineuiv(shadertype:Int, location:Int, params:GLuint*) : Void;
-    // static function glUniformSubroutinesuiv(shadertype:Int, count:Int, indices:const GLuint*) : Void;
-
+    // static function glGetActiveSubroutineName(program:UInt, shadertype:Int, index:UInt, bufsize:Int, length:GLsizei*, *name:GLchar) : Void;    // static function glGetActiveSubroutineUniformName(program:UInt, shadertype:Int, index:UInt, bufsize:Int, length:GLsizei*, *name:GLchar) : Void;    // static function glGetActiveSubroutineUniformiv(program:UInt, shadertype:Int, index:UInt, pname:Int, values:GLint*) : Void;    // static function glGetProgramStageiv(program:UInt, shadertype:Int, pname:Int, values:GLint*) : Void;    // static function glGetUniformSubroutineuiv(shadertype:Int, location:Int, params:GLuint*) : Void;    // static function glUniformSubroutinesuiv(shadertype:Int, count:Int, indices:const GLuint*) : Void;
 
 //GL_ARB_shader_texture_image_samples
     inline static var GL_ARB_shader_texture_image_samples                             = 1;
@@ -6119,18 +4535,10 @@ extern class GL {
 
 
     @:native('glDeleteNamedStringARB')
-    static function glDeleteNamedStringARB(namelen:Int, name:String) : Void;
-
-    @:native('glIsNamedStringARB')
+    static function glDeleteNamedStringARB(namelen:Int, name:String) : Void;    @:native('glIsNamedStringARB')
     static function glIsNamedStringARB(namelen:Int, name:String) : Bool;
 
-
-
-    // static function glCompileShaderIncludeARB(shader:UInt, count:Int, *path:const GLchar* const, *length:const GLint) : Void;
-    // static function glGetNamedStringARB(namelen:Int, name:String, bufSize:Int, *stringlen:Int, *string:GLchar) : Void;
-    // static function glGetNamedStringivARB(namelen:Int, name:String, pname:Int, *params:Int) : Void;
-    // static function glNamedStringARB(type:Int, namelen:Int, name:String, stringlen:Int, *string:const GLchar) : Void;
-
+    // static function glCompileShaderIncludeARB(shader:UInt, count:Int, *path:const GLchar* const, *length:const GLint) : Void;    // static function glGetNamedStringARB(namelen:Int, name:String, bufSize:Int, *stringlen:Int, *string:GLchar) : Void;    // static function glGetNamedStringivARB(namelen:Int, name:String, pname:Int, *params:Int) : Void;    // static function glNamedStringARB(type:Int, namelen:Int, name:String, stringlen:Int, *string:const GLchar) : Void;
 
 //GL_ARB_shading_language_packing
     inline static var GL_ARB_shading_language_packing                                 = 1;
@@ -6178,7 +4586,6 @@ extern class GL {
 
     // static function glBufferPageCommitmentARB(target:Int, offset:GLintptr, size:GLsizeiptr, commit:Bool) : Void;
 
-
 //GL_ARB_sparse_texture
     inline static var GL_ARB_sparse_texture                                           = 1;
     inline static var GL_VIRTUAL_PAGE_SIZE_X_ARB                                      = 0x9195;
@@ -6197,12 +4604,8 @@ extern class GL {
 
 
     @:native('glTexPageCommitmentARB')
-    static function glTexPageCommitmentARB(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, commit:Bool) : Void;
-
-    @:native('glTexturePageCommitmentEXT')
+    static function glTexPageCommitmentARB(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, commit:Bool) : Void;    @:native('glTexturePageCommitmentEXT')
     static function glTexturePageCommitmentEXT(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, commit:Bool) : Void;
-
-
 
 
 
@@ -6240,14 +4643,7 @@ extern class GL {
 
 
 
-    // static function glClientWaitSync(GLsync:GLsync, flags:Int, timeout:cpp.UInt64) : Int;
-    // static function glDeleteSync(GLsync:GLsync) : Void;
-    // static function glFenceSync(condition:Int, flags:Int) : GLsync;
-    // static function glGetInteger64v(pname:Int, params:GLint64*) : Void;
-    // static function glGetSynciv(GLsync:GLsync, pname:Int, bufSize:Int, length:GLsizei*, *values:Int) : Void;
-    // static function glIsSync(GLsync:GLsync) : Bool;
-    // static function glWaitSync(GLsync:GLsync, flags:Int, timeout:cpp.UInt64) : Void;
-
+    // static function glClientWaitSync(GLsync:GLsync, flags:Int, timeout:cpp.UInt64) : Int;    // static function glDeleteSync(GLsync:GLsync) : Void;    // static function glFenceSync(condition:Int, flags:Int) : GLsync;    // static function glGetInteger64v(pname:Int, params:GLint64*) : Void;    // static function glGetSynciv(GLsync:GLsync, pname:Int, bufSize:Int, length:GLsizei*, *values:Int) : Void;    // static function glIsSync(GLsync:GLsync) : Bool;    // static function glWaitSync(GLsync:GLsync, flags:Int, timeout:cpp.UInt64) : Void;
 
 //GL_ARB_tessellation_shader
     inline static var GL_ARB_tessellation_shader                                      = 1;
@@ -6290,10 +4686,7 @@ extern class GL {
     @:native('glPatchParameteri')
     static function glPatchParameteri(pname:Int, value:Int) : Void;
 
-
-
     // static function glPatchParameterfv(pname:Int, values:const GLfloat*) : Void;
-
 
 //GL_ARB_texture_barrier
     inline static var GL_ARB_texture_barrier                                          = 1;
@@ -6303,8 +4696,6 @@ extern class GL {
 
     @:native('glTextureBarrier')
     static function glTextureBarrier() : Void;
-
-
 
 
 
@@ -6335,8 +4726,6 @@ extern class GL {
 
 
 
-
-
 //GL_ARB_texture_buffer_object_rgb32
     inline static var GL_ARB_texture_buffer_object_rgb32                              = 1;
 
@@ -6358,9 +4747,7 @@ extern class GL {
 
 
 
-    // static function glTexBufferRange(target:Int, internalformat:Int, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;
-    // static function glTextureBufferRangeEXT(texture:UInt, target:Int, internalformat:Int, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;
-
+    // static function glTexBufferRange(target:Int, internalformat:Int, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;    // static function glTextureBufferRangeEXT(texture:UInt, target:Int, internalformat:Int, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;
 
 //GL_ARB_texture_compression
     inline static var GL_ARB_texture_compression                                      = 1;
@@ -6381,14 +4768,7 @@ extern class GL {
 
 
 
-    // static function glCompressedTexImage1DARB(target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTexImage2DARB(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTexImage3DARB(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTexSubImage1DARB(target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTexSubImage2DARB(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTexSubImage3DARB(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glGetCompressedTexImageARB(target:Int, lod:Int, *img:Void) : Void;
-
+    // static function glCompressedTexImage1DARB(target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTexImage2DARB(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTexImage3DARB(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTexSubImage1DARB(target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTexSubImage2DARB(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTexSubImage3DARB(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glGetCompressedTexImageARB(target:Int, lod:Int, *img:Void) : Void;
 
 //GL_ARB_texture_compression_bptc
     inline static var GL_ARB_texture_compression_bptc                                 = 1;
@@ -6614,18 +4994,11 @@ extern class GL {
 
 
     @:native('glSampleMaski')
-    static function glSampleMaski(index:UInt, mask:Int) : Void;
-
-    @:native('glTexImage2DMultisample')
-    static function glTexImage2DMultisample(target:Int, samples:Int, internalformat:Int, width:Int, height:Int, fixedsamplelocations:Bool) : Void;
-
-    @:native('glTexImage3DMultisample')
+    static function glSampleMaski(index:UInt, mask:Int) : Void;    @:native('glTexImage2DMultisample')
+    static function glTexImage2DMultisample(target:Int, samples:Int, internalformat:Int, width:Int, height:Int, fixedsamplelocations:Bool) : Void;    @:native('glTexImage3DMultisample')
     static function glTexImage3DMultisample(target:Int, samples:Int, internalformat:Int, width:Int, height:Int, depth:Int, fixedsamplelocations:Bool) : Void;
 
-
-
     // static function glGetMultisamplefv(pname:Int, index:UInt, val:GLfloat*) : Void;
-
 
 //GL_ARB_texture_non_power_of_two
     inline static var GL_ARB_texture_non_power_of_two                                 = 1;
@@ -6731,24 +5104,12 @@ extern class GL {
 
 
     @:native('glTexStorage1D')
-    static function glTexStorage1D(target:Int, levels:Int, internalformat:Int, width:Int) : Void;
-
-    @:native('glTexStorage2D')
-    static function glTexStorage2D(target:Int, levels:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-    @:native('glTexStorage3D')
-    static function glTexStorage3D(target:Int, levels:Int, internalformat:Int, width:Int, height:Int, depth:Int) : Void;
-
-    @:native('glTextureStorage1DEXT')
-    static function glTextureStorage1DEXT(texture:UInt, target:Int, levels:Int, internalformat:Int, width:Int) : Void;
-
-    @:native('glTextureStorage2DEXT')
-    static function glTextureStorage2DEXT(texture:UInt, target:Int, levels:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-    @:native('glTextureStorage3DEXT')
+    static function glTexStorage1D(target:Int, levels:Int, internalformat:Int, width:Int) : Void;    @:native('glTexStorage2D')
+    static function glTexStorage2D(target:Int, levels:Int, internalformat:Int, width:Int, height:Int) : Void;    @:native('glTexStorage3D')
+    static function glTexStorage3D(target:Int, levels:Int, internalformat:Int, width:Int, height:Int, depth:Int) : Void;    @:native('glTextureStorage1DEXT')
+    static function glTextureStorage1DEXT(texture:UInt, target:Int, levels:Int, internalformat:Int, width:Int) : Void;    @:native('glTextureStorage2DEXT')
+    static function glTextureStorage2DEXT(texture:UInt, target:Int, levels:Int, internalformat:Int, width:Int, height:Int) : Void;    @:native('glTextureStorage3DEXT')
     static function glTextureStorage3DEXT(texture:UInt, target:Int, levels:Int, internalformat:Int, width:Int, height:Int, depth:Int) : Void;
-
-
 
 
 
@@ -6759,18 +5120,10 @@ extern class GL {
 
 
     @:native('glTexStorage2DMultisample')
-    static function glTexStorage2DMultisample(target:Int, samples:Int, internalformat:Int, width:Int, height:Int, fixedsamplelocations:Bool) : Void;
-
-    @:native('glTexStorage3DMultisample')
-    static function glTexStorage3DMultisample(target:Int, samples:Int, internalformat:Int, width:Int, height:Int, depth:Int, fixedsamplelocations:Bool) : Void;
-
-    @:native('glTextureStorage2DMultisampleEXT')
-    static function glTextureStorage2DMultisampleEXT(texture:UInt, target:Int, samples:Int, internalformat:Int, width:Int, height:Int, fixedsamplelocations:Bool) : Void;
-
-    @:native('glTextureStorage3DMultisampleEXT')
+    static function glTexStorage2DMultisample(target:Int, samples:Int, internalformat:Int, width:Int, height:Int, fixedsamplelocations:Bool) : Void;    @:native('glTexStorage3DMultisample')
+    static function glTexStorage3DMultisample(target:Int, samples:Int, internalformat:Int, width:Int, height:Int, depth:Int, fixedsamplelocations:Bool) : Void;    @:native('glTextureStorage2DMultisampleEXT')
+    static function glTextureStorage2DMultisampleEXT(texture:UInt, target:Int, samples:Int, internalformat:Int, width:Int, height:Int, fixedsamplelocations:Bool) : Void;    @:native('glTextureStorage3DMultisampleEXT')
     static function glTextureStorage3DMultisampleEXT(texture:UInt, target:Int, samples:Int, internalformat:Int, width:Int, height:Int, depth:Int, fixedsamplelocations:Bool) : Void;
-
-
 
 
 
@@ -6804,8 +5157,6 @@ extern class GL {
 
 
 
-
-
 //GL_ARB_timer_query
     inline static var GL_ARB_timer_query                                              = 1;
     inline static var GL_TIME_ELAPSED                                                 = 0x88BF;
@@ -6817,11 +5168,7 @@ extern class GL {
     @:native('glQueryCounter')
     static function glQueryCounter(id:UInt, target:Int) : Void;
 
-
-
-    // static function glGetQueryObjecti64v(id:UInt, pname:Int, params:GLint64*) : Void;
-    // static function glGetQueryObjectui64v(id:UInt, pname:Int, params:GLuint64*) : Void;
-
+    // static function glGetQueryObjecti64v(id:UInt, pname:Int, params:GLint64*) : Void;    // static function glGetQueryObjectui64v(id:UInt, pname:Int, params:GLuint64*) : Void;
 
 //GL_ARB_transform_feedback2
     inline static var GL_ARB_transform_feedback2                                      = 1;
@@ -6834,25 +5181,13 @@ extern class GL {
 
 
     @:native('glBindTransformFeedback')
-    static function glBindTransformFeedback(target:Int, id:UInt) : Void;
-
-    @:native('glDrawTransformFeedback')
-    static function glDrawTransformFeedback(mode:Int, id:UInt) : Void;
-
-    @:native('glIsTransformFeedback')
-    static function glIsTransformFeedback(id:UInt) : Bool;
-
-    @:native('glPauseTransformFeedback')
-    static function glPauseTransformFeedback() : Void;
-
-    @:native('glResumeTransformFeedback')
+    static function glBindTransformFeedback(target:Int, id:UInt) : Void;    @:native('glDrawTransformFeedback')
+    static function glDrawTransformFeedback(mode:Int, id:UInt) : Void;    @:native('glIsTransformFeedback')
+    static function glIsTransformFeedback(id:UInt) : Bool;    @:native('glPauseTransformFeedback')
+    static function glPauseTransformFeedback() : Void;    @:native('glResumeTransformFeedback')
     static function glResumeTransformFeedback() : Void;
 
-
-
-    // static function glDeleteTransformFeedbacks(n:Int, ids:const GLuint*) : Void;
-    // static function glGenTransformFeedbacks(n:Int, ids:GLuint*) : Void;
-
+    // static function glDeleteTransformFeedbacks(n:Int, ids:const GLuint*) : Void;    // static function glGenTransformFeedbacks(n:Int, ids:GLuint*) : Void;
 
 //GL_ARB_transform_feedback3
     inline static var GL_ARB_transform_feedback3                                      = 1;
@@ -6862,18 +5197,11 @@ extern class GL {
 
 
     @:native('glBeginQueryIndexed')
-    static function glBeginQueryIndexed(target:Int, index:UInt, id:UInt) : Void;
-
-    @:native('glDrawTransformFeedbackStream')
-    static function glDrawTransformFeedbackStream(mode:Int, id:UInt, stream:UInt) : Void;
-
-    @:native('glEndQueryIndexed')
+    static function glBeginQueryIndexed(target:Int, index:UInt, id:UInt) : Void;    @:native('glDrawTransformFeedbackStream')
+    static function glDrawTransformFeedbackStream(mode:Int, id:UInt, stream:UInt) : Void;    @:native('glEndQueryIndexed')
     static function glEndQueryIndexed(target:Int, index:UInt) : Void;
 
-
-
     // static function glGetQueryIndexediv(target:Int, index:UInt, pname:Int, params:GLint*) : Void;
-
 
 //GL_ARB_transform_feedback_instanced
     inline static var GL_ARB_transform_feedback_instanced                             = 1;
@@ -6882,12 +5210,8 @@ extern class GL {
 
 
     @:native('glDrawTransformFeedbackInstanced')
-    static function glDrawTransformFeedbackInstanced(mode:Int, id:UInt, primcount:Int) : Void;
-
-    @:native('glDrawTransformFeedbackStreamInstanced')
+    static function glDrawTransformFeedbackInstanced(mode:Int, id:UInt, primcount:Int) : Void;    @:native('glDrawTransformFeedbackStreamInstanced')
     static function glDrawTransformFeedbackStreamInstanced(mode:Int, id:UInt, stream:UInt, primcount:Int) : Void;
-
-
 
 
 
@@ -6915,11 +5239,7 @@ extern class GL {
 
 
 
-    // static function glLoadTransposeMatrixdARB(m:Array<Float>) : Void;
-    // static function glLoadTransposeMatrixfARB(m:Array<Float>) : Void;
-    // static function glMultTransposeMatrixdARB(m:Array<Float>) : Void;
-    // static function glMultTransposeMatrixfARB(m:Array<Float>) : Void;
-
+    // static function glLoadTransposeMatrixdARB(m:Array<Float>) : Void;    // static function glLoadTransposeMatrixfARB(m:Array<Float>) : Void;    // static function glMultTransposeMatrixdARB(m:Array<Float>) : Void;    // static function glMultTransposeMatrixfARB(m:Array<Float>) : Void;
 
 //GL_ARB_uniform_buffer_object
     inline static var GL_ARB_uniform_buffer_object                                    = 1;
@@ -6961,24 +5281,11 @@ extern class GL {
 
 
     @:native('glBindBufferBase')
-    static function glBindBufferBase(target:Int, index:UInt, buffer:UInt) : Void;
-
-    @:native('glGetUniformBlockIndex')
-    static function glGetUniformBlockIndex(program:UInt, uniformBlockName:String) : UInt;
-
-    @:native('glUniformBlockBinding')
+    static function glBindBufferBase(target:Int, index:UInt, buffer:UInt) : Void;    @:native('glGetUniformBlockIndex')
+    static function glGetUniformBlockIndex(program:UInt, uniformBlockName:String) : UInt;    @:native('glUniformBlockBinding')
     static function glUniformBlockBinding(program:UInt, uniformBlockIndex:UInt, uniformBlockBinding:UInt) : Void;
 
-
-
-    // static function glBindBufferRange(target:Int, index:UInt, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;
-    // static function glGetActiveUniformBlockName(program:UInt, uniformBlockIndex:UInt, bufSize:Int, length:GLsizei*, uniformBlockName:String) : Void;
-    // static function glGetActiveUniformBlockiv(program:UInt, uniformBlockIndex:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetActiveUniformName(program:UInt, uniformIndex:UInt, bufSize:Int, length:GLsizei*, uniformName:String) : Void;
-    // static function glGetActiveUniformsiv(program:UInt, uniformCount:Int, uniformIndices:const GLuint*, pname:Int, params:GLint*) : Void;
-    // static function glGetIntegeri_v(target:Int, index:UInt, data:GLint*) : Void;
-    // static function glGetUniformIndices(program:UInt, uniformCount:Int, uniformNames:const GLchar* const *, uniformIndices:GLuint*) : Void;
-
+    // static function glBindBufferRange(target:Int, index:UInt, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;    // static function glGetActiveUniformBlockName(program:UInt, uniformBlockIndex:UInt, bufSize:Int, length:GLsizei*, uniformBlockName:String) : Void;    // static function glGetActiveUniformBlockiv(program:UInt, uniformBlockIndex:UInt, pname:Int, params:GLint*) : Void;    // static function glGetActiveUniformName(program:UInt, uniformIndex:UInt, bufSize:Int, length:GLsizei*, uniformName:String) : Void;    // static function glGetActiveUniformsiv(program:UInt, uniformCount:Int, uniformIndices:const GLuint*, pname:Int, params:GLint*) : Void;    // static function glGetIntegeri_v(target:Int, index:UInt, data:GLint*) : Void;    // static function glGetUniformIndices(program:UInt, uniformCount:Int, uniformNames:const GLchar* const *, uniformIndices:GLuint*) : Void;
 
 //GL_ARB_vertex_array_bgra
     inline static var GL_ARB_vertex_array_bgra                                        = 1;
@@ -6998,16 +5305,10 @@ extern class GL {
 
 
     @:native('glBindVertexArray')
-    static function glBindVertexArray(array:UInt) : Void;
-
-    @:native('glIsVertexArray')
+    static function glBindVertexArray(array:UInt) : Void;    @:native('glIsVertexArray')
     static function glIsVertexArray(array:UInt) : Bool;
 
-
-
-    // static function glDeleteVertexArrays(n:Int, arrays:const GLuint*) : Void;
-    // static function glGenVertexArrays(n:Int, arrays:GLuint*) : Void;
-
+    // static function glDeleteVertexArrays(n:Int, arrays:const GLuint*) : Void;    // static function glGenVertexArrays(n:Int, arrays:GLuint*) : Void;
 
 //GL_ARB_vertex_attrib_64bit
     inline static var GL_ARB_vertex_attrib_64bit                                      = 1;
@@ -7016,26 +5317,12 @@ extern class GL {
 
 
     @:native('glVertexAttribL1d')
-    static function glVertexAttribL1d(index:UInt, x:Float) : Void;
-
-    @:native('glVertexAttribL2d')
-    static function glVertexAttribL2d(index:UInt, x:Float, y:Float) : Void;
-
-    @:native('glVertexAttribL3d')
-    static function glVertexAttribL3d(index:UInt, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glVertexAttribL4d')
+    static function glVertexAttribL1d(index:UInt, x:Float) : Void;    @:native('glVertexAttribL2d')
+    static function glVertexAttribL2d(index:UInt, x:Float, y:Float) : Void;    @:native('glVertexAttribL3d')
+    static function glVertexAttribL3d(index:UInt, x:Float, y:Float, z:Float) : Void;    @:native('glVertexAttribL4d')
     static function glVertexAttribL4d(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
 
-
-
-    // static function glGetVertexAttribLdv(index:UInt, pname:Int, params:GLdouble*) : Void;
-    // static function glVertexAttribL1dv(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttribL2dv(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttribL3dv(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttribL4dv(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttribLPointer(index:UInt, size:Int, type:Int, stride:Int, pointer:const void*) : Void;
-
+    // static function glGetVertexAttribLdv(index:UInt, pname:Int, params:GLdouble*) : Void;    // static function glVertexAttribL1dv(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttribL2dv(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttribL3dv(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttribL4dv(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttribLPointer(index:UInt, size:Int, type:Int, stride:Int, pointer:const void*) : Void;
 
 //GL_ARB_vertex_attrib_binding
     inline static var GL_ARB_vertex_attrib_binding                                    = 1;
@@ -7052,40 +5339,18 @@ extern class GL {
 
 
     @:native('glVertexArrayVertexAttribBindingEXT')
-    static function glVertexArrayVertexAttribBindingEXT(vaobj:UInt, attribindex:UInt, bindingindex:UInt) : Void;
-
-    @:native('glVertexArrayVertexAttribFormatEXT')
-    static function glVertexArrayVertexAttribFormatEXT(vaobj:UInt, attribindex:UInt, size:Int, type:Int, normalized:Bool, relativeoffset:UInt) : Void;
-
-    @:native('glVertexArrayVertexAttribIFormatEXT')
-    static function glVertexArrayVertexAttribIFormatEXT(vaobj:UInt, attribindex:UInt, size:Int, type:Int, relativeoffset:UInt) : Void;
-
-    @:native('glVertexArrayVertexAttribLFormatEXT')
-    static function glVertexArrayVertexAttribLFormatEXT(vaobj:UInt, attribindex:UInt, size:Int, type:Int, relativeoffset:UInt) : Void;
-
-    @:native('glVertexArrayVertexBindingDivisorEXT')
-    static function glVertexArrayVertexBindingDivisorEXT(vaobj:UInt, bindingindex:UInt, divisor:UInt) : Void;
-
-    @:native('glVertexAttribBinding')
-    static function glVertexAttribBinding(attribindex:UInt, bindingindex:UInt) : Void;
-
-    @:native('glVertexAttribFormat')
-    static function glVertexAttribFormat(attribindex:UInt, size:Int, type:Int, normalized:Bool, relativeoffset:UInt) : Void;
-
-    @:native('glVertexAttribIFormat')
-    static function glVertexAttribIFormat(attribindex:UInt, size:Int, type:Int, relativeoffset:UInt) : Void;
-
-    @:native('glVertexAttribLFormat')
-    static function glVertexAttribLFormat(attribindex:UInt, size:Int, type:Int, relativeoffset:UInt) : Void;
-
-    @:native('glVertexBindingDivisor')
+    static function glVertexArrayVertexAttribBindingEXT(vaobj:UInt, attribindex:UInt, bindingindex:UInt) : Void;    @:native('glVertexArrayVertexAttribFormatEXT')
+    static function glVertexArrayVertexAttribFormatEXT(vaobj:UInt, attribindex:UInt, size:Int, type:Int, normalized:Bool, relativeoffset:UInt) : Void;    @:native('glVertexArrayVertexAttribIFormatEXT')
+    static function glVertexArrayVertexAttribIFormatEXT(vaobj:UInt, attribindex:UInt, size:Int, type:Int, relativeoffset:UInt) : Void;    @:native('glVertexArrayVertexAttribLFormatEXT')
+    static function glVertexArrayVertexAttribLFormatEXT(vaobj:UInt, attribindex:UInt, size:Int, type:Int, relativeoffset:UInt) : Void;    @:native('glVertexArrayVertexBindingDivisorEXT')
+    static function glVertexArrayVertexBindingDivisorEXT(vaobj:UInt, bindingindex:UInt, divisor:UInt) : Void;    @:native('glVertexAttribBinding')
+    static function glVertexAttribBinding(attribindex:UInt, bindingindex:UInt) : Void;    @:native('glVertexAttribFormat')
+    static function glVertexAttribFormat(attribindex:UInt, size:Int, type:Int, normalized:Bool, relativeoffset:UInt) : Void;    @:native('glVertexAttribIFormat')
+    static function glVertexAttribIFormat(attribindex:UInt, size:Int, type:Int, relativeoffset:UInt) : Void;    @:native('glVertexAttribLFormat')
+    static function glVertexAttribLFormat(attribindex:UInt, size:Int, type:Int, relativeoffset:UInt) : Void;    @:native('glVertexBindingDivisor')
     static function glVertexBindingDivisor(bindingindex:UInt, divisor:UInt) : Void;
 
-
-
-    // static function glBindVertexBuffer(bindingindex:UInt, buffer:UInt, offset:GLintptr, stride:Int) : Void;
-    // static function glVertexArrayBindVertexBufferEXT(vaobj:UInt, bindingindex:UInt, buffer:UInt, offset:GLintptr, stride:Int) : Void;
-
+    // static function glBindVertexBuffer(bindingindex:UInt, buffer:UInt, offset:GLintptr, stride:Int) : Void;    // static function glVertexArrayBindVertexBufferEXT(vaobj:UInt, bindingindex:UInt, buffer:UInt, offset:GLintptr, stride:Int) : Void;
 
 //GL_ARB_vertex_blend
     inline static var GL_ARB_vertex_blend                                             = 1;
@@ -7138,18 +5403,7 @@ extern class GL {
     @:native('glVertexBlendARB')
     static function glVertexBlendARB(count:Int) : Void;
 
-
-
-    // static function glWeightPointerARB(size:Int, type:Int, stride:Int, *pointer:Void) : Void;
-    // static function glWeightbvARB(size:Int, *weights:String) : Void;
-    // static function glWeightdvARB(size:Int, *weights:Float) : Void;
-    // static function glWeightfvARB(size:Int, *weights:Float) : Void;
-    // static function glWeightivARB(size:Int, *weights:Int) : Void;
-    // static function glWeightsvARB(size:Int, *weights:Int) : Void;
-    // static function glWeightubvARB(size:Int, *weights:String) : Void;
-    // static function glWeightuivARB(size:Int, *weights:UInt) : Void;
-    // static function glWeightusvARB(size:Int, *weights:UInt) : Void;
-
+    // static function glWeightPointerARB(size:Int, type:Int, stride:Int, *pointer:Void) : Void;    // static function glWeightbvARB(size:Int, *weights:String) : Void;    // static function glWeightdvARB(size:Int, *weights:Float) : Void;    // static function glWeightfvARB(size:Int, *weights:Float) : Void;    // static function glWeightivARB(size:Int, *weights:Int) : Void;    // static function glWeightsvARB(size:Int, *weights:Int) : Void;    // static function glWeightubvARB(size:Int, *weights:String) : Void;    // static function glWeightuivARB(size:Int, *weights:UInt) : Void;    // static function glWeightusvARB(size:Int, *weights:UInt) : Void;
 
 //GL_ARB_vertex_buffer_object
     inline static var GL_ARB_vertex_buffer_object                                     = 1;
@@ -7189,25 +5443,11 @@ extern class GL {
 
 
     @:native('glBindBufferARB')
-    static function glBindBufferARB(target:Int, buffer:UInt) : Void;
-
-    @:native('glIsBufferARB')
-    static function glIsBufferARB(buffer:UInt) : Bool;
-
-    @:native('glUnmapBufferARB')
+    static function glBindBufferARB(target:Int, buffer:UInt) : Void;    @:native('glIsBufferARB')
+    static function glIsBufferARB(buffer:UInt) : Bool;    @:native('glUnmapBufferARB')
     static function glUnmapBufferARB(target:Int) : Bool;
 
-
-
-    // static function glBufferDataARB(target:Int, size:GLsizeiptrARB, *data:const void, usage:Int) : Void;
-    // static function glBufferSubDataARB(target:Int, offset:GLintptrARB, size:GLsizeiptrARB, *data:const void) : Void;
-    // static function glDeleteBuffersARB(n:Int, buffers:const GLuint*) : Void;
-    // static function glGenBuffersARB(n:Int, buffers:GLuint*) : Void;
-    // static function glGetBufferParameterivARB(target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetBufferPointervARB(target:Int, pname:Int, params:void**) : Void;
-    // static function glGetBufferSubDataARB(target:Int, offset:GLintptrARB, size:GLsizeiptrARB, *data:Void) : Void;
-    // static function glMapBufferARB(target:Int, access:Int) : void *;
-
+    // static function glBufferDataARB(target:Int, size:GLsizeiptrARB, *data:const void, usage:Int) : Void;    // static function glBufferSubDataARB(target:Int, offset:GLintptrARB, size:GLsizeiptrARB, *data:const void) : Void;    // static function glDeleteBuffersARB(n:Int, buffers:const GLuint*) : Void;    // static function glGenBuffersARB(n:Int, buffers:GLuint*) : Void;    // static function glGetBufferParameterivARB(target:Int, pname:Int, params:GLint*) : Void;    // static function glGetBufferPointervARB(target:Int, pname:Int, params:void**) : Void;    // static function glGetBufferSubDataARB(target:Int, offset:GLintptrARB, size:GLsizeiptrARB, *data:Void) : Void;    // static function glMapBufferARB(target:Int, access:Int) : void *;
 
 //GL_ARB_vertex_program
     inline static var GL_ARB_vertex_program                                           = 1;
@@ -7295,112 +5535,29 @@ extern class GL {
 
 
     @:native('glBindProgramARB')
-    static function glBindProgramARB(target:Int, program:UInt) : Void;
-
-    @:native('glDisableVertexAttribArrayARB')
-    static function glDisableVertexAttribArrayARB(index:UInt) : Void;
-
-    @:native('glEnableVertexAttribArrayARB')
-    static function glEnableVertexAttribArrayARB(index:UInt) : Void;
-
-    @:native('glIsProgramARB')
-    static function glIsProgramARB(program:UInt) : Bool;
-
-    @:native('glProgramEnvParameter4dARB')
-    static function glProgramEnvParameter4dARB(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glProgramEnvParameter4fARB')
-    static function glProgramEnvParameter4fARB(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glProgramLocalParameter4dARB')
-    static function glProgramLocalParameter4dARB(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glProgramLocalParameter4fARB')
-    static function glProgramLocalParameter4fARB(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glVertexAttrib1dARB')
-    static function glVertexAttrib1dARB(index:UInt, x:Float) : Void;
-
-    @:native('glVertexAttrib1fARB')
-    static function glVertexAttrib1fARB(index:UInt, x:Float) : Void;
-
-    @:native('glVertexAttrib1sARB')
-    static function glVertexAttrib1sARB(index:UInt, x:Int) : Void;
-
-    @:native('glVertexAttrib2dARB')
-    static function glVertexAttrib2dARB(index:UInt, x:Float, y:Float) : Void;
-
-    @:native('glVertexAttrib2fARB')
-    static function glVertexAttrib2fARB(index:UInt, x:Float, y:Float) : Void;
-
-    @:native('glVertexAttrib2sARB')
-    static function glVertexAttrib2sARB(index:UInt, x:Int, y:Int) : Void;
-
-    @:native('glVertexAttrib3dARB')
-    static function glVertexAttrib3dARB(index:UInt, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glVertexAttrib3fARB')
-    static function glVertexAttrib3fARB(index:UInt, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glVertexAttrib3sARB')
-    static function glVertexAttrib3sARB(index:UInt, x:Int, y:Int, z:Int) : Void;
-
-    @:native('glVertexAttrib4NubARB')
-    static function glVertexAttrib4NubARB(index:UInt, x:String, y:String, z:String, w:String) : Void;
-
-    @:native('glVertexAttrib4dARB')
-    static function glVertexAttrib4dARB(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glVertexAttrib4fARB')
-    static function glVertexAttrib4fARB(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glVertexAttrib4sARB')
+    static function glBindProgramARB(target:Int, program:UInt) : Void;    @:native('glDisableVertexAttribArrayARB')
+    static function glDisableVertexAttribArrayARB(index:UInt) : Void;    @:native('glEnableVertexAttribArrayARB')
+    static function glEnableVertexAttribArrayARB(index:UInt) : Void;    @:native('glIsProgramARB')
+    static function glIsProgramARB(program:UInt) : Bool;    @:native('glProgramEnvParameter4dARB')
+    static function glProgramEnvParameter4dARB(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glProgramEnvParameter4fARB')
+    static function glProgramEnvParameter4fARB(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glProgramLocalParameter4dARB')
+    static function glProgramLocalParameter4dARB(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glProgramLocalParameter4fARB')
+    static function glProgramLocalParameter4fARB(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glVertexAttrib1dARB')
+    static function glVertexAttrib1dARB(index:UInt, x:Float) : Void;    @:native('glVertexAttrib1fARB')
+    static function glVertexAttrib1fARB(index:UInt, x:Float) : Void;    @:native('glVertexAttrib1sARB')
+    static function glVertexAttrib1sARB(index:UInt, x:Int) : Void;    @:native('glVertexAttrib2dARB')
+    static function glVertexAttrib2dARB(index:UInt, x:Float, y:Float) : Void;    @:native('glVertexAttrib2fARB')
+    static function glVertexAttrib2fARB(index:UInt, x:Float, y:Float) : Void;    @:native('glVertexAttrib2sARB')
+    static function glVertexAttrib2sARB(index:UInt, x:Int, y:Int) : Void;    @:native('glVertexAttrib3dARB')
+    static function glVertexAttrib3dARB(index:UInt, x:Float, y:Float, z:Float) : Void;    @:native('glVertexAttrib3fARB')
+    static function glVertexAttrib3fARB(index:UInt, x:Float, y:Float, z:Float) : Void;    @:native('glVertexAttrib3sARB')
+    static function glVertexAttrib3sARB(index:UInt, x:Int, y:Int, z:Int) : Void;    @:native('glVertexAttrib4NubARB')
+    static function glVertexAttrib4NubARB(index:UInt, x:String, y:String, z:String, w:String) : Void;    @:native('glVertexAttrib4dARB')
+    static function glVertexAttrib4dARB(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glVertexAttrib4fARB')
+    static function glVertexAttrib4fARB(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glVertexAttrib4sARB')
     static function glVertexAttrib4sARB(index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
 
-
-
-    // static function glDeleteProgramsARB(n:Int, programs:const GLuint*) : Void;
-    // static function glGenProgramsARB(n:Int, programs:GLuint*) : Void;
-    // static function glGetProgramEnvParameterdvARB(target:Int, index:UInt, params:GLdouble*) : Void;
-    // static function glGetProgramEnvParameterfvARB(target:Int, index:UInt, params:GLfloat*) : Void;
-    // static function glGetProgramLocalParameterdvARB(target:Int, index:UInt, params:GLdouble*) : Void;
-    // static function glGetProgramLocalParameterfvARB(target:Int, index:UInt, params:GLfloat*) : Void;
-    // static function glGetProgramStringARB(target:Int, pname:Int, *string:Void) : Void;
-    // static function glGetProgramivARB(target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetVertexAttribPointervARB(index:UInt, pname:Int, pointer:void**) : Void;
-    // static function glGetVertexAttribdvARB(index:UInt, pname:Int, params:GLdouble*) : Void;
-    // static function glGetVertexAttribfvARB(index:UInt, pname:Int, params:GLfloat*) : Void;
-    // static function glGetVertexAttribivARB(index:UInt, pname:Int, params:GLint*) : Void;
-    // static function glProgramEnvParameter4dvARB(target:Int, index:UInt, params:const GLdouble*) : Void;
-    // static function glProgramEnvParameter4fvARB(target:Int, index:UInt, params:const GLfloat*) : Void;
-    // static function glProgramLocalParameter4dvARB(target:Int, index:UInt, params:const GLdouble*) : Void;
-    // static function glProgramLocalParameter4fvARB(target:Int, index:UInt, params:const GLfloat*) : Void;
-    // static function glProgramStringARB(target:Int, format:Int, len:Int, *string:const void) : Void;
-    // static function glVertexAttrib1dvARB(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttrib1fvARB(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib1svARB(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib2dvARB(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttrib2fvARB(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib2svARB(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib3dvARB(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttrib3fvARB(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib3svARB(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib4NbvARB(index:UInt, v:const GLbyte*) : Void;
-    // static function glVertexAttrib4NivARB(index:UInt, v:const GLint*) : Void;
-    // static function glVertexAttrib4NsvARB(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib4NubvARB(index:UInt, v:const GLubyte*) : Void;
-    // static function glVertexAttrib4NuivARB(index:UInt, v:const GLuint*) : Void;
-    // static function glVertexAttrib4NusvARB(index:UInt, v:const GLushort*) : Void;
-    // static function glVertexAttrib4bvARB(index:UInt, v:const GLbyte*) : Void;
-    // static function glVertexAttrib4dvARB(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttrib4fvARB(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib4ivARB(index:UInt, v:const GLint*) : Void;
-    // static function glVertexAttrib4svARB(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib4ubvARB(index:UInt, v:const GLubyte*) : Void;
-    // static function glVertexAttrib4uivARB(index:UInt, v:const GLuint*) : Void;
-    // static function glVertexAttrib4usvARB(index:UInt, v:const GLushort*) : Void;
-    // static function glVertexAttribPointerARB(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, *pointer:const void) : Void;
-
+    // static function glDeleteProgramsARB(n:Int, programs:const GLuint*) : Void;    // static function glGenProgramsARB(n:Int, programs:GLuint*) : Void;    // static function glGetProgramEnvParameterdvARB(target:Int, index:UInt, params:GLdouble*) : Void;    // static function glGetProgramEnvParameterfvARB(target:Int, index:UInt, params:GLfloat*) : Void;    // static function glGetProgramLocalParameterdvARB(target:Int, index:UInt, params:GLdouble*) : Void;    // static function glGetProgramLocalParameterfvARB(target:Int, index:UInt, params:GLfloat*) : Void;    // static function glGetProgramStringARB(target:Int, pname:Int, *string:Void) : Void;    // static function glGetProgramivARB(target:Int, pname:Int, params:GLint*) : Void;    // static function glGetVertexAttribPointervARB(index:UInt, pname:Int, pointer:void**) : Void;    // static function glGetVertexAttribdvARB(index:UInt, pname:Int, params:GLdouble*) : Void;    // static function glGetVertexAttribfvARB(index:UInt, pname:Int, params:GLfloat*) : Void;    // static function glGetVertexAttribivARB(index:UInt, pname:Int, params:GLint*) : Void;    // static function glProgramEnvParameter4dvARB(target:Int, index:UInt, params:const GLdouble*) : Void;    // static function glProgramEnvParameter4fvARB(target:Int, index:UInt, params:const GLfloat*) : Void;    // static function glProgramLocalParameter4dvARB(target:Int, index:UInt, params:const GLdouble*) : Void;    // static function glProgramLocalParameter4fvARB(target:Int, index:UInt, params:const GLfloat*) : Void;    // static function glProgramStringARB(target:Int, format:Int, len:Int, *string:const void) : Void;    // static function glVertexAttrib1dvARB(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttrib1fvARB(index:UInt, v:const GLfloat*) : Void;    // static function glVertexAttrib1svARB(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib2dvARB(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttrib2fvARB(index:UInt, v:const GLfloat*) : Void;    // static function glVertexAttrib2svARB(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib3dvARB(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttrib3fvARB(index:UInt, v:const GLfloat*) : Void;    // static function glVertexAttrib3svARB(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib4NbvARB(index:UInt, v:const GLbyte*) : Void;    // static function glVertexAttrib4NivARB(index:UInt, v:const GLint*) : Void;    // static function glVertexAttrib4NsvARB(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib4NubvARB(index:UInt, v:const GLubyte*) : Void;    // static function glVertexAttrib4NuivARB(index:UInt, v:const GLuint*) : Void;    // static function glVertexAttrib4NusvARB(index:UInt, v:const GLushort*) : Void;    // static function glVertexAttrib4bvARB(index:UInt, v:const GLbyte*) : Void;    // static function glVertexAttrib4dvARB(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttrib4fvARB(index:UInt, v:const GLfloat*) : Void;    // static function glVertexAttrib4ivARB(index:UInt, v:const GLint*) : Void;    // static function glVertexAttrib4svARB(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib4ubvARB(index:UInt, v:const GLubyte*) : Void;    // static function glVertexAttrib4uivARB(index:UInt, v:const GLuint*) : Void;    // static function glVertexAttrib4usvARB(index:UInt, v:const GLushort*) : Void;    // static function glVertexAttribPointerARB(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, *pointer:const void) : Void;
 
 //GL_ARB_vertex_shader
     inline static var GL_ARB_vertex_shader                                            = 1;
@@ -7417,10 +5574,7 @@ extern class GL {
 
 
 
-    // static function glBindAttribLocationARB(programObj:UInt, index:UInt, name:const GLcharARB*) : Void;
-    // static function glGetActiveAttribARB(programObj:UInt, index:UInt, maxLength:Int, length:GLsizei*, *size:Int, *type:Int, *name:GLcharARB) : Void;
-    // static function glGetAttribLocationARB(programObj:UInt, name:const GLcharARB*) : Int;
-
+    // static function glBindAttribLocationARB(programObj:UInt, index:UInt, name:const GLcharARB*) : Void;    // static function glGetActiveAttribARB(programObj:UInt, index:UInt, maxLength:Int, length:GLsizei*, *size:Int, *type:Int, *name:GLcharARB) : Void;    // static function glGetAttribLocationARB(programObj:UInt, name:const GLcharARB*) : Int;
 
 //GL_ARB_vertex_type_10f_11f_11f_rev
     inline static var GL_ARB_vertex_type_10f_11f_11f_rev                              = 1;
@@ -7441,84 +5595,27 @@ extern class GL {
 
 
     @:native('glColorP3ui')
-    static function glColorP3ui(type:Int, color:UInt) : Void;
-
-    @:native('glColorP4ui')
-    static function glColorP4ui(type:Int, color:UInt) : Void;
-
-    @:native('glMultiTexCoordP1ui')
-    static function glMultiTexCoordP1ui(texture:Int, type:Int, coords:UInt) : Void;
-
-    @:native('glMultiTexCoordP2ui')
-    static function glMultiTexCoordP2ui(texture:Int, type:Int, coords:UInt) : Void;
-
-    @:native('glMultiTexCoordP3ui')
-    static function glMultiTexCoordP3ui(texture:Int, type:Int, coords:UInt) : Void;
-
-    @:native('glMultiTexCoordP4ui')
-    static function glMultiTexCoordP4ui(texture:Int, type:Int, coords:UInt) : Void;
-
-    @:native('glNormalP3ui')
-    static function glNormalP3ui(type:Int, coords:UInt) : Void;
-
-    @:native('glSecondaryColorP3ui')
-    static function glSecondaryColorP3ui(type:Int, color:UInt) : Void;
-
-    @:native('glTexCoordP1ui')
-    static function glTexCoordP1ui(type:Int, coords:UInt) : Void;
-
-    @:native('glTexCoordP2ui')
-    static function glTexCoordP2ui(type:Int, coords:UInt) : Void;
-
-    @:native('glTexCoordP3ui')
-    static function glTexCoordP3ui(type:Int, coords:UInt) : Void;
-
-    @:native('glTexCoordP4ui')
-    static function glTexCoordP4ui(type:Int, coords:UInt) : Void;
-
-    @:native('glVertexAttribP1ui')
-    static function glVertexAttribP1ui(index:UInt, type:Int, normalized:Bool, value:UInt) : Void;
-
-    @:native('glVertexAttribP2ui')
-    static function glVertexAttribP2ui(index:UInt, type:Int, normalized:Bool, value:UInt) : Void;
-
-    @:native('glVertexAttribP3ui')
-    static function glVertexAttribP3ui(index:UInt, type:Int, normalized:Bool, value:UInt) : Void;
-
-    @:native('glVertexAttribP4ui')
-    static function glVertexAttribP4ui(index:UInt, type:Int, normalized:Bool, value:UInt) : Void;
-
-    @:native('glVertexP2ui')
-    static function glVertexP2ui(type:Int, value:UInt) : Void;
-
-    @:native('glVertexP3ui')
-    static function glVertexP3ui(type:Int, value:UInt) : Void;
-
-    @:native('glVertexP4ui')
+    static function glColorP3ui(type:Int, color:UInt) : Void;    @:native('glColorP4ui')
+    static function glColorP4ui(type:Int, color:UInt) : Void;    @:native('glMultiTexCoordP1ui')
+    static function glMultiTexCoordP1ui(texture:Int, type:Int, coords:UInt) : Void;    @:native('glMultiTexCoordP2ui')
+    static function glMultiTexCoordP2ui(texture:Int, type:Int, coords:UInt) : Void;    @:native('glMultiTexCoordP3ui')
+    static function glMultiTexCoordP3ui(texture:Int, type:Int, coords:UInt) : Void;    @:native('glMultiTexCoordP4ui')
+    static function glMultiTexCoordP4ui(texture:Int, type:Int, coords:UInt) : Void;    @:native('glNormalP3ui')
+    static function glNormalP3ui(type:Int, coords:UInt) : Void;    @:native('glSecondaryColorP3ui')
+    static function glSecondaryColorP3ui(type:Int, color:UInt) : Void;    @:native('glTexCoordP1ui')
+    static function glTexCoordP1ui(type:Int, coords:UInt) : Void;    @:native('glTexCoordP2ui')
+    static function glTexCoordP2ui(type:Int, coords:UInt) : Void;    @:native('glTexCoordP3ui')
+    static function glTexCoordP3ui(type:Int, coords:UInt) : Void;    @:native('glTexCoordP4ui')
+    static function glTexCoordP4ui(type:Int, coords:UInt) : Void;    @:native('glVertexAttribP1ui')
+    static function glVertexAttribP1ui(index:UInt, type:Int, normalized:Bool, value:UInt) : Void;    @:native('glVertexAttribP2ui')
+    static function glVertexAttribP2ui(index:UInt, type:Int, normalized:Bool, value:UInt) : Void;    @:native('glVertexAttribP3ui')
+    static function glVertexAttribP3ui(index:UInt, type:Int, normalized:Bool, value:UInt) : Void;    @:native('glVertexAttribP4ui')
+    static function glVertexAttribP4ui(index:UInt, type:Int, normalized:Bool, value:UInt) : Void;    @:native('glVertexP2ui')
+    static function glVertexP2ui(type:Int, value:UInt) : Void;    @:native('glVertexP3ui')
+    static function glVertexP3ui(type:Int, value:UInt) : Void;    @:native('glVertexP4ui')
     static function glVertexP4ui(type:Int, value:UInt) : Void;
 
-
-
-    // static function glColorP3uiv(type:Int, color:const GLuint*) : Void;
-    // static function glColorP4uiv(type:Int, color:const GLuint*) : Void;
-    // static function glMultiTexCoordP1uiv(texture:Int, type:Int, coords:const GLuint*) : Void;
-    // static function glMultiTexCoordP2uiv(texture:Int, type:Int, coords:const GLuint*) : Void;
-    // static function glMultiTexCoordP3uiv(texture:Int, type:Int, coords:const GLuint*) : Void;
-    // static function glMultiTexCoordP4uiv(texture:Int, type:Int, coords:const GLuint*) : Void;
-    // static function glNormalP3uiv(type:Int, coords:const GLuint*) : Void;
-    // static function glSecondaryColorP3uiv(type:Int, color:const GLuint*) : Void;
-    // static function glTexCoordP1uiv(type:Int, coords:const GLuint*) : Void;
-    // static function glTexCoordP2uiv(type:Int, coords:const GLuint*) : Void;
-    // static function glTexCoordP3uiv(type:Int, coords:const GLuint*) : Void;
-    // static function glTexCoordP4uiv(type:Int, coords:const GLuint*) : Void;
-    // static function glVertexAttribP1uiv(index:UInt, type:Int, normalized:Bool, value:const GLuint*) : Void;
-    // static function glVertexAttribP2uiv(index:UInt, type:Int, normalized:Bool, value:const GLuint*) : Void;
-    // static function glVertexAttribP3uiv(index:UInt, type:Int, normalized:Bool, value:const GLuint*) : Void;
-    // static function glVertexAttribP4uiv(index:UInt, type:Int, normalized:Bool, value:const GLuint*) : Void;
-    // static function glVertexP2uiv(type:Int, value:const GLuint*) : Void;
-    // static function glVertexP3uiv(type:Int, value:const GLuint*) : Void;
-    // static function glVertexP4uiv(type:Int, value:const GLuint*) : Void;
-
+    // static function glColorP3uiv(type:Int, color:const GLuint*) : Void;    // static function glColorP4uiv(type:Int, color:const GLuint*) : Void;    // static function glMultiTexCoordP1uiv(texture:Int, type:Int, coords:const GLuint*) : Void;    // static function glMultiTexCoordP2uiv(texture:Int, type:Int, coords:const GLuint*) : Void;    // static function glMultiTexCoordP3uiv(texture:Int, type:Int, coords:const GLuint*) : Void;    // static function glMultiTexCoordP4uiv(texture:Int, type:Int, coords:const GLuint*) : Void;    // static function glNormalP3uiv(type:Int, coords:const GLuint*) : Void;    // static function glSecondaryColorP3uiv(type:Int, color:const GLuint*) : Void;    // static function glTexCoordP1uiv(type:Int, coords:const GLuint*) : Void;    // static function glTexCoordP2uiv(type:Int, coords:const GLuint*) : Void;    // static function glTexCoordP3uiv(type:Int, coords:const GLuint*) : Void;    // static function glTexCoordP4uiv(type:Int, coords:const GLuint*) : Void;    // static function glVertexAttribP1uiv(index:UInt, type:Int, normalized:Bool, value:const GLuint*) : Void;    // static function glVertexAttribP2uiv(index:UInt, type:Int, normalized:Bool, value:const GLuint*) : Void;    // static function glVertexAttribP3uiv(index:UInt, type:Int, normalized:Bool, value:const GLuint*) : Void;    // static function glVertexAttribP4uiv(index:UInt, type:Int, normalized:Bool, value:const GLuint*) : Void;    // static function glVertexP2uiv(type:Int, value:const GLuint*) : Void;    // static function glVertexP3uiv(type:Int, value:const GLuint*) : Void;    // static function glVertexP4uiv(type:Int, value:const GLuint*) : Void;
 
 //GL_ARB_viewport_array
     inline static var GL_ARB_viewport_array                                           = 1;
@@ -7533,24 +5630,11 @@ extern class GL {
 
 
     @:native('glDepthRangeIndexed')
-    static function glDepthRangeIndexed(index:UInt, n:Float, f:Float) : Void;
-
-    @:native('glScissorIndexed')
-    static function glScissorIndexed(index:UInt, left:Int, bottom:Int, width:Int, height:Int) : Void;
-
-    @:native('glViewportIndexedf')
+    static function glDepthRangeIndexed(index:UInt, n:Float, f:Float) : Void;    @:native('glScissorIndexed')
+    static function glScissorIndexed(index:UInt, left:Int, bottom:Int, width:Int, height:Int) : Void;    @:native('glViewportIndexedf')
     static function glViewportIndexedf(index:UInt, x:Float, y:Float, w:Float, h:Float) : Void;
 
-
-
-    // static function glDepthRangeArrayv(first:UInt, count:Int, v:const GLclampd *) : Void;
-    // static function glGetDoublei_v(target:Int, index:UInt, data:GLdouble*) : Void;
-    // static function glGetFloati_v(target:Int, index:UInt, data:GLfloat*) : Void;
-    // static function glScissorArrayv(first:UInt, count:Int, v:const GLint *) : Void;
-    // static function glScissorIndexedv(index:UInt, v:const GLint *) : Void;
-    // static function glViewportArrayv(first:UInt, count:Int, v:const GLfloat *) : Void;
-    // static function glViewportIndexedfv(index:UInt, v:const GLfloat *) : Void;
-
+    // static function glDepthRangeArrayv(first:UInt, count:Int, v:const GLclampd *) : Void;    // static function glGetDoublei_v(target:Int, index:UInt, data:GLdouble*) : Void;    // static function glGetFloati_v(target:Int, index:UInt, data:GLfloat*) : Void;    // static function glScissorArrayv(first:UInt, count:Int, v:const GLint *) : Void;    // static function glScissorIndexedv(index:UInt, v:const GLint *) : Void;    // static function glViewportArrayv(first:UInt, count:Int, v:const GLfloat *) : Void;    // static function glViewportIndexedfv(index:UInt, v:const GLfloat *) : Void;
 
 //GL_ARB_window_pos
     inline static var GL_ARB_window_pos                                               = 1;
@@ -7559,40 +5643,16 @@ extern class GL {
 
 
     @:native('glWindowPos2dARB')
-    static function glWindowPos2dARB(x:Float, y:Float) : Void;
-
-    @:native('glWindowPos2fARB')
-    static function glWindowPos2fARB(x:Float, y:Float) : Void;
-
-    @:native('glWindowPos2iARB')
-    static function glWindowPos2iARB(x:Int, y:Int) : Void;
-
-    @:native('glWindowPos2sARB')
-    static function glWindowPos2sARB(x:Int, y:Int) : Void;
-
-    @:native('glWindowPos3dARB')
-    static function glWindowPos3dARB(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glWindowPos3fARB')
-    static function glWindowPos3fARB(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glWindowPos3iARB')
-    static function glWindowPos3iARB(x:Int, y:Int, z:Int) : Void;
-
-    @:native('glWindowPos3sARB')
+    static function glWindowPos2dARB(x:Float, y:Float) : Void;    @:native('glWindowPos2fARB')
+    static function glWindowPos2fARB(x:Float, y:Float) : Void;    @:native('glWindowPos2iARB')
+    static function glWindowPos2iARB(x:Int, y:Int) : Void;    @:native('glWindowPos2sARB')
+    static function glWindowPos2sARB(x:Int, y:Int) : Void;    @:native('glWindowPos3dARB')
+    static function glWindowPos3dARB(x:Float, y:Float, z:Float) : Void;    @:native('glWindowPos3fARB')
+    static function glWindowPos3fARB(x:Float, y:Float, z:Float) : Void;    @:native('glWindowPos3iARB')
+    static function glWindowPos3iARB(x:Int, y:Int, z:Int) : Void;    @:native('glWindowPos3sARB')
     static function glWindowPos3sARB(x:Int, y:Int, z:Int) : Void;
 
-
-
-    // static function glWindowPos2dvARB(p:const GLdouble*) : Void;
-    // static function glWindowPos2fvARB(p:const GLfloat*) : Void;
-    // static function glWindowPos2ivARB(p:const GLint*) : Void;
-    // static function glWindowPos2svARB(p:const GLshort*) : Void;
-    // static function glWindowPos3dvARB(p:const GLdouble*) : Void;
-    // static function glWindowPos3fvARB(p:const GLfloat*) : Void;
-    // static function glWindowPos3ivARB(p:const GLint*) : Void;
-    // static function glWindowPos3svARB(p:const GLshort*) : Void;
-
+    // static function glWindowPos2dvARB(p:const GLdouble*) : Void;    // static function glWindowPos2fvARB(p:const GLfloat*) : Void;    // static function glWindowPos2ivARB(p:const GLint*) : Void;    // static function glWindowPos2svARB(p:const GLshort*) : Void;    // static function glWindowPos3dvARB(p:const GLdouble*) : Void;    // static function glWindowPos3fvARB(p:const GLfloat*) : Void;    // static function glWindowPos3ivARB(p:const GLint*) : Void;    // static function glWindowPos3svARB(p:const GLshort*) : Void;
 
 //GL_ATIX_point_sprites
     inline static var GL_ATIX_point_sprites                                           = 1;
@@ -7674,7 +5734,6 @@ extern class GL {
 
     // static function glDrawBuffersATI(n:Int, bufs:const GLenum*) : Void;
 
-
 //GL_ATI_element_array
     inline static var GL_ATI_element_array                                            = 1;
     inline static var GL_ELEMENT_ARRAY_ATI                                            = 0x8768;
@@ -7685,15 +5744,10 @@ extern class GL {
 
 
     @:native('glDrawElementArrayATI')
-    static function glDrawElementArrayATI(mode:Int, count:Int) : Void;
-
-    @:native('glDrawRangeElementArrayATI')
+    static function glDrawElementArrayATI(mode:Int, count:Int) : Void;    @:native('glDrawRangeElementArrayATI')
     static function glDrawRangeElementArrayATI(mode:Int, start:UInt, end:UInt, count:Int) : Void;
 
-
-
     // static function glElementPointerATI(type:Int, *pointer:const void) : Void;
-
 
 //GL_ATI_envmap_bumpmap
     inline static var GL_ATI_envmap_bumpmap                                           = 1;
@@ -7711,11 +5765,7 @@ extern class GL {
 
 
 
-    // static function glGetTexBumpParameterfvATI(pname:Int, *param:Float) : Void;
-    // static function glGetTexBumpParameterivATI(pname:Int, *param:Int) : Void;
-    // static function glTexBumpParameterfvATI(pname:Int, *param:Float) : Void;
-    // static function glTexBumpParameterivATI(pname:Int, *param:Int) : Void;
-
+    // static function glGetTexBumpParameterfvATI(pname:Int, *param:Float) : Void;    // static function glGetTexBumpParameterivATI(pname:Int, *param:Int) : Void;    // static function glTexBumpParameterfvATI(pname:Int, *param:Float) : Void;    // static function glTexBumpParameterivATI(pname:Int, *param:Int) : Void;
 
 //GL_ATI_fragment_shader
     inline static var GL_ATI_fragment_shader                                          = 1;
@@ -7778,48 +5828,21 @@ extern class GL {
 
 
     @:native('glAlphaFragmentOp1ATI')
-    static function glAlphaFragmentOp1ATI(op:Int, dst:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt) : Void;
-
-    @:native('glAlphaFragmentOp2ATI')
-    static function glAlphaFragmentOp2ATI(op:Int, dst:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt, arg2:UInt, arg2Rep:UInt, arg2Mod:UInt) : Void;
-
-    @:native('glAlphaFragmentOp3ATI')
-    static function glAlphaFragmentOp3ATI(op:Int, dst:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt, arg2:UInt, arg2Rep:UInt, arg2Mod:UInt, arg3:UInt, arg3Rep:UInt, arg3Mod:UInt) : Void;
-
-    @:native('glBeginFragmentShaderATI')
-    static function glBeginFragmentShaderATI() : Void;
-
-    @:native('glBindFragmentShaderATI')
-    static function glBindFragmentShaderATI(id:UInt) : Void;
-
-    @:native('glColorFragmentOp1ATI')
-    static function glColorFragmentOp1ATI(op:Int, dst:UInt, dstMask:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt) : Void;
-
-    @:native('glColorFragmentOp2ATI')
-    static function glColorFragmentOp2ATI(op:Int, dst:UInt, dstMask:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt, arg2:UInt, arg2Rep:UInt, arg2Mod:UInt) : Void;
-
-    @:native('glColorFragmentOp3ATI')
-    static function glColorFragmentOp3ATI(op:Int, dst:UInt, dstMask:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt, arg2:UInt, arg2Rep:UInt, arg2Mod:UInt, arg3:UInt, arg3Rep:UInt, arg3Mod:UInt) : Void;
-
-    @:native('glDeleteFragmentShaderATI')
-    static function glDeleteFragmentShaderATI(id:UInt) : Void;
-
-    @:native('glEndFragmentShaderATI')
-    static function glEndFragmentShaderATI() : Void;
-
-    @:native('glGenFragmentShadersATI')
-    static function glGenFragmentShadersATI(range:UInt) : UInt;
-
-    @:native('glPassTexCoordATI')
-    static function glPassTexCoordATI(dst:UInt, coord:UInt, swizzle:Int) : Void;
-
-    @:native('glSampleMapATI')
+    static function glAlphaFragmentOp1ATI(op:Int, dst:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt) : Void;    @:native('glAlphaFragmentOp2ATI')
+    static function glAlphaFragmentOp2ATI(op:Int, dst:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt, arg2:UInt, arg2Rep:UInt, arg2Mod:UInt) : Void;    @:native('glAlphaFragmentOp3ATI')
+    static function glAlphaFragmentOp3ATI(op:Int, dst:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt, arg2:UInt, arg2Rep:UInt, arg2Mod:UInt, arg3:UInt, arg3Rep:UInt, arg3Mod:UInt) : Void;    @:native('glBeginFragmentShaderATI')
+    static function glBeginFragmentShaderATI() : Void;    @:native('glBindFragmentShaderATI')
+    static function glBindFragmentShaderATI(id:UInt) : Void;    @:native('glColorFragmentOp1ATI')
+    static function glColorFragmentOp1ATI(op:Int, dst:UInt, dstMask:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt) : Void;    @:native('glColorFragmentOp2ATI')
+    static function glColorFragmentOp2ATI(op:Int, dst:UInt, dstMask:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt, arg2:UInt, arg2Rep:UInt, arg2Mod:UInt) : Void;    @:native('glColorFragmentOp3ATI')
+    static function glColorFragmentOp3ATI(op:Int, dst:UInt, dstMask:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt, arg2:UInt, arg2Rep:UInt, arg2Mod:UInt, arg3:UInt, arg3Rep:UInt, arg3Mod:UInt) : Void;    @:native('glDeleteFragmentShaderATI')
+    static function glDeleteFragmentShaderATI(id:UInt) : Void;    @:native('glEndFragmentShaderATI')
+    static function glEndFragmentShaderATI() : Void;    @:native('glGenFragmentShadersATI')
+    static function glGenFragmentShadersATI(range:UInt) : UInt;    @:native('glPassTexCoordATI')
+    static function glPassTexCoordATI(dst:UInt, coord:UInt, swizzle:Int) : Void;    @:native('glSampleMapATI')
     static function glSampleMapATI(dst:UInt, interp:UInt, swizzle:Int) : Void;
 
-
-
     // static function glSetFragmentShaderConstantATI(dst:UInt, value:const GLfloat*) : Void;
-
 
 //GL_ATI_map_object_buffer
     inline static var GL_ATI_map_object_buffer                                        = 1;
@@ -7830,10 +5853,7 @@ extern class GL {
     @:native('glUnmapObjectBufferATI')
     static function glUnmapObjectBufferATI(buffer:UInt) : Void;
 
-
-
     // static function glMapObjectBufferATI(buffer:UInt) : void *;
-
 
 //GL_ATI_meminfo
     inline static var GL_ATI_meminfo                                                  = 1;
@@ -7864,12 +5884,8 @@ extern class GL {
 
 
     @:native('glPNTrianglesfATI')
-    static function glPNTrianglesfATI(pname:Int, param:Float) : Void;
-
-    @:native('glPNTrianglesiATI')
+    static function glPNTrianglesfATI(pname:Int, param:Float) : Void;    @:native('glPNTrianglesiATI')
     static function glPNTrianglesiATI(pname:Int, param:Int) : Void;
-
-
 
 
 
@@ -7884,12 +5900,8 @@ extern class GL {
 
 
     @:native('glStencilFuncSeparateATI')
-    static function glStencilFuncSeparateATI(frontfunc:Int, backfunc:Int, ref:Int, mask:UInt) : Void;
-
-    @:native('glStencilOpSeparateATI')
+    static function glStencilFuncSeparateATI(frontfunc:Int, backfunc:Int, ref:Int, mask:UInt) : Void;    @:native('glStencilOpSeparateATI')
     static function glStencilOpSeparateATI(face:Int, sfail:Int, dpfail:Int, dppass:Int) : Void;
-
-
 
 
 
@@ -7987,28 +5999,12 @@ extern class GL {
 
 
     @:native('glArrayObjectATI')
-    static function glArrayObjectATI(array:Int, size:Int, type:Int, stride:Int, buffer:UInt, offset:UInt) : Void;
-
-    @:native('glFreeObjectBufferATI')
-    static function glFreeObjectBufferATI(buffer:UInt) : Void;
-
-    @:native('glIsObjectBufferATI')
-    static function glIsObjectBufferATI(buffer:UInt) : Bool;
-
-    @:native('glVariantArrayObjectATI')
+    static function glArrayObjectATI(array:Int, size:Int, type:Int, stride:Int, buffer:UInt, offset:UInt) : Void;    @:native('glFreeObjectBufferATI')
+    static function glFreeObjectBufferATI(buffer:UInt) : Void;    @:native('glIsObjectBufferATI')
+    static function glIsObjectBufferATI(buffer:UInt) : Bool;    @:native('glVariantArrayObjectATI')
     static function glVariantArrayObjectATI(id:UInt, type:Int, stride:Int, buffer:UInt, offset:UInt) : Void;
 
-
-
-    // static function glGetArrayObjectfvATI(array:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetArrayObjectivATI(array:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetObjectBufferfvATI(buffer:UInt, pname:Int, params:GLfloat*) : Void;
-    // static function glGetObjectBufferivATI(buffer:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetVariantArrayObjectfvATI(id:UInt, pname:Int, params:GLfloat*) : Void;
-    // static function glGetVariantArrayObjectivATI(id:UInt, pname:Int, params:GLint*) : Void;
-    // static function glNewObjectBufferATI(size:Int, *pointer:const void, usage:Int) : UInt;
-    // static function glUpdateObjectBufferATI(buffer:UInt, offset:UInt, size:Int, *pointer:const void, preserve:Int) : Void;
-
+    // static function glGetArrayObjectfvATI(array:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetArrayObjectivATI(array:Int, pname:Int, params:GLint*) : Void;    // static function glGetObjectBufferfvATI(buffer:UInt, pname:Int, params:GLfloat*) : Void;    // static function glGetObjectBufferivATI(buffer:UInt, pname:Int, params:GLint*) : Void;    // static function glGetVariantArrayObjectfvATI(id:UInt, pname:Int, params:GLfloat*) : Void;    // static function glGetVariantArrayObjectivATI(id:UInt, pname:Int, params:GLint*) : Void;    // static function glNewObjectBufferATI(size:Int, *pointer:const void, usage:Int) : UInt;    // static function glUpdateObjectBufferATI(buffer:UInt, offset:UInt, size:Int, *pointer:const void, preserve:Int) : Void;
 
 //GL_ATI_vertex_attrib_array_object
     inline static var GL_ATI_vertex_attrib_array_object                               = 1;
@@ -8019,11 +6015,7 @@ extern class GL {
     @:native('glVertexAttribArrayObjectATI')
     static function glVertexAttribArrayObjectATI(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, buffer:UInt, offset:UInt) : Void;
 
-
-
-    // static function glGetVertexAttribArrayObjectfvATI(index:UInt, pname:Int, params:GLfloat*) : Void;
-    // static function glGetVertexAttribArrayObjectivATI(index:UInt, pname:Int, params:GLint*) : Void;
-
+    // static function glGetVertexAttribArrayObjectfvATI(index:UInt, pname:Int, params:GLfloat*) : Void;    // static function glGetVertexAttribArrayObjectivATI(index:UInt, pname:Int, params:GLint*) : Void;
 
 //GL_ATI_vertex_streams
     inline static var GL_ATI_vertex_streams                                           = 1;
@@ -8042,101 +6034,32 @@ extern class GL {
 
 
     @:native('glClientActiveVertexStreamATI')
-    static function glClientActiveVertexStreamATI(stream:Int) : Void;
-
-    @:native('glNormalStream3bATI')
-    static function glNormalStream3bATI(stream:Int, x:String, y:String, z:String) : Void;
-
-    @:native('glNormalStream3dATI')
-    static function glNormalStream3dATI(stream:Int, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glNormalStream3fATI')
-    static function glNormalStream3fATI(stream:Int, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glNormalStream3iATI')
-    static function glNormalStream3iATI(stream:Int, x:Int, y:Int, z:Int) : Void;
-
-    @:native('glNormalStream3sATI')
-    static function glNormalStream3sATI(stream:Int, x:Int, y:Int, z:Int) : Void;
-
-    @:native('glVertexBlendEnvfATI')
-    static function glVertexBlendEnvfATI(pname:Int, param:Float) : Void;
-
-    @:native('glVertexBlendEnviATI')
-    static function glVertexBlendEnviATI(pname:Int, param:Int) : Void;
-
-    @:native('glVertexStream1dATI')
-    static function glVertexStream1dATI(stream:Int, x:Float) : Void;
-
-    @:native('glVertexStream1fATI')
-    static function glVertexStream1fATI(stream:Int, x:Float) : Void;
-
-    @:native('glVertexStream1iATI')
-    static function glVertexStream1iATI(stream:Int, x:Int) : Void;
-
-    @:native('glVertexStream1sATI')
-    static function glVertexStream1sATI(stream:Int, x:Int) : Void;
-
-    @:native('glVertexStream2dATI')
-    static function glVertexStream2dATI(stream:Int, x:Float, y:Float) : Void;
-
-    @:native('glVertexStream2fATI')
-    static function glVertexStream2fATI(stream:Int, x:Float, y:Float) : Void;
-
-    @:native('glVertexStream2iATI')
-    static function glVertexStream2iATI(stream:Int, x:Int, y:Int) : Void;
-
-    @:native('glVertexStream2sATI')
-    static function glVertexStream2sATI(stream:Int, x:Int, y:Int) : Void;
-
-    @:native('glVertexStream3dATI')
-    static function glVertexStream3dATI(stream:Int, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glVertexStream3fATI')
-    static function glVertexStream3fATI(stream:Int, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glVertexStream3iATI')
-    static function glVertexStream3iATI(stream:Int, x:Int, y:Int, z:Int) : Void;
-
-    @:native('glVertexStream3sATI')
-    static function glVertexStream3sATI(stream:Int, x:Int, y:Int, z:Int) : Void;
-
-    @:native('glVertexStream4dATI')
-    static function glVertexStream4dATI(stream:Int, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glVertexStream4fATI')
-    static function glVertexStream4fATI(stream:Int, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glVertexStream4iATI')
-    static function glVertexStream4iATI(stream:Int, x:Int, y:Int, z:Int, w:Int) : Void;
-
-    @:native('glVertexStream4sATI')
+    static function glClientActiveVertexStreamATI(stream:Int) : Void;    @:native('glNormalStream3bATI')
+    static function glNormalStream3bATI(stream:Int, x:String, y:String, z:String) : Void;    @:native('glNormalStream3dATI')
+    static function glNormalStream3dATI(stream:Int, x:Float, y:Float, z:Float) : Void;    @:native('glNormalStream3fATI')
+    static function glNormalStream3fATI(stream:Int, x:Float, y:Float, z:Float) : Void;    @:native('glNormalStream3iATI')
+    static function glNormalStream3iATI(stream:Int, x:Int, y:Int, z:Int) : Void;    @:native('glNormalStream3sATI')
+    static function glNormalStream3sATI(stream:Int, x:Int, y:Int, z:Int) : Void;    @:native('glVertexBlendEnvfATI')
+    static function glVertexBlendEnvfATI(pname:Int, param:Float) : Void;    @:native('glVertexBlendEnviATI')
+    static function glVertexBlendEnviATI(pname:Int, param:Int) : Void;    @:native('glVertexStream1dATI')
+    static function glVertexStream1dATI(stream:Int, x:Float) : Void;    @:native('glVertexStream1fATI')
+    static function glVertexStream1fATI(stream:Int, x:Float) : Void;    @:native('glVertexStream1iATI')
+    static function glVertexStream1iATI(stream:Int, x:Int) : Void;    @:native('glVertexStream1sATI')
+    static function glVertexStream1sATI(stream:Int, x:Int) : Void;    @:native('glVertexStream2dATI')
+    static function glVertexStream2dATI(stream:Int, x:Float, y:Float) : Void;    @:native('glVertexStream2fATI')
+    static function glVertexStream2fATI(stream:Int, x:Float, y:Float) : Void;    @:native('glVertexStream2iATI')
+    static function glVertexStream2iATI(stream:Int, x:Int, y:Int) : Void;    @:native('glVertexStream2sATI')
+    static function glVertexStream2sATI(stream:Int, x:Int, y:Int) : Void;    @:native('glVertexStream3dATI')
+    static function glVertexStream3dATI(stream:Int, x:Float, y:Float, z:Float) : Void;    @:native('glVertexStream3fATI')
+    static function glVertexStream3fATI(stream:Int, x:Float, y:Float, z:Float) : Void;    @:native('glVertexStream3iATI')
+    static function glVertexStream3iATI(stream:Int, x:Int, y:Int, z:Int) : Void;    @:native('glVertexStream3sATI')
+    static function glVertexStream3sATI(stream:Int, x:Int, y:Int, z:Int) : Void;    @:native('glVertexStream4dATI')
+    static function glVertexStream4dATI(stream:Int, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glVertexStream4fATI')
+    static function glVertexStream4fATI(stream:Int, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glVertexStream4iATI')
+    static function glVertexStream4iATI(stream:Int, x:Int, y:Int, z:Int, w:Int) : Void;    @:native('glVertexStream4sATI')
     static function glVertexStream4sATI(stream:Int, x:Int, y:Int, z:Int, w:Int) : Void;
 
-
-
-    // static function glNormalStream3bvATI(stream:Int, *coords:const GLbyte) : Void;
-    // static function glNormalStream3dvATI(stream:Int, *coords:const GLdouble) : Void;
-    // static function glNormalStream3fvATI(stream:Int, *coords:const GLfloat) : Void;
-    // static function glNormalStream3ivATI(stream:Int, *coords:const GLint) : Void;
-    // static function glNormalStream3svATI(stream:Int, *coords:const GLshort) : Void;
-    // static function glVertexStream1dvATI(stream:Int, *coords:const GLdouble) : Void;
-    // static function glVertexStream1fvATI(stream:Int, *coords:const GLfloat) : Void;
-    // static function glVertexStream1ivATI(stream:Int, *coords:const GLint) : Void;
-    // static function glVertexStream1svATI(stream:Int, *coords:const GLshort) : Void;
-    // static function glVertexStream2dvATI(stream:Int, *coords:const GLdouble) : Void;
-    // static function glVertexStream2fvATI(stream:Int, *coords:const GLfloat) : Void;
-    // static function glVertexStream2ivATI(stream:Int, *coords:const GLint) : Void;
-    // static function glVertexStream2svATI(stream:Int, *coords:const GLshort) : Void;
-    // static function glVertexStream3dvATI(stream:Int, *coords:const GLdouble) : Void;
-    // static function glVertexStream3fvATI(stream:Int, *coords:const GLfloat) : Void;
-    // static function glVertexStream3ivATI(stream:Int, *coords:const GLint) : Void;
-    // static function glVertexStream3svATI(stream:Int, *coords:const GLshort) : Void;
-    // static function glVertexStream4dvATI(stream:Int, *coords:const GLdouble) : Void;
-    // static function glVertexStream4fvATI(stream:Int, *coords:const GLfloat) : Void;
-    // static function glVertexStream4ivATI(stream:Int, *coords:const GLint) : Void;
-    // static function glVertexStream4svATI(stream:Int, *coords:const GLshort) : Void;
-
+    // static function glNormalStream3bvATI(stream:Int, *coords:const GLbyte) : Void;    // static function glNormalStream3dvATI(stream:Int, *coords:const GLdouble) : Void;    // static function glNormalStream3fvATI(stream:Int, *coords:const GLfloat) : Void;    // static function glNormalStream3ivATI(stream:Int, *coords:const GLint) : Void;    // static function glNormalStream3svATI(stream:Int, *coords:const GLshort) : Void;    // static function glVertexStream1dvATI(stream:Int, *coords:const GLdouble) : Void;    // static function glVertexStream1fvATI(stream:Int, *coords:const GLfloat) : Void;    // static function glVertexStream1ivATI(stream:Int, *coords:const GLint) : Void;    // static function glVertexStream1svATI(stream:Int, *coords:const GLshort) : Void;    // static function glVertexStream2dvATI(stream:Int, *coords:const GLdouble) : Void;    // static function glVertexStream2fvATI(stream:Int, *coords:const GLfloat) : Void;    // static function glVertexStream2ivATI(stream:Int, *coords:const GLint) : Void;    // static function glVertexStream2svATI(stream:Int, *coords:const GLshort) : Void;    // static function glVertexStream3dvATI(stream:Int, *coords:const GLdouble) : Void;    // static function glVertexStream3fvATI(stream:Int, *coords:const GLfloat) : Void;    // static function glVertexStream3ivATI(stream:Int, *coords:const GLint) : Void;    // static function glVertexStream3svATI(stream:Int, *coords:const GLshort) : Void;    // static function glVertexStream4dvATI(stream:Int, *coords:const GLdouble) : Void;    // static function glVertexStream4fvATI(stream:Int, *coords:const GLfloat) : Void;    // static function glVertexStream4ivATI(stream:Int, *coords:const GLint) : Void;    // static function glVertexStream4svATI(stream:Int, *coords:const GLshort) : Void;
 
 //GL_EXT_422_pixels
     inline static var GL_EXT_422_pixels                                               = 1;
@@ -8200,15 +6123,10 @@ extern class GL {
 
 
     @:native('glGetUniformBufferSizeEXT')
-    static function glGetUniformBufferSizeEXT(program:UInt, location:Int) : Int;
-
-    @:native('glUniformBufferEXT')
+    static function glGetUniformBufferSizeEXT(program:UInt, location:Int) : Int;    @:native('glUniformBufferEXT')
     static function glUniformBufferEXT(program:UInt, location:Int, buffer:UInt) : Void;
 
-
-
     // static function glGetUniformOffsetEXT(program:UInt, location:Int) : GLintptr;
-
 
 //GL_EXT_blend_color
     inline static var GL_EXT_blend_color                                              = 1;
@@ -8226,8 +6144,6 @@ extern class GL {
 
 
 
-
-
 //GL_EXT_blend_equation_separate
     inline static var GL_EXT_blend_equation_separate                                  = 1;
     inline static var GL_BLEND_EQUATION_RGB_EXT                                       = 0x8009;
@@ -8238,8 +6154,6 @@ extern class GL {
 
     @:native('glBlendEquationSeparateEXT')
     static function glBlendEquationSeparateEXT(modeRGB:Int, modeAlpha:Int) : Void;
-
-
 
 
 
@@ -8255,8 +6169,6 @@ extern class GL {
 
     @:native('glBlendFuncSeparateEXT')
     static function glBlendFuncSeparateEXT(sfactorRGB:Int, dfactorRGB:Int, sfactorAlpha:Int, dfactorAlpha:Int) : Void;
-
-
 
 
 
@@ -8282,8 +6194,6 @@ extern class GL {
 
     @:native('glBlendEquationEXT')
     static function glBlendEquationEXT(mode:Int) : Void;
-
-
 
 
 
@@ -8333,10 +6243,7 @@ extern class GL {
     @:native('glCopyColorSubTableEXT')
     static function glCopyColorSubTableEXT(target:Int, start:Int, x:Int, y:Int, width:Int) : Void;
 
-
-
     // static function glColorSubTableEXT(target:Int, start:Int, count:Int, format:Int, type:Int, *data:const void) : Void;
-
 
 //GL_EXT_compiled_vertex_array
     inline static var GL_EXT_compiled_vertex_array                                    = 1;
@@ -8347,12 +6254,8 @@ extern class GL {
 
 
     @:native('glLockArraysEXT')
-    static function glLockArraysEXT(first:Int, count:Int) : Void;
-
-    @:native('glUnlockArraysEXT')
+    static function glLockArraysEXT(first:Int, count:Int) : Void;    @:native('glUnlockArraysEXT')
     static function glUnlockArraysEXT() : Void;
-
-
 
 
 
@@ -8383,29 +6286,12 @@ extern class GL {
 
 
     @:native('glConvolutionParameterfEXT')
-    static function glConvolutionParameterfEXT(target:Int, pname:Int, param:Float) : Void;
-
-    @:native('glConvolutionParameteriEXT')
-    static function glConvolutionParameteriEXT(target:Int, pname:Int, param:Int) : Void;
-
-    @:native('glCopyConvolutionFilter1DEXT')
-    static function glCopyConvolutionFilter1DEXT(target:Int, internalformat:Int, x:Int, y:Int, width:Int) : Void;
-
-    @:native('glCopyConvolutionFilter2DEXT')
+    static function glConvolutionParameterfEXT(target:Int, pname:Int, param:Float) : Void;    @:native('glConvolutionParameteriEXT')
+    static function glConvolutionParameteriEXT(target:Int, pname:Int, param:Int) : Void;    @:native('glCopyConvolutionFilter1DEXT')
+    static function glCopyConvolutionFilter1DEXT(target:Int, internalformat:Int, x:Int, y:Int, width:Int) : Void;    @:native('glCopyConvolutionFilter2DEXT')
     static function glCopyConvolutionFilter2DEXT(target:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int) : Void;
 
-
-
-    // static function glConvolutionFilter1DEXT(target:Int, internalformat:Int, width:Int, format:Int, type:Int, *image:const void) : Void;
-    // static function glConvolutionFilter2DEXT(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, *image:const void) : Void;
-    // static function glConvolutionParameterfvEXT(target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glConvolutionParameterivEXT(target:Int, pname:Int, params:const GLint*) : Void;
-    // static function glGetConvolutionFilterEXT(target:Int, format:Int, type:Int, *image:Void) : Void;
-    // static function glGetConvolutionParameterfvEXT(target:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetConvolutionParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetSeparableFilterEXT(target:Int, format:Int, type:Int, *row:Void, *column:Void, *span:Void) : Void;
-    // static function glSeparableFilter2DEXT(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, *row:const void, *column:const void) : Void;
-
+    // static function glConvolutionFilter1DEXT(target:Int, internalformat:Int, width:Int, format:Int, type:Int, *image:const void) : Void;    // static function glConvolutionFilter2DEXT(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, *image:const void) : Void;    // static function glConvolutionParameterfvEXT(target:Int, pname:Int, params:const GLfloat*) : Void;    // static function glConvolutionParameterivEXT(target:Int, pname:Int, params:const GLint*) : Void;    // static function glGetConvolutionFilterEXT(target:Int, format:Int, type:Int, *image:Void) : Void;    // static function glGetConvolutionParameterfvEXT(target:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetConvolutionParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;    // static function glGetSeparableFilterEXT(target:Int, format:Int, type:Int, *row:Void, *column:Void, *span:Void) : Void;    // static function glSeparableFilter2DEXT(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, *row:const void, *column:const void) : Void;
 
 //GL_EXT_coordinate_frame
     inline static var GL_EXT_coordinate_frame                                         = 1;
@@ -8429,9 +6315,7 @@ extern class GL {
 
 
 
-    // static function glBinormalPointerEXT(type:Int, stride:Int, *pointer:Void) : Void;
-    // static function glTangentPointerEXT(type:Int, stride:Int, *pointer:Void) : Void;
-
+    // static function glBinormalPointerEXT(type:Int, stride:Int, *pointer:Void) : Void;    // static function glTangentPointerEXT(type:Int, stride:Int, *pointer:Void) : Void;
 
 //GL_EXT_copy_texture
     inline static var GL_EXT_copy_texture                                             = 1;
@@ -8440,21 +6324,11 @@ extern class GL {
 
 
     @:native('glCopyTexImage1DEXT')
-    static function glCopyTexImage1DEXT(target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, border:Int) : Void;
-
-    @:native('glCopyTexImage2DEXT')
-    static function glCopyTexImage2DEXT(target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int, border:Int) : Void;
-
-    @:native('glCopyTexSubImage1DEXT')
-    static function glCopyTexSubImage1DEXT(target:Int, level:Int, xoffset:Int, x:Int, y:Int, width:Int) : Void;
-
-    @:native('glCopyTexSubImage2DEXT')
-    static function glCopyTexSubImage2DEXT(target:Int, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-    @:native('glCopyTexSubImage3DEXT')
+    static function glCopyTexImage1DEXT(target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, border:Int) : Void;    @:native('glCopyTexImage2DEXT')
+    static function glCopyTexImage2DEXT(target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int, border:Int) : Void;    @:native('glCopyTexSubImage1DEXT')
+    static function glCopyTexSubImage1DEXT(target:Int, level:Int, xoffset:Int, x:Int, y:Int, width:Int) : Void;    @:native('glCopyTexSubImage2DEXT')
+    static function glCopyTexSubImage2DEXT(target:Int, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;    @:native('glCopyTexSubImage3DEXT')
     static function glCopyTexSubImage3DEXT(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-
 
 
 
@@ -8469,9 +6343,7 @@ extern class GL {
 
 
 
-    // static function glCullParameterdvEXT(pname:Int, params:GLdouble*) : Void;
-    // static function glCullParameterfvEXT(pname:Int, params:GLfloat*) : Void;
-
+    // static function glCullParameterdvEXT(pname:Int, params:GLdouble*) : Void;    // static function glCullParameterfvEXT(pname:Int, params:GLfloat*) : Void;
 
 //GL_EXT_debug_label
     inline static var GL_EXT_debug_label                                              = 1;
@@ -8488,10 +6360,7 @@ extern class GL {
     @:native('glLabelObjectEXT')
     static function glLabelObjectEXT(type:Int, object:UInt, length:Int, label:String) : Void;
 
-
-
     // static function glGetObjectLabelEXT(type:Int, object:UInt, bufSize:Int, length:GLsizei*, *label:GLchar) : Void;
-
 
 //GL_EXT_debug_marker
     inline static var GL_EXT_debug_marker                                             = 1;
@@ -8500,15 +6369,9 @@ extern class GL {
 
 
     @:native('glInsertEventMarkerEXT')
-    static function glInsertEventMarkerEXT(length:Int, marker:String) : Void;
-
-    @:native('glPopGroupMarkerEXT')
-    static function glPopGroupMarkerEXT() : Void;
-
-    @:native('glPushGroupMarkerEXT')
+    static function glInsertEventMarkerEXT(length:Int, marker:String) : Void;    @:native('glPopGroupMarkerEXT')
+    static function glPopGroupMarkerEXT() : Void;    @:native('glPushGroupMarkerEXT')
     static function glPushGroupMarkerEXT(length:Int, marker:String) : Void;
-
-
 
 
 
@@ -8525,8 +6388,6 @@ extern class GL {
 
 
 
-
-
 //GL_EXT_direct_state_access
     inline static var GL_EXT_direct_state_access                                      = 1;
     inline static var GL_PROGRAM_MATRIX_EXT                                           = 0x8E2D;
@@ -8537,378 +6398,86 @@ extern class GL {
 
 
     @:native('glBindMultiTextureEXT')
-    static function glBindMultiTextureEXT(texunit:Int, target:Int, texture:UInt) : Void;
-
-    @:native('glCheckNamedFramebufferStatusEXT')
-    static function glCheckNamedFramebufferStatusEXT(framebuffer:UInt, target:Int) : Int;
-
-    @:native('glClientAttribDefaultEXT')
-    static function glClientAttribDefaultEXT(mask:Int) : Void;
-
-    @:native('glCopyMultiTexImage1DEXT')
-    static function glCopyMultiTexImage1DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, border:Int) : Void;
-
-    @:native('glCopyMultiTexImage2DEXT')
-    static function glCopyMultiTexImage2DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int, border:Int) : Void;
-
-    @:native('glCopyMultiTexSubImage1DEXT')
-    static function glCopyMultiTexSubImage1DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, x:Int, y:Int, width:Int) : Void;
-
-    @:native('glCopyMultiTexSubImage2DEXT')
-    static function glCopyMultiTexSubImage2DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-    @:native('glCopyMultiTexSubImage3DEXT')
-    static function glCopyMultiTexSubImage3DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-    @:native('glCopyTextureImage1DEXT')
-    static function glCopyTextureImage1DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, border:Int) : Void;
-
-    @:native('glCopyTextureImage2DEXT')
-    static function glCopyTextureImage2DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int, border:Int) : Void;
-
-    @:native('glCopyTextureSubImage1DEXT')
-    static function glCopyTextureSubImage1DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, x:Int, y:Int, width:Int) : Void;
-
-    @:native('glCopyTextureSubImage2DEXT')
-    static function glCopyTextureSubImage2DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-    @:native('glCopyTextureSubImage3DEXT')
-    static function glCopyTextureSubImage3DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-    @:native('glDisableClientStateIndexedEXT')
-    static function glDisableClientStateIndexedEXT(array:Int, index:UInt) : Void;
-
-    @:native('glDisableClientStateiEXT')
-    static function glDisableClientStateiEXT(array:Int, index:UInt) : Void;
-
-    @:native('glDisableVertexArrayAttribEXT')
-    static function glDisableVertexArrayAttribEXT(vaobj:UInt, index:UInt) : Void;
-
-    @:native('glDisableVertexArrayEXT')
-    static function glDisableVertexArrayEXT(vaobj:UInt, array:Int) : Void;
-
-    @:native('glEnableClientStateIndexedEXT')
-    static function glEnableClientStateIndexedEXT(array:Int, index:UInt) : Void;
-
-    @:native('glEnableClientStateiEXT')
-    static function glEnableClientStateiEXT(array:Int, index:UInt) : Void;
-
-    @:native('glEnableVertexArrayAttribEXT')
-    static function glEnableVertexArrayAttribEXT(vaobj:UInt, index:UInt) : Void;
-
-    @:native('glEnableVertexArrayEXT')
-    static function glEnableVertexArrayEXT(vaobj:UInt, array:Int) : Void;
-
-    @:native('glFramebufferDrawBufferEXT')
-    static function glFramebufferDrawBufferEXT(framebuffer:UInt, mode:Int) : Void;
-
-    @:native('glFramebufferReadBufferEXT')
-    static function glFramebufferReadBufferEXT(framebuffer:UInt, mode:Int) : Void;
-
-    @:native('glGenerateMultiTexMipmapEXT')
-    static function glGenerateMultiTexMipmapEXT(texunit:Int, target:Int) : Void;
-
-    @:native('glGenerateTextureMipmapEXT')
-    static function glGenerateTextureMipmapEXT(texture:UInt, target:Int) : Void;
-
-    @:native('glMatrixFrustumEXT')
-    static function glMatrixFrustumEXT(matrixMode:Int, l:Float, r:Float, b:Float, t:Float, n:Float, f:Float) : Void;
-
-    @:native('glMatrixLoadIdentityEXT')
-    static function glMatrixLoadIdentityEXT(matrixMode:Int) : Void;
-
-    @:native('glMatrixOrthoEXT')
-    static function glMatrixOrthoEXT(matrixMode:Int, l:Float, r:Float, b:Float, t:Float, n:Float, f:Float) : Void;
-
-    @:native('glMatrixPopEXT')
-    static function glMatrixPopEXT(matrixMode:Int) : Void;
-
-    @:native('glMatrixPushEXT')
-    static function glMatrixPushEXT(matrixMode:Int) : Void;
-
-    @:native('glMatrixRotatedEXT')
-    static function glMatrixRotatedEXT(matrixMode:Int, angle:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glMatrixRotatefEXT')
-    static function glMatrixRotatefEXT(matrixMode:Int, angle:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glMatrixScaledEXT')
-    static function glMatrixScaledEXT(matrixMode:Int, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glMatrixScalefEXT')
-    static function glMatrixScalefEXT(matrixMode:Int, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glMatrixTranslatedEXT')
-    static function glMatrixTranslatedEXT(matrixMode:Int, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glMatrixTranslatefEXT')
-    static function glMatrixTranslatefEXT(matrixMode:Int, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glMultiTexBufferEXT')
-    static function glMultiTexBufferEXT(texunit:Int, target:Int, internalformat:Int, buffer:UInt) : Void;
-
-    @:native('glMultiTexEnvfEXT')
-    static function glMultiTexEnvfEXT(texunit:Int, target:Int, pname:Int, param:Float) : Void;
-
-    @:native('glMultiTexEnviEXT')
-    static function glMultiTexEnviEXT(texunit:Int, target:Int, pname:Int, param:Int) : Void;
-
-    @:native('glMultiTexGendEXT')
-    static function glMultiTexGendEXT(texunit:Int, coord:Int, pname:Int, param:Float) : Void;
-
-    @:native('glMultiTexGenfEXT')
-    static function glMultiTexGenfEXT(texunit:Int, coord:Int, pname:Int, param:Float) : Void;
-
-    @:native('glMultiTexGeniEXT')
-    static function glMultiTexGeniEXT(texunit:Int, coord:Int, pname:Int, param:Int) : Void;
-
-    @:native('glMultiTexParameterfEXT')
-    static function glMultiTexParameterfEXT(texunit:Int, target:Int, pname:Int, param:Float) : Void;
-
-    @:native('glMultiTexParameteriEXT')
-    static function glMultiTexParameteriEXT(texunit:Int, target:Int, pname:Int, param:Int) : Void;
-
-    @:native('glMultiTexRenderbufferEXT')
-    static function glMultiTexRenderbufferEXT(texunit:Int, target:Int, renderbuffer:UInt) : Void;
-
-    @:native('glNamedFramebufferRenderbufferEXT')
-    static function glNamedFramebufferRenderbufferEXT(framebuffer:UInt, attachment:Int, renderbuffertarget:Int, renderbuffer:UInt) : Void;
-
-    @:native('glNamedFramebufferTexture1DEXT')
-    static function glNamedFramebufferTexture1DEXT(framebuffer:UInt, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;
-
-    @:native('glNamedFramebufferTexture2DEXT')
-    static function glNamedFramebufferTexture2DEXT(framebuffer:UInt, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;
-
-    @:native('glNamedFramebufferTexture3DEXT')
-    static function glNamedFramebufferTexture3DEXT(framebuffer:UInt, attachment:Int, textarget:Int, texture:UInt, level:Int, zoffset:Int) : Void;
-
-    @:native('glNamedFramebufferTextureEXT')
-    static function glNamedFramebufferTextureEXT(framebuffer:UInt, attachment:Int, texture:UInt, level:Int) : Void;
-
-    @:native('glNamedFramebufferTextureFaceEXT')
-    static function glNamedFramebufferTextureFaceEXT(framebuffer:UInt, attachment:Int, texture:UInt, level:Int, face:Int) : Void;
-
-    @:native('glNamedFramebufferTextureLayerEXT')
-    static function glNamedFramebufferTextureLayerEXT(framebuffer:UInt, attachment:Int, texture:UInt, level:Int, layer:Int) : Void;
-
-    @:native('glNamedProgramLocalParameter4dEXT')
-    static function glNamedProgramLocalParameter4dEXT(program:UInt, target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glNamedProgramLocalParameter4fEXT')
-    static function glNamedProgramLocalParameter4fEXT(program:UInt, target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glNamedProgramLocalParameterI4iEXT')
-    static function glNamedProgramLocalParameterI4iEXT(program:UInt, target:Int, index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
-
-    @:native('glNamedProgramLocalParameterI4uiEXT')
-    static function glNamedProgramLocalParameterI4uiEXT(program:UInt, target:Int, index:UInt, x:UInt, y:UInt, z:UInt, w:UInt) : Void;
-
-    @:native('glNamedRenderbufferStorageEXT')
-    static function glNamedRenderbufferStorageEXT(renderbuffer:UInt, internalformat:Int, width:Int, height:Int) : Void;
-
-    @:native('glNamedRenderbufferStorageMultisampleCoverageEXT')
-    static function glNamedRenderbufferStorageMultisampleCoverageEXT(renderbuffer:UInt, coverageSamples:Int, colorSamples:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-    @:native('glNamedRenderbufferStorageMultisampleEXT')
-    static function glNamedRenderbufferStorageMultisampleEXT(renderbuffer:UInt, samples:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-    @:native('glProgramUniform1fEXT')
-    static function glProgramUniform1fEXT(program:UInt, location:Int, v0:Float) : Void;
-
-    @:native('glProgramUniform1iEXT')
-    static function glProgramUniform1iEXT(program:UInt, location:Int, v0:Int) : Void;
-
-    @:native('glProgramUniform1uiEXT')
-    static function glProgramUniform1uiEXT(program:UInt, location:Int, v0:UInt) : Void;
-
-    @:native('glProgramUniform2fEXT')
-    static function glProgramUniform2fEXT(program:UInt, location:Int, v0:Float, v1:Float) : Void;
-
-    @:native('glProgramUniform2iEXT')
-    static function glProgramUniform2iEXT(program:UInt, location:Int, v0:Int, v1:Int) : Void;
-
-    @:native('glProgramUniform2uiEXT')
-    static function glProgramUniform2uiEXT(program:UInt, location:Int, v0:UInt, v1:UInt) : Void;
-
-    @:native('glProgramUniform3fEXT')
-    static function glProgramUniform3fEXT(program:UInt, location:Int, v0:Float, v1:Float, v2:Float) : Void;
-
-    @:native('glProgramUniform3iEXT')
-    static function glProgramUniform3iEXT(program:UInt, location:Int, v0:Int, v1:Int, v2:Int) : Void;
-
-    @:native('glProgramUniform3uiEXT')
-    static function glProgramUniform3uiEXT(program:UInt, location:Int, v0:UInt, v1:UInt, v2:UInt) : Void;
-
-    @:native('glProgramUniform4fEXT')
-    static function glProgramUniform4fEXT(program:UInt, location:Int, v0:Float, v1:Float, v2:Float, v3:Float) : Void;
-
-    @:native('glProgramUniform4iEXT')
-    static function glProgramUniform4iEXT(program:UInt, location:Int, v0:Int, v1:Int, v2:Int, v3:Int) : Void;
-
-    @:native('glProgramUniform4uiEXT')
-    static function glProgramUniform4uiEXT(program:UInt, location:Int, v0:UInt, v1:UInt, v2:UInt, v3:UInt) : Void;
-
-    @:native('glPushClientAttribDefaultEXT')
-    static function glPushClientAttribDefaultEXT(mask:Int) : Void;
-
-    @:native('glTextureBufferEXT')
-    static function glTextureBufferEXT(texture:UInt, target:Int, internalformat:Int, buffer:UInt) : Void;
-
-    @:native('glTextureParameterfEXT')
-    static function glTextureParameterfEXT(texture:UInt, target:Int, pname:Int, param:Float) : Void;
-
-    @:native('glTextureParameteriEXT')
-    static function glTextureParameteriEXT(texture:UInt, target:Int, pname:Int, param:Int) : Void;
-
-    @:native('glTextureRenderbufferEXT')
-    static function glTextureRenderbufferEXT(texture:UInt, target:Int, renderbuffer:UInt) : Void;
-
-    @:native('glUnmapNamedBufferEXT')
-    static function glUnmapNamedBufferEXT(buffer:UInt) : Bool;
-
-    @:native('glVertexArrayVertexAttribDivisorEXT')
+    static function glBindMultiTextureEXT(texunit:Int, target:Int, texture:UInt) : Void;    @:native('glCheckNamedFramebufferStatusEXT')
+    static function glCheckNamedFramebufferStatusEXT(framebuffer:UInt, target:Int) : Int;    @:native('glClientAttribDefaultEXT')
+    static function glClientAttribDefaultEXT(mask:Int) : Void;    @:native('glCopyMultiTexImage1DEXT')
+    static function glCopyMultiTexImage1DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, border:Int) : Void;    @:native('glCopyMultiTexImage2DEXT')
+    static function glCopyMultiTexImage2DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int, border:Int) : Void;    @:native('glCopyMultiTexSubImage1DEXT')
+    static function glCopyMultiTexSubImage1DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, x:Int, y:Int, width:Int) : Void;    @:native('glCopyMultiTexSubImage2DEXT')
+    static function glCopyMultiTexSubImage2DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;    @:native('glCopyMultiTexSubImage3DEXT')
+    static function glCopyMultiTexSubImage3DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;    @:native('glCopyTextureImage1DEXT')
+    static function glCopyTextureImage1DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, border:Int) : Void;    @:native('glCopyTextureImage2DEXT')
+    static function glCopyTextureImage2DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int, border:Int) : Void;    @:native('glCopyTextureSubImage1DEXT')
+    static function glCopyTextureSubImage1DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, x:Int, y:Int, width:Int) : Void;    @:native('glCopyTextureSubImage2DEXT')
+    static function glCopyTextureSubImage2DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;    @:native('glCopyTextureSubImage3DEXT')
+    static function glCopyTextureSubImage3DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;    @:native('glDisableClientStateIndexedEXT')
+    static function glDisableClientStateIndexedEXT(array:Int, index:UInt) : Void;    @:native('glDisableClientStateiEXT')
+    static function glDisableClientStateiEXT(array:Int, index:UInt) : Void;    @:native('glDisableVertexArrayAttribEXT')
+    static function glDisableVertexArrayAttribEXT(vaobj:UInt, index:UInt) : Void;    @:native('glDisableVertexArrayEXT')
+    static function glDisableVertexArrayEXT(vaobj:UInt, array:Int) : Void;    @:native('glEnableClientStateIndexedEXT')
+    static function glEnableClientStateIndexedEXT(array:Int, index:UInt) : Void;    @:native('glEnableClientStateiEXT')
+    static function glEnableClientStateiEXT(array:Int, index:UInt) : Void;    @:native('glEnableVertexArrayAttribEXT')
+    static function glEnableVertexArrayAttribEXT(vaobj:UInt, index:UInt) : Void;    @:native('glEnableVertexArrayEXT')
+    static function glEnableVertexArrayEXT(vaobj:UInt, array:Int) : Void;    @:native('glFramebufferDrawBufferEXT')
+    static function glFramebufferDrawBufferEXT(framebuffer:UInt, mode:Int) : Void;    @:native('glFramebufferReadBufferEXT')
+    static function glFramebufferReadBufferEXT(framebuffer:UInt, mode:Int) : Void;    @:native('glGenerateMultiTexMipmapEXT')
+    static function glGenerateMultiTexMipmapEXT(texunit:Int, target:Int) : Void;    @:native('glGenerateTextureMipmapEXT')
+    static function glGenerateTextureMipmapEXT(texture:UInt, target:Int) : Void;    @:native('glMatrixFrustumEXT')
+    static function glMatrixFrustumEXT(matrixMode:Int, l:Float, r:Float, b:Float, t:Float, n:Float, f:Float) : Void;    @:native('glMatrixLoadIdentityEXT')
+    static function glMatrixLoadIdentityEXT(matrixMode:Int) : Void;    @:native('glMatrixOrthoEXT')
+    static function glMatrixOrthoEXT(matrixMode:Int, l:Float, r:Float, b:Float, t:Float, n:Float, f:Float) : Void;    @:native('glMatrixPopEXT')
+    static function glMatrixPopEXT(matrixMode:Int) : Void;    @:native('glMatrixPushEXT')
+    static function glMatrixPushEXT(matrixMode:Int) : Void;    @:native('glMatrixRotatedEXT')
+    static function glMatrixRotatedEXT(matrixMode:Int, angle:Float, x:Float, y:Float, z:Float) : Void;    @:native('glMatrixRotatefEXT')
+    static function glMatrixRotatefEXT(matrixMode:Int, angle:Float, x:Float, y:Float, z:Float) : Void;    @:native('glMatrixScaledEXT')
+    static function glMatrixScaledEXT(matrixMode:Int, x:Float, y:Float, z:Float) : Void;    @:native('glMatrixScalefEXT')
+    static function glMatrixScalefEXT(matrixMode:Int, x:Float, y:Float, z:Float) : Void;    @:native('glMatrixTranslatedEXT')
+    static function glMatrixTranslatedEXT(matrixMode:Int, x:Float, y:Float, z:Float) : Void;    @:native('glMatrixTranslatefEXT')
+    static function glMatrixTranslatefEXT(matrixMode:Int, x:Float, y:Float, z:Float) : Void;    @:native('glMultiTexBufferEXT')
+    static function glMultiTexBufferEXT(texunit:Int, target:Int, internalformat:Int, buffer:UInt) : Void;    @:native('glMultiTexEnvfEXT')
+    static function glMultiTexEnvfEXT(texunit:Int, target:Int, pname:Int, param:Float) : Void;    @:native('glMultiTexEnviEXT')
+    static function glMultiTexEnviEXT(texunit:Int, target:Int, pname:Int, param:Int) : Void;    @:native('glMultiTexGendEXT')
+    static function glMultiTexGendEXT(texunit:Int, coord:Int, pname:Int, param:Float) : Void;    @:native('glMultiTexGenfEXT')
+    static function glMultiTexGenfEXT(texunit:Int, coord:Int, pname:Int, param:Float) : Void;    @:native('glMultiTexGeniEXT')
+    static function glMultiTexGeniEXT(texunit:Int, coord:Int, pname:Int, param:Int) : Void;    @:native('glMultiTexParameterfEXT')
+    static function glMultiTexParameterfEXT(texunit:Int, target:Int, pname:Int, param:Float) : Void;    @:native('glMultiTexParameteriEXT')
+    static function glMultiTexParameteriEXT(texunit:Int, target:Int, pname:Int, param:Int) : Void;    @:native('glMultiTexRenderbufferEXT')
+    static function glMultiTexRenderbufferEXT(texunit:Int, target:Int, renderbuffer:UInt) : Void;    @:native('glNamedFramebufferRenderbufferEXT')
+    static function glNamedFramebufferRenderbufferEXT(framebuffer:UInt, attachment:Int, renderbuffertarget:Int, renderbuffer:UInt) : Void;    @:native('glNamedFramebufferTexture1DEXT')
+    static function glNamedFramebufferTexture1DEXT(framebuffer:UInt, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;    @:native('glNamedFramebufferTexture2DEXT')
+    static function glNamedFramebufferTexture2DEXT(framebuffer:UInt, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;    @:native('glNamedFramebufferTexture3DEXT')
+    static function glNamedFramebufferTexture3DEXT(framebuffer:UInt, attachment:Int, textarget:Int, texture:UInt, level:Int, zoffset:Int) : Void;    @:native('glNamedFramebufferTextureEXT')
+    static function glNamedFramebufferTextureEXT(framebuffer:UInt, attachment:Int, texture:UInt, level:Int) : Void;    @:native('glNamedFramebufferTextureFaceEXT')
+    static function glNamedFramebufferTextureFaceEXT(framebuffer:UInt, attachment:Int, texture:UInt, level:Int, face:Int) : Void;    @:native('glNamedFramebufferTextureLayerEXT')
+    static function glNamedFramebufferTextureLayerEXT(framebuffer:UInt, attachment:Int, texture:UInt, level:Int, layer:Int) : Void;    @:native('glNamedProgramLocalParameter4dEXT')
+    static function glNamedProgramLocalParameter4dEXT(program:UInt, target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glNamedProgramLocalParameter4fEXT')
+    static function glNamedProgramLocalParameter4fEXT(program:UInt, target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glNamedProgramLocalParameterI4iEXT')
+    static function glNamedProgramLocalParameterI4iEXT(program:UInt, target:Int, index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;    @:native('glNamedProgramLocalParameterI4uiEXT')
+    static function glNamedProgramLocalParameterI4uiEXT(program:UInt, target:Int, index:UInt, x:UInt, y:UInt, z:UInt, w:UInt) : Void;    @:native('glNamedRenderbufferStorageEXT')
+    static function glNamedRenderbufferStorageEXT(renderbuffer:UInt, internalformat:Int, width:Int, height:Int) : Void;    @:native('glNamedRenderbufferStorageMultisampleCoverageEXT')
+    static function glNamedRenderbufferStorageMultisampleCoverageEXT(renderbuffer:UInt, coverageSamples:Int, colorSamples:Int, internalformat:Int, width:Int, height:Int) : Void;    @:native('glNamedRenderbufferStorageMultisampleEXT')
+    static function glNamedRenderbufferStorageMultisampleEXT(renderbuffer:UInt, samples:Int, internalformat:Int, width:Int, height:Int) : Void;    @:native('glProgramUniform1fEXT')
+    static function glProgramUniform1fEXT(program:UInt, location:Int, v0:Float) : Void;    @:native('glProgramUniform1iEXT')
+    static function glProgramUniform1iEXT(program:UInt, location:Int, v0:Int) : Void;    @:native('glProgramUniform1uiEXT')
+    static function glProgramUniform1uiEXT(program:UInt, location:Int, v0:UInt) : Void;    @:native('glProgramUniform2fEXT')
+    static function glProgramUniform2fEXT(program:UInt, location:Int, v0:Float, v1:Float) : Void;    @:native('glProgramUniform2iEXT')
+    static function glProgramUniform2iEXT(program:UInt, location:Int, v0:Int, v1:Int) : Void;    @:native('glProgramUniform2uiEXT')
+    static function glProgramUniform2uiEXT(program:UInt, location:Int, v0:UInt, v1:UInt) : Void;    @:native('glProgramUniform3fEXT')
+    static function glProgramUniform3fEXT(program:UInt, location:Int, v0:Float, v1:Float, v2:Float) : Void;    @:native('glProgramUniform3iEXT')
+    static function glProgramUniform3iEXT(program:UInt, location:Int, v0:Int, v1:Int, v2:Int) : Void;    @:native('glProgramUniform3uiEXT')
+    static function glProgramUniform3uiEXT(program:UInt, location:Int, v0:UInt, v1:UInt, v2:UInt) : Void;    @:native('glProgramUniform4fEXT')
+    static function glProgramUniform4fEXT(program:UInt, location:Int, v0:Float, v1:Float, v2:Float, v3:Float) : Void;    @:native('glProgramUniform4iEXT')
+    static function glProgramUniform4iEXT(program:UInt, location:Int, v0:Int, v1:Int, v2:Int, v3:Int) : Void;    @:native('glProgramUniform4uiEXT')
+    static function glProgramUniform4uiEXT(program:UInt, location:Int, v0:UInt, v1:UInt, v2:UInt, v3:UInt) : Void;    @:native('glPushClientAttribDefaultEXT')
+    static function glPushClientAttribDefaultEXT(mask:Int) : Void;    @:native('glTextureBufferEXT')
+    static function glTextureBufferEXT(texture:UInt, target:Int, internalformat:Int, buffer:UInt) : Void;    @:native('glTextureParameterfEXT')
+    static function glTextureParameterfEXT(texture:UInt, target:Int, pname:Int, param:Float) : Void;    @:native('glTextureParameteriEXT')
+    static function glTextureParameteriEXT(texture:UInt, target:Int, pname:Int, param:Int) : Void;    @:native('glTextureRenderbufferEXT')
+    static function glTextureRenderbufferEXT(texture:UInt, target:Int, renderbuffer:UInt) : Void;    @:native('glUnmapNamedBufferEXT')
+    static function glUnmapNamedBufferEXT(buffer:UInt) : Bool;    @:native('glVertexArrayVertexAttribDivisorEXT')
     static function glVertexArrayVertexAttribDivisorEXT(vaobj:UInt, index:UInt, divisor:UInt) : Void;
 
-
-
-    // static function glCompressedMultiTexImage1DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedMultiTexImage2DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedMultiTexImage3DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedMultiTexSubImage1DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedMultiTexSubImage2DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedMultiTexSubImage3DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTextureImage1DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTextureImage2DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTextureImage3DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTextureSubImage1DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTextureSubImage2DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glCompressedTextureSubImage3DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;
-    // static function glFlushMappedNamedBufferRangeEXT(buffer:UInt, offset:GLintptr, length:GLsizeiptr) : Void;
-    // static function glFramebufferDrawBuffersEXT(framebuffer:UInt, n:Int, bufs:const GLenum*) : Void;
-    // static function glGetCompressedMultiTexImageEXT(texunit:Int, target:Int, level:Int, *img:Void) : Void;
-    // static function glGetCompressedTextureImageEXT(texture:UInt, target:Int, level:Int, *img:Void) : Void;
-    // static function glGetDoubleIndexedvEXT(target:Int, index:UInt, params:GLdouble*) : Void;
-    // static function glGetDoublei_vEXT(pname:Int, index:UInt, params:GLdouble*) : Void;
-    // static function glGetFloatIndexedvEXT(target:Int, index:UInt, params:GLfloat*) : Void;
-    // static function glGetFloati_vEXT(pname:Int, index:UInt, params:GLfloat*) : Void;
-    // static function glGetFramebufferParameterivEXT(framebuffer:UInt, pname:Int, param:GLint*) : Void;
-    // static function glGetMultiTexEnvfvEXT(texunit:Int, target:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetMultiTexEnvivEXT(texunit:Int, target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetMultiTexGendvEXT(texunit:Int, coord:Int, pname:Int, params:GLdouble*) : Void;
-    // static function glGetMultiTexGenfvEXT(texunit:Int, coord:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetMultiTexGenivEXT(texunit:Int, coord:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetMultiTexImageEXT(texunit:Int, target:Int, level:Int, format:Int, type:Int, *pixels:Void) : Void;
-    // static function glGetMultiTexLevelParameterfvEXT(texunit:Int, target:Int, level:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetMultiTexLevelParameterivEXT(texunit:Int, target:Int, level:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetMultiTexParameterIivEXT(texunit:Int, target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetMultiTexParameterIuivEXT(texunit:Int, target:Int, pname:Int, params:GLuint*) : Void;
-    // static function glGetMultiTexParameterfvEXT(texunit:Int, target:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetMultiTexParameterivEXT(texunit:Int, target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetNamedBufferParameterivEXT(buffer:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetNamedBufferPointervEXT(buffer:UInt, pname:Int, params:void**) : Void;
-    // static function glGetNamedBufferSubDataEXT(buffer:UInt, offset:GLintptr, size:GLsizeiptr, *data:Void) : Void;
-    // static function glGetNamedFramebufferAttachmentParameterivEXT(framebuffer:UInt, attachment:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetNamedProgramLocalParameterIivEXT(program:UInt, target:Int, index:UInt, params:GLint*) : Void;
-    // static function glGetNamedProgramLocalParameterIuivEXT(program:UInt, target:Int, index:UInt, params:GLuint*) : Void;
-    // static function glGetNamedProgramLocalParameterdvEXT(program:UInt, target:Int, index:UInt, params:GLdouble*) : Void;
-    // static function glGetNamedProgramLocalParameterfvEXT(program:UInt, target:Int, index:UInt, params:GLfloat*) : Void;
-    // static function glGetNamedProgramStringEXT(program:UInt, target:Int, pname:Int, *string:Void) : Void;
-    // static function glGetNamedProgramivEXT(program:UInt, target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetNamedRenderbufferParameterivEXT(renderbuffer:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetPointerIndexedvEXT(target:Int, index:UInt, params:void**) : Void;
-    // static function glGetPointeri_vEXT(pname:Int, index:UInt, params:void**) : Void;
-    // static function glGetTextureImageEXT(texture:UInt, target:Int, level:Int, format:Int, type:Int, *pixels:Void) : Void;
-    // static function glGetTextureLevelParameterfvEXT(texture:UInt, target:Int, level:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetTextureLevelParameterivEXT(texture:UInt, target:Int, level:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetTextureParameterIivEXT(texture:UInt, target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetTextureParameterIuivEXT(texture:UInt, target:Int, pname:Int, params:GLuint*) : Void;
-    // static function glGetTextureParameterfvEXT(texture:UInt, target:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetTextureParameterivEXT(texture:UInt, target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetVertexArrayIntegeri_vEXT(vaobj:UInt, index:UInt, pname:Int, param:GLint*) : Void;
-    // static function glGetVertexArrayIntegervEXT(vaobj:UInt, pname:Int, param:GLint*) : Void;
-    // static function glGetVertexArrayPointeri_vEXT(vaobj:UInt, index:UInt, pname:Int, param:void**) : Void;
-    // static function glGetVertexArrayPointervEXT(vaobj:UInt, pname:Int, param:void**) : Void;
-    // static function glMapNamedBufferEXT(buffer:UInt, access:Int) : void *;
-    // static function glMapNamedBufferRangeEXT(buffer:UInt, offset:GLintptr, length:GLsizeiptr, access:Int) : void *;
-    // static function glMatrixLoadTransposedEXT(matrixMode:Int, m:const GLdouble*) : Void;
-    // static function glMatrixLoadTransposefEXT(matrixMode:Int, m:const GLfloat*) : Void;
-    // static function glMatrixLoaddEXT(matrixMode:Int, m:const GLdouble*) : Void;
-    // static function glMatrixLoadfEXT(matrixMode:Int, m:const GLfloat*) : Void;
-    // static function glMatrixMultTransposedEXT(matrixMode:Int, m:const GLdouble*) : Void;
-    // static function glMatrixMultTransposefEXT(matrixMode:Int, m:const GLfloat*) : Void;
-    // static function glMatrixMultdEXT(matrixMode:Int, m:const GLdouble*) : Void;
-    // static function glMatrixMultfEXT(matrixMode:Int, m:const GLfloat*) : Void;
-    // static function glMultiTexCoordPointerEXT(texunit:Int, size:Int, type:Int, stride:Int, *pointer:const void) : Void;
-    // static function glMultiTexEnvfvEXT(texunit:Int, target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glMultiTexEnvivEXT(texunit:Int, target:Int, pname:Int, params:const GLint*) : Void;
-    // static function glMultiTexGendvEXT(texunit:Int, coord:Int, pname:Int, params:const GLdouble*) : Void;
-    // static function glMultiTexGenfvEXT(texunit:Int, coord:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glMultiTexGenivEXT(texunit:Int, coord:Int, pname:Int, params:const GLint*) : Void;
-    // static function glMultiTexImage1DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glMultiTexImage2DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glMultiTexImage3DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glMultiTexParameterIivEXT(texunit:Int, target:Int, pname:Int, params:const GLint*) : Void;
-    // static function glMultiTexParameterIuivEXT(texunit:Int, target:Int, pname:Int, params:const GLuint*) : Void;
-    // static function glMultiTexParameterfvEXT(texunit:Int, target:Int, pname:Int, param:const GLfloat*) : Void;
-    // static function glMultiTexParameterivEXT(texunit:Int, target:Int, pname:Int, param:const GLint*) : Void;
-    // static function glMultiTexSubImage1DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glMultiTexSubImage2DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glMultiTexSubImage3DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glNamedBufferDataEXT(buffer:UInt, size:GLsizeiptr, *data:const void, usage:Int) : Void;
-    // static function glNamedBufferSubDataEXT(buffer:UInt, offset:GLintptr, size:GLsizeiptr, *data:const void) : Void;
-    // static function glNamedCopyBufferSubDataEXT(readBuffer:UInt, writeBuffer:UInt, readOffset:GLintptr, writeOffset:GLintptr, size:GLsizeiptr) : Void;
-    // static function glNamedProgramLocalParameter4dvEXT(program:UInt, target:Int, index:UInt, params:const GLdouble*) : Void;
-    // static function glNamedProgramLocalParameter4fvEXT(program:UInt, target:Int, index:UInt, params:const GLfloat*) : Void;
-    // static function glNamedProgramLocalParameterI4ivEXT(program:UInt, target:Int, index:UInt, params:const GLint*) : Void;
-    // static function glNamedProgramLocalParameterI4uivEXT(program:UInt, target:Int, index:UInt, params:const GLuint*) : Void;
-    // static function glNamedProgramLocalParameters4fvEXT(program:UInt, target:Int, index:UInt, count:Int, params:const GLfloat*) : Void;
-    // static function glNamedProgramLocalParametersI4ivEXT(program:UInt, target:Int, index:UInt, count:Int, params:const GLint*) : Void;
-    // static function glNamedProgramLocalParametersI4uivEXT(program:UInt, target:Int, index:UInt, count:Int, params:const GLuint*) : Void;
-    // static function glNamedProgramStringEXT(program:UInt, target:Int, format:Int, len:Int, *string:const void) : Void;
-    // static function glProgramUniform1fvEXT(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform1ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
-    // static function glProgramUniform1uivEXT(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
-    // static function glProgramUniform2fvEXT(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform2ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
-    // static function glProgramUniform2uivEXT(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
-    // static function glProgramUniform3fvEXT(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform3ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
-    // static function glProgramUniform3uivEXT(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
-    // static function glProgramUniform4fvEXT(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform4ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
-    // static function glProgramUniform4uivEXT(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
-    // static function glProgramUniformMatrix2fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix2x3fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix2x4fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix3fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix3x2fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix3x4fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix4fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix4x2fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glProgramUniformMatrix4x3fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
-    // static function glTextureImage1DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTextureImage2DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTextureImage3DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTextureParameterIivEXT(texture:UInt, target:Int, pname:Int, params:const GLint*) : Void;
-    // static function glTextureParameterIuivEXT(texture:UInt, target:Int, pname:Int, params:const GLuint*) : Void;
-    // static function glTextureParameterfvEXT(texture:UInt, target:Int, pname:Int, param:const GLfloat*) : Void;
-    // static function glTextureParameterivEXT(texture:UInt, target:Int, pname:Int, param:const GLint*) : Void;
-    // static function glTextureSubImage1DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTextureSubImage2DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTextureSubImage3DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glVertexArrayColorOffsetEXT(vaobj:UInt, buffer:UInt, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;
-    // static function glVertexArrayEdgeFlagOffsetEXT(vaobj:UInt, buffer:UInt, stride:Int, offset:GLintptr) : Void;
-    // static function glVertexArrayFogCoordOffsetEXT(vaobj:UInt, buffer:UInt, type:Int, stride:Int, offset:GLintptr) : Void;
-    // static function glVertexArrayIndexOffsetEXT(vaobj:UInt, buffer:UInt, type:Int, stride:Int, offset:GLintptr) : Void;
-    // static function glVertexArrayMultiTexCoordOffsetEXT(vaobj:UInt, buffer:UInt, texunit:Int, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;
-    // static function glVertexArrayNormalOffsetEXT(vaobj:UInt, buffer:UInt, type:Int, stride:Int, offset:GLintptr) : Void;
-    // static function glVertexArraySecondaryColorOffsetEXT(vaobj:UInt, buffer:UInt, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;
-    // static function glVertexArrayTexCoordOffsetEXT(vaobj:UInt, buffer:UInt, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;
-    // static function glVertexArrayVertexAttribIOffsetEXT(vaobj:UInt, buffer:UInt, index:UInt, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;
-    // static function glVertexArrayVertexAttribOffsetEXT(vaobj:UInt, buffer:UInt, index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, offset:GLintptr) : Void;
-    // static function glVertexArrayVertexOffsetEXT(vaobj:UInt, buffer:UInt, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;
-
+    // static function glCompressedMultiTexImage1DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedMultiTexImage2DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedMultiTexImage3DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedMultiTexSubImage1DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedMultiTexSubImage2DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedMultiTexSubImage3DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTextureImage1DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTextureImage2DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTextureImage3DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTextureSubImage1DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTextureSubImage2DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glCompressedTextureSubImage3DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;    // static function glFlushMappedNamedBufferRangeEXT(buffer:UInt, offset:GLintptr, length:GLsizeiptr) : Void;    // static function glFramebufferDrawBuffersEXT(framebuffer:UInt, n:Int, bufs:const GLenum*) : Void;    // static function glGetCompressedMultiTexImageEXT(texunit:Int, target:Int, level:Int, *img:Void) : Void;    // static function glGetCompressedTextureImageEXT(texture:UInt, target:Int, level:Int, *img:Void) : Void;    // static function glGetDoubleIndexedvEXT(target:Int, index:UInt, params:GLdouble*) : Void;    // static function glGetDoublei_vEXT(pname:Int, index:UInt, params:GLdouble*) : Void;    // static function glGetFloatIndexedvEXT(target:Int, index:UInt, params:GLfloat*) : Void;    // static function glGetFloati_vEXT(pname:Int, index:UInt, params:GLfloat*) : Void;    // static function glGetFramebufferParameterivEXT(framebuffer:UInt, pname:Int, param:GLint*) : Void;    // static function glGetMultiTexEnvfvEXT(texunit:Int, target:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetMultiTexEnvivEXT(texunit:Int, target:Int, pname:Int, params:GLint*) : Void;    // static function glGetMultiTexGendvEXT(texunit:Int, coord:Int, pname:Int, params:GLdouble*) : Void;    // static function glGetMultiTexGenfvEXT(texunit:Int, coord:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetMultiTexGenivEXT(texunit:Int, coord:Int, pname:Int, params:GLint*) : Void;    // static function glGetMultiTexImageEXT(texunit:Int, target:Int, level:Int, format:Int, type:Int, *pixels:Void) : Void;    // static function glGetMultiTexLevelParameterfvEXT(texunit:Int, target:Int, level:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetMultiTexLevelParameterivEXT(texunit:Int, target:Int, level:Int, pname:Int, params:GLint*) : Void;    // static function glGetMultiTexParameterIivEXT(texunit:Int, target:Int, pname:Int, params:GLint*) : Void;    // static function glGetMultiTexParameterIuivEXT(texunit:Int, target:Int, pname:Int, params:GLuint*) : Void;    // static function glGetMultiTexParameterfvEXT(texunit:Int, target:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetMultiTexParameterivEXT(texunit:Int, target:Int, pname:Int, params:GLint*) : Void;    // static function glGetNamedBufferParameterivEXT(buffer:UInt, pname:Int, params:GLint*) : Void;    // static function glGetNamedBufferPointervEXT(buffer:UInt, pname:Int, params:void**) : Void;    // static function glGetNamedBufferSubDataEXT(buffer:UInt, offset:GLintptr, size:GLsizeiptr, *data:Void) : Void;    // static function glGetNamedFramebufferAttachmentParameterivEXT(framebuffer:UInt, attachment:Int, pname:Int, params:GLint*) : Void;    // static function glGetNamedProgramLocalParameterIivEXT(program:UInt, target:Int, index:UInt, params:GLint*) : Void;    // static function glGetNamedProgramLocalParameterIuivEXT(program:UInt, target:Int, index:UInt, params:GLuint*) : Void;    // static function glGetNamedProgramLocalParameterdvEXT(program:UInt, target:Int, index:UInt, params:GLdouble*) : Void;    // static function glGetNamedProgramLocalParameterfvEXT(program:UInt, target:Int, index:UInt, params:GLfloat*) : Void;    // static function glGetNamedProgramStringEXT(program:UInt, target:Int, pname:Int, *string:Void) : Void;    // static function glGetNamedProgramivEXT(program:UInt, target:Int, pname:Int, params:GLint*) : Void;    // static function glGetNamedRenderbufferParameterivEXT(renderbuffer:UInt, pname:Int, params:GLint*) : Void;    // static function glGetPointerIndexedvEXT(target:Int, index:UInt, params:void**) : Void;    // static function glGetPointeri_vEXT(pname:Int, index:UInt, params:void**) : Void;    // static function glGetTextureImageEXT(texture:UInt, target:Int, level:Int, format:Int, type:Int, *pixels:Void) : Void;    // static function glGetTextureLevelParameterfvEXT(texture:UInt, target:Int, level:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetTextureLevelParameterivEXT(texture:UInt, target:Int, level:Int, pname:Int, params:GLint*) : Void;    // static function glGetTextureParameterIivEXT(texture:UInt, target:Int, pname:Int, params:GLint*) : Void;    // static function glGetTextureParameterIuivEXT(texture:UInt, target:Int, pname:Int, params:GLuint*) : Void;    // static function glGetTextureParameterfvEXT(texture:UInt, target:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetTextureParameterivEXT(texture:UInt, target:Int, pname:Int, params:GLint*) : Void;    // static function glGetVertexArrayIntegeri_vEXT(vaobj:UInt, index:UInt, pname:Int, param:GLint*) : Void;    // static function glGetVertexArrayIntegervEXT(vaobj:UInt, pname:Int, param:GLint*) : Void;    // static function glGetVertexArrayPointeri_vEXT(vaobj:UInt, index:UInt, pname:Int, param:void**) : Void;    // static function glGetVertexArrayPointervEXT(vaobj:UInt, pname:Int, param:void**) : Void;    // static function glMapNamedBufferEXT(buffer:UInt, access:Int) : void *;    // static function glMapNamedBufferRangeEXT(buffer:UInt, offset:GLintptr, length:GLsizeiptr, access:Int) : void *;    // static function glMatrixLoadTransposedEXT(matrixMode:Int, m:const GLdouble*) : Void;    // static function glMatrixLoadTransposefEXT(matrixMode:Int, m:const GLfloat*) : Void;    // static function glMatrixLoaddEXT(matrixMode:Int, m:const GLdouble*) : Void;    // static function glMatrixLoadfEXT(matrixMode:Int, m:const GLfloat*) : Void;    // static function glMatrixMultTransposedEXT(matrixMode:Int, m:const GLdouble*) : Void;    // static function glMatrixMultTransposefEXT(matrixMode:Int, m:const GLfloat*) : Void;    // static function glMatrixMultdEXT(matrixMode:Int, m:const GLdouble*) : Void;    // static function glMatrixMultfEXT(matrixMode:Int, m:const GLfloat*) : Void;    // static function glMultiTexCoordPointerEXT(texunit:Int, size:Int, type:Int, stride:Int, *pointer:const void) : Void;    // static function glMultiTexEnvfvEXT(texunit:Int, target:Int, pname:Int, params:const GLfloat*) : Void;    // static function glMultiTexEnvivEXT(texunit:Int, target:Int, pname:Int, params:const GLint*) : Void;    // static function glMultiTexGendvEXT(texunit:Int, coord:Int, pname:Int, params:const GLdouble*) : Void;    // static function glMultiTexGenfvEXT(texunit:Int, coord:Int, pname:Int, params:const GLfloat*) : Void;    // static function glMultiTexGenivEXT(texunit:Int, coord:Int, pname:Int, params:const GLint*) : Void;    // static function glMultiTexImage1DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glMultiTexImage2DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glMultiTexImage3DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glMultiTexParameterIivEXT(texunit:Int, target:Int, pname:Int, params:const GLint*) : Void;    // static function glMultiTexParameterIuivEXT(texunit:Int, target:Int, pname:Int, params:const GLuint*) : Void;    // static function glMultiTexParameterfvEXT(texunit:Int, target:Int, pname:Int, param:const GLfloat*) : Void;    // static function glMultiTexParameterivEXT(texunit:Int, target:Int, pname:Int, param:const GLint*) : Void;    // static function glMultiTexSubImage1DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glMultiTexSubImage2DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glMultiTexSubImage3DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glNamedBufferDataEXT(buffer:UInt, size:GLsizeiptr, *data:const void, usage:Int) : Void;    // static function glNamedBufferSubDataEXT(buffer:UInt, offset:GLintptr, size:GLsizeiptr, *data:const void) : Void;    // static function glNamedCopyBufferSubDataEXT(readBuffer:UInt, writeBuffer:UInt, readOffset:GLintptr, writeOffset:GLintptr, size:GLsizeiptr) : Void;    // static function glNamedProgramLocalParameter4dvEXT(program:UInt, target:Int, index:UInt, params:const GLdouble*) : Void;    // static function glNamedProgramLocalParameter4fvEXT(program:UInt, target:Int, index:UInt, params:const GLfloat*) : Void;    // static function glNamedProgramLocalParameterI4ivEXT(program:UInt, target:Int, index:UInt, params:const GLint*) : Void;    // static function glNamedProgramLocalParameterI4uivEXT(program:UInt, target:Int, index:UInt, params:const GLuint*) : Void;    // static function glNamedProgramLocalParameters4fvEXT(program:UInt, target:Int, index:UInt, count:Int, params:const GLfloat*) : Void;    // static function glNamedProgramLocalParametersI4ivEXT(program:UInt, target:Int, index:UInt, count:Int, params:const GLint*) : Void;    // static function glNamedProgramLocalParametersI4uivEXT(program:UInt, target:Int, index:UInt, count:Int, params:const GLuint*) : Void;    // static function glNamedProgramStringEXT(program:UInt, target:Int, format:Int, len:Int, *string:const void) : Void;    // static function glProgramUniform1fvEXT(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;    // static function glProgramUniform1ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void;    // static function glProgramUniform1uivEXT(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;    // static function glProgramUniform2fvEXT(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;    // static function glProgramUniform2ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void;    // static function glProgramUniform2uivEXT(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;    // static function glProgramUniform3fvEXT(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;    // static function glProgramUniform3ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void;    // static function glProgramUniform3uivEXT(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;    // static function glProgramUniform4fvEXT(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;    // static function glProgramUniform4ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void;    // static function glProgramUniform4uivEXT(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;    // static function glProgramUniformMatrix2fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix2x3fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix2x4fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix3fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix3x2fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix3x4fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix4fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix4x2fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glProgramUniformMatrix4x3fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;    // static function glTextureImage1DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTextureImage2DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTextureImage3DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTextureParameterIivEXT(texture:UInt, target:Int, pname:Int, params:const GLint*) : Void;    // static function glTextureParameterIuivEXT(texture:UInt, target:Int, pname:Int, params:const GLuint*) : Void;    // static function glTextureParameterfvEXT(texture:UInt, target:Int, pname:Int, param:const GLfloat*) : Void;    // static function glTextureParameterivEXT(texture:UInt, target:Int, pname:Int, param:const GLint*) : Void;    // static function glTextureSubImage1DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTextureSubImage2DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTextureSubImage3DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glVertexArrayColorOffsetEXT(vaobj:UInt, buffer:UInt, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;    // static function glVertexArrayEdgeFlagOffsetEXT(vaobj:UInt, buffer:UInt, stride:Int, offset:GLintptr) : Void;    // static function glVertexArrayFogCoordOffsetEXT(vaobj:UInt, buffer:UInt, type:Int, stride:Int, offset:GLintptr) : Void;    // static function glVertexArrayIndexOffsetEXT(vaobj:UInt, buffer:UInt, type:Int, stride:Int, offset:GLintptr) : Void;    // static function glVertexArrayMultiTexCoordOffsetEXT(vaobj:UInt, buffer:UInt, texunit:Int, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;    // static function glVertexArrayNormalOffsetEXT(vaobj:UInt, buffer:UInt, type:Int, stride:Int, offset:GLintptr) : Void;    // static function glVertexArraySecondaryColorOffsetEXT(vaobj:UInt, buffer:UInt, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;    // static function glVertexArrayTexCoordOffsetEXT(vaobj:UInt, buffer:UInt, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;    // static function glVertexArrayVertexAttribIOffsetEXT(vaobj:UInt, buffer:UInt, index:UInt, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;    // static function glVertexArrayVertexAttribOffsetEXT(vaobj:UInt, buffer:UInt, index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, offset:GLintptr) : Void;    // static function glVertexArrayVertexOffsetEXT(vaobj:UInt, buffer:UInt, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;
 
 //GL_EXT_draw_buffers2
     inline static var GL_EXT_draw_buffers2                                            = 1;
@@ -8917,22 +6486,12 @@ extern class GL {
 
 
     @:native('glColorMaskIndexedEXT')
-    static function glColorMaskIndexedEXT(buf:UInt, r:Bool, g:Bool, b:Bool, a:Bool) : Void;
-
-    @:native('glDisableIndexedEXT')
-    static function glDisableIndexedEXT(target:Int, index:UInt) : Void;
-
-    @:native('glEnableIndexedEXT')
-    static function glEnableIndexedEXT(target:Int, index:UInt) : Void;
-
-    @:native('glIsEnabledIndexedEXT')
+    static function glColorMaskIndexedEXT(buf:UInt, r:Bool, g:Bool, b:Bool, a:Bool) : Void;    @:native('glDisableIndexedEXT')
+    static function glDisableIndexedEXT(target:Int, index:UInt) : Void;    @:native('glEnableIndexedEXT')
+    static function glEnableIndexedEXT(target:Int, index:UInt) : Void;    @:native('glIsEnabledIndexedEXT')
     static function glIsEnabledIndexedEXT(target:Int, index:UInt) : Bool;
 
-
-
-    // static function glGetBooleanIndexedvEXT(value:Int, index:UInt, data:GLboolean*) : Void;
-    // static function glGetIntegerIndexedvEXT(value:Int, index:UInt, data:GLint*) : Void;
-
+    // static function glGetBooleanIndexedvEXT(value:Int, index:UInt, data:GLboolean*) : Void;    // static function glGetIntegerIndexedvEXT(value:Int, index:UInt, data:GLint*) : Void;
 
 //GL_EXT_draw_instanced
     inline static var GL_EXT_draw_instanced                                           = 1;
@@ -8943,10 +6502,7 @@ extern class GL {
     @:native('glDrawArraysInstancedEXT')
     static function glDrawArraysInstancedEXT(mode:Int, start:Int, count:Int, primcount:Int) : Void;
 
-
-
     // static function glDrawElementsInstancedEXT(mode:Int, count:Int, type:Int, *indices:const void, primcount:Int) : Void;
-
 
 //GL_EXT_draw_range_elements
     inline static var GL_EXT_draw_range_elements                                      = 1;
@@ -8959,7 +6515,6 @@ extern class GL {
 
 
     // static function glDrawRangeElementsEXT(mode:Int, start:UInt, end:UInt, count:Int, type:Int, *indices:const void) : Void;
-
 
 //GL_EXT_fog_coord
     inline static var GL_EXT_fog_coord                                                = 1;
@@ -8976,17 +6531,10 @@ extern class GL {
 
 
     @:native('glFogCoorddEXT')
-    static function glFogCoorddEXT(coord:Float) : Void;
-
-    @:native('glFogCoordfEXT')
+    static function glFogCoorddEXT(coord:Float) : Void;    @:native('glFogCoordfEXT')
     static function glFogCoordfEXT(coord:Float) : Void;
 
-
-
-    // static function glFogCoordPointerEXT(type:Int, stride:Int, *pointer:const void) : Void;
-    // static function glFogCoorddvEXT(*coord:const GLdouble) : Void;
-    // static function glFogCoordfvEXT(*coord:const GLfloat) : Void;
-
+    // static function glFogCoordPointerEXT(type:Int, stride:Int, *pointer:const void) : Void;    // static function glFogCoorddvEXT(*coord:const GLdouble) : Void;    // static function glFogCoordfvEXT(*coord:const GLfloat) : Void;
 
 //GL_EXT_fragment_lighting
     inline static var GL_EXT_fragment_lighting                                        = 1;
@@ -9009,38 +6557,14 @@ extern class GL {
 
 
     @:native('glFragmentColorMaterialEXT')
-    static function glFragmentColorMaterialEXT(face:Int, mode:Int) : Void;
-
-    @:native('glFragmentLightModelfEXT')
-    static function glFragmentLightModelfEXT(pname:Int, param:Float) : Void;
-
-    @:native('glFragmentLightModeliEXT')
-    static function glFragmentLightModeliEXT(pname:Int, param:Int) : Void;
-
-    @:native('glFragmentLightfEXT')
-    static function glFragmentLightfEXT(light:Int, pname:Int, param:Float) : Void;
-
-    @:native('glFragmentLightiEXT')
-    static function glFragmentLightiEXT(light:Int, pname:Int, param:Int) : Void;
-
-    @:native('glLightEnviEXT')
+    static function glFragmentColorMaterialEXT(face:Int, mode:Int) : Void;    @:native('glFragmentLightModelfEXT')
+    static function glFragmentLightModelfEXT(pname:Int, param:Float) : Void;    @:native('glFragmentLightModeliEXT')
+    static function glFragmentLightModeliEXT(pname:Int, param:Int) : Void;    @:native('glFragmentLightfEXT')
+    static function glFragmentLightfEXT(light:Int, pname:Int, param:Float) : Void;    @:native('glFragmentLightiEXT')
+    static function glFragmentLightiEXT(light:Int, pname:Int, param:Int) : Void;    @:native('glLightEnviEXT')
     static function glLightEnviEXT(pname:Int, param:Int) : Void;
 
-
-
-    // static function glFragmentLightModelfvEXT(pname:Int, params:GLfloat*) : Void;
-    // static function glFragmentLightModelivEXT(pname:Int, params:GLint*) : Void;
-    // static function glFragmentLightfvEXT(light:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glFragmentLightivEXT(light:Int, pname:Int, params:GLint*) : Void;
-    // static function glFragmentMaterialfEXT(face:Int, pname:Int, param:const GLfloat) : Void;
-    // static function glFragmentMaterialfvEXT(face:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glFragmentMaterialiEXT(face:Int, pname:Int, param:const GLint) : Void;
-    // static function glFragmentMaterialivEXT(face:Int, pname:Int, params:const GLint*) : Void;
-    // static function glGetFragmentLightfvEXT(light:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetFragmentLightivEXT(light:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetFragmentMaterialfvEXT(face:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glGetFragmentMaterialivEXT(face:Int, pname:Int, params:const GLint*) : Void;
-
+    // static function glFragmentLightModelfvEXT(pname:Int, params:GLfloat*) : Void;    // static function glFragmentLightModelivEXT(pname:Int, params:GLint*) : Void;    // static function glFragmentLightfvEXT(light:Int, pname:Int, params:GLfloat*) : Void;    // static function glFragmentLightivEXT(light:Int, pname:Int, params:GLint*) : Void;    // static function glFragmentMaterialfEXT(face:Int, pname:Int, param:const GLfloat) : Void;    // static function glFragmentMaterialfvEXT(face:Int, pname:Int, params:const GLfloat*) : Void;    // static function glFragmentMaterialiEXT(face:Int, pname:Int, param:const GLint) : Void;    // static function glFragmentMaterialivEXT(face:Int, pname:Int, params:const GLint*) : Void;    // static function glGetFragmentLightfvEXT(light:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetFragmentLightivEXT(light:Int, pname:Int, params:GLint*) : Void;    // static function glGetFragmentMaterialfvEXT(face:Int, pname:Int, params:const GLfloat*) : Void;    // static function glGetFragmentMaterialivEXT(face:Int, pname:Int, params:const GLint*) : Void;
 
 //GL_EXT_framebuffer_blit
     inline static var GL_EXT_framebuffer_blit                                         = 1;
@@ -9057,8 +6581,6 @@ extern class GL {
 
 
 
-
-
 //GL_EXT_framebuffer_multisample
     inline static var GL_EXT_framebuffer_multisample                                  = 1;
     inline static var GL_RENDERBUFFER_SAMPLES_EXT                                     = 0x8CAB;
@@ -9070,8 +6592,6 @@ extern class GL {
 
     @:native('glRenderbufferStorageMultisampleEXT')
     static function glRenderbufferStorageMultisampleEXT(target:Int, samples:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-
 
 
 
@@ -9145,47 +6665,19 @@ extern class GL {
 
 
     @:native('glBindFramebufferEXT')
-    static function glBindFramebufferEXT(target:Int, framebuffer:UInt) : Void;
-
-    @:native('glBindRenderbufferEXT')
-    static function glBindRenderbufferEXT(target:Int, renderbuffer:UInt) : Void;
-
-    @:native('glCheckFramebufferStatusEXT')
-    static function glCheckFramebufferStatusEXT(target:Int) : Int;
-
-    @:native('glFramebufferRenderbufferEXT')
-    static function glFramebufferRenderbufferEXT(target:Int, attachment:Int, renderbuffertarget:Int, renderbuffer:UInt) : Void;
-
-    @:native('glFramebufferTexture1DEXT')
-    static function glFramebufferTexture1DEXT(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;
-
-    @:native('glFramebufferTexture2DEXT')
-    static function glFramebufferTexture2DEXT(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;
-
-    @:native('glFramebufferTexture3DEXT')
-    static function glFramebufferTexture3DEXT(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int, zoffset:Int) : Void;
-
-    @:native('glGenerateMipmapEXT')
-    static function glGenerateMipmapEXT(target:Int) : Void;
-
-    @:native('glIsFramebufferEXT')
-    static function glIsFramebufferEXT(framebuffer:UInt) : Bool;
-
-    @:native('glIsRenderbufferEXT')
-    static function glIsRenderbufferEXT(renderbuffer:UInt) : Bool;
-
-    @:native('glRenderbufferStorageEXT')
+    static function glBindFramebufferEXT(target:Int, framebuffer:UInt) : Void;    @:native('glBindRenderbufferEXT')
+    static function glBindRenderbufferEXT(target:Int, renderbuffer:UInt) : Void;    @:native('glCheckFramebufferStatusEXT')
+    static function glCheckFramebufferStatusEXT(target:Int) : Int;    @:native('glFramebufferRenderbufferEXT')
+    static function glFramebufferRenderbufferEXT(target:Int, attachment:Int, renderbuffertarget:Int, renderbuffer:UInt) : Void;    @:native('glFramebufferTexture1DEXT')
+    static function glFramebufferTexture1DEXT(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;    @:native('glFramebufferTexture2DEXT')
+    static function glFramebufferTexture2DEXT(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;    @:native('glFramebufferTexture3DEXT')
+    static function glFramebufferTexture3DEXT(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int, zoffset:Int) : Void;    @:native('glGenerateMipmapEXT')
+    static function glGenerateMipmapEXT(target:Int) : Void;    @:native('glIsFramebufferEXT')
+    static function glIsFramebufferEXT(framebuffer:UInt) : Bool;    @:native('glIsRenderbufferEXT')
+    static function glIsRenderbufferEXT(renderbuffer:UInt) : Bool;    @:native('glRenderbufferStorageEXT')
     static function glRenderbufferStorageEXT(target:Int, internalformat:Int, width:Int, height:Int) : Void;
 
-
-
-    // static function glDeleteFramebuffersEXT(n:Int, framebuffers:const GLuint*) : Void;
-    // static function glDeleteRenderbuffersEXT(n:Int, renderbuffers:const GLuint*) : Void;
-    // static function glGenFramebuffersEXT(n:Int, framebuffers:GLuint*) : Void;
-    // static function glGenRenderbuffersEXT(n:Int, renderbuffers:GLuint*) : Void;
-    // static function glGetFramebufferAttachmentParameterivEXT(target:Int, attachment:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetRenderbufferParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;
-
+    // static function glDeleteFramebuffersEXT(n:Int, framebuffers:const GLuint*) : Void;    // static function glDeleteRenderbuffersEXT(n:Int, renderbuffers:const GLuint*) : Void;    // static function glGenFramebuffersEXT(n:Int, framebuffers:GLuint*) : Void;    // static function glGenRenderbuffersEXT(n:Int, renderbuffers:GLuint*) : Void;    // static function glGetFramebufferAttachmentParameterivEXT(target:Int, attachment:Int, pname:Int, params:GLint*) : Void;    // static function glGetRenderbufferParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;
 
 //GL_EXT_framebuffer_sRGB
     inline static var GL_EXT_framebuffer_sRGB                                         = 1;
@@ -9226,15 +6718,9 @@ extern class GL {
 
 
     @:native('glFramebufferTextureEXT')
-    static function glFramebufferTextureEXT(target:Int, attachment:Int, texture:UInt, level:Int) : Void;
-
-    @:native('glFramebufferTextureFaceEXT')
-    static function glFramebufferTextureFaceEXT(target:Int, attachment:Int, texture:UInt, level:Int, face:Int) : Void;
-
-    @:native('glProgramParameteriEXT')
+    static function glFramebufferTextureEXT(target:Int, attachment:Int, texture:UInt, level:Int) : Void;    @:native('glFramebufferTextureFaceEXT')
+    static function glFramebufferTextureFaceEXT(target:Int, attachment:Int, texture:UInt, level:Int, face:Int) : Void;    @:native('glProgramParameteriEXT')
     static function glProgramParameteriEXT(program:UInt, pname:Int, value:Int) : Void;
-
-
 
 
 
@@ -9246,9 +6732,7 @@ extern class GL {
 
 
 
-    // static function glProgramEnvParameters4fvEXT(target:Int, index:UInt, count:Int, params:const GLfloat*) : Void;
-    // static function glProgramLocalParameters4fvEXT(target:Int, index:UInt, count:Int, params:const GLfloat*) : Void;
-
+    // static function glProgramEnvParameters4fvEXT(target:Int, index:UInt, count:Int, params:const GLfloat*) : Void;    // static function glProgramLocalParameters4fvEXT(target:Int, index:UInt, count:Int, params:const GLfloat*) : Void;
 
 //GL_EXT_gpu_shader4
     inline static var GL_EXT_gpu_shader4                                              = 1;
@@ -9283,90 +6767,56 @@ extern class GL {
 
 
     @:native('glUniform1uiEXT')
-    static function glUniform1uiEXT(location:Int, v0:UInt) : Void;
-
-    @:native('glUniform2uiEXT')
-    static function glUniform2uiEXT(location:Int, v0:UInt, v1:UInt) : Void;
-
-    @:native('glUniform3uiEXT')
-    static function glUniform3uiEXT(location:Int, v0:UInt, v1:UInt, v2:UInt) : Void;
-
-    @:native('glUniform4uiEXT')
-    static function glUniform4uiEXT(location:Int, v0:UInt, v1:UInt, v2:UInt, v3:UInt) : Void;
-
-    @:native('glVertexAttribI1iEXT')
-    static function glVertexAttribI1iEXT(index:UInt, x:Int) : Void;
-
-    @:native('glVertexAttribI1uiEXT')
-    static function glVertexAttribI1uiEXT(index:UInt, x:UInt) : Void;
-
-    @:native('glVertexAttribI2iEXT')
-    static function glVertexAttribI2iEXT(index:UInt, x:Int, y:Int) : Void;
-
-    @:native('glVertexAttribI2uiEXT')
-    static function glVertexAttribI2uiEXT(index:UInt, x:UInt, y:UInt) : Void;
-
-    @:native('glVertexAttribI3iEXT')
-    static function glVertexAttribI3iEXT(index:UInt, x:Int, y:Int, z:Int) : Void;
-
-    @:native('glVertexAttribI3uiEXT')
-    static function glVertexAttribI3uiEXT(index:UInt, x:UInt, y:UInt, z:UInt) : Void;
-
-    @:native('glVertexAttribI4iEXT')
-    static function glVertexAttribI4iEXT(index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
-
-    @:native('glVertexAttribI4uiEXT')
+    static function glUniform1uiEXT(location:Int, v0:UInt) : Void;    @:native('glUniform2uiEXT')
+    static function glUniform2uiEXT(location:Int, v0:UInt, v1:UInt) : Void;    @:native('glUniform3uiEXT')
+    static function glUniform3uiEXT(location:Int, v0:UInt, v1:UInt, v2:UInt) : Void;    @:native('glUniform4uiEXT')
+    static function glUniform4uiEXT(location:Int, v0:UInt, v1:UInt, v2:UInt, v3:UInt) : Void;    @:native('glVertexAttribI1iEXT')
+    static function glVertexAttribI1iEXT(index:UInt, x:Int) : Void;    @:native('glVertexAttribI1uiEXT')
+    static function glVertexAttribI1uiEXT(index:UInt, x:UInt) : Void;    @:native('glVertexAttribI2iEXT')
+    static function glVertexAttribI2iEXT(index:UInt, x:Int, y:Int) : Void;    @:native('glVertexAttribI2uiEXT')
+    static function glVertexAttribI2uiEXT(index:UInt, x:UInt, y:UInt) : Void;    @:native('glVertexAttribI3iEXT')
+    static function glVertexAttribI3iEXT(index:UInt, x:Int, y:Int, z:Int) : Void;    @:native('glVertexAttribI3uiEXT')
+    static function glVertexAttribI3uiEXT(index:UInt, x:UInt, y:UInt, z:UInt) : Void;    @:native('glVertexAttribI4iEXT')
+    static function glVertexAttribI4iEXT(index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;    @:native('glVertexAttribI4uiEXT')
     static function glVertexAttribI4uiEXT(index:UInt, x:UInt, y:UInt, z:UInt, w:UInt) : Void;
+    
+    inline static function glVertexAttribI1ivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertexAttribI1ivEXT((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertexAttribI1uivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertexAttribI1uivEXT((const GLuint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertexAttribI2ivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertexAttribI2ivEXT((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertexAttribI2uivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertexAttribI2uivEXT((const GLuint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertexAttribI3ivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertexAttribI3ivEXT((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertexAttribI3uivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertexAttribI3uivEXT((const GLuint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertexAttribI4bvEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertexAttribI4bvEXT((const GLbyte*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertexAttribI4ivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertexAttribI4ivEXT((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertexAttribI4svEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertexAttribI4svEXT((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertexAttribI4ubvEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertexAttribI4ubvEXT((const GLubyte*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertexAttribI4uivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertexAttribI4uivEXT((const GLuint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glVertexAttribI4usvEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glVertexAttribI4usvEXT((const GLushort*)&{1}[0] + {0})", bOffset, v); };
 
-
-    @:native('linc::opengl::glVertexAttribI1ivEXT')
-    static function glVertexAttribI1ivEXT(index:UInt, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertexAttribI1uivEXT')
-    static function glVertexAttribI1uivEXT(index:UInt, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertexAttribI2ivEXT')
-    static function glVertexAttribI2ivEXT(index:UInt, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertexAttribI2uivEXT')
-    static function glVertexAttribI2uivEXT(index:UInt, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertexAttribI3ivEXT')
-    static function glVertexAttribI3ivEXT(index:UInt, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertexAttribI3uivEXT')
-    static function glVertexAttribI3uivEXT(index:UInt, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertexAttribI4bvEXT')
-    static function glVertexAttribI4bvEXT(index:UInt, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertexAttribI4ivEXT')
-    static function glVertexAttribI4ivEXT(index:UInt, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertexAttribI4svEXT')
-    static function glVertexAttribI4svEXT(index:UInt, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertexAttribI4ubvEXT')
-    static function glVertexAttribI4ubvEXT(index:UInt, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertexAttribI4uivEXT')
-    static function glVertexAttribI4uivEXT(index:UInt, bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glVertexAttribI4usvEXT')
-    static function glVertexAttribI4usvEXT(index:UInt, bOffset:Int, v:BytesData) : Void;
-
-
-    // static function glBindFragDataLocationEXT(program:UInt, color:UInt, *name:const GLchar) : Void;
-    // static function glGetFragDataLocationEXT(program:UInt, *name:const GLchar) : Int;
-    // static function glGetUniformuivEXT(program:UInt, location:Int, *params:UInt) : Void;
-    // static function glGetVertexAttribIivEXT(index:UInt, pname:Int, *params:Int) : Void;
-    // static function glGetVertexAttribIuivEXT(index:UInt, pname:Int, *params:UInt) : Void;
-    // static function glUniform1uivEXT(location:Int, count:Int, *value:const GLuint) : Void;
-    // static function glUniform2uivEXT(location:Int, count:Int, *value:const GLuint) : Void;
-    // static function glUniform3uivEXT(location:Int, count:Int, *value:const GLuint) : Void;
-    // static function glUniform4uivEXT(location:Int, count:Int, *value:const GLuint) : Void;
-    // static function glVertexAttribIPointerEXT(index:UInt, size:Int, type:Int, stride:Int, *pointer:const void) : Void;
-
+    // static function glBindFragDataLocationEXT(program:UInt, color:UInt, *name:const GLchar) : Void;    // static function glGetFragDataLocationEXT(program:UInt, *name:const GLchar) : Int;    // static function glGetUniformuivEXT(program:UInt, location:Int, *params:UInt) : Void;    // static function glGetVertexAttribIivEXT(index:UInt, pname:Int, *params:Int) : Void;    // static function glGetVertexAttribIuivEXT(index:UInt, pname:Int, *params:UInt) : Void;    // static function glUniform1uivEXT(location:Int, count:Int, *value:const GLuint) : Void;    // static function glUniform2uivEXT(location:Int, count:Int, *value:const GLuint) : Void;    // static function glUniform3uivEXT(location:Int, count:Int, *value:const GLuint) : Void;    // static function glUniform4uivEXT(location:Int, count:Int, *value:const GLuint) : Void;    // static function glVertexAttribIPointerEXT(index:UInt, size:Int, type:Int, stride:Int, *pointer:const void) : Void;
 
 //GL_EXT_histogram
     inline static var GL_EXT_histogram                                                = 1;
@@ -9388,26 +6838,12 @@ extern class GL {
 
 
     @:native('glHistogramEXT')
-    static function glHistogramEXT(target:Int, width:Int, internalformat:Int, sink:Bool) : Void;
-
-    @:native('glMinmaxEXT')
-    static function glMinmaxEXT(target:Int, internalformat:Int, sink:Bool) : Void;
-
-    @:native('glResetHistogramEXT')
-    static function glResetHistogramEXT(target:Int) : Void;
-
-    @:native('glResetMinmaxEXT')
+    static function glHistogramEXT(target:Int, width:Int, internalformat:Int, sink:Bool) : Void;    @:native('glMinmaxEXT')
+    static function glMinmaxEXT(target:Int, internalformat:Int, sink:Bool) : Void;    @:native('glResetHistogramEXT')
+    static function glResetHistogramEXT(target:Int) : Void;    @:native('glResetMinmaxEXT')
     static function glResetMinmaxEXT(target:Int) : Void;
 
-
-
-    // static function glGetHistogramEXT(target:Int, reset:Bool, format:Int, type:Int, *values:Void) : Void;
-    // static function glGetHistogramParameterfvEXT(target:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetHistogramParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetMinmaxEXT(target:Int, reset:Bool, format:Int, type:Int, *values:Void) : Void;
-    // static function glGetMinmaxParameterfvEXT(target:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetMinmaxParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;
-
+    // static function glGetHistogramEXT(target:Int, reset:Bool, format:Int, type:Int, *values:Void) : Void;    // static function glGetHistogramParameterfvEXT(target:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetHistogramParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;    // static function glGetMinmaxEXT(target:Int, reset:Bool, format:Int, type:Int, *values:Void) : Void;    // static function glGetMinmaxParameterfvEXT(target:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetMinmaxParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;
 
 //GL_EXT_index_array_formats
     inline static var GL_EXT_index_array_formats                                      = 1;
@@ -9430,8 +6866,6 @@ extern class GL {
 
 
 
-
-
 //GL_EXT_index_material
     inline static var GL_EXT_index_material                                           = 1;
 
@@ -9440,8 +6874,6 @@ extern class GL {
 
     @:native('glIndexMaterialEXT')
     static function glIndexMaterialEXT(face:Int, mode:Int) : Void;
-
-
 
 
 
@@ -9471,15 +6903,9 @@ extern class GL {
 
 
     @:native('glApplyTextureEXT')
-    static function glApplyTextureEXT(mode:Int) : Void;
-
-    @:native('glTextureLightEXT')
-    static function glTextureLightEXT(pname:Int) : Void;
-
-    @:native('glTextureMaterialEXT')
+    static function glApplyTextureEXT(mode:Int) : Void;    @:native('glTextureLightEXT')
+    static function glTextureLightEXT(pname:Int) : Void;    @:native('glTextureMaterialEXT')
     static function glTextureMaterialEXT(face:Int, mode:Int) : Void;
-
-
 
 
 
@@ -9501,9 +6927,7 @@ extern class GL {
 
 
 
-    // static function glMultiDrawArraysEXT(mode:Int, first:const GLint*, *count:const GLsizei, primcount:Int) : Void;
-    // static function glMultiDrawElementsEXT(mode:Int, count:GLsizei*, type:Int, *indices:const void *const, primcount:Int) : Void;
-
+    // static function glMultiDrawArraysEXT(mode:Int, first:const GLint*, *count:const GLsizei, primcount:Int) : Void;    // static function glMultiDrawElementsEXT(mode:Int, count:GLsizei*, type:Int, *indices:const void *const, primcount:Int) : Void;
 
 //GL_EXT_multisample
     inline static var GL_EXT_multisample                                              = 1;
@@ -9529,12 +6953,8 @@ extern class GL {
 
 
     @:native('glSampleMaskEXT')
-    static function glSampleMaskEXT(value:Float, invert:Bool) : Void;
-
-    @:native('glSamplePatternEXT')
+    static function glSampleMaskEXT(value:Float, invert:Bool) : Void;    @:native('glSamplePatternEXT')
     static function glSamplePatternEXT(pattern:Int) : Void;
-
-
 
 
 
@@ -9597,11 +7017,7 @@ extern class GL {
 
 
 
-    // static function glColorTableEXT(target:Int, internalFormat:Int, width:Int, format:Int, type:Int, *data:const void) : Void;
-    // static function glGetColorTableEXT(target:Int, format:Int, type:Int, *data:Void) : Void;
-    // static function glGetColorTableParameterfvEXT(target:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetColorTableParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;
-
+    // static function glColorTableEXT(target:Int, internalFormat:Int, width:Int, format:Int, type:Int, *data:const void) : Void;    // static function glGetColorTableEXT(target:Int, format:Int, type:Int, *data:Void) : Void;    // static function glGetColorTableParameterfvEXT(target:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetColorTableParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;
 
 //GL_EXT_pixel_buffer_object
     inline static var GL_EXT_pixel_buffer_object                                      = 1;
@@ -9634,13 +7050,7 @@ extern class GL {
 
 
 
-    // static function glGetPixelTransformParameterfvEXT(target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glGetPixelTransformParameterivEXT(target:Int, pname:Int, params:const GLint*) : Void;
-    // static function glPixelTransformParameterfEXT(target:Int, pname:Int, param:const GLfloat) : Void;
-    // static function glPixelTransformParameterfvEXT(target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glPixelTransformParameteriEXT(target:Int, pname:Int, param:const GLint) : Void;
-    // static function glPixelTransformParameterivEXT(target:Int, pname:Int, params:const GLint*) : Void;
-
+    // static function glGetPixelTransformParameterfvEXT(target:Int, pname:Int, params:const GLfloat*) : Void;    // static function glGetPixelTransformParameterivEXT(target:Int, pname:Int, params:const GLint*) : Void;    // static function glPixelTransformParameterfEXT(target:Int, pname:Int, param:const GLfloat) : Void;    // static function glPixelTransformParameterfvEXT(target:Int, pname:Int, params:const GLfloat*) : Void;    // static function glPixelTransformParameteriEXT(target:Int, pname:Int, param:const GLint) : Void;    // static function glPixelTransformParameterivEXT(target:Int, pname:Int, params:const GLint*) : Void;
 
 //GL_EXT_pixel_transform_color_table
     inline static var GL_EXT_pixel_transform_color_table                              = 1;
@@ -9665,10 +7075,7 @@ extern class GL {
     @:native('glPointParameterfEXT')
     static function glPointParameterfEXT(pname:Int, param:Float) : Void;
 
-
-
     // static function glPointParameterfvEXT(pname:Int, params:const GLfloat*) : Void;
-
 
 //GL_EXT_polygon_offset
     inline static var GL_EXT_polygon_offset                                           = 1;
@@ -9684,8 +7091,6 @@ extern class GL {
 
 
 
-
-
 //GL_EXT_polygon_offset_clamp
     inline static var GL_EXT_polygon_offset_clamp                                     = 1;
     inline static var GL_POLYGON_OFFSET_CLAMP_EXT                                     = 0x8E1B;
@@ -9695,8 +7100,6 @@ extern class GL {
 
     @:native('glPolygonOffsetClampEXT')
     static function glPolygonOffsetClampEXT(factor:Float, units:Float, clamp:Float) : Void;
-
-
 
 
 
@@ -9725,8 +7128,6 @@ extern class GL {
 
 
 
-
-
 //GL_EXT_raster_multisample
     inline static var GL_EXT_raster_multisample                                       = 1;
     inline static var GL_COLOR_SAMPLES_NV                                             = 0x8E20;
@@ -9748,16 +7149,10 @@ extern class GL {
 
 
     @:native('glCoverageModulationNV')
-    static function glCoverageModulationNV(components:Int) : Void;
-
-    @:native('glRasterSamplesEXT')
+    static function glCoverageModulationNV(components:Int) : Void;    @:native('glRasterSamplesEXT')
     static function glRasterSamplesEXT(samples:UInt, fixedsamplelocations:Bool) : Void;
 
-
-
-    // static function glCoverageModulationTableNV(n:Int, v:const GLfloat*) : Void;
-    // static function glGetCoverageModulationTableNV(bufsize:Int, v:GLfloat*) : Void;
-
+    // static function glCoverageModulationTableNV(n:Int, v:const GLfloat*) : Void;    // static function glGetCoverageModulationTableNV(bufsize:Int, v:GLfloat*) : Void;
 
 //GL_EXT_rescale_normal
     inline static var GL_EXT_rescale_normal                                           = 1;
@@ -9777,12 +7172,8 @@ extern class GL {
 
 
     @:native('glBeginSceneEXT')
-    static function glBeginSceneEXT() : Void;
-
-    @:native('glEndSceneEXT')
+    static function glBeginSceneEXT() : Void;    @:native('glEndSceneEXT')
     static function glEndSceneEXT() : Void;
-
-
 
 
 
@@ -9800,57 +7191,40 @@ extern class GL {
 
 
     @:native('glSecondaryColor3bEXT')
-    static function glSecondaryColor3bEXT(red:String, green:String, blue:String) : Void;
-
-    @:native('glSecondaryColor3dEXT')
-    static function glSecondaryColor3dEXT(red:Float, green:Float, blue:Float) : Void;
-
-    @:native('glSecondaryColor3fEXT')
-    static function glSecondaryColor3fEXT(red:Float, green:Float, blue:Float) : Void;
-
-    @:native('glSecondaryColor3iEXT')
-    static function glSecondaryColor3iEXT(red:Int, green:Int, blue:Int) : Void;
-
-    @:native('glSecondaryColor3sEXT')
-    static function glSecondaryColor3sEXT(red:Int, green:Int, blue:Int) : Void;
-
-    @:native('glSecondaryColor3ubEXT')
-    static function glSecondaryColor3ubEXT(red:String, green:String, blue:String) : Void;
-
-    @:native('glSecondaryColor3uiEXT')
-    static function glSecondaryColor3uiEXT(red:UInt, green:UInt, blue:UInt) : Void;
-
-    @:native('glSecondaryColor3usEXT')
+    static function glSecondaryColor3bEXT(red:String, green:String, blue:String) : Void;    @:native('glSecondaryColor3dEXT')
+    static function glSecondaryColor3dEXT(red:Float, green:Float, blue:Float) : Void;    @:native('glSecondaryColor3fEXT')
+    static function glSecondaryColor3fEXT(red:Float, green:Float, blue:Float) : Void;    @:native('glSecondaryColor3iEXT')
+    static function glSecondaryColor3iEXT(red:Int, green:Int, blue:Int) : Void;    @:native('glSecondaryColor3sEXT')
+    static function glSecondaryColor3sEXT(red:Int, green:Int, blue:Int) : Void;    @:native('glSecondaryColor3ubEXT')
+    static function glSecondaryColor3ubEXT(red:String, green:String, blue:String) : Void;    @:native('glSecondaryColor3uiEXT')
+    static function glSecondaryColor3uiEXT(red:UInt, green:UInt, blue:UInt) : Void;    @:native('glSecondaryColor3usEXT')
     static function glSecondaryColor3usEXT(red:UInt, green:UInt, blue:UInt) : Void;
-
-
-    @:native('linc::opengl::glSecondaryColor3bvEXT')
-    static function glSecondaryColor3bvEXT(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3dvEXT')
-    static function glSecondaryColor3dvEXT(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3fvEXT')
-    static function glSecondaryColor3fvEXT(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3ivEXT')
-    static function glSecondaryColor3ivEXT(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3svEXT')
-    static function glSecondaryColor3svEXT(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3ubvEXT')
-    static function glSecondaryColor3ubvEXT(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3uivEXT')
-    static function glSecondaryColor3uivEXT(bOffset:Int, v:BytesData) : Void;
-
-    @:native('linc::opengl::glSecondaryColor3usvEXT')
-    static function glSecondaryColor3usvEXT(bOffset:Int, v:BytesData) : Void;
-
+    
+    inline static function glSecondaryColor3bvEXT(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3bvEXT((const GLbyte*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3dvEXT(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3dvEXT((const GLdouble*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3fvEXT(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3fvEXT((const GLfloat*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3ivEXT(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3ivEXT((const GLint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3svEXT(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3svEXT((const GLshort*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3ubvEXT(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3ubvEXT((const GLubyte*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3uivEXT(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3uivEXT((const GLuint*)&{1}[0] + {0})", bOffset, v); };
+    
+    inline static function glSecondaryColor3usvEXT(?bOffset:Int=0, v:BytesData) : Void
+      { untyped __cpp__("glSecondaryColor3usvEXT((const GLushort*)&{1}[0] + {0})", bOffset, v); };
 
     // static function glSecondaryColorPointerEXT(size:Int, type:Int, stride:Int, *pointer:const void) : Void;
-
 
 //GL_EXT_separate_shader_objects
     inline static var GL_EXT_separate_shader_objects                                  = 1;
@@ -9860,15 +7234,9 @@ extern class GL {
 
 
     @:native('glActiveProgramEXT')
-    static function glActiveProgramEXT(program:UInt) : Void;
-
-    @:native('glCreateShaderProgramEXT')
-    static function glCreateShaderProgramEXT(type:Int, string:String) : UInt;
-
-    @:native('glUseShaderProgramEXT')
+    static function glActiveProgramEXT(program:UInt) : Void;    @:native('glCreateShaderProgramEXT')
+    static function glCreateShaderProgramEXT(type:Int, string:String) : UInt;    @:native('glUseShaderProgramEXT')
     static function glUseShaderProgramEXT(type:Int, program:UInt) : Void;
-
-
 
 
 
@@ -9957,12 +7325,8 @@ extern class GL {
 
 
     @:native('glBindImageTextureEXT')
-    static function glBindImageTextureEXT(index:UInt, texture:UInt, level:Int, layered:Bool, layer:Int, access:Int, format:Int) : Void;
-
-    @:native('glMemoryBarrierEXT')
+    static function glBindImageTextureEXT(index:UInt, texture:UInt, level:Int, layered:Bool, layer:Int, access:Int, format:Int) : Void;    @:native('glMemoryBarrierEXT')
     static function glMemoryBarrierEXT(barriers:Int) : Void;
-
-
 
 
 
@@ -10032,8 +7396,6 @@ extern class GL {
 
 
 
-
-
 //GL_EXT_stencil_wrap
     inline static var GL_EXT_stencil_wrap                                             = 1;
     inline static var GL_INCR_WRAP_EXT                                                = 0x8507;
@@ -10054,10 +7416,7 @@ extern class GL {
 
 
 
-    // static function glTexSubImage1DEXT(target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTexSubImage2DEXT(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTexSubImage3DEXT(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;
-
+    // static function glTexSubImage1DEXT(target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTexSubImage2DEXT(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTexSubImage3DEXT(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;
 
 //GL_EXT_texture
     inline static var GL_EXT_texture                                                  = 1;
@@ -10130,7 +7489,6 @@ extern class GL {
 
     // static function glTexImage3DEXT(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
 
-
 //GL_EXT_texture_array
     inline static var GL_EXT_texture_array                                            = 1;
     inline static var GL_COMPARE_REF_DEPTH_TO_TEXTURE_EXT                             = 0x884E;
@@ -10150,8 +7508,6 @@ extern class GL {
 
 
 
-
-
 //GL_EXT_texture_buffer_object
     inline static var GL_EXT_texture_buffer_object                                    = 1;
     inline static var GL_TEXTURE_BUFFER_EXT                                           = 0x8C2A;
@@ -10165,8 +7521,6 @@ extern class GL {
 
     @:native('glTexBufferEXT')
     static function glTexBufferEXT(target:Int, internalformat:Int, buffer:UInt) : Void;
-
-
 
 
 
@@ -10396,18 +7750,10 @@ extern class GL {
 
 
     @:native('glClearColorIiEXT')
-    static function glClearColorIiEXT(red:Int, green:Int, blue:Int, alpha:Int) : Void;
-
-    @:native('glClearColorIuiEXT')
+    static function glClearColorIiEXT(red:Int, green:Int, blue:Int, alpha:Int) : Void;    @:native('glClearColorIuiEXT')
     static function glClearColorIuiEXT(red:UInt, green:UInt, blue:UInt, alpha:UInt) : Void;
 
-
-
-    // static function glGetTexParameterIivEXT(target:Int, pname:Int, *params:Int) : Void;
-    // static function glGetTexParameterIuivEXT(target:Int, pname:Int, *params:UInt) : Void;
-    // static function glTexParameterIivEXT(target:Int, pname:Int, *params:const GLint) : Void;
-    // static function glTexParameterIuivEXT(target:Int, pname:Int, *params:const GLuint) : Void;
-
+    // static function glGetTexParameterIivEXT(target:Int, pname:Int, *params:Int) : Void;    // static function glGetTexParameterIuivEXT(target:Int, pname:Int, *params:UInt) : Void;    // static function glTexParameterIivEXT(target:Int, pname:Int, *params:const GLint) : Void;    // static function glTexParameterIuivEXT(target:Int, pname:Int, *params:const GLuint) : Void;
 
 //GL_EXT_texture_lod_bias
     inline static var GL_EXT_texture_lod_bias                                         = 1;
@@ -10447,18 +7793,10 @@ extern class GL {
 
 
     @:native('glBindTextureEXT')
-    static function glBindTextureEXT(target:Int, texture:UInt) : Void;
-
-    @:native('glIsTextureEXT')
+    static function glBindTextureEXT(target:Int, texture:UInt) : Void;    @:native('glIsTextureEXT')
     static function glIsTextureEXT(texture:UInt) : Bool;
 
-
-
-    // static function glAreTexturesResidentEXT(n:Int, textures:const GLuint*, residences:GLboolean*) : Bool;
-    // static function glDeleteTexturesEXT(n:Int, textures:const GLuint*) : Void;
-    // static function glGenTexturesEXT(n:Int, textures:GLuint*) : Void;
-    // static function glPrioritizeTexturesEXT(n:Int, textures:const GLuint*, priorities:const GLclampf*) : Void;
-
+    // static function glAreTexturesResidentEXT(n:Int, textures:const GLuint*, residences:GLboolean*) : Bool;    // static function glDeleteTexturesEXT(n:Int, textures:const GLuint*) : Void;    // static function glGenTexturesEXT(n:Int, textures:GLuint*) : Void;    // static function glPrioritizeTexturesEXT(n:Int, textures:const GLuint*, priorities:const GLclampf*) : Void;
 
 //GL_EXT_texture_perturb_normal
     inline static var GL_EXT_texture_perturb_normal                                   = 1;
@@ -10470,8 +7808,6 @@ extern class GL {
 
     @:native('glTextureNormalEXT')
     static function glTextureNormalEXT(mode:Int) : Void;
-
-
 
 
 
@@ -10587,9 +7923,7 @@ extern class GL {
 
 
 
-    // static function glGetQueryObjecti64vEXT(id:UInt, pname:Int, *params:cpp.Int64) : Void;
-    // static function glGetQueryObjectui64vEXT(id:UInt, pname:Int, *params:cpp.UInt64) : Void;
-
+    // static function glGetQueryObjecti64vEXT(id:UInt, pname:Int, *params:cpp.Int64) : Void;    // static function glGetQueryObjectui64vEXT(id:UInt, pname:Int, *params:cpp.UInt64) : Void;
 
 //GL_EXT_transform_feedback
     inline static var GL_EXT_transform_feedback                                       = 1;
@@ -10613,21 +7947,11 @@ extern class GL {
 
 
     @:native('glBeginTransformFeedbackEXT')
-    static function glBeginTransformFeedbackEXT(primitiveMode:Int) : Void;
-
-    @:native('glBindBufferBaseEXT')
-    static function glBindBufferBaseEXT(target:Int, index:UInt, buffer:UInt) : Void;
-
-    @:native('glEndTransformFeedbackEXT')
+    static function glBeginTransformFeedbackEXT(primitiveMode:Int) : Void;    @:native('glBindBufferBaseEXT')
+    static function glBindBufferBaseEXT(target:Int, index:UInt, buffer:UInt) : Void;    @:native('glEndTransformFeedbackEXT')
     static function glEndTransformFeedbackEXT() : Void;
 
-
-
-    // static function glBindBufferOffsetEXT(target:Int, index:UInt, buffer:UInt, offset:GLintptr) : Void;
-    // static function glBindBufferRangeEXT(target:Int, index:UInt, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;
-    // static function glGetTransformFeedbackVaryingEXT(program:UInt, index:UInt, bufSize:Int, length:GLsizei*, *size:Int, *type:Int, *name:GLchar) : Void;
-    // static function glTransformFeedbackVaryingsEXT(program:UInt, count:Int, varyings:const GLchar * const*, bufferMode:Int) : Void;
-
+    // static function glBindBufferOffsetEXT(target:Int, index:UInt, buffer:UInt, offset:GLintptr) : Void;    // static function glBindBufferRangeEXT(target:Int, index:UInt, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;    // static function glGetTransformFeedbackVaryingEXT(program:UInt, index:UInt, bufSize:Int, length:GLsizei*, *size:Int, *type:Int, *name:GLchar) : Void;    // static function glTransformFeedbackVaryingsEXT(program:UInt, count:Int, varyings:const GLchar * const*, bufferMode:Int) : Void;
 
 //GL_EXT_vertex_array
     inline static var GL_EXT_vertex_array                                             = 1;
@@ -10669,20 +7993,10 @@ extern class GL {
 
 
     @:native('glArrayElementEXT')
-    static function glArrayElementEXT(i:Int) : Void;
-
-    @:native('glDrawArraysEXT')
+    static function glArrayElementEXT(i:Int) : Void;    @:native('glDrawArraysEXT')
     static function glDrawArraysEXT(mode:Int, first:Int, count:Int) : Void;
 
-
-
-    // static function glColorPointerEXT(size:Int, type:Int, stride:Int, count:Int, *pointer:const void) : Void;
-    // static function glEdgeFlagPointerEXT(stride:Int, count:Int, pointer:const GLboolean*) : Void;
-    // static function glIndexPointerEXT(type:Int, stride:Int, count:Int, *pointer:const void) : Void;
-    // static function glNormalPointerEXT(type:Int, stride:Int, count:Int, *pointer:const void) : Void;
-    // static function glTexCoordPointerEXT(size:Int, type:Int, stride:Int, count:Int, *pointer:const void) : Void;
-    // static function glVertexPointerEXT(size:Int, type:Int, stride:Int, count:Int, *pointer:const void) : Void;
-
+    // static function glColorPointerEXT(size:Int, type:Int, stride:Int, count:Int, *pointer:const void) : Void;    // static function glEdgeFlagPointerEXT(stride:Int, count:Int, pointer:const GLboolean*) : Void;    // static function glIndexPointerEXT(type:Int, stride:Int, count:Int, *pointer:const void) : Void;    // static function glNormalPointerEXT(type:Int, stride:Int, count:Int, *pointer:const void) : Void;    // static function glTexCoordPointerEXT(size:Int, type:Int, stride:Int, count:Int, *pointer:const void) : Void;    // static function glVertexPointerEXT(size:Int, type:Int, stride:Int, count:Int, *pointer:const void) : Void;
 
 //GL_EXT_vertex_array_bgra
     inline static var GL_EXT_vertex_array_bgra                                        = 1;
@@ -10713,27 +8027,12 @@ extern class GL {
 
 
     @:native('glVertexAttribL1dEXT')
-    static function glVertexAttribL1dEXT(index:UInt, x:Float) : Void;
-
-    @:native('glVertexAttribL2dEXT')
-    static function glVertexAttribL2dEXT(index:UInt, x:Float, y:Float) : Void;
-
-    @:native('glVertexAttribL3dEXT')
-    static function glVertexAttribL3dEXT(index:UInt, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glVertexAttribL4dEXT')
+    static function glVertexAttribL1dEXT(index:UInt, x:Float) : Void;    @:native('glVertexAttribL2dEXT')
+    static function glVertexAttribL2dEXT(index:UInt, x:Float, y:Float) : Void;    @:native('glVertexAttribL3dEXT')
+    static function glVertexAttribL3dEXT(index:UInt, x:Float, y:Float, z:Float) : Void;    @:native('glVertexAttribL4dEXT')
     static function glVertexAttribL4dEXT(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
 
-
-
-    // static function glGetVertexAttribLdvEXT(index:UInt, pname:Int, params:GLdouble*) : Void;
-    // static function glVertexArrayVertexAttribLOffsetEXT(vaobj:UInt, buffer:UInt, index:UInt, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;
-    // static function glVertexAttribL1dvEXT(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttribL2dvEXT(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttribL3dvEXT(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttribL4dvEXT(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttribLPointerEXT(index:UInt, size:Int, type:Int, stride:Int, *pointer:const void) : Void;
-
+    // static function glGetVertexAttribLdvEXT(index:UInt, pname:Int, params:GLdouble*) : Void;    // static function glVertexArrayVertexAttribLOffsetEXT(vaobj:UInt, buffer:UInt, index:UInt, size:Int, type:Int, stride:Int, offset:GLintptr) : Void;    // static function glVertexAttribL1dvEXT(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttribL2dvEXT(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttribL3dvEXT(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttribL4dvEXT(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttribLPointerEXT(index:UInt, size:Int, type:Int, stride:Int, *pointer:const void) : Void;
 
 //GL_EXT_vertex_shader
     inline static var GL_EXT_vertex_shader                                            = 1;
@@ -10852,92 +8151,29 @@ extern class GL {
 
 
     @:native('glBeginVertexShaderEXT')
-    static function glBeginVertexShaderEXT() : Void;
-
-    @:native('glBindLightParameterEXT')
-    static function glBindLightParameterEXT(light:Int, value:Int) : UInt;
-
-    @:native('glBindMaterialParameterEXT')
-    static function glBindMaterialParameterEXT(face:Int, value:Int) : UInt;
-
-    @:native('glBindParameterEXT')
-    static function glBindParameterEXT(value:Int) : UInt;
-
-    @:native('glBindTexGenParameterEXT')
-    static function glBindTexGenParameterEXT(unit:Int, coord:Int, value:Int) : UInt;
-
-    @:native('glBindTextureUnitParameterEXT')
-    static function glBindTextureUnitParameterEXT(unit:Int, value:Int) : UInt;
-
-    @:native('glBindVertexShaderEXT')
-    static function glBindVertexShaderEXT(id:UInt) : Void;
-
-    @:native('glDeleteVertexShaderEXT')
-    static function glDeleteVertexShaderEXT(id:UInt) : Void;
-
-    @:native('glDisableVariantClientStateEXT')
-    static function glDisableVariantClientStateEXT(id:UInt) : Void;
-
-    @:native('glEnableVariantClientStateEXT')
-    static function glEnableVariantClientStateEXT(id:UInt) : Void;
-
-    @:native('glEndVertexShaderEXT')
-    static function glEndVertexShaderEXT() : Void;
-
-    @:native('glExtractComponentEXT')
-    static function glExtractComponentEXT(res:UInt, src:UInt, num:UInt) : Void;
-
-    @:native('glGenSymbolsEXT')
-    static function glGenSymbolsEXT(dataType:Int, storageType:Int, range:Int, components:UInt) : UInt;
-
-    @:native('glGenVertexShadersEXT')
-    static function glGenVertexShadersEXT(range:UInt) : UInt;
-
-    @:native('glInsertComponentEXT')
-    static function glInsertComponentEXT(res:UInt, src:UInt, num:UInt) : Void;
-
-    @:native('glIsVariantEnabledEXT')
-    static function glIsVariantEnabledEXT(id:UInt, cap:Int) : Bool;
-
-    @:native('glShaderOp1EXT')
-    static function glShaderOp1EXT(op:Int, res:UInt, arg1:UInt) : Void;
-
-    @:native('glShaderOp2EXT')
-    static function glShaderOp2EXT(op:Int, res:UInt, arg1:UInt, arg2:UInt) : Void;
-
-    @:native('glShaderOp3EXT')
-    static function glShaderOp3EXT(op:Int, res:UInt, arg1:UInt, arg2:UInt, arg3:UInt) : Void;
-
-    @:native('glSwizzleEXT')
-    static function glSwizzleEXT(res:UInt, inval:UInt, outX:Int, outY:Int, outZ:Int, outW:Int) : Void;
-
-    @:native('glWriteMaskEXT')
+    static function glBeginVertexShaderEXT() : Void;    @:native('glBindLightParameterEXT')
+    static function glBindLightParameterEXT(light:Int, value:Int) : UInt;    @:native('glBindMaterialParameterEXT')
+    static function glBindMaterialParameterEXT(face:Int, value:Int) : UInt;    @:native('glBindParameterEXT')
+    static function glBindParameterEXT(value:Int) : UInt;    @:native('glBindTexGenParameterEXT')
+    static function glBindTexGenParameterEXT(unit:Int, coord:Int, value:Int) : UInt;    @:native('glBindTextureUnitParameterEXT')
+    static function glBindTextureUnitParameterEXT(unit:Int, value:Int) : UInt;    @:native('glBindVertexShaderEXT')
+    static function glBindVertexShaderEXT(id:UInt) : Void;    @:native('glDeleteVertexShaderEXT')
+    static function glDeleteVertexShaderEXT(id:UInt) : Void;    @:native('glDisableVariantClientStateEXT')
+    static function glDisableVariantClientStateEXT(id:UInt) : Void;    @:native('glEnableVariantClientStateEXT')
+    static function glEnableVariantClientStateEXT(id:UInt) : Void;    @:native('glEndVertexShaderEXT')
+    static function glEndVertexShaderEXT() : Void;    @:native('glExtractComponentEXT')
+    static function glExtractComponentEXT(res:UInt, src:UInt, num:UInt) : Void;    @:native('glGenSymbolsEXT')
+    static function glGenSymbolsEXT(dataType:Int, storageType:Int, range:Int, components:UInt) : UInt;    @:native('glGenVertexShadersEXT')
+    static function glGenVertexShadersEXT(range:UInt) : UInt;    @:native('glInsertComponentEXT')
+    static function glInsertComponentEXT(res:UInt, src:UInt, num:UInt) : Void;    @:native('glIsVariantEnabledEXT')
+    static function glIsVariantEnabledEXT(id:UInt, cap:Int) : Bool;    @:native('glShaderOp1EXT')
+    static function glShaderOp1EXT(op:Int, res:UInt, arg1:UInt) : Void;    @:native('glShaderOp2EXT')
+    static function glShaderOp2EXT(op:Int, res:UInt, arg1:UInt, arg2:UInt) : Void;    @:native('glShaderOp3EXT')
+    static function glShaderOp3EXT(op:Int, res:UInt, arg1:UInt, arg2:UInt, arg3:UInt) : Void;    @:native('glSwizzleEXT')
+    static function glSwizzleEXT(res:UInt, inval:UInt, outX:Int, outY:Int, outZ:Int, outW:Int) : Void;    @:native('glWriteMaskEXT')
     static function glWriteMaskEXT(res:UInt, inval:UInt, outX:Int, outY:Int, outZ:Int, outW:Int) : Void;
 
-
-
-    // static function glGetInvariantBooleanvEXT(id:UInt, value:Int, *data:Bool) : Void;
-    // static function glGetInvariantFloatvEXT(id:UInt, value:Int, *data:Float) : Void;
-    // static function glGetInvariantIntegervEXT(id:UInt, value:Int, *data:Int) : Void;
-    // static function glGetLocalConstantBooleanvEXT(id:UInt, value:Int, *data:Bool) : Void;
-    // static function glGetLocalConstantFloatvEXT(id:UInt, value:Int, *data:Float) : Void;
-    // static function glGetLocalConstantIntegervEXT(id:UInt, value:Int, *data:Int) : Void;
-    // static function glGetVariantBooleanvEXT(id:UInt, value:Int, *data:Bool) : Void;
-    // static function glGetVariantFloatvEXT(id:UInt, value:Int, *data:Float) : Void;
-    // static function glGetVariantIntegervEXT(id:UInt, value:Int, *data:Int) : Void;
-    // static function glGetVariantPointervEXT(id:UInt, value:Int, **data:Void) : Void;
-    // static function glSetInvariantEXT(id:UInt, type:Int, *addr:Void) : Void;
-    // static function glSetLocalConstantEXT(id:UInt, type:Int, *addr:Void) : Void;
-    // static function glVariantPointerEXT(id:UInt, type:Int, stride:UInt, *addr:Void) : Void;
-    // static function glVariantbvEXT(id:UInt, *addr:String) : Void;
-    // static function glVariantdvEXT(id:UInt, *addr:Float) : Void;
-    // static function glVariantfvEXT(id:UInt, *addr:Float) : Void;
-    // static function glVariantivEXT(id:UInt, *addr:Int) : Void;
-    // static function glVariantsvEXT(id:UInt, *addr:Int) : Void;
-    // static function glVariantubvEXT(id:UInt, *addr:String) : Void;
-    // static function glVariantuivEXT(id:UInt, *addr:UInt) : Void;
-    // static function glVariantusvEXT(id:UInt, *addr:UInt) : Void;
-
+    // static function glGetInvariantBooleanvEXT(id:UInt, value:Int, *data:Bool) : Void;    // static function glGetInvariantFloatvEXT(id:UInt, value:Int, *data:Float) : Void;    // static function glGetInvariantIntegervEXT(id:UInt, value:Int, *data:Int) : Void;    // static function glGetLocalConstantBooleanvEXT(id:UInt, value:Int, *data:Bool) : Void;    // static function glGetLocalConstantFloatvEXT(id:UInt, value:Int, *data:Float) : Void;    // static function glGetLocalConstantIntegervEXT(id:UInt, value:Int, *data:Int) : Void;    // static function glGetVariantBooleanvEXT(id:UInt, value:Int, *data:Bool) : Void;    // static function glGetVariantFloatvEXT(id:UInt, value:Int, *data:Float) : Void;    // static function glGetVariantIntegervEXT(id:UInt, value:Int, *data:Int) : Void;    // static function glGetVariantPointervEXT(id:UInt, value:Int, **data:Void) : Void;    // static function glSetInvariantEXT(id:UInt, type:Int, *addr:Void) : Void;    // static function glSetLocalConstantEXT(id:UInt, type:Int, *addr:Void) : Void;    // static function glVariantPointerEXT(id:UInt, type:Int, stride:UInt, *addr:Void) : Void;    // static function glVariantbvEXT(id:UInt, *addr:String) : Void;    // static function glVariantdvEXT(id:UInt, *addr:Float) : Void;    // static function glVariantfvEXT(id:UInt, *addr:Float) : Void;    // static function glVariantivEXT(id:UInt, *addr:Int) : Void;    // static function glVariantsvEXT(id:UInt, *addr:Int) : Void;    // static function glVariantubvEXT(id:UInt, *addr:String) : Void;    // static function glVariantuivEXT(id:UInt, *addr:UInt) : Void;    // static function glVariantusvEXT(id:UInt, *addr:UInt) : Void;
 
 //GL_EXT_vertex_weighting
     inline static var GL_EXT_vertex_weighting                                         = 1;
@@ -10961,11 +8197,7 @@ extern class GL {
     @:native('glVertexWeightfEXT')
     static function glVertexWeightfEXT(weight:Float) : Void;
 
-
-
-    // static function glVertexWeightPointerEXT(size:Int, type:Int, stride:Int, *pointer:Void) : Void;
-    // static function glVertexWeightfvEXT(weight:GLfloat*) : Void;
-
+    // static function glVertexWeightPointerEXT(size:Int, type:Int, stride:Int, *pointer:Void) : Void;    // static function glVertexWeightfvEXT(weight:GLfloat*) : Void;
 
 //GL_EXT_x11_sync_object
     inline static var GL_EXT_x11_sync_object                                          = 1;
@@ -10978,7 +8210,6 @@ extern class GL {
 
     // static function glImportSyncEXT(external_sync_type:Int, external_sync:GLintptr, flags:Int) : GLsync;
 
-
 //GL_GREMEDY_frame_terminator
     inline static var GL_GREMEDY_frame_terminator                                     = 1;
 
@@ -10987,8 +8218,6 @@ extern class GL {
 
     @:native('glFrameTerminatorGREMEDY')
     static function glFrameTerminatorGREMEDY() : Void;
-
-
 
 
 
@@ -11001,7 +8230,6 @@ extern class GL {
 
 
     // static function glStringMarkerGREMEDY(len:Int, *string:const void) : Void;
-
 
 //GL_HP_convolution_border_modes
     inline static var GL_HP_convolution_border_modes                                  = 1;
@@ -11021,13 +8249,7 @@ extern class GL {
 
 
 
-    // static function glGetImageTransformParameterfvHP(target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glGetImageTransformParameterivHP(target:Int, pname:Int, params:const GLint*) : Void;
-    // static function glImageTransformParameterfHP(target:Int, pname:Int, param:const GLfloat) : Void;
-    // static function glImageTransformParameterfvHP(target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glImageTransformParameteriHP(target:Int, pname:Int, param:const GLint) : Void;
-    // static function glImageTransformParameterivHP(target:Int, pname:Int, params:const GLint*) : Void;
-
+    // static function glGetImageTransformParameterfvHP(target:Int, pname:Int, params:const GLfloat*) : Void;    // static function glGetImageTransformParameterivHP(target:Int, pname:Int, params:const GLint*) : Void;    // static function glImageTransformParameterfHP(target:Int, pname:Int, param:const GLfloat) : Void;    // static function glImageTransformParameterfvHP(target:Int, pname:Int, params:const GLfloat*) : Void;    // static function glImageTransformParameteriHP(target:Int, pname:Int, param:const GLint) : Void;    // static function glImageTransformParameterivHP(target:Int, pname:Int, params:const GLint*) : Void;
 
 //GL_HP_occlusion_test
     inline static var GL_HP_occlusion_test                                            = 1;
@@ -11068,9 +8290,7 @@ extern class GL {
 
 
 
-    // static function glMultiModeDrawArraysIBM(mode:const GLenum*, *first:const GLint, *count:const GLsizei, primcount:Int, modestride:Int) : Void;
-    // static function glMultiModeDrawElementsIBM(mode:const GLenum*, *count:const GLsizei, type:Int, *indices:const void *const, primcount:Int, modestride:Int) : Void;
-
+    // static function glMultiModeDrawArraysIBM(mode:const GLenum*, *first:const GLint, *count:const GLsizei, primcount:Int, modestride:Int) : Void;    // static function glMultiModeDrawElementsIBM(mode:const GLenum*, *count:const GLsizei, type:Int, *indices:const void *const, primcount:Int, modestride:Int) : Void;
 
 //GL_IBM_rasterpos_clip
     inline static var GL_IBM_rasterpos_clip                                           = 1;
@@ -11130,15 +8350,7 @@ extern class GL {
 
 
 
-    // static function glColorPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-    // static function glEdgeFlagPointerListIBM(stride:Int, pointer:const GLboolean **, ptrstride:Int) : Void;
-    // static function glFogCoordPointerListIBM(type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-    // static function glIndexPointerListIBM(type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-    // static function glNormalPointerListIBM(type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-    // static function glSecondaryColorPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-    // static function glTexCoordPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-    // static function glVertexPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-
+    // static function glColorPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;    // static function glEdgeFlagPointerListIBM(stride:Int, pointer:const GLboolean **, ptrstride:Int) : Void;    // static function glFogCoordPointerListIBM(type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;    // static function glIndexPointerListIBM(type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;    // static function glNormalPointerListIBM(type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;    // static function glSecondaryColorPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;    // static function glTexCoordPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;    // static function glVertexPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
 
 //GL_INGR_color_clamp
     inline static var GL_INGR_color_clamp                                             = 1;
@@ -11190,15 +8402,10 @@ extern class GL {
 
 
     @:native('glSyncTextureINTEL')
-    static function glSyncTextureINTEL(texture:UInt) : Void;
-
-    @:native('glUnmapTexture2DINTEL')
+    static function glSyncTextureINTEL(texture:UInt) : Void;    @:native('glUnmapTexture2DINTEL')
     static function glUnmapTexture2DINTEL(texture:UInt, level:Int) : Void;
 
-
-
     // static function glMapTexture2DINTEL(texture:UInt, level:Int, access:Int, stride:GLint*, *layout:Int) : void *;
-
 
 //GL_INTEL_parallel_arrays
     inline static var GL_INTEL_parallel_arrays                                        = 1;
@@ -11213,11 +8420,7 @@ extern class GL {
 
 
 
-    // static function glColorPointervINTEL(size:Int, type:Int, pointer:const void**) : Void;
-    // static function glNormalPointervINTEL(type:Int, pointer:const void**) : Void;
-    // static function glTexCoordPointervINTEL(size:Int, type:Int, pointer:const void**) : Void;
-    // static function glVertexPointervINTEL(size:Int, type:Int, pointer:const void**) : Void;
-
+    // static function glColorPointervINTEL(size:Int, type:Int, pointer:const void**) : Void;    // static function glNormalPointervINTEL(type:Int, pointer:const void**) : Void;    // static function glTexCoordPointervINTEL(size:Int, type:Int, pointer:const void**) : Void;    // static function glVertexPointervINTEL(size:Int, type:Int, pointer:const void**) : Void;
 
 //GL_INTEL_performance_query
     inline static var GL_INTEL_performance_query                                      = 1;
@@ -11246,24 +8449,11 @@ extern class GL {
 
 
     @:native('glBeginPerfQueryINTEL')
-    static function glBeginPerfQueryINTEL(queryHandle:UInt) : Void;
-
-    @:native('glDeletePerfQueryINTEL')
-    static function glDeletePerfQueryINTEL(queryHandle:UInt) : Void;
-
-    @:native('glEndPerfQueryINTEL')
+    static function glBeginPerfQueryINTEL(queryHandle:UInt) : Void;    @:native('glDeletePerfQueryINTEL')
+    static function glDeletePerfQueryINTEL(queryHandle:UInt) : Void;    @:native('glEndPerfQueryINTEL')
     static function glEndPerfQueryINTEL(queryHandle:UInt) : Void;
 
-
-
-    // static function glCreatePerfQueryINTEL(queryId:UInt, queryHandle:GLuint*) : Void;
-    // static function glGetFirstPerfQueryIdINTEL(queryId:GLuint*) : Void;
-    // static function glGetNextPerfQueryIdINTEL(queryId:UInt, nextQueryId:GLuint*) : Void;
-    // static function glGetPerfCounterInfoINTEL(queryId:UInt, counterId:UInt, counterNameLength:UInt, counterName:String, counterDescLength:UInt, *counterDesc:GLchar, *counterOffset:UInt, *counterDataSize:UInt, *counterTypeEnum:UInt, *counterDataTypeEnum:UInt, *rawCounterMaxValue:cpp.UInt64) : Void;
-    // static function glGetPerfQueryDataINTEL(queryHandle:UInt, flags:UInt, dataSize:Int, *data:Void, *bytesWritten:UInt) : Void;
-    // static function glGetPerfQueryIdByNameINTEL(queryName:String, *queryId:UInt) : Void;
-    // static function glGetPerfQueryInfoINTEL(queryId:UInt, queryNameLength:UInt, queryName:String, *dataSize:UInt, *noCounters:UInt, *noInstances:UInt, *capsMask:UInt) : Void;
-
+    // static function glCreatePerfQueryINTEL(queryId:UInt, queryHandle:GLuint*) : Void;    // static function glGetFirstPerfQueryIdINTEL(queryId:GLuint*) : Void;    // static function glGetNextPerfQueryIdINTEL(queryId:UInt, nextQueryId:GLuint*) : Void;    // static function glGetPerfCounterInfoINTEL(queryId:UInt, counterId:UInt, counterNameLength:UInt, counterName:String, counterDescLength:UInt, *counterDesc:GLchar, *counterOffset:UInt, *counterDataSize:UInt, *counterTypeEnum:UInt, *counterDataTypeEnum:UInt, *rawCounterMaxValue:cpp.UInt64) : Void;    // static function glGetPerfQueryDataINTEL(queryHandle:UInt, flags:UInt, dataSize:Int, *data:Void, *bytesWritten:UInt) : Void;    // static function glGetPerfQueryIdByNameINTEL(queryName:String, *queryId:UInt) : Void;    // static function glGetPerfQueryInfoINTEL(queryId:UInt, queryNameLength:UInt, queryName:String, *dataSize:UInt, *noCounters:UInt, *noInstances:UInt, *capsMask:UInt) : Void;
 
 //GL_INTEL_texture_scissor
     inline static var GL_INTEL_texture_scissor                                        = 1;
@@ -11272,12 +8462,8 @@ extern class GL {
 
 
     @:native('glTexScissorFuncINTEL')
-    static function glTexScissorFuncINTEL(target:Int, lfunc:Int, hfunc:Int) : Void;
-
-    @:native('glTexScissorINTEL')
+    static function glTexScissorFuncINTEL(target:Int, lfunc:Int, hfunc:Int) : Void;    @:native('glTexScissorINTEL')
     static function glTexScissorINTEL(target:Int, tlow:Float, thigh:Float) : Void;
-
-
 
 
 
@@ -11305,8 +8491,6 @@ extern class GL {
 
     @:native('glBlendBarrierKHR')
     static function glBlendBarrierKHR() : Void;
-
-
 
 
 
@@ -11377,24 +8561,11 @@ extern class GL {
 
 
     @:native('glDebugMessageInsert')
-    static function glDebugMessageInsert(source:Int, type:Int, id:UInt, severity:Int, length:Int, buf:String) : Void;
-
-    @:native('glObjectLabel')
-    static function glObjectLabel(identifier:Int, name:UInt, length:Int, label:String) : Void;
-
-    @:native('glPopDebugGroup')
+    static function glDebugMessageInsert(source:Int, type:Int, id:UInt, severity:Int, length:Int, buf:String) : Void;    @:native('glObjectLabel')
+    static function glObjectLabel(identifier:Int, name:UInt, length:Int, label:String) : Void;    @:native('glPopDebugGroup')
     static function glPopDebugGroup() : Void;
 
-
-
-    // static function glDebugMessageCallback(callback:GLDEBUGPROC, *userParam:const void) : Void;
-    // static function glDebugMessageControl(source:Int, type:Int, severity:Int, count:Int, ids:const GLuint*, enabled:Bool) : Void;
-    // static function glGetDebugMessageLog(count:UInt, bufSize:Int, sources:GLenum*, types:GLenum*, ids:GLuint*, severities:GLenum*, lengths:GLsizei*, messageLog:String) : UInt;
-    // static function glGetObjectLabel(identifier:Int, name:UInt, bufSize:Int, length:GLsizei*, *label:GLchar) : Void;
-    // static function glGetObjectPtrLabel(*ptr:const void, bufSize:Int, length:GLsizei*, *label:GLchar) : Void;
-    // static function glObjectPtrLabel(*ptr:const void, length:Int, label:String) : Void;
-    // static function glPushDebugGroup(source:Int, id:UInt, length:Int, message:const GLchar *) : Void;
-
+    // static function glDebugMessageCallback(callback:GLDEBUGPROC, *userParam:const void) : Void;    // static function glDebugMessageControl(source:Int, type:Int, severity:Int, count:Int, ids:const GLuint*, enabled:Bool) : Void;    // static function glGetDebugMessageLog(count:UInt, bufSize:Int, sources:GLenum*, types:GLenum*, ids:GLuint*, severities:GLenum*, lengths:GLsizei*, messageLog:String) : UInt;    // static function glGetObjectLabel(identifier:Int, name:UInt, bufSize:Int, length:GLsizei*, *label:GLchar) : Void;    // static function glGetObjectPtrLabel(*ptr:const void, bufSize:Int, length:GLsizei*, *label:GLchar) : Void;    // static function glObjectPtrLabel(*ptr:const void, length:Int, label:String) : Void;    // static function glPushDebugGroup(source:Int, id:UInt, length:Int, message:const GLchar *) : Void;
 
 //GL_KHR_no_error
     inline static var GL_KHR_no_error                                                 = 1;
@@ -11433,11 +8604,7 @@ extern class GL {
 
 
 
-    // static function glGetnUniformfv(program:UInt, location:Int, bufSize:Int, params:GLfloat*) : Void;
-    // static function glGetnUniformiv(program:UInt, location:Int, bufSize:Int, params:GLint*) : Void;
-    // static function glGetnUniformuiv(program:UInt, location:Int, bufSize:Int, params:GLuint*) : Void;
-    // static function glReadnPixels(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, bufSize:Int, *data:Void) : Void;
-
+    // static function glGetnUniformfv(program:UInt, location:Int, bufSize:Int, params:GLfloat*) : Void;    // static function glGetnUniformiv(program:UInt, location:Int, bufSize:Int, params:GLint*) : Void;    // static function glGetnUniformuiv(program:UInt, location:Int, bufSize:Int, params:GLuint*) : Void;    // static function glReadnPixels(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, bufSize:Int, *data:Void) : Void;
 
 //GL_KHR_texture_compression_astc_hdr
     inline static var GL_KHR_texture_compression_astc_hdr                             = 1;
@@ -11498,21 +8665,11 @@ extern class GL {
 
 
     @:native('glBufferRegionEnabled')
-    static function glBufferRegionEnabled() : UInt;
-
-    @:native('glDeleteBufferRegion')
-    static function glDeleteBufferRegion(region:Int) : Void;
-
-    @:native('glDrawBufferRegion')
-    static function glDrawBufferRegion(region:UInt, x:Int, y:Int, width:Int, height:Int, xDest:Int, yDest:Int) : Void;
-
-    @:native('glNewBufferRegion')
-    static function glNewBufferRegion(region:Int) : UInt;
-
-    @:native('glReadBufferRegion')
+    static function glBufferRegionEnabled() : UInt;    @:native('glDeleteBufferRegion')
+    static function glDeleteBufferRegion(region:Int) : Void;    @:native('glDrawBufferRegion')
+    static function glDrawBufferRegion(region:UInt, x:Int, y:Int, width:Int, height:Int, xDest:Int, yDest:Int) : Void;    @:native('glNewBufferRegion')
+    static function glNewBufferRegion(region:Int) : UInt;    @:native('glReadBufferRegion')
     static function glReadBufferRegion(region:UInt, x:Int, y:Int, width:Int, height:Int) : Void;
-
-
 
 
 
@@ -11554,8 +8711,6 @@ extern class GL {
 
 
 
-
-
 //GL_MESA_window_pos
     inline static var GL_MESA_window_pos                                              = 1;
 
@@ -11563,54 +8718,19 @@ extern class GL {
 
 
     @:native('glWindowPos2dMESA')
-    static function glWindowPos2dMESA(x:Float, y:Float) : Void;
-
-    @:native('glWindowPos2fMESA')
-    static function glWindowPos2fMESA(x:Float, y:Float) : Void;
-
-    @:native('glWindowPos2iMESA')
-    static function glWindowPos2iMESA(x:Int, y:Int) : Void;
-
-    @:native('glWindowPos2sMESA')
-    static function glWindowPos2sMESA(x:Int, y:Int) : Void;
-
-    @:native('glWindowPos3dMESA')
-    static function glWindowPos3dMESA(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glWindowPos3fMESA')
-    static function glWindowPos3fMESA(x:Float, y:Float, z:Float) : Void;
-
-    @:native('glWindowPos3iMESA')
-    static function glWindowPos3iMESA(x:Int, y:Int, z:Int) : Void;
-
-    @:native('glWindowPos3sMESA')
-    static function glWindowPos3sMESA(x:Int, y:Int, z:Int) : Void;
-
-    @:native('glWindowPos4fMESA')
-    static function glWindowPos4fMESA(x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glWindowPos4iMESA')
-    static function glWindowPos4iMESA(x:Int, y:Int, z:Int, w:Int) : Void;
-
-    @:native('glWindowPos4sMESA')
+    static function glWindowPos2dMESA(x:Float, y:Float) : Void;    @:native('glWindowPos2fMESA')
+    static function glWindowPos2fMESA(x:Float, y:Float) : Void;    @:native('glWindowPos2iMESA')
+    static function glWindowPos2iMESA(x:Int, y:Int) : Void;    @:native('glWindowPos2sMESA')
+    static function glWindowPos2sMESA(x:Int, y:Int) : Void;    @:native('glWindowPos3dMESA')
+    static function glWindowPos3dMESA(x:Float, y:Float, z:Float) : Void;    @:native('glWindowPos3fMESA')
+    static function glWindowPos3fMESA(x:Float, y:Float, z:Float) : Void;    @:native('glWindowPos3iMESA')
+    static function glWindowPos3iMESA(x:Int, y:Int, z:Int) : Void;    @:native('glWindowPos3sMESA')
+    static function glWindowPos3sMESA(x:Int, y:Int, z:Int) : Void;    @:native('glWindowPos4fMESA')
+    static function glWindowPos4fMESA(x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glWindowPos4iMESA')
+    static function glWindowPos4iMESA(x:Int, y:Int, z:Int, w:Int) : Void;    @:native('glWindowPos4sMESA')
     static function glWindowPos4sMESA(x:Int, y:Int, z:Int, w:Int) : Void;
 
-
-
-    // static function glWindowPos2dvMESA(p:const GLdouble*) : Void;
-    // static function glWindowPos2fvMESA(p:const GLfloat*) : Void;
-    // static function glWindowPos2ivMESA(p:const GLint*) : Void;
-    // static function glWindowPos2svMESA(p:const GLshort*) : Void;
-    // static function glWindowPos3dvMESA(p:const GLdouble*) : Void;
-    // static function glWindowPos3fvMESA(p:const GLfloat*) : Void;
-    // static function glWindowPos3ivMESA(p:const GLint*) : Void;
-    // static function glWindowPos3svMESA(p:const GLshort*) : Void;
-    // static function glWindowPos4dMESA(x:Float, y:Float, z:Float, GLdouble:) : Void;
-    // static function glWindowPos4dvMESA(p:const GLdouble*) : Void;
-    // static function glWindowPos4fvMESA(p:const GLfloat*) : Void;
-    // static function glWindowPos4ivMESA(p:const GLint*) : Void;
-    // static function glWindowPos4svMESA(p:const GLshort*) : Void;
-
+    // static function glWindowPos2dvMESA(p:const GLdouble*) : Void;    // static function glWindowPos2fvMESA(p:const GLfloat*) : Void;    // static function glWindowPos2ivMESA(p:const GLint*) : Void;    // static function glWindowPos2svMESA(p:const GLshort*) : Void;    // static function glWindowPos3dvMESA(p:const GLdouble*) : Void;    // static function glWindowPos3fvMESA(p:const GLfloat*) : Void;    // static function glWindowPos3ivMESA(p:const GLint*) : Void;    // static function glWindowPos3svMESA(p:const GLshort*) : Void;    // static function glWindowPos4dMESA(x:Float, y:Float, z:Float, GLdouble:) : Void;    // static function glWindowPos4dvMESA(p:const GLdouble*) : Void;    // static function glWindowPos4fvMESA(p:const GLfloat*) : Void;    // static function glWindowPos4ivMESA(p:const GLint*) : Void;    // static function glWindowPos4svMESA(p:const GLshort*) : Void;
 
 //GL_MESA_ycbcr_texture
     inline static var GL_MESA_ycbcr_texture                                           = 1;
@@ -11632,12 +8752,8 @@ extern class GL {
 
 
     @:native('glBeginConditionalRenderNVX')
-    static function glBeginConditionalRenderNVX(id:UInt) : Void;
-
-    @:native('glEndConditionalRenderNVX')
+    static function glBeginConditionalRenderNVX(id:UInt) : Void;    @:native('glEndConditionalRenderNVX')
     static function glEndConditionalRenderNVX() : Void;
-
-
 
 
 
@@ -11664,9 +8780,7 @@ extern class GL {
 
 
 
-    // static function glMultiDrawArraysIndirectBindlessNV(mode:Int, *indirect:const void, drawCount:Int, stride:Int, vertexBufferCount:Int) : Void;
-    // static function glMultiDrawElementsIndirectBindlessNV(mode:Int, type:Int, *indirect:const void, drawCount:Int, stride:Int, vertexBufferCount:Int) : Void;
-
+    // static function glMultiDrawArraysIndirectBindlessNV(mode:Int, *indirect:const void, drawCount:Int, stride:Int, vertexBufferCount:Int) : Void;    // static function glMultiDrawElementsIndirectBindlessNV(mode:Int, type:Int, *indirect:const void, drawCount:Int, stride:Int, vertexBufferCount:Int) : Void;
 
 //GL_NV_bindless_multi_draw_indirect_count
     inline static var GL_NV_bindless_multi_draw_indirect_count                        = 1;
@@ -11676,9 +8790,7 @@ extern class GL {
 
 
 
-    // static function glMultiDrawArraysIndirectBindlessCountNV(mode:Int, *indirect:const void, drawCount:GLintptr, maxDrawCount:Int, stride:Int, vertexBufferCount:Int) : Void;
-    // static function glMultiDrawElementsIndirectBindlessCountNV(mode:Int, type:Int, *indirect:const void, drawCount:GLintptr, maxDrawCount:Int, stride:Int, vertexBufferCount:Int) : Void;
-
+    // static function glMultiDrawArraysIndirectBindlessCountNV(mode:Int, *indirect:const void, drawCount:GLintptr, maxDrawCount:Int, stride:Int, vertexBufferCount:Int) : Void;    // static function glMultiDrawElementsIndirectBindlessCountNV(mode:Int, type:Int, *indirect:const void, drawCount:GLintptr, maxDrawCount:Int, stride:Int, vertexBufferCount:Int) : Void;
 
 //GL_NV_bindless_texture
     inline static var GL_NV_bindless_texture                                          = 1;
@@ -11687,27 +8799,11 @@ extern class GL {
 
 
     @:native('glGetImageHandleNV')
-    static function glGetImageHandleNV(texture:UInt, level:Int, layered:Bool, layer:Int, format:Int) : cpp.UInt64;
-
-    @:native('glGetTextureHandleNV')
-    static function glGetTextureHandleNV(texture:UInt) : cpp.UInt64;
-
-    @:native('glGetTextureSamplerHandleNV')
+    static function glGetImageHandleNV(texture:UInt, level:Int, layered:Bool, layer:Int, format:Int) : cpp.UInt64;    @:native('glGetTextureHandleNV')
+    static function glGetTextureHandleNV(texture:UInt) : cpp.UInt64;    @:native('glGetTextureSamplerHandleNV')
     static function glGetTextureSamplerHandleNV(texture:UInt, sampler:UInt) : cpp.UInt64;
 
-
-
-    // static function glIsImageHandleResidentNV(handle:cpp.UInt64) : Bool;
-    // static function glIsTextureHandleResidentNV(handle:cpp.UInt64) : Bool;
-    // static function glMakeImageHandleNonResidentNV(handle:cpp.UInt64) : Void;
-    // static function glMakeImageHandleResidentNV(handle:cpp.UInt64, access:Int) : Void;
-    // static function glMakeTextureHandleNonResidentNV(handle:cpp.UInt64) : Void;
-    // static function glMakeTextureHandleResidentNV(handle:cpp.UInt64) : Void;
-    // static function glProgramUniformHandleui64NV(program:UInt, location:Int, value:cpp.UInt64) : Void;
-    // static function glProgramUniformHandleui64vNV(program:UInt, location:Int, count:Int, values:const GLuint64*) : Void;
-    // static function glUniformHandleui64NV(location:Int, value:cpp.UInt64) : Void;
-    // static function glUniformHandleui64vNV(location:Int, count:Int, value:const GLuint64*) : Void;
-
+    // static function glIsImageHandleResidentNV(handle:cpp.UInt64) : Bool;    // static function glIsTextureHandleResidentNV(handle:cpp.UInt64) : Bool;    // static function glMakeImageHandleNonResidentNV(handle:cpp.UInt64) : Void;    // static function glMakeImageHandleResidentNV(handle:cpp.UInt64, access:Int) : Void;    // static function glMakeTextureHandleNonResidentNV(handle:cpp.UInt64) : Void;    // static function glMakeTextureHandleResidentNV(handle:cpp.UInt64) : Void;    // static function glProgramUniformHandleui64NV(program:UInt, location:Int, value:cpp.UInt64) : Void;    // static function glProgramUniformHandleui64vNV(program:UInt, location:Int, count:Int, values:const GLuint64*) : Void;    // static function glUniformHandleui64NV(location:Int, value:cpp.UInt64) : Void;    // static function glUniformHandleui64vNV(location:Int, count:Int, value:const GLuint64*) : Void;
 
 //GL_NV_blend_equation_advanced
     inline static var GL_NV_blend_equation_advanced                                   = 1;
@@ -11766,12 +8862,8 @@ extern class GL {
 
 
     @:native('glBlendBarrierNV')
-    static function glBlendBarrierNV() : Void;
-
-    @:native('glBlendParameteriNV')
+    static function glBlendBarrierNV() : Void;    @:native('glBlendParameteriNV')
     static function glBlendParameteriNV(pname:Int, value:Int) : Void;
-
-
 
 
 
@@ -11818,12 +8910,8 @@ extern class GL {
 
 
     @:native('glBeginConditionalRenderNV')
-    static function glBeginConditionalRenderNV(id:UInt, mode:Int) : Void;
-
-    @:native('glEndConditionalRenderNV')
+    static function glBeginConditionalRenderNV(id:UInt, mode:Int) : Void;    @:native('glEndConditionalRenderNV')
     static function glEndConditionalRenderNV() : Void;
-
-
 
 
 
@@ -11839,8 +8927,6 @@ extern class GL {
 
     @:native('glSubpixelPrecisionBiasNV')
     static function glSubpixelPrecisionBiasNV(xbits:UInt, ybits:UInt) : Void;
-
-
 
 
 
@@ -11867,8 +8953,6 @@ extern class GL {
 
 
 
-
-
 //GL_NV_deep_texture3D
     inline static var GL_NV_deep_texture3D                                            = 1;
     inline static var GL_MAX_DEEP_3D_TEXTURE_WIDTH_HEIGHT_NV                          = 0x90D0;
@@ -11892,15 +8976,9 @@ extern class GL {
 
 
     @:native('glClearDepthdNV')
-    static function glClearDepthdNV(depth:Float) : Void;
-
-    @:native('glDepthBoundsdNV')
-    static function glDepthBoundsdNV(zmin:Float, zmax:Float) : Void;
-
-    @:native('glDepthRangedNV')
+    static function glClearDepthdNV(depth:Float) : Void;    @:native('glDepthBoundsdNV')
+    static function glDepthBoundsdNV(zmin:Float, zmax:Float) : Void;    @:native('glDepthRangedNV')
     static function glDepthRangedNV(zNear:Float, zFar:Float) : Void;
-
-
 
 
 
@@ -11941,8 +9019,6 @@ extern class GL {
 
 
 
-
-
 //GL_NV_evaluators
     inline static var GL_NV_evaluators                                                = 1;
     inline static var GL_EVAL_2D_NV                                                   = 0x86C0;
@@ -11976,17 +9052,7 @@ extern class GL {
     @:native('glEvalMapsNV')
     static function glEvalMapsNV(target:Int, mode:Int) : Void;
 
-
-
-    // static function glGetMapAttribParameterfvNV(target:Int, index:UInt, pname:Int, params:GLfloat*) : Void;
-    // static function glGetMapAttribParameterivNV(target:Int, index:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetMapControlPointsNV(target:Int, index:UInt, type:Int, ustride:Int, vstride:Int, packed:Bool, *points:Void) : Void;
-    // static function glGetMapParameterfvNV(target:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetMapParameterivNV(target:Int, pname:Int, params:GLint*) : Void;
-    // static function glMapControlPointsNV(target:Int, index:UInt, type:Int, ustride:Int, vstride:Int, uorder:Int, vorder:Int, packed:Bool, *points:const void) : Void;
-    // static function glMapParameterfvNV(target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glMapParameterivNV(target:Int, pname:Int, params:const GLint*) : Void;
-
+    // static function glGetMapAttribParameterfvNV(target:Int, index:UInt, pname:Int, params:GLfloat*) : Void;    // static function glGetMapAttribParameterivNV(target:Int, index:UInt, pname:Int, params:GLint*) : Void;    // static function glGetMapControlPointsNV(target:Int, index:UInt, type:Int, ustride:Int, vstride:Int, packed:Bool, *points:Void) : Void;    // static function glGetMapParameterfvNV(target:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetMapParameterivNV(target:Int, pname:Int, params:GLint*) : Void;    // static function glMapControlPointsNV(target:Int, index:UInt, type:Int, ustride:Int, vstride:Int, uorder:Int, vorder:Int, packed:Bool, *points:const void) : Void;    // static function glMapParameterfvNV(target:Int, pname:Int, params:const GLfloat*) : Void;    // static function glMapParameterivNV(target:Int, pname:Int, params:const GLint*) : Void;
 
 //GL_NV_explicit_multisample
     inline static var GL_NV_explicit_multisample                                      = 1;
@@ -12005,15 +9071,10 @@ extern class GL {
 
 
     @:native('glSampleMaskIndexedNV')
-    static function glSampleMaskIndexedNV(index:UInt, mask:Int) : Void;
-
-    @:native('glTexRenderbufferNV')
+    static function glSampleMaskIndexedNV(index:UInt, mask:Int) : Void;    @:native('glTexRenderbufferNV')
     static function glTexRenderbufferNV(target:Int, renderbuffer:UInt) : Void;
 
-
-
     // static function glGetMultisamplefvNV(pname:Int, index:UInt, val:GLfloat*) : Void;
-
 
 //GL_NV_fence
     inline static var GL_NV_fence                                                     = 1;
@@ -12025,23 +9086,12 @@ extern class GL {
 
 
     @:native('glFinishFenceNV')
-    static function glFinishFenceNV(fence:UInt) : Void;
-
-    @:native('glIsFenceNV')
-    static function glIsFenceNV(fence:UInt) : Bool;
-
-    @:native('glSetFenceNV')
-    static function glSetFenceNV(fence:UInt, condition:Int) : Void;
-
-    @:native('glTestFenceNV')
+    static function glFinishFenceNV(fence:UInt) : Void;    @:native('glIsFenceNV')
+    static function glIsFenceNV(fence:UInt) : Bool;    @:native('glSetFenceNV')
+    static function glSetFenceNV(fence:UInt, condition:Int) : Void;    @:native('glTestFenceNV')
     static function glTestFenceNV(fence:UInt) : Bool;
 
-
-
-    // static function glDeleteFencesNV(n:Int, fences:const GLuint*) : Void;
-    // static function glGenFencesNV(n:Int, fences:GLuint*) : Void;
-    // static function glGetFenceivNV(fence:UInt, pname:Int, params:GLint*) : Void;
-
+    // static function glDeleteFencesNV(n:Int, fences:const GLuint*) : Void;    // static function glGenFencesNV(n:Int, fences:GLuint*) : Void;    // static function glGetFenceivNV(fence:UInt, pname:Int, params:GLint*) : Void;
 
 //GL_NV_fill_rectangle
     inline static var GL_NV_fill_rectangle                                            = 1;
@@ -12105,8 +9155,6 @@ extern class GL {
 
 
 
-
-
 //GL_NV_fragment_program
     inline static var GL_NV_fragment_program                                          = 1;
     inline static var GL_MAX_FRAGMENT_PROGRAM_LOCAL_PARAMETERS_NV                     = 0x8868;
@@ -12121,13 +9169,7 @@ extern class GL {
 
 
 
-    // static function glGetProgramNamedParameterdvNV(id:UInt, len:Int, name:const GLubyte*, *params:Float) : Void;
-    // static function glGetProgramNamedParameterfvNV(id:UInt, len:Int, name:const GLubyte*, *params:Float) : Void;
-    // static function glProgramNamedParameter4dNV(id:UInt, len:Int, name:const GLubyte*, x:Float, y:Float, z:Float, w:Float) : Void;
-    // static function glProgramNamedParameter4dvNV(id:UInt, len:Int, name:const GLubyte*, v:Array<const GLdouble>) : Void;
-    // static function glProgramNamedParameter4fNV(id:UInt, len:Int, name:const GLubyte*, x:Float, y:Float, z:Float, w:Float) : Void;
-    // static function glProgramNamedParameter4fvNV(id:UInt, len:Int, name:const GLubyte*, v:Array<const GLfloat>) : Void;
-
+    // static function glGetProgramNamedParameterdvNV(id:UInt, len:Int, name:const GLubyte*, *params:Float) : Void;    // static function glGetProgramNamedParameterfvNV(id:UInt, len:Int, name:const GLubyte*, *params:Float) : Void;    // static function glProgramNamedParameter4dNV(id:UInt, len:Int, name:const GLubyte*, x:Float, y:Float, z:Float, w:Float) : Void;    // static function glProgramNamedParameter4dvNV(id:UInt, len:Int, name:const GLubyte*, v:Array<const GLdouble>) : Void;    // static function glProgramNamedParameter4fNV(id:UInt, len:Int, name:const GLubyte*, x:Float, y:Float, z:Float, w:Float) : Void;    // static function glProgramNamedParameter4fvNV(id:UInt, len:Int, name:const GLubyte*, v:Array<const GLfloat>) : Void;
 
 //GL_NV_fragment_program2
     inline static var GL_NV_fragment_program2                                         = 1;
@@ -12199,8 +9241,6 @@ extern class GL {
 
 
 
-
-
 //GL_NV_geometry_program4
     inline static var GL_NV_geometry_program4                                         = 1;
     inline static var GL_GEOMETRY_PROGRAM_NV                                          = 0x8C26;
@@ -12212,8 +9252,6 @@ extern class GL {
 
     @:native('glProgramVertexLimitNV')
     static function glProgramVertexLimitNV(target:Int, limit:Int) : Void;
-
-
 
 
 
@@ -12252,28 +9290,12 @@ extern class GL {
 
 
     @:native('glProgramEnvParameterI4iNV')
-    static function glProgramEnvParameterI4iNV(target:Int, index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
-
-    @:native('glProgramEnvParameterI4uiNV')
-    static function glProgramEnvParameterI4uiNV(target:Int, index:UInt, x:UInt, y:UInt, z:UInt, w:UInt) : Void;
-
-    @:native('glProgramLocalParameterI4iNV')
-    static function glProgramLocalParameterI4iNV(target:Int, index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
-
-    @:native('glProgramLocalParameterI4uiNV')
+    static function glProgramEnvParameterI4iNV(target:Int, index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;    @:native('glProgramEnvParameterI4uiNV')
+    static function glProgramEnvParameterI4uiNV(target:Int, index:UInt, x:UInt, y:UInt, z:UInt, w:UInt) : Void;    @:native('glProgramLocalParameterI4iNV')
+    static function glProgramLocalParameterI4iNV(target:Int, index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;    @:native('glProgramLocalParameterI4uiNV')
     static function glProgramLocalParameterI4uiNV(target:Int, index:UInt, x:UInt, y:UInt, z:UInt, w:UInt) : Void;
 
-
-
-    // static function glProgramEnvParameterI4ivNV(target:Int, index:UInt, *params:const GLint) : Void;
-    // static function glProgramEnvParameterI4uivNV(target:Int, index:UInt, *params:const GLuint) : Void;
-    // static function glProgramEnvParametersI4ivNV(target:Int, index:UInt, count:Int, *params:const GLint) : Void;
-    // static function glProgramEnvParametersI4uivNV(target:Int, index:UInt, count:Int, *params:const GLuint) : Void;
-    // static function glProgramLocalParameterI4ivNV(target:Int, index:UInt, *params:const GLint) : Void;
-    // static function glProgramLocalParameterI4uivNV(target:Int, index:UInt, *params:const GLuint) : Void;
-    // static function glProgramLocalParametersI4ivNV(target:Int, index:UInt, count:Int, *params:const GLint) : Void;
-    // static function glProgramLocalParametersI4uivNV(target:Int, index:UInt, count:Int, *params:const GLuint) : Void;
-
+    // static function glProgramEnvParameterI4ivNV(target:Int, index:UInt, *params:const GLint) : Void;    // static function glProgramEnvParameterI4uivNV(target:Int, index:UInt, *params:const GLuint) : Void;    // static function glProgramEnvParametersI4ivNV(target:Int, index:UInt, count:Int, *params:const GLint) : Void;    // static function glProgramEnvParametersI4uivNV(target:Int, index:UInt, count:Int, *params:const GLuint) : Void;    // static function glProgramLocalParameterI4ivNV(target:Int, index:UInt, *params:const GLint) : Void;    // static function glProgramLocalParameterI4uivNV(target:Int, index:UInt, *params:const GLuint) : Void;    // static function glProgramLocalParametersI4ivNV(target:Int, index:UInt, count:Int, *params:const GLint) : Void;    // static function glProgramLocalParametersI4uivNV(target:Int, index:UInt, count:Int, *params:const GLuint) : Void;
 
 //GL_NV_gpu_program5
     inline static var GL_NV_gpu_program5                                              = 1;
@@ -12347,41 +9369,7 @@ extern class GL {
 
 
 
-    // static function glGetUniformi64vNV(program:UInt, location:Int, params:GLint64EXT*) : Void;
-    // static function glGetUniformui64vNV(program:UInt, location:Int, params:GLuint64EXT*) : Void;
-    // static function glProgramUniform1i64NV(program:UInt, location:Int, x:cpp.Int64) : Void;
-    // static function glProgramUniform1i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;
-    // static function glProgramUniform1ui64NV(program:UInt, location:Int, x:cpp.UInt64) : Void;
-    // static function glProgramUniform1ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
-    // static function glProgramUniform2i64NV(program:UInt, location:Int, x:cpp.Int64, y:cpp.Int64) : Void;
-    // static function glProgramUniform2i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;
-    // static function glProgramUniform2ui64NV(program:UInt, location:Int, x:cpp.UInt64, y:cpp.UInt64) : Void;
-    // static function glProgramUniform2ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
-    // static function glProgramUniform3i64NV(program:UInt, location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64) : Void;
-    // static function glProgramUniform3i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;
-    // static function glProgramUniform3ui64NV(program:UInt, location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64) : Void;
-    // static function glProgramUniform3ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
-    // static function glProgramUniform4i64NV(program:UInt, location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64, w:cpp.Int64) : Void;
-    // static function glProgramUniform4i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;
-    // static function glProgramUniform4ui64NV(program:UInt, location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64, w:cpp.UInt64) : Void;
-    // static function glProgramUniform4ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
-    // static function glUniform1i64NV(location:Int, x:cpp.Int64) : Void;
-    // static function glUniform1i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;
-    // static function glUniform1ui64NV(location:Int, x:cpp.UInt64) : Void;
-    // static function glUniform1ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
-    // static function glUniform2i64NV(location:Int, x:cpp.Int64, y:cpp.Int64) : Void;
-    // static function glUniform2i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;
-    // static function glUniform2ui64NV(location:Int, x:cpp.UInt64, y:cpp.UInt64) : Void;
-    // static function glUniform2ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
-    // static function glUniform3i64NV(location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64) : Void;
-    // static function glUniform3i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;
-    // static function glUniform3ui64NV(location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64) : Void;
-    // static function glUniform3ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
-    // static function glUniform4i64NV(location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64, w:cpp.Int64) : Void;
-    // static function glUniform4i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;
-    // static function glUniform4ui64NV(location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64, w:cpp.UInt64) : Void;
-    // static function glUniform4ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
-
+    // static function glGetUniformi64vNV(program:UInt, location:Int, params:GLint64EXT*) : Void;    // static function glGetUniformui64vNV(program:UInt, location:Int, params:GLuint64EXT*) : Void;    // static function glProgramUniform1i64NV(program:UInt, location:Int, x:cpp.Int64) : Void;    // static function glProgramUniform1i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;    // static function glProgramUniform1ui64NV(program:UInt, location:Int, x:cpp.UInt64) : Void;    // static function glProgramUniform1ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;    // static function glProgramUniform2i64NV(program:UInt, location:Int, x:cpp.Int64, y:cpp.Int64) : Void;    // static function glProgramUniform2i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;    // static function glProgramUniform2ui64NV(program:UInt, location:Int, x:cpp.UInt64, y:cpp.UInt64) : Void;    // static function glProgramUniform2ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;    // static function glProgramUniform3i64NV(program:UInt, location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64) : Void;    // static function glProgramUniform3i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;    // static function glProgramUniform3ui64NV(program:UInt, location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64) : Void;    // static function glProgramUniform3ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;    // static function glProgramUniform4i64NV(program:UInt, location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64, w:cpp.Int64) : Void;    // static function glProgramUniform4i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;    // static function glProgramUniform4ui64NV(program:UInt, location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64, w:cpp.UInt64) : Void;    // static function glProgramUniform4ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;    // static function glUniform1i64NV(location:Int, x:cpp.Int64) : Void;    // static function glUniform1i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;    // static function glUniform1ui64NV(location:Int, x:cpp.UInt64) : Void;    // static function glUniform1ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;    // static function glUniform2i64NV(location:Int, x:cpp.Int64, y:cpp.Int64) : Void;    // static function glUniform2i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;    // static function glUniform2ui64NV(location:Int, x:cpp.UInt64, y:cpp.UInt64) : Void;    // static function glUniform2ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;    // static function glUniform3i64NV(location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64) : Void;    // static function glUniform3i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;    // static function glUniform3ui64NV(location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64) : Void;    // static function glUniform3ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;    // static function glUniform4i64NV(location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64, w:cpp.Int64) : Void;    // static function glUniform4i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;    // static function glUniform4ui64NV(location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64, w:cpp.UInt64) : Void;    // static function glUniform4ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
 
 //GL_NV_half_float
     inline static var GL_NV_half_float                                                = 1;
@@ -12391,96 +9379,29 @@ extern class GL {
 
 
     @:native('glColor3hNV')
-    static function glColor3hNV(red:UInt, green:UInt, blue:UInt) : Void;
-
-    @:native('glColor4hNV')
-    static function glColor4hNV(red:UInt, green:UInt, blue:UInt, alpha:UInt) : Void;
-
-    @:native('glFogCoordhNV')
-    static function glFogCoordhNV(fog:UInt) : Void;
-
-    @:native('glMultiTexCoord1hNV')
-    static function glMultiTexCoord1hNV(target:Int, s:UInt) : Void;
-
-    @:native('glMultiTexCoord2hNV')
-    static function glMultiTexCoord2hNV(target:Int, s:UInt, t:UInt) : Void;
-
-    @:native('glMultiTexCoord3hNV')
-    static function glMultiTexCoord3hNV(target:Int, s:UInt, t:UInt, r:UInt) : Void;
-
-    @:native('glMultiTexCoord4hNV')
-    static function glMultiTexCoord4hNV(target:Int, s:UInt, t:UInt, r:UInt, q:UInt) : Void;
-
-    @:native('glNormal3hNV')
-    static function glNormal3hNV(nx:UInt, ny:UInt, nz:UInt) : Void;
-
-    @:native('glSecondaryColor3hNV')
-    static function glSecondaryColor3hNV(red:UInt, green:UInt, blue:UInt) : Void;
-
-    @:native('glTexCoord1hNV')
-    static function glTexCoord1hNV(s:UInt) : Void;
-
-    @:native('glTexCoord2hNV')
-    static function glTexCoord2hNV(s:UInt, t:UInt) : Void;
-
-    @:native('glTexCoord3hNV')
-    static function glTexCoord3hNV(s:UInt, t:UInt, r:UInt) : Void;
-
-    @:native('glTexCoord4hNV')
-    static function glTexCoord4hNV(s:UInt, t:UInt, r:UInt, q:UInt) : Void;
-
-    @:native('glVertex2hNV')
-    static function glVertex2hNV(x:UInt, y:UInt) : Void;
-
-    @:native('glVertex3hNV')
-    static function glVertex3hNV(x:UInt, y:UInt, z:UInt) : Void;
-
-    @:native('glVertex4hNV')
-    static function glVertex4hNV(x:UInt, y:UInt, z:UInt, w:UInt) : Void;
-
-    @:native('glVertexAttrib1hNV')
-    static function glVertexAttrib1hNV(index:UInt, x:UInt) : Void;
-
-    @:native('glVertexAttrib2hNV')
-    static function glVertexAttrib2hNV(index:UInt, x:UInt, y:UInt) : Void;
-
-    @:native('glVertexAttrib3hNV')
-    static function glVertexAttrib3hNV(index:UInt, x:UInt, y:UInt, z:UInt) : Void;
-
-    @:native('glVertexAttrib4hNV')
-    static function glVertexAttrib4hNV(index:UInt, x:UInt, y:UInt, z:UInt, w:UInt) : Void;
-
-    @:native('glVertexWeighthNV')
+    static function glColor3hNV(red:UInt, green:UInt, blue:UInt) : Void;    @:native('glColor4hNV')
+    static function glColor4hNV(red:UInt, green:UInt, blue:UInt, alpha:UInt) : Void;    @:native('glFogCoordhNV')
+    static function glFogCoordhNV(fog:UInt) : Void;    @:native('glMultiTexCoord1hNV')
+    static function glMultiTexCoord1hNV(target:Int, s:UInt) : Void;    @:native('glMultiTexCoord2hNV')
+    static function glMultiTexCoord2hNV(target:Int, s:UInt, t:UInt) : Void;    @:native('glMultiTexCoord3hNV')
+    static function glMultiTexCoord3hNV(target:Int, s:UInt, t:UInt, r:UInt) : Void;    @:native('glMultiTexCoord4hNV')
+    static function glMultiTexCoord4hNV(target:Int, s:UInt, t:UInt, r:UInt, q:UInt) : Void;    @:native('glNormal3hNV')
+    static function glNormal3hNV(nx:UInt, ny:UInt, nz:UInt) : Void;    @:native('glSecondaryColor3hNV')
+    static function glSecondaryColor3hNV(red:UInt, green:UInt, blue:UInt) : Void;    @:native('glTexCoord1hNV')
+    static function glTexCoord1hNV(s:UInt) : Void;    @:native('glTexCoord2hNV')
+    static function glTexCoord2hNV(s:UInt, t:UInt) : Void;    @:native('glTexCoord3hNV')
+    static function glTexCoord3hNV(s:UInt, t:UInt, r:UInt) : Void;    @:native('glTexCoord4hNV')
+    static function glTexCoord4hNV(s:UInt, t:UInt, r:UInt, q:UInt) : Void;    @:native('glVertex2hNV')
+    static function glVertex2hNV(x:UInt, y:UInt) : Void;    @:native('glVertex3hNV')
+    static function glVertex3hNV(x:UInt, y:UInt, z:UInt) : Void;    @:native('glVertex4hNV')
+    static function glVertex4hNV(x:UInt, y:UInt, z:UInt, w:UInt) : Void;    @:native('glVertexAttrib1hNV')
+    static function glVertexAttrib1hNV(index:UInt, x:UInt) : Void;    @:native('glVertexAttrib2hNV')
+    static function glVertexAttrib2hNV(index:UInt, x:UInt, y:UInt) : Void;    @:native('glVertexAttrib3hNV')
+    static function glVertexAttrib3hNV(index:UInt, x:UInt, y:UInt, z:UInt) : Void;    @:native('glVertexAttrib4hNV')
+    static function glVertexAttrib4hNV(index:UInt, x:UInt, y:UInt, z:UInt, w:UInt) : Void;    @:native('glVertexWeighthNV')
     static function glVertexWeighthNV(weight:UInt) : Void;
 
-
-
-    // static function glColor3hvNV(v:const GLhalf*) : Void;
-    // static function glColor4hvNV(v:const GLhalf*) : Void;
-    // static function glFogCoordhvNV(fog:const GLhalf*) : Void;
-    // static function glMultiTexCoord1hvNV(target:Int, v:const GLhalf*) : Void;
-    // static function glMultiTexCoord2hvNV(target:Int, v:const GLhalf*) : Void;
-    // static function glMultiTexCoord3hvNV(target:Int, v:const GLhalf*) : Void;
-    // static function glMultiTexCoord4hvNV(target:Int, v:const GLhalf*) : Void;
-    // static function glNormal3hvNV(v:const GLhalf*) : Void;
-    // static function glSecondaryColor3hvNV(v:const GLhalf*) : Void;
-    // static function glTexCoord1hvNV(v:const GLhalf*) : Void;
-    // static function glTexCoord2hvNV(v:const GLhalf*) : Void;
-    // static function glTexCoord3hvNV(v:const GLhalf*) : Void;
-    // static function glTexCoord4hvNV(v:const GLhalf*) : Void;
-    // static function glVertex2hvNV(v:const GLhalf*) : Void;
-    // static function glVertex3hvNV(v:const GLhalf*) : Void;
-    // static function glVertex4hvNV(v:const GLhalf*) : Void;
-    // static function glVertexAttrib1hvNV(index:UInt, v:const GLhalf*) : Void;
-    // static function glVertexAttrib2hvNV(index:UInt, v:const GLhalf*) : Void;
-    // static function glVertexAttrib3hvNV(index:UInt, v:const GLhalf*) : Void;
-    // static function glVertexAttrib4hvNV(index:UInt, v:const GLhalf*) : Void;
-    // static function glVertexAttribs1hvNV(index:UInt, n:Int, v:const GLhalf*) : Void;
-    // static function glVertexAttribs2hvNV(index:UInt, n:Int, v:const GLhalf*) : Void;
-    // static function glVertexAttribs3hvNV(index:UInt, n:Int, v:const GLhalf*) : Void;
-    // static function glVertexAttribs4hvNV(index:UInt, n:Int, v:const GLhalf*) : Void;
-    // static function glVertexWeighthvNV(weight:const GLhalf*) : Void;
-
+    // static function glColor3hvNV(v:const GLhalf*) : Void;    // static function glColor4hvNV(v:const GLhalf*) : Void;    // static function glFogCoordhvNV(fog:const GLhalf*) : Void;    // static function glMultiTexCoord1hvNV(target:Int, v:const GLhalf*) : Void;    // static function glMultiTexCoord2hvNV(target:Int, v:const GLhalf*) : Void;    // static function glMultiTexCoord3hvNV(target:Int, v:const GLhalf*) : Void;    // static function glMultiTexCoord4hvNV(target:Int, v:const GLhalf*) : Void;    // static function glNormal3hvNV(v:const GLhalf*) : Void;    // static function glSecondaryColor3hvNV(v:const GLhalf*) : Void;    // static function glTexCoord1hvNV(v:const GLhalf*) : Void;    // static function glTexCoord2hvNV(v:const GLhalf*) : Void;    // static function glTexCoord3hvNV(v:const GLhalf*) : Void;    // static function glTexCoord4hvNV(v:const GLhalf*) : Void;    // static function glVertex2hvNV(v:const GLhalf*) : Void;    // static function glVertex3hvNV(v:const GLhalf*) : Void;    // static function glVertex4hvNV(v:const GLhalf*) : Void;    // static function glVertexAttrib1hvNV(index:UInt, v:const GLhalf*) : Void;    // static function glVertexAttrib2hvNV(index:UInt, v:const GLhalf*) : Void;    // static function glVertexAttrib3hvNV(index:UInt, v:const GLhalf*) : Void;    // static function glVertexAttrib4hvNV(index:UInt, v:const GLhalf*) : Void;    // static function glVertexAttribs1hvNV(index:UInt, n:Int, v:const GLhalf*) : Void;    // static function glVertexAttribs2hvNV(index:UInt, n:Int, v:const GLhalf*) : Void;    // static function glVertexAttribs3hvNV(index:UInt, n:Int, v:const GLhalf*) : Void;    // static function glVertexAttribs4hvNV(index:UInt, n:Int, v:const GLhalf*) : Void;    // static function glVertexWeighthvNV(weight:const GLhalf*) : Void;
 
 //GL_NV_internalformat_sample_query
     inline static var GL_NV_internalformat_sample_query                               = 1;
@@ -12495,7 +9416,6 @@ extern class GL {
 
 
     // static function glGetInternalformatSampleivNV(target:Int, internalformat:Int, samples:Int, pname:Int, bufSize:Int, params:GLint*) : Void;
-
 
 //GL_NV_light_max_exponent
     inline static var GL_NV_light_max_exponent                                        = 1;
@@ -12541,21 +9461,11 @@ extern class GL {
 
 
     @:native('glBeginOcclusionQueryNV')
-    static function glBeginOcclusionQueryNV(id:UInt) : Void;
-
-    @:native('glEndOcclusionQueryNV')
-    static function glEndOcclusionQueryNV() : Void;
-
-    @:native('glIsOcclusionQueryNV')
+    static function glBeginOcclusionQueryNV(id:UInt) : Void;    @:native('glEndOcclusionQueryNV')
+    static function glEndOcclusionQueryNV() : Void;    @:native('glIsOcclusionQueryNV')
     static function glIsOcclusionQueryNV(id:UInt) : Bool;
 
-
-
-    // static function glDeleteOcclusionQueriesNV(n:Int, ids:const GLuint*) : Void;
-    // static function glGenOcclusionQueriesNV(n:Int, ids:GLuint*) : Void;
-    // static function glGetOcclusionQueryivNV(id:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetOcclusionQueryuivNV(id:UInt, pname:Int, params:GLuint*) : Void;
-
+    // static function glDeleteOcclusionQueriesNV(n:Int, ids:const GLuint*) : Void;    // static function glGenOcclusionQueriesNV(n:Int, ids:GLuint*) : Void;    // static function glGetOcclusionQueryivNV(id:UInt, pname:Int, params:GLint*) : Void;    // static function glGetOcclusionQueryuivNV(id:UInt, pname:Int, params:GLuint*) : Void;
 
 //GL_NV_packed_depth_stencil
     inline static var GL_NV_packed_depth_stencil                                      = 1;
@@ -12582,10 +9492,7 @@ extern class GL {
 
 
 
-    // static function glProgramBufferParametersIivNV(target:Int, buffer:UInt, index:UInt, count:Int, *params:const GLint) : Void;
-    // static function glProgramBufferParametersIuivNV(target:Int, buffer:UInt, index:UInt, count:Int, *params:const GLuint) : Void;
-    // static function glProgramBufferParametersfvNV(target:Int, buffer:UInt, index:UInt, count:Int, *params:const GLfloat) : Void;
-
+    // static function glProgramBufferParametersIivNV(target:Int, buffer:UInt, index:UInt, count:Int, *params:const GLint) : Void;    // static function glProgramBufferParametersIuivNV(target:Int, buffer:UInt, index:UInt, count:Int, *params:const GLuint) : Void;    // static function glProgramBufferParametersfvNV(target:Int, buffer:UInt, index:UInt, count:Int, *params:const GLfloat) : Void;
 
 //GL_NV_parameter_buffer_object2
     inline static var GL_NV_parameter_buffer_object2                                  = 1;
@@ -12752,112 +9659,28 @@ extern class GL {
 
 
     @:native('glCopyPathNV')
-    static function glCopyPathNV(resultPath:UInt, srcPath:UInt) : Void;
-
-    @:native('glCoverFillPathNV')
-    static function glCoverFillPathNV(path:UInt, coverMode:Int) : Void;
-
-    @:native('glCoverStrokePathNV')
-    static function glCoverStrokePathNV(path:UInt, coverMode:Int) : Void;
-
-    @:native('glDeletePathsNV')
-    static function glDeletePathsNV(path:UInt, range:Int) : Void;
-
-    @:native('glGenPathsNV')
-    static function glGenPathsNV(range:Int) : UInt;
-
-    @:native('glGetPathLengthNV')
-    static function glGetPathLengthNV(path:UInt, startSegment:Int, numSegments:Int) : Float;
-
-    @:native('glInterpolatePathsNV')
-    static function glInterpolatePathsNV(resultPath:UInt, pathA:UInt, pathB:UInt, weight:Float) : Void;
-
-    @:native('glIsPathNV')
-    static function glIsPathNV(path:UInt) : Bool;
-
-    @:native('glIsPointInFillPathNV')
-    static function glIsPointInFillPathNV(path:UInt, mask:UInt, x:Float, y:Float) : Bool;
-
-    @:native('glIsPointInStrokePathNV')
-    static function glIsPointInStrokePathNV(path:UInt, x:Float, y:Float) : Bool;
-
-    @:native('glPathCoverDepthFuncNV')
-    static function glPathCoverDepthFuncNV(zfunc:Int) : Void;
-
-    @:native('glPathFogGenNV')
-    static function glPathFogGenNV(genMode:Int) : Void;
-
-    @:native('glPathParameterfNV')
-    static function glPathParameterfNV(path:UInt, pname:Int, value:Float) : Void;
-
-    @:native('glPathParameteriNV')
-    static function glPathParameteriNV(path:UInt, pname:Int, value:Int) : Void;
-
-    @:native('glPathStencilDepthOffsetNV')
-    static function glPathStencilDepthOffsetNV(factor:Float, units:Float) : Void;
-
-    @:native('glPathStencilFuncNV')
-    static function glPathStencilFuncNV(func:Int, ref:Int, mask:UInt) : Void;
-
-    @:native('glStencilFillPathNV')
-    static function glStencilFillPathNV(path:UInt, fillMode:Int, mask:UInt) : Void;
-
-    @:native('glStencilStrokePathNV')
-    static function glStencilStrokePathNV(path:UInt, reference:Int, mask:UInt) : Void;
-
-    @:native('glStencilThenCoverFillPathNV')
-    static function glStencilThenCoverFillPathNV(path:UInt, fillMode:Int, mask:UInt, coverMode:Int) : Void;
-
-    @:native('glStencilThenCoverStrokePathNV')
+    static function glCopyPathNV(resultPath:UInt, srcPath:UInt) : Void;    @:native('glCoverFillPathNV')
+    static function glCoverFillPathNV(path:UInt, coverMode:Int) : Void;    @:native('glCoverStrokePathNV')
+    static function glCoverStrokePathNV(path:UInt, coverMode:Int) : Void;    @:native('glDeletePathsNV')
+    static function glDeletePathsNV(path:UInt, range:Int) : Void;    @:native('glGenPathsNV')
+    static function glGenPathsNV(range:Int) : UInt;    @:native('glGetPathLengthNV')
+    static function glGetPathLengthNV(path:UInt, startSegment:Int, numSegments:Int) : Float;    @:native('glInterpolatePathsNV')
+    static function glInterpolatePathsNV(resultPath:UInt, pathA:UInt, pathB:UInt, weight:Float) : Void;    @:native('glIsPathNV')
+    static function glIsPathNV(path:UInt) : Bool;    @:native('glIsPointInFillPathNV')
+    static function glIsPointInFillPathNV(path:UInt, mask:UInt, x:Float, y:Float) : Bool;    @:native('glIsPointInStrokePathNV')
+    static function glIsPointInStrokePathNV(path:UInt, x:Float, y:Float) : Bool;    @:native('glPathCoverDepthFuncNV')
+    static function glPathCoverDepthFuncNV(zfunc:Int) : Void;    @:native('glPathFogGenNV')
+    static function glPathFogGenNV(genMode:Int) : Void;    @:native('glPathParameterfNV')
+    static function glPathParameterfNV(path:UInt, pname:Int, value:Float) : Void;    @:native('glPathParameteriNV')
+    static function glPathParameteriNV(path:UInt, pname:Int, value:Int) : Void;    @:native('glPathStencilDepthOffsetNV')
+    static function glPathStencilDepthOffsetNV(factor:Float, units:Float) : Void;    @:native('glPathStencilFuncNV')
+    static function glPathStencilFuncNV(func:Int, ref:Int, mask:UInt) : Void;    @:native('glStencilFillPathNV')
+    static function glStencilFillPathNV(path:UInt, fillMode:Int, mask:UInt) : Void;    @:native('glStencilStrokePathNV')
+    static function glStencilStrokePathNV(path:UInt, reference:Int, mask:UInt) : Void;    @:native('glStencilThenCoverFillPathNV')
+    static function glStencilThenCoverFillPathNV(path:UInt, fillMode:Int, mask:UInt, coverMode:Int) : Void;    @:native('glStencilThenCoverStrokePathNV')
     static function glStencilThenCoverStrokePathNV(path:UInt, reference:Int, mask:UInt, coverMode:Int) : Void;
 
-
-
-    // static function glCoverFillPathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, coverMode:Int, transformType:Int, *transformValues:const GLfloat) : Void;
-    // static function glCoverStrokePathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, coverMode:Int, transformType:Int, *transformValues:const GLfloat) : Void;
-    // static function glGetPathColorGenfvNV(color:Int, pname:Int, value:GLfloat*) : Void;
-    // static function glGetPathColorGenivNV(color:Int, pname:Int, value:GLint*) : Void;
-    // static function glGetPathCommandsNV(path:UInt, commands:GLubyte*) : Void;
-    // static function glGetPathCoordsNV(path:UInt, coords:GLfloat*) : Void;
-    // static function glGetPathDashArrayNV(path:UInt, dashArray:GLfloat*) : Void;
-    // static function glGetPathMetricRangeNV(metricQueryMask:Int, firstPathName:UInt, numPaths:Int, stride:Int, metrics:GLfloat*) : Void;
-    // static function glGetPathMetricsNV(metricQueryMask:Int, numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, stride:Int, *metrics:Float) : Void;
-    // static function glGetPathParameterfvNV(path:UInt, pname:Int, value:GLfloat*) : Void;
-    // static function glGetPathParameterivNV(path:UInt, pname:Int, value:GLint*) : Void;
-    // static function glGetPathSpacingNV(pathListMode:Int, numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, advanceScale:Float, kerningScale:Float, transformType:Int, *returnedSpacing:Float) : Void;
-    // static function glGetPathTexGenfvNV(texCoordSet:Int, pname:Int, value:GLfloat*) : Void;
-    // static function glGetPathTexGenivNV(texCoordSet:Int, pname:Int, value:GLint*) : Void;
-    // static function glGetProgramResourcefvNV(program:UInt, programInterface:Int, index:UInt, propCount:Int, props:const GLenum*, bufSize:Int, *length:Int, *params:Float) : Void;
-    // static function glMatrixLoad3x2fNV(matrixMode:Int, m:const GLfloat*) : Void;
-    // static function glMatrixLoad3x3fNV(matrixMode:Int, m:const GLfloat*) : Void;
-    // static function glMatrixLoadTranspose3x3fNV(matrixMode:Int, m:const GLfloat*) : Void;
-    // static function glMatrixMult3x2fNV(matrixMode:Int, m:const GLfloat*) : Void;
-    // static function glMatrixMult3x3fNV(matrixMode:Int, m:const GLfloat*) : Void;
-    // static function glMatrixMultTranspose3x3fNV(matrixMode:Int, m:const GLfloat*) : Void;
-    // static function glPathColorGenNV(color:Int, genMode:Int, colorFormat:Int, coeffs:const GLfloat*) : Void;
-    // static function glPathCommandsNV(path:UInt, numCommands:Int, commands:const GLubyte*, numCoords:Int, coordType:Int, void*coords:const) : Void;
-    // static function glPathCoordsNV(path:UInt, numCoords:Int, coordType:Int, *coords:const void) : Void;
-    // static function glPathDashArrayNV(path:UInt, dashCount:Int, dashArray:const GLfloat*) : Void;
-    // static function glPathGlyphIndexArrayNV(firstPathName:UInt, fontTarget:Int, *fontName:const void, fontStyle:Int, firstGlyphIndex:UInt, numGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Int;
-    // static function glPathGlyphIndexRangeNV(fontTarget:Int, *fontName:const void, fontStyle:Int, pathParameterTemplate:UInt, emScale:Float, baseAndCount:Array<UInt>) : Int;
-    // static function glPathGlyphRangeNV(firstPathName:UInt, fontTarget:Int, *fontName:const void, fontStyle:Int, firstGlyph:UInt, numGlyphs:Int, handleMissingGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Void;
-    // static function glPathGlyphsNV(firstPathName:UInt, fontTarget:Int, *fontName:const void, fontStyle:Int, numGlyphs:Int, type:Int, void*charcodes:const, handleMissingGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Void;
-    // static function glPathMemoryGlyphIndexArrayNV(firstPathName:UInt, fontTarget:Int, fontSize:GLsizeiptr, *fontData:const void, faceIndex:Int, firstGlyphIndex:UInt, numGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Int;
-    // static function glPathParameterfvNV(path:UInt, pname:Int, value:const GLfloat*) : Void;
-    // static function glPathParameterivNV(path:UInt, pname:Int, value:const GLint*) : Void;
-    // static function glPathStringNV(path:UInt, format:Int, length:Int, *pathString:const void) : Void;
-    // static function glPathSubCommandsNV(path:UInt, commandStart:Int, commandsToDelete:Int, numCommands:Int, commands:const GLubyte*, numCoords:Int, coordType:Int, void*coords:const) : Void;
-    // static function glPathSubCoordsNV(path:UInt, coordStart:Int, numCoords:Int, coordType:Int, *coords:const void) : Void;
-    // static function glPathTexGenNV(texCoordSet:Int, genMode:Int, components:Int, coeffs:const GLfloat*) : Void;
-    // static function glPointAlongPathNV(path:UInt, startSegment:Int, numSegments:Int, distance:Float, x:GLfloat*, *y:Float, *tangentX:Float, *tangentY:Float) : Bool;
-    // static function glProgramPathFragmentInputGenNV(program:UInt, location:Int, genMode:Int, components:Int, coeffs:const GLfloat*) : Void;
-    // static function glStencilFillPathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, fillMode:Int, mask:UInt, transformType:Int, *transformValues:const GLfloat) : Void;
-    // static function glStencilStrokePathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, reference:Int, mask:UInt, transformType:Int, *transformValues:const GLfloat) : Void;
-    // static function glStencilThenCoverFillPathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, fillMode:Int, mask:UInt, coverMode:Int, transformType:Int, *transformValues:const GLfloat) : Void;
-    // static function glStencilThenCoverStrokePathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, reference:Int, mask:UInt, coverMode:Int, transformType:Int, *transformValues:const GLfloat) : Void;
-    // static function glTransformPathNV(resultPath:UInt, srcPath:UInt, transformType:Int, transformValues:const GLfloat*) : Void;
-    // static function glWeightPathsNV(resultPath:UInt, numPaths:Int, paths:Array<const GLuint>, weights:Array<const GLfloat>) : Void;
-
+    // static function glCoverFillPathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, coverMode:Int, transformType:Int, *transformValues:const GLfloat) : Void;    // static function glCoverStrokePathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, coverMode:Int, transformType:Int, *transformValues:const GLfloat) : Void;    // static function glGetPathColorGenfvNV(color:Int, pname:Int, value:GLfloat*) : Void;    // static function glGetPathColorGenivNV(color:Int, pname:Int, value:GLint*) : Void;    // static function glGetPathCommandsNV(path:UInt, commands:GLubyte*) : Void;    // static function glGetPathCoordsNV(path:UInt, coords:GLfloat*) : Void;    // static function glGetPathDashArrayNV(path:UInt, dashArray:GLfloat*) : Void;    // static function glGetPathMetricRangeNV(metricQueryMask:Int, firstPathName:UInt, numPaths:Int, stride:Int, metrics:GLfloat*) : Void;    // static function glGetPathMetricsNV(metricQueryMask:Int, numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, stride:Int, *metrics:Float) : Void;    // static function glGetPathParameterfvNV(path:UInt, pname:Int, value:GLfloat*) : Void;    // static function glGetPathParameterivNV(path:UInt, pname:Int, value:GLint*) : Void;    // static function glGetPathSpacingNV(pathListMode:Int, numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, advanceScale:Float, kerningScale:Float, transformType:Int, *returnedSpacing:Float) : Void;    // static function glGetPathTexGenfvNV(texCoordSet:Int, pname:Int, value:GLfloat*) : Void;    // static function glGetPathTexGenivNV(texCoordSet:Int, pname:Int, value:GLint*) : Void;    // static function glGetProgramResourcefvNV(program:UInt, programInterface:Int, index:UInt, propCount:Int, props:const GLenum*, bufSize:Int, *length:Int, *params:Float) : Void;    // static function glMatrixLoad3x2fNV(matrixMode:Int, m:const GLfloat*) : Void;    // static function glMatrixLoad3x3fNV(matrixMode:Int, m:const GLfloat*) : Void;    // static function glMatrixLoadTranspose3x3fNV(matrixMode:Int, m:const GLfloat*) : Void;    // static function glMatrixMult3x2fNV(matrixMode:Int, m:const GLfloat*) : Void;    // static function glMatrixMult3x3fNV(matrixMode:Int, m:const GLfloat*) : Void;    // static function glMatrixMultTranspose3x3fNV(matrixMode:Int, m:const GLfloat*) : Void;    // static function glPathColorGenNV(color:Int, genMode:Int, colorFormat:Int, coeffs:const GLfloat*) : Void;    // static function glPathCommandsNV(path:UInt, numCommands:Int, commands:const GLubyte*, numCoords:Int, coordType:Int, void*coords:const) : Void;    // static function glPathCoordsNV(path:UInt, numCoords:Int, coordType:Int, *coords:const void) : Void;    // static function glPathDashArrayNV(path:UInt, dashCount:Int, dashArray:const GLfloat*) : Void;    // static function glPathGlyphIndexArrayNV(firstPathName:UInt, fontTarget:Int, *fontName:const void, fontStyle:Int, firstGlyphIndex:UInt, numGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Int;    // static function glPathGlyphIndexRangeNV(fontTarget:Int, *fontName:const void, fontStyle:Int, pathParameterTemplate:UInt, emScale:Float, baseAndCount:Array<UInt>) : Int;    // static function glPathGlyphRangeNV(firstPathName:UInt, fontTarget:Int, *fontName:const void, fontStyle:Int, firstGlyph:UInt, numGlyphs:Int, handleMissingGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Void;    // static function glPathGlyphsNV(firstPathName:UInt, fontTarget:Int, *fontName:const void, fontStyle:Int, numGlyphs:Int, type:Int, void*charcodes:const, handleMissingGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Void;    // static function glPathMemoryGlyphIndexArrayNV(firstPathName:UInt, fontTarget:Int, fontSize:GLsizeiptr, *fontData:const void, faceIndex:Int, firstGlyphIndex:UInt, numGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Int;    // static function glPathParameterfvNV(path:UInt, pname:Int, value:const GLfloat*) : Void;    // static function glPathParameterivNV(path:UInt, pname:Int, value:const GLint*) : Void;    // static function glPathStringNV(path:UInt, format:Int, length:Int, *pathString:const void) : Void;    // static function glPathSubCommandsNV(path:UInt, commandStart:Int, commandsToDelete:Int, numCommands:Int, commands:const GLubyte*, numCoords:Int, coordType:Int, void*coords:const) : Void;    // static function glPathSubCoordsNV(path:UInt, coordStart:Int, numCoords:Int, coordType:Int, *coords:const void) : Void;    // static function glPathTexGenNV(texCoordSet:Int, genMode:Int, components:Int, coeffs:const GLfloat*) : Void;    // static function glPointAlongPathNV(path:UInt, startSegment:Int, numSegments:Int, distance:Float, x:GLfloat*, *y:Float, *tangentX:Float, *tangentY:Float) : Bool;    // static function glProgramPathFragmentInputGenNV(program:UInt, location:Int, genMode:Int, components:Int, coeffs:const GLfloat*) : Void;    // static function glStencilFillPathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, fillMode:Int, mask:UInt, transformType:Int, *transformValues:const GLfloat) : Void;    // static function glStencilStrokePathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, reference:Int, mask:UInt, transformType:Int, *transformValues:const GLfloat) : Void;    // static function glStencilThenCoverFillPathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, fillMode:Int, mask:UInt, coverMode:Int, transformType:Int, *transformValues:const GLfloat) : Void;    // static function glStencilThenCoverStrokePathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, reference:Int, mask:UInt, coverMode:Int, transformType:Int, *transformValues:const GLfloat) : Void;    // static function glTransformPathNV(resultPath:UInt, srcPath:UInt, transformType:Int, transformValues:const GLfloat*) : Void;    // static function glWeightPathsNV(resultPath:UInt, numPaths:Int, paths:Array<const GLuint>, weights:Array<const GLfloat>) : Void;
 
 //GL_NV_path_rendering_shared_edge
     inline static var GL_NV_path_rendering_shared_edge                                = 1;
@@ -12885,10 +9708,7 @@ extern class GL {
     @:native('glFlushPixelDataRangeNV')
     static function glFlushPixelDataRangeNV(target:Int) : Void;
 
-
-
     // static function glPixelDataRangeNV(target:Int, length:Int, *pointer:Void) : Void;
-
 
 //GL_NV_point_sprite
     inline static var GL_NV_point_sprite                                              = 1;
@@ -12902,10 +9722,7 @@ extern class GL {
     @:native('glPointParameteriNV')
     static function glPointParameteriNV(pname:Int, param:Int) : Void;
 
-
-
     // static function glPointParameterivNV(pname:Int, params:const GLint*) : Void;
-
 
 //GL_NV_present_video
     inline static var GL_NV_present_video                                             = 1;
@@ -12921,13 +9738,7 @@ extern class GL {
 
 
 
-    // static function glGetVideoi64vNV(video_slot:UInt, pname:Int, params:GLint64EXT*) : Void;
-    // static function glGetVideoivNV(video_slot:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetVideoui64vNV(video_slot:UInt, pname:Int, params:GLuint64EXT*) : Void;
-    // static function glGetVideouivNV(video_slot:UInt, pname:Int, params:GLuint*) : Void;
-    // static function glPresentFrameDualFillNV(video_slot:UInt, minPresentTime:cpp.UInt64, beginPresentTimeId:UInt, presentDurationId:UInt, type:Int, target0:Int, fill0:UInt, target1:Int, fill1:UInt, target2:Int, fill2:UInt, target3:Int, fill3:UInt) : Void;
-    // static function glPresentFrameKeyedNV(video_slot:UInt, minPresentTime:cpp.UInt64, beginPresentTimeId:UInt, presentDurationId:UInt, type:Int, target0:Int, fill0:UInt, key0:UInt, target1:Int, fill1:UInt, key1:UInt) : Void;
-
+    // static function glGetVideoi64vNV(video_slot:UInt, pname:Int, params:GLint64EXT*) : Void;    // static function glGetVideoivNV(video_slot:UInt, pname:Int, params:GLint*) : Void;    // static function glGetVideoui64vNV(video_slot:UInt, pname:Int, params:GLuint64EXT*) : Void;    // static function glGetVideouivNV(video_slot:UInt, pname:Int, params:GLuint*) : Void;    // static function glPresentFrameDualFillNV(video_slot:UInt, minPresentTime:cpp.UInt64, beginPresentTimeId:UInt, presentDurationId:UInt, type:Int, target0:Int, fill0:UInt, target1:Int, fill1:UInt, target2:Int, fill2:UInt, target3:Int, fill3:UInt) : Void;    // static function glPresentFrameKeyedNV(video_slot:UInt, minPresentTime:cpp.UInt64, beginPresentTimeId:UInt, presentDurationId:UInt, type:Int, target0:Int, fill0:UInt, key0:UInt, target1:Int, fill1:UInt, key1:UInt) : Void;
 
 //GL_NV_primitive_restart
     inline static var GL_NV_primitive_restart                                         = 1;
@@ -12938,12 +9749,8 @@ extern class GL {
 
 
     @:native('glPrimitiveRestartIndexNV')
-    static function glPrimitiveRestartIndexNV(index:UInt) : Void;
-
-    @:native('glPrimitiveRestartNV')
+    static function glPrimitiveRestartIndexNV(index:UInt) : Void;    @:native('glPrimitiveRestartNV')
     static function glPrimitiveRestartNV() : Void;
-
-
 
 
 
@@ -13003,31 +9810,13 @@ extern class GL {
 
 
     @:native('glCombinerInputNV')
-    static function glCombinerInputNV(stage:Int, portion:Int, variable:Int, input:Int, mapping:Int, componentUsage:Int) : Void;
-
-    @:native('glCombinerOutputNV')
-    static function glCombinerOutputNV(stage:Int, portion:Int, abOutput:Int, cdOutput:Int, sumOutput:Int, scale:Int, bias:Int, abDotProduct:Bool, cdDotProduct:Bool, muxSum:Bool) : Void;
-
-    @:native('glCombinerParameterfNV')
-    static function glCombinerParameterfNV(pname:Int, param:Float) : Void;
-
-    @:native('glCombinerParameteriNV')
-    static function glCombinerParameteriNV(pname:Int, param:Int) : Void;
-
-    @:native('glFinalCombinerInputNV')
+    static function glCombinerInputNV(stage:Int, portion:Int, variable:Int, input:Int, mapping:Int, componentUsage:Int) : Void;    @:native('glCombinerOutputNV')
+    static function glCombinerOutputNV(stage:Int, portion:Int, abOutput:Int, cdOutput:Int, sumOutput:Int, scale:Int, bias:Int, abDotProduct:Bool, cdDotProduct:Bool, muxSum:Bool) : Void;    @:native('glCombinerParameterfNV')
+    static function glCombinerParameterfNV(pname:Int, param:Float) : Void;    @:native('glCombinerParameteriNV')
+    static function glCombinerParameteriNV(pname:Int, param:Int) : Void;    @:native('glFinalCombinerInputNV')
     static function glFinalCombinerInputNV(variable:Int, input:Int, mapping:Int, componentUsage:Int) : Void;
 
-
-
-    // static function glCombinerParameterfvNV(pname:Int, params:const GLfloat*) : Void;
-    // static function glCombinerParameterivNV(pname:Int, params:const GLint*) : Void;
-    // static function glGetCombinerInputParameterfvNV(stage:Int, portion:Int, variable:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetCombinerInputParameterivNV(stage:Int, portion:Int, variable:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetCombinerOutputParameterfvNV(stage:Int, portion:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetCombinerOutputParameterivNV(stage:Int, portion:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetFinalCombinerInputParameterfvNV(variable:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetFinalCombinerInputParameterivNV(variable:Int, pname:Int, params:GLint*) : Void;
-
+    // static function glCombinerParameterfvNV(pname:Int, params:const GLfloat*) : Void;    // static function glCombinerParameterivNV(pname:Int, params:const GLint*) : Void;    // static function glGetCombinerInputParameterfvNV(stage:Int, portion:Int, variable:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetCombinerInputParameterivNV(stage:Int, portion:Int, variable:Int, pname:Int, params:GLint*) : Void;    // static function glGetCombinerOutputParameterfvNV(stage:Int, portion:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetCombinerOutputParameterivNV(stage:Int, portion:Int, pname:Int, params:GLint*) : Void;    // static function glGetFinalCombinerInputParameterfvNV(variable:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetFinalCombinerInputParameterivNV(variable:Int, pname:Int, params:GLint*) : Void;
 
 //GL_NV_register_combiners2
     inline static var GL_NV_register_combiners2                                       = 1;
@@ -13038,9 +9827,7 @@ extern class GL {
 
 
 
-    // static function glCombinerStageParameterfvNV(stage:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glGetCombinerStageParameterfvNV(stage:Int, pname:Int, params:GLfloat*) : Void;
-
+    // static function glCombinerStageParameterfvNV(stage:Int, pname:Int, params:const GLfloat*) : Void;    // static function glGetCombinerStageParameterfvNV(stage:Int, pname:Int, params:GLfloat*) : Void;
 
 //GL_NV_sample_locations
     inline static var GL_NV_sample_locations                                          = 1;
@@ -13058,9 +9845,7 @@ extern class GL {
 
 
 
-    // static function glFramebufferSampleLocationsfvNV(target:Int, start:UInt, count:Int, v:const GLfloat*) : Void;
-    // static function glNamedFramebufferSampleLocationsfvNV(framebuffer:UInt, start:UInt, count:Int, v:const GLfloat*) : Void;
-
+    // static function glFramebufferSampleLocationsfvNV(target:Int, start:UInt, count:Int, v:const GLfloat*) : Void;    // static function glNamedFramebufferSampleLocationsfvNV(framebuffer:UInt, start:UInt, count:Int, v:const GLfloat*) : Void;
 
 //GL_NV_sample_mask_override_coverage
     inline static var GL_NV_sample_mask_override_coverage                             = 1;
@@ -13122,33 +9907,14 @@ extern class GL {
 
 
     @:native('glIsBufferResidentNV')
-    static function glIsBufferResidentNV(target:Int) : Bool;
-
-    @:native('glIsNamedBufferResidentNV')
-    static function glIsNamedBufferResidentNV(buffer:UInt) : Bool;
-
-    @:native('glMakeBufferNonResidentNV')
-    static function glMakeBufferNonResidentNV(target:Int) : Void;
-
-    @:native('glMakeBufferResidentNV')
-    static function glMakeBufferResidentNV(target:Int, access:Int) : Void;
-
-    @:native('glMakeNamedBufferNonResidentNV')
-    static function glMakeNamedBufferNonResidentNV(buffer:UInt) : Void;
-
-    @:native('glMakeNamedBufferResidentNV')
+    static function glIsBufferResidentNV(target:Int) : Bool;    @:native('glIsNamedBufferResidentNV')
+    static function glIsNamedBufferResidentNV(buffer:UInt) : Bool;    @:native('glMakeBufferNonResidentNV')
+    static function glMakeBufferNonResidentNV(target:Int) : Void;    @:native('glMakeBufferResidentNV')
+    static function glMakeBufferResidentNV(target:Int, access:Int) : Void;    @:native('glMakeNamedBufferNonResidentNV')
+    static function glMakeNamedBufferNonResidentNV(buffer:UInt) : Void;    @:native('glMakeNamedBufferResidentNV')
     static function glMakeNamedBufferResidentNV(buffer:UInt, access:Int) : Void;
 
-
-
-    // static function glGetBufferParameterui64vNV(target:Int, pname:Int, params:GLuint64EXT*) : Void;
-    // static function glGetIntegerui64vNV(value:Int, result:GLuint64EXT*) : Void;
-    // static function glGetNamedBufferParameterui64vNV(buffer:UInt, pname:Int, params:GLuint64EXT*) : Void;
-    // static function glProgramUniformui64NV(program:UInt, location:Int, value:cpp.UInt64) : Void;
-    // static function glProgramUniformui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
-    // static function glUniformui64NV(location:Int, value:cpp.UInt64) : Void;
-    // static function glUniformui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
-
+    // static function glGetBufferParameterui64vNV(target:Int, pname:Int, params:GLuint64EXT*) : Void;    // static function glGetIntegerui64vNV(value:Int, result:GLuint64EXT*) : Void;    // static function glGetNamedBufferParameterui64vNV(buffer:UInt, pname:Int, params:GLuint64EXT*) : Void;    // static function glProgramUniformui64NV(program:UInt, location:Int, value:cpp.UInt64) : Void;    // static function glProgramUniformui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;    // static function glUniformui64NV(location:Int, value:cpp.UInt64) : Void;    // static function glUniformui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
 
 //GL_NV_shader_storage_buffer_object
     inline static var GL_NV_shader_storage_buffer_object                              = 1;
@@ -13234,8 +10000,6 @@ extern class GL {
 
 
 
-
-
 //GL_NV_texture_compression_vtc
     inline static var GL_NV_texture_compression_vtc                                   = 1;
 
@@ -13281,24 +10045,12 @@ extern class GL {
 
 
     @:native('glTexImage2DMultisampleCoverageNV')
-    static function glTexImage2DMultisampleCoverageNV(target:Int, coverageSamples:Int, colorSamples:Int, internalFormat:Int, width:Int, height:Int, fixedSampleLocations:Bool) : Void;
-
-    @:native('glTexImage3DMultisampleCoverageNV')
-    static function glTexImage3DMultisampleCoverageNV(target:Int, coverageSamples:Int, colorSamples:Int, internalFormat:Int, width:Int, height:Int, depth:Int, fixedSampleLocations:Bool) : Void;
-
-    @:native('glTextureImage2DMultisampleCoverageNV')
-    static function glTextureImage2DMultisampleCoverageNV(texture:UInt, target:Int, coverageSamples:Int, colorSamples:Int, internalFormat:Int, width:Int, height:Int, fixedSampleLocations:Bool) : Void;
-
-    @:native('glTextureImage2DMultisampleNV')
-    static function glTextureImage2DMultisampleNV(texture:UInt, target:Int, samples:Int, internalFormat:Int, width:Int, height:Int, fixedSampleLocations:Bool) : Void;
-
-    @:native('glTextureImage3DMultisampleCoverageNV')
-    static function glTextureImage3DMultisampleCoverageNV(texture:UInt, target:Int, coverageSamples:Int, colorSamples:Int, internalFormat:Int, width:Int, height:Int, depth:Int, fixedSampleLocations:Bool) : Void;
-
-    @:native('glTextureImage3DMultisampleNV')
+    static function glTexImage2DMultisampleCoverageNV(target:Int, coverageSamples:Int, colorSamples:Int, internalFormat:Int, width:Int, height:Int, fixedSampleLocations:Bool) : Void;    @:native('glTexImage3DMultisampleCoverageNV')
+    static function glTexImage3DMultisampleCoverageNV(target:Int, coverageSamples:Int, colorSamples:Int, internalFormat:Int, width:Int, height:Int, depth:Int, fixedSampleLocations:Bool) : Void;    @:native('glTextureImage2DMultisampleCoverageNV')
+    static function glTextureImage2DMultisampleCoverageNV(texture:UInt, target:Int, coverageSamples:Int, colorSamples:Int, internalFormat:Int, width:Int, height:Int, fixedSampleLocations:Bool) : Void;    @:native('glTextureImage2DMultisampleNV')
+    static function glTextureImage2DMultisampleNV(texture:UInt, target:Int, samples:Int, internalFormat:Int, width:Int, height:Int, fixedSampleLocations:Bool) : Void;    @:native('glTextureImage3DMultisampleCoverageNV')
+    static function glTextureImage3DMultisampleCoverageNV(texture:UInt, target:Int, coverageSamples:Int, colorSamples:Int, internalFormat:Int, width:Int, height:Int, depth:Int, fixedSampleLocations:Bool) : Void;    @:native('glTextureImage3DMultisampleNV')
     static function glTextureImage3DMultisampleNV(texture:UInt, target:Int, samples:Int, internalFormat:Int, width:Int, height:Int, depth:Int, fixedSampleLocations:Bool) : Void;
-
-
 
 
 
@@ -13469,25 +10221,11 @@ extern class GL {
 
 
     @:native('glBeginTransformFeedbackNV')
-    static function glBeginTransformFeedbackNV(primitiveMode:Int) : Void;
-
-    @:native('glBindBufferBaseNV')
-    static function glBindBufferBaseNV(target:Int, index:UInt, buffer:UInt) : Void;
-
-    @:native('glEndTransformFeedbackNV')
+    static function glBeginTransformFeedbackNV(primitiveMode:Int) : Void;    @:native('glBindBufferBaseNV')
+    static function glBindBufferBaseNV(target:Int, index:UInt, buffer:UInt) : Void;    @:native('glEndTransformFeedbackNV')
     static function glEndTransformFeedbackNV() : Void;
 
-
-
-    // static function glActiveVaryingNV(program:UInt, *name:const GLchar) : Void;
-    // static function glBindBufferOffsetNV(target:Int, index:UInt, buffer:UInt, offset:GLintptr) : Void;
-    // static function glBindBufferRangeNV(target:Int, index:UInt, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;
-    // static function glGetActiveVaryingNV(program:UInt, index:UInt, bufSize:Int, *length:Int, *size:Int, *type:Int, *name:GLchar) : Void;
-    // static function glGetTransformFeedbackVaryingNV(program:UInt, index:UInt, *location:Int) : Void;
-    // static function glGetVaryingLocationNV(program:UInt, *name:const GLchar) : Int;
-    // static function glTransformFeedbackAttribsNV(count:UInt, *attribs:const GLint, bufferMode:Int) : Void;
-    // static function glTransformFeedbackVaryingsNV(program:UInt, count:Int, *locations:const GLint, bufferMode:Int) : Void;
-
+    // static function glActiveVaryingNV(program:UInt, *name:const GLchar) : Void;    // static function glBindBufferOffsetNV(target:Int, index:UInt, buffer:UInt, offset:GLintptr) : Void;    // static function glBindBufferRangeNV(target:Int, index:UInt, buffer:UInt, offset:GLintptr, size:GLsizeiptr) : Void;    // static function glGetActiveVaryingNV(program:UInt, index:UInt, bufSize:Int, *length:Int, *size:Int, *type:Int, *name:GLchar) : Void;    // static function glGetTransformFeedbackVaryingNV(program:UInt, index:UInt, *location:Int) : Void;    // static function glGetVaryingLocationNV(program:UInt, *name:const GLchar) : Int;    // static function glTransformFeedbackAttribsNV(count:UInt, *attribs:const GLint, bufferMode:Int) : Void;    // static function glTransformFeedbackVaryingsNV(program:UInt, count:Int, *locations:const GLint, bufferMode:Int) : Void;
 
 //GL_NV_transform_feedback2
     inline static var GL_NV_transform_feedback2                                       = 1;
@@ -13500,25 +10238,13 @@ extern class GL {
 
 
     @:native('glBindTransformFeedbackNV')
-    static function glBindTransformFeedbackNV(target:Int, id:UInt) : Void;
-
-    @:native('glDrawTransformFeedbackNV')
-    static function glDrawTransformFeedbackNV(mode:Int, id:UInt) : Void;
-
-    @:native('glIsTransformFeedbackNV')
-    static function glIsTransformFeedbackNV(id:UInt) : Bool;
-
-    @:native('glPauseTransformFeedbackNV')
-    static function glPauseTransformFeedbackNV() : Void;
-
-    @:native('glResumeTransformFeedbackNV')
+    static function glBindTransformFeedbackNV(target:Int, id:UInt) : Void;    @:native('glDrawTransformFeedbackNV')
+    static function glDrawTransformFeedbackNV(mode:Int, id:UInt) : Void;    @:native('glIsTransformFeedbackNV')
+    static function glIsTransformFeedbackNV(id:UInt) : Bool;    @:native('glPauseTransformFeedbackNV')
+    static function glPauseTransformFeedbackNV() : Void;    @:native('glResumeTransformFeedbackNV')
     static function glResumeTransformFeedbackNV() : Void;
 
-
-
-    // static function glDeleteTransformFeedbacksNV(n:Int, ids:const GLuint*) : Void;
-    // static function glGenTransformFeedbacksNV(n:Int, ids:GLuint*) : Void;
-
+    // static function glDeleteTransformFeedbacksNV(n:Int, ids:const GLuint*) : Void;    // static function glGenTransformFeedbacksNV(n:Int, ids:GLuint*) : Void;
 
 //GL_NV_uniform_buffer_unified_memory
     inline static var GL_NV_uniform_buffer_unified_memory                             = 1;
@@ -13546,18 +10272,7 @@ extern class GL {
     @:native('glVDPAUFiniNV')
     static function glVDPAUFiniNV() : Void;
 
-
-
-    // static function glVDPAUGetSurfaceivNV(surface:GLvdpauSurfaceNV, pname:Int, bufSize:Int, length:GLsizei*, *values:Int) : Void;
-    // static function glVDPAUInitNV(vdpDevice:const void*, void*getProcAddress:const) : Void;
-    // static function glVDPAUIsSurfaceNV(surface:GLvdpauSurfaceNV) : Void;
-    // static function glVDPAUMapSurfacesNV(numSurfaces:Int, surfaces:const GLvdpauSurfaceNV*) : Void;
-    // static function glVDPAURegisterOutputSurfaceNV(vdpSurface:const void*, target:Int, numTextureNames:Int, *textureNames:const GLuint) : GLvdpauSurfaceNV;
-    // static function glVDPAURegisterVideoSurfaceNV(vdpSurface:const void*, target:Int, numTextureNames:Int, *textureNames:const GLuint) : GLvdpauSurfaceNV;
-    // static function glVDPAUSurfaceAccessNV(surface:GLvdpauSurfaceNV, access:Int) : Void;
-    // static function glVDPAUUnmapSurfacesNV(numSurface:Int, surfaces:const GLvdpauSurfaceNV*) : Void;
-    // static function glVDPAUUnregisterSurfaceNV(surface:GLvdpauSurfaceNV) : Void;
-
+    // static function glVDPAUGetSurfaceivNV(surface:GLvdpauSurfaceNV, pname:Int, bufSize:Int, length:GLsizei*, *values:Int) : Void;    // static function glVDPAUInitNV(vdpDevice:const void*, void*getProcAddress:const) : Void;    // static function glVDPAUIsSurfaceNV(surface:GLvdpauSurfaceNV) : Void;    // static function glVDPAUMapSurfacesNV(numSurfaces:Int, surfaces:const GLvdpauSurfaceNV*) : Void;    // static function glVDPAURegisterOutputSurfaceNV(vdpSurface:const void*, target:Int, numTextureNames:Int, *textureNames:const GLuint) : GLvdpauSurfaceNV;    // static function glVDPAURegisterVideoSurfaceNV(vdpSurface:const void*, target:Int, numTextureNames:Int, *textureNames:const GLuint) : GLvdpauSurfaceNV;    // static function glVDPAUSurfaceAccessNV(surface:GLvdpauSurfaceNV, access:Int) : Void;    // static function glVDPAUUnmapSurfacesNV(numSurface:Int, surfaces:const GLvdpauSurfaceNV*) : Void;    // static function glVDPAUUnregisterSurfaceNV(surface:GLvdpauSurfaceNV) : Void;
 
 //GL_NV_vertex_array_range
     inline static var GL_NV_vertex_array_range                                        = 1;
@@ -13573,10 +10288,7 @@ extern class GL {
     @:native('glFlushVertexArrayRangeNV')
     static function glFlushVertexArrayRangeNV() : Void;
 
-
-
     // static function glVertexArrayRangeNV(length:Int, *pointer:Void) : Void;
-
 
 //GL_NV_vertex_array_range2
     inline static var GL_NV_vertex_array_range2                                       = 1;
@@ -13598,27 +10310,7 @@ extern class GL {
     @:native('glVertexAttribLFormatNV')
     static function glVertexAttribLFormatNV(index:UInt, size:Int, type:Int, stride:Int) : Void;
 
-
-
-    // static function glGetVertexAttribLi64vNV(index:UInt, pname:Int, params:GLint64EXT*) : Void;
-    // static function glGetVertexAttribLui64vNV(index:UInt, pname:Int, params:GLuint64EXT*) : Void;
-    // static function glVertexAttribL1i64NV(index:UInt, x:cpp.Int64) : Void;
-    // static function glVertexAttribL1i64vNV(index:UInt, v:const GLint64EXT*) : Void;
-    // static function glVertexAttribL1ui64NV(index:UInt, x:cpp.UInt64) : Void;
-    // static function glVertexAttribL1ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;
-    // static function glVertexAttribL2i64NV(index:UInt, x:cpp.Int64, y:cpp.Int64) : Void;
-    // static function glVertexAttribL2i64vNV(index:UInt, v:const GLint64EXT*) : Void;
-    // static function glVertexAttribL2ui64NV(index:UInt, x:cpp.UInt64, y:cpp.UInt64) : Void;
-    // static function glVertexAttribL2ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;
-    // static function glVertexAttribL3i64NV(index:UInt, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64) : Void;
-    // static function glVertexAttribL3i64vNV(index:UInt, v:const GLint64EXT*) : Void;
-    // static function glVertexAttribL3ui64NV(index:UInt, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64) : Void;
-    // static function glVertexAttribL3ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;
-    // static function glVertexAttribL4i64NV(index:UInt, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64, w:cpp.Int64) : Void;
-    // static function glVertexAttribL4i64vNV(index:UInt, v:const GLint64EXT*) : Void;
-    // static function glVertexAttribL4ui64NV(index:UInt, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64, w:cpp.UInt64) : Void;
-    // static function glVertexAttribL4ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;
-
+    // static function glGetVertexAttribLi64vNV(index:UInt, pname:Int, params:GLint64EXT*) : Void;    // static function glGetVertexAttribLui64vNV(index:UInt, pname:Int, params:GLuint64EXT*) : Void;    // static function glVertexAttribL1i64NV(index:UInt, x:cpp.Int64) : Void;    // static function glVertexAttribL1i64vNV(index:UInt, v:const GLint64EXT*) : Void;    // static function glVertexAttribL1ui64NV(index:UInt, x:cpp.UInt64) : Void;    // static function glVertexAttribL1ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;    // static function glVertexAttribL2i64NV(index:UInt, x:cpp.Int64, y:cpp.Int64) : Void;    // static function glVertexAttribL2i64vNV(index:UInt, v:const GLint64EXT*) : Void;    // static function glVertexAttribL2ui64NV(index:UInt, x:cpp.UInt64, y:cpp.UInt64) : Void;    // static function glVertexAttribL2ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;    // static function glVertexAttribL3i64NV(index:UInt, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64) : Void;    // static function glVertexAttribL3i64vNV(index:UInt, v:const GLint64EXT*) : Void;    // static function glVertexAttribL3ui64NV(index:UInt, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64) : Void;    // static function glVertexAttribL3ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;    // static function glVertexAttribL4i64NV(index:UInt, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64, w:cpp.Int64) : Void;    // static function glVertexAttribL4i64vNV(index:UInt, v:const GLint64EXT*) : Void;    // static function glVertexAttribL4ui64NV(index:UInt, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64, w:cpp.UInt64) : Void;    // static function glVertexAttribL4ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;
 
 //GL_NV_vertex_buffer_unified_memory
     inline static var GL_NV_vertex_buffer_unified_memory                              = 1;
@@ -13652,40 +10344,18 @@ extern class GL {
 
 
     @:native('glColorFormatNV')
-    static function glColorFormatNV(size:Int, type:Int, stride:Int) : Void;
-
-    @:native('glEdgeFlagFormatNV')
-    static function glEdgeFlagFormatNV(stride:Int) : Void;
-
-    @:native('glFogCoordFormatNV')
-    static function glFogCoordFormatNV(type:Int, stride:Int) : Void;
-
-    @:native('glIndexFormatNV')
-    static function glIndexFormatNV(type:Int, stride:Int) : Void;
-
-    @:native('glNormalFormatNV')
-    static function glNormalFormatNV(type:Int, stride:Int) : Void;
-
-    @:native('glSecondaryColorFormatNV')
-    static function glSecondaryColorFormatNV(size:Int, type:Int, stride:Int) : Void;
-
-    @:native('glTexCoordFormatNV')
-    static function glTexCoordFormatNV(size:Int, type:Int, stride:Int) : Void;
-
-    @:native('glVertexAttribFormatNV')
-    static function glVertexAttribFormatNV(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int) : Void;
-
-    @:native('glVertexAttribIFormatNV')
-    static function glVertexAttribIFormatNV(index:UInt, size:Int, type:Int, stride:Int) : Void;
-
-    @:native('glVertexFormatNV')
+    static function glColorFormatNV(size:Int, type:Int, stride:Int) : Void;    @:native('glEdgeFlagFormatNV')
+    static function glEdgeFlagFormatNV(stride:Int) : Void;    @:native('glFogCoordFormatNV')
+    static function glFogCoordFormatNV(type:Int, stride:Int) : Void;    @:native('glIndexFormatNV')
+    static function glIndexFormatNV(type:Int, stride:Int) : Void;    @:native('glNormalFormatNV')
+    static function glNormalFormatNV(type:Int, stride:Int) : Void;    @:native('glSecondaryColorFormatNV')
+    static function glSecondaryColorFormatNV(size:Int, type:Int, stride:Int) : Void;    @:native('glTexCoordFormatNV')
+    static function glTexCoordFormatNV(size:Int, type:Int, stride:Int) : Void;    @:native('glVertexAttribFormatNV')
+    static function glVertexAttribFormatNV(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int) : Void;    @:native('glVertexAttribIFormatNV')
+    static function glVertexAttribIFormatNV(index:UInt, size:Int, type:Int, stride:Int) : Void;    @:native('glVertexFormatNV')
     static function glVertexFormatNV(size:Int, type:Int, stride:Int) : Void;
 
-
-
-    // static function glBufferAddressRangeNV(pname:Int, index:UInt, address:cpp.UInt64, length:GLsizeiptr) : Void;
-    // static function glGetIntegerui64i_vNV(value:Int, index:UInt, result:Array<cpp.UInt64>) : Void;
-
+    // static function glBufferAddressRangeNV(pname:Int, index:UInt, address:cpp.UInt64, length:GLsizeiptr) : Void;    // static function glGetIntegerui64i_vNV(value:Int, index:UInt, result:Array<cpp.UInt64>) : Void;
 
 //GL_NV_vertex_program
     inline static var GL_NV_vertex_program                                            = 1;
@@ -13777,108 +10447,26 @@ extern class GL {
 
 
     @:native('glBindProgramNV')
-    static function glBindProgramNV(target:Int, id:UInt) : Void;
-
-    @:native('glIsProgramNV')
-    static function glIsProgramNV(id:UInt) : Bool;
-
-    @:native('glProgramParameter4dNV')
-    static function glProgramParameter4dNV(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glProgramParameter4fNV')
-    static function glProgramParameter4fNV(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glTrackMatrixNV')
-    static function glTrackMatrixNV(target:Int, address:UInt, matrix:Int, transform:Int) : Void;
-
-    @:native('glVertexAttrib1dNV')
-    static function glVertexAttrib1dNV(index:UInt, x:Float) : Void;
-
-    @:native('glVertexAttrib1fNV')
-    static function glVertexAttrib1fNV(index:UInt, x:Float) : Void;
-
-    @:native('glVertexAttrib1sNV')
-    static function glVertexAttrib1sNV(index:UInt, x:Int) : Void;
-
-    @:native('glVertexAttrib2dNV')
-    static function glVertexAttrib2dNV(index:UInt, x:Float, y:Float) : Void;
-
-    @:native('glVertexAttrib2fNV')
-    static function glVertexAttrib2fNV(index:UInt, x:Float, y:Float) : Void;
-
-    @:native('glVertexAttrib2sNV')
-    static function glVertexAttrib2sNV(index:UInt, x:Int, y:Int) : Void;
-
-    @:native('glVertexAttrib3dNV')
-    static function glVertexAttrib3dNV(index:UInt, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glVertexAttrib3fNV')
-    static function glVertexAttrib3fNV(index:UInt, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glVertexAttrib3sNV')
-    static function glVertexAttrib3sNV(index:UInt, x:Int, y:Int, z:Int) : Void;
-
-    @:native('glVertexAttrib4dNV')
-    static function glVertexAttrib4dNV(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glVertexAttrib4fNV')
-    static function glVertexAttrib4fNV(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glVertexAttrib4sNV')
-    static function glVertexAttrib4sNV(index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
-
-    @:native('glVertexAttrib4ubNV')
+    static function glBindProgramNV(target:Int, id:UInt) : Void;    @:native('glIsProgramNV')
+    static function glIsProgramNV(id:UInt) : Bool;    @:native('glProgramParameter4dNV')
+    static function glProgramParameter4dNV(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glProgramParameter4fNV')
+    static function glProgramParameter4fNV(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glTrackMatrixNV')
+    static function glTrackMatrixNV(target:Int, address:UInt, matrix:Int, transform:Int) : Void;    @:native('glVertexAttrib1dNV')
+    static function glVertexAttrib1dNV(index:UInt, x:Float) : Void;    @:native('glVertexAttrib1fNV')
+    static function glVertexAttrib1fNV(index:UInt, x:Float) : Void;    @:native('glVertexAttrib1sNV')
+    static function glVertexAttrib1sNV(index:UInt, x:Int) : Void;    @:native('glVertexAttrib2dNV')
+    static function glVertexAttrib2dNV(index:UInt, x:Float, y:Float) : Void;    @:native('glVertexAttrib2fNV')
+    static function glVertexAttrib2fNV(index:UInt, x:Float, y:Float) : Void;    @:native('glVertexAttrib2sNV')
+    static function glVertexAttrib2sNV(index:UInt, x:Int, y:Int) : Void;    @:native('glVertexAttrib3dNV')
+    static function glVertexAttrib3dNV(index:UInt, x:Float, y:Float, z:Float) : Void;    @:native('glVertexAttrib3fNV')
+    static function glVertexAttrib3fNV(index:UInt, x:Float, y:Float, z:Float) : Void;    @:native('glVertexAttrib3sNV')
+    static function glVertexAttrib3sNV(index:UInt, x:Int, y:Int, z:Int) : Void;    @:native('glVertexAttrib4dNV')
+    static function glVertexAttrib4dNV(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glVertexAttrib4fNV')
+    static function glVertexAttrib4fNV(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glVertexAttrib4sNV')
+    static function glVertexAttrib4sNV(index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;    @:native('glVertexAttrib4ubNV')
     static function glVertexAttrib4ubNV(index:UInt, x:String, y:String, z:String, w:String) : Void;
 
-
-
-    // static function glAreProgramsResidentNV(n:Int, ids:const GLuint*, *residences:Bool) : Bool;
-    // static function glDeleteProgramsNV(n:Int, ids:const GLuint*) : Void;
-    // static function glExecuteProgramNV(target:Int, id:UInt, params:const GLfloat*) : Void;
-    // static function glGenProgramsNV(n:Int, ids:GLuint*) : Void;
-    // static function glGetProgramParameterdvNV(target:Int, index:UInt, pname:Int, params:GLdouble*) : Void;
-    // static function glGetProgramParameterfvNV(target:Int, index:UInt, pname:Int, params:GLfloat*) : Void;
-    // static function glGetProgramStringNV(id:UInt, pname:Int, program:GLubyte*) : Void;
-    // static function glGetProgramivNV(id:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetTrackMatrixivNV(target:Int, address:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetVertexAttribPointervNV(index:UInt, pname:Int, pointer:void**) : Void;
-    // static function glGetVertexAttribdvNV(index:UInt, pname:Int, params:GLdouble*) : Void;
-    // static function glGetVertexAttribfvNV(index:UInt, pname:Int, params:GLfloat*) : Void;
-    // static function glGetVertexAttribivNV(index:UInt, pname:Int, params:GLint*) : Void;
-    // static function glLoadProgramNV(target:Int, id:UInt, len:Int, program:const GLubyte*) : Void;
-    // static function glProgramParameter4dvNV(target:Int, index:UInt, params:const GLdouble*) : Void;
-    // static function glProgramParameter4fvNV(target:Int, index:UInt, params:const GLfloat*) : Void;
-    // static function glProgramParameters4dvNV(target:Int, index:UInt, num:Int, params:const GLdouble*) : Void;
-    // static function glProgramParameters4fvNV(target:Int, index:UInt, num:Int, params:const GLfloat*) : Void;
-    // static function glRequestResidentProgramsNV(n:Int, ids:GLuint*) : Void;
-    // static function glVertexAttrib1dvNV(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttrib1fvNV(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib1svNV(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib2dvNV(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttrib2fvNV(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib2svNV(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib3dvNV(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttrib3fvNV(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib3svNV(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib4dvNV(index:UInt, v:const GLdouble*) : Void;
-    // static function glVertexAttrib4fvNV(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib4svNV(index:UInt, v:const GLshort*) : Void;
-    // static function glVertexAttrib4ubvNV(index:UInt, v:const GLubyte*) : Void;
-    // static function glVertexAttribPointerNV(index:UInt, size:Int, type:Int, stride:Int, *pointer:const void) : Void;
-    // static function glVertexAttribs1dvNV(index:UInt, n:Int, v:const GLdouble*) : Void;
-    // static function glVertexAttribs1fvNV(index:UInt, n:Int, v:const GLfloat*) : Void;
-    // static function glVertexAttribs1svNV(index:UInt, n:Int, v:const GLshort*) : Void;
-    // static function glVertexAttribs2dvNV(index:UInt, n:Int, v:const GLdouble*) : Void;
-    // static function glVertexAttribs2fvNV(index:UInt, n:Int, v:const GLfloat*) : Void;
-    // static function glVertexAttribs2svNV(index:UInt, n:Int, v:const GLshort*) : Void;
-    // static function glVertexAttribs3dvNV(index:UInt, n:Int, v:const GLdouble*) : Void;
-    // static function glVertexAttribs3fvNV(index:UInt, n:Int, v:const GLfloat*) : Void;
-    // static function glVertexAttribs3svNV(index:UInt, n:Int, v:const GLshort*) : Void;
-    // static function glVertexAttribs4dvNV(index:UInt, n:Int, v:const GLdouble*) : Void;
-    // static function glVertexAttribs4fvNV(index:UInt, n:Int, v:const GLfloat*) : Void;
-    // static function glVertexAttribs4svNV(index:UInt, n:Int, v:const GLshort*) : Void;
-    // static function glVertexAttribs4ubvNV(index:UInt, n:Int, v:const GLubyte*) : Void;
-
+    // static function glAreProgramsResidentNV(n:Int, ids:const GLuint*, *residences:Bool) : Bool;    // static function glDeleteProgramsNV(n:Int, ids:const GLuint*) : Void;    // static function glExecuteProgramNV(target:Int, id:UInt, params:const GLfloat*) : Void;    // static function glGenProgramsNV(n:Int, ids:GLuint*) : Void;    // static function glGetProgramParameterdvNV(target:Int, index:UInt, pname:Int, params:GLdouble*) : Void;    // static function glGetProgramParameterfvNV(target:Int, index:UInt, pname:Int, params:GLfloat*) : Void;    // static function glGetProgramStringNV(id:UInt, pname:Int, program:GLubyte*) : Void;    // static function glGetProgramivNV(id:UInt, pname:Int, params:GLint*) : Void;    // static function glGetTrackMatrixivNV(target:Int, address:UInt, pname:Int, params:GLint*) : Void;    // static function glGetVertexAttribPointervNV(index:UInt, pname:Int, pointer:void**) : Void;    // static function glGetVertexAttribdvNV(index:UInt, pname:Int, params:GLdouble*) : Void;    // static function glGetVertexAttribfvNV(index:UInt, pname:Int, params:GLfloat*) : Void;    // static function glGetVertexAttribivNV(index:UInt, pname:Int, params:GLint*) : Void;    // static function glLoadProgramNV(target:Int, id:UInt, len:Int, program:const GLubyte*) : Void;    // static function glProgramParameter4dvNV(target:Int, index:UInt, params:const GLdouble*) : Void;    // static function glProgramParameter4fvNV(target:Int, index:UInt, params:const GLfloat*) : Void;    // static function glProgramParameters4dvNV(target:Int, index:UInt, num:Int, params:const GLdouble*) : Void;    // static function glProgramParameters4fvNV(target:Int, index:UInt, num:Int, params:const GLfloat*) : Void;    // static function glRequestResidentProgramsNV(n:Int, ids:GLuint*) : Void;    // static function glVertexAttrib1dvNV(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttrib1fvNV(index:UInt, v:const GLfloat*) : Void;    // static function glVertexAttrib1svNV(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib2dvNV(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttrib2fvNV(index:UInt, v:const GLfloat*) : Void;    // static function glVertexAttrib2svNV(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib3dvNV(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttrib3fvNV(index:UInt, v:const GLfloat*) : Void;    // static function glVertexAttrib3svNV(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib4dvNV(index:UInt, v:const GLdouble*) : Void;    // static function glVertexAttrib4fvNV(index:UInt, v:const GLfloat*) : Void;    // static function glVertexAttrib4svNV(index:UInt, v:const GLshort*) : Void;    // static function glVertexAttrib4ubvNV(index:UInt, v:const GLubyte*) : Void;    // static function glVertexAttribPointerNV(index:UInt, size:Int, type:Int, stride:Int, *pointer:const void) : Void;    // static function glVertexAttribs1dvNV(index:UInt, n:Int, v:const GLdouble*) : Void;    // static function glVertexAttribs1fvNV(index:UInt, n:Int, v:const GLfloat*) : Void;    // static function glVertexAttribs1svNV(index:UInt, n:Int, v:const GLshort*) : Void;    // static function glVertexAttribs2dvNV(index:UInt, n:Int, v:const GLdouble*) : Void;    // static function glVertexAttribs2fvNV(index:UInt, n:Int, v:const GLfloat*) : Void;    // static function glVertexAttribs2svNV(index:UInt, n:Int, v:const GLshort*) : Void;    // static function glVertexAttribs3dvNV(index:UInt, n:Int, v:const GLdouble*) : Void;    // static function glVertexAttribs3fvNV(index:UInt, n:Int, v:const GLfloat*) : Void;    // static function glVertexAttribs3svNV(index:UInt, n:Int, v:const GLshort*) : Void;    // static function glVertexAttribs4dvNV(index:UInt, n:Int, v:const GLdouble*) : Void;    // static function glVertexAttribs4fvNV(index:UInt, n:Int, v:const GLfloat*) : Void;    // static function glVertexAttribs4svNV(index:UInt, n:Int, v:const GLshort*) : Void;    // static function glVertexAttribs4ubvNV(index:UInt, n:Int, v:const GLubyte*) : Void;
 
 //GL_NV_vertex_program1_1
     inline static var GL_NV_vertex_program1_1                                         = 1;
@@ -13967,26 +10555,11 @@ extern class GL {
 
 
     @:native('glBeginVideoCaptureNV')
-    static function glBeginVideoCaptureNV(video_capture_slot:UInt) : Void;
-
-    @:native('glBindVideoCaptureStreamTextureNV')
-    static function glBindVideoCaptureStreamTextureNV(video_capture_slot:UInt, stream:UInt, frame_region:Int, target:Int, texture:UInt) : Void;
-
-    @:native('glEndVideoCaptureNV')
+    static function glBeginVideoCaptureNV(video_capture_slot:UInt) : Void;    @:native('glBindVideoCaptureStreamTextureNV')
+    static function glBindVideoCaptureStreamTextureNV(video_capture_slot:UInt, stream:UInt, frame_region:Int, target:Int, texture:UInt) : Void;    @:native('glEndVideoCaptureNV')
     static function glEndVideoCaptureNV(video_capture_slot:UInt) : Void;
 
-
-
-    // static function glBindVideoCaptureStreamBufferNV(video_capture_slot:UInt, stream:UInt, frame_region:Int, offset:GLintptrARB) : Void;
-    // static function glGetVideoCaptureStreamdvNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:GLdouble*) : Void;
-    // static function glGetVideoCaptureStreamfvNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:GLfloat*) : Void;
-    // static function glGetVideoCaptureStreamivNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:GLint*) : Void;
-    // static function glGetVideoCaptureivNV(video_capture_slot:UInt, pname:Int, params:GLint*) : Void;
-    // static function glVideoCaptureNV(video_capture_slot:UInt, sequence_num:GLuint*, *capture_time:cpp.UInt64) : Int;
-    // static function glVideoCaptureStreamParameterdvNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:const GLdouble*) : Void;
-    // static function glVideoCaptureStreamParameterfvNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:const GLfloat*) : Void;
-    // static function glVideoCaptureStreamParameterivNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:const GLint*) : Void;
-
+    // static function glBindVideoCaptureStreamBufferNV(video_capture_slot:UInt, stream:UInt, frame_region:Int, offset:GLintptrARB) : Void;    // static function glGetVideoCaptureStreamdvNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:GLdouble*) : Void;    // static function glGetVideoCaptureStreamfvNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:GLfloat*) : Void;    // static function glGetVideoCaptureStreamivNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:GLint*) : Void;    // static function glGetVideoCaptureivNV(video_capture_slot:UInt, pname:Int, params:GLint*) : Void;    // static function glVideoCaptureNV(video_capture_slot:UInt, sequence_num:GLuint*, *capture_time:cpp.UInt64) : Int;    // static function glVideoCaptureStreamParameterdvNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:const GLdouble*) : Void;    // static function glVideoCaptureStreamParameterfvNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:const GLfloat*) : Void;    // static function glVideoCaptureStreamParameterivNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:const GLint*) : Void;
 
 //GL_NV_viewport_array2
     inline static var GL_NV_viewport_array2                                           = 1;
@@ -14047,22 +10620,12 @@ extern class GL {
 
 
     @:native('glClearDepthfOES')
-    static function glClearDepthfOES(depth:Float) : Void;
-
-    @:native('glDepthRangefOES')
-    static function glDepthRangefOES(n:Float, f:Float) : Void;
-
-    @:native('glFrustumfOES')
-    static function glFrustumfOES(l:Float, r:Float, b:Float, t:Float, n:Float, f:Float) : Void;
-
-    @:native('glOrthofOES')
+    static function glClearDepthfOES(depth:Float) : Void;    @:native('glDepthRangefOES')
+    static function glDepthRangefOES(n:Float, f:Float) : Void;    @:native('glFrustumfOES')
+    static function glFrustumfOES(l:Float, r:Float, b:Float, t:Float, n:Float, f:Float) : Void;    @:native('glOrthofOES')
     static function glOrthofOES(l:Float, r:Float, b:Float, t:Float, n:Float, f:Float) : Void;
 
-
-
-    // static function glClipPlanefOES(plane:Int, equation:const GLfloat*) : Void;
-    // static function glGetClipPlanefOES(plane:Int, equation:GLfloat*) : Void;
-
+    // static function glClipPlanefOES(plane:Int, equation:const GLfloat*) : Void;    // static function glGetClipPlanefOES(plane:Int, equation:GLfloat*) : Void;
 
 //GL_OML_interlace
     inline static var GL_OML_interlace                                                = 1;
@@ -14116,8 +10679,6 @@ extern class GL {
 
     @:native('glFramebufferTextureMultiviewOVR')
     static function glFramebufferTextureMultiviewOVR(target:Int, attachment:Int, texture:UInt, level:Int, baseViewIndex:Int, numViews:Int) : Void;
-
-
 
 
 
@@ -14200,87 +10761,32 @@ extern class GL {
 
 
     @:native('glAlphaFuncx')
-    static function glAlphaFuncx(func:Int, ref:Int) : Void;
-
-    @:native('glClearColorx')
-    static function glClearColorx(red:Int, green:Int, blue:Int, alpha:Int) : Void;
-
-    @:native('glClearDepthx')
-    static function glClearDepthx(depth:Int) : Void;
-
-    @:native('glColor4x')
-    static function glColor4x(red:Int, green:Int, blue:Int, alpha:Int) : Void;
-
-    @:native('glDepthRangex')
-    static function glDepthRangex(zNear:Int, zFar:Int) : Void;
-
-    @:native('glFogx')
-    static function glFogx(pname:Int, param:Int) : Void;
-
-    @:native('glFrustumf')
-    static function glFrustumf(left:Float, right:Float, bottom:Float, top:Float, zNear:Float, zFar:Float) : Void;
-
-    @:native('glFrustumx')
-    static function glFrustumx(left:Int, right:Int, bottom:Int, top:Int, zNear:Int, zFar:Int) : Void;
-
-    @:native('glLightModelx')
-    static function glLightModelx(pname:Int, param:Int) : Void;
-
-    @:native('glLightx')
-    static function glLightx(light:Int, pname:Int, param:Int) : Void;
-
-    @:native('glLineWidthx')
-    static function glLineWidthx(width:Int) : Void;
-
-    @:native('glMaterialx')
-    static function glMaterialx(face:Int, pname:Int, param:Int) : Void;
-
-    @:native('glMultiTexCoord4x')
-    static function glMultiTexCoord4x(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;
-
-    @:native('glNormal3x')
-    static function glNormal3x(nx:Int, ny:Int, nz:Int) : Void;
-
-    @:native('glOrthof')
-    static function glOrthof(left:Float, right:Float, bottom:Float, top:Float, zNear:Float, zFar:Float) : Void;
-
-    @:native('glOrthox')
-    static function glOrthox(left:Int, right:Int, bottom:Int, top:Int, zNear:Int, zFar:Int) : Void;
-
-    @:native('glPointSizex')
-    static function glPointSizex(size:Int) : Void;
-
-    @:native('glPolygonOffsetx')
-    static function glPolygonOffsetx(factor:Int, units:Int) : Void;
-
-    @:native('glRotatex')
-    static function glRotatex(angle:Int, x:Int, y:Int, z:Int) : Void;
-
-    @:native('glSampleCoveragex')
-    static function glSampleCoveragex(value:Int, invert:Bool) : Void;
-
-    @:native('glScalex')
-    static function glScalex(x:Int, y:Int, z:Int) : Void;
-
-    @:native('glTexEnvx')
-    static function glTexEnvx(target:Int, pname:Int, param:Int) : Void;
-
-    @:native('glTexParameterx')
-    static function glTexParameterx(target:Int, pname:Int, param:Int) : Void;
-
-    @:native('glTranslatex')
+    static function glAlphaFuncx(func:Int, ref:Int) : Void;    @:native('glClearColorx')
+    static function glClearColorx(red:Int, green:Int, blue:Int, alpha:Int) : Void;    @:native('glClearDepthx')
+    static function glClearDepthx(depth:Int) : Void;    @:native('glColor4x')
+    static function glColor4x(red:Int, green:Int, blue:Int, alpha:Int) : Void;    @:native('glDepthRangex')
+    static function glDepthRangex(zNear:Int, zFar:Int) : Void;    @:native('glFogx')
+    static function glFogx(pname:Int, param:Int) : Void;    @:native('glFrustumf')
+    static function glFrustumf(left:Float, right:Float, bottom:Float, top:Float, zNear:Float, zFar:Float) : Void;    @:native('glFrustumx')
+    static function glFrustumx(left:Int, right:Int, bottom:Int, top:Int, zNear:Int, zFar:Int) : Void;    @:native('glLightModelx')
+    static function glLightModelx(pname:Int, param:Int) : Void;    @:native('glLightx')
+    static function glLightx(light:Int, pname:Int, param:Int) : Void;    @:native('glLineWidthx')
+    static function glLineWidthx(width:Int) : Void;    @:native('glMaterialx')
+    static function glMaterialx(face:Int, pname:Int, param:Int) : Void;    @:native('glMultiTexCoord4x')
+    static function glMultiTexCoord4x(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;    @:native('glNormal3x')
+    static function glNormal3x(nx:Int, ny:Int, nz:Int) : Void;    @:native('glOrthof')
+    static function glOrthof(left:Float, right:Float, bottom:Float, top:Float, zNear:Float, zFar:Float) : Void;    @:native('glOrthox')
+    static function glOrthox(left:Int, right:Int, bottom:Int, top:Int, zNear:Int, zFar:Int) : Void;    @:native('glPointSizex')
+    static function glPointSizex(size:Int) : Void;    @:native('glPolygonOffsetx')
+    static function glPolygonOffsetx(factor:Int, units:Int) : Void;    @:native('glRotatex')
+    static function glRotatex(angle:Int, x:Int, y:Int, z:Int) : Void;    @:native('glSampleCoveragex')
+    static function glSampleCoveragex(value:Int, invert:Bool) : Void;    @:native('glScalex')
+    static function glScalex(x:Int, y:Int, z:Int) : Void;    @:native('glTexEnvx')
+    static function glTexEnvx(target:Int, pname:Int, param:Int) : Void;    @:native('glTexParameterx')
+    static function glTexParameterx(target:Int, pname:Int, param:Int) : Void;    @:native('glTranslatex')
     static function glTranslatex(x:Int, y:Int, z:Int) : Void;
 
-
-
-    // static function glFogxv(pname:Int, params:const GLfixed*) : Void;
-    // static function glLightModelxv(pname:Int, params:const GLfixed*) : Void;
-    // static function glLightxv(light:Int, pname:Int, params:const GLfixed*) : Void;
-    // static function glLoadMatrixx(m:const GLfixed*) : Void;
-    // static function glMaterialxv(face:Int, pname:Int, params:const GLfixed*) : Void;
-    // static function glMultMatrixx(m:const GLfixed*) : Void;
-    // static function glTexEnvxv(target:Int, pname:Int, params:const GLfixed*) : Void;
-
+    // static function glFogxv(pname:Int, params:const GLfixed*) : Void;    // static function glLightModelxv(pname:Int, params:const GLfixed*) : Void;    // static function glLightxv(light:Int, pname:Int, params:const GLfixed*) : Void;    // static function glLoadMatrixx(m:const GLfixed*) : Void;    // static function glMaterialxv(face:Int, pname:Int, params:const GLfixed*) : Void;    // static function glMultMatrixx(m:const GLfixed*) : Void;    // static function glTexEnvxv(target:Int, pname:Int, params:const GLfixed*) : Void;
 
 //GL_REGAL_ES1_1_compatibility
     inline static var GL_REGAL_ES1_1_compatibility                                    = 1;
@@ -14291,21 +10797,7 @@ extern class GL {
     @:native('glPointParameterx')
     static function glPointParameterx(pname:Int, param:Int) : Void;
 
-
-
-    // static function glClipPlanef(plane:Int, equation:const GLfloat*) : Void;
-    // static function glClipPlanex(plane:Int, equation:const GLfixed*) : Void;
-    // static function glGetClipPlanef(pname:Int, eqn:Array<Float>) : Void;
-    // static function glGetClipPlanex(pname:Int, eqn:Array<Int>) : Void;
-    // static function glGetFixedv(pname:Int, params:GLfixed*) : Void;
-    // static function glGetLightxv(light:Int, pname:Int, params:GLfixed*) : Void;
-    // static function glGetMaterialxv(face:Int, pname:Int, params:GLfixed*) : Void;
-    // static function glGetTexEnvxv(env:Int, pname:Int, params:GLfixed*) : Void;
-    // static function glGetTexParameterxv(target:Int, pname:Int, params:GLfixed*) : Void;
-    // static function glPointParameterxv(pname:Int, params:const GLfixed*) : Void;
-    // static function glPointSizePointerOES(type:Int, stride:Int, *pointer:const void) : Void;
-    // static function glTexParameterxv(target:Int, pname:Int, params:const GLfixed*) : Void;
-
+    // static function glClipPlanef(plane:Int, equation:const GLfloat*) : Void;    // static function glClipPlanex(plane:Int, equation:const GLfixed*) : Void;    // static function glGetClipPlanef(pname:Int, eqn:Array<Float>) : Void;    // static function glGetClipPlanex(pname:Int, eqn:Array<Int>) : Void;    // static function glGetFixedv(pname:Int, params:GLfixed*) : Void;    // static function glGetLightxv(light:Int, pname:Int, params:GLfixed*) : Void;    // static function glGetMaterialxv(face:Int, pname:Int, params:GLfixed*) : Void;    // static function glGetTexEnvxv(env:Int, pname:Int, params:GLfixed*) : Void;    // static function glGetTexParameterxv(target:Int, pname:Int, params:GLfixed*) : Void;    // static function glPointParameterxv(pname:Int, params:const GLfixed*) : Void;    // static function glPointSizePointerOES(type:Int, stride:Int, *pointer:const void) : Void;    // static function glTexParameterxv(target:Int, pname:Int, params:const GLfixed*) : Void;
 
 //GL_REGAL_enable
     inline static var GL_REGAL_enable                                                 = 1;
@@ -14337,7 +10829,6 @@ extern class GL {
 
     // static function glErrorStringREGAL(error:Int) : String;
 
-
 //GL_REGAL_extension_query
     inline static var GL_REGAL_extension_query                                        = 1;
 
@@ -14345,12 +10836,8 @@ extern class GL {
 
 
     @:native('glGetExtensionREGAL')
-    static function glGetExtensionREGAL(ext:String) : Bool;
-
-    @:native('glIsSupportedREGAL')
+    static function glGetExtensionREGAL(ext:String) : Bool;    @:native('glIsSupportedREGAL')
     static function glIsSupportedREGAL(ext:String) : Bool;
-
-
 
 
 
@@ -14373,7 +10860,6 @@ extern class GL {
 
     // static function glLogMessageCallbackREGAL(callback:GLLOGPROCREGAL) : Void;
 
-
 //GL_REGAL_proc_address
     inline static var GL_REGAL_proc_address                                           = 1;
 
@@ -14383,7 +10869,6 @@ extern class GL {
 
 
     // static function glGetProcAddressREGAL(*name:const GLchar) : void *;
-
 
 //GL_REND_screen_coordinates
     inline static var GL_REND_screen_coordinates                                      = 1;
@@ -14440,9 +10925,7 @@ extern class GL {
 
 
 
-    // static function glDetailTexFuncSGIS(target:Int, n:Int, points:const GLfloat*) : Void;
-    // static function glGetDetailTexFuncSGIS(target:Int, points:GLfloat*) : Void;
-
+    // static function glDetailTexFuncSGIS(target:Int, n:Int, points:const GLfloat*) : Void;    // static function glGetDetailTexFuncSGIS(target:Int, points:GLfloat*) : Void;
 
 //GL_SGIS_fog_function
     inline static var GL_SGIS_fog_function                                            = 1;
@@ -14452,9 +10935,7 @@ extern class GL {
 
 
 
-    // static function glFogFuncSGIS(n:Int, points:const GLfloat*) : Void;
-    // static function glGetFogFuncSGIS(points:GLfloat*) : Void;
-
+    // static function glFogFuncSGIS(n:Int, points:const GLfloat*) : Void;    // static function glGetFogFuncSGIS(points:GLfloat*) : Void;
 
 //GL_SGIS_generate_mipmap
     inline static var GL_SGIS_generate_mipmap                                         = 1;
@@ -14491,12 +10972,8 @@ extern class GL {
 
 
     @:native('glSampleMaskSGIS')
-    static function glSampleMaskSGIS(value:Float, invert:Bool) : Void;
-
-    @:native('glSamplePatternSGIS')
+    static function glSampleMaskSGIS(value:Float, invert:Bool) : Void;    @:native('glSamplePatternSGIS')
     static function glSamplePatternSGIS(pattern:Int) : Void;
-
-
 
 
 
@@ -14536,9 +11013,7 @@ extern class GL {
 
 
 
-    // static function glGetSharpenTexFuncSGIS(target:Int, points:GLfloat*) : Void;
-    // static function glSharpenTexFuncSGIS(target:Int, n:Int, points:const GLfloat*) : Void;
-
+    // static function glGetSharpenTexFuncSGIS(target:Int, points:GLfloat*) : Void;    // static function glSharpenTexFuncSGIS(target:Int, n:Int, points:const GLfloat*) : Void;
 
 //GL_SGIS_texture4D
     inline static var GL_SGIS_texture4D                                               = 1;
@@ -14548,9 +11023,7 @@ extern class GL {
 
 
 
-    // static function glTexImage4DSGIS(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, extent:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTexSubImage4DSGIS(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, woffset:Int, width:Int, height:Int, depth:Int, extent:Int, format:Int, type:Int, *pixels:const void) : Void;
-
+    // static function glTexImage4DSGIS(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, extent:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;    // static function glTexSubImage4DSGIS(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, woffset:Int, width:Int, height:Int, depth:Int, extent:Int, format:Int, type:Int, *pixels:const void) : Void;
 
 //GL_SGIS_texture_border_clamp
     inline static var GL_SGIS_texture_border_clamp                                    = 1;
@@ -14582,9 +11055,7 @@ extern class GL {
 
 
 
-    // static function glGetTexFilterFuncSGIS(target:Int, filter:Int, weights:GLfloat*) : Void;
-    // static function glTexFilterFuncSGIS(target:Int, filter:Int, n:Int, weights:const GLfloat*) : Void;
-
+    // static function glGetTexFilterFuncSGIS(target:Int, filter:Int, weights:GLfloat*) : Void;    // static function glTexFilterFuncSGIS(target:Int, filter:Int, n:Int, weights:const GLfloat*) : Void;
 
 //GL_SGIS_texture_lod
     inline static var GL_SGIS_texture_lod                                             = 1;
@@ -14618,22 +11089,12 @@ extern class GL {
 
 
     @:native('glAsyncMarkerSGIX')
-    static function glAsyncMarkerSGIX(marker:UInt) : Void;
-
-    @:native('glDeleteAsyncMarkersSGIX')
-    static function glDeleteAsyncMarkersSGIX(marker:UInt, range:Int) : Void;
-
-    @:native('glGenAsyncMarkersSGIX')
-    static function glGenAsyncMarkersSGIX(range:Int) : UInt;
-
-    @:native('glIsAsyncMarkerSGIX')
+    static function glAsyncMarkerSGIX(marker:UInt) : Void;    @:native('glDeleteAsyncMarkersSGIX')
+    static function glDeleteAsyncMarkersSGIX(marker:UInt, range:Int) : Void;    @:native('glGenAsyncMarkersSGIX')
+    static function glGenAsyncMarkersSGIX(range:Int) : UInt;    @:native('glIsAsyncMarkerSGIX')
     static function glIsAsyncMarkerSGIX(marker:UInt) : Bool;
 
-
-
-    // static function glFinishAsyncSGIX(markerp:GLuint*) : Int;
-    // static function glPollAsyncSGIX(markerp:GLuint*) : Int;
-
+    // static function glFinishAsyncSGIX(markerp:GLuint*) : Int;    // static function glPollAsyncSGIX(markerp:GLuint*) : Int;
 
 //GL_SGIX_async_histogram
     inline static var GL_SGIX_async_histogram                                         = 1;
@@ -14720,8 +11181,6 @@ extern class GL {
 
 
 
-
-
 //GL_SGIX_fog_offset
     inline static var GL_SGIX_fog_offset                                              = 1;
     inline static var GL_FOG_OFFSET_SGIX                                              = 0x8198;
@@ -14748,8 +11207,6 @@ extern class GL {
 
 
 
-
-
 //GL_SGIX_fragment_specular_lighting
     inline static var GL_SGIX_fragment_specular_lighting                              = 1;
 
@@ -14757,35 +11214,13 @@ extern class GL {
 
 
     @:native('glFragmentColorMaterialSGIX')
-    static function glFragmentColorMaterialSGIX(face:Int, mode:Int) : Void;
-
-    @:native('glFragmentLightModelfSGIX')
-    static function glFragmentLightModelfSGIX(pname:Int, param:Float) : Void;
-
-    @:native('glFragmentLightModeliSGIX')
-    static function glFragmentLightModeliSGIX(pname:Int, param:Int) : Void;
-
-    @:native('glFragmentLightfSGIX')
-    static function glFragmentLightfSGIX(light:Int, pname:Int, param:Float) : Void;
-
-    @:native('glFragmentLightiSGIX')
+    static function glFragmentColorMaterialSGIX(face:Int, mode:Int) : Void;    @:native('glFragmentLightModelfSGIX')
+    static function glFragmentLightModelfSGIX(pname:Int, param:Float) : Void;    @:native('glFragmentLightModeliSGIX')
+    static function glFragmentLightModeliSGIX(pname:Int, param:Int) : Void;    @:native('glFragmentLightfSGIX')
+    static function glFragmentLightfSGIX(light:Int, pname:Int, param:Float) : Void;    @:native('glFragmentLightiSGIX')
     static function glFragmentLightiSGIX(light:Int, pname:Int, param:Int) : Void;
 
-
-
-    // static function glFragmentLightModelfvSGIX(pname:Int, params:GLfloat*) : Void;
-    // static function glFragmentLightModelivSGIX(pname:Int, params:GLint*) : Void;
-    // static function glFragmentLightfvSGIX(light:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glFragmentLightivSGIX(light:Int, pname:Int, params:GLint*) : Void;
-    // static function glFragmentMaterialfSGIX(face:Int, pname:Int, param:const GLfloat) : Void;
-    // static function glFragmentMaterialfvSGIX(face:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glFragmentMaterialiSGIX(face:Int, pname:Int, param:const GLint) : Void;
-    // static function glFragmentMaterialivSGIX(face:Int, pname:Int, params:const GLint*) : Void;
-    // static function glGetFragmentLightfvSGIX(light:Int, value:Int, data:GLfloat*) : Void;
-    // static function glGetFragmentLightivSGIX(light:Int, value:Int, data:GLint*) : Void;
-    // static function glGetFragmentMaterialfvSGIX(face:Int, pname:Int, data:const GLfloat*) : Void;
-    // static function glGetFragmentMaterialivSGIX(face:Int, pname:Int, data:const GLint*) : Void;
-
+    // static function glFragmentLightModelfvSGIX(pname:Int, params:GLfloat*) : Void;    // static function glFragmentLightModelivSGIX(pname:Int, params:GLint*) : Void;    // static function glFragmentLightfvSGIX(light:Int, pname:Int, params:GLfloat*) : Void;    // static function glFragmentLightivSGIX(light:Int, pname:Int, params:GLint*) : Void;    // static function glFragmentMaterialfSGIX(face:Int, pname:Int, param:const GLfloat) : Void;    // static function glFragmentMaterialfvSGIX(face:Int, pname:Int, params:const GLfloat*) : Void;    // static function glFragmentMaterialiSGIX(face:Int, pname:Int, param:const GLint) : Void;    // static function glFragmentMaterialivSGIX(face:Int, pname:Int, params:const GLint*) : Void;    // static function glGetFragmentLightfvSGIX(light:Int, value:Int, data:GLfloat*) : Void;    // static function glGetFragmentLightivSGIX(light:Int, value:Int, data:GLint*) : Void;    // static function glGetFragmentMaterialfvSGIX(face:Int, pname:Int, data:const GLfloat*) : Void;    // static function glGetFragmentMaterialivSGIX(face:Int, pname:Int, data:const GLint*) : Void;
 
 //GL_SGIX_framezoom
     inline static var GL_SGIX_framezoom                                               = 1;
@@ -14795,8 +11230,6 @@ extern class GL {
 
     @:native('glFrameZoomSGIX')
     static function glFrameZoomSGIX(factor:Int) : Void;
-
-
 
 
 
@@ -14842,8 +11275,6 @@ extern class GL {
 
 
 
-
-
 //GL_SGIX_pixel_texture_bits
     inline static var GL_SGIX_pixel_texture_bits                                      = 1;
 
@@ -14863,7 +11294,6 @@ extern class GL {
 
 
     // static function glReferencePlaneSGIX(equation:const GLdouble*) : Void;
-
 
 //GL_SGIX_resample
     inline static var GL_SGIX_resample                                                = 1;
@@ -14912,16 +11342,10 @@ extern class GL {
 
 
     @:native('glSpriteParameterfSGIX')
-    static function glSpriteParameterfSGIX(pname:Int, param:Float) : Void;
-
-    @:native('glSpriteParameteriSGIX')
+    static function glSpriteParameterfSGIX(pname:Int, param:Float) : Void;    @:native('glSpriteParameteriSGIX')
     static function glSpriteParameteriSGIX(pname:Int, param:Int) : Void;
 
-
-
-    // static function glSpriteParameterfvSGIX(pname:Int, params:GLfloat*) : Void;
-    // static function glSpriteParameterivSGIX(pname:Int, params:GLint*) : Void;
-
+    // static function glSpriteParameterfvSGIX(pname:Int, params:GLfloat*) : Void;    // static function glSpriteParameterivSGIX(pname:Int, params:GLint*) : Void;
 
 //GL_SGIX_tag_sample_buffer
     inline static var GL_SGIX_tag_sample_buffer                                       = 1;
@@ -14931,8 +11355,6 @@ extern class GL {
 
     @:native('glTagSampleBufferSGIX')
     static function glTagSampleBufferSGIX() : Void;
-
-
 
 
 
@@ -15110,15 +11532,7 @@ extern class GL {
     @:native('glCopyColorTableSGI')
     static function glCopyColorTableSGI(target:Int, internalformat:Int, x:Int, y:Int, width:Int) : Void;
 
-
-
-    // static function glColorTableParameterfvSGI(target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glColorTableParameterivSGI(target:Int, pname:Int, params:const GLint*) : Void;
-    // static function glColorTableSGI(target:Int, internalformat:Int, width:Int, format:Int, type:Int, *table:const void) : Void;
-    // static function glGetColorTableParameterfvSGI(target:Int, pname:Int, params:GLfloat*) : Void;
-    // static function glGetColorTableParameterivSGI(target:Int, pname:Int, params:GLint*) : Void;
-    // static function glGetColorTableSGI(target:Int, format:Int, type:Int, *table:Void) : Void;
-
+    // static function glColorTableParameterfvSGI(target:Int, pname:Int, params:const GLfloat*) : Void;    // static function glColorTableParameterivSGI(target:Int, pname:Int, params:const GLint*) : Void;    // static function glColorTableSGI(target:Int, internalformat:Int, width:Int, format:Int, type:Int, *table:const void) : Void;    // static function glGetColorTableParameterfvSGI(target:Int, pname:Int, params:GLfloat*) : Void;    // static function glGetColorTableParameterivSGI(target:Int, pname:Int, params:GLint*) : Void;    // static function glGetColorTableSGI(target:Int, format:Int, type:Int, *table:Void) : Void;
 
 //GL_SGI_texture_color_table
     inline static var GL_SGI_texture_color_table                                      = 1;
@@ -15145,8 +11559,6 @@ extern class GL {
 
 
 
-
-
 //GL_SUN_convolution_border_modes
     inline static var GL_SUN_convolution_border_modes                                 = 1;
     inline static var GL_WRAP_BORDER_SUN                                              = 0x81D4;
@@ -15167,30 +11579,14 @@ extern class GL {
 
 
     @:native('glGlobalAlphaFactorbSUN')
-    static function glGlobalAlphaFactorbSUN(factor:String) : Void;
-
-    @:native('glGlobalAlphaFactordSUN')
-    static function glGlobalAlphaFactordSUN(factor:Float) : Void;
-
-    @:native('glGlobalAlphaFactorfSUN')
-    static function glGlobalAlphaFactorfSUN(factor:Float) : Void;
-
-    @:native('glGlobalAlphaFactoriSUN')
-    static function glGlobalAlphaFactoriSUN(factor:Int) : Void;
-
-    @:native('glGlobalAlphaFactorsSUN')
-    static function glGlobalAlphaFactorsSUN(factor:Int) : Void;
-
-    @:native('glGlobalAlphaFactorubSUN')
-    static function glGlobalAlphaFactorubSUN(factor:String) : Void;
-
-    @:native('glGlobalAlphaFactoruiSUN')
-    static function glGlobalAlphaFactoruiSUN(factor:UInt) : Void;
-
-    @:native('glGlobalAlphaFactorusSUN')
+    static function glGlobalAlphaFactorbSUN(factor:String) : Void;    @:native('glGlobalAlphaFactordSUN')
+    static function glGlobalAlphaFactordSUN(factor:Float) : Void;    @:native('glGlobalAlphaFactorfSUN')
+    static function glGlobalAlphaFactorfSUN(factor:Float) : Void;    @:native('glGlobalAlphaFactoriSUN')
+    static function glGlobalAlphaFactoriSUN(factor:Int) : Void;    @:native('glGlobalAlphaFactorsSUN')
+    static function glGlobalAlphaFactorsSUN(factor:Int) : Void;    @:native('glGlobalAlphaFactorubSUN')
+    static function glGlobalAlphaFactorubSUN(factor:String) : Void;    @:native('glGlobalAlphaFactoruiSUN')
+    static function glGlobalAlphaFactoruiSUN(factor:UInt) : Void;    @:native('glGlobalAlphaFactorusSUN')
     static function glGlobalAlphaFactorusSUN(factor:UInt) : Void;
-
-
 
 
 
@@ -15215,7 +11611,6 @@ extern class GL {
 
 
     // static function glReadVideoPixelsSUN(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, pixels:void*) : Void;
-
 
 //GL_SUN_slice_accum
     inline static var GL_SUN_slice_accum                                              = 1;
@@ -15252,21 +11647,11 @@ extern class GL {
 
 
     @:native('glReplacementCodeubSUN')
-    static function glReplacementCodeubSUN(code:String) : Void;
-
-    @:native('glReplacementCodeuiSUN')
-    static function glReplacementCodeuiSUN(code:UInt) : Void;
-
-    @:native('glReplacementCodeusSUN')
+    static function glReplacementCodeubSUN(code:String) : Void;    @:native('glReplacementCodeuiSUN')
+    static function glReplacementCodeuiSUN(code:UInt) : Void;    @:native('glReplacementCodeusSUN')
     static function glReplacementCodeusSUN(code:UInt) : Void;
 
-
-
-    // static function glReplacementCodePointerSUN(type:Int, stride:Int, *pointer:const void) : Void;
-    // static function glReplacementCodeubvSUN(code:const GLubyte*) : Void;
-    // static function glReplacementCodeuivSUN(code:const GLuint*) : Void;
-    // static function glReplacementCodeusvSUN(code:const GLushort*) : Void;
-
+    // static function glReplacementCodePointerSUN(type:Int, stride:Int, *pointer:const void) : Void;    // static function glReplacementCodeubvSUN(code:const GLubyte*) : Void;    // static function glReplacementCodeuivSUN(code:const GLuint*) : Void;    // static function glReplacementCodeusvSUN(code:const GLushort*) : Void;
 
 //GL_SUN_vertex
     inline static var GL_SUN_vertex                                                   = 1;
@@ -15275,87 +11660,47 @@ extern class GL {
 
 
     @:native('glColor3fVertex3fSUN')
-    static function glColor3fVertex3fSUN(r:Float, g:Float, b:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glColor4fNormal3fVertex3fSUN')
-    static function glColor4fNormal3fVertex3fSUN(r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glColor4ubVertex2fSUN')
-    static function glColor4ubVertex2fSUN(r:String, g:String, b:String, a:String, x:Float, y:Float) : Void;
-
-    @:native('glColor4ubVertex3fSUN')
-    static function glColor4ubVertex3fSUN(r:String, g:String, b:String, a:String, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glNormal3fVertex3fSUN')
-    static function glNormal3fVertex3fSUN(nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glReplacementCodeuiColor3fVertex3fSUN')
-    static function glReplacementCodeuiColor3fVertex3fSUN(rc:UInt, r:Float, g:Float, b:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glReplacementCodeuiColor4fNormal3fVertex3fSUN')
-    static function glReplacementCodeuiColor4fNormal3fVertex3fSUN(rc:UInt, r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glReplacementCodeuiColor4ubVertex3fSUN')
-    static function glReplacementCodeuiColor4ubVertex3fSUN(rc:UInt, r:String, g:String, b:String, a:String, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glReplacementCodeuiNormal3fVertex3fSUN')
-    static function glReplacementCodeuiNormal3fVertex3fSUN(rc:UInt, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN')
-    static function glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(rc:UInt, s:Float, t:Float, r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN')
-    static function glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(rc:UInt, s:Float, t:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glReplacementCodeuiTexCoord2fVertex3fSUN')
-    static function glReplacementCodeuiTexCoord2fVertex3fSUN(rc:UInt, s:Float, t:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glReplacementCodeuiVertex3fSUN')
-    static function glReplacementCodeuiVertex3fSUN(rc:UInt, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glTexCoord2fColor3fVertex3fSUN')
-    static function glTexCoord2fColor3fVertex3fSUN(s:Float, t:Float, r:Float, g:Float, b:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glTexCoord2fColor4fNormal3fVertex3fSUN')
-    static function glTexCoord2fColor4fNormal3fVertex3fSUN(s:Float, t:Float, r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glTexCoord2fColor4ubVertex3fSUN')
-    static function glTexCoord2fColor4ubVertex3fSUN(s:Float, t:Float, r:String, g:String, b:String, a:String, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glTexCoord2fNormal3fVertex3fSUN')
-    static function glTexCoord2fNormal3fVertex3fSUN(s:Float, t:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glTexCoord2fVertex3fSUN')
-    static function glTexCoord2fVertex3fSUN(s:Float, t:Float, x:Float, y:Float, z:Float) : Void;
-
-    @:native('glTexCoord4fColor4fNormal3fVertex4fSUN')
-    static function glTexCoord4fColor4fNormal3fVertex4fSUN(s:Float, t:Float, p:Float, q:Float, r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float, w:Float) : Void;
-
-    @:native('glTexCoord4fVertex4fSUN')
+    static function glColor3fVertex3fSUN(r:Float, g:Float, b:Float, x:Float, y:Float, z:Float) : Void;    @:native('glColor4fNormal3fVertex3fSUN')
+    static function glColor4fNormal3fVertex3fSUN(r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;    @:native('glColor4ubVertex2fSUN')
+    static function glColor4ubVertex2fSUN(r:String, g:String, b:String, a:String, x:Float, y:Float) : Void;    @:native('glColor4ubVertex3fSUN')
+    static function glColor4ubVertex3fSUN(r:String, g:String, b:String, a:String, x:Float, y:Float, z:Float) : Void;    @:native('glNormal3fVertex3fSUN')
+    static function glNormal3fVertex3fSUN(nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;    @:native('glReplacementCodeuiColor3fVertex3fSUN')
+    static function glReplacementCodeuiColor3fVertex3fSUN(rc:UInt, r:Float, g:Float, b:Float, x:Float, y:Float, z:Float) : Void;    @:native('glReplacementCodeuiColor4fNormal3fVertex3fSUN')
+    static function glReplacementCodeuiColor4fNormal3fVertex3fSUN(rc:UInt, r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;    @:native('glReplacementCodeuiColor4ubVertex3fSUN')
+    static function glReplacementCodeuiColor4ubVertex3fSUN(rc:UInt, r:String, g:String, b:String, a:String, x:Float, y:Float, z:Float) : Void;    @:native('glReplacementCodeuiNormal3fVertex3fSUN')
+    static function glReplacementCodeuiNormal3fVertex3fSUN(rc:UInt, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;    @:native('glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN')
+    static function glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(rc:UInt, s:Float, t:Float, r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;    @:native('glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN')
+    static function glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(rc:UInt, s:Float, t:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;    @:native('glReplacementCodeuiTexCoord2fVertex3fSUN')
+    static function glReplacementCodeuiTexCoord2fVertex3fSUN(rc:UInt, s:Float, t:Float, x:Float, y:Float, z:Float) : Void;    @:native('glReplacementCodeuiVertex3fSUN')
+    static function glReplacementCodeuiVertex3fSUN(rc:UInt, x:Float, y:Float, z:Float) : Void;    @:native('glTexCoord2fColor3fVertex3fSUN')
+    static function glTexCoord2fColor3fVertex3fSUN(s:Float, t:Float, r:Float, g:Float, b:Float, x:Float, y:Float, z:Float) : Void;    @:native('glTexCoord2fColor4fNormal3fVertex3fSUN')
+    static function glTexCoord2fColor4fNormal3fVertex3fSUN(s:Float, t:Float, r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;    @:native('glTexCoord2fColor4ubVertex3fSUN')
+    static function glTexCoord2fColor4ubVertex3fSUN(s:Float, t:Float, r:String, g:String, b:String, a:String, x:Float, y:Float, z:Float) : Void;    @:native('glTexCoord2fNormal3fVertex3fSUN')
+    static function glTexCoord2fNormal3fVertex3fSUN(s:Float, t:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;    @:native('glTexCoord2fVertex3fSUN')
+    static function glTexCoord2fVertex3fSUN(s:Float, t:Float, x:Float, y:Float, z:Float) : Void;    @:native('glTexCoord4fColor4fNormal3fVertex4fSUN')
+    static function glTexCoord4fColor4fNormal3fVertex4fSUN(s:Float, t:Float, p:Float, q:Float, r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float, w:Float) : Void;    @:native('glTexCoord4fVertex4fSUN')
     static function glTexCoord4fVertex4fSUN(s:Float, t:Float, p:Float, q:Float, x:Float, y:Float, z:Float, w:Float) : Void;
 
-
-
-    // static function glColor3fVertex3fvSUN(c:const GLfloat*, bOffset:Int, v:BytesData) : Void;
-    // static function glColor4fNormal3fVertex3fvSUN(c:const GLfloat*, *n:const GLfloat, bOffset:Int, v:BytesData) : Void;
-    // static function glColor4ubVertex2fvSUN(c:const GLubyte*, bOffset:Int, v:BytesData) : Void;
-    // static function glColor4ubVertex3fvSUN(c:const GLubyte*, bOffset:Int, v:BytesData) : Void;
-    // static function glNormal3fVertex3fvSUN(n:const GLfloat*, bOffset:Int, v:BytesData) : Void;
-    // static function glReplacementCodeuiColor3fVertex3fvSUN(rc:const GLuint*, *c:const GLfloat, bOffset:Int, v:BytesData) : Void;
-    // static function glReplacementCodeuiColor4fNormal3fVertex3fvSUN(rc:const GLuint*, *c:const GLfloat, *n:const GLfloat, bOffset:Int, v:BytesData) : Void;
-    // static function glReplacementCodeuiColor4ubVertex3fvSUN(rc:const GLuint*, *c:const GLubyte, bOffset:Int, v:BytesData) : Void;
-    // static function glReplacementCodeuiNormal3fVertex3fvSUN(rc:const GLuint*, *n:const GLfloat, bOffset:Int, v:BytesData) : Void;
-    // static function glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(rc:const GLuint*, *tc:const GLfloat, *c:const GLfloat, *n:const GLfloat, bOffset:Int, v:BytesData) : Void;
-    // static function glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(rc:const GLuint*, *tc:const GLfloat, *n:const GLfloat, bOffset:Int, v:BytesData) : Void;
-    // static function glReplacementCodeuiTexCoord2fVertex3fvSUN(rc:const GLuint*, *tc:const GLfloat, bOffset:Int, v:BytesData) : Void;
-    // static function glReplacementCodeuiVertex3fvSUN(rc:const GLuint*, bOffset:Int, v:BytesData) : Void;
-    // static function glTexCoord2fColor3fVertex3fvSUN(tc:const GLfloat*, *c:const GLfloat, bOffset:Int, v:BytesData) : Void;
-    // static function glTexCoord2fColor4fNormal3fVertex3fvSUN(tc:const GLfloat*, *c:const GLfloat, *n:const GLfloat, bOffset:Int, v:BytesData) : Void;
-    // static function glTexCoord2fColor4ubVertex3fvSUN(tc:const GLfloat*, *c:const GLubyte, bOffset:Int, v:BytesData) : Void;
-    // static function glTexCoord2fNormal3fVertex3fvSUN(tc:const GLfloat*, *n:const GLfloat, bOffset:Int, v:BytesData) : Void;
-    // static function glTexCoord2fVertex3fvSUN(tc:const GLfloat*, bOffset:Int, v:BytesData) : Void;
-    // static function glTexCoord4fColor4fNormal3fVertex4fvSUN(tc:const GLfloat*, *c:const GLfloat, *n:const GLfloat, bOffset:Int, v:BytesData) : Void;
-    // static function glTexCoord4fVertex4fvSUN(tc:const GLfloat*, bOffset:Int, v:BytesData) : Void;
+    // inline static function glColor3fVertex3fvSUN(c:const GLfloat*, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glColor4fNormal3fVertex3fvSUN(c:const GLfloat*, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glColor4ubVertex2fvSUN(c:const GLubyte*, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glColor4ubVertex3fvSUN(c:const GLubyte*, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glNormal3fVertex3fvSUN(n:const GLfloat*, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glReplacementCodeuiColor3fVertex3fvSUN(rc:const GLuint*, *c:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glReplacementCodeuiColor4fNormal3fVertex3fvSUN(rc:const GLuint*, *c:const GLfloat, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glReplacementCodeuiColor4ubVertex3fvSUN(rc:const GLuint*, *c:const GLubyte, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glReplacementCodeuiNormal3fVertex3fvSUN(rc:const GLuint*, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(rc:const GLuint*, *tc:const GLfloat, *c:const GLfloat, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(rc:const GLuint*, *tc:const GLfloat, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glReplacementCodeuiTexCoord2fVertex3fvSUN(rc:const GLuint*, *tc:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glReplacementCodeuiVertex3fvSUN(rc:const GLuint*, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glTexCoord2fColor3fVertex3fvSUN(tc:const GLfloat*, *c:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glTexCoord2fColor4fNormal3fVertex3fvSUN(tc:const GLfloat*, *c:const GLfloat, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glTexCoord2fColor4ubVertex3fvSUN(tc:const GLfloat*, *c:const GLubyte, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glTexCoord2fNormal3fVertex3fvSUN(tc:const GLfloat*, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glTexCoord2fVertex3fvSUN(tc:const GLfloat*, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glTexCoord4fColor4fNormal3fVertex4fvSUN(tc:const GLfloat*, *c:const GLfloat, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
+    // inline static function glTexCoord4fVertex4fvSUN(tc:const GLfloat*, ?bOffset:Int=0, v:BytesData) : Void
 
 
 //GL_WIN_phong_shading
@@ -15389,8 +11734,6 @@ extern class GL {
 
     @:native('glAddSwapHintRectWIN')
     static function glAddSwapHintRectWIN(x:Int, y:Int, width:Int, height:Int) : Void;
-
-
 
 
 

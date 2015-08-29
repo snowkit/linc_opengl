@@ -2,6 +2,8 @@
 -cpp cpp/
 -cp ../
 # pick a target
+-D no-debug
+-D no-simplify
 
 -D mac
 #-D windows

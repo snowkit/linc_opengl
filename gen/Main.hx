@@ -4,9 +4,16 @@ import GL;
 
 class Test {
 
-    static function test() {
+    public static function test() {
         GL.glClearColor(1.0,1.0,1.0,1.0);
         GL.glClear(GL.GL_COLOR_BUFFER_BIT);
+        var b = haxe.io.Bytes.alloc(3);
+        GL.glTexCoord1iv(b.getData());
+    }
+
+    public static function test2() {
+
+        trace('test1');
     }
 
 }
@@ -45,6 +52,7 @@ class Main {
 
     static function main() {
 
+        Test.test2();
 
         glew = {
             versions:[],
@@ -109,6 +117,7 @@ class Main {
         var _wrap = false;
         var _hidden = false;
         var _native = '$_fname';
+        var _body:String = null;
         var outargs = [];
                 
         for(a in args) {
@@ -119,10 +128,11 @@ class Main {
             var _atype = a.type;
 
             if(_aname == '*v') {
-                outargs.push({ name:'bOffset', type:'Int' });
+                _body = '{ untyped __cpp__("$_fname(($_atype*)&{1}[0] + {0})", bOffset, v); };';
+                outargs.push({ name:'?bOffset', type:'Int=0' });
                 _aname = 'v';
                 _atype = 'BytesData';
-                _native = 'linc::opengl::$_fname';
+                _native = null;
                 _wrap = true;
             }
 
@@ -152,7 +162,8 @@ class Main {
         }
 
         return {
-            native:'$_native',
+            native:_native,
+            body:_body,
             args:outargs,
             hidden:_hidden,
             wrap:_wrap
@@ -177,12 +188,16 @@ class Main {
                 if(_idx < _inf.args.length-1) _args+=', ';
                 _idx++;
             }
-            var s = 'static function $_name($_args) : ${to_haxe_type(f.ret)};\n';
-            var n = '@:native(\'${_inf.native}\')';
+
+            var _inline = (_inf.body==null) ? '' : 'inline ';
+            var _endl = (_inf.body==null) ? ';' : '\n';
+            var s = '${_inline}static function $_name($_args) : ${to_haxe_type(f.ret)}$_endl';
+            var n =  (_inf.native==null) ? '' : '@:native(\'${_inf.native}\')';
             if(_ishidden || _inf.hidden) {
                 _hidden.push(s);
             } else {
-                s = '$n\n    $s\n';//${tb(30-n.length)}
+                s = '$n\n    $s';
+                if(_inf.body != null) s += '      ${_inf.body}\n';
                 if(_inf.wrap) { _wrap.push(s); } 
                 else { _list.push(s); }
             } //!hidden
