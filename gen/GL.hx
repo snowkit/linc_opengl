@@ -1096,286 +1096,528 @@ extern class GL {
     
     inline static function glColor3bv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor3bv((const GLbyte*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor3dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor3fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor3iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor3iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor3sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor3ubv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor3ubv((const GLubyte*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor3uiv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor3uiv((const GLuint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor3usv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor3usv((const GLushort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor4bv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor4bv((const GLbyte*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor4dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor4dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor4fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor4fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor4iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor4iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor4sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor4sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor4ubv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor4ubv((const GLubyte*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor4uiv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor4uiv((const GLuint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glColor4usv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glColor4usv((const GLushort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glGetMapdv(target:Int, query:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glGetMapdv(target, query, (GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glGetMapfv(target:Int, query:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glGetMapfv(target, query, (GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glGetMapiv(target:Int, query:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glGetMapiv(target, query, (GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glNormal3bv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glNormal3bv((const GLbyte*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glNormal3dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glNormal3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glNormal3fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glNormal3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glNormal3iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glNormal3iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glNormal3sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glNormal3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glRasterPos2dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glRasterPos2dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glRasterPos2fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glRasterPos2fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glRasterPos2iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glRasterPos2iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glRasterPos2sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glRasterPos2sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glRasterPos3dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glRasterPos3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glRasterPos3fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glRasterPos3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glRasterPos3iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glRasterPos3iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glRasterPos3sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glRasterPos3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glRasterPos4dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glRasterPos4dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glRasterPos4fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glRasterPos4fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glRasterPos4iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glRasterPos4iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glRasterPos4sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glRasterPos4sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord1dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord1dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord1fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord1fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord1iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord1iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord1sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord1sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord2dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord2dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord2fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord2fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord2iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord2iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord2sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord2sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord3dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord3fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord3iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord3iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord3sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord4dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord4dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord4fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord4fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord4iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord4iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glTexCoord4sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glTexCoord4sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertex2dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertex2dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertex2fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertex2fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertex2iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertex2iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertex2sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertex2sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertex3dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertex3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertex3fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertex3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertex3iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertex3iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertex3sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertex3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertex4dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertex4dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertex4fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertex4fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertex4iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertex4iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertex4sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertex4sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
 
-    // static function glAreTexturesResident(n:Int, *textures:const GLuint, *residences:Bool) : Bool;
-    // static function glBitmap(width:Int, height:Int, xorig:Float, yorig:Float, xmove:Float, ymove:Float, *bitmap:const GLubyte) : Void;
-    // static function glCallLists(n:Int, type:Int, *lists:const void) : Void;
-    // static function glClipPlane(plane:Int, *equation:const GLdouble) : Void;
-    // static function glColorPointer(size:Int, type:Int, stride:Int, *pointer:const void) : Void;
-    // static function glDeleteTextures(n:Int, *textures:const GLuint) : Void;
-    // static function glDrawElements(mode:Int, count:Int, type:Int, *indices:const void) : Void;
-    // static function glDrawPixels(width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glEdgeFlagPointer(stride:Int, *pointer:const void) : Void;
-    // static function glEdgeFlagv(*flag:const GLboolean) : Void;
-    // static function glEvalCoord1dv(*u:const GLdouble) : Void;
-    // static function glEvalCoord1fv(*u:const GLfloat) : Void;
-    // static function glEvalCoord2dv(*u:const GLdouble) : Void;
-    // static function glEvalCoord2fv(*u:const GLfloat) : Void;
-    // static function glFeedbackBuffer(size:Int, type:Int, *buffer:Float) : Void;
-    // static function glFogfv(pname:Int, *params:const GLfloat) : Void;
-    // static function glFogiv(pname:Int, *params:const GLint) : Void;
-    // static function glGenTextures(n:Int, *textures:UInt) : Void;
-    // static function glGetBooleanv(pname:Int, *params:Bool) : Void;
-    // static function glGetClipPlane(plane:Int, *equation:Float) : Void;
-    // static function glGetDoublev(pname:Int, *params:Float) : Void;
-    // static function glGetFloatv(pname:Int, *params:Float) : Void;
-    // static function glGetIntegerv(pname:Int, *params:Int) : Void;
-    // static function glGetLightfv(light:Int, pname:Int, *params:Float) : Void;
-    // static function glGetLightiv(light:Int, pname:Int, *params:Int) : Void;
-    // static function glGetMaterialfv(face:Int, pname:Int, *params:Float) : Void;
-    // static function glGetMaterialiv(face:Int, pname:Int, *params:Int) : Void;
-    // static function glGetPixelMapfv(map:Int, *values:Float) : Void;
-    // static function glGetPixelMapuiv(map:Int, *values:UInt) : Void;
-    // static function glGetPixelMapusv(map:Int, *values:UInt) : Void;
-    // inline static function glGetPointerv(pname:Int, ?bOffset:Int=0, *params:BytesData) : Void
 
+    // @:native('glAreTexturesResident')
+    // static function glAreTexturesResident(n:Int, *textures:const GLuint, *residences:Bool) : Bool;
+    // 
+    // @:native('glBitmap')
+    // static function glBitmap(width:Int, height:Int, xorig:Float, yorig:Float, xmove:Float, ymove:Float, *bitmap:const GLubyte) : Void;
+    // 
+    // @:native('glCallLists')
+    // static function glCallLists(n:Int, type:Int, *lists:const void) : Void;
+    // 
+    // @:native('glClipPlane')
+    // static function glClipPlane(plane:Int, *equation:const GLdouble) : Void;
+    // 
+    // @:native('glColorPointer')
+    // static function glColorPointer(size:Int, type:Int, stride:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glDeleteTextures')
+    // static function glDeleteTextures(n:Int, *textures:const GLuint) : Void;
+    // 
+    // @:native('glDrawElements')
+    // static function glDrawElements(mode:Int, count:Int, type:Int, *indices:const void) : Void;
+    // 
+    // @:native('glDrawPixels')
+    // static function glDrawPixels(width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glEdgeFlagPointer')
+    // static function glEdgeFlagPointer(stride:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glEdgeFlagv')
+    // static function glEdgeFlagv(*flag:const GLboolean) : Void;
+    // 
+    // @:native('glEvalCoord1dv')
+    // static function glEvalCoord1dv(*u:const GLdouble) : Void;
+    // 
+    // @:native('glEvalCoord1fv')
+    // static function glEvalCoord1fv(*u:const GLfloat) : Void;
+    // 
+    // @:native('glEvalCoord2dv')
+    // static function glEvalCoord2dv(*u:const GLdouble) : Void;
+    // 
+    // @:native('glEvalCoord2fv')
+    // static function glEvalCoord2fv(*u:const GLfloat) : Void;
+    // 
+    // @:native('glFeedbackBuffer')
+    // static function glFeedbackBuffer(size:Int, type:Int, *buffer:Float) : Void;
+    // 
+    // @:native('glFogfv')
+    // static function glFogfv(pname:Int, *params:const GLfloat) : Void;
+    // 
+    // @:native('glFogiv')
+    // static function glFogiv(pname:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glGenTextures')
+    // static function glGenTextures(n:Int, *textures:UInt) : Void;
+    // 
+    // @:native('glGetBooleanv')
+    // static function glGetBooleanv(pname:Int, *params:Bool) : Void;
+    // 
+    // @:native('glGetClipPlane')
+    // static function glGetClipPlane(plane:Int, *equation:Float) : Void;
+    // 
+    // @:native('glGetDoublev')
+    // static function glGetDoublev(pname:Int, *params:Float) : Void;
+    // 
+    // @:native('glGetFloatv')
+    // static function glGetFloatv(pname:Int, *params:Float) : Void;
+    // 
+    // @:native('glGetIntegerv')
+    // static function glGetIntegerv(pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glGetLightfv')
+    // static function glGetLightfv(light:Int, pname:Int, *params:Float) : Void;
+    // 
+    // @:native('glGetLightiv')
+    // static function glGetLightiv(light:Int, pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glGetMaterialfv')
+    // static function glGetMaterialfv(face:Int, pname:Int, *params:Float) : Void;
+    // 
+    // @:native('glGetMaterialiv')
+    // static function glGetMaterialiv(face:Int, pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glGetPixelMapfv')
+    // static function glGetPixelMapfv(map:Int, *values:Float) : Void;
+    // 
+    // @:native('glGetPixelMapuiv')
+    // static function glGetPixelMapuiv(map:Int, *values:UInt) : Void;
+    // 
+    // @:native('glGetPixelMapusv')
+    // static function glGetPixelMapusv(map:Int, *values:UInt) : Void;
+    // 
+    // 
+    // inline static function glGetPointerv(pname:Int, ?bOffset:Int=0, *params:BytesData) : Void
+    // { untyped __cpp__("glGetPointerv(pname, (void*)&{1}[0] + {0})", bOffset, *params); }
+    // 
+    // @:native('glGetPolygonStipple')
     // static function glGetPolygonStipple(*mask:String) : Void;
+    // 
+    // @:native('glGetString')
     // static function glGetString(name:Int) : const GLubyte *;
+    // 
+    // @:native('glGetTexEnvfv')
     // static function glGetTexEnvfv(target:Int, pname:Int, *params:Float) : Void;
+    // 
+    // @:native('glGetTexEnviv')
     // static function glGetTexEnviv(target:Int, pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glGetTexGendv')
     // static function glGetTexGendv(coord:Int, pname:Int, *params:Float) : Void;
+    // 
+    // @:native('glGetTexGenfv')
     // static function glGetTexGenfv(coord:Int, pname:Int, *params:Float) : Void;
+    // 
+    // @:native('glGetTexGeniv')
     // static function glGetTexGeniv(coord:Int, pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glGetTexImage')
     // static function glGetTexImage(target:Int, level:Int, format:Int, type:Int, *pixels:Void) : Void;
+    // 
+    // @:native('glGetTexLevelParameterfv')
     // static function glGetTexLevelParameterfv(target:Int, level:Int, pname:Int, *params:Float) : Void;
+    // 
+    // @:native('glGetTexLevelParameteriv')
     // static function glGetTexLevelParameteriv(target:Int, level:Int, pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glGetTexParameterfv')
     // static function glGetTexParameterfv(target:Int, pname:Int, *params:Float) : Void;
+    // 
+    // @:native('glGetTexParameteriv')
     // static function glGetTexParameteriv(target:Int, pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glIndexPointer')
     // static function glIndexPointer(type:Int, stride:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glIndexdv')
     // static function glIndexdv(*c:const GLdouble) : Void;
+    // 
+    // @:native('glIndexfv')
     // static function glIndexfv(*c:const GLfloat) : Void;
+    // 
+    // @:native('glIndexiv')
     // static function glIndexiv(*c:const GLint) : Void;
+    // 
+    // @:native('glIndexsv')
     // static function glIndexsv(*c:const GLshort) : Void;
+    // 
+    // @:native('glIndexubv')
     // static function glIndexubv(*c:const GLubyte) : Void;
+    // 
+    // @:native('glInterleavedArrays')
     // static function glInterleavedArrays(format:Int, stride:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glLightModelfv')
     // static function glLightModelfv(pname:Int, *params:const GLfloat) : Void;
+    // 
+    // @:native('glLightModeliv')
     // static function glLightModeliv(pname:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glLightfv')
     // static function glLightfv(light:Int, pname:Int, *params:const GLfloat) : Void;
+    // 
+    // @:native('glLightiv')
     // static function glLightiv(light:Int, pname:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glLoadMatrixd')
     // static function glLoadMatrixd(*m:const GLdouble) : Void;
+    // 
+    // @:native('glLoadMatrixf')
     // static function glLoadMatrixf(*m:const GLfloat) : Void;
+    // 
+    // @:native('glMap1d')
     // static function glMap1d(target:Int, u1:Float, u2:Float, stride:Int, order:Int, *points:const GLdouble) : Void;
+    // 
+    // @:native('glMap1f')
     // static function glMap1f(target:Int, u1:Float, u2:Float, stride:Int, order:Int, *points:const GLfloat) : Void;
+    // 
+    // @:native('glMap2d')
     // static function glMap2d(target:Int, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, *points:const GLdouble) : Void;
+    // 
+    // @:native('glMap2f')
     // static function glMap2f(target:Int, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, *points:const GLfloat) : Void;
+    // 
+    // @:native('glMaterialfv')
     // static function glMaterialfv(face:Int, pname:Int, *params:const GLfloat) : Void;
+    // 
+    // @:native('glMaterialiv')
     // static function glMaterialiv(face:Int, pname:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glMultMatrixd')
     // static function glMultMatrixd(*m:const GLdouble) : Void;
+    // 
+    // @:native('glMultMatrixf')
     // static function glMultMatrixf(*m:const GLfloat) : Void;
+    // 
+    // @:native('glNormalPointer')
     // static function glNormalPointer(type:Int, stride:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glPixelMapfv')
     // static function glPixelMapfv(map:Int, mapsize:Int, *values:const GLfloat) : Void;
+    // 
+    // @:native('glPixelMapuiv')
     // static function glPixelMapuiv(map:Int, mapsize:Int, *values:const GLuint) : Void;
+    // 
+    // @:native('glPixelMapusv')
     // static function glPixelMapusv(map:Int, mapsize:Int, *values:const GLushort) : Void;
+    // 
+    // @:native('glPolygonStipple')
     // static function glPolygonStipple(*mask:const GLubyte) : Void;
+    // 
+    // @:native('glPrioritizeTextures')
     // static function glPrioritizeTextures(n:Int, *textures:const GLuint, *priorities:const GLclampf) : Void;
+    // 
+    // @:native('glReadPixels')
     // static function glReadPixels(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, *pixels:Void) : Void;
+    // 
+    // @:native('glRectdv')
     // static function glRectdv(*v1:const GLdouble, *v2:const GLdouble) : Void;
+    // 
+    // @:native('glRectfv')
     // static function glRectfv(*v1:const GLfloat, *v2:const GLfloat) : Void;
+    // 
+    // @:native('glRectiv')
     // static function glRectiv(*v1:const GLint, *v2:const GLint) : Void;
+    // 
+    // @:native('glRectsv')
     // static function glRectsv(*v1:const GLshort, *v2:const GLshort) : Void;
+    // 
+    // @:native('glSelectBuffer')
     // static function glSelectBuffer(size:Int, *buffer:UInt) : Void;
+    // 
+    // @:native('glTexCoordPointer')
     // static function glTexCoordPointer(size:Int, type:Int, stride:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glTexEnvfv')
     // static function glTexEnvfv(target:Int, pname:Int, *params:const GLfloat) : Void;
+    // 
+    // @:native('glTexEnviv')
     // static function glTexEnviv(target:Int, pname:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glTexGendv')
     // static function glTexGendv(coord:Int, pname:Int, *params:const GLdouble) : Void;
+    // 
+    // @:native('glTexGenfv')
     // static function glTexGenfv(coord:Int, pname:Int, *params:const GLfloat) : Void;
+    // 
+    // @:native('glTexGeniv')
     // static function glTexGeniv(coord:Int, pname:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glTexImage1D')
     // static function glTexImage1D(target:Int, level:Int, internalformat:Int, width:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glTexImage2D')
     // static function glTexImage2D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glTexParameterfv')
     // static function glTexParameterfv(target:Int, pname:Int, *params:const GLfloat) : Void;
+    // 
+    // @:native('glTexParameteriv')
     // static function glTexParameteriv(target:Int, pname:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glTexSubImage1D')
     // static function glTexSubImage1D(target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glTexSubImage2D')
     // static function glTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glVertexPointer')
     // static function glVertexPointer(size:Int, type:Int, stride:Int, *pointer:const void) : Void;
+    // 
 
 
 //GL 1.2
@@ -1426,9 +1668,15 @@ extern class GL {
 
 
 
+    // @:native('glDrawRangeElements')
     // static function glDrawRangeElements(mode:Int, start:UInt, end:UInt, count:Int, type:Int, *indices:const void) : Void;
+    // 
+    // @:native('glTexImage3D')
     // static function glTexImage3D(target:Int, level:Int, internalFormat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glTexSubImage3D')
     // static function glTexSubImage3D(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
 
 
 //GL 1.2
@@ -1591,63 +1839,101 @@ extern class GL {
     
     inline static function glMultiTexCoord1dv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord1dv(target, (const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord1fv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord1fv(target, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord1iv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord1iv(target, (const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord1sv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord1sv(target, (const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord2dv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord2dv(target, (const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord2fv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord2fv(target, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord2iv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord2iv(target, (const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord2sv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord2sv(target, (const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord3dv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord3dv(target, (const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord3fv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord3fv(target, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord3iv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord3iv(target, (const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord3sv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord3sv(target, (const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord4dv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord4dv(target, (const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord4fv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord4fv(target, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord4iv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord4iv(target, (const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord4sv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord4sv(target, (const GLshort*)&{1}[0] + {0})", bOffset, v); }
 
+
+    // @:native('glCompressedTexImage1D')
     // static function glCompressedTexImage1D(target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTexImage2D')
     // static function glCompressedTexImage2D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTexImage3D')
     // static function glCompressedTexImage3D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTexSubImage1D')
     // static function glCompressedTexSubImage1D(target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTexSubImage2D')
     // static function glCompressedTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTexSubImage3D')
     // static function glCompressedTexSubImage3D(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glGetCompressedTexImage')
     // static function glGetCompressedTexImage(target:Int, lod:Int, *img:Void) : Void;
+    // 
+    // @:native('glLoadTransposeMatrixd')
     // static function glLoadTransposeMatrixd(m:Array<const GLdouble>) : Void;
+    // 
+    // @:native('glLoadTransposeMatrixf')
     // static function glLoadTransposeMatrixf(m:Array<const GLfloat>) : Void;
+    // 
+    // @:native('glMultTransposeMatrixd')
     // static function glMultTransposeMatrixd(m:Array<const GLdouble>) : Void;
+    // 
+    // @:native('glMultTransposeMatrixf')
     // static function glMultTransposeMatrixf(m:Array<const GLfloat>) : Void;
+    // 
 
 
 //GL 1.4
@@ -1765,44 +2051,84 @@ extern class GL {
     
     inline static function glSecondaryColor3bv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3bv((const GLbyte*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3dv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3fv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3iv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3sv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3ubv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3ubv((const GLubyte*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3uiv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3uiv((const GLuint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3usv(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3usv((const GLushort*)&{1}[0] + {0})", bOffset, v); }
 
+
+    // @:native('glFogCoordPointer')
     // static function glFogCoordPointer(type:Int, stride:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glFogCoorddv')
     // static function glFogCoorddv(*coord:const GLdouble) : Void;
+    // 
+    // @:native('glFogCoordfv')
     // static function glFogCoordfv(*coord:const GLfloat) : Void;
+    // 
+    // @:native('glMultiDrawArrays')
     // static function glMultiDrawArrays(mode:Int, *first:const GLint, *count:const GLsizei, drawcount:Int) : Void;
+    // 
+    // @:native('glMultiDrawElements')
     // static function glMultiDrawElements(mode:Int, *count:const GLsizei, type:Int, indices:const void *const*, drawcount:Int) : Void;
+    // 
+    // @:native('glPointParameterfv')
     // static function glPointParameterfv(pname:Int, *params:const GLfloat) : Void;
+    // 
+    // @:native('glPointParameteriv')
     // static function glPointParameteriv(pname:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glSecondaryColorPointer')
     // static function glSecondaryColorPointer(size:Int, type:Int, stride:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glWindowPos2dv')
     // static function glWindowPos2dv(*p:const GLdouble) : Void;
+    // 
+    // @:native('glWindowPos2fv')
     // static function glWindowPos2fv(*p:const GLfloat) : Void;
+    // 
+    // @:native('glWindowPos2iv')
     // static function glWindowPos2iv(*p:const GLint) : Void;
+    // 
+    // @:native('glWindowPos2sv')
     // static function glWindowPos2sv(*p:const GLshort) : Void;
+    // 
+    // @:native('glWindowPos3dv')
     // static function glWindowPos3dv(*p:const GLdouble) : Void;
+    // 
+    // @:native('glWindowPos3fv')
     // static function glWindowPos3fv(*p:const GLfloat) : Void;
+    // 
+    // @:native('glWindowPos3iv')
     // static function glWindowPos3iv(*p:const GLint) : Void;
+    // 
+    // @:native('glWindowPos3sv')
     // static function glWindowPos3sv(*p:const GLshort) : Void;
+    // 
 
 
 //GL 1.5
@@ -1880,23 +2206,46 @@ extern class GL {
     
     inline static function glBufferData(target:Int, size:Int, ?bOffset:Int=0, data:BytesData, usage:Int) : Void
       { untyped __cpp__("glBufferData(target, size, (const void*)&{1}[0] + {0}, usage)", bOffset, data); }
+
     
     inline static function glBufferSubData(target:Int, offset:Int, size:Int, ?bOffset:Int=0, data:BytesData) : Void
       { untyped __cpp__("glBufferSubData(target, offset, size, (const void*)&{1}[0] + {0})", bOffset, data); }
+
     
     inline static function glGetBufferSubData(target:Int, offset:Int, size:Int, ?bOffset:Int=0, data:BytesData) : Void
       { untyped __cpp__("glGetBufferSubData(target, offset, size, (void*)&{1}[0] + {0})", bOffset, data); }
 
+
+    // @:native('glDeleteBuffers')
     // static function glDeleteBuffers(n:Int, buffers:const GLuint*) : Void;
+    // 
+    // @:native('glDeleteQueries')
     // static function glDeleteQueries(n:Int, ids:const GLuint*) : Void;
+    // 
+    // @:native('glGenBuffers')
     // static function glGenBuffers(n:Int, buffers:GLuint*) : Void;
+    // 
+    // @:native('glGenQueries')
     // static function glGenQueries(n:Int, ids:GLuint*) : Void;
+    // 
+    // @:native('glGetBufferParameteriv')
     // static function glGetBufferParameteriv(target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetBufferPointerv')
     // static function glGetBufferPointerv(target:Int, pname:Int, params:void**) : Void;
+    // 
+    // @:native('glGetQueryObjectiv')
     // static function glGetQueryObjectiv(id:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetQueryObjectuiv')
     // static function glGetQueryObjectuiv(id:UInt, pname:Int, params:GLuint*) : Void;
+    // 
+    // @:native('glGetQueryiv')
     // static function glGetQueryiv(target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glMapBuffer')
     // static function glMapBuffer(target:Int, access:Int) : void*;
+    // 
 
 
 //GL 2.0
@@ -2117,56 +2466,164 @@ extern class GL {
     inline static function glVertexAttribPointer(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
       { untyped __cpp__("glVertexAttribPointer(index, size, type, normalized, stride, (const void*)&{1}[0] + {0})", bOffset, pointer); }
 
+
+    // @:native('glDrawBuffers')
     // static function glDrawBuffers(n:Int, bufs:const GLenum*) : Void;
+    // 
+    // @:native('glGetActiveAttrib')
     // static function glGetActiveAttrib(program:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:GLint*, type:GLenum*, name:String) : Void;
+    // 
+    // @:native('glGetActiveUniform')
     // static function glGetActiveUniform(program:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:GLint*, type:GLenum*, name:String) : Void;
+    // 
+    // @:native('glGetAttachedShaders')
     // static function glGetAttachedShaders(program:UInt, maxCount:Int, count:GLsizei*, shaders:GLuint*) : Void;
+    // 
+    // @:native('glGetProgramInfoLog')
     // static function glGetProgramInfoLog(program:UInt, bufSize:Int, length:GLsizei*, infoLog:String) : Void;
+    // 
+    // @:native('glGetProgramiv')
     // static function glGetProgramiv(program:UInt, pname:Int, param:GLint*) : Void;
+    // 
+    // @:native('glGetShaderInfoLog')
     // static function glGetShaderInfoLog(shader:UInt, bufSize:Int, length:GLsizei*, infoLog:String) : Void;
+    // 
+    // @:native('glGetShaderSource')
     // static function glGetShaderSource(obj:UInt, maxLength:Int, length:GLsizei*, source:String) : Void;
+    // 
+    // @:native('glGetShaderiv')
     // static function glGetShaderiv(shader:UInt, pname:Int, param:GLint*) : Void;
+    // 
+    // @:native('glGetUniformfv')
     // static function glGetUniformfv(program:UInt, location:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetUniformiv')
     // static function glGetUniformiv(program:UInt, location:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetVertexAttribPointerv')
     // static function glGetVertexAttribPointerv(index:UInt, pname:Int, pointer:void**) : Void;
+    // 
+    // @:native('glGetVertexAttribdv')
     // static function glGetVertexAttribdv(index:UInt, pname:Int, params:GLdouble*) : Void;
+    // 
+    // @:native('glGetVertexAttribfv')
     // static function glGetVertexAttribfv(index:UInt, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetVertexAttribiv')
     // static function glGetVertexAttribiv(index:UInt, pname:Int, params:GLint*) : Void;
-    // static function glShaderSource(shader:UInt, count:Int, string:const GLchar *const*, length:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glShaderSource(shader:UInt, count:Int, string:const GLchar *const*, length:const GLint*) : Void
+    // { untyped __cpp__("glShaderSource(shader, count, string)"); }
+    // 
+    // @:native('glUniform1fv')
     // static function glUniform1fv(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform1iv(location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glUniform1iv(location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glUniform1iv(location, count)"); }
+    // 
+    // @:native('glUniform2fv')
     // static function glUniform2fv(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform2iv(location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glUniform2iv(location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glUniform2iv(location, count)"); }
+    // 
+    // @:native('glUniform3fv')
     // static function glUniform3fv(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform3iv(location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glUniform3iv(location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glUniform3iv(location, count)"); }
+    // 
+    // @:native('glUniform4fv')
     // static function glUniform4fv(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform4iv(location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glUniform4iv(location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glUniform4iv(location, count)"); }
+    // 
+    // @:native('glUniformMatrix2fv')
     // static function glUniformMatrix2fv(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glUniformMatrix3fv')
     // static function glUniformMatrix3fv(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glUniformMatrix4fv')
     // static function glUniformMatrix4fv(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttrib1dv')
     // static function glVertexAttrib1dv(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttrib1fv')
     // static function glVertexAttrib1fv(index:UInt, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttrib1sv')
     // static function glVertexAttrib1sv(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib2dv')
     // static function glVertexAttrib2dv(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttrib2fv')
     // static function glVertexAttrib2fv(index:UInt, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttrib2sv')
     // static function glVertexAttrib2sv(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib3dv')
     // static function glVertexAttrib3dv(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttrib3fv')
     // static function glVertexAttrib3fv(index:UInt, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttrib3sv')
     // static function glVertexAttrib3sv(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib4Nbv')
     // static function glVertexAttrib4Nbv(index:UInt, v:const GLbyte*) : Void;
-    // static function glVertexAttrib4Niv(index:UInt, v:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glVertexAttrib4Niv(index:UInt, v:const GLint*) : Void
+    // { untyped __cpp__("glVertexAttrib4Niv(index)"); }
+    // 
+    // @:native('glVertexAttrib4Nsv')
     // static function glVertexAttrib4Nsv(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib4Nubv')
     // static function glVertexAttrib4Nubv(index:UInt, v:const GLubyte*) : Void;
+    // 
+    // @:native('glVertexAttrib4Nuiv')
     // static function glVertexAttrib4Nuiv(index:UInt, v:const GLuint*) : Void;
+    // 
+    // @:native('glVertexAttrib4Nusv')
     // static function glVertexAttrib4Nusv(index:UInt, v:const GLushort*) : Void;
+    // 
+    // @:native('glVertexAttrib4bv')
     // static function glVertexAttrib4bv(index:UInt, v:const GLbyte*) : Void;
+    // 
+    // @:native('glVertexAttrib4dv')
     // static function glVertexAttrib4dv(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttrib4fv')
     // static function glVertexAttrib4fv(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib4iv(index:UInt, v:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glVertexAttrib4iv(index:UInt, v:const GLint*) : Void
+    // { untyped __cpp__("glVertexAttrib4iv(index)"); }
+    // 
+    // @:native('glVertexAttrib4sv')
     // static function glVertexAttrib4sv(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib4ubv')
     // static function glVertexAttrib4ubv(index:UInt, v:const GLubyte*) : Void;
+    // 
+    // @:native('glVertexAttrib4uiv')
     // static function glVertexAttrib4uiv(index:UInt, v:const GLuint*) : Void;
+    // 
+    // @:native('glVertexAttrib4usv')
     // static function glVertexAttrib4usv(index:UInt, v:const GLushort*) : Void;
+    // 
 
 
 //GL 2.1
@@ -2197,12 +2654,24 @@ extern class GL {
 
 
 
+    // @:native('glUniformMatrix2x3fv')
     // static function glUniformMatrix2x3fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;
+    // 
+    // @:native('glUniformMatrix2x4fv')
     // static function glUniformMatrix2x4fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;
+    // 
+    // @:native('glUniformMatrix3x2fv')
     // static function glUniformMatrix3x2fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;
+    // 
+    // @:native('glUniformMatrix3x4fv')
     // static function glUniformMatrix3x4fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;
+    // 
+    // @:native('glUniformMatrix4x2fv')
     // static function glUniformMatrix4x2fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;
+    // 
+    // @:native('glUniformMatrix4x3fv')
     // static function glUniformMatrix4x3fv(location:Int, count:Int, transpose:Bool, *value:const GLfloat) : Void;
+    // 
 
 
 //GL 3.0
@@ -2387,37 +2856,105 @@ extern class GL {
 
 
 
+    // @:native('glClearBufferfv')
     // static function glClearBufferfv(buffer:Int, drawBuffer:Int, value:const GLfloat*) : Void;
-    // static function glClearBufferiv(buffer:Int, drawBuffer:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glClearBufferiv(buffer:Int, drawBuffer:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glClearBufferiv(buffer, drawBuffer)"); }
+    // 
+    // @:native('glClearBufferuiv')
     // static function glClearBufferuiv(buffer:Int, drawBuffer:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glGetBooleani_v')
     // static function glGetBooleani_v(pname:Int, index:UInt, data:GLboolean*) : Void;
+    // 
+    // @:native('glGetStringi')
     // static function glGetStringi(name:Int, index:UInt) : const GLubyte*;
+    // 
+    // @:native('glGetTexParameterIiv')
     // static function glGetTexParameterIiv(target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetTexParameterIuiv')
     // static function glGetTexParameterIuiv(target:Int, pname:Int, params:GLuint*) : Void;
+    // 
+    // @:native('glGetTransformFeedbackVarying')
     // static function glGetTransformFeedbackVarying(program:UInt, index:UInt, bufSize:Int, length:GLsizei *, size:GLsizei *, type:GLenum *, name:GLchar *) : Void;
+    // 
+    // @:native('glGetUniformuiv')
     // static function glGetUniformuiv(program:UInt, location:Int, params:GLuint*) : Void;
+    // 
+    // @:native('glGetVertexAttribIiv')
     // static function glGetVertexAttribIiv(index:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetVertexAttribIuiv')
     // static function glGetVertexAttribIuiv(index:UInt, pname:Int, params:GLuint*) : Void;
-    // static function glTexParameterIiv(target:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glTexParameterIiv(target:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glTexParameterIiv(target, pname)"); }
+    // 
+    // @:native('glTexParameterIuiv')
     // static function glTexParameterIuiv(target:Int, pname:Int, params:const GLuint*) : Void;
+    // 
+    // @:native('glTransformFeedbackVaryings')
     // static function glTransformFeedbackVaryings(program:UInt, count:Int, varyings:const GLchar *const*, bufferMode:Int) : Void;
+    // 
+    // @:native('glUniform1uiv')
     // static function glUniform1uiv(location:Int, count:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glUniform2uiv')
     // static function glUniform2uiv(location:Int, count:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glUniform3uiv')
     // static function glUniform3uiv(location:Int, count:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glUniform4uiv')
     // static function glUniform4uiv(location:Int, count:Int, value:const GLuint*) : Void;
-    // static function glVertexAttribI1iv(index:UInt, v0:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glVertexAttribI1iv(index:UInt, v0:const GLint*) : Void
+    // { untyped __cpp__("glVertexAttribI1iv(index)"); }
+    // 
+    // @:native('glVertexAttribI1uiv')
     // static function glVertexAttribI1uiv(index:UInt, v0:const GLuint*) : Void;
-    // static function glVertexAttribI2iv(index:UInt, v0:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glVertexAttribI2iv(index:UInt, v0:const GLint*) : Void
+    // { untyped __cpp__("glVertexAttribI2iv(index)"); }
+    // 
+    // @:native('glVertexAttribI2uiv')
     // static function glVertexAttribI2uiv(index:UInt, v0:const GLuint*) : Void;
-    // static function glVertexAttribI3iv(index:UInt, v0:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glVertexAttribI3iv(index:UInt, v0:const GLint*) : Void
+    // { untyped __cpp__("glVertexAttribI3iv(index)"); }
+    // 
+    // @:native('glVertexAttribI3uiv')
     // static function glVertexAttribI3uiv(index:UInt, v0:const GLuint*) : Void;
+    // 
+    // @:native('glVertexAttribI4bv')
     // static function glVertexAttribI4bv(index:UInt, v0:const GLbyte*) : Void;
-    // static function glVertexAttribI4iv(index:UInt, v0:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glVertexAttribI4iv(index:UInt, v0:const GLint*) : Void
+    // { untyped __cpp__("glVertexAttribI4iv(index)"); }
+    // 
+    // @:native('glVertexAttribI4sv')
     // static function glVertexAttribI4sv(index:UInt, v0:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttribI4ubv')
     // static function glVertexAttribI4ubv(index:UInt, v0:const GLubyte*) : Void;
+    // 
+    // @:native('glVertexAttribI4uiv')
     // static function glVertexAttribI4uiv(index:UInt, v0:const GLuint*) : Void;
+    // 
+    // @:native('glVertexAttribI4usv')
     // static function glVertexAttribI4usv(index:UInt, v0:const GLushort*) : Void;
+    // 
+    // @:native('glVertexAttribIPointer')
     // static function glVertexAttribIPointer(index:UInt, size:Int, type:Int, stride:Int, void*pointer:const) : Void;
+    // 
 
 
 //GL 3.1
@@ -2473,6 +3010,7 @@ extern class GL {
 
 
 
+
 //GL 3.2
     inline static var GL_CONTEXT_CORE_PROFILE_BIT                                     = 0x00000001;
     inline static var GL_CONTEXT_COMPATIBILITY_PROFILE_BIT                            = 0x00000002;
@@ -2503,8 +3041,12 @@ extern class GL {
 
 
 
+    // @:native('glGetBufferParameteri64v')
     // static function glGetBufferParameteri64v(target:Int, value:Int, data:GLint64 *) : Void;
+    // 
+    // @:native('glGetInteger64i_v')
     // static function glGetInteger64i_v(pname:Int, index:UInt, data:GLint64 *) : Void;
+    // 
 
 
 //GL 3.3
@@ -2690,9 +3232,15 @@ extern class GL {
 
 
 
+    // @:native('glDebugMessageCallbackAMD')
     // static function glDebugMessageCallbackAMD(callback:GLDEBUGPROCAMD, *userParam:Void) : Void;
+    // 
+    // @:native('glDebugMessageEnableAMD')
     // static function glDebugMessageEnableAMD(category:Int, severity:Int, count:Int, ids:const GLuint*, enabled:Bool) : Void;
+    // 
+    // @:native('glGetDebugMessageLogAMD')
     // static function glGetDebugMessageLogAMD(count:UInt, bufsize:Int, categories:GLenum*, severities:GLuint*, ids:GLuint*, lengths:GLsizei*, message:String) : UInt;
+    // 
 
 
 //GL_AMD_depth_clamp_separate
@@ -2774,8 +3322,12 @@ extern class GL {
 
 
 
+    // @:native('glMultiDrawArraysIndirectAMD')
     // static function glMultiDrawArraysIndirectAMD(mode:Int, *indirect:const void, primcount:Int, stride:Int) : Void;
+    // 
+    // @:native('glMultiDrawElementsIndirectAMD')
     // static function glMultiDrawElementsIndirectAMD(mode:Int, type:Int, *indirect:const void, primcount:Int, stride:Int) : Void;
+    // 
 
 
 //GL_AMD_name_gen_delete
@@ -2794,8 +3346,12 @@ extern class GL {
 
 
 
+    // @:native('glDeleteNamesAMD')
     // static function glDeleteNamesAMD(identifier:Int, num:UInt, names:const GLuint*) : Void;
+    // 
+    // @:native('glGenNamesAMD')
     // static function glGenNamesAMD(identifier:Int, num:UInt, names:GLuint*) : Void;
+    // 
 
 
 //GL_AMD_occlusion_query_event
@@ -2838,15 +3394,33 @@ extern class GL {
 
 
 
+    // @:native('glDeletePerfMonitorsAMD')
     // static function glDeletePerfMonitorsAMD(n:Int, monitors:GLuint*) : Void;
+    // 
+    // @:native('glGenPerfMonitorsAMD')
     // static function glGenPerfMonitorsAMD(n:Int, monitors:GLuint*) : Void;
+    // 
+    // @:native('glGetPerfMonitorCounterDataAMD')
     // static function glGetPerfMonitorCounterDataAMD(monitor:UInt, pname:Int, dataSize:Int, data:GLuint*, *bytesWritten:Int) : Void;
+    // 
+    // @:native('glGetPerfMonitorCounterInfoAMD')
     // static function glGetPerfMonitorCounterInfoAMD(group:UInt, counter:UInt, pname:Int, *data:Void) : Void;
+    // 
+    // @:native('glGetPerfMonitorCounterStringAMD')
     // static function glGetPerfMonitorCounterStringAMD(group:UInt, counter:UInt, bufSize:Int, length:GLsizei*, *counterString:GLchar) : Void;
+    // 
+    // @:native('glGetPerfMonitorCountersAMD')
     // static function glGetPerfMonitorCountersAMD(group:UInt, numCounters:GLint*, *maxActiveCounters:Int, countersSize:Int, *counters:UInt) : Void;
+    // 
+    // @:native('glGetPerfMonitorGroupStringAMD')
     // static function glGetPerfMonitorGroupStringAMD(group:UInt, bufSize:Int, length:GLsizei*, *groupString:GLchar) : Void;
+    // 
+    // @:native('glGetPerfMonitorGroupsAMD')
     // static function glGetPerfMonitorGroupsAMD(numGroups:GLint*, groupsSize:Int, *groups:UInt) : Void;
+    // 
+    // @:native('glSelectPerfMonitorCountersAMD')
     // static function glSelectPerfMonitorCountersAMD(monitor:UInt, enable:Bool, group:UInt, numCounters:Int, counterList:GLuint*) : Void;
+    // 
 
 
 //GL_AMD_pinned_memory
@@ -2882,7 +3456,9 @@ extern class GL {
 
 
 
+    // @:native('glSetMultisamplefvAMD')
     // static function glSetMultisamplefvAMD(pname:Int, index:UInt, val:const GLfloat*) : Void;
+    // 
 
 
 //GL_AMD_seamless_cubemap_per_texture
@@ -3110,7 +3686,9 @@ extern class GL {
 
 
 
+    // @:native('glDrawElementsInstancedANGLE')
     // static function glDrawElementsInstancedANGLE(mode:Int, count:Int, type:Int, *indices:const void, primcount:Int) : Void;
+    // 
 
 
 //GL_ANGLE_pack_reverse_row_order
@@ -3207,13 +3785,27 @@ extern class GL {
 
 
 
+    // @:native('glDeleteQueriesANGLE')
     // static function glDeleteQueriesANGLE(n:Int, ids:const GLuint*) : Void;
+    // 
+    // @:native('glGenQueriesANGLE')
     // static function glGenQueriesANGLE(n:Int, ids:GLuint*) : Void;
+    // 
+    // @:native('glGetQueryObjecti64vANGLE')
     // static function glGetQueryObjecti64vANGLE(id:UInt, pname:Int, params:GLint64*) : Void;
+    // 
+    // @:native('glGetQueryObjectivANGLE')
     // static function glGetQueryObjectivANGLE(id:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetQueryObjectui64vANGLE')
     // static function glGetQueryObjectui64vANGLE(id:UInt, pname:Int, params:GLuint64*) : Void;
+    // 
+    // @:native('glGetQueryObjectuivANGLE')
     // static function glGetQueryObjectuivANGLE(id:UInt, pname:Int, params:GLuint*) : Void;
+    // 
+    // @:native('glGetQueryivANGLE')
     // static function glGetQueryivANGLE(target:Int, pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_ANGLE_translated_shader_source
@@ -3225,7 +3817,9 @@ extern class GL {
 
 
 
+    // @:native('glGetTranslatedShaderSourceANGLE')
     // static function glGetTranslatedShaderSourceANGLE(shader:UInt, bufsize:Int, length:GLsizei*, source:String) : Void;
+    // 
 
 
 //GL_APPLE_aux_depth_stencil
@@ -3267,9 +3861,17 @@ extern class GL {
 
 
 
+    // @:native('glElementPointerAPPLE')
     // static function glElementPointerAPPLE(type:Int, *pointer:const void) : Void;
-    // static function glMultiDrawElementArrayAPPLE(mode:Int, first:const GLint*, *count:const GLsizei, primcount:Int) : Void;
-    // static function glMultiDrawRangeElementArrayAPPLE(mode:Int, start:UInt, end:UInt, first:const GLint*, *count:const GLsizei, primcount:Int) : Void;
+    // 
+    // 
+    // inline static function glMultiDrawElementArrayAPPLE(mode:Int, first:const GLint*, *count:const GLsizei, primcount:Int) : Void
+    // { untyped __cpp__("glMultiDrawElementArrayAPPLE(mode, *count, primcount)"); }
+    // 
+    // 
+    // inline static function glMultiDrawRangeElementArrayAPPLE(mode:Int, start:UInt, end:UInt, first:const GLint*, *count:const GLsizei, primcount:Int) : Void
+    // { untyped __cpp__("glMultiDrawRangeElementArrayAPPLE(mode, start, end, *count, primcount)"); }
+    // 
 
 
 //GL_APPLE_fence
@@ -3300,8 +3902,12 @@ extern class GL {
 
 
 
+    // @:native('glDeleteFencesAPPLE')
     // static function glDeleteFencesAPPLE(n:Int, fences:const GLuint*) : Void;
+    // 
+    // @:native('glGenFencesAPPLE')
     // static function glGenFencesAPPLE(n:Int, fences:GLuint*) : Void;
+    // 
 
 
 //GL_APPLE_float_pixels
@@ -3366,7 +3972,9 @@ extern class GL {
 
 
 
+    // @:native('glGetObjectParameterivAPPLE')
     // static function glGetObjectParameterivAPPLE(objectType:Int, name:UInt, pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_APPLE_pixel_buffer
@@ -3431,8 +4039,12 @@ extern class GL {
 
 
 
+    // @:native('glGetTexParameterPointervAPPLE')
     // static function glGetTexParameterPointervAPPLE(target:Int, pname:Int, **params:Void) : Void;
+    // 
+    // @:native('glTextureRangeAPPLE')
     // static function glTextureRangeAPPLE(target:Int, length:Int, *pointer:Void) : Void;
+    // 
 
 
 //GL_APPLE_transform_hint
@@ -3461,8 +4073,12 @@ extern class GL {
 
 
 
+    // @:native('glDeleteVertexArraysAPPLE')
     // static function glDeleteVertexArraysAPPLE(n:Int, arrays:const GLuint*) : Void;
+    // 
+    // @:native('glGenVertexArraysAPPLE')
     // static function glGenVertexArraysAPPLE(n:Int, arrays:const GLuint*) : Void;
+    // 
 
 
 //GL_APPLE_vertex_array_range
@@ -3482,8 +4098,12 @@ extern class GL {
 
 
 
+    // @:native('glFlushVertexArrayRangeAPPLE')
     // static function glFlushVertexArrayRangeAPPLE(length:Int, *pointer:Void) : Void;
+    // 
+    // @:native('glVertexArrayRangeAPPLE')
     // static function glVertexArrayRangeAPPLE(length:Int, *pointer:Void) : Void;
+    // 
 
 
 //GL_APPLE_vertex_program_evaluators
@@ -3513,10 +4133,18 @@ extern class GL {
 
 
 
+    // @:native('glMapVertexAttrib1dAPPLE')
     // static function glMapVertexAttrib1dAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, stride:Int, order:Int, points:const GLdouble*) : Void;
+    // 
+    // @:native('glMapVertexAttrib1fAPPLE')
     // static function glMapVertexAttrib1fAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, stride:Int, order:Int, points:const GLfloat*) : Void;
+    // 
+    // @:native('glMapVertexAttrib2dAPPLE')
     // static function glMapVertexAttrib2dAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, points:const GLdouble*) : Void;
+    // 
+    // @:native('glMapVertexAttrib2fAPPLE')
     // static function glMapVertexAttrib2fAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, points:const GLfloat*) : Void;
+    // 
 
 
 //GL_APPLE_ycbcr_422
@@ -3563,8 +4191,12 @@ extern class GL {
 
 
 
+    // @:native('glGetShaderPrecisionFormat')
     // static function glGetShaderPrecisionFormat(shadertype:Int, precisiontype:Int, range:GLint*, *precision:Int) : Void;
+    // 
+    // @:native('glShaderBinary')
     // static function glShaderBinary(count:Int, shaders:const GLuint*, binaryformat:Int, void*binary:const, length:Int) : Void;
+    // 
 
 
 //GL_ARB_ES3_1_compatibility
@@ -3625,8 +4257,12 @@ extern class GL {
 
 
 
+    // @:native('glDrawElementsInstancedBaseInstance')
     // static function glDrawElementsInstancedBaseInstance(mode:Int, count:Int, type:Int, *indices:const void, primcount:Int, baseinstance:UInt) : Void;
+    // 
+    // @:native('glDrawElementsInstancedBaseVertexBaseInstance')
     // static function glDrawElementsInstancedBaseVertexBaseInstance(mode:Int, count:Int, type:Int, *indices:const void, primcount:Int, basevertex:Int, baseinstance:UInt) : Void;
+    // 
 
 
 //GL_ARB_bindless_texture
@@ -3647,19 +4283,45 @@ extern class GL {
 
 
 
+    // @:native('glGetVertexAttribLui64vARB')
     // static function glGetVertexAttribLui64vARB(index:UInt, pname:Int, params:GLuint64EXT*) : Void;
+    // 
+    // @:native('glIsImageHandleResidentARB')
     // static function glIsImageHandleResidentARB(handle:cpp.UInt64) : Bool;
+    // 
+    // @:native('glIsTextureHandleResidentARB')
     // static function glIsTextureHandleResidentARB(handle:cpp.UInt64) : Bool;
+    // 
+    // @:native('glMakeImageHandleNonResidentARB')
     // static function glMakeImageHandleNonResidentARB(handle:cpp.UInt64) : Void;
+    // 
+    // @:native('glMakeImageHandleResidentARB')
     // static function glMakeImageHandleResidentARB(handle:cpp.UInt64, access:Int) : Void;
+    // 
+    // @:native('glMakeTextureHandleNonResidentARB')
     // static function glMakeTextureHandleNonResidentARB(handle:cpp.UInt64) : Void;
+    // 
+    // @:native('glMakeTextureHandleResidentARB')
     // static function glMakeTextureHandleResidentARB(handle:cpp.UInt64) : Void;
+    // 
+    // @:native('glProgramUniformHandleui64ARB')
     // static function glProgramUniformHandleui64ARB(program:UInt, location:Int, value:cpp.UInt64) : Void;
+    // 
+    // @:native('glProgramUniformHandleui64vARB')
     // static function glProgramUniformHandleui64vARB(program:UInt, location:Int, count:Int, values:const GLuint64*) : Void;
+    // 
+    // @:native('glUniformHandleui64ARB')
     // static function glUniformHandleui64ARB(location:Int, value:cpp.UInt64) : Void;
+    // 
+    // @:native('glUniformHandleui64vARB')
     // static function glUniformHandleui64vARB(location:Int, count:Int, value:const GLuint64*) : Void;
+    // 
+    // @:native('glVertexAttribL1ui64ARB')
     // static function glVertexAttribL1ui64ARB(index:UInt, x:cpp.UInt64) : Void;
+    // 
+    // @:native('glVertexAttribL1ui64vARB')
     // static function glVertexAttribL1ui64vARB(index:UInt, v:const GLuint64EXT*) : Void;
+    // 
 
 
 //GL_ARB_blend_func_extended
@@ -3674,8 +4336,12 @@ extern class GL {
 
 
 
+    // @:native('glBindFragDataLocationIndexed')
     // static function glBindFragDataLocationIndexed(program:UInt, colorNumber:UInt, index:UInt, name:const GLchar *) : Void;
+    // 
+    // @:native('glGetFragDataIndex')
     // static function glGetFragDataIndex(program:UInt, name:const GLchar *) : Int;
+    // 
 
 
 //GL_ARB_buffer_storage
@@ -3695,8 +4361,12 @@ extern class GL {
 
 
 
+    // @:native('glBufferStorage')
     // static function glBufferStorage(target:Int, size:Int, *data:const void, flags:Int) : Void;
+    // 
+    // @:native('glNamedBufferStorageEXT')
     // static function glNamedBufferStorageEXT(buffer:UInt, size:Int, *data:const void, flags:Int) : Void;
+    // 
 
 
 //GL_ARB_cl_event
@@ -3709,7 +4379,9 @@ extern class GL {
 
 
 
+    // @:native('glCreateSyncFromCLeventARB')
     // static function glCreateSyncFromCLeventARB(context:cl_context, event:cl_event, flags:Int) : GLsync;
+    // 
 
 
 //GL_ARB_clear_buffer_object
@@ -3720,10 +4392,18 @@ extern class GL {
 
 
 
+    // @:native('glClearBufferData')
     // static function glClearBufferData(target:Int, internalformat:Int, format:Int, type:Int, *data:const void) : Void;
+    // 
+    // @:native('glClearBufferSubData')
     // static function glClearBufferSubData(target:Int, internalformat:Int, offset:Int, size:Int, format:Int, type:Int, *data:const void) : Void;
+    // 
+    // @:native('glClearNamedBufferDataEXT')
     // static function glClearNamedBufferDataEXT(buffer:UInt, internalformat:Int, format:Int, type:Int, *data:const void) : Void;
+    // 
+    // @:native('glClearNamedBufferSubDataEXT')
     // static function glClearNamedBufferSubDataEXT(buffer:UInt, internalformat:Int, offset:Int, size:Int, format:Int, type:Int, *data:const void) : Void;
+    // 
 
 
 //GL_ARB_clear_texture
@@ -3735,8 +4415,12 @@ extern class GL {
 
 
 
+    // @:native('glClearTexImage')
     // static function glClearTexImage(texture:UInt, level:Int, format:Int, type:Int, *data:const void) : Void;
+    // 
+    // @:native('glClearTexSubImage')
     // static function glClearTexSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *data:const void) : Void;
+    // 
 
 
 //GL_ARB_clip_control
@@ -3950,9 +4634,15 @@ extern class GL {
 
 
 
+    // @:native('glDebugMessageCallbackARB')
     // static function glDebugMessageCallbackARB(callback:GLDEBUGPROCARB, *userParam:const void) : Void;
+    // 
+    // @:native('glDebugMessageControlARB')
     // static function glDebugMessageControlARB(source:Int, type:Int, severity:Int, count:Int, ids:const GLuint*, enabled:Bool) : Void;
+    // 
+    // @:native('glGetDebugMessageLogARB')
     // static function glGetDebugMessageLogARB(count:UInt, bufSize:Int, sources:GLenum*, types:GLenum*, ids:GLuint*, severities:GLenum*, lengths:GLsizei*, messageLog:String) : UInt;
+    // 
 
 
 //GL_ARB_depth_buffer_float
@@ -4143,60 +4833,171 @@ extern class GL {
 
 
 
+    // @:native('glClearNamedBufferData')
     // static function glClearNamedBufferData(buffer:UInt, internalformat:Int, format:Int, type:Int, *data:const void) : Void;
+    // 
+    // @:native('glClearNamedBufferSubData')
     // static function glClearNamedBufferSubData(buffer:UInt, internalformat:Int, offset:Int, size:Int, format:Int, type:Int, *data:const void) : Void;
+    // 
+    // @:native('glClearNamedFramebufferfv')
     // static function glClearNamedFramebufferfv(framebuffer:UInt, buffer:Int, drawbuffer:Int, value:const GLfloat*) : Void;
-    // static function glClearNamedFramebufferiv(framebuffer:UInt, buffer:Int, drawbuffer:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glClearNamedFramebufferiv(framebuffer:UInt, buffer:Int, drawbuffer:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glClearNamedFramebufferiv(framebuffer, buffer, drawbuffer)"); }
+    // 
+    // @:native('glClearNamedFramebufferuiv')
     // static function glClearNamedFramebufferuiv(framebuffer:UInt, buffer:Int, drawbuffer:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glCompressedTextureSubImage1D')
     // static function glCompressedTextureSubImage1D(texture:UInt, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTextureSubImage2D')
     // static function glCompressedTextureSubImage2D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTextureSubImage3D')
     // static function glCompressedTextureSubImage3D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCreateBuffers')
     // static function glCreateBuffers(n:Int, buffers:GLuint*) : Void;
+    // 
+    // @:native('glCreateFramebuffers')
     // static function glCreateFramebuffers(n:Int, framebuffers:GLuint*) : Void;
+    // 
+    // @:native('glCreateProgramPipelines')
     // static function glCreateProgramPipelines(n:Int, pipelines:GLuint*) : Void;
+    // 
+    // @:native('glCreateQueries')
     // static function glCreateQueries(target:Int, n:Int, ids:GLuint*) : Void;
+    // 
+    // @:native('glCreateRenderbuffers')
     // static function glCreateRenderbuffers(n:Int, renderbuffers:GLuint*) : Void;
+    // 
+    // @:native('glCreateSamplers')
     // static function glCreateSamplers(n:Int, samplers:GLuint*) : Void;
+    // 
+    // @:native('glCreateTextures')
     // static function glCreateTextures(target:Int, n:Int, textures:GLuint*) : Void;
+    // 
+    // @:native('glCreateTransformFeedbacks')
     // static function glCreateTransformFeedbacks(n:Int, ids:GLuint*) : Void;
+    // 
+    // @:native('glCreateVertexArrays')
     // static function glCreateVertexArrays(n:Int, arrays:GLuint*) : Void;
+    // 
+    // @:native('glGetCompressedTextureImage')
     // static function glGetCompressedTextureImage(texture:UInt, level:Int, bufSize:Int, *pixels:Void) : Void;
+    // 
+    // @:native('glGetNamedBufferParameteri64v')
     // static function glGetNamedBufferParameteri64v(buffer:UInt, pname:Int, params:GLint64*) : Void;
+    // 
+    // @:native('glGetNamedBufferParameteriv')
     // static function glGetNamedBufferParameteriv(buffer:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetNamedBufferPointerv')
     // static function glGetNamedBufferPointerv(buffer:UInt, pname:Int, params:void**) : Void;
+    // 
+    // @:native('glGetNamedBufferSubData')
     // static function glGetNamedBufferSubData(buffer:UInt, offset:Int, size:Int, *data:Void) : Void;
+    // 
+    // @:native('glGetNamedFramebufferAttachmentParameteriv')
     // static function glGetNamedFramebufferAttachmentParameteriv(framebuffer:UInt, attachment:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetNamedFramebufferParameteriv')
     // static function glGetNamedFramebufferParameteriv(framebuffer:UInt, pname:Int, param:GLint*) : Void;
+    // 
+    // @:native('glGetNamedRenderbufferParameteriv')
     // static function glGetNamedRenderbufferParameteriv(renderbuffer:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetTextureImage')
     // static function glGetTextureImage(texture:UInt, level:Int, format:Int, type:Int, bufSize:Int, *pixels:Void) : Void;
+    // 
+    // @:native('glGetTextureLevelParameterfv')
     // static function glGetTextureLevelParameterfv(texture:UInt, level:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetTextureLevelParameteriv')
     // static function glGetTextureLevelParameteriv(texture:UInt, level:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetTextureParameterIiv')
     // static function glGetTextureParameterIiv(texture:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetTextureParameterIuiv')
     // static function glGetTextureParameterIuiv(texture:UInt, pname:Int, params:GLuint*) : Void;
+    // 
+    // @:native('glGetTextureParameterfv')
     // static function glGetTextureParameterfv(texture:UInt, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetTextureParameteriv')
     // static function glGetTextureParameteriv(texture:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetTransformFeedbacki64_v')
     // static function glGetTransformFeedbacki64_v(xfb:UInt, pname:Int, index:UInt, param:GLint64*) : Void;
+    // 
+    // @:native('glGetTransformFeedbacki_v')
     // static function glGetTransformFeedbacki_v(xfb:UInt, pname:Int, index:UInt, param:GLint*) : Void;
+    // 
+    // @:native('glGetTransformFeedbackiv')
     // static function glGetTransformFeedbackiv(xfb:UInt, pname:Int, param:GLint*) : Void;
+    // 
+    // @:native('glGetVertexArrayIndexed64iv')
     // static function glGetVertexArrayIndexed64iv(vaobj:UInt, index:UInt, pname:Int, param:GLint64*) : Void;
+    // 
+    // @:native('glGetVertexArrayIndexediv')
     // static function glGetVertexArrayIndexediv(vaobj:UInt, index:UInt, pname:Int, param:GLint*) : Void;
+    // 
+    // @:native('glGetVertexArrayiv')
     // static function glGetVertexArrayiv(vaobj:UInt, pname:Int, param:GLint*) : Void;
+    // 
+    // @:native('glInvalidateNamedFramebufferData')
     // static function glInvalidateNamedFramebufferData(framebuffer:UInt, numAttachments:Int, attachments:const GLenum*) : Void;
+    // 
+    // @:native('glInvalidateNamedFramebufferSubData')
     // static function glInvalidateNamedFramebufferSubData(framebuffer:UInt, numAttachments:Int, attachments:const GLenum*, x:Int, y:Int, width:Int, height:Int) : Void;
+    // 
+    // @:native('glMapNamedBuffer')
     // static function glMapNamedBuffer(buffer:UInt, access:Int) : void *;
+    // 
+    // @:native('glMapNamedBufferRange')
     // static function glMapNamedBufferRange(buffer:UInt, offset:Int, length:Int, access:Int) : void *;
+    // 
+    // @:native('glNamedBufferData')
     // static function glNamedBufferData(buffer:UInt, size:Int, *data:const void, usage:Int) : Void;
+    // 
+    // @:native('glNamedBufferStorage')
     // static function glNamedBufferStorage(buffer:UInt, size:Int, *data:const void, flags:Int) : Void;
+    // 
+    // @:native('glNamedBufferSubData')
     // static function glNamedBufferSubData(buffer:UInt, offset:Int, size:Int, *data:const void) : Void;
+    // 
+    // @:native('glNamedFramebufferDrawBuffers')
     // static function glNamedFramebufferDrawBuffers(framebuffer:UInt, n:Int, bufs:const GLenum*) : Void;
-    // static function glTextureParameterIiv(texture:UInt, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glTextureParameterIiv(texture:UInt, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glTextureParameterIiv(texture, pname)"); }
+    // 
+    // @:native('glTextureParameterIuiv')
     // static function glTextureParameterIuiv(texture:UInt, pname:Int, params:const GLuint*) : Void;
+    // 
+    // @:native('glTextureParameterfv')
     // static function glTextureParameterfv(texture:UInt, pname:Int, param:const GLfloat*) : Void;
-    // static function glTextureParameteriv(texture:UInt, pname:Int, param:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glTextureParameteriv(texture:UInt, pname:Int, param:const GLint*) : Void
+    // { untyped __cpp__("glTextureParameteriv(texture, pname)"); }
+    // 
+    // @:native('glTextureSubImage1D')
     // static function glTextureSubImage1D(texture:UInt, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glTextureSubImage2D')
     // static function glTextureSubImage2D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glTextureSubImage3D')
     // static function glTextureSubImage3D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glVertexArrayVertexBuffers')
     // static function glVertexArrayVertexBuffers(vaobj:UInt, first:UInt, count:Int, buffers:const GLuint*, *offsets:const GLintptr, *strides:const GLsizei) : Void;
+    // 
 
 
 //GL_ARB_draw_buffers
@@ -4224,7 +5025,9 @@ extern class GL {
 
 
 
+    // @:native('glDrawBuffersARB')
     // static function glDrawBuffersARB(n:Int, bufs:const GLenum*) : Void;
+    // 
 
 
 //GL_ARB_draw_buffers_blend
@@ -4257,10 +5060,18 @@ extern class GL {
 
 
 
+    // @:native('glDrawElementsBaseVertex')
     // static function glDrawElementsBaseVertex(mode:Int, count:Int, type:Int, *indices:const void, basevertex:Int) : Void;
+    // 
+    // @:native('glDrawElementsInstancedBaseVertex')
     // static function glDrawElementsInstancedBaseVertex(mode:Int, count:Int, type:Int, *indices:const void, primcount:Int, basevertex:Int) : Void;
+    // 
+    // @:native('glDrawRangeElementsBaseVertex')
     // static function glDrawRangeElementsBaseVertex(mode:Int, start:UInt, end:UInt, count:Int, type:Int, *indices:const void, basevertex:Int) : Void;
+    // 
+    // @:native('glMultiDrawElementsBaseVertex')
     // static function glMultiDrawElementsBaseVertex(mode:Int, count:const GLsizei*, type:Int, *indices:const void *const, primcount:Int, *basevertex:const GLint) : Void;
+    // 
 
 
 //GL_ARB_draw_indirect
@@ -4273,8 +5084,12 @@ extern class GL {
 
 
 
+    // @:native('glDrawArraysIndirect')
     // static function glDrawArraysIndirect(mode:Int, *indirect:const void) : Void;
+    // 
+    // @:native('glDrawElementsIndirect')
     // static function glDrawElementsIndirect(mode:Int, type:Int, *indirect:const void) : Void;
+    // 
 
 
 //GL_ARB_draw_instanced
@@ -4412,8 +5227,12 @@ extern class GL {
 
 
 
+    // @:native('glGetFramebufferParameteriv')
     // static function glGetFramebufferParameteriv(target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetNamedFramebufferParameterivEXT')
     // static function glGetNamedFramebufferParameterivEXT(framebuffer:UInt, pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_ARB_framebuffer_object
@@ -4539,12 +5358,24 @@ extern class GL {
 
 
 
+    // @:native('glDeleteFramebuffers')
     // static function glDeleteFramebuffers(n:Int, framebuffers:const GLuint*) : Void;
+    // 
+    // @:native('glDeleteRenderbuffers')
     // static function glDeleteRenderbuffers(n:Int, renderbuffers:const GLuint*) : Void;
+    // 
+    // @:native('glGenFramebuffers')
     // static function glGenFramebuffers(n:Int, framebuffers:GLuint*) : Void;
+    // 
+    // @:native('glGenRenderbuffers')
     // static function glGenRenderbuffers(n:Int, renderbuffers:GLuint*) : Void;
+    // 
+    // @:native('glGetFramebufferAttachmentParameteriv')
     // static function glGetFramebufferAttachmentParameteriv(target:Int, attachment:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetRenderbufferParameteriv')
     // static function glGetRenderbufferParameteriv(target:Int, pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_ARB_framebuffer_sRGB
@@ -4613,8 +5444,12 @@ extern class GL {
 
 
 
+    // @:native('glGetProgramBinary')
     // static function glGetProgramBinary(program:UInt, bufSize:Int, length:GLsizei*, *binaryFormat:Int, void*binary:) : Void;
+    // 
+    // @:native('glProgramBinary')
     // static function glProgramBinary(program:UInt, binaryFormat:Int, *binary:const void, length:Int) : Void;
+    // 
 
 
 //GL_ARB_get_texture_sub_image
@@ -4625,8 +5460,12 @@ extern class GL {
 
 
 
+    // @:native('glGetCompressedTextureSubImage')
     // static function glGetCompressedTextureSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, bufSize:Int, *pixels:Void) : Void;
+    // 
+    // @:native('glGetTextureSubImage')
     // static function glGetTextureSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, bufSize:Int, *pixels:Void) : Void;
+    // 
 
 
 //GL_ARB_gpu_shader5
@@ -4677,20 +5516,48 @@ extern class GL {
 
 
 
+    // @:native('glGetUniformdv')
     // static function glGetUniformdv(program:UInt, location:Int, params:GLdouble*) : Void;
+    // 
+    // @:native('glUniform1dv')
     // static function glUniform1dv(location:Int, count:Int, value:const GLdouble*) : Void;
+    // 
+    // @:native('glUniform2dv')
     // static function glUniform2dv(location:Int, count:Int, value:const GLdouble*) : Void;
+    // 
+    // @:native('glUniform3dv')
     // static function glUniform3dv(location:Int, count:Int, value:const GLdouble*) : Void;
+    // 
+    // @:native('glUniform4dv')
     // static function glUniform4dv(location:Int, count:Int, value:const GLdouble*) : Void;
+    // 
+    // @:native('glUniformMatrix2dv')
     // static function glUniformMatrix2dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glUniformMatrix2x3dv')
     // static function glUniformMatrix2x3dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glUniformMatrix2x4dv')
     // static function glUniformMatrix2x4dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glUniformMatrix3dv')
     // static function glUniformMatrix3dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glUniformMatrix3x2dv')
     // static function glUniformMatrix3x2dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glUniformMatrix3x4dv')
     // static function glUniformMatrix3x4dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glUniformMatrix4dv')
     // static function glUniformMatrix4dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glUniformMatrix4x2dv')
     // static function glUniformMatrix4x2dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glUniformMatrix4x3dv')
     // static function glUniformMatrix4x3dv(location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
 
 
 //GL_ARB_half_float_pixel
@@ -4830,28 +5697,72 @@ extern class GL {
 
 
 
+    // @:native('glColorSubTable')
     // static function glColorSubTable(target:Int, start:Int, count:Int, format:Int, type:Int, *data:const void) : Void;
+    // 
+    // @:native('glColorTable')
     // static function glColorTable(target:Int, internalformat:Int, width:Int, format:Int, type:Int, *table:const void) : Void;
+    // 
+    // @:native('glColorTableParameterfv')
     // static function glColorTableParameterfv(target:Int, pname:Int, *params:const GLfloat) : Void;
+    // 
+    // @:native('glColorTableParameteriv')
     // static function glColorTableParameteriv(target:Int, pname:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glConvolutionFilter1D')
     // static function glConvolutionFilter1D(target:Int, internalformat:Int, width:Int, format:Int, type:Int, *image:const void) : Void;
+    // 
+    // @:native('glConvolutionFilter2D')
     // static function glConvolutionFilter2D(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, *image:const void) : Void;
+    // 
+    // @:native('glConvolutionParameterfv')
     // static function glConvolutionParameterfv(target:Int, pname:Int, *params:const GLfloat) : Void;
+    // 
+    // @:native('glConvolutionParameteriv')
     // static function glConvolutionParameteriv(target:Int, pname:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glGetColorTable')
     // static function glGetColorTable(target:Int, format:Int, type:Int, *table:Void) : Void;
+    // 
+    // @:native('glGetColorTableParameterfv')
     // static function glGetColorTableParameterfv(target:Int, pname:Int, *params:Float) : Void;
+    // 
+    // @:native('glGetColorTableParameteriv')
     // static function glGetColorTableParameteriv(target:Int, pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glGetConvolutionFilter')
     // static function glGetConvolutionFilter(target:Int, format:Int, type:Int, *image:Void) : Void;
+    // 
+    // @:native('glGetConvolutionParameterfv')
     // static function glGetConvolutionParameterfv(target:Int, pname:Int, *params:Float) : Void;
+    // 
+    // @:native('glGetConvolutionParameteriv')
     // static function glGetConvolutionParameteriv(target:Int, pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glGetHistogram')
     // static function glGetHistogram(target:Int, reset:Bool, format:Int, type:Int, *values:Void) : Void;
+    // 
+    // @:native('glGetHistogramParameterfv')
     // static function glGetHistogramParameterfv(target:Int, pname:Int, *params:Float) : Void;
+    // 
+    // @:native('glGetHistogramParameteriv')
     // static function glGetHistogramParameteriv(target:Int, pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glGetMinmax')
     // static function glGetMinmax(target:Int, reset:Bool, format:Int, types:Int, *values:Void) : Void;
+    // 
+    // @:native('glGetMinmaxParameterfv')
     // static function glGetMinmaxParameterfv(target:Int, pname:Int, *params:Float) : Void;
+    // 
+    // @:native('glGetMinmaxParameteriv')
     // static function glGetMinmaxParameteriv(target:Int, pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glGetSeparableFilter')
     // static function glGetSeparableFilter(target:Int, format:Int, type:Int, *row:Void, *column:Void, *span:Void) : Void;
+    // 
+    // @:native('glSeparableFilter2D')
     // static function glSeparableFilter2D(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, *row:const void, *column:const void) : Void;
+    // 
 
 
 //GL_ARB_indirect_parameters
@@ -4864,8 +5775,12 @@ extern class GL {
 
 
 
+    // @:native('glMultiDrawArraysIndirectCountARB')
     // static function glMultiDrawArraysIndirectCountARB(mode:Int, *indirect:const void, drawcount:Int, maxdrawcount:Int, stride:Int) : Void;
+    // 
+    // @:native('glMultiDrawElementsIndirectCountARB')
     // static function glMultiDrawElementsIndirectCountARB(mode:Int, type:Int, *indirect:const void, drawcount:Int, maxdrawcount:Int, stride:Int) : Void;
+    // 
 
 
 //GL_ARB_instanced_arrays
@@ -4888,6 +5803,7 @@ extern class GL {
 
 
 
+
 //GL_ARB_internalformat_query
     inline static var GL_ARB_internalformat_query                                     = 1;
     inline static var GL_NUM_SAMPLE_COUNTS                                            = 0x9380;
@@ -4897,7 +5813,9 @@ extern class GL {
 
 
 
+    // @:native('glGetInternalformativ')
     // static function glGetInternalformativ(target:Int, internalformat:Int, pname:Int, bufSize:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_ARB_internalformat_query2
@@ -5007,7 +5925,9 @@ extern class GL {
 
 
 
+    // @:native('glGetInternalformati64v')
     // static function glGetInternalformati64v(target:Int, internalformat:Int, pname:Int, bufSize:Int, params:GLint64*) : Void;
+    // 
 
 
 //GL_ARB_invalidate_subdata
@@ -5030,8 +5950,12 @@ extern class GL {
 
 
 
+    // @:native('glInvalidateFramebuffer')
     // static function glInvalidateFramebuffer(target:Int, numAttachments:Int, attachments:const GLenum*) : Void;
+    // 
+    // @:native('glInvalidateSubFramebuffer')
     // static function glInvalidateSubFramebuffer(target:Int, numAttachments:Int, attachments:const GLenum*, x:Int, y:Int, width:Int, height:Int) : Void;
+    // 
 
 
 //GL_ARB_map_buffer_alignment
@@ -5060,7 +5984,9 @@ extern class GL {
 
 
 
+    // @:native('glMapBufferRange')
     // static function glMapBufferRange(target:Int, offset:Int, length:Int, access:Int) : void *;
+    // 
 
 
 //GL_ARB_matrix_palette
@@ -5084,10 +6010,18 @@ extern class GL {
 
 
 
+    // @:native('glMatrixIndexPointerARB')
     // static function glMatrixIndexPointerARB(size:Int, type:Int, stride:Int, *pointer:Void) : Void;
+    // 
+    // @:native('glMatrixIndexubvARB')
     // static function glMatrixIndexubvARB(size:Int, *indices:String) : Void;
+    // 
+    // @:native('glMatrixIndexuivARB')
     // static function glMatrixIndexuivARB(size:Int, *indices:UInt) : Void;
+    // 
+    // @:native('glMatrixIndexusvARB')
     // static function glMatrixIndexusvARB(size:Int, *indices:UInt) : Void;
+    // 
 
 
 //GL_ARB_multi_bind
@@ -5098,12 +6032,24 @@ extern class GL {
 
 
 
+    // @:native('glBindBuffersBase')
     // static function glBindBuffersBase(target:Int, first:UInt, count:Int, buffers:const GLuint*) : Void;
+    // 
+    // @:native('glBindBuffersRange')
     // static function glBindBuffersRange(target:Int, first:UInt, count:Int, buffers:const GLuint*, *offsets:const GLintptr, *sizes:const GLsizeiptr) : Void;
+    // 
+    // @:native('glBindImageTextures')
     // static function glBindImageTextures(first:UInt, count:Int, textures:const GLuint*) : Void;
+    // 
+    // @:native('glBindSamplers')
     // static function glBindSamplers(first:UInt, count:Int, samplers:const GLuint*) : Void;
+    // 
+    // @:native('glBindTextures')
     // static function glBindTextures(first:UInt, count:Int, textures:const GLuint*) : Void;
+    // 
+    // @:native('glBindVertexBuffers')
     // static function glBindVertexBuffers(first:UInt, count:Int, buffers:const GLuint*, *offsets:const GLintptr, *strides:const GLsizei) : Void;
+    // 
 
 
 //GL_ARB_multi_draw_indirect
@@ -5114,8 +6060,12 @@ extern class GL {
 
 
 
+    // @:native('glMultiDrawArraysIndirect')
     // static function glMultiDrawArraysIndirect(mode:Int, *indirect:const void, primcount:Int, stride:Int) : Void;
+    // 
+    // @:native('glMultiDrawElementsIndirect')
     // static function glMultiDrawElementsIndirect(mode:Int, type:Int, *indirect:const void, primcount:Int, stride:Int) : Void;
+    // 
 
 
 //GL_ARB_multisample
@@ -5239,51 +6189,67 @@ extern class GL {
     
     inline static function glMultiTexCoord1dvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord1dvARB(target, (const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord1fvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord1fvARB(target, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord1ivARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord1ivARB(target, (const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord1svARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord1svARB(target, (const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord2dvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord2dvARB(target, (const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord2fvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord2fvARB(target, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord2ivARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord2ivARB(target, (const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord2svARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord2svARB(target, (const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord3dvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord3dvARB(target, (const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord3fvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord3fvARB(target, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord3ivARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord3ivARB(target, (const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord3svARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord3svARB(target, (const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord4dvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord4dvARB(target, (const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord4fvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord4fvARB(target, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord4ivARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord4ivARB(target, (const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glMultiTexCoord4svARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glMultiTexCoord4svARB(target, (const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
 
 
 
@@ -5309,11 +6275,21 @@ extern class GL {
 
 
 
+    // @:native('glDeleteQueriesARB')
     // static function glDeleteQueriesARB(n:Int, ids:const GLuint*) : Void;
+    // 
+    // @:native('glGenQueriesARB')
     // static function glGenQueriesARB(n:Int, ids:GLuint*) : Void;
+    // 
+    // @:native('glGetQueryObjectivARB')
     // static function glGetQueryObjectivARB(id:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetQueryObjectuivARB')
     // static function glGetQueryObjectuivARB(id:UInt, pname:Int, params:GLuint*) : Void;
+    // 
+    // @:native('glGetQueryivARB')
     // static function glGetQueryivARB(target:Int, pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_ARB_occlusion_query2
@@ -5376,7 +6352,9 @@ extern class GL {
 
 
 
+    // @:native('glPointParameterfvARB')
     // static function glPointParameterfvARB(pname:Int, params:const GLfloat*) : Void;
+    // 
 
 
 //GL_ARB_point_sprite
@@ -5455,9 +6433,15 @@ extern class GL {
 
 
 
+    // @:native('glGetProgramInterfaceiv')
     // static function glGetProgramInterfaceiv(program:UInt, programInterface:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetProgramResourceName')
     // static function glGetProgramResourceName(program:UInt, programInterface:Int, index:UInt, bufSize:Int, length:GLsizei*, *name:GLchar) : Void;
+    // 
+    // @:native('glGetProgramResourceiv')
     // static function glGetProgramResourceiv(program:UInt, programInterface:Int, index:UInt, propCount:Int, props:const GLenum*, bufSize:Int, *length:Int, *params:Int) : Void;
+    // 
 
 
 //GL_ARB_provoking_vertex
@@ -5521,38 +6505,69 @@ extern class GL {
     
     inline static function glGetnColorTableARB(target:Int, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, table:BytesData) : Void
       { untyped __cpp__("glGetnColorTableARB(target, format, type, bufSize, (void*)&{1}[0] + {0})", bOffset, table); }
+
     
     inline static function glGetnCompressedTexImageARB(target:Int, lod:Int, bufSize:Int, ?bOffset:Int=0, img:BytesData) : Void
       { untyped __cpp__("glGetnCompressedTexImageARB(target, lod, bufSize, (void*)&{1}[0] + {0})", bOffset, img); }
+
     
     inline static function glGetnConvolutionFilterARB(target:Int, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, image:BytesData) : Void
       { untyped __cpp__("glGetnConvolutionFilterARB(target, format, type, bufSize, (void*)&{1}[0] + {0})", bOffset, image); }
+
     
     inline static function glGetnHistogramARB(target:Int, reset:Bool, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, values:BytesData) : Void
       { untyped __cpp__("glGetnHistogramARB(target, reset, format, type, bufSize, (void*)&{1}[0] + {0})", bOffset, values); }
+
     
     inline static function glGetnMinmaxARB(target:Int, reset:Bool, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, values:BytesData) : Void
       { untyped __cpp__("glGetnMinmaxARB(target, reset, format, type, bufSize, (void*)&{1}[0] + {0})", bOffset, values); }
+
     
     inline static function glGetnTexImageARB(target:Int, level:Int, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, img:BytesData) : Void
       { untyped __cpp__("glGetnTexImageARB(target, level, format, type, bufSize, (void*)&{1}[0] + {0})", bOffset, img); }
+
     
     inline static function glReadnPixelsARB(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, data:BytesData) : Void
       { untyped __cpp__("glReadnPixelsARB(x, y, width, height, format, type, bufSize, (void*)&{1}[0] + {0})", bOffset, data); }
 
-    // static function glGetnMapdvARB(target:Int, query:Int, bufSize:Int, v:GLdouble*) : Void;
-    // static function glGetnMapfvARB(target:Int, query:Int, bufSize:Int, v:GLfloat*) : Void;
-    // static function glGetnMapivARB(target:Int, query:Int, bufSize:Int, v:GLint*) : Void;
-    // static function glGetnPixelMapfvARB(map:Int, bufSize:Int, values:GLfloat*) : Void;
-    // static function glGetnPixelMapuivARB(map:Int, bufSize:Int, values:GLuint*) : Void;
-    // static function glGetnPixelMapusvARB(map:Int, bufSize:Int, values:GLushort*) : Void;
-    // static function glGetnPolygonStippleARB(bufSize:Int, pattern:GLubyte*) : Void;
-    // inline static function glGetnSeparableFilterARB(target:Int, format:Int, type:Int, rowBufSize:Int, ?bOffset:Int=0, row:BytesData, columnBufSize:Int, void*column:, void*span:) : Void
 
+    // @:native('glGetnMapdvARB')
+    // static function glGetnMapdvARB(target:Int, query:Int, bufSize:Int, v:GLdouble*) : Void;
+    // 
+    // @:native('glGetnMapfvARB')
+    // static function glGetnMapfvARB(target:Int, query:Int, bufSize:Int, v:GLfloat*) : Void;
+    // 
+    // @:native('glGetnMapivARB')
+    // static function glGetnMapivARB(target:Int, query:Int, bufSize:Int, v:GLint*) : Void;
+    // 
+    // @:native('glGetnPixelMapfvARB')
+    // static function glGetnPixelMapfvARB(map:Int, bufSize:Int, values:GLfloat*) : Void;
+    // 
+    // @:native('glGetnPixelMapuivARB')
+    // static function glGetnPixelMapuivARB(map:Int, bufSize:Int, values:GLuint*) : Void;
+    // 
+    // @:native('glGetnPixelMapusvARB')
+    // static function glGetnPixelMapusvARB(map:Int, bufSize:Int, values:GLushort*) : Void;
+    // 
+    // @:native('glGetnPolygonStippleARB')
+    // static function glGetnPolygonStippleARB(bufSize:Int, pattern:GLubyte*) : Void;
+    // 
+    // 
+    // inline static function glGetnSeparableFilterARB(target:Int, format:Int, type:Int, rowBufSize:Int, ?bOffset:Int=0, row:BytesData, columnBufSize:Int, void*column:, void*span:) : Void
+    // { untyped __cpp__("glGetnSeparableFilterARB(target, format, type, rowBufSize, (void*)&{1}[0] + {0}, columnBufSize, void*column, void*span)", bOffset, row); }
+    // 
+    // @:native('glGetnUniformdvARB')
     // static function glGetnUniformdvARB(program:UInt, location:Int, bufSize:Int, params:GLdouble*) : Void;
+    // 
+    // @:native('glGetnUniformfvARB')
     // static function glGetnUniformfvARB(program:UInt, location:Int, bufSize:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetnUniformivARB')
     // static function glGetnUniformivARB(program:UInt, location:Int, bufSize:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetnUniformuivARB')
     // static function glGetnUniformuivARB(program:UInt, location:Int, bufSize:Int, params:GLuint*) : Void;
+    // 
 
 
 //GL_ARB_robustness_application_isolation
@@ -5611,16 +6626,38 @@ extern class GL {
 
 
 
+    // @:native('glDeleteSamplers')
     // static function glDeleteSamplers(count:Int, samplers:const GLuint *) : Void;
+    // 
+    // @:native('glGenSamplers')
     // static function glGenSamplers(count:Int, samplers:GLuint*) : Void;
+    // 
+    // @:native('glGetSamplerParameterIiv')
     // static function glGetSamplerParameterIiv(sampler:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetSamplerParameterIuiv')
     // static function glGetSamplerParameterIuiv(sampler:UInt, pname:Int, params:GLuint*) : Void;
+    // 
+    // @:native('glGetSamplerParameterfv')
     // static function glGetSamplerParameterfv(sampler:UInt, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetSamplerParameteriv')
     // static function glGetSamplerParameteriv(sampler:UInt, pname:Int, params:GLint*) : Void;
-    // static function glSamplerParameterIiv(sampler:UInt, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glSamplerParameterIiv(sampler:UInt, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glSamplerParameterIiv(sampler, pname)"); }
+    // 
+    // @:native('glSamplerParameterIuiv')
     // static function glSamplerParameterIuiv(sampler:UInt, pname:Int, params:const GLuint*) : Void;
+    // 
+    // @:native('glSamplerParameterfv')
     // static function glSamplerParameterfv(sampler:UInt, pname:Int, params:const GLfloat*) : Void;
-    // static function glSamplerParameteriv(sampler:UInt, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glSamplerParameteriv(sampler:UInt, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glSamplerParameteriv(sampler, pname)"); }
+    // 
 
 
 //GL_ARB_seamless_cube_map
@@ -5724,45 +6761,127 @@ extern class GL {
 
 
 
+    // @:native('glCreateShaderProgramv')
     // static function glCreateShaderProgramv(type:Int, count:Int, strings:const GLchar * const *) : UInt;
+    // 
+    // @:native('glDeleteProgramPipelines')
     // static function glDeleteProgramPipelines(n:Int, pipelines:const GLuint*) : Void;
+    // 
+    // @:native('glGenProgramPipelines')
     // static function glGenProgramPipelines(n:Int, pipelines:GLuint*) : Void;
+    // 
+    // @:native('glGetProgramPipelineInfoLog')
     // static function glGetProgramPipelineInfoLog(pipeline:UInt, bufSize:Int, length:GLsizei*, *infoLog:GLchar) : Void;
+    // 
+    // @:native('glGetProgramPipelineiv')
     // static function glGetProgramPipelineiv(pipeline:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glProgramUniform1dv')
     // static function glProgramUniform1dv(program:UInt, location:Int, count:Int, value:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramUniform1fv')
     // static function glProgramUniform1fv(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform1iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glProgramUniform1iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glProgramUniform1iv(program, location, count)"); }
+    // 
+    // @:native('glProgramUniform1uiv')
     // static function glProgramUniform1uiv(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glProgramUniform2dv')
     // static function glProgramUniform2dv(program:UInt, location:Int, count:Int, value:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramUniform2fv')
     // static function glProgramUniform2fv(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform2iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glProgramUniform2iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glProgramUniform2iv(program, location, count)"); }
+    // 
+    // @:native('glProgramUniform2uiv')
     // static function glProgramUniform2uiv(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glProgramUniform3dv')
     // static function glProgramUniform3dv(program:UInt, location:Int, count:Int, value:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramUniform3fv')
     // static function glProgramUniform3fv(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform3iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glProgramUniform3iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glProgramUniform3iv(program, location, count)"); }
+    // 
+    // @:native('glProgramUniform3uiv')
     // static function glProgramUniform3uiv(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glProgramUniform4dv')
     // static function glProgramUniform4dv(program:UInt, location:Int, count:Int, value:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramUniform4fv')
     // static function glProgramUniform4fv(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform4iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glProgramUniform4iv(program:UInt, location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glProgramUniform4iv(program, location, count)"); }
+    // 
+    // @:native('glProgramUniform4uiv')
     // static function glProgramUniform4uiv(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix2dv')
     // static function glProgramUniformMatrix2dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix2fv')
     // static function glProgramUniformMatrix2fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix2x3dv')
     // static function glProgramUniformMatrix2x3dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix2x3fv')
     // static function glProgramUniformMatrix2x3fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix2x4dv')
     // static function glProgramUniformMatrix2x4dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix2x4fv')
     // static function glProgramUniformMatrix2x4fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix3dv')
     // static function glProgramUniformMatrix3dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix3fv')
     // static function glProgramUniformMatrix3fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix3x2dv')
     // static function glProgramUniformMatrix3x2dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix3x2fv')
     // static function glProgramUniformMatrix3x2fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix3x4dv')
     // static function glProgramUniformMatrix3x4dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix3x4fv')
     // static function glProgramUniformMatrix3x4fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix4dv')
     // static function glProgramUniformMatrix4dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix4fv')
     // static function glProgramUniformMatrix4fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix4x2dv')
     // static function glProgramUniformMatrix4x2dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix4x2fv')
     // static function glProgramUniformMatrix4x2fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix4x3dv')
     // static function glProgramUniformMatrix4x3dv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix4x3fv')
     // static function glProgramUniformMatrix4x3fv(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
 
 
 //GL_ARB_shader_atomic_counters
@@ -5802,7 +6921,9 @@ extern class GL {
 
 
 
+    // @:native('glGetActiveAtomicCounterBufferiv')
     // static function glGetActiveAtomicCounterBufferiv(program:UInt, bufferIndex:UInt, pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_ARB_shader_bit_encoding
@@ -6021,27 +7142,73 @@ extern class GL {
 
 
 
+    // @:native('glGetActiveUniformARB')
     // static function glGetActiveUniformARB(programObj:UInt, index:UInt, maxLength:Int, length:GLsizei*, *size:Int, *type:Int, *name:GLcharARB) : Void;
+    // 
+    // @:native('glGetAttachedObjectsARB')
     // static function glGetAttachedObjectsARB(containerObj:UInt, maxCount:Int, count:GLsizei*, *obj:UInt) : Void;
+    // 
+    // @:native('glGetInfoLogARB')
     // static function glGetInfoLogARB(obj:UInt, maxLength:Int, length:GLsizei*, *infoLog:GLcharARB) : Void;
+    // 
+    // @:native('glGetObjectParameterfvARB')
     // static function glGetObjectParameterfvARB(obj:UInt, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetObjectParameterivARB')
     // static function glGetObjectParameterivARB(obj:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetShaderSourceARB')
     // static function glGetShaderSourceARB(obj:UInt, maxLength:Int, length:GLsizei*, *source:GLcharARB) : Void;
+    // 
+    // @:native('glGetUniformLocationARB')
     // static function glGetUniformLocationARB(programObj:UInt, name:const GLcharARB*) : Int;
+    // 
+    // @:native('glGetUniformfvARB')
     // static function glGetUniformfvARB(programObj:UInt, location:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetUniformivARB')
     // static function glGetUniformivARB(programObj:UInt, location:Int, params:GLint*) : Void;
+    // 
+    // @:native('glShaderSourceARB')
     // static function glShaderSourceARB(shaderObj:UInt, count:Int, string:const GLcharARB **, *length:const GLint) : Void;
+    // 
+    // @:native('glUniform1fvARB')
     // static function glUniform1fvARB(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform1ivARB(location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glUniform1ivARB(location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glUniform1ivARB(location, count)"); }
+    // 
+    // @:native('glUniform2fvARB')
     // static function glUniform2fvARB(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform2ivARB(location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glUniform2ivARB(location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glUniform2ivARB(location, count)"); }
+    // 
+    // @:native('glUniform3fvARB')
     // static function glUniform3fvARB(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform3ivARB(location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glUniform3ivARB(location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glUniform3ivARB(location, count)"); }
+    // 
+    // @:native('glUniform4fvARB')
     // static function glUniform4fvARB(location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glUniform4ivARB(location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glUniform4ivARB(location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glUniform4ivARB(location, count)"); }
+    // 
+    // @:native('glUniformMatrix2fvARB')
     // static function glUniformMatrix2fvARB(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glUniformMatrix3fvARB')
     // static function glUniformMatrix3fvARB(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glUniformMatrix4fvARB')
     // static function glUniformMatrix4fvARB(location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
 
 
 //GL_ARB_shader_precision
@@ -6116,12 +7283,24 @@ extern class GL {
 
 
 
+    // @:native('glGetActiveSubroutineName')
     // static function glGetActiveSubroutineName(program:UInt, shadertype:Int, index:UInt, bufsize:Int, length:GLsizei*, *name:GLchar) : Void;
+    // 
+    // @:native('glGetActiveSubroutineUniformName')
     // static function glGetActiveSubroutineUniformName(program:UInt, shadertype:Int, index:UInt, bufsize:Int, length:GLsizei*, *name:GLchar) : Void;
+    // 
+    // @:native('glGetActiveSubroutineUniformiv')
     // static function glGetActiveSubroutineUniformiv(program:UInt, shadertype:Int, index:UInt, pname:Int, values:GLint*) : Void;
+    // 
+    // @:native('glGetProgramStageiv')
     // static function glGetProgramStageiv(program:UInt, shadertype:Int, pname:Int, values:GLint*) : Void;
+    // 
+    // @:native('glGetUniformSubroutineuiv')
     // static function glGetUniformSubroutineuiv(shadertype:Int, location:Int, params:GLuint*) : Void;
+    // 
+    // @:native('glUniformSubroutinesuiv')
     // static function glUniformSubroutinesuiv(shadertype:Int, count:Int, indices:const GLuint*) : Void;
+    // 
 
 
 //GL_ARB_shader_texture_image_samples
@@ -6182,10 +7361,18 @@ extern class GL {
 
 
 
+    // @:native('glCompileShaderIncludeARB')
     // static function glCompileShaderIncludeARB(shader:UInt, count:Int, *path:const GLchar* const, *length:const GLint) : Void;
+    // 
+    // @:native('glGetNamedStringARB')
     // static function glGetNamedStringARB(namelen:Int, name:String, bufSize:Int, *stringlen:Int, *string:GLchar) : Void;
+    // 
+    // @:native('glGetNamedStringivARB')
     // static function glGetNamedStringivARB(namelen:Int, name:String, pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glNamedStringARB')
     // static function glNamedStringARB(type:Int, namelen:Int, name:String, stringlen:Int, *string:const GLchar) : Void;
+    // 
 
 
 //GL_ARB_shading_language_packing
@@ -6298,13 +7485,27 @@ extern class GL {
 
 
 
+    // @:native('glClientWaitSync')
     // static function glClientWaitSync(GLsync:GLsync, flags:Int, timeout:cpp.UInt64) : Int;
+    // 
+    // @:native('glDeleteSync')
     // static function glDeleteSync(GLsync:GLsync) : Void;
+    // 
+    // @:native('glFenceSync')
     // static function glFenceSync(condition:Int, flags:Int) : GLsync;
+    // 
+    // @:native('glGetInteger64v')
     // static function glGetInteger64v(pname:Int, params:GLint64*) : Void;
+    // 
+    // @:native('glGetSynciv')
     // static function glGetSynciv(GLsync:GLsync, pname:Int, bufSize:Int, length:GLsizei*, *values:Int) : Void;
+    // 
+    // @:native('glIsSync')
     // static function glIsSync(GLsync:GLsync) : Bool;
+    // 
+    // @:native('glWaitSync')
     // static function glWaitSync(GLsync:GLsync, flags:Int, timeout:cpp.UInt64) : Void;
+    // 
 
 
 //GL_ARB_tessellation_shader
@@ -6350,7 +7551,9 @@ extern class GL {
 
 
 
+    // @:native('glPatchParameterfv')
     // static function glPatchParameterfv(pname:Int, values:const GLfloat*) : Void;
+    // 
 
 
 //GL_ARB_texture_barrier
@@ -6443,13 +7646,27 @@ extern class GL {
 
 
 
+    // @:native('glCompressedTexImage1DARB')
     // static function glCompressedTexImage1DARB(target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTexImage2DARB')
     // static function glCompressedTexImage2DARB(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTexImage3DARB')
     // static function glCompressedTexImage3DARB(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTexSubImage1DARB')
     // static function glCompressedTexSubImage1DARB(target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTexSubImage2DARB')
     // static function glCompressedTexSubImage2DARB(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTexSubImage3DARB')
     // static function glCompressedTexSubImage3DARB(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glGetCompressedTexImageARB')
     // static function glGetCompressedTexImageARB(target:Int, lod:Int, *img:Void) : Void;
+    // 
 
 
 //GL_ARB_texture_compression_bptc
@@ -6686,7 +7903,9 @@ extern class GL {
 
 
 
+    // @:native('glGetMultisamplefv')
     // static function glGetMultisamplefv(pname:Int, index:UInt, val:GLfloat*) : Void;
+    // 
 
 
 //GL_ARB_texture_non_power_of_two
@@ -6881,8 +8100,12 @@ extern class GL {
 
 
 
+    // @:native('glGetQueryObjecti64v')
     // static function glGetQueryObjecti64v(id:UInt, pname:Int, params:GLint64*) : Void;
+    // 
+    // @:native('glGetQueryObjectui64v')
     // static function glGetQueryObjectui64v(id:UInt, pname:Int, params:GLuint64*) : Void;
+    // 
 
 
 //GL_ARB_transform_feedback2
@@ -6912,8 +8135,12 @@ extern class GL {
 
 
 
+    // @:native('glDeleteTransformFeedbacks')
     // static function glDeleteTransformFeedbacks(n:Int, ids:const GLuint*) : Void;
+    // 
+    // @:native('glGenTransformFeedbacks')
     // static function glGenTransformFeedbacks(n:Int, ids:GLuint*) : Void;
+    // 
 
 
 //GL_ARB_transform_feedback3
@@ -6934,7 +8161,9 @@ extern class GL {
 
 
 
+    // @:native('glGetQueryIndexediv')
     // static function glGetQueryIndexediv(target:Int, index:UInt, pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_ARB_transform_feedback_instanced
@@ -6977,10 +8206,18 @@ extern class GL {
 
 
 
+    // @:native('glLoadTransposeMatrixdARB')
     // static function glLoadTransposeMatrixdARB(m:Array<Float>) : Void;
+    // 
+    // @:native('glLoadTransposeMatrixfARB')
     // static function glLoadTransposeMatrixfARB(m:Array<Float>) : Void;
+    // 
+    // @:native('glMultTransposeMatrixdARB')
     // static function glMultTransposeMatrixdARB(m:Array<Float>) : Void;
+    // 
+    // @:native('glMultTransposeMatrixfARB')
     // static function glMultTransposeMatrixfARB(m:Array<Float>) : Void;
+    // 
 
 
 //GL_ARB_uniform_buffer_object
@@ -7036,12 +8273,24 @@ extern class GL {
 
 
 
+    // @:native('glGetActiveUniformBlockName')
     // static function glGetActiveUniformBlockName(program:UInt, uniformBlockIndex:UInt, bufSize:Int, length:GLsizei*, uniformBlockName:String) : Void;
+    // 
+    // @:native('glGetActiveUniformBlockiv')
     // static function glGetActiveUniformBlockiv(program:UInt, uniformBlockIndex:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetActiveUniformName')
     // static function glGetActiveUniformName(program:UInt, uniformIndex:UInt, bufSize:Int, length:GLsizei*, uniformName:String) : Void;
+    // 
+    // @:native('glGetActiveUniformsiv')
     // static function glGetActiveUniformsiv(program:UInt, uniformCount:Int, uniformIndices:const GLuint*, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetIntegeri_v')
     // static function glGetIntegeri_v(target:Int, index:UInt, data:GLint*) : Void;
+    // 
+    // @:native('glGetUniformIndices')
     // static function glGetUniformIndices(program:UInt, uniformCount:Int, uniformNames:const GLchar* const *, uniformIndices:GLuint*) : Void;
+    // 
 
 
 //GL_ARB_vertex_array_bgra
@@ -7069,8 +8318,12 @@ extern class GL {
 
 
 
+    // @:native('glDeleteVertexArrays')
     // static function glDeleteVertexArrays(n:Int, arrays:const GLuint*) : Void;
+    // 
+    // @:native('glGenVertexArrays')
     // static function glGenVertexArrays(n:Int, arrays:GLuint*) : Void;
+    // 
 
 
 //GL_ARB_vertex_attrib_64bit
@@ -7096,11 +8349,22 @@ extern class GL {
     inline static function glVertexAttribLPointer(index:UInt, size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
       { untyped __cpp__("glVertexAttribLPointer(index, size, type, stride, (const void*)&{1}[0] + {0})", bOffset, pointer); }
 
+
+    // @:native('glGetVertexAttribLdv')
     // static function glGetVertexAttribLdv(index:UInt, pname:Int, params:GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttribL1dv')
     // static function glVertexAttribL1dv(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttribL2dv')
     // static function glVertexAttribL2dv(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttribL3dv')
     // static function glVertexAttribL3dv(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttribL4dv')
     // static function glVertexAttribL4dv(index:UInt, v:const GLdouble*) : Void;
+    // 
 
 
 //GL_ARB_vertex_attrib_binding
@@ -7210,15 +8474,33 @@ extern class GL {
 
 
 
+    // @:native('glWeightPointerARB')
     // static function glWeightPointerARB(size:Int, type:Int, stride:Int, *pointer:Void) : Void;
+    // 
+    // @:native('glWeightbvARB')
     // static function glWeightbvARB(size:Int, *weights:String) : Void;
+    // 
+    // @:native('glWeightdvARB')
     // static function glWeightdvARB(size:Int, *weights:Float) : Void;
+    // 
+    // @:native('glWeightfvARB')
     // static function glWeightfvARB(size:Int, *weights:Float) : Void;
+    // 
+    // @:native('glWeightivARB')
     // static function glWeightivARB(size:Int, *weights:Int) : Void;
+    // 
+    // @:native('glWeightsvARB')
     // static function glWeightsvARB(size:Int, *weights:Int) : Void;
+    // 
+    // @:native('glWeightubvARB')
     // static function glWeightubvARB(size:Int, *weights:String) : Void;
+    // 
+    // @:native('glWeightuivARB')
     // static function glWeightuivARB(size:Int, *weights:UInt) : Void;
+    // 
+    // @:native('glWeightusvARB')
     // static function glWeightusvARB(size:Int, *weights:UInt) : Void;
+    // 
 
 
 //GL_ARB_vertex_buffer_object
@@ -7269,14 +8551,30 @@ extern class GL {
 
 
 
+    // @:native('glBufferDataARB')
     // static function glBufferDataARB(target:Int, size:GLsizeiptrARB, *data:const void, usage:Int) : Void;
+    // 
+    // @:native('glBufferSubDataARB')
     // static function glBufferSubDataARB(target:Int, offset:GLintptrARB, size:GLsizeiptrARB, *data:const void) : Void;
+    // 
+    // @:native('glDeleteBuffersARB')
     // static function glDeleteBuffersARB(n:Int, buffers:const GLuint*) : Void;
+    // 
+    // @:native('glGenBuffersARB')
     // static function glGenBuffersARB(n:Int, buffers:GLuint*) : Void;
+    // 
+    // @:native('glGetBufferParameterivARB')
     // static function glGetBufferParameterivARB(target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetBufferPointervARB')
     // static function glGetBufferPointervARB(target:Int, pname:Int, params:void**) : Void;
+    // 
+    // @:native('glGetBufferSubDataARB')
     // static function glGetBufferSubDataARB(target:Int, offset:GLintptrARB, size:GLsizeiptrARB, *data:Void) : Void;
+    // 
+    // @:native('glMapBufferARB')
     // static function glMapBufferARB(target:Int, access:Int) : void *;
+    // 
 
 
 //GL_ARB_vertex_program
@@ -7429,47 +8727,131 @@ extern class GL {
 
 
 
+    // @:native('glDeleteProgramsARB')
     // static function glDeleteProgramsARB(n:Int, programs:const GLuint*) : Void;
+    // 
+    // @:native('glGenProgramsARB')
     // static function glGenProgramsARB(n:Int, programs:GLuint*) : Void;
+    // 
+    // @:native('glGetProgramEnvParameterdvARB')
     // static function glGetProgramEnvParameterdvARB(target:Int, index:UInt, params:GLdouble*) : Void;
+    // 
+    // @:native('glGetProgramEnvParameterfvARB')
     // static function glGetProgramEnvParameterfvARB(target:Int, index:UInt, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetProgramLocalParameterdvARB')
     // static function glGetProgramLocalParameterdvARB(target:Int, index:UInt, params:GLdouble*) : Void;
+    // 
+    // @:native('glGetProgramLocalParameterfvARB')
     // static function glGetProgramLocalParameterfvARB(target:Int, index:UInt, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetProgramStringARB')
     // static function glGetProgramStringARB(target:Int, pname:Int, *string:Void) : Void;
+    // 
+    // @:native('glGetProgramivARB')
     // static function glGetProgramivARB(target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetVertexAttribPointervARB')
     // static function glGetVertexAttribPointervARB(index:UInt, pname:Int, pointer:void**) : Void;
+    // 
+    // @:native('glGetVertexAttribdvARB')
     // static function glGetVertexAttribdvARB(index:UInt, pname:Int, params:GLdouble*) : Void;
+    // 
+    // @:native('glGetVertexAttribfvARB')
     // static function glGetVertexAttribfvARB(index:UInt, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetVertexAttribivARB')
     // static function glGetVertexAttribivARB(index:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glProgramEnvParameter4dvARB')
     // static function glProgramEnvParameter4dvARB(target:Int, index:UInt, params:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramEnvParameter4fvARB')
     // static function glProgramEnvParameter4fvARB(target:Int, index:UInt, params:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramLocalParameter4dvARB')
     // static function glProgramLocalParameter4dvARB(target:Int, index:UInt, params:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramLocalParameter4fvARB')
     // static function glProgramLocalParameter4fvARB(target:Int, index:UInt, params:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramStringARB')
     // static function glProgramStringARB(target:Int, format:Int, len:Int, *string:const void) : Void;
+    // 
+    // @:native('glVertexAttrib1dvARB')
     // static function glVertexAttrib1dvARB(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttrib1fvARB')
     // static function glVertexAttrib1fvARB(index:UInt, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttrib1svARB')
     // static function glVertexAttrib1svARB(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib2dvARB')
     // static function glVertexAttrib2dvARB(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttrib2fvARB')
     // static function glVertexAttrib2fvARB(index:UInt, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttrib2svARB')
     // static function glVertexAttrib2svARB(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib3dvARB')
     // static function glVertexAttrib3dvARB(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttrib3fvARB')
     // static function glVertexAttrib3fvARB(index:UInt, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttrib3svARB')
     // static function glVertexAttrib3svARB(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib4NbvARB')
     // static function glVertexAttrib4NbvARB(index:UInt, v:const GLbyte*) : Void;
-    // static function glVertexAttrib4NivARB(index:UInt, v:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glVertexAttrib4NivARB(index:UInt, v:const GLint*) : Void
+    // { untyped __cpp__("glVertexAttrib4NivARB(index)"); }
+    // 
+    // @:native('glVertexAttrib4NsvARB')
     // static function glVertexAttrib4NsvARB(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib4NubvARB')
     // static function glVertexAttrib4NubvARB(index:UInt, v:const GLubyte*) : Void;
+    // 
+    // @:native('glVertexAttrib4NuivARB')
     // static function glVertexAttrib4NuivARB(index:UInt, v:const GLuint*) : Void;
+    // 
+    // @:native('glVertexAttrib4NusvARB')
     // static function glVertexAttrib4NusvARB(index:UInt, v:const GLushort*) : Void;
+    // 
+    // @:native('glVertexAttrib4bvARB')
     // static function glVertexAttrib4bvARB(index:UInt, v:const GLbyte*) : Void;
+    // 
+    // @:native('glVertexAttrib4dvARB')
     // static function glVertexAttrib4dvARB(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttrib4fvARB')
     // static function glVertexAttrib4fvARB(index:UInt, v:const GLfloat*) : Void;
-    // static function glVertexAttrib4ivARB(index:UInt, v:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glVertexAttrib4ivARB(index:UInt, v:const GLint*) : Void
+    // { untyped __cpp__("glVertexAttrib4ivARB(index)"); }
+    // 
+    // @:native('glVertexAttrib4svARB')
     // static function glVertexAttrib4svARB(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib4ubvARB')
     // static function glVertexAttrib4ubvARB(index:UInt, v:const GLubyte*) : Void;
+    // 
+    // @:native('glVertexAttrib4uivARB')
     // static function glVertexAttrib4uivARB(index:UInt, v:const GLuint*) : Void;
+    // 
+    // @:native('glVertexAttrib4usvARB')
     // static function glVertexAttrib4usvARB(index:UInt, v:const GLushort*) : Void;
+    // 
+    // @:native('glVertexAttribPointerARB')
     // static function glVertexAttribPointerARB(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, *pointer:const void) : Void;
+    // 
 
 
 //GL_ARB_vertex_shader
@@ -7487,9 +8869,15 @@ extern class GL {
 
 
 
+    // @:native('glBindAttribLocationARB')
     // static function glBindAttribLocationARB(programObj:UInt, index:UInt, name:const GLcharARB*) : Void;
+    // 
+    // @:native('glGetActiveAttribARB')
     // static function glGetActiveAttribARB(programObj:UInt, index:UInt, maxLength:Int, length:GLsizei*, *size:Int, *type:Int, *name:GLcharARB) : Void;
+    // 
+    // @:native('glGetAttribLocationARB')
     // static function glGetAttribLocationARB(programObj:UInt, name:const GLcharARB*) : Int;
+    // 
 
 
 //GL_ARB_vertex_type_10f_11f_11f_rev
@@ -7569,25 +8957,63 @@ extern class GL {
 
 
 
+    // @:native('glColorP3uiv')
     // static function glColorP3uiv(type:Int, color:const GLuint*) : Void;
+    // 
+    // @:native('glColorP4uiv')
     // static function glColorP4uiv(type:Int, color:const GLuint*) : Void;
+    // 
+    // @:native('glMultiTexCoordP1uiv')
     // static function glMultiTexCoordP1uiv(texture:Int, type:Int, coords:const GLuint*) : Void;
+    // 
+    // @:native('glMultiTexCoordP2uiv')
     // static function glMultiTexCoordP2uiv(texture:Int, type:Int, coords:const GLuint*) : Void;
+    // 
+    // @:native('glMultiTexCoordP3uiv')
     // static function glMultiTexCoordP3uiv(texture:Int, type:Int, coords:const GLuint*) : Void;
+    // 
+    // @:native('glMultiTexCoordP4uiv')
     // static function glMultiTexCoordP4uiv(texture:Int, type:Int, coords:const GLuint*) : Void;
+    // 
+    // @:native('glNormalP3uiv')
     // static function glNormalP3uiv(type:Int, coords:const GLuint*) : Void;
+    // 
+    // @:native('glSecondaryColorP3uiv')
     // static function glSecondaryColorP3uiv(type:Int, color:const GLuint*) : Void;
+    // 
+    // @:native('glTexCoordP1uiv')
     // static function glTexCoordP1uiv(type:Int, coords:const GLuint*) : Void;
+    // 
+    // @:native('glTexCoordP2uiv')
     // static function glTexCoordP2uiv(type:Int, coords:const GLuint*) : Void;
+    // 
+    // @:native('glTexCoordP3uiv')
     // static function glTexCoordP3uiv(type:Int, coords:const GLuint*) : Void;
+    // 
+    // @:native('glTexCoordP4uiv')
     // static function glTexCoordP4uiv(type:Int, coords:const GLuint*) : Void;
+    // 
+    // @:native('glVertexAttribP1uiv')
     // static function glVertexAttribP1uiv(index:UInt, type:Int, normalized:Bool, value:const GLuint*) : Void;
+    // 
+    // @:native('glVertexAttribP2uiv')
     // static function glVertexAttribP2uiv(index:UInt, type:Int, normalized:Bool, value:const GLuint*) : Void;
+    // 
+    // @:native('glVertexAttribP3uiv')
     // static function glVertexAttribP3uiv(index:UInt, type:Int, normalized:Bool, value:const GLuint*) : Void;
+    // 
+    // @:native('glVertexAttribP4uiv')
     // static function glVertexAttribP4uiv(index:UInt, type:Int, normalized:Bool, value:const GLuint*) : Void;
+    // 
+    // @:native('glVertexP2uiv')
     // static function glVertexP2uiv(type:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glVertexP3uiv')
     // static function glVertexP3uiv(type:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glVertexP4uiv')
     // static function glVertexP4uiv(type:Int, value:const GLuint*) : Void;
+    // 
 
 
 //GL_ARB_viewport_array
@@ -7613,13 +9039,27 @@ extern class GL {
 
 
 
+    // @:native('glDepthRangeArrayv')
     // static function glDepthRangeArrayv(first:UInt, count:Int, v:const GLclampd *) : Void;
+    // 
+    // @:native('glGetDoublei_v')
     // static function glGetDoublei_v(target:Int, index:UInt, data:GLdouble*) : Void;
+    // 
+    // @:native('glGetFloati_v')
     // static function glGetFloati_v(target:Int, index:UInt, data:GLfloat*) : Void;
+    // 
+    // @:native('glScissorArrayv')
     // static function glScissorArrayv(first:UInt, count:Int, v:const GLint *) : Void;
+    // 
+    // @:native('glScissorIndexedv')
     // static function glScissorIndexedv(index:UInt, v:const GLint *) : Void;
+    // 
+    // @:native('glViewportArrayv')
     // static function glViewportArrayv(first:UInt, count:Int, v:const GLfloat *) : Void;
+    // 
+    // @:native('glViewportIndexedfv')
     // static function glViewportIndexedfv(index:UInt, v:const GLfloat *) : Void;
+    // 
 
 
 //GL_ARB_window_pos
@@ -7654,14 +9094,32 @@ extern class GL {
 
 
 
+    // @:native('glWindowPos2dvARB')
     // static function glWindowPos2dvARB(p:const GLdouble*) : Void;
+    // 
+    // @:native('glWindowPos2fvARB')
     // static function glWindowPos2fvARB(p:const GLfloat*) : Void;
-    // static function glWindowPos2ivARB(p:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glWindowPos2ivARB(p:const GLint*) : Void
+    // { untyped __cpp__("glWindowPos2ivARB()"); }
+    // 
+    // @:native('glWindowPos2svARB')
     // static function glWindowPos2svARB(p:const GLshort*) : Void;
+    // 
+    // @:native('glWindowPos3dvARB')
     // static function glWindowPos3dvARB(p:const GLdouble*) : Void;
+    // 
+    // @:native('glWindowPos3fvARB')
     // static function glWindowPos3fvARB(p:const GLfloat*) : Void;
-    // static function glWindowPos3ivARB(p:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glWindowPos3ivARB(p:const GLint*) : Void
+    // { untyped __cpp__("glWindowPos3ivARB()"); }
+    // 
+    // @:native('glWindowPos3svARB')
     // static function glWindowPos3svARB(p:const GLshort*) : Void;
+    // 
 
 
 //GL_ATIX_point_sprites
@@ -7742,7 +9200,9 @@ extern class GL {
 
 
 
+    // @:native('glDrawBuffersATI')
     // static function glDrawBuffersATI(n:Int, bufs:const GLenum*) : Void;
+    // 
 
 
 //GL_ATI_element_array
@@ -7762,7 +9222,9 @@ extern class GL {
 
 
 
+    // @:native('glElementPointerATI')
     // static function glElementPointerATI(type:Int, *pointer:const void) : Void;
+    // 
 
 
 //GL_ATI_envmap_bumpmap
@@ -7781,10 +9243,18 @@ extern class GL {
 
 
 
+    // @:native('glGetTexBumpParameterfvATI')
     // static function glGetTexBumpParameterfvATI(pname:Int, *param:Float) : Void;
+    // 
+    // @:native('glGetTexBumpParameterivATI')
     // static function glGetTexBumpParameterivATI(pname:Int, *param:Int) : Void;
+    // 
+    // @:native('glTexBumpParameterfvATI')
     // static function glTexBumpParameterfvATI(pname:Int, *param:Float) : Void;
+    // 
+    // @:native('glTexBumpParameterivATI')
     // static function glTexBumpParameterivATI(pname:Int, *param:Int) : Void;
+    // 
 
 
 //GL_ATI_fragment_shader
@@ -7888,7 +9358,9 @@ extern class GL {
 
 
 
+    // @:native('glSetFragmentShaderConstantATI')
     // static function glSetFragmentShaderConstantATI(dst:UInt, value:const GLfloat*) : Void;
+    // 
 
 
 //GL_ATI_map_object_buffer
@@ -7902,7 +9374,9 @@ extern class GL {
 
 
 
+    // @:native('glMapObjectBufferATI')
     // static function glMapObjectBufferATI(buffer:UInt) : void *;
+    // 
 
 
 //GL_ATI_meminfo
@@ -8070,14 +9544,30 @@ extern class GL {
 
 
 
+    // @:native('glGetArrayObjectfvATI')
     // static function glGetArrayObjectfvATI(array:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetArrayObjectivATI')
     // static function glGetArrayObjectivATI(array:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetObjectBufferfvATI')
     // static function glGetObjectBufferfvATI(buffer:UInt, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetObjectBufferivATI')
     // static function glGetObjectBufferivATI(buffer:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetVariantArrayObjectfvATI')
     // static function glGetVariantArrayObjectfvATI(id:UInt, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetVariantArrayObjectivATI')
     // static function glGetVariantArrayObjectivATI(id:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glNewObjectBufferATI')
     // static function glNewObjectBufferATI(size:Int, *pointer:const void, usage:Int) : UInt;
+    // 
+    // @:native('glUpdateObjectBufferATI')
     // static function glUpdateObjectBufferATI(buffer:UInt, offset:UInt, size:Int, *pointer:const void, preserve:Int) : Void;
+    // 
 
 
 //GL_ATI_vertex_attrib_array_object
@@ -8091,8 +9581,12 @@ extern class GL {
 
 
 
+    // @:native('glGetVertexAttribArrayObjectfvATI')
     // static function glGetVertexAttribArrayObjectfvATI(index:UInt, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetVertexAttribArrayObjectivATI')
     // static function glGetVertexAttribArrayObjectivATI(index:UInt, pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_ATI_vertex_streams
@@ -8185,27 +9679,69 @@ extern class GL {
 
 
 
+    // @:native('glNormalStream3bvATI')
     // static function glNormalStream3bvATI(stream:Int, *coords:const GLbyte) : Void;
+    // 
+    // @:native('glNormalStream3dvATI')
     // static function glNormalStream3dvATI(stream:Int, *coords:const GLdouble) : Void;
+    // 
+    // @:native('glNormalStream3fvATI')
     // static function glNormalStream3fvATI(stream:Int, *coords:const GLfloat) : Void;
+    // 
+    // @:native('glNormalStream3ivATI')
     // static function glNormalStream3ivATI(stream:Int, *coords:const GLint) : Void;
+    // 
+    // @:native('glNormalStream3svATI')
     // static function glNormalStream3svATI(stream:Int, *coords:const GLshort) : Void;
+    // 
+    // @:native('glVertexStream1dvATI')
     // static function glVertexStream1dvATI(stream:Int, *coords:const GLdouble) : Void;
+    // 
+    // @:native('glVertexStream1fvATI')
     // static function glVertexStream1fvATI(stream:Int, *coords:const GLfloat) : Void;
+    // 
+    // @:native('glVertexStream1ivATI')
     // static function glVertexStream1ivATI(stream:Int, *coords:const GLint) : Void;
+    // 
+    // @:native('glVertexStream1svATI')
     // static function glVertexStream1svATI(stream:Int, *coords:const GLshort) : Void;
+    // 
+    // @:native('glVertexStream2dvATI')
     // static function glVertexStream2dvATI(stream:Int, *coords:const GLdouble) : Void;
+    // 
+    // @:native('glVertexStream2fvATI')
     // static function glVertexStream2fvATI(stream:Int, *coords:const GLfloat) : Void;
+    // 
+    // @:native('glVertexStream2ivATI')
     // static function glVertexStream2ivATI(stream:Int, *coords:const GLint) : Void;
+    // 
+    // @:native('glVertexStream2svATI')
     // static function glVertexStream2svATI(stream:Int, *coords:const GLshort) : Void;
+    // 
+    // @:native('glVertexStream3dvATI')
     // static function glVertexStream3dvATI(stream:Int, *coords:const GLdouble) : Void;
+    // 
+    // @:native('glVertexStream3fvATI')
     // static function glVertexStream3fvATI(stream:Int, *coords:const GLfloat) : Void;
+    // 
+    // @:native('glVertexStream3ivATI')
     // static function glVertexStream3ivATI(stream:Int, *coords:const GLint) : Void;
+    // 
+    // @:native('glVertexStream3svATI')
     // static function glVertexStream3svATI(stream:Int, *coords:const GLshort) : Void;
+    // 
+    // @:native('glVertexStream4dvATI')
     // static function glVertexStream4dvATI(stream:Int, *coords:const GLdouble) : Void;
+    // 
+    // @:native('glVertexStream4fvATI')
     // static function glVertexStream4fvATI(stream:Int, *coords:const GLfloat) : Void;
+    // 
+    // @:native('glVertexStream4ivATI')
     // static function glVertexStream4ivATI(stream:Int, *coords:const GLint) : Void;
+    // 
+    // @:native('glVertexStream4svATI')
     // static function glVertexStream4svATI(stream:Int, *coords:const GLshort) : Void;
+    // 
 
 
 //GL_EXT_422_pixels
@@ -8277,7 +9813,9 @@ extern class GL {
 
 
 
+    // @:native('glGetUniformOffsetEXT')
     // static function glGetUniformOffsetEXT(program:UInt, location:Int) : Int;
+    // 
 
 
 //GL_EXT_blend_color
@@ -8405,7 +9943,9 @@ extern class GL {
 
 
 
+    // @:native('glColorSubTableEXT')
     // static function glColorSubTableEXT(target:Int, start:Int, count:Int, format:Int, type:Int, *data:const void) : Void;
+    // 
 
 
 //GL_EXT_compiled_vertex_array
@@ -8466,15 +10006,34 @@ extern class GL {
 
 
 
+    // @:native('glConvolutionFilter1DEXT')
     // static function glConvolutionFilter1DEXT(target:Int, internalformat:Int, width:Int, format:Int, type:Int, *image:const void) : Void;
+    // 
+    // @:native('glConvolutionFilter2DEXT')
     // static function glConvolutionFilter2DEXT(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, *image:const void) : Void;
+    // 
+    // @:native('glConvolutionParameterfvEXT')
     // static function glConvolutionParameterfvEXT(target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glConvolutionParameterivEXT(target:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glConvolutionParameterivEXT(target:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glConvolutionParameterivEXT(target, pname)"); }
+    // 
+    // @:native('glGetConvolutionFilterEXT')
     // static function glGetConvolutionFilterEXT(target:Int, format:Int, type:Int, *image:Void) : Void;
+    // 
+    // @:native('glGetConvolutionParameterfvEXT')
     // static function glGetConvolutionParameterfvEXT(target:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetConvolutionParameterivEXT')
     // static function glGetConvolutionParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetSeparableFilterEXT')
     // static function glGetSeparableFilterEXT(target:Int, format:Int, type:Int, *row:Void, *column:Void, *span:Void) : Void;
+    // 
+    // @:native('glSeparableFilter2DEXT')
     // static function glSeparableFilter2DEXT(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, *row:const void, *column:const void) : Void;
+    // 
 
 
 //GL_EXT_coordinate_frame
@@ -8499,8 +10058,12 @@ extern class GL {
 
 
 
+    // @:native('glBinormalPointerEXT')
     // static function glBinormalPointerEXT(type:Int, stride:Int, *pointer:Void) : Void;
+    // 
+    // @:native('glTangentPointerEXT')
     // static function glTangentPointerEXT(type:Int, stride:Int, *pointer:Void) : Void;
+    // 
 
 
 //GL_EXT_copy_texture
@@ -8539,8 +10102,12 @@ extern class GL {
 
 
 
+    // @:native('glCullParameterdvEXT')
     // static function glCullParameterdvEXT(pname:Int, params:GLdouble*) : Void;
+    // 
+    // @:native('glCullParameterfvEXT')
     // static function glCullParameterfvEXT(pname:Int, params:GLfloat*) : Void;
+    // 
 
 
 //GL_EXT_debug_label
@@ -8560,7 +10127,9 @@ extern class GL {
 
 
 
+    // @:native('glGetObjectLabelEXT')
     // static function glGetObjectLabelEXT(type:Int, object:UInt, bufSize:Int, length:GLsizei*, *label:GLchar) : Void;
+    // 
 
 
 //GL_EXT_debug_marker
@@ -8881,129 +10450,387 @@ extern class GL {
 
 
 
+    // @:native('glCompressedMultiTexImage1DEXT')
     // static function glCompressedMultiTexImage1DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedMultiTexImage2DEXT')
     // static function glCompressedMultiTexImage2DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedMultiTexImage3DEXT')
     // static function glCompressedMultiTexImage3DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedMultiTexSubImage1DEXT')
     // static function glCompressedMultiTexSubImage1DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedMultiTexSubImage2DEXT')
     // static function glCompressedMultiTexSubImage2DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedMultiTexSubImage3DEXT')
     // static function glCompressedMultiTexSubImage3DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTextureImage1DEXT')
     // static function glCompressedTextureImage1DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTextureImage2DEXT')
     // static function glCompressedTextureImage2DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTextureImage3DEXT')
     // static function glCompressedTextureImage3DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTextureSubImage1DEXT')
     // static function glCompressedTextureSubImage1DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTextureSubImage2DEXT')
     // static function glCompressedTextureSubImage2DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glCompressedTextureSubImage3DEXT')
     // static function glCompressedTextureSubImage3DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, *data:const void) : Void;
+    // 
+    // @:native('glFramebufferDrawBuffersEXT')
     // static function glFramebufferDrawBuffersEXT(framebuffer:UInt, n:Int, bufs:const GLenum*) : Void;
+    // 
+    // @:native('glGetCompressedMultiTexImageEXT')
     // static function glGetCompressedMultiTexImageEXT(texunit:Int, target:Int, level:Int, *img:Void) : Void;
+    // 
+    // @:native('glGetCompressedTextureImageEXT')
     // static function glGetCompressedTextureImageEXT(texture:UInt, target:Int, level:Int, *img:Void) : Void;
+    // 
+    // @:native('glGetDoubleIndexedvEXT')
     // static function glGetDoubleIndexedvEXT(target:Int, index:UInt, params:GLdouble*) : Void;
+    // 
+    // @:native('glGetDoublei_vEXT')
     // static function glGetDoublei_vEXT(pname:Int, index:UInt, params:GLdouble*) : Void;
+    // 
+    // @:native('glGetFloatIndexedvEXT')
     // static function glGetFloatIndexedvEXT(target:Int, index:UInt, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetFloati_vEXT')
     // static function glGetFloati_vEXT(pname:Int, index:UInt, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetFramebufferParameterivEXT')
     // static function glGetFramebufferParameterivEXT(framebuffer:UInt, pname:Int, param:GLint*) : Void;
+    // 
+    // @:native('glGetMultiTexEnvfvEXT')
     // static function glGetMultiTexEnvfvEXT(texunit:Int, target:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetMultiTexEnvivEXT')
     // static function glGetMultiTexEnvivEXT(texunit:Int, target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetMultiTexGendvEXT')
     // static function glGetMultiTexGendvEXT(texunit:Int, coord:Int, pname:Int, params:GLdouble*) : Void;
+    // 
+    // @:native('glGetMultiTexGenfvEXT')
     // static function glGetMultiTexGenfvEXT(texunit:Int, coord:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetMultiTexGenivEXT')
     // static function glGetMultiTexGenivEXT(texunit:Int, coord:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetMultiTexImageEXT')
     // static function glGetMultiTexImageEXT(texunit:Int, target:Int, level:Int, format:Int, type:Int, *pixels:Void) : Void;
+    // 
+    // @:native('glGetMultiTexLevelParameterfvEXT')
     // static function glGetMultiTexLevelParameterfvEXT(texunit:Int, target:Int, level:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetMultiTexLevelParameterivEXT')
     // static function glGetMultiTexLevelParameterivEXT(texunit:Int, target:Int, level:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetMultiTexParameterIivEXT')
     // static function glGetMultiTexParameterIivEXT(texunit:Int, target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetMultiTexParameterIuivEXT')
     // static function glGetMultiTexParameterIuivEXT(texunit:Int, target:Int, pname:Int, params:GLuint*) : Void;
+    // 
+    // @:native('glGetMultiTexParameterfvEXT')
     // static function glGetMultiTexParameterfvEXT(texunit:Int, target:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetMultiTexParameterivEXT')
     // static function glGetMultiTexParameterivEXT(texunit:Int, target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetNamedBufferParameterivEXT')
     // static function glGetNamedBufferParameterivEXT(buffer:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetNamedBufferPointervEXT')
     // static function glGetNamedBufferPointervEXT(buffer:UInt, pname:Int, params:void**) : Void;
+    // 
+    // @:native('glGetNamedBufferSubDataEXT')
     // static function glGetNamedBufferSubDataEXT(buffer:UInt, offset:Int, size:Int, *data:Void) : Void;
+    // 
+    // @:native('glGetNamedFramebufferAttachmentParameterivEXT')
     // static function glGetNamedFramebufferAttachmentParameterivEXT(framebuffer:UInt, attachment:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetNamedProgramLocalParameterIivEXT')
     // static function glGetNamedProgramLocalParameterIivEXT(program:UInt, target:Int, index:UInt, params:GLint*) : Void;
+    // 
+    // @:native('glGetNamedProgramLocalParameterIuivEXT')
     // static function glGetNamedProgramLocalParameterIuivEXT(program:UInt, target:Int, index:UInt, params:GLuint*) : Void;
+    // 
+    // @:native('glGetNamedProgramLocalParameterdvEXT')
     // static function glGetNamedProgramLocalParameterdvEXT(program:UInt, target:Int, index:UInt, params:GLdouble*) : Void;
+    // 
+    // @:native('glGetNamedProgramLocalParameterfvEXT')
     // static function glGetNamedProgramLocalParameterfvEXT(program:UInt, target:Int, index:UInt, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetNamedProgramStringEXT')
     // static function glGetNamedProgramStringEXT(program:UInt, target:Int, pname:Int, *string:Void) : Void;
+    // 
+    // @:native('glGetNamedProgramivEXT')
     // static function glGetNamedProgramivEXT(program:UInt, target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetNamedRenderbufferParameterivEXT')
     // static function glGetNamedRenderbufferParameterivEXT(renderbuffer:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetPointerIndexedvEXT')
     // static function glGetPointerIndexedvEXT(target:Int, index:UInt, params:void**) : Void;
+    // 
+    // @:native('glGetPointeri_vEXT')
     // static function glGetPointeri_vEXT(pname:Int, index:UInt, params:void**) : Void;
+    // 
+    // @:native('glGetTextureImageEXT')
     // static function glGetTextureImageEXT(texture:UInt, target:Int, level:Int, format:Int, type:Int, *pixels:Void) : Void;
+    // 
+    // @:native('glGetTextureLevelParameterfvEXT')
     // static function glGetTextureLevelParameterfvEXT(texture:UInt, target:Int, level:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetTextureLevelParameterivEXT')
     // static function glGetTextureLevelParameterivEXT(texture:UInt, target:Int, level:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetTextureParameterIivEXT')
     // static function glGetTextureParameterIivEXT(texture:UInt, target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetTextureParameterIuivEXT')
     // static function glGetTextureParameterIuivEXT(texture:UInt, target:Int, pname:Int, params:GLuint*) : Void;
+    // 
+    // @:native('glGetTextureParameterfvEXT')
     // static function glGetTextureParameterfvEXT(texture:UInt, target:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetTextureParameterivEXT')
     // static function glGetTextureParameterivEXT(texture:UInt, target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetVertexArrayIntegeri_vEXT')
     // static function glGetVertexArrayIntegeri_vEXT(vaobj:UInt, index:UInt, pname:Int, param:GLint*) : Void;
+    // 
+    // @:native('glGetVertexArrayIntegervEXT')
     // static function glGetVertexArrayIntegervEXT(vaobj:UInt, pname:Int, param:GLint*) : Void;
+    // 
+    // @:native('glGetVertexArrayPointeri_vEXT')
     // static function glGetVertexArrayPointeri_vEXT(vaobj:UInt, index:UInt, pname:Int, param:void**) : Void;
+    // 
+    // @:native('glGetVertexArrayPointervEXT')
     // static function glGetVertexArrayPointervEXT(vaobj:UInt, pname:Int, param:void**) : Void;
+    // 
+    // @:native('glMapNamedBufferEXT')
     // static function glMapNamedBufferEXT(buffer:UInt, access:Int) : void *;
+    // 
+    // @:native('glMapNamedBufferRangeEXT')
     // static function glMapNamedBufferRangeEXT(buffer:UInt, offset:Int, length:Int, access:Int) : void *;
+    // 
+    // @:native('glMatrixLoadTransposedEXT')
     // static function glMatrixLoadTransposedEXT(matrixMode:Int, m:const GLdouble*) : Void;
+    // 
+    // @:native('glMatrixLoadTransposefEXT')
     // static function glMatrixLoadTransposefEXT(matrixMode:Int, m:const GLfloat*) : Void;
+    // 
+    // @:native('glMatrixLoaddEXT')
     // static function glMatrixLoaddEXT(matrixMode:Int, m:const GLdouble*) : Void;
+    // 
+    // @:native('glMatrixLoadfEXT')
     // static function glMatrixLoadfEXT(matrixMode:Int, m:const GLfloat*) : Void;
+    // 
+    // @:native('glMatrixMultTransposedEXT')
     // static function glMatrixMultTransposedEXT(matrixMode:Int, m:const GLdouble*) : Void;
+    // 
+    // @:native('glMatrixMultTransposefEXT')
     // static function glMatrixMultTransposefEXT(matrixMode:Int, m:const GLfloat*) : Void;
+    // 
+    // @:native('glMatrixMultdEXT')
     // static function glMatrixMultdEXT(matrixMode:Int, m:const GLdouble*) : Void;
+    // 
+    // @:native('glMatrixMultfEXT')
     // static function glMatrixMultfEXT(matrixMode:Int, m:const GLfloat*) : Void;
+    // 
+    // @:native('glMultiTexCoordPointerEXT')
     // static function glMultiTexCoordPointerEXT(texunit:Int, size:Int, type:Int, stride:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glMultiTexEnvfvEXT')
     // static function glMultiTexEnvfvEXT(texunit:Int, target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glMultiTexEnvivEXT(texunit:Int, target:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glMultiTexEnvivEXT(texunit:Int, target:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glMultiTexEnvivEXT(texunit, target, pname)"); }
+    // 
+    // @:native('glMultiTexGendvEXT')
     // static function glMultiTexGendvEXT(texunit:Int, coord:Int, pname:Int, params:const GLdouble*) : Void;
+    // 
+    // @:native('glMultiTexGenfvEXT')
     // static function glMultiTexGenfvEXT(texunit:Int, coord:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glMultiTexGenivEXT(texunit:Int, coord:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glMultiTexGenivEXT(texunit:Int, coord:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glMultiTexGenivEXT(texunit, coord, pname)"); }
+    // 
+    // @:native('glMultiTexImage1DEXT')
     // static function glMultiTexImage1DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glMultiTexImage2DEXT')
     // static function glMultiTexImage2DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glMultiTexImage3DEXT')
     // static function glMultiTexImage3DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glMultiTexParameterIivEXT(texunit:Int, target:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glMultiTexParameterIivEXT(texunit:Int, target:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glMultiTexParameterIivEXT(texunit, target, pname)"); }
+    // 
+    // @:native('glMultiTexParameterIuivEXT')
     // static function glMultiTexParameterIuivEXT(texunit:Int, target:Int, pname:Int, params:const GLuint*) : Void;
+    // 
+    // @:native('glMultiTexParameterfvEXT')
     // static function glMultiTexParameterfvEXT(texunit:Int, target:Int, pname:Int, param:const GLfloat*) : Void;
-    // static function glMultiTexParameterivEXT(texunit:Int, target:Int, pname:Int, param:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glMultiTexParameterivEXT(texunit:Int, target:Int, pname:Int, param:const GLint*) : Void
+    // { untyped __cpp__("glMultiTexParameterivEXT(texunit, target, pname)"); }
+    // 
+    // @:native('glMultiTexSubImage1DEXT')
     // static function glMultiTexSubImage1DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glMultiTexSubImage2DEXT')
     // static function glMultiTexSubImage2DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glMultiTexSubImage3DEXT')
     // static function glMultiTexSubImage3DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glNamedBufferDataEXT')
     // static function glNamedBufferDataEXT(buffer:UInt, size:Int, *data:const void, usage:Int) : Void;
+    // 
+    // @:native('glNamedBufferSubDataEXT')
     // static function glNamedBufferSubDataEXT(buffer:UInt, offset:Int, size:Int, *data:const void) : Void;
+    // 
+    // @:native('glNamedProgramLocalParameter4dvEXT')
     // static function glNamedProgramLocalParameter4dvEXT(program:UInt, target:Int, index:UInt, params:const GLdouble*) : Void;
+    // 
+    // @:native('glNamedProgramLocalParameter4fvEXT')
     // static function glNamedProgramLocalParameter4fvEXT(program:UInt, target:Int, index:UInt, params:const GLfloat*) : Void;
-    // static function glNamedProgramLocalParameterI4ivEXT(program:UInt, target:Int, index:UInt, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glNamedProgramLocalParameterI4ivEXT(program:UInt, target:Int, index:UInt, params:const GLint*) : Void
+    // { untyped __cpp__("glNamedProgramLocalParameterI4ivEXT(program, target, index)"); }
+    // 
+    // @:native('glNamedProgramLocalParameterI4uivEXT')
     // static function glNamedProgramLocalParameterI4uivEXT(program:UInt, target:Int, index:UInt, params:const GLuint*) : Void;
+    // 
+    // @:native('glNamedProgramLocalParameters4fvEXT')
     // static function glNamedProgramLocalParameters4fvEXT(program:UInt, target:Int, index:UInt, count:Int, params:const GLfloat*) : Void;
-    // static function glNamedProgramLocalParametersI4ivEXT(program:UInt, target:Int, index:UInt, count:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glNamedProgramLocalParametersI4ivEXT(program:UInt, target:Int, index:UInt, count:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glNamedProgramLocalParametersI4ivEXT(program, target, index, count)"); }
+    // 
+    // @:native('glNamedProgramLocalParametersI4uivEXT')
     // static function glNamedProgramLocalParametersI4uivEXT(program:UInt, target:Int, index:UInt, count:Int, params:const GLuint*) : Void;
+    // 
+    // @:native('glNamedProgramStringEXT')
     // static function glNamedProgramStringEXT(program:UInt, target:Int, format:Int, len:Int, *string:const void) : Void;
+    // 
+    // @:native('glProgramUniform1fvEXT')
     // static function glProgramUniform1fvEXT(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform1ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glProgramUniform1ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glProgramUniform1ivEXT(program, location, count)"); }
+    // 
+    // @:native('glProgramUniform1uivEXT')
     // static function glProgramUniform1uivEXT(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glProgramUniform2fvEXT')
     // static function glProgramUniform2fvEXT(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform2ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glProgramUniform2ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glProgramUniform2ivEXT(program, location, count)"); }
+    // 
+    // @:native('glProgramUniform2uivEXT')
     // static function glProgramUniform2uivEXT(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glProgramUniform3fvEXT')
     // static function glProgramUniform3fvEXT(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform3ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glProgramUniform3ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glProgramUniform3ivEXT(program, location, count)"); }
+    // 
+    // @:native('glProgramUniform3uivEXT')
     // static function glProgramUniform3uivEXT(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glProgramUniform4fvEXT')
     // static function glProgramUniform4fvEXT(program:UInt, location:Int, count:Int, value:const GLfloat*) : Void;
-    // static function glProgramUniform4ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glProgramUniform4ivEXT(program:UInt, location:Int, count:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glProgramUniform4ivEXT(program, location, count)"); }
+    // 
+    // @:native('glProgramUniform4uivEXT')
     // static function glProgramUniform4uivEXT(program:UInt, location:Int, count:Int, value:const GLuint*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix2fvEXT')
     // static function glProgramUniformMatrix2fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix2x3fvEXT')
     // static function glProgramUniformMatrix2x3fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix2x4fvEXT')
     // static function glProgramUniformMatrix2x4fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix3fvEXT')
     // static function glProgramUniformMatrix3fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix3x2fvEXT')
     // static function glProgramUniformMatrix3x2fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix3x4fvEXT')
     // static function glProgramUniformMatrix3x4fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix4fvEXT')
     // static function glProgramUniformMatrix4fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix4x2fvEXT')
     // static function glProgramUniformMatrix4x2fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramUniformMatrix4x3fvEXT')
     // static function glProgramUniformMatrix4x3fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, value:const GLfloat*) : Void;
+    // 
+    // @:native('glTextureImage1DEXT')
     // static function glTextureImage1DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glTextureImage2DEXT')
     // static function glTextureImage2DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glTextureImage3DEXT')
     // static function glTextureImage3DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
-    // static function glTextureParameterIivEXT(texture:UInt, target:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glTextureParameterIivEXT(texture:UInt, target:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glTextureParameterIivEXT(texture, target, pname)"); }
+    // 
+    // @:native('glTextureParameterIuivEXT')
     // static function glTextureParameterIuivEXT(texture:UInt, target:Int, pname:Int, params:const GLuint*) : Void;
+    // 
+    // @:native('glTextureParameterfvEXT')
     // static function glTextureParameterfvEXT(texture:UInt, target:Int, pname:Int, param:const GLfloat*) : Void;
-    // static function glTextureParameterivEXT(texture:UInt, target:Int, pname:Int, param:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glTextureParameterivEXT(texture:UInt, target:Int, pname:Int, param:const GLint*) : Void
+    // { untyped __cpp__("glTextureParameterivEXT(texture, target, pname)"); }
+    // 
+    // @:native('glTextureSubImage1DEXT')
     // static function glTextureSubImage1DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glTextureSubImage2DEXT')
     // static function glTextureSubImage2DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glTextureSubImage3DEXT')
     // static function glTextureSubImage3DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
 
 
 //GL_EXT_draw_buffers2
@@ -9026,8 +10853,12 @@ extern class GL {
 
 
 
+    // @:native('glGetBooleanIndexedvEXT')
     // static function glGetBooleanIndexedvEXT(value:Int, index:UInt, data:GLboolean*) : Void;
+    // 
+    // @:native('glGetIntegerIndexedvEXT')
     // static function glGetIntegerIndexedvEXT(value:Int, index:UInt, data:GLint*) : Void;
+    // 
 
 
 //GL_EXT_draw_instanced
@@ -9041,7 +10872,9 @@ extern class GL {
 
 
 
+    // @:native('glDrawElementsInstancedEXT')
     // static function glDrawElementsInstancedEXT(mode:Int, count:Int, type:Int, *indices:const void, primcount:Int) : Void;
+    // 
 
 
 //GL_EXT_draw_range_elements
@@ -9054,7 +10887,9 @@ extern class GL {
 
 
 
+    // @:native('glDrawRangeElementsEXT')
     // static function glDrawRangeElementsEXT(mode:Int, start:UInt, end:UInt, count:Int, type:Int, *indices:const void) : Void;
+    // 
 
 
 //GL_EXT_fog_coord
@@ -9079,9 +10914,15 @@ extern class GL {
 
 
 
+    // @:native('glFogCoordPointerEXT')
     // static function glFogCoordPointerEXT(type:Int, stride:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glFogCoorddvEXT')
     // static function glFogCoorddvEXT(*coord:const GLdouble) : Void;
+    // 
+    // @:native('glFogCoordfvEXT')
     // static function glFogCoordfvEXT(*coord:const GLfloat) : Void;
+    // 
 
 
 //GL_EXT_fragment_lighting
@@ -9124,18 +10965,44 @@ extern class GL {
 
 
 
+    // @:native('glFragmentLightModelfvEXT')
     // static function glFragmentLightModelfvEXT(pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glFragmentLightModelivEXT')
     // static function glFragmentLightModelivEXT(pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glFragmentLightfvEXT')
     // static function glFragmentLightfvEXT(light:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glFragmentLightivEXT')
     // static function glFragmentLightivEXT(light:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glFragmentMaterialfEXT')
     // static function glFragmentMaterialfEXT(face:Int, pname:Int, param:const GLfloat) : Void;
+    // 
+    // @:native('glFragmentMaterialfvEXT')
     // static function glFragmentMaterialfvEXT(face:Int, pname:Int, params:const GLfloat*) : Void;
+    // 
+    // @:native('glFragmentMaterialiEXT')
     // static function glFragmentMaterialiEXT(face:Int, pname:Int, param:const GLint) : Void;
-    // static function glFragmentMaterialivEXT(face:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glFragmentMaterialivEXT(face:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glFragmentMaterialivEXT(face, pname)"); }
+    // 
+    // @:native('glGetFragmentLightfvEXT')
     // static function glGetFragmentLightfvEXT(light:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetFragmentLightivEXT')
     // static function glGetFragmentLightivEXT(light:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetFragmentMaterialfvEXT')
     // static function glGetFragmentMaterialfvEXT(face:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glGetFragmentMaterialivEXT(face:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glGetFragmentMaterialivEXT(face:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glGetFragmentMaterialivEXT(face, pname)"); }
+    // 
 
 
 //GL_EXT_framebuffer_blit
@@ -9275,12 +11142,24 @@ extern class GL {
 
 
 
+    // @:native('glDeleteFramebuffersEXT')
     // static function glDeleteFramebuffersEXT(n:Int, framebuffers:const GLuint*) : Void;
+    // 
+    // @:native('glDeleteRenderbuffersEXT')
     // static function glDeleteRenderbuffersEXT(n:Int, renderbuffers:const GLuint*) : Void;
+    // 
+    // @:native('glGenFramebuffersEXT')
     // static function glGenFramebuffersEXT(n:Int, framebuffers:GLuint*) : Void;
+    // 
+    // @:native('glGenRenderbuffersEXT')
     // static function glGenRenderbuffersEXT(n:Int, renderbuffers:GLuint*) : Void;
+    // 
+    // @:native('glGetFramebufferAttachmentParameterivEXT')
     // static function glGetFramebufferAttachmentParameterivEXT(target:Int, attachment:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetRenderbufferParameterivEXT')
     // static function glGetRenderbufferParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_EXT_framebuffer_sRGB
@@ -9342,8 +11221,12 @@ extern class GL {
 
 
 
+    // @:native('glProgramEnvParameters4fvEXT')
     // static function glProgramEnvParameters4fvEXT(target:Int, index:UInt, count:Int, params:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramLocalParameters4fvEXT')
     // static function glProgramLocalParameters4fvEXT(target:Int, index:UInt, count:Int, params:const GLfloat*) : Void;
+    // 
 
 
 //GL_EXT_gpu_shader4
@@ -9418,50 +11301,82 @@ extern class GL {
     
     inline static function glVertexAttribI1ivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertexAttribI1ivEXT(index, (const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertexAttribI1uivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertexAttribI1uivEXT(index, (const GLuint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertexAttribI2ivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertexAttribI2ivEXT(index, (const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertexAttribI2uivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertexAttribI2uivEXT(index, (const GLuint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertexAttribI3ivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertexAttribI3ivEXT(index, (const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertexAttribI3uivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertexAttribI3uivEXT(index, (const GLuint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertexAttribI4bvEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertexAttribI4bvEXT(index, (const GLbyte*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertexAttribI4ivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertexAttribI4ivEXT(index, (const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertexAttribI4svEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertexAttribI4svEXT(index, (const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertexAttribI4ubvEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertexAttribI4ubvEXT(index, (const GLubyte*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertexAttribI4uivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertexAttribI4uivEXT(index, (const GLuint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glVertexAttribI4usvEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glVertexAttribI4usvEXT(index, (const GLushort*)&{1}[0] + {0})", bOffset, v); }
 
+
+    // @:native('glBindFragDataLocationEXT')
     // static function glBindFragDataLocationEXT(program:UInt, color:UInt, *name:const GLchar) : Void;
+    // 
+    // @:native('glGetFragDataLocationEXT')
     // static function glGetFragDataLocationEXT(program:UInt, *name:const GLchar) : Int;
+    // 
+    // @:native('glGetUniformuivEXT')
     // static function glGetUniformuivEXT(program:UInt, location:Int, *params:UInt) : Void;
+    // 
+    // @:native('glGetVertexAttribIivEXT')
     // static function glGetVertexAttribIivEXT(index:UInt, pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glGetVertexAttribIuivEXT')
     // static function glGetVertexAttribIuivEXT(index:UInt, pname:Int, *params:UInt) : Void;
+    // 
+    // @:native('glUniform1uivEXT')
     // static function glUniform1uivEXT(location:Int, count:Int, *value:const GLuint) : Void;
+    // 
+    // @:native('glUniform2uivEXT')
     // static function glUniform2uivEXT(location:Int, count:Int, *value:const GLuint) : Void;
+    // 
+    // @:native('glUniform3uivEXT')
     // static function glUniform3uivEXT(location:Int, count:Int, *value:const GLuint) : Void;
+    // 
+    // @:native('glUniform4uivEXT')
     // static function glUniform4uivEXT(location:Int, count:Int, *value:const GLuint) : Void;
+    // 
+    // @:native('glVertexAttribIPointerEXT')
     // static function glVertexAttribIPointerEXT(index:UInt, size:Int, type:Int, stride:Int, *pointer:const void) : Void;
+    // 
 
 
 //GL_EXT_histogram
@@ -9497,12 +11412,24 @@ extern class GL {
 
 
 
+    // @:native('glGetHistogramEXT')
     // static function glGetHistogramEXT(target:Int, reset:Bool, format:Int, type:Int, *values:Void) : Void;
+    // 
+    // @:native('glGetHistogramParameterfvEXT')
     // static function glGetHistogramParameterfvEXT(target:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetHistogramParameterivEXT')
     // static function glGetHistogramParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetMinmaxEXT')
     // static function glGetMinmaxEXT(target:Int, reset:Bool, format:Int, type:Int, *values:Void) : Void;
+    // 
+    // @:native('glGetMinmaxParameterfvEXT')
     // static function glGetMinmaxParameterfvEXT(target:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetMinmaxParameterivEXT')
     // static function glGetMinmaxParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_EXT_index_array_formats
@@ -9597,8 +11524,13 @@ extern class GL {
 
 
 
-    // static function glMultiDrawArraysEXT(mode:Int, first:const GLint*, *count:const GLsizei, primcount:Int) : Void;
+    // 
+    // inline static function glMultiDrawArraysEXT(mode:Int, first:const GLint*, *count:const GLsizei, primcount:Int) : Void
+    // { untyped __cpp__("glMultiDrawArraysEXT(mode, *count, primcount)"); }
+    // 
+    // @:native('glMultiDrawElementsEXT')
     // static function glMultiDrawElementsEXT(mode:Int, count:GLsizei*, type:Int, *indices:const void *const, primcount:Int) : Void;
+    // 
 
 
 //GL_EXT_multisample
@@ -9693,10 +11625,18 @@ extern class GL {
 
 
 
+    // @:native('glColorTableEXT')
     // static function glColorTableEXT(target:Int, internalFormat:Int, width:Int, format:Int, type:Int, *data:const void) : Void;
+    // 
+    // @:native('glGetColorTableEXT')
     // static function glGetColorTableEXT(target:Int, format:Int, type:Int, *data:Void) : Void;
+    // 
+    // @:native('glGetColorTableParameterfvEXT')
     // static function glGetColorTableParameterfvEXT(target:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetColorTableParameterivEXT')
     // static function glGetColorTableParameterivEXT(target:Int, pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_EXT_pixel_buffer_object
@@ -9730,12 +11670,26 @@ extern class GL {
 
 
 
+    // @:native('glGetPixelTransformParameterfvEXT')
     // static function glGetPixelTransformParameterfvEXT(target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glGetPixelTransformParameterivEXT(target:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glGetPixelTransformParameterivEXT(target:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glGetPixelTransformParameterivEXT(target, pname)"); }
+    // 
+    // @:native('glPixelTransformParameterfEXT')
     // static function glPixelTransformParameterfEXT(target:Int, pname:Int, param:const GLfloat) : Void;
+    // 
+    // @:native('glPixelTransformParameterfvEXT')
     // static function glPixelTransformParameterfvEXT(target:Int, pname:Int, params:const GLfloat*) : Void;
+    // 
+    // @:native('glPixelTransformParameteriEXT')
     // static function glPixelTransformParameteriEXT(target:Int, pname:Int, param:const GLint) : Void;
-    // static function glPixelTransformParameterivEXT(target:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glPixelTransformParameterivEXT(target:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glPixelTransformParameterivEXT(target, pname)"); }
+    // 
 
 
 //GL_EXT_pixel_transform_color_table
@@ -9763,7 +11717,9 @@ extern class GL {
 
 
 
+    // @:native('glPointParameterfvEXT')
     // static function glPointParameterfvEXT(pname:Int, params:const GLfloat*) : Void;
+    // 
 
 
 //GL_EXT_polygon_offset
@@ -9851,8 +11807,12 @@ extern class GL {
 
 
 
+    // @:native('glCoverageModulationTableNV')
     // static function glCoverageModulationTableNV(n:Int, v:const GLfloat*) : Void;
+    // 
+    // @:native('glGetCoverageModulationTableNV')
     // static function glGetCoverageModulationTableNV(bufsize:Int, v:GLfloat*) : Void;
+    // 
 
 
 //GL_EXT_rescale_normal
@@ -9923,29 +11883,39 @@ extern class GL {
     
     inline static function glSecondaryColor3bvEXT(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3bvEXT((const GLbyte*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3dvEXT(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3dvEXT((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3fvEXT(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3fvEXT((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3ivEXT(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3ivEXT((const GLint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3svEXT(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3svEXT((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3ubvEXT(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3ubvEXT((const GLubyte*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3uivEXT(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3uivEXT((const GLuint*)&{1}[0] + {0})", bOffset, v); }
+
     
     inline static function glSecondaryColor3usvEXT(?bOffset:Int=0, v:BytesData) : Void
       { untyped __cpp__("glSecondaryColor3usvEXT((const GLushort*)&{1}[0] + {0})", bOffset, v); }
 
+
+    // @:native('glSecondaryColorPointerEXT')
     // static function glSecondaryColorPointerEXT(size:Int, type:Int, stride:Int, *pointer:const void) : Void;
+    // 
 
 
 //GL_EXT_separate_shader_objects
@@ -10150,9 +12120,15 @@ extern class GL {
 
 
 
+    // @:native('glTexSubImage1DEXT')
     // static function glTexSubImage1DEXT(target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glTexSubImage2DEXT')
     // static function glTexSubImage2DEXT(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glTexSubImage3DEXT')
     // static function glTexSubImage3DEXT(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
 
 
 //GL_EXT_texture
@@ -10224,7 +12200,9 @@ extern class GL {
 
 
 
+    // @:native('glTexImage3DEXT')
     // static function glTexImage3DEXT(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
 
 
 //GL_EXT_texture_array
@@ -10499,10 +12477,18 @@ extern class GL {
 
 
 
+    // @:native('glGetTexParameterIivEXT')
     // static function glGetTexParameterIivEXT(target:Int, pname:Int, *params:Int) : Void;
+    // 
+    // @:native('glGetTexParameterIuivEXT')
     // static function glGetTexParameterIuivEXT(target:Int, pname:Int, *params:UInt) : Void;
+    // 
+    // @:native('glTexParameterIivEXT')
     // static function glTexParameterIivEXT(target:Int, pname:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glTexParameterIuivEXT')
     // static function glTexParameterIuivEXT(target:Int, pname:Int, *params:const GLuint) : Void;
+    // 
 
 
 //GL_EXT_texture_lod_bias
@@ -10550,10 +12536,18 @@ extern class GL {
 
 
 
+    // @:native('glAreTexturesResidentEXT')
     // static function glAreTexturesResidentEXT(n:Int, textures:const GLuint*, residences:GLboolean*) : Bool;
+    // 
+    // @:native('glDeleteTexturesEXT')
     // static function glDeleteTexturesEXT(n:Int, textures:const GLuint*) : Void;
+    // 
+    // @:native('glGenTexturesEXT')
     // static function glGenTexturesEXT(n:Int, textures:GLuint*) : Void;
+    // 
+    // @:native('glPrioritizeTexturesEXT')
     // static function glPrioritizeTexturesEXT(n:Int, textures:const GLuint*, priorities:const GLclampf*) : Void;
+    // 
 
 
 //GL_EXT_texture_perturb_normal
@@ -10683,8 +12677,12 @@ extern class GL {
 
 
 
+    // @:native('glGetQueryObjecti64vEXT')
     // static function glGetQueryObjecti64vEXT(id:UInt, pname:Int, *params:cpp.Int64) : Void;
+    // 
+    // @:native('glGetQueryObjectui64vEXT')
     // static function glGetQueryObjectui64vEXT(id:UInt, pname:Int, *params:cpp.UInt64) : Void;
+    // 
 
 
 //GL_EXT_transform_feedback
@@ -10725,8 +12723,12 @@ extern class GL {
 
 
 
+    // @:native('glGetTransformFeedbackVaryingEXT')
     // static function glGetTransformFeedbackVaryingEXT(program:UInt, index:UInt, bufSize:Int, length:GLsizei*, *size:Int, *type:Int, *name:GLchar) : Void;
+    // 
+    // @:native('glTransformFeedbackVaryingsEXT')
     // static function glTransformFeedbackVaryingsEXT(program:UInt, count:Int, varyings:const GLchar * const*, bufferMode:Int) : Void;
+    // 
 
 
 //GL_EXT_vertex_array
@@ -10776,12 +12778,24 @@ extern class GL {
 
 
 
+    // @:native('glColorPointerEXT')
     // static function glColorPointerEXT(size:Int, type:Int, stride:Int, count:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glEdgeFlagPointerEXT')
     // static function glEdgeFlagPointerEXT(stride:Int, count:Int, pointer:const GLboolean*) : Void;
+    // 
+    // @:native('glIndexPointerEXT')
     // static function glIndexPointerEXT(type:Int, stride:Int, count:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glNormalPointerEXT')
     // static function glNormalPointerEXT(type:Int, stride:Int, count:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glTexCoordPointerEXT')
     // static function glTexCoordPointerEXT(size:Int, type:Int, stride:Int, count:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glVertexPointerEXT')
     // static function glVertexPointerEXT(size:Int, type:Int, stride:Int, count:Int, *pointer:const void) : Void;
+    // 
 
 
 //GL_EXT_vertex_array_bgra
@@ -10829,12 +12843,24 @@ extern class GL {
 
 
 
+    // @:native('glGetVertexAttribLdvEXT')
     // static function glGetVertexAttribLdvEXT(index:UInt, pname:Int, params:GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttribL1dvEXT')
     // static function glVertexAttribL1dvEXT(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttribL2dvEXT')
     // static function glVertexAttribL2dvEXT(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttribL3dvEXT')
     // static function glVertexAttribL3dvEXT(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttribL4dvEXT')
     // static function glVertexAttribL4dvEXT(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttribLPointerEXT')
     // static function glVertexAttribLPointerEXT(index:UInt, size:Int, type:Int, stride:Int, *pointer:const void) : Void;
+    // 
 
 
 //GL_EXT_vertex_shader
@@ -11018,27 +13044,69 @@ extern class GL {
 
 
 
+    // @:native('glGetInvariantBooleanvEXT')
     // static function glGetInvariantBooleanvEXT(id:UInt, value:Int, *data:Bool) : Void;
+    // 
+    // @:native('glGetInvariantFloatvEXT')
     // static function glGetInvariantFloatvEXT(id:UInt, value:Int, *data:Float) : Void;
+    // 
+    // @:native('glGetInvariantIntegervEXT')
     // static function glGetInvariantIntegervEXT(id:UInt, value:Int, *data:Int) : Void;
+    // 
+    // @:native('glGetLocalConstantBooleanvEXT')
     // static function glGetLocalConstantBooleanvEXT(id:UInt, value:Int, *data:Bool) : Void;
+    // 
+    // @:native('glGetLocalConstantFloatvEXT')
     // static function glGetLocalConstantFloatvEXT(id:UInt, value:Int, *data:Float) : Void;
+    // 
+    // @:native('glGetLocalConstantIntegervEXT')
     // static function glGetLocalConstantIntegervEXT(id:UInt, value:Int, *data:Int) : Void;
+    // 
+    // @:native('glGetVariantBooleanvEXT')
     // static function glGetVariantBooleanvEXT(id:UInt, value:Int, *data:Bool) : Void;
+    // 
+    // @:native('glGetVariantFloatvEXT')
     // static function glGetVariantFloatvEXT(id:UInt, value:Int, *data:Float) : Void;
+    // 
+    // @:native('glGetVariantIntegervEXT')
     // static function glGetVariantIntegervEXT(id:UInt, value:Int, *data:Int) : Void;
+    // 
+    // @:native('glGetVariantPointervEXT')
     // static function glGetVariantPointervEXT(id:UInt, value:Int, **data:Void) : Void;
+    // 
+    // @:native('glSetInvariantEXT')
     // static function glSetInvariantEXT(id:UInt, type:Int, *addr:Void) : Void;
+    // 
+    // @:native('glSetLocalConstantEXT')
     // static function glSetLocalConstantEXT(id:UInt, type:Int, *addr:Void) : Void;
+    // 
+    // @:native('glVariantPointerEXT')
     // static function glVariantPointerEXT(id:UInt, type:Int, stride:UInt, *addr:Void) : Void;
+    // 
+    // @:native('glVariantbvEXT')
     // static function glVariantbvEXT(id:UInt, *addr:String) : Void;
+    // 
+    // @:native('glVariantdvEXT')
     // static function glVariantdvEXT(id:UInt, *addr:Float) : Void;
+    // 
+    // @:native('glVariantfvEXT')
     // static function glVariantfvEXT(id:UInt, *addr:Float) : Void;
+    // 
+    // @:native('glVariantivEXT')
     // static function glVariantivEXT(id:UInt, *addr:Int) : Void;
+    // 
+    // @:native('glVariantsvEXT')
     // static function glVariantsvEXT(id:UInt, *addr:Int) : Void;
+    // 
+    // @:native('glVariantubvEXT')
     // static function glVariantubvEXT(id:UInt, *addr:String) : Void;
+    // 
+    // @:native('glVariantuivEXT')
     // static function glVariantuivEXT(id:UInt, *addr:UInt) : Void;
+    // 
+    // @:native('glVariantusvEXT')
     // static function glVariantusvEXT(id:UInt, *addr:UInt) : Void;
+    // 
 
 
 //GL_EXT_vertex_weighting
@@ -11065,8 +13133,12 @@ extern class GL {
 
 
 
+    // @:native('glVertexWeightPointerEXT')
     // static function glVertexWeightPointerEXT(size:Int, type:Int, stride:Int, *pointer:Void) : Void;
+    // 
+    // @:native('glVertexWeightfvEXT')
     // static function glVertexWeightfvEXT(weight:GLfloat*) : Void;
+    // 
 
 
 //GL_EXT_x11_sync_object
@@ -11078,7 +13150,9 @@ extern class GL {
 
 
 
+    // @:native('glImportSyncEXT')
     // static function glImportSyncEXT(external_sync_type:Int, external_sync:Int, flags:Int) : GLsync;
+    // 
 
 
 //GL_GREMEDY_frame_terminator
@@ -11102,7 +13176,9 @@ extern class GL {
 
 
 
+    // @:native('glStringMarkerGREMEDY')
     // static function glStringMarkerGREMEDY(len:Int, *string:const void) : Void;
+    // 
 
 
 //GL_HP_convolution_border_modes
@@ -11123,12 +13199,26 @@ extern class GL {
 
 
 
+    // @:native('glGetImageTransformParameterfvHP')
     // static function glGetImageTransformParameterfvHP(target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glGetImageTransformParameterivHP(target:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glGetImageTransformParameterivHP(target:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glGetImageTransformParameterivHP(target, pname)"); }
+    // 
+    // @:native('glImageTransformParameterfHP')
     // static function glImageTransformParameterfHP(target:Int, pname:Int, param:const GLfloat) : Void;
+    // 
+    // @:native('glImageTransformParameterfvHP')
     // static function glImageTransformParameterfvHP(target:Int, pname:Int, params:const GLfloat*) : Void;
+    // 
+    // @:native('glImageTransformParameteriHP')
     // static function glImageTransformParameteriHP(target:Int, pname:Int, param:const GLint) : Void;
-    // static function glImageTransformParameterivHP(target:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glImageTransformParameterivHP(target:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glImageTransformParameterivHP(target, pname)"); }
+    // 
 
 
 //GL_HP_occlusion_test
@@ -11170,8 +13260,12 @@ extern class GL {
 
 
 
+    // @:native('glMultiModeDrawArraysIBM')
     // static function glMultiModeDrawArraysIBM(mode:const GLenum*, *first:const GLint, *count:const GLsizei, primcount:Int, modestride:Int) : Void;
+    // 
+    // @:native('glMultiModeDrawElementsIBM')
     // static function glMultiModeDrawElementsIBM(mode:const GLenum*, *count:const GLsizei, type:Int, *indices:const void *const, primcount:Int, modestride:Int) : Void;
+    // 
 
 
 //GL_IBM_rasterpos_clip
@@ -11232,14 +13326,30 @@ extern class GL {
 
 
 
+    // @:native('glColorPointerListIBM')
     // static function glColorPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
+    // 
+    // @:native('glEdgeFlagPointerListIBM')
     // static function glEdgeFlagPointerListIBM(stride:Int, pointer:const GLboolean **, ptrstride:Int) : Void;
+    // 
+    // @:native('glFogCoordPointerListIBM')
     // static function glFogCoordPointerListIBM(type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
+    // 
+    // @:native('glIndexPointerListIBM')
     // static function glIndexPointerListIBM(type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
+    // 
+    // @:native('glNormalPointerListIBM')
     // static function glNormalPointerListIBM(type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
+    // 
+    // @:native('glSecondaryColorPointerListIBM')
     // static function glSecondaryColorPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
+    // 
+    // @:native('glTexCoordPointerListIBM')
     // static function glTexCoordPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
+    // 
+    // @:native('glVertexPointerListIBM')
     // static function glVertexPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
+    // 
 
 
 //GL_INGR_color_clamp
@@ -11299,7 +13409,9 @@ extern class GL {
 
 
 
+    // @:native('glMapTexture2DINTEL')
     // static function glMapTexture2DINTEL(texture:UInt, level:Int, access:Int, stride:GLint*, *layout:Int) : void *;
+    // 
 
 
 //GL_INTEL_parallel_arrays
@@ -11315,10 +13427,18 @@ extern class GL {
 
 
 
+    // @:native('glColorPointervINTEL')
     // static function glColorPointervINTEL(size:Int, type:Int, pointer:const void**) : Void;
+    // 
+    // @:native('glNormalPointervINTEL')
     // static function glNormalPointervINTEL(type:Int, pointer:const void**) : Void;
+    // 
+    // @:native('glTexCoordPointervINTEL')
     // static function glTexCoordPointervINTEL(size:Int, type:Int, pointer:const void**) : Void;
+    // 
+    // @:native('glVertexPointervINTEL')
     // static function glVertexPointervINTEL(size:Int, type:Int, pointer:const void**) : Void;
+    // 
 
 
 //GL_INTEL_performance_query
@@ -11358,13 +13478,27 @@ extern class GL {
 
 
 
+    // @:native('glCreatePerfQueryINTEL')
     // static function glCreatePerfQueryINTEL(queryId:UInt, queryHandle:GLuint*) : Void;
+    // 
+    // @:native('glGetFirstPerfQueryIdINTEL')
     // static function glGetFirstPerfQueryIdINTEL(queryId:GLuint*) : Void;
+    // 
+    // @:native('glGetNextPerfQueryIdINTEL')
     // static function glGetNextPerfQueryIdINTEL(queryId:UInt, nextQueryId:GLuint*) : Void;
+    // 
+    // @:native('glGetPerfCounterInfoINTEL')
     // static function glGetPerfCounterInfoINTEL(queryId:UInt, counterId:UInt, counterNameLength:UInt, counterName:String, counterDescLength:UInt, *counterDesc:GLchar, *counterOffset:UInt, *counterDataSize:UInt, *counterTypeEnum:UInt, *counterDataTypeEnum:UInt, *rawCounterMaxValue:cpp.UInt64) : Void;
+    // 
+    // @:native('glGetPerfQueryDataINTEL')
     // static function glGetPerfQueryDataINTEL(queryHandle:UInt, flags:UInt, dataSize:Int, *data:Void, *bytesWritten:UInt) : Void;
+    // 
+    // @:native('glGetPerfQueryIdByNameINTEL')
     // static function glGetPerfQueryIdByNameINTEL(queryName:String, *queryId:UInt) : Void;
+    // 
+    // @:native('glGetPerfQueryInfoINTEL')
     // static function glGetPerfQueryInfoINTEL(queryId:UInt, queryNameLength:UInt, queryName:String, *dataSize:UInt, *noCounters:UInt, *noInstances:UInt, *capsMask:UInt) : Void;
+    // 
 
 
 //GL_INTEL_texture_scissor
@@ -11489,13 +13623,27 @@ extern class GL {
 
 
 
+    // @:native('glDebugMessageCallback')
     // static function glDebugMessageCallback(callback:GLDEBUGPROC, *userParam:const void) : Void;
+    // 
+    // @:native('glDebugMessageControl')
     // static function glDebugMessageControl(source:Int, type:Int, severity:Int, count:Int, ids:const GLuint*, enabled:Bool) : Void;
+    // 
+    // @:native('glGetDebugMessageLog')
     // static function glGetDebugMessageLog(count:UInt, bufSize:Int, sources:GLenum*, types:GLenum*, ids:GLuint*, severities:GLenum*, lengths:GLsizei*, messageLog:String) : UInt;
+    // 
+    // @:native('glGetObjectLabel')
     // static function glGetObjectLabel(identifier:Int, name:UInt, bufSize:Int, length:GLsizei*, *label:GLchar) : Void;
+    // 
+    // @:native('glGetObjectPtrLabel')
     // static function glGetObjectPtrLabel(*ptr:const void, bufSize:Int, length:GLsizei*, *label:GLchar) : Void;
+    // 
+    // @:native('glObjectPtrLabel')
     // static function glObjectPtrLabel(*ptr:const void, length:Int, label:String) : Void;
+    // 
+    // @:native('glPushDebugGroup')
     // static function glPushDebugGroup(source:Int, id:UInt, length:Int, message:const GLchar *) : Void;
+    // 
 
 
 //GL_KHR_no_error
@@ -11535,10 +13683,18 @@ extern class GL {
 
 
 
+    // @:native('glGetnUniformfv')
     // static function glGetnUniformfv(program:UInt, location:Int, bufSize:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetnUniformiv')
     // static function glGetnUniformiv(program:UInt, location:Int, bufSize:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetnUniformuiv')
     // static function glGetnUniformuiv(program:UInt, location:Int, bufSize:Int, params:GLuint*) : Void;
+    // 
+    // @:native('glReadnPixels')
     // static function glReadnPixels(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, bufSize:Int, *data:Void) : Void;
+    // 
 
 
 //GL_KHR_texture_compression_astc_hdr
@@ -11699,19 +13855,48 @@ extern class GL {
 
 
 
+    // @:native('glWindowPos2dvMESA')
     // static function glWindowPos2dvMESA(p:const GLdouble*) : Void;
+    // 
+    // @:native('glWindowPos2fvMESA')
     // static function glWindowPos2fvMESA(p:const GLfloat*) : Void;
-    // static function glWindowPos2ivMESA(p:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glWindowPos2ivMESA(p:const GLint*) : Void
+    // { untyped __cpp__("glWindowPos2ivMESA()"); }
+    // 
+    // @:native('glWindowPos2svMESA')
     // static function glWindowPos2svMESA(p:const GLshort*) : Void;
+    // 
+    // @:native('glWindowPos3dvMESA')
     // static function glWindowPos3dvMESA(p:const GLdouble*) : Void;
+    // 
+    // @:native('glWindowPos3fvMESA')
     // static function glWindowPos3fvMESA(p:const GLfloat*) : Void;
-    // static function glWindowPos3ivMESA(p:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glWindowPos3ivMESA(p:const GLint*) : Void
+    // { untyped __cpp__("glWindowPos3ivMESA()"); }
+    // 
+    // @:native('glWindowPos3svMESA')
     // static function glWindowPos3svMESA(p:const GLshort*) : Void;
+    // 
+    // @:native('glWindowPos4dMESA')
     // static function glWindowPos4dMESA(x:Float, y:Float, z:Float, GLdouble:) : Void;
+    // 
+    // @:native('glWindowPos4dvMESA')
     // static function glWindowPos4dvMESA(p:const GLdouble*) : Void;
+    // 
+    // @:native('glWindowPos4fvMESA')
     // static function glWindowPos4fvMESA(p:const GLfloat*) : Void;
-    // static function glWindowPos4ivMESA(p:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glWindowPos4ivMESA(p:const GLint*) : Void
+    // { untyped __cpp__("glWindowPos4ivMESA()"); }
+    // 
+    // @:native('glWindowPos4svMESA')
     // static function glWindowPos4svMESA(p:const GLshort*) : Void;
+    // 
 
 
 //GL_MESA_ycbcr_texture
@@ -11766,8 +13951,12 @@ extern class GL {
 
 
 
+    // @:native('glMultiDrawArraysIndirectBindlessNV')
     // static function glMultiDrawArraysIndirectBindlessNV(mode:Int, *indirect:const void, drawCount:Int, stride:Int, vertexBufferCount:Int) : Void;
+    // 
+    // @:native('glMultiDrawElementsIndirectBindlessNV')
     // static function glMultiDrawElementsIndirectBindlessNV(mode:Int, type:Int, *indirect:const void, drawCount:Int, stride:Int, vertexBufferCount:Int) : Void;
+    // 
 
 
 //GL_NV_bindless_multi_draw_indirect_count
@@ -11778,8 +13967,12 @@ extern class GL {
 
 
 
+    // @:native('glMultiDrawArraysIndirectBindlessCountNV')
     // static function glMultiDrawArraysIndirectBindlessCountNV(mode:Int, *indirect:const void, drawCount:Int, maxDrawCount:Int, stride:Int, vertexBufferCount:Int) : Void;
+    // 
+    // @:native('glMultiDrawElementsIndirectBindlessCountNV')
     // static function glMultiDrawElementsIndirectBindlessCountNV(mode:Int, type:Int, *indirect:const void, drawCount:Int, maxDrawCount:Int, stride:Int, vertexBufferCount:Int) : Void;
+    // 
 
 
 //GL_NV_bindless_texture
@@ -11799,16 +13992,36 @@ extern class GL {
 
 
 
+    // @:native('glIsImageHandleResidentNV')
     // static function glIsImageHandleResidentNV(handle:cpp.UInt64) : Bool;
+    // 
+    // @:native('glIsTextureHandleResidentNV')
     // static function glIsTextureHandleResidentNV(handle:cpp.UInt64) : Bool;
+    // 
+    // @:native('glMakeImageHandleNonResidentNV')
     // static function glMakeImageHandleNonResidentNV(handle:cpp.UInt64) : Void;
+    // 
+    // @:native('glMakeImageHandleResidentNV')
     // static function glMakeImageHandleResidentNV(handle:cpp.UInt64, access:Int) : Void;
+    // 
+    // @:native('glMakeTextureHandleNonResidentNV')
     // static function glMakeTextureHandleNonResidentNV(handle:cpp.UInt64) : Void;
+    // 
+    // @:native('glMakeTextureHandleResidentNV')
     // static function glMakeTextureHandleResidentNV(handle:cpp.UInt64) : Void;
+    // 
+    // @:native('glProgramUniformHandleui64NV')
     // static function glProgramUniformHandleui64NV(program:UInt, location:Int, value:cpp.UInt64) : Void;
+    // 
+    // @:native('glProgramUniformHandleui64vNV')
     // static function glProgramUniformHandleui64vNV(program:UInt, location:Int, count:Int, values:const GLuint64*) : Void;
+    // 
+    // @:native('glUniformHandleui64NV')
     // static function glUniformHandleui64NV(location:Int, value:cpp.UInt64) : Void;
+    // 
+    // @:native('glUniformHandleui64vNV')
     // static function glUniformHandleui64vNV(location:Int, count:Int, value:const GLuint64*) : Void;
+    // 
 
 
 //GL_NV_blend_equation_advanced
@@ -12080,14 +14293,31 @@ extern class GL {
 
 
 
+    // @:native('glGetMapAttribParameterfvNV')
     // static function glGetMapAttribParameterfvNV(target:Int, index:UInt, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetMapAttribParameterivNV')
     // static function glGetMapAttribParameterivNV(target:Int, index:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetMapControlPointsNV')
     // static function glGetMapControlPointsNV(target:Int, index:UInt, type:Int, ustride:Int, vstride:Int, packed:Bool, *points:Void) : Void;
+    // 
+    // @:native('glGetMapParameterfvNV')
     // static function glGetMapParameterfvNV(target:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetMapParameterivNV')
     // static function glGetMapParameterivNV(target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glMapControlPointsNV')
     // static function glMapControlPointsNV(target:Int, index:UInt, type:Int, ustride:Int, vstride:Int, uorder:Int, vorder:Int, packed:Bool, *points:const void) : Void;
+    // 
+    // @:native('glMapParameterfvNV')
     // static function glMapParameterfvNV(target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glMapParameterivNV(target:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glMapParameterivNV(target:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glMapParameterivNV(target, pname)"); }
+    // 
 
 
 //GL_NV_explicit_multisample
@@ -12114,7 +14344,9 @@ extern class GL {
 
 
 
+    // @:native('glGetMultisamplefvNV')
     // static function glGetMultisamplefvNV(pname:Int, index:UInt, val:GLfloat*) : Void;
+    // 
 
 
 //GL_NV_fence
@@ -12140,9 +14372,15 @@ extern class GL {
 
 
 
+    // @:native('glDeleteFencesNV')
     // static function glDeleteFencesNV(n:Int, fences:const GLuint*) : Void;
+    // 
+    // @:native('glGenFencesNV')
     // static function glGenFencesNV(n:Int, fences:GLuint*) : Void;
+    // 
+    // @:native('glGetFenceivNV')
     // static function glGetFenceivNV(fence:UInt, pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_NV_fill_rectangle
@@ -12223,12 +14461,24 @@ extern class GL {
 
 
 
+    // @:native('glGetProgramNamedParameterdvNV')
     // static function glGetProgramNamedParameterdvNV(id:UInt, len:Int, name:const GLubyte*, *params:Float) : Void;
+    // 
+    // @:native('glGetProgramNamedParameterfvNV')
     // static function glGetProgramNamedParameterfvNV(id:UInt, len:Int, name:const GLubyte*, *params:Float) : Void;
+    // 
+    // @:native('glProgramNamedParameter4dNV')
     // static function glProgramNamedParameter4dNV(id:UInt, len:Int, name:const GLubyte*, x:Float, y:Float, z:Float, w:Float) : Void;
+    // 
+    // @:native('glProgramNamedParameter4dvNV')
     // static function glProgramNamedParameter4dvNV(id:UInt, len:Int, name:const GLubyte*, v:Array<const GLdouble>) : Void;
+    // 
+    // @:native('glProgramNamedParameter4fNV')
     // static function glProgramNamedParameter4fNV(id:UInt, len:Int, name:const GLubyte*, x:Float, y:Float, z:Float, w:Float) : Void;
+    // 
+    // @:native('glProgramNamedParameter4fvNV')
     // static function glProgramNamedParameter4fvNV(id:UInt, len:Int, name:const GLubyte*, v:Array<const GLfloat>) : Void;
+    // 
 
 
 //GL_NV_fragment_program2
@@ -12367,14 +14617,30 @@ extern class GL {
 
 
 
+    // @:native('glProgramEnvParameterI4ivNV')
     // static function glProgramEnvParameterI4ivNV(target:Int, index:UInt, *params:const GLint) : Void;
+    // 
+    // @:native('glProgramEnvParameterI4uivNV')
     // static function glProgramEnvParameterI4uivNV(target:Int, index:UInt, *params:const GLuint) : Void;
+    // 
+    // @:native('glProgramEnvParametersI4ivNV')
     // static function glProgramEnvParametersI4ivNV(target:Int, index:UInt, count:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glProgramEnvParametersI4uivNV')
     // static function glProgramEnvParametersI4uivNV(target:Int, index:UInt, count:Int, *params:const GLuint) : Void;
+    // 
+    // @:native('glProgramLocalParameterI4ivNV')
     // static function glProgramLocalParameterI4ivNV(target:Int, index:UInt, *params:const GLint) : Void;
+    // 
+    // @:native('glProgramLocalParameterI4uivNV')
     // static function glProgramLocalParameterI4uivNV(target:Int, index:UInt, *params:const GLuint) : Void;
+    // 
+    // @:native('glProgramLocalParametersI4ivNV')
     // static function glProgramLocalParametersI4ivNV(target:Int, index:UInt, count:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glProgramLocalParametersI4uivNV')
     // static function glProgramLocalParametersI4uivNV(target:Int, index:UInt, count:Int, *params:const GLuint) : Void;
+    // 
 
 
 //GL_NV_gpu_program5
@@ -12449,40 +14715,108 @@ extern class GL {
 
 
 
+    // @:native('glGetUniformi64vNV')
     // static function glGetUniformi64vNV(program:UInt, location:Int, params:GLint64EXT*) : Void;
+    // 
+    // @:native('glGetUniformui64vNV')
     // static function glGetUniformui64vNV(program:UInt, location:Int, params:GLuint64EXT*) : Void;
+    // 
+    // @:native('glProgramUniform1i64NV')
     // static function glProgramUniform1i64NV(program:UInt, location:Int, x:cpp.Int64) : Void;
+    // 
+    // @:native('glProgramUniform1i64vNV')
     // static function glProgramUniform1i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;
+    // 
+    // @:native('glProgramUniform1ui64NV')
     // static function glProgramUniform1ui64NV(program:UInt, location:Int, x:cpp.UInt64) : Void;
+    // 
+    // @:native('glProgramUniform1ui64vNV')
     // static function glProgramUniform1ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
+    // 
+    // @:native('glProgramUniform2i64NV')
     // static function glProgramUniform2i64NV(program:UInt, location:Int, x:cpp.Int64, y:cpp.Int64) : Void;
+    // 
+    // @:native('glProgramUniform2i64vNV')
     // static function glProgramUniform2i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;
+    // 
+    // @:native('glProgramUniform2ui64NV')
     // static function glProgramUniform2ui64NV(program:UInt, location:Int, x:cpp.UInt64, y:cpp.UInt64) : Void;
+    // 
+    // @:native('glProgramUniform2ui64vNV')
     // static function glProgramUniform2ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
+    // 
+    // @:native('glProgramUniform3i64NV')
     // static function glProgramUniform3i64NV(program:UInt, location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64) : Void;
+    // 
+    // @:native('glProgramUniform3i64vNV')
     // static function glProgramUniform3i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;
+    // 
+    // @:native('glProgramUniform3ui64NV')
     // static function glProgramUniform3ui64NV(program:UInt, location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64) : Void;
+    // 
+    // @:native('glProgramUniform3ui64vNV')
     // static function glProgramUniform3ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
+    // 
+    // @:native('glProgramUniform4i64NV')
     // static function glProgramUniform4i64NV(program:UInt, location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64, w:cpp.Int64) : Void;
+    // 
+    // @:native('glProgramUniform4i64vNV')
     // static function glProgramUniform4i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;
+    // 
+    // @:native('glProgramUniform4ui64NV')
     // static function glProgramUniform4ui64NV(program:UInt, location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64, w:cpp.UInt64) : Void;
+    // 
+    // @:native('glProgramUniform4ui64vNV')
     // static function glProgramUniform4ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
+    // 
+    // @:native('glUniform1i64NV')
     // static function glUniform1i64NV(location:Int, x:cpp.Int64) : Void;
+    // 
+    // @:native('glUniform1i64vNV')
     // static function glUniform1i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;
+    // 
+    // @:native('glUniform1ui64NV')
     // static function glUniform1ui64NV(location:Int, x:cpp.UInt64) : Void;
+    // 
+    // @:native('glUniform1ui64vNV')
     // static function glUniform1ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
+    // 
+    // @:native('glUniform2i64NV')
     // static function glUniform2i64NV(location:Int, x:cpp.Int64, y:cpp.Int64) : Void;
+    // 
+    // @:native('glUniform2i64vNV')
     // static function glUniform2i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;
+    // 
+    // @:native('glUniform2ui64NV')
     // static function glUniform2ui64NV(location:Int, x:cpp.UInt64, y:cpp.UInt64) : Void;
+    // 
+    // @:native('glUniform2ui64vNV')
     // static function glUniform2ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
+    // 
+    // @:native('glUniform3i64NV')
     // static function glUniform3i64NV(location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64) : Void;
+    // 
+    // @:native('glUniform3i64vNV')
     // static function glUniform3i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;
+    // 
+    // @:native('glUniform3ui64NV')
     // static function glUniform3ui64NV(location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64) : Void;
+    // 
+    // @:native('glUniform3ui64vNV')
     // static function glUniform3ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
+    // 
+    // @:native('glUniform4i64NV')
     // static function glUniform4i64NV(location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64, w:cpp.Int64) : Void;
+    // 
+    // @:native('glUniform4i64vNV')
     // static function glUniform4i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;
+    // 
+    // @:native('glUniform4ui64NV')
     // static function glUniform4ui64NV(location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64, w:cpp.UInt64) : Void;
+    // 
+    // @:native('glUniform4ui64vNV')
     // static function glUniform4ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
+    // 
 
 
 //GL_NV_half_float
@@ -12557,31 +14891,81 @@ extern class GL {
 
 
 
+    // @:native('glColor3hvNV')
     // static function glColor3hvNV(v:const GLhalf*) : Void;
+    // 
+    // @:native('glColor4hvNV')
     // static function glColor4hvNV(v:const GLhalf*) : Void;
+    // 
+    // @:native('glFogCoordhvNV')
     // static function glFogCoordhvNV(fog:const GLhalf*) : Void;
+    // 
+    // @:native('glMultiTexCoord1hvNV')
     // static function glMultiTexCoord1hvNV(target:Int, v:const GLhalf*) : Void;
+    // 
+    // @:native('glMultiTexCoord2hvNV')
     // static function glMultiTexCoord2hvNV(target:Int, v:const GLhalf*) : Void;
+    // 
+    // @:native('glMultiTexCoord3hvNV')
     // static function glMultiTexCoord3hvNV(target:Int, v:const GLhalf*) : Void;
+    // 
+    // @:native('glMultiTexCoord4hvNV')
     // static function glMultiTexCoord4hvNV(target:Int, v:const GLhalf*) : Void;
+    // 
+    // @:native('glNormal3hvNV')
     // static function glNormal3hvNV(v:const GLhalf*) : Void;
+    // 
+    // @:native('glSecondaryColor3hvNV')
     // static function glSecondaryColor3hvNV(v:const GLhalf*) : Void;
+    // 
+    // @:native('glTexCoord1hvNV')
     // static function glTexCoord1hvNV(v:const GLhalf*) : Void;
+    // 
+    // @:native('glTexCoord2hvNV')
     // static function glTexCoord2hvNV(v:const GLhalf*) : Void;
+    // 
+    // @:native('glTexCoord3hvNV')
     // static function glTexCoord3hvNV(v:const GLhalf*) : Void;
+    // 
+    // @:native('glTexCoord4hvNV')
     // static function glTexCoord4hvNV(v:const GLhalf*) : Void;
+    // 
+    // @:native('glVertex2hvNV')
     // static function glVertex2hvNV(v:const GLhalf*) : Void;
+    // 
+    // @:native('glVertex3hvNV')
     // static function glVertex3hvNV(v:const GLhalf*) : Void;
+    // 
+    // @:native('glVertex4hvNV')
     // static function glVertex4hvNV(v:const GLhalf*) : Void;
+    // 
+    // @:native('glVertexAttrib1hvNV')
     // static function glVertexAttrib1hvNV(index:UInt, v:const GLhalf*) : Void;
+    // 
+    // @:native('glVertexAttrib2hvNV')
     // static function glVertexAttrib2hvNV(index:UInt, v:const GLhalf*) : Void;
+    // 
+    // @:native('glVertexAttrib3hvNV')
     // static function glVertexAttrib3hvNV(index:UInt, v:const GLhalf*) : Void;
+    // 
+    // @:native('glVertexAttrib4hvNV')
     // static function glVertexAttrib4hvNV(index:UInt, v:const GLhalf*) : Void;
+    // 
+    // @:native('glVertexAttribs1hvNV')
     // static function glVertexAttribs1hvNV(index:UInt, n:Int, v:const GLhalf*) : Void;
+    // 
+    // @:native('glVertexAttribs2hvNV')
     // static function glVertexAttribs2hvNV(index:UInt, n:Int, v:const GLhalf*) : Void;
+    // 
+    // @:native('glVertexAttribs3hvNV')
     // static function glVertexAttribs3hvNV(index:UInt, n:Int, v:const GLhalf*) : Void;
+    // 
+    // @:native('glVertexAttribs4hvNV')
     // static function glVertexAttribs4hvNV(index:UInt, n:Int, v:const GLhalf*) : Void;
+    // 
+    // @:native('glVertexWeighthvNV')
     // static function glVertexWeighthvNV(weight:const GLhalf*) : Void;
+    // 
 
 
 //GL_NV_internalformat_sample_query
@@ -12596,7 +14980,9 @@ extern class GL {
 
 
 
+    // @:native('glGetInternalformatSampleivNV')
     // static function glGetInternalformatSampleivNV(target:Int, internalformat:Int, samples:Int, pname:Int, bufSize:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_NV_light_max_exponent
@@ -12653,10 +15039,18 @@ extern class GL {
 
 
 
+    // @:native('glDeleteOcclusionQueriesNV')
     // static function glDeleteOcclusionQueriesNV(n:Int, ids:const GLuint*) : Void;
+    // 
+    // @:native('glGenOcclusionQueriesNV')
     // static function glGenOcclusionQueriesNV(n:Int, ids:GLuint*) : Void;
+    // 
+    // @:native('glGetOcclusionQueryivNV')
     // static function glGetOcclusionQueryivNV(id:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetOcclusionQueryuivNV')
     // static function glGetOcclusionQueryuivNV(id:UInt, pname:Int, params:GLuint*) : Void;
+    // 
 
 
 //GL_NV_packed_depth_stencil
@@ -12684,9 +15078,15 @@ extern class GL {
 
 
 
+    // @:native('glProgramBufferParametersIivNV')
     // static function glProgramBufferParametersIivNV(target:Int, buffer:UInt, index:UInt, count:Int, *params:const GLint) : Void;
+    // 
+    // @:native('glProgramBufferParametersIuivNV')
     // static function glProgramBufferParametersIuivNV(target:Int, buffer:UInt, index:UInt, count:Int, *params:const GLuint) : Void;
+    // 
+    // @:native('glProgramBufferParametersfvNV')
     // static function glProgramBufferParametersfvNV(target:Int, buffer:UInt, index:UInt, count:Int, *params:const GLfloat) : Void;
+    // 
 
 
 //GL_NV_parameter_buffer_object2
@@ -12915,50 +15315,139 @@ extern class GL {
 
 
 
+    // @:native('glCoverFillPathInstancedNV')
     // static function glCoverFillPathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, coverMode:Int, transformType:Int, *transformValues:const GLfloat) : Void;
+    // 
+    // @:native('glCoverStrokePathInstancedNV')
     // static function glCoverStrokePathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, coverMode:Int, transformType:Int, *transformValues:const GLfloat) : Void;
+    // 
+    // @:native('glGetPathColorGenfvNV')
     // static function glGetPathColorGenfvNV(color:Int, pname:Int, value:GLfloat*) : Void;
+    // 
+    // @:native('glGetPathColorGenivNV')
     // static function glGetPathColorGenivNV(color:Int, pname:Int, value:GLint*) : Void;
+    // 
+    // @:native('glGetPathCommandsNV')
     // static function glGetPathCommandsNV(path:UInt, commands:GLubyte*) : Void;
+    // 
+    // @:native('glGetPathCoordsNV')
     // static function glGetPathCoordsNV(path:UInt, coords:GLfloat*) : Void;
+    // 
+    // @:native('glGetPathDashArrayNV')
     // static function glGetPathDashArrayNV(path:UInt, dashArray:GLfloat*) : Void;
+    // 
+    // @:native('glGetPathMetricRangeNV')
     // static function glGetPathMetricRangeNV(metricQueryMask:Int, firstPathName:UInt, numPaths:Int, stride:Int, metrics:GLfloat*) : Void;
+    // 
+    // @:native('glGetPathMetricsNV')
     // static function glGetPathMetricsNV(metricQueryMask:Int, numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, stride:Int, *metrics:Float) : Void;
+    // 
+    // @:native('glGetPathParameterfvNV')
     // static function glGetPathParameterfvNV(path:UInt, pname:Int, value:GLfloat*) : Void;
+    // 
+    // @:native('glGetPathParameterivNV')
     // static function glGetPathParameterivNV(path:UInt, pname:Int, value:GLint*) : Void;
+    // 
+    // @:native('glGetPathSpacingNV')
     // static function glGetPathSpacingNV(pathListMode:Int, numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, advanceScale:Float, kerningScale:Float, transformType:Int, *returnedSpacing:Float) : Void;
+    // 
+    // @:native('glGetPathTexGenfvNV')
     // static function glGetPathTexGenfvNV(texCoordSet:Int, pname:Int, value:GLfloat*) : Void;
+    // 
+    // @:native('glGetPathTexGenivNV')
     // static function glGetPathTexGenivNV(texCoordSet:Int, pname:Int, value:GLint*) : Void;
+    // 
+    // @:native('glGetProgramResourcefvNV')
     // static function glGetProgramResourcefvNV(program:UInt, programInterface:Int, index:UInt, propCount:Int, props:const GLenum*, bufSize:Int, *length:Int, *params:Float) : Void;
+    // 
+    // @:native('glMatrixLoad3x2fNV')
     // static function glMatrixLoad3x2fNV(matrixMode:Int, m:const GLfloat*) : Void;
+    // 
+    // @:native('glMatrixLoad3x3fNV')
     // static function glMatrixLoad3x3fNV(matrixMode:Int, m:const GLfloat*) : Void;
+    // 
+    // @:native('glMatrixLoadTranspose3x3fNV')
     // static function glMatrixLoadTranspose3x3fNV(matrixMode:Int, m:const GLfloat*) : Void;
+    // 
+    // @:native('glMatrixMult3x2fNV')
     // static function glMatrixMult3x2fNV(matrixMode:Int, m:const GLfloat*) : Void;
+    // 
+    // @:native('glMatrixMult3x3fNV')
     // static function glMatrixMult3x3fNV(matrixMode:Int, m:const GLfloat*) : Void;
+    // 
+    // @:native('glMatrixMultTranspose3x3fNV')
     // static function glMatrixMultTranspose3x3fNV(matrixMode:Int, m:const GLfloat*) : Void;
+    // 
+    // @:native('glPathColorGenNV')
     // static function glPathColorGenNV(color:Int, genMode:Int, colorFormat:Int, coeffs:const GLfloat*) : Void;
+    // 
+    // @:native('glPathCommandsNV')
     // static function glPathCommandsNV(path:UInt, numCommands:Int, commands:const GLubyte*, numCoords:Int, coordType:Int, void*coords:const) : Void;
+    // 
+    // @:native('glPathCoordsNV')
     // static function glPathCoordsNV(path:UInt, numCoords:Int, coordType:Int, *coords:const void) : Void;
+    // 
+    // @:native('glPathDashArrayNV')
     // static function glPathDashArrayNV(path:UInt, dashCount:Int, dashArray:const GLfloat*) : Void;
+    // 
+    // @:native('glPathGlyphIndexArrayNV')
     // static function glPathGlyphIndexArrayNV(firstPathName:UInt, fontTarget:Int, *fontName:const void, fontStyle:Int, firstGlyphIndex:UInt, numGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Int;
+    // 
+    // @:native('glPathGlyphIndexRangeNV')
     // static function glPathGlyphIndexRangeNV(fontTarget:Int, *fontName:const void, fontStyle:Int, pathParameterTemplate:UInt, emScale:Float, baseAndCount:Array<UInt>) : Int;
+    // 
+    // @:native('glPathGlyphRangeNV')
     // static function glPathGlyphRangeNV(firstPathName:UInt, fontTarget:Int, *fontName:const void, fontStyle:Int, firstGlyph:UInt, numGlyphs:Int, handleMissingGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Void;
+    // 
+    // @:native('glPathGlyphsNV')
     // static function glPathGlyphsNV(firstPathName:UInt, fontTarget:Int, *fontName:const void, fontStyle:Int, numGlyphs:Int, type:Int, void*charcodes:const, handleMissingGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Void;
+    // 
+    // @:native('glPathMemoryGlyphIndexArrayNV')
     // static function glPathMemoryGlyphIndexArrayNV(firstPathName:UInt, fontTarget:Int, fontSize:Int, *fontData:const void, faceIndex:Int, firstGlyphIndex:UInt, numGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Int;
+    // 
+    // @:native('glPathParameterfvNV')
     // static function glPathParameterfvNV(path:UInt, pname:Int, value:const GLfloat*) : Void;
-    // static function glPathParameterivNV(path:UInt, pname:Int, value:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glPathParameterivNV(path:UInt, pname:Int, value:const GLint*) : Void
+    // { untyped __cpp__("glPathParameterivNV(path, pname)"); }
+    // 
+    // @:native('glPathStringNV')
     // static function glPathStringNV(path:UInt, format:Int, length:Int, *pathString:const void) : Void;
+    // 
+    // @:native('glPathSubCommandsNV')
     // static function glPathSubCommandsNV(path:UInt, commandStart:Int, commandsToDelete:Int, numCommands:Int, commands:const GLubyte*, numCoords:Int, coordType:Int, void*coords:const) : Void;
+    // 
+    // @:native('glPathSubCoordsNV')
     // static function glPathSubCoordsNV(path:UInt, coordStart:Int, numCoords:Int, coordType:Int, *coords:const void) : Void;
+    // 
+    // @:native('glPathTexGenNV')
     // static function glPathTexGenNV(texCoordSet:Int, genMode:Int, components:Int, coeffs:const GLfloat*) : Void;
+    // 
+    // @:native('glPointAlongPathNV')
     // static function glPointAlongPathNV(path:UInt, startSegment:Int, numSegments:Int, distance:Float, x:GLfloat*, *y:Float, *tangentX:Float, *tangentY:Float) : Bool;
+    // 
+    // @:native('glProgramPathFragmentInputGenNV')
     // static function glProgramPathFragmentInputGenNV(program:UInt, location:Int, genMode:Int, components:Int, coeffs:const GLfloat*) : Void;
+    // 
+    // @:native('glStencilFillPathInstancedNV')
     // static function glStencilFillPathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, fillMode:Int, mask:UInt, transformType:Int, *transformValues:const GLfloat) : Void;
+    // 
+    // @:native('glStencilStrokePathInstancedNV')
     // static function glStencilStrokePathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, reference:Int, mask:UInt, transformType:Int, *transformValues:const GLfloat) : Void;
+    // 
+    // @:native('glStencilThenCoverFillPathInstancedNV')
     // static function glStencilThenCoverFillPathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, fillMode:Int, mask:UInt, coverMode:Int, transformType:Int, *transformValues:const GLfloat) : Void;
+    // 
+    // @:native('glStencilThenCoverStrokePathInstancedNV')
     // static function glStencilThenCoverStrokePathInstancedNV(numPaths:Int, pathNameType:Int, *paths:const void, pathBase:UInt, reference:Int, mask:UInt, coverMode:Int, transformType:Int, *transformValues:const GLfloat) : Void;
+    // 
+    // @:native('glTransformPathNV')
     // static function glTransformPathNV(resultPath:UInt, srcPath:UInt, transformType:Int, transformValues:const GLfloat*) : Void;
+    // 
+    // @:native('glWeightPathsNV')
     // static function glWeightPathsNV(resultPath:UInt, numPaths:Int, paths:Array<const GLuint>, weights:Array<const GLfloat>) : Void;
+    // 
 
 
 //GL_NV_path_rendering_shared_edge
@@ -12989,7 +15478,9 @@ extern class GL {
 
 
 
+    // @:native('glPixelDataRangeNV')
     // static function glPixelDataRangeNV(target:Int, length:Int, *pointer:Void) : Void;
+    // 
 
 
 //GL_NV_point_sprite
@@ -13006,7 +15497,10 @@ extern class GL {
 
 
 
-    // static function glPointParameterivNV(pname:Int, params:const GLint*) : Void;
+    // 
+    // inline static function glPointParameterivNV(pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glPointParameterivNV(pname)"); }
+    // 
 
 
 //GL_NV_present_video
@@ -13023,12 +15517,24 @@ extern class GL {
 
 
 
+    // @:native('glGetVideoi64vNV')
     // static function glGetVideoi64vNV(video_slot:UInt, pname:Int, params:GLint64EXT*) : Void;
+    // 
+    // @:native('glGetVideoivNV')
     // static function glGetVideoivNV(video_slot:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetVideoui64vNV')
     // static function glGetVideoui64vNV(video_slot:UInt, pname:Int, params:GLuint64EXT*) : Void;
+    // 
+    // @:native('glGetVideouivNV')
     // static function glGetVideouivNV(video_slot:UInt, pname:Int, params:GLuint*) : Void;
+    // 
+    // @:native('glPresentFrameDualFillNV')
     // static function glPresentFrameDualFillNV(video_slot:UInt, minPresentTime:cpp.UInt64, beginPresentTimeId:UInt, presentDurationId:UInt, type:Int, target0:Int, fill0:UInt, target1:Int, fill1:UInt, target2:Int, fill2:UInt, target3:Int, fill3:UInt) : Void;
+    // 
+    // @:native('glPresentFrameKeyedNV')
     // static function glPresentFrameKeyedNV(video_slot:UInt, minPresentTime:cpp.UInt64, beginPresentTimeId:UInt, presentDurationId:UInt, type:Int, target0:Int, fill0:UInt, key0:UInt, target1:Int, fill1:UInt, key1:UInt) : Void;
+    // 
 
 
 //GL_NV_primitive_restart
@@ -13121,14 +15627,31 @@ extern class GL {
 
 
 
+    // @:native('glCombinerParameterfvNV')
     // static function glCombinerParameterfvNV(pname:Int, params:const GLfloat*) : Void;
-    // static function glCombinerParameterivNV(pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glCombinerParameterivNV(pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glCombinerParameterivNV(pname)"); }
+    // 
+    // @:native('glGetCombinerInputParameterfvNV')
     // static function glGetCombinerInputParameterfvNV(stage:Int, portion:Int, variable:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetCombinerInputParameterivNV')
     // static function glGetCombinerInputParameterivNV(stage:Int, portion:Int, variable:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetCombinerOutputParameterfvNV')
     // static function glGetCombinerOutputParameterfvNV(stage:Int, portion:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetCombinerOutputParameterivNV')
     // static function glGetCombinerOutputParameterivNV(stage:Int, portion:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetFinalCombinerInputParameterfvNV')
     // static function glGetFinalCombinerInputParameterfvNV(variable:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetFinalCombinerInputParameterivNV')
     // static function glGetFinalCombinerInputParameterivNV(variable:Int, pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_NV_register_combiners2
@@ -13140,8 +15663,12 @@ extern class GL {
 
 
 
+    // @:native('glCombinerStageParameterfvNV')
     // static function glCombinerStageParameterfvNV(stage:Int, pname:Int, params:const GLfloat*) : Void;
+    // 
+    // @:native('glGetCombinerStageParameterfvNV')
     // static function glGetCombinerStageParameterfvNV(stage:Int, pname:Int, params:GLfloat*) : Void;
+    // 
 
 
 //GL_NV_sample_locations
@@ -13160,8 +15687,12 @@ extern class GL {
 
 
 
+    // @:native('glFramebufferSampleLocationsfvNV')
     // static function glFramebufferSampleLocationsfvNV(target:Int, start:UInt, count:Int, v:const GLfloat*) : Void;
+    // 
+    // @:native('glNamedFramebufferSampleLocationsfvNV')
     // static function glNamedFramebufferSampleLocationsfvNV(framebuffer:UInt, start:UInt, count:Int, v:const GLfloat*) : Void;
+    // 
 
 
 //GL_NV_sample_mask_override_coverage
@@ -13243,13 +15774,27 @@ extern class GL {
 
 
 
+    // @:native('glGetBufferParameterui64vNV')
     // static function glGetBufferParameterui64vNV(target:Int, pname:Int, params:GLuint64EXT*) : Void;
+    // 
+    // @:native('glGetIntegerui64vNV')
     // static function glGetIntegerui64vNV(value:Int, result:GLuint64EXT*) : Void;
+    // 
+    // @:native('glGetNamedBufferParameterui64vNV')
     // static function glGetNamedBufferParameterui64vNV(buffer:UInt, pname:Int, params:GLuint64EXT*) : Void;
+    // 
+    // @:native('glProgramUniformui64NV')
     // static function glProgramUniformui64NV(program:UInt, location:Int, value:cpp.UInt64) : Void;
+    // 
+    // @:native('glProgramUniformui64vNV')
     // static function glProgramUniformui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
+    // 
+    // @:native('glUniformui64NV')
     // static function glUniformui64NV(location:Int, value:cpp.UInt64) : Void;
+    // 
+    // @:native('glUniformui64vNV')
     // static function glUniformui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
+    // 
 
 
 //GL_NV_shader_storage_buffer_object
@@ -13587,12 +16132,24 @@ extern class GL {
 
 
 
+    // @:native('glActiveVaryingNV')
     // static function glActiveVaryingNV(program:UInt, *name:const GLchar) : Void;
+    // 
+    // @:native('glGetActiveVaryingNV')
     // static function glGetActiveVaryingNV(program:UInt, index:UInt, bufSize:Int, *length:Int, *size:Int, *type:Int, *name:GLchar) : Void;
+    // 
+    // @:native('glGetTransformFeedbackVaryingNV')
     // static function glGetTransformFeedbackVaryingNV(program:UInt, index:UInt, *location:Int) : Void;
+    // 
+    // @:native('glGetVaryingLocationNV')
     // static function glGetVaryingLocationNV(program:UInt, *name:const GLchar) : Int;
+    // 
+    // @:native('glTransformFeedbackAttribsNV')
     // static function glTransformFeedbackAttribsNV(count:UInt, *attribs:const GLint, bufferMode:Int) : Void;
+    // 
+    // @:native('glTransformFeedbackVaryingsNV')
     // static function glTransformFeedbackVaryingsNV(program:UInt, count:Int, *locations:const GLint, bufferMode:Int) : Void;
+    // 
 
 
 //GL_NV_transform_feedback2
@@ -13622,8 +16179,12 @@ extern class GL {
 
 
 
+    // @:native('glDeleteTransformFeedbacksNV')
     // static function glDeleteTransformFeedbacksNV(n:Int, ids:const GLuint*) : Void;
+    // 
+    // @:native('glGenTransformFeedbacksNV')
     // static function glGenTransformFeedbacksNV(n:Int, ids:GLuint*) : Void;
+    // 
 
 
 //GL_NV_uniform_buffer_unified_memory
@@ -13654,18 +16215,36 @@ extern class GL {
 
 
 
+    // @:native('glVDPAUGetSurfaceivNV')
     // static function glVDPAUGetSurfaceivNV(surface:GLvdpauSurfaceNV, pname:Int, bufSize:Int, length:GLsizei*, *values:Int) : Void;
+    // 
+    // 
     // inline static function glVDPAUInitNV(?bOffset:Int=0, vdpDevice:BytesData, void*getProcAddress:const) : Void
-
+    // { untyped __cpp__("glVDPAUInitNV((const void*)&{1}[0] + {0}, void*getProcAddress)", bOffset, vdpDevice); }
+    // 
+    // @:native('glVDPAUIsSurfaceNV')
     // static function glVDPAUIsSurfaceNV(surface:GLvdpauSurfaceNV) : Void;
+    // 
+    // @:native('glVDPAUMapSurfacesNV')
     // static function glVDPAUMapSurfacesNV(numSurfaces:Int, surfaces:const GLvdpauSurfaceNV*) : Void;
+    // 
+    // 
     // inline static function glVDPAURegisterOutputSurfaceNV(?bOffset:Int=0, vdpSurface:BytesData, target:Int, numTextureNames:Int, *textureNames:const GLuint) : GLvdpauSurfaceNV
-
+    // { untyped __cpp__("glVDPAURegisterOutputSurfaceNV((const void*)&{1}[0] + {0}, target, numTextureNames, *textureNames)", bOffset, vdpSurface); }
+    // 
+    // 
     // inline static function glVDPAURegisterVideoSurfaceNV(?bOffset:Int=0, vdpSurface:BytesData, target:Int, numTextureNames:Int, *textureNames:const GLuint) : GLvdpauSurfaceNV
-
+    // { untyped __cpp__("glVDPAURegisterVideoSurfaceNV((const void*)&{1}[0] + {0}, target, numTextureNames, *textureNames)", bOffset, vdpSurface); }
+    // 
+    // @:native('glVDPAUSurfaceAccessNV')
     // static function glVDPAUSurfaceAccessNV(surface:GLvdpauSurfaceNV, access:Int) : Void;
+    // 
+    // @:native('glVDPAUUnmapSurfacesNV')
     // static function glVDPAUUnmapSurfacesNV(numSurface:Int, surfaces:const GLvdpauSurfaceNV*) : Void;
+    // 
+    // @:native('glVDPAUUnregisterSurfaceNV')
     // static function glVDPAUUnregisterSurfaceNV(surface:GLvdpauSurfaceNV) : Void;
+    // 
 
 
 //GL_NV_vertex_array_range
@@ -13684,7 +16263,9 @@ extern class GL {
 
 
 
+    // @:native('glVertexArrayRangeNV')
     // static function glVertexArrayRangeNV(length:Int, *pointer:Void) : Void;
+    // 
 
 
 //GL_NV_vertex_array_range2
@@ -13709,24 +16290,60 @@ extern class GL {
 
 
 
+    // @:native('glGetVertexAttribLi64vNV')
     // static function glGetVertexAttribLi64vNV(index:UInt, pname:Int, params:GLint64EXT*) : Void;
+    // 
+    // @:native('glGetVertexAttribLui64vNV')
     // static function glGetVertexAttribLui64vNV(index:UInt, pname:Int, params:GLuint64EXT*) : Void;
+    // 
+    // @:native('glVertexAttribL1i64NV')
     // static function glVertexAttribL1i64NV(index:UInt, x:cpp.Int64) : Void;
+    // 
+    // @:native('glVertexAttribL1i64vNV')
     // static function glVertexAttribL1i64vNV(index:UInt, v:const GLint64EXT*) : Void;
+    // 
+    // @:native('glVertexAttribL1ui64NV')
     // static function glVertexAttribL1ui64NV(index:UInt, x:cpp.UInt64) : Void;
+    // 
+    // @:native('glVertexAttribL1ui64vNV')
     // static function glVertexAttribL1ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;
+    // 
+    // @:native('glVertexAttribL2i64NV')
     // static function glVertexAttribL2i64NV(index:UInt, x:cpp.Int64, y:cpp.Int64) : Void;
+    // 
+    // @:native('glVertexAttribL2i64vNV')
     // static function glVertexAttribL2i64vNV(index:UInt, v:const GLint64EXT*) : Void;
+    // 
+    // @:native('glVertexAttribL2ui64NV')
     // static function glVertexAttribL2ui64NV(index:UInt, x:cpp.UInt64, y:cpp.UInt64) : Void;
+    // 
+    // @:native('glVertexAttribL2ui64vNV')
     // static function glVertexAttribL2ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;
+    // 
+    // @:native('glVertexAttribL3i64NV')
     // static function glVertexAttribL3i64NV(index:UInt, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64) : Void;
+    // 
+    // @:native('glVertexAttribL3i64vNV')
     // static function glVertexAttribL3i64vNV(index:UInt, v:const GLint64EXT*) : Void;
+    // 
+    // @:native('glVertexAttribL3ui64NV')
     // static function glVertexAttribL3ui64NV(index:UInt, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64) : Void;
+    // 
+    // @:native('glVertexAttribL3ui64vNV')
     // static function glVertexAttribL3ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;
+    // 
+    // @:native('glVertexAttribL4i64NV')
     // static function glVertexAttribL4i64NV(index:UInt, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64, w:cpp.Int64) : Void;
+    // 
+    // @:native('glVertexAttribL4i64vNV')
     // static function glVertexAttribL4i64vNV(index:UInt, v:const GLint64EXT*) : Void;
+    // 
+    // @:native('glVertexAttribL4ui64NV')
     // static function glVertexAttribL4ui64NV(index:UInt, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64, w:cpp.UInt64) : Void;
+    // 
+    // @:native('glVertexAttribL4ui64vNV')
     // static function glVertexAttribL4ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;
+    // 
 
 
 //GL_NV_vertex_buffer_unified_memory
@@ -13792,8 +16409,12 @@ extern class GL {
 
 
 
+    // @:native('glBufferAddressRangeNV')
     // static function glBufferAddressRangeNV(pname:Int, index:UInt, address:cpp.UInt64, length:Int) : Void;
+    // 
+    // @:native('glGetIntegerui64i_vNV')
     // static function glGetIntegerui64i_vNV(value:Int, index:UInt, result:Array<cpp.UInt64>) : Void;
+    // 
 
 
 //GL_NV_vertex_program
@@ -13941,52 +16562,144 @@ extern class GL {
 
 
 
+    // @:native('glAreProgramsResidentNV')
     // static function glAreProgramsResidentNV(n:Int, ids:const GLuint*, *residences:Bool) : Bool;
+    // 
+    // @:native('glDeleteProgramsNV')
     // static function glDeleteProgramsNV(n:Int, ids:const GLuint*) : Void;
+    // 
+    // @:native('glExecuteProgramNV')
     // static function glExecuteProgramNV(target:Int, id:UInt, params:const GLfloat*) : Void;
+    // 
+    // @:native('glGenProgramsNV')
     // static function glGenProgramsNV(n:Int, ids:GLuint*) : Void;
+    // 
+    // @:native('glGetProgramParameterdvNV')
     // static function glGetProgramParameterdvNV(target:Int, index:UInt, pname:Int, params:GLdouble*) : Void;
+    // 
+    // @:native('glGetProgramParameterfvNV')
     // static function glGetProgramParameterfvNV(target:Int, index:UInt, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetProgramStringNV')
     // static function glGetProgramStringNV(id:UInt, pname:Int, program:GLubyte*) : Void;
+    // 
+    // @:native('glGetProgramivNV')
     // static function glGetProgramivNV(id:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetTrackMatrixivNV')
     // static function glGetTrackMatrixivNV(target:Int, address:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetVertexAttribPointervNV')
     // static function glGetVertexAttribPointervNV(index:UInt, pname:Int, pointer:void**) : Void;
+    // 
+    // @:native('glGetVertexAttribdvNV')
     // static function glGetVertexAttribdvNV(index:UInt, pname:Int, params:GLdouble*) : Void;
+    // 
+    // @:native('glGetVertexAttribfvNV')
     // static function glGetVertexAttribfvNV(index:UInt, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetVertexAttribivNV')
     // static function glGetVertexAttribivNV(index:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glLoadProgramNV')
     // static function glLoadProgramNV(target:Int, id:UInt, len:Int, program:const GLubyte*) : Void;
+    // 
+    // @:native('glProgramParameter4dvNV')
     // static function glProgramParameter4dvNV(target:Int, index:UInt, params:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramParameter4fvNV')
     // static function glProgramParameter4fvNV(target:Int, index:UInt, params:const GLfloat*) : Void;
+    // 
+    // @:native('glProgramParameters4dvNV')
     // static function glProgramParameters4dvNV(target:Int, index:UInt, num:Int, params:const GLdouble*) : Void;
+    // 
+    // @:native('glProgramParameters4fvNV')
     // static function glProgramParameters4fvNV(target:Int, index:UInt, num:Int, params:const GLfloat*) : Void;
+    // 
+    // @:native('glRequestResidentProgramsNV')
     // static function glRequestResidentProgramsNV(n:Int, ids:GLuint*) : Void;
+    // 
+    // @:native('glVertexAttrib1dvNV')
     // static function glVertexAttrib1dvNV(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttrib1fvNV')
     // static function glVertexAttrib1fvNV(index:UInt, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttrib1svNV')
     // static function glVertexAttrib1svNV(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib2dvNV')
     // static function glVertexAttrib2dvNV(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttrib2fvNV')
     // static function glVertexAttrib2fvNV(index:UInt, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttrib2svNV')
     // static function glVertexAttrib2svNV(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib3dvNV')
     // static function glVertexAttrib3dvNV(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttrib3fvNV')
     // static function glVertexAttrib3fvNV(index:UInt, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttrib3svNV')
     // static function glVertexAttrib3svNV(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib4dvNV')
     // static function glVertexAttrib4dvNV(index:UInt, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttrib4fvNV')
     // static function glVertexAttrib4fvNV(index:UInt, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttrib4svNV')
     // static function glVertexAttrib4svNV(index:UInt, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttrib4ubvNV')
     // static function glVertexAttrib4ubvNV(index:UInt, v:const GLubyte*) : Void;
+    // 
+    // @:native('glVertexAttribPointerNV')
     // static function glVertexAttribPointerNV(index:UInt, size:Int, type:Int, stride:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glVertexAttribs1dvNV')
     // static function glVertexAttribs1dvNV(index:UInt, n:Int, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttribs1fvNV')
     // static function glVertexAttribs1fvNV(index:UInt, n:Int, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttribs1svNV')
     // static function glVertexAttribs1svNV(index:UInt, n:Int, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttribs2dvNV')
     // static function glVertexAttribs2dvNV(index:UInt, n:Int, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttribs2fvNV')
     // static function glVertexAttribs2fvNV(index:UInt, n:Int, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttribs2svNV')
     // static function glVertexAttribs2svNV(index:UInt, n:Int, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttribs3dvNV')
     // static function glVertexAttribs3dvNV(index:UInt, n:Int, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttribs3fvNV')
     // static function glVertexAttribs3fvNV(index:UInt, n:Int, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttribs3svNV')
     // static function glVertexAttribs3svNV(index:UInt, n:Int, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttribs4dvNV')
     // static function glVertexAttribs4dvNV(index:UInt, n:Int, v:const GLdouble*) : Void;
+    // 
+    // @:native('glVertexAttribs4fvNV')
     // static function glVertexAttribs4fvNV(index:UInt, n:Int, v:const GLfloat*) : Void;
+    // 
+    // @:native('glVertexAttribs4svNV')
     // static function glVertexAttribs4svNV(index:UInt, n:Int, v:const GLshort*) : Void;
+    // 
+    // @:native('glVertexAttribs4ubvNV')
     // static function glVertexAttribs4ubvNV(index:UInt, n:Int, v:const GLubyte*) : Void;
+    // 
 
 
 //GL_NV_vertex_program1_1
@@ -14086,15 +16799,34 @@ extern class GL {
 
 
 
+    // @:native('glBindVideoCaptureStreamBufferNV')
     // static function glBindVideoCaptureStreamBufferNV(video_capture_slot:UInt, stream:UInt, frame_region:Int, offset:GLintptrARB) : Void;
+    // 
+    // @:native('glGetVideoCaptureStreamdvNV')
     // static function glGetVideoCaptureStreamdvNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:GLdouble*) : Void;
+    // 
+    // @:native('glGetVideoCaptureStreamfvNV')
     // static function glGetVideoCaptureStreamfvNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetVideoCaptureStreamivNV')
     // static function glGetVideoCaptureStreamivNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetVideoCaptureivNV')
     // static function glGetVideoCaptureivNV(video_capture_slot:UInt, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glVideoCaptureNV')
     // static function glVideoCaptureNV(video_capture_slot:UInt, sequence_num:GLuint*, *capture_time:cpp.UInt64) : Int;
+    // 
+    // @:native('glVideoCaptureStreamParameterdvNV')
     // static function glVideoCaptureStreamParameterdvNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:const GLdouble*) : Void;
+    // 
+    // @:native('glVideoCaptureStreamParameterfvNV')
     // static function glVideoCaptureStreamParameterfvNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:const GLfloat*) : Void;
-    // static function glVideoCaptureStreamParameterivNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glVideoCaptureStreamParameterivNV(video_capture_slot:UInt, stream:UInt, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glVideoCaptureStreamParameterivNV(video_capture_slot, stream, pname)"); }
+    // 
 
 
 //GL_NV_viewport_array2
@@ -14169,8 +16901,12 @@ extern class GL {
 
 
 
+    // @:native('glClipPlanefOES')
     // static function glClipPlanefOES(plane:Int, equation:const GLfloat*) : Void;
+    // 
+    // @:native('glGetClipPlanefOES')
     // static function glGetClipPlanefOES(plane:Int, equation:GLfloat*) : Void;
+    // 
 
 
 //GL_OML_interlace
@@ -14382,13 +17118,27 @@ extern class GL {
 
 
 
+    // @:native('glFogxv')
     // static function glFogxv(pname:Int, params:const GLfixed*) : Void;
+    // 
+    // @:native('glLightModelxv')
     // static function glLightModelxv(pname:Int, params:const GLfixed*) : Void;
+    // 
+    // @:native('glLightxv')
     // static function glLightxv(light:Int, pname:Int, params:const GLfixed*) : Void;
+    // 
+    // @:native('glLoadMatrixx')
     // static function glLoadMatrixx(m:const GLfixed*) : Void;
+    // 
+    // @:native('glMaterialxv')
     // static function glMaterialxv(face:Int, pname:Int, params:const GLfixed*) : Void;
+    // 
+    // @:native('glMultMatrixx')
     // static function glMultMatrixx(m:const GLfixed*) : Void;
+    // 
+    // @:native('glTexEnvxv')
     // static function glTexEnvxv(target:Int, pname:Int, params:const GLfixed*) : Void;
+    // 
 
 
 //GL_REGAL_ES1_1_compatibility
@@ -14402,18 +17152,42 @@ extern class GL {
 
 
 
+    // @:native('glClipPlanef')
     // static function glClipPlanef(plane:Int, equation:const GLfloat*) : Void;
+    // 
+    // @:native('glClipPlanex')
     // static function glClipPlanex(plane:Int, equation:const GLfixed*) : Void;
+    // 
+    // @:native('glGetClipPlanef')
     // static function glGetClipPlanef(pname:Int, eqn:Array<Float>) : Void;
+    // 
+    // @:native('glGetClipPlanex')
     // static function glGetClipPlanex(pname:Int, eqn:Array<Int>) : Void;
+    // 
+    // @:native('glGetFixedv')
     // static function glGetFixedv(pname:Int, params:GLfixed*) : Void;
+    // 
+    // @:native('glGetLightxv')
     // static function glGetLightxv(light:Int, pname:Int, params:GLfixed*) : Void;
+    // 
+    // @:native('glGetMaterialxv')
     // static function glGetMaterialxv(face:Int, pname:Int, params:GLfixed*) : Void;
+    // 
+    // @:native('glGetTexEnvxv')
     // static function glGetTexEnvxv(env:Int, pname:Int, params:GLfixed*) : Void;
+    // 
+    // @:native('glGetTexParameterxv')
     // static function glGetTexParameterxv(target:Int, pname:Int, params:GLfixed*) : Void;
+    // 
+    // @:native('glPointParameterxv')
     // static function glPointParameterxv(pname:Int, params:const GLfixed*) : Void;
+    // 
+    // @:native('glPointSizePointerOES')
     // static function glPointSizePointerOES(type:Int, stride:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glTexParameterxv')
     // static function glTexParameterxv(target:Int, pname:Int, params:const GLfixed*) : Void;
+    // 
 
 
 //GL_REGAL_enable
@@ -14444,7 +17218,9 @@ extern class GL {
 
 
 
+    // @:native('glErrorStringREGAL')
     // static function glErrorStringREGAL(error:Int) : String;
+    // 
 
 
 //GL_REGAL_extension_query
@@ -14480,7 +17256,9 @@ extern class GL {
 
 
 
+    // @:native('glLogMessageCallbackREGAL')
     // static function glLogMessageCallbackREGAL(callback:GLLOGPROCREGAL) : Void;
+    // 
 
 
 //GL_REGAL_proc_address
@@ -14491,7 +17269,9 @@ extern class GL {
 
 
 
+    // @:native('glGetProcAddressREGAL')
     // static function glGetProcAddressREGAL(*name:const GLchar) : void *;
+    // 
 
 
 //GL_REND_screen_coordinates
@@ -14549,8 +17329,12 @@ extern class GL {
 
 
 
+    // @:native('glDetailTexFuncSGIS')
     // static function glDetailTexFuncSGIS(target:Int, n:Int, points:const GLfloat*) : Void;
+    // 
+    // @:native('glGetDetailTexFuncSGIS')
     // static function glGetDetailTexFuncSGIS(target:Int, points:GLfloat*) : Void;
+    // 
 
 
 //GL_SGIS_fog_function
@@ -14561,8 +17345,12 @@ extern class GL {
 
 
 
+    // @:native('glFogFuncSGIS')
     // static function glFogFuncSGIS(n:Int, points:const GLfloat*) : Void;
+    // 
+    // @:native('glGetFogFuncSGIS')
     // static function glGetFogFuncSGIS(points:GLfloat*) : Void;
+    // 
 
 
 //GL_SGIS_generate_mipmap
@@ -14645,8 +17433,12 @@ extern class GL {
 
 
 
+    // @:native('glGetSharpenTexFuncSGIS')
     // static function glGetSharpenTexFuncSGIS(target:Int, points:GLfloat*) : Void;
+    // 
+    // @:native('glSharpenTexFuncSGIS')
     // static function glSharpenTexFuncSGIS(target:Int, n:Int, points:const GLfloat*) : Void;
+    // 
 
 
 //GL_SGIS_texture4D
@@ -14657,8 +17449,12 @@ extern class GL {
 
 
 
+    // @:native('glTexImage4DSGIS')
     // static function glTexImage4DSGIS(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, extent:Int, border:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
+    // @:native('glTexSubImage4DSGIS')
     // static function glTexSubImage4DSGIS(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, woffset:Int, width:Int, height:Int, depth:Int, extent:Int, format:Int, type:Int, *pixels:const void) : Void;
+    // 
 
 
 //GL_SGIS_texture_border_clamp
@@ -14691,8 +17487,12 @@ extern class GL {
 
 
 
+    // @:native('glGetTexFilterFuncSGIS')
     // static function glGetTexFilterFuncSGIS(target:Int, filter:Int, weights:GLfloat*) : Void;
+    // 
+    // @:native('glTexFilterFuncSGIS')
     // static function glTexFilterFuncSGIS(target:Int, filter:Int, n:Int, weights:const GLfloat*) : Void;
+    // 
 
 
 //GL_SGIS_texture_lod
@@ -14740,8 +17540,12 @@ extern class GL {
 
 
 
+    // @:native('glFinishAsyncSGIX')
     // static function glFinishAsyncSGIX(markerp:GLuint*) : Int;
+    // 
+    // @:native('glPollAsyncSGIX')
     // static function glPollAsyncSGIX(markerp:GLuint*) : Int;
+    // 
 
 
 //GL_SGIX_async_histogram
@@ -14882,18 +17686,44 @@ extern class GL {
 
 
 
+    // @:native('glFragmentLightModelfvSGIX')
     // static function glFragmentLightModelfvSGIX(pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glFragmentLightModelivSGIX')
     // static function glFragmentLightModelivSGIX(pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glFragmentLightfvSGIX')
     // static function glFragmentLightfvSGIX(light:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glFragmentLightivSGIX')
     // static function glFragmentLightivSGIX(light:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glFragmentMaterialfSGIX')
     // static function glFragmentMaterialfSGIX(face:Int, pname:Int, param:const GLfloat) : Void;
+    // 
+    // @:native('glFragmentMaterialfvSGIX')
     // static function glFragmentMaterialfvSGIX(face:Int, pname:Int, params:const GLfloat*) : Void;
+    // 
+    // @:native('glFragmentMaterialiSGIX')
     // static function glFragmentMaterialiSGIX(face:Int, pname:Int, param:const GLint) : Void;
-    // static function glFragmentMaterialivSGIX(face:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glFragmentMaterialivSGIX(face:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glFragmentMaterialivSGIX(face, pname)"); }
+    // 
+    // @:native('glGetFragmentLightfvSGIX')
     // static function glGetFragmentLightfvSGIX(light:Int, value:Int, data:GLfloat*) : Void;
+    // 
+    // @:native('glGetFragmentLightivSGIX')
     // static function glGetFragmentLightivSGIX(light:Int, value:Int, data:GLint*) : Void;
+    // 
+    // @:native('glGetFragmentMaterialfvSGIX')
     // static function glGetFragmentMaterialfvSGIX(face:Int, pname:Int, data:const GLfloat*) : Void;
-    // static function glGetFragmentMaterialivSGIX(face:Int, pname:Int, data:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glGetFragmentMaterialivSGIX(face:Int, pname:Int, data:const GLint*) : Void
+    // { untyped __cpp__("glGetFragmentMaterialivSGIX(face, pname)"); }
+    // 
 
 
 //GL_SGIX_framezoom
@@ -14971,7 +17801,9 @@ extern class GL {
 
 
 
+    // @:native('glReferencePlaneSGIX')
     // static function glReferencePlaneSGIX(equation:const GLdouble*) : Void;
+    // 
 
 
 //GL_SGIX_resample
@@ -15028,8 +17860,12 @@ extern class GL {
 
 
 
+    // @:native('glSpriteParameterfvSGIX')
     // static function glSpriteParameterfvSGIX(pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glSpriteParameterivSGIX')
     // static function glSpriteParameterivSGIX(pname:Int, params:GLint*) : Void;
+    // 
 
 
 //GL_SGIX_tag_sample_buffer
@@ -15221,12 +18057,25 @@ extern class GL {
 
 
 
+    // @:native('glColorTableParameterfvSGI')
     // static function glColorTableParameterfvSGI(target:Int, pname:Int, params:const GLfloat*) : Void;
-    // static function glColorTableParameterivSGI(target:Int, pname:Int, params:const GLint*) : Void;
+    // 
+    // 
+    // inline static function glColorTableParameterivSGI(target:Int, pname:Int, params:const GLint*) : Void
+    // { untyped __cpp__("glColorTableParameterivSGI(target, pname)"); }
+    // 
+    // @:native('glColorTableSGI')
     // static function glColorTableSGI(target:Int, internalformat:Int, width:Int, format:Int, type:Int, *table:const void) : Void;
+    // 
+    // @:native('glGetColorTableParameterfvSGI')
     // static function glGetColorTableParameterfvSGI(target:Int, pname:Int, params:GLfloat*) : Void;
+    // 
+    // @:native('glGetColorTableParameterivSGI')
     // static function glGetColorTableParameterivSGI(target:Int, pname:Int, params:GLint*) : Void;
+    // 
+    // @:native('glGetColorTableSGI')
     // static function glGetColorTableSGI(target:Int, format:Int, type:Int, *table:Void) : Void;
+    // 
 
 
 //GL_SGI_texture_color_table
@@ -15328,6 +18177,7 @@ extern class GL {
 
 
 
+
 //GL_SUN_slice_accum
     inline static var GL_SUN_slice_accum                                              = 1;
     inline static var GL_SLICE_ACCUM_SUN                                              = 0x85CC;
@@ -15373,10 +18223,18 @@ extern class GL {
 
 
 
+    // @:native('glReplacementCodePointerSUN')
     // static function glReplacementCodePointerSUN(type:Int, stride:Int, *pointer:const void) : Void;
+    // 
+    // @:native('glReplacementCodeubvSUN')
     // static function glReplacementCodeubvSUN(code:const GLubyte*) : Void;
+    // 
+    // @:native('glReplacementCodeuivSUN')
     // static function glReplacementCodeuivSUN(code:const GLuint*) : Void;
+    // 
+    // @:native('glReplacementCodeusvSUN')
     // static function glReplacementCodeusvSUN(code:const GLushort*) : Void;
+    // 
 
 
 //GL_SUN_vertex
@@ -15447,46 +18305,86 @@ extern class GL {
 
 
 
+    // 
     // inline static function glColor3fVertex3fvSUN(c:const GLfloat*, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glColor3fVertex3fvSUN(c, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glColor4fNormal3fVertex3fvSUN(c:const GLfloat*, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glColor4fNormal3fVertex3fvSUN(c, *n, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glColor4ubVertex2fvSUN(c:const GLubyte*, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glColor4ubVertex2fvSUN(c, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glColor4ubVertex3fvSUN(c:const GLubyte*, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glColor4ubVertex3fvSUN(c, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glNormal3fVertex3fvSUN(n:const GLfloat*, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glNormal3fVertex3fvSUN(n, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glReplacementCodeuiColor3fVertex3fvSUN(rc:const GLuint*, *c:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glReplacementCodeuiColor3fVertex3fvSUN(rc, *c, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glReplacementCodeuiColor4fNormal3fVertex3fvSUN(rc:const GLuint*, *c:const GLfloat, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glReplacementCodeuiColor4fNormal3fVertex3fvSUN(rc, *c, *n, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glReplacementCodeuiColor4ubVertex3fvSUN(rc:const GLuint*, *c:const GLubyte, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glReplacementCodeuiColor4ubVertex3fvSUN(rc, *c, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glReplacementCodeuiNormal3fVertex3fvSUN(rc:const GLuint*, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glReplacementCodeuiNormal3fVertex3fvSUN(rc, *n, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(rc:const GLuint*, *tc:const GLfloat, *c:const GLfloat, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(rc, *tc, *c, *n, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(rc:const GLuint*, *tc:const GLfloat, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(rc, *tc, *n, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glReplacementCodeuiTexCoord2fVertex3fvSUN(rc:const GLuint*, *tc:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glReplacementCodeuiTexCoord2fVertex3fvSUN(rc, *tc, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glReplacementCodeuiVertex3fvSUN(rc:const GLuint*, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glReplacementCodeuiVertex3fvSUN(rc, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glTexCoord2fColor3fVertex3fvSUN(tc:const GLfloat*, *c:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glTexCoord2fColor3fVertex3fvSUN(tc, *c, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glTexCoord2fColor4fNormal3fVertex3fvSUN(tc:const GLfloat*, *c:const GLfloat, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glTexCoord2fColor4fNormal3fVertex3fvSUN(tc, *c, *n, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glTexCoord2fColor4ubVertex3fvSUN(tc:const GLfloat*, *c:const GLubyte, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glTexCoord2fColor4ubVertex3fvSUN(tc, *c, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glTexCoord2fNormal3fVertex3fvSUN(tc:const GLfloat*, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glTexCoord2fNormal3fVertex3fvSUN(tc, *n, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glTexCoord2fVertex3fvSUN(tc:const GLfloat*, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glTexCoord2fVertex3fvSUN(tc, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glTexCoord4fColor4fNormal3fVertex4fvSUN(tc:const GLfloat*, *c:const GLfloat, *n:const GLfloat, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glTexCoord4fColor4fNormal3fVertex4fvSUN(tc, *c, *n, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
+    // 
     // inline static function glTexCoord4fVertex4fvSUN(tc:const GLfloat*, ?bOffset:Int=0, v:BytesData) : Void
-
+    // { untyped __cpp__("glTexCoord4fVertex4fvSUN(tc, (const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+    // 
 
 
 //GL_WIN_phong_shading

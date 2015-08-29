@@ -141,6 +141,10 @@ class Main {
                 _wrap = true;
                 outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
                 _atype = 'BytesData';
+            } else if(_atype == 'const GLint*') {
+                _genbody = true;
+                _native = null;
+                _wrap = true;
             }
 
             if(chkname(_aname,'*')) _hidden = true;
@@ -178,11 +182,16 @@ class Main {
                     _arg_names.push('(${a.gltype}$p)&{1}[0] + {0}');
                     _arg_items.push('bOffset');
                     _arg_items.push('${a.name}');
-                } else if(a.name != '?bOffset') {
+                }  
+
+                else if(a.type == 'const GLint*') {
+                    trace(_fname);
+                }
+
+                else if(a.name != '?bOffset') {
                     _arg_names.push(a.name);
                 }
             }
-            //($_atype*)&{1}[0] + {0}
             var _arg_parts = '';
             var _arg_body = _arg_names.join(', ');
             for(_ar in _arg_items) _arg_parts += ', ' + _ar;
@@ -222,14 +231,17 @@ class Main {
             var _endl = (_inf.body==null) ? ';' : '\n';
             var s = '${_inline}static function $_name($_args) : ${to_haxe_type(f.ret)}$_endl';
             var n =  (_inf.native==null) ? '' : '@:native(\'${_inf.native}\')';
+
+            s = '$n\n    $s';
+            if(_inf.body != null) { s += tb(6)+ '{ ${_inf.body.join('\n        ')} }\n'; } else { s+='\n'; }
+
+
             if(_ishidden || _inf.hidden) {
-                _hidden.push(s);
+                _hidden.push(s.split('\n').map(function(_f){ return _f.trim(); }).join('\n    // '));
             } else {
-                s = '$n\n    $s';
-                if(_inf.body != null) { s += tb(6)+ '{ ${_inf.body.join('\n        ')} }'; } else { s+='\n'; }
                 if(_inf.wrap) { _wrap.push(s); } 
                 else { _list.push(s); }
-            } //!hidden
+            }
         } //each function
 
         for(_i in _list) {
