@@ -70,7 +70,8 @@ class Main {
         return switch(t) {
             case 'void': 'Void';
             case 'GLfloat','GLdouble','GLclampf','GLclampd': 'Float';
-            case 'GLint','GLshort','GLsizei','GLubyte','GLenum','GLbitfield','GLbyte','GLclampx','GLfixed': 'Int';
+            case 'GLint','GLshort','GLsizei','GLenum','GLbitfield','GLclampx','GLfixed': 'Int';
+            case 'GLubyte', 'GLbyte','const GLchar*','GLchar*' : 'String';
             case 'GLuint','GLushort','GLhalf','GLhandleARB': 'UInt';
             case 'GLboolean': 'Bool';
             case 'GLint64EXT': 'cpp.Int64';
@@ -93,54 +94,118 @@ class Main {
     static function chktype(a:String) {
         var r = false;
         for(n in [
-            '*','GLsync','GLvdpauSurfaceNV','GLintptr','GLsizeiptr','GLLOGPROCREGAL'
+            '*','GLsync','GLvdpauSurfaceNV','GLintptr','GLsizeiptr','GLLOGPROCREGAL','GLbyte','GLubyte'
             ]
         ) r = r || chkname(a,n);
         return r;
     }
 
-    static function get_function(functions:Array<GLFunction>) {
-        var out = '';
-        var _list = [];
-        var _comp_list = [];
-        for(f in functions) {
-            var _args = '';
-            var _idx = 0;
-            var _comp = chktype(f.ret);
-            for(a in f.args) {
-                var _aname = a.name;
-                if(_aname == 'void') continue;
-                if(chkname(_aname,'*')) _comp = true;
-                if(chktype(a.type)) _comp = true;
+    static var hcount = 0;
+    static var wcount = 0;
+    static var ncount = 0;
 
-                var _first = a.type.charAt(0);
-                if(_first == '$_first'.toLowerCase()) _comp = true;
-                var _t = to_haxe_type(a.type);
-                var _p = _aname.indexOf('[');
-                if(_p != -1) {
-                    _aname = _aname.substr(0, _p);
-                    _t = 'Array<$_t>';
-                }
+    static function get_args(_fname:String,args:Array<GLFunctionArg>) {
+        var _wrap = false;
+        var _hidden = false;
+        var _native = '$_fname';
+        var outargs = [];
+                
+        for(a in args) {
+            if(a.name == 'void') continue;
 
-                _aname = sanitize_name(_aname);
-                _args += '$_aname:$_t'; 
-                if(_idx < f.args.length-1) _args+=', ';
-                _idx++;
+            var _skip = false;
+            var _aname = a.name;
+            var _atype = a.type;
+
+            if(_aname == '*v') {
+                outargs.push({ name:'bOffset', type:'Int' });
+                _aname = 'v';
+                _atype = 'BytesData';
+                _native = 'linc::opengl::$_fname';
+                _wrap = true;
             }
-            var _name = f.name;
-            var s = 'static function $_name($_args) : ${to_haxe_type(f.ret)};\n';
-            if(!_comp) s = '@:native(\'$_name\')\n        $s';
-            if(_comp) _comp_list.push(s); else _list.push(s); 
+
+            if(chkname(_aname,'*')) _hidden = true;
+                //convert known types
+            _atype = to_haxe_type(_atype);
+                //any complex types after convert?
+            if(chktype(_atype)) _hidden = true;
+                //first letter lower case?
+            var _first = _atype.charAt(0);
+            if(_first == '$_first'.toLowerCase()) _hidden = true;
+            
+            var _p = _aname.indexOf('[');
+            if(_p != -1) {
+                _aname = _aname.substr(0, _p);
+                _atype = 'Array<$_atype>';
+                _hidden = true;
+                _wrap = true;
+            }
+
+            _aname = sanitize_name(_aname);
+
+            if(!_skip) {
+                outargs.push({ name:_aname, type:_atype });
+            }
+
         }
 
-        for(_i in _list) out += tb(4) + '$_i';
+        return {
+            native:'$_native',
+            args:outargs,
+            hidden:_hidden,
+            wrap:_wrap
+        }
+    }
+
+    static function get_function(functions:Array<GLFunction>) {
+        var out = '';
+
+        var _list = [];
+        var _wrap = [];
+        var _hidden = [];
+
+        for(f in functions) {
+            var _name = f.name;
+            var _args = '';
+            var _idx = 0;
+            var _ishidden = chktype(f.ret);
+            var _inf = get_args(_name, f.args);
+            for(a in _inf.args) {
+                _args += '${a.name}:${a.type}'; 
+                if(_idx < _inf.args.length-1) _args+=', ';
+                _idx++;
+            }
+            var s = 'static function $_name($_args) : ${to_haxe_type(f.ret)};\n';
+            var n = '@:native(\'${_inf.native}\')';
+            if(_ishidden || _inf.hidden) {
+                _hidden.push(s);
+            } else {
+                s = '$n\n    $s\n';//${tb(30-n.length)}
+                if(_inf.wrap) { _wrap.push(s); } 
+                else { _list.push(s); }
+            } //!hidden
+        } //each function
+
+        for(_i in _list) {
+            out += tb(4) + '$_i';
+            ncount++;
+        }
         out+='\n';
-        for(_i in _comp_list) out += tb(4) + '// $_i';
+        for(_i in _wrap) {
+            out += tb(4) + '$_i';
+            wcount++;
+        }
+        out+='\n';
+        for(_i in _hidden) {
+            out += tb(4) + '// $_i';
+            hcount++;
+        }
         return out;
     }
     static function write_file() {
 
-        var out = '\n\n@:keep\n@:include(\'linc_opengl.h\')\n@:build(linc.Linc.touch())\n@:build(linc.Linc.xml(\'opengl\'))\nextern class GL {\n\n';
+        var out = 'import haxe.io.BytesData;\n\n@:keep\n@:include(\'linc_opengl.h\')\n@:build(linc.Linc.touch())\n@:build(linc.Linc.xml(\'opengl\'))\nextern class GL {\n\n';
 
         var written_defines = [];
 
@@ -186,6 +251,8 @@ class Main {
         out += '\n\n}';
 
         sys.io.File.saveContent('GL.hx', out);
+
+        trace('functions - normal: $ncount  wrapped: $wcount   todo: $hcount  total: ${ncount+hcount+wcount}');
 
     } //write_file
 
@@ -267,8 +334,6 @@ class Main {
                 var argparts = p.split(' ');
                 _name = argparts.pop();
                 _type = argparts.join(' ');
-                _type = _type.replace('const ','');
-                _type = _type.replace('const*','');
                 args.push({ name:_name, type:_type });
             }
         }
