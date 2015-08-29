@@ -12,15 +12,14 @@ class Test {
     }
 
     public static function test2() {
-
-        trace('test1');
+        trace('ensuring compiling of test');
     }
 
 }
 
 typedef GLDefine = { name:String, value:Int, string:String }
 typedef GLFunction = { name:String, ret:String, string:String, args_str:String, args:Array<GLFunctionArg> }
-typedef GLFunctionArg = { name:String, type:String }
+typedef GLFunctionArg = { name:String, type:String, gltype:String }
 
 
 typedef GLVersion = {
@@ -78,7 +77,7 @@ class Main {
         return switch(t) {
             case 'void': 'Void';
             case 'GLfloat','GLdouble','GLclampf','GLclampd': 'Float';
-            case 'GLint','GLshort','GLsizei','GLenum','GLbitfield','GLclampx','GLfixed': 'Int';
+            case 'GLint','GLshort','GLsizei','GLenum','GLbitfield','GLclampx','GLfixed','GLsizeiptr','GLintptr': 'Int';
             case 'GLubyte', 'GLbyte','const GLchar*','GLchar*' : 'String';
             case 'GLuint','GLushort','GLhalf','GLhandleARB': 'UInt';
             case 'GLboolean': 'Bool';
@@ -116,11 +115,13 @@ class Main {
     static function get_args(_fname:String,args:Array<GLFunctionArg>) {
         var _wrap = false;
         var _hidden = false;
+        var _genbody = false;
         var _native = '$_fname';
         var _body:Array<String> = null;
         var outargs = [];
-                
+
         for(a in args) {
+            var _gltype = a.type;
             if(a.name == 'void') continue;
 
             var _skip = false;
@@ -128,13 +129,18 @@ class Main {
             var _atype = a.type;
 
             if(_aname == '*v') {
-                if(_body == null) _body = [];
-                _body.push('untyped __cpp__("$_fname(($_atype*)&{1}[0] + {0})", bOffset, v);');
-                outargs.push({ name:'?bOffset', type:'Int=0' });
+                _genbody = true;
+                outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
                 _aname = 'v';
                 _atype = 'BytesData';
                 _native = null;
                 _wrap = true;
+            } else if(_atype == 'const void*' || _atype == 'void*') {
+                _genbody = true;
+                _native = null;
+                _wrap = true;
+                outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
+                _atype = 'BytesData';
             }
 
             if(chkname(_aname,'*')) _hidden = true;
@@ -157,9 +163,31 @@ class Main {
             _aname = sanitize_name(_aname);
 
             if(!_skip) {
-                outargs.push({ name:_aname, type:_atype });
+                outargs.push({ name:_aname, type:_atype, gltype:_gltype });
             }
 
+        } //each args
+
+        if(_genbody) {
+            _body = [];
+            var _arg_names = [];
+            var _arg_items = [];
+            for(a in outargs) {
+                if(a.type == 'BytesData') {
+                    var p = (a.gltype.indexOf('*') == -1) ? '*' : '';
+                    _arg_names.push('(${a.gltype}$p)&{1}[0] + {0}');
+                    _arg_items.push('bOffset');
+                    _arg_items.push('${a.name}');
+                } else if(a.name != '?bOffset') {
+                    _arg_names.push(a.name);
+                }
+            }
+            //($_atype*)&{1}[0] + {0}
+            var _arg_parts = '';
+            var _arg_body = _arg_names.join(', ');
+            for(_ar in _arg_items) _arg_parts += ', ' + _ar;
+
+            _body.push('untyped __cpp__("$_fname($_arg_body)"$_arg_parts);');
         }
 
         return {
@@ -289,7 +317,7 @@ class Main {
             s = r.matchedRight();
         }
 
-        var log_versions = true;
+        var log_versions = false;
         if(log_versions)
         for( n in glew.version_names ) trace('Found GL $n');
 
@@ -312,7 +340,7 @@ class Main {
             s = r.matchedRight();
         }
 
-        var log_ext = true;
+        var log_ext = false;
         if(log_ext)
         for( n in glew.ext_names ) trace('Found GL ext $n');
     
@@ -331,7 +359,7 @@ class Main {
     static function collect_defines() {
 
         var r = new EReg('(?!#define GL_VERSION_)(#define )(GL_.+) (.+)', 'g');
-        var log_defines = true;
+        var log_defines = false;
         for(v in glew.versions) {
             find_defines(r, v.content, v.defines, 'version ${v.major}.${v.minor}', log_defines);
         } //each version
@@ -354,7 +382,7 @@ class Main {
                 var argparts = p.split(' ');
                 _name = argparts.pop();
                 _type = argparts.join(' ');
-                args.push({ name:_name, type:_type });
+                args.push({ name:_name, type:_type, gltype:_type });
             }
         }
         return args;
@@ -399,7 +427,7 @@ class Main {
 
         var r = new EReg('#define (gl.*) GLEW_GET_FUN.*|GLAPI (.*) GLAPIENTRY (.*) [(](.*)[)]', 'g');
 
-        var log_functions = true;
+        var log_functions = false;
 
         for(v in glew.versions) {
             if(log_functions) trace('parsing functions for version ${v.major}.${v.minor}');
