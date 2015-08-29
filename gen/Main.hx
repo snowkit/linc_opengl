@@ -197,7 +197,7 @@ class Main {
                 _hidden.push(s);
             } else {
                 s = '$n\n    $s';
-                if(_inf.body != null) s += '      ${_inf.body}\n';
+                if(_inf.body != null) { s += '      ${_inf.body}\n'; } else { s+='\n\n'; }
                 if(_inf.wrap) { _wrap.push(s); } 
                 else { _list.push(s); }
             } //!hidden
