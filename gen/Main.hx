@@ -117,7 +117,7 @@ class Main {
         var _wrap = false;
         var _hidden = false;
         var _native = '$_fname';
-        var _body:String = null;
+        var _body:Array<String> = null;
         var outargs = [];
                 
         for(a in args) {
@@ -128,7 +128,8 @@ class Main {
             var _atype = a.type;
 
             if(_aname == '*v') {
-                _body = '{ untyped __cpp__("$_fname(($_atype*)&{1}[0] + {0})", bOffset, v); };';
+                if(_body == null) _body = [];
+                _body.push('untyped __cpp__("$_fname(($_atype*)&{1}[0] + {0})", bOffset, v);');
                 outargs.push({ name:'?bOffset', type:'Int=0' });
                 _aname = 'v';
                 _atype = 'BytesData';
@@ -197,24 +198,24 @@ class Main {
                 _hidden.push(s);
             } else {
                 s = '$n\n    $s';
-                if(_inf.body != null) { s += '      ${_inf.body}\n'; } else { s+='\n\n'; }
+                if(_inf.body != null) { s += tb(6)+ '{ ${_inf.body.join('\n        ')} }'; } else { s+='\n'; }
                 if(_inf.wrap) { _wrap.push(s); } 
                 else { _list.push(s); }
             } //!hidden
         } //each function
 
         for(_i in _list) {
-            out += tb(4) + '$_i';
+            out += tb(4) + '$_i\n';
             ncount++;
         }
         out+='\n';
         for(_i in _wrap) {
-            out += tb(4) + '$_i';
+            out += tb(4) + '$_i\n';
             wcount++;
         }
         out+='\n';
         for(_i in _hidden) {
-            out += tb(4) + '// $_i';
+            out += tb(4) + '// $_i\n';
             hcount++;
         }
         return out;
