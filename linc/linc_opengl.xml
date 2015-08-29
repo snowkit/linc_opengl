@@ -1,0 +1,32 @@
+<xml>
+
+    <files id='haxe'>
+        <compilerflag value='-I${LINC_OPENGL_PATH}/linc/'/>
+        <compilerflag value='-I${LINC_OPENGL_PATH}/lib/glew/include/'/>
+        <file name='${LINC_OPENGL_PATH}/linc/linc_opengl.cpp' />
+        <file name='${LINC_OPENGL_PATH}/lib/glew/src/glew.c' />
+    </files>
+
+    <target id="haxe">
+
+        <section if="windows">
+            <lib name="opengl32.lib" />
+        </section>
+
+        <section if="linux">
+            <lib name="-lGL" />
+        </section>
+        
+        <section if="android">
+            <lib name="-lEGL" />
+            <lib name="-lGLESv2" />
+            <lib name="-lGLESv1_CM" />
+        </section>
+        
+        <section if="mac">
+            <vflag name="-framework" value="OpenGL" />
+        </section>
+
+    </target>
+
+</xml>
