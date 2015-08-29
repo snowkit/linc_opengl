@@ -100,6 +100,7 @@ class Main {
         return r;
     }
 
+    static var dcount = 0;
     static var hcount = 0;
     static var wcount = 0;
     static var ncount = 0;
@@ -214,6 +215,7 @@ class Main {
             out += '//GL ${v.major}.${v.minor}\n';
             for(d in v.defines) {
                 if(written_defines.indexOf(d.name) == -1) {
+                    dcount++;
                     written_defines.push(d.name);
                     var s = 'inline static var ${d.name}';
                     var skip = ['0xFFFFFFFFFFFFFFFF'];
@@ -233,6 +235,7 @@ class Main {
             out += '//${e.name}\n';
             for(d in e.defines) {
                 if(written_defines.indexOf(d.name) == -1) {
+                    dcount++;
                     written_defines.push(d.name);
                     var s = 'inline static var ${d.name}';
                     var skip = ['0xFFFFFFFFFFFFFFFF'];
@@ -252,6 +255,7 @@ class Main {
 
         sys.io.File.saveContent('GL.hx', out);
 
+        trace('defines - done: $dcount   total: $dcount');
         trace('functions - done: $ncount  wrapped: $wcount   todo: $hcount  total: ${ncount+hcount+wcount}');
 
     } //write_file
