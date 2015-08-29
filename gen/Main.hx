@@ -1,5 +1,16 @@
 using StringTools;
 
+import GL;
+
+class Test {
+
+    static function test() {
+        GL.glClearColor(1.0,1.0,1.0,1.0);
+        GL.glClear(GL.GL_COLOR_BUFFER_BIT);
+    }
+
+}
+
 typedef GLDefine = { name:String, value:Int, string:String }
 typedef GLFunction = { name:String, ret:String, string:String, args_str:String, args:Array<GLFunctionArg> }
 typedef GLFunctionArg = { name:String, type:String }
@@ -59,9 +70,10 @@ class Main {
         return switch(t) {
             case 'void': 'Void';
             case 'GLfloat','GLdouble','GLclampf','GLclampd': 'Float';
-            case 'GLint','GLshort','GLsizei','GLubyte','GLenum','GLbitfield','GLbyte': 'Int';
-            case 'GLuint','GLushort','GLhandleARB': 'UInt';
+            case 'GLint','GLshort','GLsizei','GLubyte','GLenum','GLbitfield','GLbyte','GLclampx','GLfixed': 'Int';
+            case 'GLuint','GLushort','GLhalf','GLhandleARB': 'UInt';
             case 'GLboolean': 'Bool';
+            case 'GLint64EXT': 'cpp.Int64';
             case 'GLuint64','GLuint64EXT': 'cpp.UInt64';
             case _: return t;
         }
@@ -75,28 +87,32 @@ class Main {
     }
 
     static function chkname(n:String, val:String) {
-        return n.indexOf(val) == -1;
+        return n.indexOf(val) != -1;
+    }
+
+    static function chktype(a:String) {
+        var r = false;
+        for(n in [
+            '*','GLsync','GLvdpauSurfaceNV','GLintptr','GLsizeiptr','GLLOGPROCREGAL'
+            ]
+        ) r = r || chkname(a,n);
+        return r;
     }
 
     static function get_function(functions:Array<GLFunction>) {
-
         var out = '';
         var _list = [];
         var _comp_list = [];
         for(f in functions) {
             var _args = '';
             var _idx = 0;
-            var _comp =
-                chkname(f.ret,'*') ||
-                chkname(f.ret,'GLsync') ||
-                chkname(f.ret,'GLintptr');
+            var _comp = chktype(f.ret);
             for(a in f.args) {
                 var _aname = a.name;
                 if(_aname == 'void') continue;
                 if(chkname(_aname,'*')) _comp = true;
-                if(chkname(a.type,'*')) _comp = true;
-                if(chkname(a.type,'GLintptr')) _comp = true;
-                if(chkname(a.type,'GLsync')) _comp = true;
+                if(chktype(a.type)) _comp = true;
+
                 var _first = a.type.charAt(0);
                 if(_first == '$_first'.toLowerCase()) _comp = true;
                 var _t = to_haxe_type(a.type);
@@ -112,7 +128,8 @@ class Main {
                 _idx++;
             }
             var _name = f.name;
-            var s = 'inline static function $_name($_args) : ${to_haxe_type(f.ret)} {}\n';
+            var s = 'static function $_name($_args) : ${to_haxe_type(f.ret)};\n';
+            if(!_comp) s = '@:native(\'$_name\')\n        $s';
             if(_comp) _comp_list.push(s); else _list.push(s); 
         }
 
@@ -123,11 +140,10 @@ class Main {
     }
     static function write_file() {
 
-        var out = '@:publicFields\nclass GL {\n\n';
+        var out = '\n\n@:keep\n@:include(\'linc_opengl.h\')\n@:build(linc.Linc.touch())\n@:build(linc.Linc.xml(\'opengl\'))\nextern class GL {\n\n';
 
         var written_defines = [];
 
-        trace(GL.GL_CURRENT_FOG_COORD);
 
         for(v in glew.versions) {
             out += '//GL ${v.major}.${v.minor}\n';
