@@ -252,7 +252,7 @@ class Main {
 
         sys.io.File.saveContent('GL.hx', out);
 
-        trace('functions - normal: $ncount  wrapped: $wcount   todo: $hcount  total: ${ncount+hcount+wcount}');
+        trace('functions - done: $ncount  wrapped: $wcount   todo: $hcount  total: ${ncount+hcount+wcount}');
 
     } //write_file
 
