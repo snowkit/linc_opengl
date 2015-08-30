@@ -1248,8 +1248,7 @@ extern class GL {
           { untyped __cpp__("glGetPolygonStipple((GLubyte*)&{1}[0] + {0})", bOffset, mask); }
 
         inline static function glGetString(name:Int) : String
-          { untyped __cpp__("const char* __val = (const char*)glGetString({0})", name);
-            untyped __cpp__("if(!__val)__val=\"\"");
+          { untyped __cpp__("const char* __val = (const char*)glGetString({0}); if(!__val)__val=\"\"", name);
             return untyped __cpp__("::String(__val)"); }
 
         inline static function glGetTexEnvfv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
@@ -2828,8 +2827,7 @@ extern class GL {
           { untyped __cpp__("glGetBooleani_v({0}, {1}, (GLboolean*)&{3}[0] + {2})", pname, index, bOffset, data); }
 
         inline static function glGetStringi(name:Int, index:UInt) : String
-          { untyped __cpp__("const char* __val = (const char*)glGetStringi({0},{1})", name,index);
-            untyped __cpp__("if(!__val)__val=\"\"");
+          { untyped __cpp__("const char* __val = (const char*)glGetStringi({0},{1}); if(!__val)__val=\"\"", name,index);
             return untyped __cpp__("::String(__val)"); }
 
         inline static function glGetTexParameterIiv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void

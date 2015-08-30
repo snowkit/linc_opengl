@@ -102,7 +102,6 @@ class Main {
 
     static var dcount = 0;
     static var hcount = 0;
-    static var wcount = 0;
     static var ncount = 0;
 
     static var explicit = [
@@ -132,12 +131,10 @@ class Main {
 
         switch(_fname) {
             case 'glGetString':
-                bc('const char* __val = (const char*)glGetString({0})',['name']);
-                bc('if(!__val)__val=\\"\\"');
+                bc('const char* __val = (const char*)glGetString({0}); if(!__val)__val=\\"\\"',['name']);
                 bc('::String(__val)', true);
             case 'glGetStringi':
-                bc('const char* __val = (const char*)glGetStringi({0},{1})',['name','index']);
-                bc('if(!__val)__val=\\"\\"');
+                bc('const char* __val = (const char*)glGetStringi({0},{1}); if(!__val)__val=\\"\\"',['name','index']);
                 bc('::String(__val)', true);
             case _: ret = null;
         }        
@@ -382,7 +379,7 @@ class Main {
         out+='\n';
         for(_i in _wrap) {
             out += tb(8) + '$_i\n\n';
-            wcount++;
+            ncount++;
         }
 
         out+='\n';
@@ -469,7 +466,7 @@ class Main {
         sys.io.File.saveContent('../opengl/GL.hx', out);
 
         trace('defines - done: $dcount   total: $dcount');
-        trace('functions - done: $ncount  wrapped: $wcount   todo: $hcount  total: ${ncount+hcount+wcount}');
+        trace('functions - done: $ncount  todo: $hcount  total: ${ncount+hcount}');
 
     } //write_file
 
