@@ -199,6 +199,13 @@ class Main {
             'glGetFogFuncSGIS',
         ];
 
+        var _notdatafunc = [
+            'glGetBooleanv',
+            'glGetIntegerv',
+            'glGetFloatv',
+            'glGetDoublev'
+        ];
+
         for(a in args) {
             var _gltype = a.type;
             if(a.name == 'void') continue;
@@ -227,7 +234,7 @@ class Main {
                 _wrap = true;
                 var l = _fname.length;
                 var _is_data = _datafunc.indexOf(_fname) != -1;
-                if(!_is_data) {
+                if(!_is_data && _notdatafunc.indexOf(_fname) == -1) {
                     while(l > 0) { l--; var c = _fname.charAt(l); if(c.toUpperCase() != c) { if(c == 'v') _is_data = true; break; } }
                 }
                 if(_is_data) {

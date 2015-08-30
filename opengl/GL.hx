@@ -1199,20 +1199,20 @@ extern class GL {
         inline static function glGenTextures(n:Int, textures:Array<UInt>) : Void
           { untyped __cpp__("glGenTextures({0}, (GLuint*)&{1}[0])", n, textures); }
 
-        inline static function glGetBooleanv(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetBooleanv({0}, (GLboolean*)&{2}[0] + {1})", pname, bOffset, params); }
+        inline static function glGetBooleanv(pname:Int, params:Array<Bool>) : Void
+          { untyped __cpp__("glGetBooleanv({0}, (GLboolean*)&{1}[0])", pname, params); }
 
         inline static function glGetClipPlane(plane:Int, equation:Array<Float>) : Void
           { untyped __cpp__("glGetClipPlane({0}, (GLdouble*)&{1}[0])", plane, equation); }
 
-        inline static function glGetDoublev(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetDoublev({0}, (GLdouble*)&{2}[0] + {1})", pname, bOffset, params); }
+        inline static function glGetDoublev(pname:Int, params:Array<Float>) : Void
+          { untyped __cpp__("glGetDoublev({0}, (GLdouble*)&{1}[0])", pname, params); }
 
-        inline static function glGetFloatv(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetFloatv({0}, (GLfloat*)&{2}[0] + {1})", pname, bOffset, params); }
+        inline static function glGetFloatv(pname:Int, params:Array<Float>) : Void
+          { untyped __cpp__("glGetFloatv({0}, (GLfloat*)&{1}[0])", pname, params); }
 
-        inline static function glGetIntegerv(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetIntegerv({0}, (GLint*)&{2}[0] + {1})", pname, bOffset, params); }
+        inline static function glGetIntegerv(pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetIntegerv({0}, (GLint*)&{1}[0])", pname, params); }
 
         inline static function glGetLightfv(light:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
           { untyped __cpp__("glGetLightfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", light, pname, bOffset, params); }
