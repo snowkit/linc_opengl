@@ -1,22 +1,5 @@
 using StringTools;
 
-import GL;
-
-class Test {
-
-    public static function test() {
-        GL.glClearColor(1.0,1.0,1.0,1.0);
-        GL.glClear(GL.GL_COLOR_BUFFER_BIT);
-        var b = haxe.io.Bytes.alloc(3);
-        GL.glTexCoord1iv(b.getData());
-    }
-
-    public static function test2() {
-        trace('ensuring compiling of test');
-    }
-
-}
-
 typedef GLDefine = { name:String, value:Int, string:String }
 typedef GLFunction = { name:String, ret:String, string:String, args_str:String, args:Array<GLFunctionArg> }
 typedef GLFunctionArg = { name:String, type:String, gltype:String }
@@ -49,9 +32,11 @@ class Main {
     static var glew:GLEW;
     static var content:String;
 
-    static function main() {
+    static var ignored = [
+        'glEdgeFlagv'
+    ];
 
-        Test.test2();
+    static function main() {
 
         glew = {
             versions:[],
@@ -76,9 +61,9 @@ class Main {
     static function to_haxe_type(t:String) {
         return switch(t) {
             case 'void': 'Void';
-            case 'GLfloat','GLdouble','GLclampf','GLclampd': 'Float';
+            case 'GLfloat','GLdouble','GLclampf','GLclampd', 'const GLfloat', 'const GLdouble': 'Float';
             case 'GLint','GLshort','GLsizei','GLenum','GLbitfield','GLclampx','GLfixed','GLsizeiptr','GLintptr': 'Int';
-            case 'GLubyte', 'GLbyte','const GLchar*','GLchar*' : 'String';
+            case 'GLubyte', 'GLbyte','const GLchar*','GLchar*', 'const GLubyte *','const GLubyte*','const GLchar *' : 'String';
             case 'GLuint','GLushort','GLhalf','GLhandleARB': 'UInt';
             case 'GLboolean': 'Bool';
             case 'GLint64EXT': 'cpp.Int64';
@@ -101,7 +86,15 @@ class Main {
     static function chktype(a:String) {
         var r = false;
         for(n in [
-            '*','GLsync','GLvdpauSurfaceNV','GLintptr','GLsizeiptr','GLLOGPROCREGAL','GLbyte','GLubyte'
+            '*',
+            'GLsync',
+            'GLvdpauSurfaceNV',
+            'GLintptr',
+            'GLsizeiptr',
+            'GLLOGPROCREGAL',
+            'GLDEBUGPROC',
+            'GLbyte',
+            'GLubyte'
             ]
         ) r = r || chkname(a,n);
         return r;
@@ -112,13 +105,102 @@ class Main {
     static var wcount = 0;
     static var ncount = 0;
 
-    static function get_args(_fname:String,args:Array<GLFunctionArg>) {
+    static var explicit = [
+        'glGetString',
+        'glGetStringi',
+    ];
+
+    static function explicit_function(_fname:String, _fret:String, args:Array<GLFunctionArg>) {
+        var outargs = [];
+        for(a in args) {
+            outargs.push({ name:a.name, type:to_haxe_type(a.type), gltype:a.type });
+        }
+        var ret = {
+            native:null,
+            body:[],
+            args:outargs,
+            hidden:false,
+            wrap:true
+        };
+
+        inline function ut(val:String,?ns:Array<String>,_ret:Bool=false) {
+            if(ns == null) ns = [];
+            var nsval = ns.length>0 ? ', '+ns.join(',') : '';
+            return (_ret ? 'return ':'') + 'untyped __cpp__("$val"$nsval);';
+        }
+        inline function bc(val:String,?ns:Array<String>,_ret:Bool=false) ret.body.push(ut(val,ns,_ret));
+
+        switch(_fname) {
+            case 'glGetString':
+                bc('const char* __val = (const char*)glGetString({0})',['name']);
+                bc('if(!__val)__val=\\"\\"');
+                bc('::String(__val)', true);
+            case 'glGetStringi':
+                bc('const char* __val = (const char*)glGetStringi({0},{1})',['name','index']);
+                bc('if(!__val)__val=\\"\\"');
+                bc('::String(__val)', true);
+            case _: ret = null;
+        }        
+
+        return ret;
+    }
+
+    static function process_function(_fname:String, _fret:String, args:Array<GLFunctionArg>) {
+
+        if(explicit.indexOf(_fname) != -1) {
+            return explicit_function(_fname, _fret, args);
+        }
+
         var _wrap = false;
         var _hidden = false;
         var _genbody = false;
         var _native = '$_fname';
         var _body:Array<String> = null;
         var outargs = [];
+
+        var _datatypes = [
+            'GLint*',
+            'GLuint*',
+            'GLubyte*',
+            'GLushort*',
+            'GLfloat*',
+            'GLdouble*',
+            'GLboolean*',
+            'const GLhalf*',
+            'const GLenum*',
+            'const GLint*',
+            'const GLfloat*',
+            'const GLuint*',
+            'const GLushort*',
+            'const GLubyte*',
+            'const GLdouble*',
+            'const GLbyte*',
+            'const GLshort*',
+            'const GLfixed*',
+        ];
+
+        var _datafunc = [
+            'glBitmap',
+            'glGetPolygonStipple',
+            'glMap1d',
+            'glMap1f',
+            'glMap2d',
+            'glMap2f',
+            'glLoadMatrixd',
+            'glLoadMatrixf',
+            'glMultMatrixd',
+            'glMultMatrixf',
+            'glPolygonStipple',
+            'glSelectBuffer',
+            'glFeedbackBuffer',
+            'glTransformFeedbackAttribsNV',
+            'glLoadMatrixx',
+            'glMultMatrixx',
+            'glDetailTexFuncSGIS',
+            'glGetDetailTexFuncSGIS',
+            'glFogFuncSGIS',
+            'glGetFogFuncSGIS',
+        ];
 
         for(a in args) {
             var _gltype = a.type;
@@ -141,26 +223,51 @@ class Main {
                 _wrap = true;
                 outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
                 _atype = 'BytesData';
-            } else if(_atype == 'const GLint*') {
+
+            } else if(_datatypes.indexOf(_atype) != -1) {
                 _genbody = true;
                 _native = null;
                 _wrap = true;
+                var l = _fname.length;
+                var _is_data = _datafunc.indexOf(_fname) != -1;
+                if(!_is_data) {
+                    while(l > 0) { l--; var c = _fname.charAt(l); if(c.toUpperCase() != c) { if(c == 'v') _is_data = true; break; } }
+                }
+                if(_is_data) {
+                    outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
+                    _atype = 'BytesData';
+                } else {
+                    _atype = 'Array';
+                }
             }
 
-            if(chkname(_aname,'*')) _hidden = true;
+            var log_hidden = false;
+            if(chkname(_aname,'*')) {
+                if(log_hidden) trace('hidden: $_fname  reason: pointer in argument name');
+                _hidden = true;
+            }
                 //convert known types
             _atype = to_haxe_type(_atype);
                 //any complex types after convert?
-            if(chktype(_atype)) _hidden = true;
+            if(chktype(_atype)) {
+                _hidden = true;
+                if(log_hidden) trace('hidden: $_fname  reason: typecheck');
+            }
                 //first letter lower case?
             var _first = _atype.charAt(0);
-            if(_first == '$_first'.toLowerCase()) _hidden = true;
+            if(_first == '$_first'.toLowerCase()) {
+                if(_atype.indexOf('cpp.') == -1) {
+                    _hidden = true;
+                    if(log_hidden) trace('hidden: $_fname  reason: lowercase type names');
+                }
+            }
             
             var _p = _aname.indexOf('[');
             if(_p != -1) {
                 _aname = _aname.substr(0, _p);
                 _atype = 'Array<$_atype>';
                 _hidden = true;
+                if(log_hidden) trace('hidden: $_fname  reason: arrays in args');
                 _wrap = true;
             }
 
@@ -179,24 +286,41 @@ class Main {
             for(a in outargs) {
                 if(a.type == 'BytesData') {
                     var p = (a.gltype.indexOf('*') == -1) ? '*' : '';
-                    _arg_names.push('(${a.gltype}$p)&{1}[0] + {0}');
+                    var _bid = _arg_items.length;
+                    var _bfid = _bid+1;
+                    _arg_names.push('(${a.gltype}$p)&{$_bfid}[0] + {$_bid}');
                     _arg_items.push('bOffset');
                     _arg_items.push('${a.name}');
                 }  
 
-                else if(a.type == 'const GLint*') {
-                    trace(_fname);
+                else if(a.type == 'Array') {
+                    var _tb = a.gltype;
+                        _tb = _tb.replace('const ','');
+                        _tb = _tb.replace('const','');
+                        _tb = _tb.replace('*','');
+                    var _ta = to_haxe_type(_tb);
+                    if(_ta != _tb) {
+                        a.type = 'Array<$_ta>';
+                        var p = (a.gltype.indexOf('*') == -1) ? '*' : '';
+                        _arg_names.push('(${a.gltype}$p)&{${_arg_items.length}}[0]');
+                        _arg_items.push(a.name);
+                    }
+                } else if(a.name != '?bOffset') {
+                    _arg_names.push('{${_arg_items.length}}');
+                    _arg_items.push(a.name);
                 }
 
-                else if(a.name != '?bOffset') {
-                    _arg_names.push(a.name);
-                }
             }
             var _arg_parts = '';
             var _arg_body = _arg_names.join(', ');
             for(_ar in _arg_items) _arg_parts += ', ' + _ar;
 
-            _body.push('untyped __cpp__("$_fname($_arg_body)"$_arg_parts);');
+            var _ret = '';
+            if(_fret != 'Void' && _fret != 'void') {
+                _ret = 'return ';
+            }
+
+            _body.push('${_ret}untyped __cpp__("$_fname($_arg_body)"$_arg_parts);');
         }
 
         return {
@@ -214,13 +338,21 @@ class Main {
         var _list = [];
         var _wrap = [];
         var _hidden = [];
+        var _ignored = [];
 
         for(f in functions) {
             var _name = f.name;
+
+            if( ignored.indexOf(_name) != -1 ) {
+                _ignored.push( f.string );
+                continue;
+            }
+
             var _args = '';
             var _idx = 0;
-            var _ishidden = chktype(f.ret);
-            var _inf = get_args(_name, f.args);
+            var _fret = to_haxe_type(f.ret);
+            var _ishidden = chktype(_fret);
+            var _inf = process_function(_name, _fret, f.args);
             for(a in _inf.args) {
                 _args += '${a.name}:${a.type}'; 
                 if(_idx < _inf.args.length-1) _args+=', ';
@@ -230,14 +362,13 @@ class Main {
             var _inline = (_inf.body==null) ? '' : 'inline ';
             var _endl = (_inf.body==null) ? ';' : '\n';
             var s = '${_inline}static function $_name($_args) : ${to_haxe_type(f.ret)}$_endl';
-            var n =  (_inf.native==null) ? '' : '@:native(\'${_inf.native}\')';
+            var n =  (_inf.native==null) ? '' : '@:native(\'${_inf.native}\')\n        ';
 
-            s = '$n\n    $s';
-            if(_inf.body != null) { s += tb(6)+ '{ ${_inf.body.join('\n        ')} }\n'; } else { s+='\n'; }
-
+            s = '$n$s';
+            if(_inf.body != null) { s += tb(10)+ '{ ${_inf.body.join('\n            ')} }'; }
 
             if(_ishidden || _inf.hidden) {
-                _hidden.push(s.split('\n').map(function(_f){ return _f.trim(); }).join('\n    // '));
+                _hidden.push(s.split('\n').map(function(_f){ return '\n        // ' + _f.trim(); }).join(''));
             } else {
                 if(_inf.wrap) { _wrap.push(s); } 
                 else { _list.push(s); }
@@ -245,71 +376,97 @@ class Main {
         } //each function
 
         for(_i in _list) {
-            out += tb(4) + '$_i\n';
+            out += tb(8) + '$_i\n\n';
             ncount++;
         }
         out+='\n';
         for(_i in _wrap) {
-            out += tb(4) + '$_i\n';
+            out += tb(8) + '$_i\n\n';
             wcount++;
         }
+
         out+='\n';
-        for(_i in _hidden) {
-            out += tb(4) + '// $_i\n';
-            hcount++;
+        if(_hidden.length > 0) {
+            out+='\n    // TODO functions\n\n';
+            for(_i in _hidden) {
+                out += tb(12) + '$_i\n';
+                hcount++;
+            }
+        }
+
+        if(_ignored.length > 0) {
+            out+='\n    // ignored functions\n\n';
+            for(_i in _ignored) {
+                out += tb(12) + '// $_i\n';
+                hcount++;
+            }
         }
         return out;
     }
     static function write_file() {
 
-        var out = 'import haxe.io.BytesData;\n\n@:keep\n@:include(\'linc_opengl.h\')\n@:build(linc.Linc.touch())\n@:build(linc.Linc.xml(\'opengl\'))\nextern class GL {\n\n';
+        var out = 'package opengl;\n\nimport haxe.io.BytesData;\n\n@:keep\n@:include(\'linc_opengl.h\')\n@:build(linc.Linc.touch())\n@:build(linc.Linc.xml(\'opengl\'))\nextern class GL {\n\n';
 
         var written_defines = [];
 
 
         for(v in glew.versions) {
-            out += '//GL ${v.major}.${v.minor}\n';
-            for(d in v.defines) {
-                if(written_defines.indexOf(d.name) == -1) {
-                    dcount++;
-                    written_defines.push(d.name);
-                    var s = 'inline static var ${d.name}';
-                    var skip = ['0xFFFFFFFFFFFFFFFF'];
-                    var _sk = skip.indexOf(d.string) != -1;
-                    out += tb(4) + (_sk?'// ':'') + '$s ${tb(80-s.length)} = ${d.string};\n';
-                }
-            }
+            out += '//GL ${v.major}.${v.minor}\n\n';
 
-            out += '\n\n';
-            out += get_function(v.functions);
-            out += '\n\n';
+            if(v.defines.length > 0) {
+                out += '    //GL ${v.major}.${v.minor} defines\n\n';
+                for(d in v.defines) {
+                    if(written_defines.indexOf(d.name) == -1) {
+                        dcount++;
+                        written_defines.push(d.name);
+                        var s = 'inline static var ${d.name}';
+                        var skip = ['0xFFFFFFFFFFFFFFFF'];
+                        var _sk = skip.indexOf(d.string) != -1;
+                        out += tb(8) + (_sk?'// ':'') + '$s ${tb(80-s.length)} = ${d.string};\n';
+                    }
+                } //each define
+            } //any defines
+
+            if(v.functions.length > 0) {
+                out += '\n\n';
+                out += '    //GL ${v.major}.${v.minor} functions\n\n';
+                out += get_function(v.functions);
+                out += '\n\n';
+            }
         }
 
         out += '\n\n';
 
         for(e in glew.exts) {
-            out += '//${e.name}\n';
-            for(d in e.defines) {
-                if(written_defines.indexOf(d.name) == -1) {
-                    dcount++;
-                    written_defines.push(d.name);
-                    var s = 'inline static var ${d.name}';
-                    var skip = ['0xFFFFFFFFFFFFFFFF'];
-                    var _sk = skip.indexOf(d.string) != -1;
-                    out += tb(4) + (_sk?'// ':'') + '$s ${tb(80-s.length)} = ${d.string};\n';
-                }
+            out += '//${e.name}\n\n';
+
+            if(e.defines.length>0) {
+                out += '    // ${e.name} defines\n\n';
+                for(d in e.defines) {
+                    if(written_defines.indexOf(d.name) == -1) {
+                        dcount++;
+                        written_defines.push(d.name);
+                        var s = 'inline static var ${d.name}';
+                        var skip = ['0xFFFFFFFFFFFFFFFF'];
+                        var _sk = skip.indexOf(d.string) != -1;
+                        out += tb(8) + (_sk?'// ':'') + '$s ${tb(80-s.length)} = ${d.string};\n';
+                    }
+                } //each define
+            } //any define
+
+            out += '\n\n';
+
+            if(e.functions.length > 0) {
+                out += '\n\n';
+                out += '    // ${e.name} functions\n\n';
+                out += get_function(e.functions);
+                out += '\n\n';
             }
-
-            out += '\n\n';
-
-            out += '\n\n';
-            out += get_function(e.functions);
-            out += '\n\n';
         }
 
         out += '\n\n}';
 
-        sys.io.File.saveContent('GL.hx', out);
+        sys.io.File.saveContent('../opengl/GL.hx', out);
 
         trace('defines - done: $dcount   total: $dcount');
         trace('functions - done: $ncount  wrapped: $wcount   todo: $hcount  total: ${ncount+hcount+wcount}');
@@ -394,6 +551,13 @@ class Main {
                 var argparts = p.split(' ');
                 _name = argparts.pop();
                 _type = argparts.join(' ');
+
+                if(_name.charAt(0) == '*') {
+                    _name = _name.substr(1);
+                    var _p = _type.split(' ');
+                    _p[_p.length-1] += '*';
+                    _type = _p.join(' ');
+                }
                 args.push({ name:_name, type:_type, gltype:_type });
             }
         }
