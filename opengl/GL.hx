@@ -551,10 +551,10 @@ extern class GL {
     //GL 1.1 functions
 
         @:native('glAccum')
-        static function glAccum(op:Int, value:Float) : Void;
+        static function glAccum(op:Int, value:cpp.Float32) : Void;
 
         @:native('glAlphaFunc')
-        static function glAlphaFunc(func:Int, ref:Float) : Void;
+        static function glAlphaFunc(func:Int, ref:cpp.Float32) : Void;
 
         @:native('glArrayElement')
         static function glArrayElement(i:Int) : Void;
@@ -575,28 +575,28 @@ extern class GL {
         static function glClear(mask:Int) : Void;
 
         @:native('glClearAccum')
-        static function glClearAccum(red:Float, green:Float, blue:Float, alpha:Float) : Void;
+        static function glClearAccum(red:cpp.Float32, green:cpp.Float32, blue:cpp.Float32, alpha:cpp.Float32) : Void;
 
         @:native('glClearColor')
-        static function glClearColor(red:Float, green:Float, blue:Float, alpha:Float) : Void;
+        static function glClearColor(red:cpp.Float32, green:cpp.Float32, blue:cpp.Float32, alpha:cpp.Float32) : Void;
 
         @:native('glClearDepth')
-        static function glClearDepth(depth:Float) : Void;
+        static function glClearDepth(depth:cpp.Float64) : Void;
 
         @:native('glClearIndex')
-        static function glClearIndex(c:Float) : Void;
+        static function glClearIndex(c:cpp.Float32) : Void;
 
         @:native('glClearStencil')
         static function glClearStencil(s:Int) : Void;
 
         @:native('glColor3b')
-        static function glColor3b(red:String, green:String, blue:String) : Void;
+        static function glColor3b(red:cpp.Int8, green:cpp.Int8, blue:cpp.Int8) : Void;
 
         @:native('glColor3d')
-        static function glColor3d(red:Float, green:Float, blue:Float) : Void;
+        static function glColor3d(red:cpp.Float64, green:cpp.Float64, blue:cpp.Float64) : Void;
 
         @:native('glColor3f')
-        static function glColor3f(red:Float, green:Float, blue:Float) : Void;
+        static function glColor3f(red:cpp.Float32, green:cpp.Float32, blue:cpp.Float32) : Void;
 
         @:native('glColor3i')
         static function glColor3i(red:Int, green:Int, blue:Int) : Void;
@@ -605,7 +605,7 @@ extern class GL {
         static function glColor3s(red:Int, green:Int, blue:Int) : Void;
 
         @:native('glColor3ub')
-        static function glColor3ub(red:String, green:String, blue:String) : Void;
+        static function glColor3ub(red:cpp.UInt8, green:cpp.UInt8, blue:cpp.UInt8) : Void;
 
         @:native('glColor3ui')
         static function glColor3ui(red:UInt, green:UInt, blue:UInt) : Void;
@@ -614,13 +614,13 @@ extern class GL {
         static function glColor3us(red:UInt, green:UInt, blue:UInt) : Void;
 
         @:native('glColor4b')
-        static function glColor4b(red:String, green:String, blue:String, alpha:String) : Void;
+        static function glColor4b(red:cpp.Int8, green:cpp.Int8, blue:cpp.Int8, alpha:cpp.Int8) : Void;
 
         @:native('glColor4d')
-        static function glColor4d(red:Float, green:Float, blue:Float, alpha:Float) : Void;
+        static function glColor4d(red:cpp.Float64, green:cpp.Float64, blue:cpp.Float64, alpha:cpp.Float64) : Void;
 
         @:native('glColor4f')
-        static function glColor4f(red:Float, green:Float, blue:Float, alpha:Float) : Void;
+        static function glColor4f(red:cpp.Float32, green:cpp.Float32, blue:cpp.Float32, alpha:cpp.Float32) : Void;
 
         @:native('glColor4i')
         static function glColor4i(red:Int, green:Int, blue:Int, alpha:Int) : Void;
@@ -629,7 +629,7 @@ extern class GL {
         static function glColor4s(red:Int, green:Int, blue:Int, alpha:Int) : Void;
 
         @:native('glColor4ub')
-        static function glColor4ub(red:String, green:String, blue:String, alpha:String) : Void;
+        static function glColor4ub(red:cpp.UInt8, green:cpp.UInt8, blue:cpp.UInt8, alpha:cpp.UInt8) : Void;
 
         @:native('glColor4ui')
         static function glColor4ui(red:UInt, green:UInt, blue:UInt, alpha:UInt) : Void;
@@ -671,7 +671,7 @@ extern class GL {
         static function glDepthMask(flag:Bool) : Void;
 
         @:native('glDepthRange')
-        static function glDepthRange(zNear:Float, zFar:Float) : Void;
+        static function glDepthRange(zNear:cpp.Float64, zFar:cpp.Float64) : Void;
 
         @:native('glDisable')
         static function glDisable(cap:Int) : Void;
@@ -701,16 +701,16 @@ extern class GL {
         static function glEndList() : Void;
 
         @:native('glEvalCoord1d')
-        static function glEvalCoord1d(u:Float) : Void;
+        static function glEvalCoord1d(u:cpp.Float64) : Void;
 
         @:native('glEvalCoord1f')
-        static function glEvalCoord1f(u:Float) : Void;
+        static function glEvalCoord1f(u:cpp.Float32) : Void;
 
         @:native('glEvalCoord2d')
-        static function glEvalCoord2d(u:Float, v:Float) : Void;
+        static function glEvalCoord2d(u:cpp.Float64, v:cpp.Float64) : Void;
 
         @:native('glEvalCoord2f')
-        static function glEvalCoord2f(u:Float, v:Float) : Void;
+        static function glEvalCoord2f(u:cpp.Float32, v:cpp.Float32) : Void;
 
         @:native('glEvalMesh1')
         static function glEvalMesh1(mode:Int, i1:Int, i2:Int) : Void;
@@ -731,7 +731,7 @@ extern class GL {
         static function glFlush() : Void;
 
         @:native('glFogf')
-        static function glFogf(pname:Int, param:Float) : Void;
+        static function glFogf(pname:Int, param:cpp.Float32) : Void;
 
         @:native('glFogi')
         static function glFogi(pname:Int, param:Int) : Void;
@@ -740,7 +740,7 @@ extern class GL {
         static function glFrontFace(mode:Int) : Void;
 
         @:native('glFrustum')
-        static function glFrustum(left:Float, right:Float, bottom:Float, top:Float, zNear:Float, zFar:Float) : Void;
+        static function glFrustum(left:cpp.Float64, right:cpp.Float64, bottom:cpp.Float64, top:cpp.Float64, zNear:cpp.Float64, zFar:cpp.Float64) : Void;
 
         @:native('glGenLists')
         static function glGenLists(range:Int) : UInt;
@@ -755,10 +755,10 @@ extern class GL {
         static function glIndexMask(mask:UInt) : Void;
 
         @:native('glIndexd')
-        static function glIndexd(c:Float) : Void;
+        static function glIndexd(c:cpp.Float64) : Void;
 
         @:native('glIndexf')
-        static function glIndexf(c:Float) : Void;
+        static function glIndexf(c:cpp.Float32) : Void;
 
         @:native('glIndexi')
         static function glIndexi(c:Int) : Void;
@@ -767,7 +767,7 @@ extern class GL {
         static function glIndexs(c:Int) : Void;
 
         @:native('glIndexub')
-        static function glIndexub(c:String) : Void;
+        static function glIndexub(c:cpp.UInt8) : Void;
 
         @:native('glInitNames')
         static function glInitNames() : Void;
@@ -782,13 +782,13 @@ extern class GL {
         static function glIsTexture(texture:UInt) : Bool;
 
         @:native('glLightModelf')
-        static function glLightModelf(pname:Int, param:Float) : Void;
+        static function glLightModelf(pname:Int, param:cpp.Float32) : Void;
 
         @:native('glLightModeli')
         static function glLightModeli(pname:Int, param:Int) : Void;
 
         @:native('glLightf')
-        static function glLightf(light:Int, pname:Int, param:Float) : Void;
+        static function glLightf(light:Int, pname:Int, param:cpp.Float32) : Void;
 
         @:native('glLighti')
         static function glLighti(light:Int, pname:Int, param:Int) : Void;
@@ -797,7 +797,7 @@ extern class GL {
         static function glLineStipple(factor:Int, pattern:UInt) : Void;
 
         @:native('glLineWidth')
-        static function glLineWidth(width:Float) : Void;
+        static function glLineWidth(width:cpp.Float32) : Void;
 
         @:native('glListBase')
         static function glListBase(base:UInt) : Void;
@@ -812,19 +812,19 @@ extern class GL {
         static function glLogicOp(opcode:Int) : Void;
 
         @:native('glMapGrid1d')
-        static function glMapGrid1d(un:Int, u1:Float, u2:Float) : Void;
+        static function glMapGrid1d(un:Int, u1:cpp.Float64, u2:cpp.Float64) : Void;
 
         @:native('glMapGrid1f')
-        static function glMapGrid1f(un:Int, u1:Float, u2:Float) : Void;
+        static function glMapGrid1f(un:Int, u1:cpp.Float32, u2:cpp.Float32) : Void;
 
         @:native('glMapGrid2d')
-        static function glMapGrid2d(un:Int, u1:Float, u2:Float, vn:Int, v1:Float, v2:Float) : Void;
+        static function glMapGrid2d(un:Int, u1:cpp.Float64, u2:cpp.Float64, vn:Int, v1:cpp.Float64, v2:cpp.Float64) : Void;
 
         @:native('glMapGrid2f')
-        static function glMapGrid2f(un:Int, u1:Float, u2:Float, vn:Int, v1:Float, v2:Float) : Void;
+        static function glMapGrid2f(un:Int, u1:cpp.Float32, u2:cpp.Float32, vn:Int, v1:cpp.Float32, v2:cpp.Float32) : Void;
 
         @:native('glMaterialf')
-        static function glMaterialf(face:Int, pname:Int, param:Float) : Void;
+        static function glMaterialf(face:Int, pname:Int, param:cpp.Float32) : Void;
 
         @:native('glMateriali')
         static function glMateriali(face:Int, pname:Int, param:Int) : Void;
@@ -836,13 +836,13 @@ extern class GL {
         static function glNewList(list:UInt, mode:Int) : Void;
 
         @:native('glNormal3b')
-        static function glNormal3b(nx:String, ny:String, nz:String) : Void;
+        static function glNormal3b(nx:cpp.Int8, ny:cpp.Int8, nz:cpp.Int8) : Void;
 
         @:native('glNormal3d')
-        static function glNormal3d(nx:Float, ny:Float, nz:Float) : Void;
+        static function glNormal3d(nx:cpp.Float64, ny:cpp.Float64, nz:cpp.Float64) : Void;
 
         @:native('glNormal3f')
-        static function glNormal3f(nx:Float, ny:Float, nz:Float) : Void;
+        static function glNormal3f(nx:cpp.Float32, ny:cpp.Float32, nz:cpp.Float32) : Void;
 
         @:native('glNormal3i')
         static function glNormal3i(nx:Int, ny:Int, nz:Int) : Void;
@@ -851,34 +851,34 @@ extern class GL {
         static function glNormal3s(nx:Int, ny:Int, nz:Int) : Void;
 
         @:native('glOrtho')
-        static function glOrtho(left:Float, right:Float, bottom:Float, top:Float, zNear:Float, zFar:Float) : Void;
+        static function glOrtho(left:cpp.Float64, right:cpp.Float64, bottom:cpp.Float64, top:cpp.Float64, zNear:cpp.Float64, zFar:cpp.Float64) : Void;
 
         @:native('glPassThrough')
-        static function glPassThrough(token:Float) : Void;
+        static function glPassThrough(token:cpp.Float32) : Void;
 
         @:native('glPixelStoref')
-        static function glPixelStoref(pname:Int, param:Float) : Void;
+        static function glPixelStoref(pname:Int, param:cpp.Float32) : Void;
 
         @:native('glPixelStorei')
         static function glPixelStorei(pname:Int, param:Int) : Void;
 
         @:native('glPixelTransferf')
-        static function glPixelTransferf(pname:Int, param:Float) : Void;
+        static function glPixelTransferf(pname:Int, param:cpp.Float32) : Void;
 
         @:native('glPixelTransferi')
         static function glPixelTransferi(pname:Int, param:Int) : Void;
 
         @:native('glPixelZoom')
-        static function glPixelZoom(xfactor:Float, yfactor:Float) : Void;
+        static function glPixelZoom(xfactor:cpp.Float32, yfactor:cpp.Float32) : Void;
 
         @:native('glPointSize')
-        static function glPointSize(size:Float) : Void;
+        static function glPointSize(size:cpp.Float32) : Void;
 
         @:native('glPolygonMode')
         static function glPolygonMode(face:Int, mode:Int) : Void;
 
         @:native('glPolygonOffset')
-        static function glPolygonOffset(factor:Float, units:Float) : Void;
+        static function glPolygonOffset(factor:cpp.Float32, units:cpp.Float32) : Void;
 
         @:native('glPopAttrib')
         static function glPopAttrib() : Void;
@@ -905,10 +905,10 @@ extern class GL {
         static function glPushName(name:UInt) : Void;
 
         @:native('glRasterPos2d')
-        static function glRasterPos2d(x:Float, y:Float) : Void;
+        static function glRasterPos2d(x:cpp.Float64, y:cpp.Float64) : Void;
 
         @:native('glRasterPos2f')
-        static function glRasterPos2f(x:Float, y:Float) : Void;
+        static function glRasterPos2f(x:cpp.Float32, y:cpp.Float32) : Void;
 
         @:native('glRasterPos2i')
         static function glRasterPos2i(x:Int, y:Int) : Void;
@@ -917,10 +917,10 @@ extern class GL {
         static function glRasterPos2s(x:Int, y:Int) : Void;
 
         @:native('glRasterPos3d')
-        static function glRasterPos3d(x:Float, y:Float, z:Float) : Void;
+        static function glRasterPos3d(x:cpp.Float64, y:cpp.Float64, z:cpp.Float64) : Void;
 
         @:native('glRasterPos3f')
-        static function glRasterPos3f(x:Float, y:Float, z:Float) : Void;
+        static function glRasterPos3f(x:cpp.Float32, y:cpp.Float32, z:cpp.Float32) : Void;
 
         @:native('glRasterPos3i')
         static function glRasterPos3i(x:Int, y:Int, z:Int) : Void;
@@ -929,10 +929,10 @@ extern class GL {
         static function glRasterPos3s(x:Int, y:Int, z:Int) : Void;
 
         @:native('glRasterPos4d')
-        static function glRasterPos4d(x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glRasterPos4d(x:cpp.Float64, y:cpp.Float64, z:cpp.Float64, w:cpp.Float64) : Void;
 
         @:native('glRasterPos4f')
-        static function glRasterPos4f(x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glRasterPos4f(x:cpp.Float32, y:cpp.Float32, z:cpp.Float32, w:cpp.Float32) : Void;
 
         @:native('glRasterPos4i')
         static function glRasterPos4i(x:Int, y:Int, z:Int, w:Int) : Void;
@@ -944,10 +944,10 @@ extern class GL {
         static function glReadBuffer(mode:Int) : Void;
 
         @:native('glRectd')
-        static function glRectd(x1:Float, y1:Float, x2:Float, y2:Float) : Void;
+        static function glRectd(x1:cpp.Float64, y1:cpp.Float64, x2:cpp.Float64, y2:cpp.Float64) : Void;
 
         @:native('glRectf')
-        static function glRectf(x1:Float, y1:Float, x2:Float, y2:Float) : Void;
+        static function glRectf(x1:cpp.Float32, y1:cpp.Float32, x2:cpp.Float32, y2:cpp.Float32) : Void;
 
         @:native('glRecti')
         static function glRecti(x1:Int, y1:Int, x2:Int, y2:Int) : Void;
@@ -959,16 +959,16 @@ extern class GL {
         static function glRenderMode(mode:Int) : Int;
 
         @:native('glRotated')
-        static function glRotated(angle:Float, x:Float, y:Float, z:Float) : Void;
+        static function glRotated(angle:cpp.Float64, x:cpp.Float64, y:cpp.Float64, z:cpp.Float64) : Void;
 
         @:native('glRotatef')
-        static function glRotatef(angle:Float, x:Float, y:Float, z:Float) : Void;
+        static function glRotatef(angle:cpp.Float32, x:cpp.Float32, y:cpp.Float32, z:cpp.Float32) : Void;
 
         @:native('glScaled')
-        static function glScaled(x:Float, y:Float, z:Float) : Void;
+        static function glScaled(x:cpp.Float64, y:cpp.Float64, z:cpp.Float64) : Void;
 
         @:native('glScalef')
-        static function glScalef(x:Float, y:Float, z:Float) : Void;
+        static function glScalef(x:cpp.Float32, y:cpp.Float32, z:cpp.Float32) : Void;
 
         @:native('glScissor')
         static function glScissor(x:Int, y:Int, width:Int, height:Int) : Void;
@@ -986,10 +986,10 @@ extern class GL {
         static function glStencilOp(fail:Int, zfail:Int, zpass:Int) : Void;
 
         @:native('glTexCoord1d')
-        static function glTexCoord1d(s:Float) : Void;
+        static function glTexCoord1d(s:cpp.Float64) : Void;
 
         @:native('glTexCoord1f')
-        static function glTexCoord1f(s:Float) : Void;
+        static function glTexCoord1f(s:cpp.Float32) : Void;
 
         @:native('glTexCoord1i')
         static function glTexCoord1i(s:Int) : Void;
@@ -998,10 +998,10 @@ extern class GL {
         static function glTexCoord1s(s:Int) : Void;
 
         @:native('glTexCoord2d')
-        static function glTexCoord2d(s:Float, t:Float) : Void;
+        static function glTexCoord2d(s:cpp.Float64, t:cpp.Float64) : Void;
 
         @:native('glTexCoord2f')
-        static function glTexCoord2f(s:Float, t:Float) : Void;
+        static function glTexCoord2f(s:cpp.Float32, t:cpp.Float32) : Void;
 
         @:native('glTexCoord2i')
         static function glTexCoord2i(s:Int, t:Int) : Void;
@@ -1010,10 +1010,10 @@ extern class GL {
         static function glTexCoord2s(s:Int, t:Int) : Void;
 
         @:native('glTexCoord3d')
-        static function glTexCoord3d(s:Float, t:Float, r:Float) : Void;
+        static function glTexCoord3d(s:cpp.Float64, t:cpp.Float64, r:cpp.Float64) : Void;
 
         @:native('glTexCoord3f')
-        static function glTexCoord3f(s:Float, t:Float, r:Float) : Void;
+        static function glTexCoord3f(s:cpp.Float32, t:cpp.Float32, r:cpp.Float32) : Void;
 
         @:native('glTexCoord3i')
         static function glTexCoord3i(s:Int, t:Int, r:Int) : Void;
@@ -1022,10 +1022,10 @@ extern class GL {
         static function glTexCoord3s(s:Int, t:Int, r:Int) : Void;
 
         @:native('glTexCoord4d')
-        static function glTexCoord4d(s:Float, t:Float, r:Float, q:Float) : Void;
+        static function glTexCoord4d(s:cpp.Float64, t:cpp.Float64, r:cpp.Float64, q:cpp.Float64) : Void;
 
         @:native('glTexCoord4f')
-        static function glTexCoord4f(s:Float, t:Float, r:Float, q:Float) : Void;
+        static function glTexCoord4f(s:cpp.Float32, t:cpp.Float32, r:cpp.Float32, q:cpp.Float32) : Void;
 
         @:native('glTexCoord4i')
         static function glTexCoord4i(s:Int, t:Int, r:Int, q:Int) : Void;
@@ -1034,37 +1034,37 @@ extern class GL {
         static function glTexCoord4s(s:Int, t:Int, r:Int, q:Int) : Void;
 
         @:native('glTexEnvf')
-        static function glTexEnvf(target:Int, pname:Int, param:Float) : Void;
+        static function glTexEnvf(target:Int, pname:Int, param:cpp.Float32) : Void;
 
         @:native('glTexEnvi')
         static function glTexEnvi(target:Int, pname:Int, param:Int) : Void;
 
         @:native('glTexGend')
-        static function glTexGend(coord:Int, pname:Int, param:Float) : Void;
+        static function glTexGend(coord:Int, pname:Int, param:cpp.Float64) : Void;
 
         @:native('glTexGenf')
-        static function glTexGenf(coord:Int, pname:Int, param:Float) : Void;
+        static function glTexGenf(coord:Int, pname:Int, param:cpp.Float32) : Void;
 
         @:native('glTexGeni')
         static function glTexGeni(coord:Int, pname:Int, param:Int) : Void;
 
         @:native('glTexParameterf')
-        static function glTexParameterf(target:Int, pname:Int, param:Float) : Void;
+        static function glTexParameterf(target:Int, pname:Int, param:cpp.Float32) : Void;
 
         @:native('glTexParameteri')
         static function glTexParameteri(target:Int, pname:Int, param:Int) : Void;
 
         @:native('glTranslated')
-        static function glTranslated(x:Float, y:Float, z:Float) : Void;
+        static function glTranslated(x:cpp.Float64, y:cpp.Float64, z:cpp.Float64) : Void;
 
         @:native('glTranslatef')
-        static function glTranslatef(x:Float, y:Float, z:Float) : Void;
+        static function glTranslatef(x:cpp.Float32, y:cpp.Float32, z:cpp.Float32) : Void;
 
         @:native('glVertex2d')
-        static function glVertex2d(x:Float, y:Float) : Void;
+        static function glVertex2d(x:cpp.Float64, y:cpp.Float64) : Void;
 
         @:native('glVertex2f')
-        static function glVertex2f(x:Float, y:Float) : Void;
+        static function glVertex2f(x:cpp.Float32, y:cpp.Float32) : Void;
 
         @:native('glVertex2i')
         static function glVertex2i(x:Int, y:Int) : Void;
@@ -1073,10 +1073,10 @@ extern class GL {
         static function glVertex2s(x:Int, y:Int) : Void;
 
         @:native('glVertex3d')
-        static function glVertex3d(x:Float, y:Float, z:Float) : Void;
+        static function glVertex3d(x:cpp.Float64, y:cpp.Float64, z:cpp.Float64) : Void;
 
         @:native('glVertex3f')
-        static function glVertex3f(x:Float, y:Float, z:Float) : Void;
+        static function glVertex3f(x:cpp.Float32, y:cpp.Float32, z:cpp.Float32) : Void;
 
         @:native('glVertex3i')
         static function glVertex3i(x:Int, y:Int, z:Int) : Void;
@@ -1085,10 +1085,10 @@ extern class GL {
         static function glVertex3s(x:Int, y:Int, z:Int) : Void;
 
         @:native('glVertex4d')
-        static function glVertex4d(x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glVertex4d(x:cpp.Float64, y:cpp.Float64, z:cpp.Float64, w:cpp.Float64) : Void;
 
         @:native('glVertex4f')
-        static function glVertex4f(x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glVertex4f(x:cpp.Float32, y:cpp.Float32, z:cpp.Float32, w:cpp.Float32) : Void;
 
         @:native('glVertex4i')
         static function glVertex4i(x:Int, y:Int, z:Int, w:Int) : Void;
@@ -1101,455 +1101,455 @@ extern class GL {
 
 
         inline static function glAreTexturesResident(n:Int, textures:Array<UInt>, residences:Array<Bool>) : Bool
-          { return untyped __cpp__("glAreTexturesResident({0}, (const GLuint*)&{1}[0], (GLboolean*)&{2}[0])", n, textures, residences); }
+          { return untyped __cpp__("glAreTexturesResident({0}, (const GLuint*)&({1}[0]), (GLboolean*)&({2}[0]))", n, textures, residences); }
 
-        inline static function glBitmap(width:Int, height:Int, xorig:Float, yorig:Float, xmove:Float, ymove:Float, ?bOffset:Int=0, bitmap:BytesData) : Void
-          { untyped __cpp__("glBitmap({0}, {1}, {2}, {3}, {4}, {5}, (const GLubyte*)&{7}[0] + {6})", width, height, xorig, yorig, xmove, ymove, bOffset, bitmap); }
+        inline static function glBitmap(width:Int, height:Int, xorig:cpp.Float32, yorig:cpp.Float32, xmove:cpp.Float32, ymove:cpp.Float32, bitmap:BytesData) : Void
+          { untyped __cpp__("glBitmap({0}, {1}, {2}, {3}, {4}, {5}, (const GLubyte*)&({6}[0]))", width, height, xorig, yorig, xmove, ymove, bitmap); }
 
-        inline static function glCallLists(n:Int, type:Int, ?bOffset:Int=0, lists:BytesData) : Void
-          { untyped __cpp__("glCallLists({0}, {1}, (const void*)&{3}[0] + {2})", n, type, bOffset, lists); }
+        inline static function glCallLists(n:Int, type:Int, lists:BytesData) : Void
+          { untyped __cpp__("glCallLists({0}, {1}, (const void*)&({2}[0]))", n, type, lists); }
 
-        inline static function glClipPlane(plane:Int, equation:Array<Float>) : Void
-          { untyped __cpp__("glClipPlane({0}, (const GLdouble*)&{1}[0])", plane, equation); }
+        inline static function glClipPlane(plane:Int, equation:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glClipPlane({0}, (const GLdouble*)&({1}[0]))", plane, equation); }
 
-        inline static function glColor3bv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor3bv((const GLbyte*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor3bv(v:Array<cpp.Int8>) : Void
+          { untyped __cpp__("glColor3bv((const GLbyte*)&({0}[0]))", v); }
 
-        inline static function glColor3dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor3dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glColor3dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glColor3fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor3fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glColor3fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glColor3iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor3iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor3iv(v:Array<Int>) : Void
+          { untyped __cpp__("glColor3iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glColor3sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor3sv(v:Array<Int>) : Void
+          { untyped __cpp__("glColor3sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glColor3ubv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor3ubv((const GLubyte*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor3ubv(v:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glColor3ubv((const GLubyte*)&({0}[0]))", v); }
 
-        inline static function glColor3uiv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor3uiv((const GLuint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor3uiv(v:Array<UInt>) : Void
+          { untyped __cpp__("glColor3uiv((const GLuint*)&({0}[0]))", v); }
 
-        inline static function glColor3usv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor3usv((const GLushort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor3usv(v:Array<UInt>) : Void
+          { untyped __cpp__("glColor3usv((const GLushort*)&({0}[0]))", v); }
 
-        inline static function glColor4bv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor4bv((const GLbyte*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor4bv(v:Array<cpp.Int8>) : Void
+          { untyped __cpp__("glColor4bv((const GLbyte*)&({0}[0]))", v); }
 
-        inline static function glColor4dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor4dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor4dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glColor4dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glColor4fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor4fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor4fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glColor4fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glColor4iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor4iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor4iv(v:Array<Int>) : Void
+          { untyped __cpp__("glColor4iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glColor4sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor4sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor4sv(v:Array<Int>) : Void
+          { untyped __cpp__("glColor4sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glColor4ubv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor4ubv((const GLubyte*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor4ubv(v:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glColor4ubv((const GLubyte*)&({0}[0]))", v); }
 
-        inline static function glColor4uiv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor4uiv((const GLuint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor4uiv(v:Array<UInt>) : Void
+          { untyped __cpp__("glColor4uiv((const GLuint*)&({0}[0]))", v); }
 
-        inline static function glColor4usv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor4usv((const GLushort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glColor4usv(v:Array<UInt>) : Void
+          { untyped __cpp__("glColor4usv((const GLushort*)&({0}[0]))", v); }
 
-        inline static function glColorPointer(size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glColorPointer({0}, {1}, {2}, (const void*)&{4}[0] + {3})", size, type, stride, bOffset, pointer); }
+        inline static function glColorPointer(size:Int, type:Int, stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glColorPointer({0}, {1}, {2}, (const void*)&({3}[0]))", size, type, stride, pointer); }
 
         inline static function glDeleteTextures(n:Int, textures:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteTextures({0}, (const GLuint*)&{1}[0])", n, textures); }
+          { untyped __cpp__("glDeleteTextures({0}, (const GLuint*)&({1}[0]))", n, textures); }
 
-        inline static function glDrawElements(mode:Int, count:Int, type:Int, ?bOffset:Int=0, indices:BytesData) : Void
-          { untyped __cpp__("glDrawElements({0}, {1}, {2}, (const void*)&{4}[0] + {3})", mode, count, type, bOffset, indices); }
+        inline static function glDrawElements(mode:Int, count:Int, type:Int, indices:BytesData) : Void
+          { untyped __cpp__("glDrawElements({0}, {1}, {2}, (const void*)&({3}[0]))", mode, count, type, indices); }
 
-        inline static function glDrawPixels(width:Int, height:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glDrawPixels({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", width, height, format, type, bOffset, pixels); }
+        inline static function glDrawPixels(width:Int, height:Int, format:Int, type:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glDrawPixels({0}, {1}, {2}, {3}, (const void*)&({4}[0]))", width, height, format, type, pixels); }
 
-        inline static function glEdgeFlagPointer(stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glEdgeFlagPointer({0}, (const void*)&{2}[0] + {1})", stride, bOffset, pointer); }
+        inline static function glEdgeFlagPointer(stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glEdgeFlagPointer({0}, (const void*)&({1}[0]))", stride, pointer); }
 
-        inline static function glEvalCoord1dv(?bOffset:Int=0, u:BytesData) : Void
-          { untyped __cpp__("glEvalCoord1dv((const GLdouble*)&{1}[0] + {0})", bOffset, u); }
+        inline static function glEvalCoord1dv(u:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glEvalCoord1dv((const GLdouble*)&({0}[0]))", u); }
 
-        inline static function glEvalCoord1fv(?bOffset:Int=0, u:BytesData) : Void
-          { untyped __cpp__("glEvalCoord1fv((const GLfloat*)&{1}[0] + {0})", bOffset, u); }
+        inline static function glEvalCoord1fv(u:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glEvalCoord1fv((const GLfloat*)&({0}[0]))", u); }
 
-        inline static function glEvalCoord2dv(?bOffset:Int=0, u:BytesData) : Void
-          { untyped __cpp__("glEvalCoord2dv((const GLdouble*)&{1}[0] + {0})", bOffset, u); }
+        inline static function glEvalCoord2dv(u:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glEvalCoord2dv((const GLdouble*)&({0}[0]))", u); }
 
-        inline static function glEvalCoord2fv(?bOffset:Int=0, u:BytesData) : Void
-          { untyped __cpp__("glEvalCoord2fv((const GLfloat*)&{1}[0] + {0})", bOffset, u); }
+        inline static function glEvalCoord2fv(u:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glEvalCoord2fv((const GLfloat*)&({0}[0]))", u); }
 
-        inline static function glFeedbackBuffer(size:Int, type:Int, ?bOffset:Int=0, buffer:BytesData) : Void
-          { untyped __cpp__("glFeedbackBuffer({0}, {1}, (GLfloat*)&{3}[0] + {2})", size, type, bOffset, buffer); }
+        inline static function glFeedbackBuffer(size:Int, type:Int, buffer:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glFeedbackBuffer({0}, {1}, (GLfloat*)&({2}[0]))", size, type, buffer); }
 
-        inline static function glFogfv(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFogfv({0}, (const GLfloat*)&{2}[0] + {1})", pname, bOffset, params); }
+        inline static function glFogfv(pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glFogfv({0}, (const GLfloat*)&({1}[0]))", pname, params); }
 
-        inline static function glFogiv(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFogiv({0}, (const GLint*)&{2}[0] + {1})", pname, bOffset, params); }
+        inline static function glFogiv(pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glFogiv({0}, (const GLint*)&({1}[0]))", pname, params); }
 
         inline static function glGenTextures(n:Int, textures:Array<UInt>) : Void
-          { untyped __cpp__("glGenTextures({0}, (GLuint*)&{1}[0])", n, textures); }
+          { untyped __cpp__("glGenTextures({0}, (GLuint*)&({1}[0]))", n, textures); }
 
         inline static function glGetBooleanv(pname:Int, params:Array<Bool>) : Void
-          { untyped __cpp__("glGetBooleanv({0}, (GLboolean*)&{1}[0])", pname, params); }
+          { untyped __cpp__("glGetBooleanv({0}, (GLboolean*)&({1}[0]))", pname, params); }
 
-        inline static function glGetClipPlane(plane:Int, equation:Array<Float>) : Void
-          { untyped __cpp__("glGetClipPlane({0}, (GLdouble*)&{1}[0])", plane, equation); }
+        inline static function glGetClipPlane(plane:Int, equation:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glGetClipPlane({0}, (GLdouble*)&({1}[0]))", plane, equation); }
 
-        inline static function glGetDoublev(pname:Int, params:Array<Float>) : Void
-          { untyped __cpp__("glGetDoublev({0}, (GLdouble*)&{1}[0])", pname, params); }
+        inline static function glGetDoublev(pname:Int, params:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glGetDoublev({0}, (GLdouble*)&({1}[0]))", pname, params); }
 
-        inline static function glGetFloatv(pname:Int, params:Array<Float>) : Void
-          { untyped __cpp__("glGetFloatv({0}, (GLfloat*)&{1}[0])", pname, params); }
+        inline static function glGetFloatv(pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetFloatv({0}, (GLfloat*)&({1}[0]))", pname, params); }
 
         inline static function glGetIntegerv(pname:Int, params:Array<Int>) : Void
-          { untyped __cpp__("glGetIntegerv({0}, (GLint*)&{1}[0])", pname, params); }
+          { untyped __cpp__("glGetIntegerv({0}, (GLint*)&({1}[0]))", pname, params); }
 
-        inline static function glGetLightfv(light:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetLightfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", light, pname, bOffset, params); }
+        inline static function glGetLightfv(light:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetLightfv({0}, {1}, (GLfloat*)&({2}[0]))", light, pname, params); }
 
-        inline static function glGetLightiv(light:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetLightiv({0}, {1}, (GLint*)&{3}[0] + {2})", light, pname, bOffset, params); }
+        inline static function glGetLightiv(light:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetLightiv({0}, {1}, (GLint*)&({2}[0]))", light, pname, params); }
 
-        inline static function glGetMapdv(target:Int, query:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glGetMapdv({0}, {1}, (GLdouble*)&{3}[0] + {2})", target, query, bOffset, v); }
+        inline static function glGetMapdv(target:Int, query:Int, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glGetMapdv({0}, {1}, (GLdouble*)&({2}[0]))", target, query, v); }
 
-        inline static function glGetMapfv(target:Int, query:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glGetMapfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, query, bOffset, v); }
+        inline static function glGetMapfv(target:Int, query:Int, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetMapfv({0}, {1}, (GLfloat*)&({2}[0]))", target, query, v); }
 
-        inline static function glGetMapiv(target:Int, query:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glGetMapiv({0}, {1}, (GLint*)&{3}[0] + {2})", target, query, bOffset, v); }
+        inline static function glGetMapiv(target:Int, query:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glGetMapiv({0}, {1}, (GLint*)&({2}[0]))", target, query, v); }
 
-        inline static function glGetMaterialfv(face:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMaterialfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", face, pname, bOffset, params); }
+        inline static function glGetMaterialfv(face:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetMaterialfv({0}, {1}, (GLfloat*)&({2}[0]))", face, pname, params); }
 
-        inline static function glGetMaterialiv(face:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMaterialiv({0}, {1}, (GLint*)&{3}[0] + {2})", face, pname, bOffset, params); }
+        inline static function glGetMaterialiv(face:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetMaterialiv({0}, {1}, (GLint*)&({2}[0]))", face, pname, params); }
 
-        inline static function glGetPixelMapfv(map:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetPixelMapfv({0}, (GLfloat*)&{2}[0] + {1})", map, bOffset, values); }
+        inline static function glGetPixelMapfv(map:Int, values:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetPixelMapfv({0}, (GLfloat*)&({1}[0]))", map, values); }
 
-        inline static function glGetPixelMapuiv(map:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetPixelMapuiv({0}, (GLuint*)&{2}[0] + {1})", map, bOffset, values); }
+        inline static function glGetPixelMapuiv(map:Int, values:Array<UInt>) : Void
+          { untyped __cpp__("glGetPixelMapuiv({0}, (GLuint*)&({1}[0]))", map, values); }
 
-        inline static function glGetPixelMapusv(map:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetPixelMapusv({0}, (GLushort*)&{2}[0] + {1})", map, bOffset, values); }
+        inline static function glGetPixelMapusv(map:Int, values:Array<UInt>) : Void
+          { untyped __cpp__("glGetPixelMapusv({0}, (GLushort*)&({1}[0]))", map, values); }
 
-        inline static function glGetPolygonStipple(?bOffset:Int=0, mask:BytesData) : Void
-          { untyped __cpp__("glGetPolygonStipple((GLubyte*)&{1}[0] + {0})", bOffset, mask); }
+        inline static function glGetPolygonStipple(mask:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glGetPolygonStipple((GLubyte*)&({0}[0]))", mask); }
 
         inline static function glGetString(name:Int) : String
           { untyped __cpp__("const char* __val = (const char*)glGetString({0}); if(!__val)__val=\"\"", name);
             return untyped __cpp__("::String(__val)"); }
 
-        inline static function glGetTexEnvfv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTexEnvfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetTexEnvfv(target:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetTexEnvfv({0}, {1}, (GLfloat*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetTexEnviv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTexEnviv({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetTexEnviv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetTexEnviv({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetTexGendv(coord:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTexGendv({0}, {1}, (GLdouble*)&{3}[0] + {2})", coord, pname, bOffset, params); }
+        inline static function glGetTexGendv(coord:Int, pname:Int, params:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glGetTexGendv({0}, {1}, (GLdouble*)&({2}[0]))", coord, pname, params); }
 
-        inline static function glGetTexGenfv(coord:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTexGenfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", coord, pname, bOffset, params); }
+        inline static function glGetTexGenfv(coord:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetTexGenfv({0}, {1}, (GLfloat*)&({2}[0]))", coord, pname, params); }
 
-        inline static function glGetTexGeniv(coord:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTexGeniv({0}, {1}, (GLint*)&{3}[0] + {2})", coord, pname, bOffset, params); }
+        inline static function glGetTexGeniv(coord:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetTexGeniv({0}, {1}, (GLint*)&({2}[0]))", coord, pname, params); }
 
-        inline static function glGetTexImage(target:Int, level:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glGetTexImage({0}, {1}, {2}, {3}, (void*)&{5}[0] + {4})", target, level, format, type, bOffset, pixels); }
+        inline static function glGetTexImage(target:Int, level:Int, format:Int, type:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glGetTexImage({0}, {1}, {2}, {3}, (void*)&({4}[0]))", target, level, format, type, pixels); }
 
-        inline static function glGetTexLevelParameterfv(target:Int, level:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTexLevelParameterfv({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", target, level, pname, bOffset, params); }
+        inline static function glGetTexLevelParameterfv(target:Int, level:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetTexLevelParameterfv({0}, {1}, {2}, (GLfloat*)&({3}[0]))", target, level, pname, params); }
 
-        inline static function glGetTexLevelParameteriv(target:Int, level:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTexLevelParameteriv({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", target, level, pname, bOffset, params); }
+        inline static function glGetTexLevelParameteriv(target:Int, level:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetTexLevelParameteriv({0}, {1}, {2}, (GLint*)&({3}[0]))", target, level, pname, params); }
 
-        inline static function glGetTexParameterfv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTexParameterfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetTexParameterfv(target:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetTexParameterfv({0}, {1}, (GLfloat*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetTexParameteriv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTexParameteriv({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetTexParameteriv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetTexParameteriv({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glIndexPointer(type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glIndexPointer({0}, {1}, (const void*)&{3}[0] + {2})", type, stride, bOffset, pointer); }
+        inline static function glIndexPointer(type:Int, stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glIndexPointer({0}, {1}, (const void*)&({2}[0]))", type, stride, pointer); }
 
-        inline static function glIndexdv(?bOffset:Int=0, c:BytesData) : Void
-          { untyped __cpp__("glIndexdv((const GLdouble*)&{1}[0] + {0})", bOffset, c); }
+        inline static function glIndexdv(c:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glIndexdv((const GLdouble*)&({0}[0]))", c); }
 
-        inline static function glIndexfv(?bOffset:Int=0, c:BytesData) : Void
-          { untyped __cpp__("glIndexfv((const GLfloat*)&{1}[0] + {0})", bOffset, c); }
+        inline static function glIndexfv(c:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glIndexfv((const GLfloat*)&({0}[0]))", c); }
 
-        inline static function glIndexiv(?bOffset:Int=0, c:BytesData) : Void
-          { untyped __cpp__("glIndexiv((const GLint*)&{1}[0] + {0})", bOffset, c); }
+        inline static function glIndexiv(c:Array<Int>) : Void
+          { untyped __cpp__("glIndexiv((const GLint*)&({0}[0]))", c); }
 
-        inline static function glIndexsv(?bOffset:Int=0, c:BytesData) : Void
-          { untyped __cpp__("glIndexsv((const GLshort*)&{1}[0] + {0})", bOffset, c); }
+        inline static function glIndexsv(c:Array<Int>) : Void
+          { untyped __cpp__("glIndexsv((const GLshort*)&({0}[0]))", c); }
 
-        inline static function glIndexubv(?bOffset:Int=0, c:BytesData) : Void
-          { untyped __cpp__("glIndexubv((const GLubyte*)&{1}[0] + {0})", bOffset, c); }
+        inline static function glIndexubv(c:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glIndexubv((const GLubyte*)&({0}[0]))", c); }
 
-        inline static function glInterleavedArrays(format:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glInterleavedArrays({0}, {1}, (const void*)&{3}[0] + {2})", format, stride, bOffset, pointer); }
+        inline static function glInterleavedArrays(format:Int, stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glInterleavedArrays({0}, {1}, (const void*)&({2}[0]))", format, stride, pointer); }
 
-        inline static function glLightModelfv(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glLightModelfv({0}, (const GLfloat*)&{2}[0] + {1})", pname, bOffset, params); }
+        inline static function glLightModelfv(pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glLightModelfv({0}, (const GLfloat*)&({1}[0]))", pname, params); }
 
-        inline static function glLightModeliv(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glLightModeliv({0}, (const GLint*)&{2}[0] + {1})", pname, bOffset, params); }
+        inline static function glLightModeliv(pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glLightModeliv({0}, (const GLint*)&({1}[0]))", pname, params); }
 
-        inline static function glLightfv(light:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glLightfv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", light, pname, bOffset, params); }
+        inline static function glLightfv(light:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glLightfv({0}, {1}, (const GLfloat*)&({2}[0]))", light, pname, params); }
 
-        inline static function glLightiv(light:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glLightiv({0}, {1}, (const GLint*)&{3}[0] + {2})", light, pname, bOffset, params); }
+        inline static function glLightiv(light:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glLightiv({0}, {1}, (const GLint*)&({2}[0]))", light, pname, params); }
 
-        inline static function glLoadMatrixd(?bOffset:Int=0, m:BytesData) : Void
-          { untyped __cpp__("glLoadMatrixd((const GLdouble*)&{1}[0] + {0})", bOffset, m); }
+        inline static function glLoadMatrixd(m:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glLoadMatrixd((const GLdouble*)&({0}[0]))", m); }
 
-        inline static function glLoadMatrixf(?bOffset:Int=0, m:BytesData) : Void
-          { untyped __cpp__("glLoadMatrixf((const GLfloat*)&{1}[0] + {0})", bOffset, m); }
+        inline static function glLoadMatrixf(m:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glLoadMatrixf((const GLfloat*)&({0}[0]))", m); }
 
-        inline static function glMap1d(target:Int, u1:Float, u2:Float, stride:Int, order:Int, ?bOffset:Int=0, points:BytesData) : Void
-          { untyped __cpp__("glMap1d({0}, {1}, {2}, {3}, {4}, (const GLdouble*)&{6}[0] + {5})", target, u1, u2, stride, order, bOffset, points); }
+        inline static function glMap1d(target:Int, u1:cpp.Float64, u2:cpp.Float64, stride:Int, order:Int, points:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glMap1d({0}, {1}, {2}, {3}, {4}, (const GLdouble*)&({5}[0]))", target, u1, u2, stride, order, points); }
 
-        inline static function glMap1f(target:Int, u1:Float, u2:Float, stride:Int, order:Int, ?bOffset:Int=0, points:BytesData) : Void
-          { untyped __cpp__("glMap1f({0}, {1}, {2}, {3}, {4}, (const GLfloat*)&{6}[0] + {5})", target, u1, u2, stride, order, bOffset, points); }
+        inline static function glMap1f(target:Int, u1:cpp.Float32, u2:cpp.Float32, stride:Int, order:Int, points:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glMap1f({0}, {1}, {2}, {3}, {4}, (const GLfloat*)&({5}[0]))", target, u1, u2, stride, order, points); }
 
-        inline static function glMap2d(target:Int, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, ?bOffset:Int=0, points:BytesData) : Void
-          { untyped __cpp__("glMap2d({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const GLdouble*)&{10}[0] + {9})", target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, bOffset, points); }
+        inline static function glMap2d(target:Int, u1:cpp.Float64, u2:cpp.Float64, ustride:Int, uorder:Int, v1:cpp.Float64, v2:cpp.Float64, vstride:Int, vorder:Int, points:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glMap2d({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const GLdouble*)&({9}[0]))", target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points); }
 
-        inline static function glMap2f(target:Int, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, ?bOffset:Int=0, points:BytesData) : Void
-          { untyped __cpp__("glMap2f({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const GLfloat*)&{10}[0] + {9})", target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, bOffset, points); }
+        inline static function glMap2f(target:Int, u1:cpp.Float32, u2:cpp.Float32, ustride:Int, uorder:Int, v1:cpp.Float32, v2:cpp.Float32, vstride:Int, vorder:Int, points:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glMap2f({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const GLfloat*)&({9}[0]))", target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points); }
 
-        inline static function glMaterialfv(face:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glMaterialfv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", face, pname, bOffset, params); }
+        inline static function glMaterialfv(face:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glMaterialfv({0}, {1}, (const GLfloat*)&({2}[0]))", face, pname, params); }
 
-        inline static function glMaterialiv(face:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glMaterialiv({0}, {1}, (const GLint*)&{3}[0] + {2})", face, pname, bOffset, params); }
+        inline static function glMaterialiv(face:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glMaterialiv({0}, {1}, (const GLint*)&({2}[0]))", face, pname, params); }
 
-        inline static function glMultMatrixd(?bOffset:Int=0, m:BytesData) : Void
-          { untyped __cpp__("glMultMatrixd((const GLdouble*)&{1}[0] + {0})", bOffset, m); }
+        inline static function glMultMatrixd(m:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glMultMatrixd((const GLdouble*)&({0}[0]))", m); }
 
-        inline static function glMultMatrixf(?bOffset:Int=0, m:BytesData) : Void
-          { untyped __cpp__("glMultMatrixf((const GLfloat*)&{1}[0] + {0})", bOffset, m); }
+        inline static function glMultMatrixf(m:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glMultMatrixf((const GLfloat*)&({0}[0]))", m); }
 
-        inline static function glNormal3bv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glNormal3bv((const GLbyte*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glNormal3bv(v:Array<cpp.Int8>) : Void
+          { untyped __cpp__("glNormal3bv((const GLbyte*)&({0}[0]))", v); }
 
-        inline static function glNormal3dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glNormal3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glNormal3dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glNormal3dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glNormal3fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glNormal3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glNormal3fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glNormal3fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glNormal3iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glNormal3iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glNormal3iv(v:Array<Int>) : Void
+          { untyped __cpp__("glNormal3iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glNormal3sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glNormal3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glNormal3sv(v:Array<Int>) : Void
+          { untyped __cpp__("glNormal3sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glNormalPointer(type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glNormalPointer({0}, {1}, (const void*)&{3}[0] + {2})", type, stride, bOffset, pointer); }
+        inline static function glNormalPointer(type:Int, stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glNormalPointer({0}, {1}, (const void*)&({2}[0]))", type, stride, pointer); }
 
-        inline static function glPixelMapfv(map:Int, mapsize:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glPixelMapfv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", map, mapsize, bOffset, values); }
+        inline static function glPixelMapfv(map:Int, mapsize:Int, values:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glPixelMapfv({0}, {1}, (const GLfloat*)&({2}[0]))", map, mapsize, values); }
 
-        inline static function glPixelMapuiv(map:Int, mapsize:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glPixelMapuiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", map, mapsize, bOffset, values); }
+        inline static function glPixelMapuiv(map:Int, mapsize:Int, values:Array<UInt>) : Void
+          { untyped __cpp__("glPixelMapuiv({0}, {1}, (const GLuint*)&({2}[0]))", map, mapsize, values); }
 
-        inline static function glPixelMapusv(map:Int, mapsize:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glPixelMapusv({0}, {1}, (const GLushort*)&{3}[0] + {2})", map, mapsize, bOffset, values); }
+        inline static function glPixelMapusv(map:Int, mapsize:Int, values:Array<UInt>) : Void
+          { untyped __cpp__("glPixelMapusv({0}, {1}, (const GLushort*)&({2}[0]))", map, mapsize, values); }
 
-        inline static function glPolygonStipple(?bOffset:Int=0, mask:BytesData) : Void
-          { untyped __cpp__("glPolygonStipple((const GLubyte*)&{1}[0] + {0})", bOffset, mask); }
+        inline static function glPolygonStipple(mask:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glPolygonStipple((const GLubyte*)&({0}[0]))", mask); }
 
-        inline static function glRasterPos2dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glRasterPos2dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glRasterPos2dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glRasterPos2dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glRasterPos2fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glRasterPos2fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glRasterPos2fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glRasterPos2fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glRasterPos2iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glRasterPos2iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glRasterPos2iv(v:Array<Int>) : Void
+          { untyped __cpp__("glRasterPos2iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glRasterPos2sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glRasterPos2sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glRasterPos2sv(v:Array<Int>) : Void
+          { untyped __cpp__("glRasterPos2sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glRasterPos3dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glRasterPos3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glRasterPos3dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glRasterPos3dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glRasterPos3fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glRasterPos3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glRasterPos3fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glRasterPos3fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glRasterPos3iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glRasterPos3iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glRasterPos3iv(v:Array<Int>) : Void
+          { untyped __cpp__("glRasterPos3iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glRasterPos3sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glRasterPos3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glRasterPos3sv(v:Array<Int>) : Void
+          { untyped __cpp__("glRasterPos3sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glRasterPos4dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glRasterPos4dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glRasterPos4dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glRasterPos4dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glRasterPos4fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glRasterPos4fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glRasterPos4fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glRasterPos4fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glRasterPos4iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glRasterPos4iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glRasterPos4iv(v:Array<Int>) : Void
+          { untyped __cpp__("glRasterPos4iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glRasterPos4sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glRasterPos4sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glRasterPos4sv(v:Array<Int>) : Void
+          { untyped __cpp__("glRasterPos4sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glReadPixels(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glReadPixels({0}, {1}, {2}, {3}, {4}, {5}, (void*)&{7}[0] + {6})", x, y, width, height, format, type, bOffset, pixels); }
+        inline static function glReadPixels(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glReadPixels({0}, {1}, {2}, {3}, {4}, {5}, (void*)&({6}[0]))", x, y, width, height, format, type, pixels); }
 
-        inline static function glRectdv(?bOffset:Int=0, v1:BytesData, ?bOffset:Int=0, v2:BytesData) : Void
-          { untyped __cpp__("glRectdv((const GLdouble*)&{1}[0] + {0}, (const GLdouble*)&{3}[0] + {2})", bOffset, v1, bOffset, v2); }
+        inline static function glRectdv(v1:Array<cpp.Float64>, v2:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glRectdv((const GLdouble*)&({0}[0]), (const GLdouble*)&({1}[0]))", v1, v2); }
 
-        inline static function glRectfv(?bOffset:Int=0, v1:BytesData, ?bOffset:Int=0, v2:BytesData) : Void
-          { untyped __cpp__("glRectfv((const GLfloat*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2})", bOffset, v1, bOffset, v2); }
+        inline static function glRectfv(v1:Array<cpp.Float32>, v2:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glRectfv((const GLfloat*)&({0}[0]), (const GLfloat*)&({1}[0]))", v1, v2); }
 
-        inline static function glRectiv(?bOffset:Int=0, v1:BytesData, ?bOffset:Int=0, v2:BytesData) : Void
-          { untyped __cpp__("glRectiv((const GLint*)&{1}[0] + {0}, (const GLint*)&{3}[0] + {2})", bOffset, v1, bOffset, v2); }
+        inline static function glRectiv(v1:Array<Int>, v2:Array<Int>) : Void
+          { untyped __cpp__("glRectiv((const GLint*)&({0}[0]), (const GLint*)&({1}[0]))", v1, v2); }
 
-        inline static function glRectsv(?bOffset:Int=0, v1:BytesData, ?bOffset:Int=0, v2:BytesData) : Void
-          { untyped __cpp__("glRectsv((const GLshort*)&{1}[0] + {0}, (const GLshort*)&{3}[0] + {2})", bOffset, v1, bOffset, v2); }
+        inline static function glRectsv(v1:Array<Int>, v2:Array<Int>) : Void
+          { untyped __cpp__("glRectsv((const GLshort*)&({0}[0]), (const GLshort*)&({1}[0]))", v1, v2); }
 
-        inline static function glSelectBuffer(size:Int, ?bOffset:Int=0, buffer:BytesData) : Void
-          { untyped __cpp__("glSelectBuffer({0}, (GLuint*)&{2}[0] + {1})", size, bOffset, buffer); }
+        inline static function glSelectBuffer(size:Int, buffer:Array<UInt>) : Void
+          { untyped __cpp__("glSelectBuffer({0}, (GLuint*)&({1}[0]))", size, buffer); }
 
-        inline static function glTexCoord1dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord1dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord1dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glTexCoord1dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glTexCoord1fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord1fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord1fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glTexCoord1fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glTexCoord1iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord1iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord1iv(v:Array<Int>) : Void
+          { untyped __cpp__("glTexCoord1iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glTexCoord1sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord1sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord1sv(v:Array<Int>) : Void
+          { untyped __cpp__("glTexCoord1sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glTexCoord2dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord2dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord2dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glTexCoord2dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glTexCoord2fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord2fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord2fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glTexCoord2fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glTexCoord2iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord2iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord2iv(v:Array<Int>) : Void
+          { untyped __cpp__("glTexCoord2iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glTexCoord2sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord2sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord2sv(v:Array<Int>) : Void
+          { untyped __cpp__("glTexCoord2sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glTexCoord3dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord3dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glTexCoord3dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glTexCoord3fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord3fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glTexCoord3fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glTexCoord3iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord3iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord3iv(v:Array<Int>) : Void
+          { untyped __cpp__("glTexCoord3iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glTexCoord3sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord3sv(v:Array<Int>) : Void
+          { untyped __cpp__("glTexCoord3sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glTexCoord4dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord4dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord4dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glTexCoord4dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glTexCoord4fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord4fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord4fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glTexCoord4fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glTexCoord4iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord4iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord4iv(v:Array<Int>) : Void
+          { untyped __cpp__("glTexCoord4iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glTexCoord4sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord4sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glTexCoord4sv(v:Array<Int>) : Void
+          { untyped __cpp__("glTexCoord4sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glTexCoordPointer(size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glTexCoordPointer({0}, {1}, {2}, (const void*)&{4}[0] + {3})", size, type, stride, bOffset, pointer); }
+        inline static function glTexCoordPointer(size:Int, type:Int, stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glTexCoordPointer({0}, {1}, {2}, (const void*)&({3}[0]))", size, type, stride, pointer); }
 
-        inline static function glTexEnvfv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTexEnvfv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glTexEnvfv(target:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glTexEnvfv({0}, {1}, (const GLfloat*)&({2}[0]))", target, pname, params); }
 
-        inline static function glTexEnviv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTexEnviv({0}, {1}, (const GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glTexEnviv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glTexEnviv({0}, {1}, (const GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glTexGendv(coord:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTexGendv({0}, {1}, (const GLdouble*)&{3}[0] + {2})", coord, pname, bOffset, params); }
+        inline static function glTexGendv(coord:Int, pname:Int, params:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glTexGendv({0}, {1}, (const GLdouble*)&({2}[0]))", coord, pname, params); }
 
-        inline static function glTexGenfv(coord:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTexGenfv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", coord, pname, bOffset, params); }
+        inline static function glTexGenfv(coord:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glTexGenfv({0}, {1}, (const GLfloat*)&({2}[0]))", coord, pname, params); }
 
-        inline static function glTexGeniv(coord:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTexGeniv({0}, {1}, (const GLint*)&{3}[0] + {2})", coord, pname, bOffset, params); }
+        inline static function glTexGeniv(coord:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glTexGeniv({0}, {1}, (const GLint*)&({2}[0]))", coord, pname, params); }
 
-        inline static function glTexImage1D(target:Int, level:Int, internalformat:Int, width:Int, border:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTexImage1D({0}, {1}, {2}, {3}, {4}, {5}, {6}, (const void*)&{8}[0] + {7})", target, level, internalformat, width, border, format, type, bOffset, pixels); }
+        inline static function glTexImage1D(target:Int, level:Int, internalformat:Int, width:Int, border:Int, format:Int, type:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glTexImage1D({0}, {1}, {2}, {3}, {4}, {5}, {6}, (const void*)&({7}[0]))", target, level, internalformat, width, border, format, type, pixels); }
 
-        inline static function glTexImage2D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTexImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", target, level, internalformat, width, height, border, format, type, bOffset, pixels); }
+        inline static function glTexImage2D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glTexImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&({8}[0]))", target, level, internalformat, width, height, border, format, type, pixels); }
 
-        inline static function glTexParameterfv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTexParameterfv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glTexParameterfv(target:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glTexParameterfv({0}, {1}, (const GLfloat*)&({2}[0]))", target, pname, params); }
 
-        inline static function glTexParameteriv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTexParameteriv({0}, {1}, (const GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glTexParameteriv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glTexParameteriv({0}, {1}, (const GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glTexSubImage1D(target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTexSubImage1D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6})", target, level, xoffset, width, format, type, bOffset, pixels); }
+        inline static function glTexSubImage1D(target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glTexSubImage1D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&({6}[0]))", target, level, xoffset, width, format, type, pixels); }
 
-        inline static function glTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTexSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", target, level, xoffset, yoffset, width, height, format, type, bOffset, pixels); }
+        inline static function glTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glTexSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&({8}[0]))", target, level, xoffset, yoffset, width, height, format, type, pixels); }
 
-        inline static function glVertex2dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex2dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glVertex2dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertex2dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glVertex2fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex2fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glVertex2fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glVertex2fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glVertex2iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex2iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glVertex2iv(v:Array<Int>) : Void
+          { untyped __cpp__("glVertex2iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glVertex2sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex2sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glVertex2sv(v:Array<Int>) : Void
+          { untyped __cpp__("glVertex2sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glVertex3dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glVertex3dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertex3dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glVertex3fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glVertex3fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glVertex3fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glVertex3iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex3iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glVertex3iv(v:Array<Int>) : Void
+          { untyped __cpp__("glVertex3iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glVertex3sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glVertex3sv(v:Array<Int>) : Void
+          { untyped __cpp__("glVertex3sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glVertex4dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex4dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glVertex4dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertex4dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glVertex4fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex4fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glVertex4fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glVertex4fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glVertex4iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex4iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glVertex4iv(v:Array<Int>) : Void
+          { untyped __cpp__("glVertex4iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glVertex4sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex4sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glVertex4sv(v:Array<Int>) : Void
+          { untyped __cpp__("glVertex4sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glVertexPointer(size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glVertexPointer({0}, {1}, {2}, (const void*)&{4}[0] + {3})", size, type, stride, bOffset, pointer); }
+        inline static function glVertexPointer(size:Int, type:Int, stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glVertexPointer({0}, {1}, {2}, (const void*)&({3}[0]))", size, type, stride, pointer); }
 
 
 
@@ -1560,7 +1560,7 @@ extern class GL {
         // static function glGetPointerv(pname:Int, params:void**) : Void;
             
         // inline static function glPrioritizeTextures(n:Int, textures:Array<UInt>, priorities:const GLclampf*) : Void
-        // { untyped __cpp__("glPrioritizeTextures({0}, (const GLuint*)&{1}[0], {2})", n, textures, priorities); }
+        // { untyped __cpp__("glPrioritizeTextures({0}, (const GLuint*)&({1}[0]), {2})", n, textures, priorities); }
 
     // ignored functions
 
@@ -1619,14 +1619,14 @@ extern class GL {
         static function glCopyTexSubImage3D(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
 
 
-        inline static function glDrawRangeElements(mode:Int, start:UInt, end:UInt, count:Int, type:Int, ?bOffset:Int=0, indices:BytesData) : Void
-          { untyped __cpp__("glDrawRangeElements({0}, {1}, {2}, {3}, {4}, (const void*)&{6}[0] + {5})", mode, start, end, count, type, bOffset, indices); }
+        inline static function glDrawRangeElements(mode:Int, start:UInt, end:UInt, count:Int, type:Int, indices:BytesData) : Void
+          { untyped __cpp__("glDrawRangeElements({0}, {1}, {2}, {3}, {4}, (const void*)&({5}[0]))", mode, start, end, count, type, indices); }
 
-        inline static function glTexImage3D(target:Int, level:Int, internalFormat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTexImage3D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const void*)&{10}[0] + {9})", target, level, internalFormat, width, height, depth, border, format, type, bOffset, pixels); }
+        inline static function glTexImage3D(target:Int, level:Int, internalFormat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glTexImage3D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const void*)&({9}[0]))", target, level, internalFormat, width, height, depth, border, format, type, pixels); }
 
-        inline static function glTexSubImage3D(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTexSubImage3D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&{11}[0] + {10})", target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, bOffset, pixels); }
+        inline static function glTexSubImage3D(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glTexSubImage3D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&({10}[0]))", target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels); }
 
 
 
@@ -1742,10 +1742,10 @@ extern class GL {
         static function glClientActiveTexture(texture:Int) : Void;
 
         @:native('glMultiTexCoord1d')
-        static function glMultiTexCoord1d(target:Int, s:Float) : Void;
+        static function glMultiTexCoord1d(target:Int, s:cpp.Float64) : Void;
 
         @:native('glMultiTexCoord1f')
-        static function glMultiTexCoord1f(target:Int, s:Float) : Void;
+        static function glMultiTexCoord1f(target:Int, s:cpp.Float32) : Void;
 
         @:native('glMultiTexCoord1i')
         static function glMultiTexCoord1i(target:Int, s:Int) : Void;
@@ -1754,10 +1754,10 @@ extern class GL {
         static function glMultiTexCoord1s(target:Int, s:Int) : Void;
 
         @:native('glMultiTexCoord2d')
-        static function glMultiTexCoord2d(target:Int, s:Float, t:Float) : Void;
+        static function glMultiTexCoord2d(target:Int, s:cpp.Float64, t:cpp.Float64) : Void;
 
         @:native('glMultiTexCoord2f')
-        static function glMultiTexCoord2f(target:Int, s:Float, t:Float) : Void;
+        static function glMultiTexCoord2f(target:Int, s:cpp.Float32, t:cpp.Float32) : Void;
 
         @:native('glMultiTexCoord2i')
         static function glMultiTexCoord2i(target:Int, s:Int, t:Int) : Void;
@@ -1766,10 +1766,10 @@ extern class GL {
         static function glMultiTexCoord2s(target:Int, s:Int, t:Int) : Void;
 
         @:native('glMultiTexCoord3d')
-        static function glMultiTexCoord3d(target:Int, s:Float, t:Float, r:Float) : Void;
+        static function glMultiTexCoord3d(target:Int, s:cpp.Float64, t:cpp.Float64, r:cpp.Float64) : Void;
 
         @:native('glMultiTexCoord3f')
-        static function glMultiTexCoord3f(target:Int, s:Float, t:Float, r:Float) : Void;
+        static function glMultiTexCoord3f(target:Int, s:cpp.Float32, t:cpp.Float32, r:cpp.Float32) : Void;
 
         @:native('glMultiTexCoord3i')
         static function glMultiTexCoord3i(target:Int, s:Int, t:Int, r:Int) : Void;
@@ -1778,10 +1778,10 @@ extern class GL {
         static function glMultiTexCoord3s(target:Int, s:Int, t:Int, r:Int) : Void;
 
         @:native('glMultiTexCoord4d')
-        static function glMultiTexCoord4d(target:Int, s:Float, t:Float, r:Float, q:Float) : Void;
+        static function glMultiTexCoord4d(target:Int, s:cpp.Float64, t:cpp.Float64, r:cpp.Float64, q:cpp.Float64) : Void;
 
         @:native('glMultiTexCoord4f')
-        static function glMultiTexCoord4f(target:Int, s:Float, t:Float, r:Float, q:Float) : Void;
+        static function glMultiTexCoord4f(target:Int, s:cpp.Float32, t:cpp.Float32, r:cpp.Float32, q:cpp.Float32) : Void;
 
         @:native('glMultiTexCoord4i')
         static function glMultiTexCoord4i(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;
@@ -1790,77 +1790,77 @@ extern class GL {
         static function glMultiTexCoord4s(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;
 
         @:native('glSampleCoverage')
-        static function glSampleCoverage(value:Float, invert:Bool) : Void;
+        static function glSampleCoverage(value:cpp.Float32, invert:Bool) : Void;
 
 
-        inline static function glCompressedTexImage1D(target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTexImage1D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6})", target, level, internalformat, width, border, imageSize, bOffset, data); }
+        inline static function glCompressedTexImage1D(target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTexImage1D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&({6}[0]))", target, level, internalformat, width, border, imageSize, data); }
 
-        inline static function glCompressedTexImage2D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTexImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, (const void*)&{8}[0] + {7})", target, level, internalformat, width, height, border, imageSize, bOffset, data); }
+        inline static function glCompressedTexImage2D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTexImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, (const void*)&({7}[0]))", target, level, internalformat, width, height, border, imageSize, data); }
 
-        inline static function glCompressedTexImage3D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTexImage3D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", target, level, internalformat, width, height, depth, border, imageSize, bOffset, data); }
+        inline static function glCompressedTexImage3D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTexImage3D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&({8}[0]))", target, level, internalformat, width, height, depth, border, imageSize, data); }
 
-        inline static function glCompressedTexSubImage1D(target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTexSubImage1D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6})", target, level, xoffset, width, format, imageSize, bOffset, data); }
+        inline static function glCompressedTexSubImage1D(target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTexSubImage1D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&({6}[0]))", target, level, xoffset, width, format, imageSize, data); }
 
-        inline static function glCompressedTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTexSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", target, level, xoffset, yoffset, width, height, format, imageSize, bOffset, data); }
+        inline static function glCompressedTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTexSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&({8}[0]))", target, level, xoffset, yoffset, width, height, format, imageSize, data); }
 
-        inline static function glCompressedTexSubImage3D(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTexSubImage3D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&{11}[0] + {10})", target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, bOffset, data); }
+        inline static function glCompressedTexSubImage3D(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTexSubImage3D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&({10}[0]))", target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data); }
 
-        inline static function glGetCompressedTexImage(target:Int, lod:Int, ?bOffset:Int=0, img:BytesData) : Void
-          { untyped __cpp__("glGetCompressedTexImage({0}, {1}, (void*)&{3}[0] + {2})", target, lod, bOffset, img); }
+        inline static function glGetCompressedTexImage(target:Int, lod:Int, img:BytesData) : Void
+          { untyped __cpp__("glGetCompressedTexImage({0}, {1}, (void*)&({2}[0]))", target, lod, img); }
 
-        inline static function glMultiTexCoord1dv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord1dv({0}, (const GLdouble*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord1dv(target:Int, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glMultiTexCoord1dv({0}, (const GLdouble*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord1fv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord1fv({0}, (const GLfloat*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord1fv(target:Int, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glMultiTexCoord1fv({0}, (const GLfloat*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord1iv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord1iv({0}, (const GLint*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord1iv(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord1iv({0}, (const GLint*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord1sv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord1sv({0}, (const GLshort*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord1sv(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord1sv({0}, (const GLshort*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord2dv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord2dv({0}, (const GLdouble*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord2dv(target:Int, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glMultiTexCoord2dv({0}, (const GLdouble*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord2fv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord2fv({0}, (const GLfloat*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord2fv(target:Int, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glMultiTexCoord2fv({0}, (const GLfloat*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord2iv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord2iv({0}, (const GLint*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord2iv(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord2iv({0}, (const GLint*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord2sv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord2sv({0}, (const GLshort*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord2sv(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord2sv({0}, (const GLshort*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord3dv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord3dv({0}, (const GLdouble*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord3dv(target:Int, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glMultiTexCoord3dv({0}, (const GLdouble*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord3fv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord3fv({0}, (const GLfloat*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord3fv(target:Int, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glMultiTexCoord3fv({0}, (const GLfloat*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord3iv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord3iv({0}, (const GLint*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord3iv(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord3iv({0}, (const GLint*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord3sv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord3sv({0}, (const GLshort*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord3sv(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord3sv({0}, (const GLshort*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord4dv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord4dv({0}, (const GLdouble*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord4dv(target:Int, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glMultiTexCoord4dv({0}, (const GLdouble*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord4fv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord4fv({0}, (const GLfloat*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord4fv(target:Int, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glMultiTexCoord4fv({0}, (const GLfloat*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord4iv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord4iv({0}, (const GLint*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord4iv(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord4iv({0}, (const GLint*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord4sv(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord4sv({0}, (const GLshort*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord4sv(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord4sv({0}, (const GLshort*)&({1}[0]))", target, v); }
 
 
 
@@ -1868,16 +1868,16 @@ extern class GL {
 
             
         // @:native('glLoadTransposeMatrixd')
-        // static function glLoadTransposeMatrixd(m:Array<Float>) : Void;
+        // static function glLoadTransposeMatrixd(m:Array<cpp.Float64>) : Void;
             
         // @:native('glLoadTransposeMatrixf')
-        // static function glLoadTransposeMatrixf(m:Array<Float>) : Void;
+        // static function glLoadTransposeMatrixf(m:Array<cpp.Float32>) : Void;
             
         // @:native('glMultTransposeMatrixd')
-        // static function glMultTransposeMatrixd(m:Array<Float>) : Void;
+        // static function glMultTransposeMatrixd(m:Array<cpp.Float64>) : Void;
             
         // @:native('glMultTransposeMatrixf')
-        // static function glMultTransposeMatrixf(m:Array<Float>) : Void;
+        // static function glMultTransposeMatrixf(m:Array<cpp.Float32>) : Void;
 
 
 //GL 1.4
@@ -1928,7 +1928,7 @@ extern class GL {
     //GL 1.4 functions
 
         @:native('glBlendColor')
-        static function glBlendColor(red:Float, green:Float, blue:Float, alpha:Float) : Void;
+        static function glBlendColor(red:cpp.Float32, green:cpp.Float32, blue:cpp.Float32, alpha:cpp.Float32) : Void;
 
         @:native('glBlendEquation')
         static function glBlendEquation(mode:Int) : Void;
@@ -1937,25 +1937,25 @@ extern class GL {
         static function glBlendFuncSeparate(sfactorRGB:Int, dfactorRGB:Int, sfactorAlpha:Int, dfactorAlpha:Int) : Void;
 
         @:native('glFogCoordd')
-        static function glFogCoordd(coord:Float) : Void;
+        static function glFogCoordd(coord:cpp.Float64) : Void;
 
         @:native('glFogCoordf')
-        static function glFogCoordf(coord:Float) : Void;
+        static function glFogCoordf(coord:cpp.Float32) : Void;
 
         @:native('glPointParameterf')
-        static function glPointParameterf(pname:Int, param:Float) : Void;
+        static function glPointParameterf(pname:Int, param:cpp.Float32) : Void;
 
         @:native('glPointParameteri')
         static function glPointParameteri(pname:Int, param:Int) : Void;
 
         @:native('glSecondaryColor3b')
-        static function glSecondaryColor3b(red:String, green:String, blue:String) : Void;
+        static function glSecondaryColor3b(red:cpp.Int8, green:cpp.Int8, blue:cpp.Int8) : Void;
 
         @:native('glSecondaryColor3d')
-        static function glSecondaryColor3d(red:Float, green:Float, blue:Float) : Void;
+        static function glSecondaryColor3d(red:cpp.Float64, green:cpp.Float64, blue:cpp.Float64) : Void;
 
         @:native('glSecondaryColor3f')
-        static function glSecondaryColor3f(red:Float, green:Float, blue:Float) : Void;
+        static function glSecondaryColor3f(red:cpp.Float32, green:cpp.Float32, blue:cpp.Float32) : Void;
 
         @:native('glSecondaryColor3i')
         static function glSecondaryColor3i(red:Int, green:Int, blue:Int) : Void;
@@ -1964,7 +1964,7 @@ extern class GL {
         static function glSecondaryColor3s(red:Int, green:Int, blue:Int) : Void;
 
         @:native('glSecondaryColor3ub')
-        static function glSecondaryColor3ub(red:String, green:String, blue:String) : Void;
+        static function glSecondaryColor3ub(red:cpp.UInt8, green:cpp.UInt8, blue:cpp.UInt8) : Void;
 
         @:native('glSecondaryColor3ui')
         static function glSecondaryColor3ui(red:UInt, green:UInt, blue:UInt) : Void;
@@ -1973,10 +1973,10 @@ extern class GL {
         static function glSecondaryColor3us(red:UInt, green:UInt, blue:UInt) : Void;
 
         @:native('glWindowPos2d')
-        static function glWindowPos2d(x:Float, y:Float) : Void;
+        static function glWindowPos2d(x:cpp.Float64, y:cpp.Float64) : Void;
 
         @:native('glWindowPos2f')
-        static function glWindowPos2f(x:Float, y:Float) : Void;
+        static function glWindowPos2f(x:cpp.Float32, y:cpp.Float32) : Void;
 
         @:native('glWindowPos2i')
         static function glWindowPos2i(x:Int, y:Int) : Void;
@@ -1985,10 +1985,10 @@ extern class GL {
         static function glWindowPos2s(x:Int, y:Int) : Void;
 
         @:native('glWindowPos3d')
-        static function glWindowPos3d(x:Float, y:Float, z:Float) : Void;
+        static function glWindowPos3d(x:cpp.Float64, y:cpp.Float64, z:cpp.Float64) : Void;
 
         @:native('glWindowPos3f')
-        static function glWindowPos3f(x:Float, y:Float, z:Float) : Void;
+        static function glWindowPos3f(x:cpp.Float32, y:cpp.Float32, z:cpp.Float32) : Void;
 
         @:native('glWindowPos3i')
         static function glWindowPos3i(x:Int, y:Int, z:Int) : Void;
@@ -1997,71 +1997,71 @@ extern class GL {
         static function glWindowPos3s(x:Int, y:Int, z:Int) : Void;
 
 
-        inline static function glFogCoordPointer(type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glFogCoordPointer({0}, {1}, (const void*)&{3}[0] + {2})", type, stride, bOffset, pointer); }
+        inline static function glFogCoordPointer(type:Int, stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glFogCoordPointer({0}, {1}, (const void*)&({2}[0]))", type, stride, pointer); }
 
-        inline static function glFogCoorddv(?bOffset:Int=0, coord:BytesData) : Void
-          { untyped __cpp__("glFogCoorddv((const GLdouble*)&{1}[0] + {0})", bOffset, coord); }
+        inline static function glFogCoorddv(coord:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glFogCoorddv((const GLdouble*)&({0}[0]))", coord); }
 
-        inline static function glFogCoordfv(?bOffset:Int=0, coord:BytesData) : Void
-          { untyped __cpp__("glFogCoordfv((const GLfloat*)&{1}[0] + {0})", bOffset, coord); }
+        inline static function glFogCoordfv(coord:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glFogCoordfv((const GLfloat*)&({0}[0]))", coord); }
 
-        inline static function glPointParameterfv(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glPointParameterfv({0}, (const GLfloat*)&{2}[0] + {1})", pname, bOffset, params); }
+        inline static function glPointParameterfv(pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glPointParameterfv({0}, (const GLfloat*)&({1}[0]))", pname, params); }
 
-        inline static function glPointParameteriv(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glPointParameteriv({0}, (const GLint*)&{2}[0] + {1})", pname, bOffset, params); }
+        inline static function glPointParameteriv(pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glPointParameteriv({0}, (const GLint*)&({1}[0]))", pname, params); }
 
-        inline static function glSecondaryColor3bv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3bv((const GLbyte*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glSecondaryColor3bv(v:Array<cpp.Int8>) : Void
+          { untyped __cpp__("glSecondaryColor3bv((const GLbyte*)&({0}[0]))", v); }
 
-        inline static function glSecondaryColor3dv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3dv((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glSecondaryColor3dv(v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glSecondaryColor3dv((const GLdouble*)&({0}[0]))", v); }
 
-        inline static function glSecondaryColor3fv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3fv((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glSecondaryColor3fv(v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glSecondaryColor3fv((const GLfloat*)&({0}[0]))", v); }
 
-        inline static function glSecondaryColor3iv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3iv((const GLint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glSecondaryColor3iv(v:Array<Int>) : Void
+          { untyped __cpp__("glSecondaryColor3iv((const GLint*)&({0}[0]))", v); }
 
-        inline static function glSecondaryColor3sv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3sv((const GLshort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glSecondaryColor3sv(v:Array<Int>) : Void
+          { untyped __cpp__("glSecondaryColor3sv((const GLshort*)&({0}[0]))", v); }
 
-        inline static function glSecondaryColor3ubv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3ubv((const GLubyte*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glSecondaryColor3ubv(v:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glSecondaryColor3ubv((const GLubyte*)&({0}[0]))", v); }
 
-        inline static function glSecondaryColor3uiv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3uiv((const GLuint*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glSecondaryColor3uiv(v:Array<UInt>) : Void
+          { untyped __cpp__("glSecondaryColor3uiv((const GLuint*)&({0}[0]))", v); }
 
-        inline static function glSecondaryColor3usv(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3usv((const GLushort*)&{1}[0] + {0})", bOffset, v); }
+        inline static function glSecondaryColor3usv(v:Array<UInt>) : Void
+          { untyped __cpp__("glSecondaryColor3usv((const GLushort*)&({0}[0]))", v); }
 
-        inline static function glSecondaryColorPointer(size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glSecondaryColorPointer({0}, {1}, {2}, (const void*)&{4}[0] + {3})", size, type, stride, bOffset, pointer); }
+        inline static function glSecondaryColorPointer(size:Int, type:Int, stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glSecondaryColorPointer({0}, {1}, {2}, (const void*)&({3}[0]))", size, type, stride, pointer); }
 
-        inline static function glWindowPos2dv(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos2dv((const GLdouble*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos2dv(p:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glWindowPos2dv((const GLdouble*)&({0}[0]))", p); }
 
-        inline static function glWindowPos2fv(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos2fv((const GLfloat*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos2fv(p:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glWindowPos2fv((const GLfloat*)&({0}[0]))", p); }
 
-        inline static function glWindowPos2iv(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos2iv((const GLint*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos2iv(p:Array<Int>) : Void
+          { untyped __cpp__("glWindowPos2iv((const GLint*)&({0}[0]))", p); }
 
-        inline static function glWindowPos2sv(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos2sv((const GLshort*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos2sv(p:Array<Int>) : Void
+          { untyped __cpp__("glWindowPos2sv((const GLshort*)&({0}[0]))", p); }
 
-        inline static function glWindowPos3dv(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos3dv((const GLdouble*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos3dv(p:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glWindowPos3dv((const GLdouble*)&({0}[0]))", p); }
 
-        inline static function glWindowPos3fv(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos3fv((const GLfloat*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos3fv(p:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glWindowPos3fv((const GLfloat*)&({0}[0]))", p); }
 
-        inline static function glWindowPos3iv(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos3iv((const GLint*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos3iv(p:Array<Int>) : Void
+          { untyped __cpp__("glWindowPos3iv((const GLint*)&({0}[0]))", p); }
 
-        inline static function glWindowPos3sv(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos3sv((const GLshort*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos3sv(p:Array<Int>) : Void
+          { untyped __cpp__("glWindowPos3sv((const GLshort*)&({0}[0]))", p); }
 
 
 
@@ -2069,7 +2069,7 @@ extern class GL {
 
             
         // inline static function glMultiDrawArrays(mode:Int, first:Array<Int>, count:const GLsizei*, drawcount:Int) : Void
-        // { untyped __cpp__("glMultiDrawArrays({0}, (const GLint*)&{1}[0], {2}, {3})", mode, first, count, drawcount); }
+        // { untyped __cpp__("glMultiDrawArrays({0}, (const GLint*)&({1}[0]), {2}, {3})", mode, first, count, drawcount); }
             
         // @:native('glMultiDrawElements')
         // static function glMultiDrawElements(mode:Int, count:const GLsizei*, type:Int, indices:const void *const*, drawcount:Int) : Void;
@@ -2152,38 +2152,38 @@ extern class GL {
         static function glUnmapBuffer(target:Int) : Bool;
 
 
-        inline static function glBufferData(target:Int, size:Int, ?bOffset:Int=0, data:BytesData, usage:Int) : Void
-          { untyped __cpp__("glBufferData({0}, {1}, (const void*)&{3}[0] + {2}, {4})", target, size, bOffset, data, usage); }
+        inline static function glBufferData(target:Int, size:Int, data:BytesData, usage:Int) : Void
+          { untyped __cpp__("glBufferData({0}, {1}, (const void*)&({2}[0]), {3})", target, size, data, usage); }
 
-        inline static function glBufferSubData(target:Int, offset:Int, size:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glBufferSubData({0}, {1}, {2}, (const void*)&{4}[0] + {3})", target, offset, size, bOffset, data); }
+        inline static function glBufferSubData(target:Int, offset:Int, size:Int, data:BytesData) : Void
+          { untyped __cpp__("glBufferSubData({0}, {1}, {2}, (const void*)&({3}[0]))", target, offset, size, data); }
 
         inline static function glDeleteBuffers(n:Int, buffers:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteBuffers({0}, (const GLuint*)&{1}[0])", n, buffers); }
+          { untyped __cpp__("glDeleteBuffers({0}, (const GLuint*)&({1}[0]))", n, buffers); }
 
         inline static function glDeleteQueries(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteQueries({0}, (const GLuint*)&{1}[0])", n, ids); }
+          { untyped __cpp__("glDeleteQueries({0}, (const GLuint*)&({1}[0]))", n, ids); }
 
         inline static function glGenBuffers(n:Int, buffers:Array<UInt>) : Void
-          { untyped __cpp__("glGenBuffers({0}, (GLuint*)&{1}[0])", n, buffers); }
+          { untyped __cpp__("glGenBuffers({0}, (GLuint*)&({1}[0]))", n, buffers); }
 
         inline static function glGenQueries(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glGenQueries({0}, (GLuint*)&{1}[0])", n, ids); }
+          { untyped __cpp__("glGenQueries({0}, (GLuint*)&({1}[0]))", n, ids); }
 
-        inline static function glGetBufferParameteriv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetBufferParameteriv({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetBufferParameteriv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetBufferParameteriv({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetBufferSubData(target:Int, offset:Int, size:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetBufferSubData({0}, {1}, {2}, (void*)&{4}[0] + {3})", target, offset, size, bOffset, data); }
+        inline static function glGetBufferSubData(target:Int, offset:Int, size:Int, data:BytesData) : Void
+          { untyped __cpp__("glGetBufferSubData({0}, {1}, {2}, (void*)&({3}[0]))", target, offset, size, data); }
 
-        inline static function glGetQueryObjectiv(id:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetQueryObjectiv({0}, {1}, (GLint*)&{3}[0] + {2})", id, pname, bOffset, params); }
+        inline static function glGetQueryObjectiv(id:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetQueryObjectiv({0}, {1}, (GLint*)&({2}[0]))", id, pname, params); }
 
-        inline static function glGetQueryObjectuiv(id:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetQueryObjectuiv({0}, {1}, (GLuint*)&{3}[0] + {2})", id, pname, bOffset, params); }
+        inline static function glGetQueryObjectuiv(id:UInt, pname:Int, params:Array<UInt>) : Void
+          { untyped __cpp__("glGetQueryObjectuiv({0}, {1}, (GLuint*)&({2}[0]))", id, pname, params); }
 
-        inline static function glGetQueryiv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetQueryiv({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetQueryiv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetQueryiv({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
 
 
@@ -2347,25 +2347,25 @@ extern class GL {
         static function glStencilOpSeparate(face:Int, sfail:Int, dpfail:Int, dppass:Int) : Void;
 
         @:native('glUniform1f')
-        static function glUniform1f(location:Int, v0:Float) : Void;
+        static function glUniform1f(location:Int, v0:cpp.Float32) : Void;
 
         @:native('glUniform1i')
         static function glUniform1i(location:Int, v0:Int) : Void;
 
         @:native('glUniform2f')
-        static function glUniform2f(location:Int, v0:Float, v1:Float) : Void;
+        static function glUniform2f(location:Int, v0:cpp.Float32, v1:cpp.Float32) : Void;
 
         @:native('glUniform2i')
         static function glUniform2i(location:Int, v0:Int, v1:Int) : Void;
 
         @:native('glUniform3f')
-        static function glUniform3f(location:Int, v0:Float, v1:Float, v2:Float) : Void;
+        static function glUniform3f(location:Int, v0:cpp.Float32, v1:cpp.Float32, v2:cpp.Float32) : Void;
 
         @:native('glUniform3i')
         static function glUniform3i(location:Int, v0:Int, v1:Int, v2:Int) : Void;
 
         @:native('glUniform4f')
-        static function glUniform4f(location:Int, v0:Float, v1:Float, v2:Float, v3:Float) : Void;
+        static function glUniform4f(location:Int, v0:cpp.Float32, v1:cpp.Float32, v2:cpp.Float32, v3:cpp.Float32) : Void;
 
         @:native('glUniform4i')
         static function glUniform4i(location:Int, v0:Int, v1:Int, v2:Int, v3:Int) : Void;
@@ -2377,173 +2377,173 @@ extern class GL {
         static function glValidateProgram(program:UInt) : Void;
 
         @:native('glVertexAttrib1d')
-        static function glVertexAttrib1d(index:UInt, x:Float) : Void;
+        static function glVertexAttrib1d(index:UInt, x:cpp.Float64) : Void;
 
         @:native('glVertexAttrib1f')
-        static function glVertexAttrib1f(index:UInt, x:Float) : Void;
+        static function glVertexAttrib1f(index:UInt, x:cpp.Float32) : Void;
 
         @:native('glVertexAttrib1s')
         static function glVertexAttrib1s(index:UInt, x:Int) : Void;
 
         @:native('glVertexAttrib2d')
-        static function glVertexAttrib2d(index:UInt, x:Float, y:Float) : Void;
+        static function glVertexAttrib2d(index:UInt, x:cpp.Float64, y:cpp.Float64) : Void;
 
         @:native('glVertexAttrib2f')
-        static function glVertexAttrib2f(index:UInt, x:Float, y:Float) : Void;
+        static function glVertexAttrib2f(index:UInt, x:cpp.Float32, y:cpp.Float32) : Void;
 
         @:native('glVertexAttrib2s')
         static function glVertexAttrib2s(index:UInt, x:Int, y:Int) : Void;
 
         @:native('glVertexAttrib3d')
-        static function glVertexAttrib3d(index:UInt, x:Float, y:Float, z:Float) : Void;
+        static function glVertexAttrib3d(index:UInt, x:cpp.Float64, y:cpp.Float64, z:cpp.Float64) : Void;
 
         @:native('glVertexAttrib3f')
-        static function glVertexAttrib3f(index:UInt, x:Float, y:Float, z:Float) : Void;
+        static function glVertexAttrib3f(index:UInt, x:cpp.Float32, y:cpp.Float32, z:cpp.Float32) : Void;
 
         @:native('glVertexAttrib3s')
         static function glVertexAttrib3s(index:UInt, x:Int, y:Int, z:Int) : Void;
 
         @:native('glVertexAttrib4Nub')
-        static function glVertexAttrib4Nub(index:UInt, x:String, y:String, z:String, w:String) : Void;
+        static function glVertexAttrib4Nub(index:UInt, x:cpp.UInt8, y:cpp.UInt8, z:cpp.UInt8, w:cpp.UInt8) : Void;
 
         @:native('glVertexAttrib4d')
-        static function glVertexAttrib4d(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glVertexAttrib4d(index:UInt, x:cpp.Float64, y:cpp.Float64, z:cpp.Float64, w:cpp.Float64) : Void;
 
         @:native('glVertexAttrib4f')
-        static function glVertexAttrib4f(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glVertexAttrib4f(index:UInt, x:cpp.Float32, y:cpp.Float32, z:cpp.Float32, w:cpp.Float32) : Void;
 
         @:native('glVertexAttrib4s')
         static function glVertexAttrib4s(index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
 
 
         inline static function glDrawBuffers(n:Int, bufs:Array<Int>) : Void
-          { untyped __cpp__("glDrawBuffers({0}, (const GLenum*)&{1}[0])", n, bufs); }
+          { untyped __cpp__("glDrawBuffers({0}, (const GLenum*)&({1}[0]))", n, bufs); }
 
-        inline static function glGetProgramiv(program:UInt, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glGetProgramiv({0}, {1}, (GLint*)&{3}[0] + {2})", program, pname, bOffset, param); }
+        inline static function glGetProgramiv(program:UInt, pname:Int, param:Array<Int>) : Void
+          { untyped __cpp__("glGetProgramiv({0}, {1}, (GLint*)&({2}[0]))", program, pname, param); }
 
-        inline static function glGetShaderiv(shader:UInt, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glGetShaderiv({0}, {1}, (GLint*)&{3}[0] + {2})", shader, pname, bOffset, param); }
+        inline static function glGetShaderiv(shader:UInt, pname:Int, param:Array<Int>) : Void
+          { untyped __cpp__("glGetShaderiv({0}, {1}, (GLint*)&({2}[0]))", shader, pname, param); }
 
-        inline static function glGetUniformfv(program:UInt, location:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetUniformfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", program, location, bOffset, params); }
+        inline static function glGetUniformfv(program:UInt, location:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetUniformfv({0}, {1}, (GLfloat*)&({2}[0]))", program, location, params); }
 
-        inline static function glGetUniformiv(program:UInt, location:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetUniformiv({0}, {1}, (GLint*)&{3}[0] + {2})", program, location, bOffset, params); }
+        inline static function glGetUniformiv(program:UInt, location:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetUniformiv({0}, {1}, (GLint*)&({2}[0]))", program, location, params); }
 
-        inline static function glGetVertexAttribdv(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribdv({0}, {1}, (GLdouble*)&{3}[0] + {2})", index, pname, bOffset, params); }
+        inline static function glGetVertexAttribdv(index:UInt, pname:Int, params:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glGetVertexAttribdv({0}, {1}, (GLdouble*)&({2}[0]))", index, pname, params); }
 
-        inline static function glGetVertexAttribfv(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", index, pname, bOffset, params); }
+        inline static function glGetVertexAttribfv(index:UInt, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetVertexAttribfv({0}, {1}, (GLfloat*)&({2}[0]))", index, pname, params); }
 
-        inline static function glGetVertexAttribiv(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribiv({0}, {1}, (GLint*)&{3}[0] + {2})", index, pname, bOffset, params); }
+        inline static function glGetVertexAttribiv(index:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetVertexAttribiv({0}, {1}, (GLint*)&({2}[0]))", index, pname, params); }
 
-        inline static function glUniform1fv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform1fv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform1fv(location:Int, count:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniform1fv({0}, {1}, (const GLfloat*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform1iv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform1iv({0}, {1}, (const GLint*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform1iv(location:Int, count:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glUniform1iv({0}, {1}, (const GLint*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform2fv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform2fv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform2fv(location:Int, count:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniform2fv({0}, {1}, (const GLfloat*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform2iv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform2iv({0}, {1}, (const GLint*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform2iv(location:Int, count:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glUniform2iv({0}, {1}, (const GLint*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform3fv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform3fv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform3fv(location:Int, count:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniform3fv({0}, {1}, (const GLfloat*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform3iv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform3iv({0}, {1}, (const GLint*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform3iv(location:Int, count:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glUniform3iv({0}, {1}, (const GLint*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform4fv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform4fv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform4fv(location:Int, count:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniform4fv({0}, {1}, (const GLfloat*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform4iv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform4iv({0}, {1}, (const GLint*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform4iv(location:Int, count:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glUniform4iv({0}, {1}, (const GLint*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniformMatrix2fv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix2fv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix2fv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniformMatrix2fv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix3fv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix3fv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix3fv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniformMatrix3fv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix4fv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix4fv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix4fv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniformMatrix4fv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glVertexAttrib1dv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib1dv({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib1dv(index:UInt, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertexAttrib1dv({0}, (const GLdouble*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib1fv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib1fv({0}, (const GLfloat*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib1fv(index:UInt, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glVertexAttrib1fv({0}, (const GLfloat*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib1sv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib1sv({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib1sv(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib1sv({0}, (const GLshort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib2dv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib2dv({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib2dv(index:UInt, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertexAttrib2dv({0}, (const GLdouble*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib2fv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib2fv({0}, (const GLfloat*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib2fv(index:UInt, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glVertexAttrib2fv({0}, (const GLfloat*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib2sv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib2sv({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib2sv(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib2sv({0}, (const GLshort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib3dv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib3dv({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib3dv(index:UInt, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertexAttrib3dv({0}, (const GLdouble*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib3fv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib3fv({0}, (const GLfloat*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib3fv(index:UInt, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glVertexAttrib3fv({0}, (const GLfloat*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib3sv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib3sv({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib3sv(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib3sv({0}, (const GLshort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4Nbv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4Nbv({0}, (const GLbyte*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4Nbv(index:UInt, v:Array<cpp.Int8>) : Void
+          { untyped __cpp__("glVertexAttrib4Nbv({0}, (const GLbyte*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4Niv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4Niv({0}, (const GLint*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4Niv(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib4Niv({0}, (const GLint*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4Nsv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4Nsv({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4Nsv(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib4Nsv({0}, (const GLshort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4Nubv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4Nubv({0}, (const GLubyte*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4Nubv(index:UInt, v:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glVertexAttrib4Nubv({0}, (const GLubyte*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4Nuiv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4Nuiv({0}, (const GLuint*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4Nuiv(index:UInt, v:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttrib4Nuiv({0}, (const GLuint*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4Nusv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4Nusv({0}, (const GLushort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4Nusv(index:UInt, v:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttrib4Nusv({0}, (const GLushort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4bv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4bv({0}, (const GLbyte*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4bv(index:UInt, v:Array<cpp.Int8>) : Void
+          { untyped __cpp__("glVertexAttrib4bv({0}, (const GLbyte*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4dv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4dv({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4dv(index:UInt, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertexAttrib4dv({0}, (const GLdouble*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4fv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4fv({0}, (const GLfloat*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4fv(index:UInt, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glVertexAttrib4fv({0}, (const GLfloat*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4iv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4iv({0}, (const GLint*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4iv(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib4iv({0}, (const GLint*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4sv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4sv({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4sv(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib4sv({0}, (const GLshort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4ubv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4ubv({0}, (const GLubyte*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4ubv(index:UInt, v:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glVertexAttrib4ubv({0}, (const GLubyte*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4uiv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4uiv({0}, (const GLuint*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4uiv(index:UInt, v:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttrib4uiv({0}, (const GLuint*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4usv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4usv({0}, (const GLushort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4usv(index:UInt, v:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttrib4usv({0}, (const GLushort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttribPointer(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glVertexAttribPointer({0}, {1}, {2}, {3}, {4}, (const void*)&{6}[0] + {5})", index, size, type, normalized, stride, bOffset, pointer); }
+        inline static function glVertexAttribPointer(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glVertexAttribPointer({0}, {1}, {2}, {3}, {4}, (const void*)&({5}[0]))", index, size, type, normalized, stride, pointer); }
 
 
 
@@ -2551,13 +2551,13 @@ extern class GL {
 
             
         // inline static function glGetActiveAttrib(program:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:Array<Int>, type:GLenum*, name:String) : Void
-        // { untyped __cpp__("glGetActiveAttrib({0}, {1}, {2}, {3}, (GLint*)&{4}[0], {5}, {6})", program, index, maxLength, length, size, type, name); }
+        // { untyped __cpp__("glGetActiveAttrib({0}, {1}, {2}, {3}, (GLint*)&({4}[0]), {5}, {6})", program, index, maxLength, length, size, type, name); }
             
         // inline static function glGetActiveUniform(program:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:Array<Int>, type:GLenum*, name:String) : Void
-        // { untyped __cpp__("glGetActiveUniform({0}, {1}, {2}, {3}, (GLint*)&{4}[0], {5}, {6})", program, index, maxLength, length, size, type, name); }
+        // { untyped __cpp__("glGetActiveUniform({0}, {1}, {2}, {3}, (GLint*)&({4}[0]), {5}, {6})", program, index, maxLength, length, size, type, name); }
             
         // inline static function glGetAttachedShaders(program:UInt, maxCount:Int, count:GLsizei*, shaders:Array<UInt>) : Void
-        // { untyped __cpp__("glGetAttachedShaders({0}, {1}, {2}, (GLuint*)&{3}[0])", program, maxCount, count, shaders); }
+        // { untyped __cpp__("glGetAttachedShaders({0}, {1}, {2}, (GLuint*)&({3}[0]))", program, maxCount, count, shaders); }
             
         // @:native('glGetProgramInfoLog')
         // static function glGetProgramInfoLog(program:UInt, bufSize:Int, length:GLsizei*, infoLog:String) : Void;
@@ -2572,7 +2572,7 @@ extern class GL {
         // static function glGetVertexAttribPointerv(index:UInt, pname:Int, pointer:void**) : Void;
             
         // inline static function glShaderSource(shader:UInt, count:Int, string:const GLchar *const*, length:Array<Int>) : Void
-        // { untyped __cpp__("glShaderSource({0}, {1}, {2}, (const GLint*)&{3}[0])", shader, count, string, length); }
+        // { untyped __cpp__("glShaderSource({0}, {1}, {2}, (const GLint*)&({3}[0]))", shader, count, string, length); }
 
 
 //GL 2.1
@@ -2607,23 +2607,23 @@ extern class GL {
     //GL 2.1 functions
 
 
-        inline static function glUniformMatrix2x3fv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix2x3fv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix2x3fv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniformMatrix2x3fv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix2x4fv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix2x4fv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix2x4fv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniformMatrix2x4fv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix3x2fv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix3x2fv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix3x2fv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniformMatrix3x2fv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix3x4fv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix3x4fv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix3x4fv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniformMatrix3x4fv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix4x2fv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix4x2fv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix4x2fv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniformMatrix4x2fv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix4x3fv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix4x3fv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix4x3fv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniformMatrix4x3fv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", location, count, transpose, value); }
 
 
 
@@ -2754,7 +2754,7 @@ extern class GL {
         static function glClampColor(target:Int, clamp:Int) : Void;
 
         @:native('glClearBufferfi')
-        static function glClearBufferfi(buffer:Int, drawBuffer:Int, depth:Float, stencil:Int) : Void;
+        static function glClearBufferfi(buffer:Int, drawBuffer:Int, depth:cpp.Float32, stencil:Int) : Void;
 
         @:native('glColorMaski')
         static function glColorMaski(buf:UInt, red:Bool, green:Bool, blue:Bool, alpha:Bool) : Void;
@@ -2814,90 +2814,90 @@ extern class GL {
         static function glVertexAttribI4ui(index:UInt, v0:UInt, v1:UInt, v2:UInt, v3:UInt) : Void;
 
 
-        inline static function glClearBufferfv(buffer:Int, drawBuffer:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glClearBufferfv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", buffer, drawBuffer, bOffset, value); }
+        inline static function glClearBufferfv(buffer:Int, drawBuffer:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glClearBufferfv({0}, {1}, (const GLfloat*)&({2}[0]))", buffer, drawBuffer, value); }
 
-        inline static function glClearBufferiv(buffer:Int, drawBuffer:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glClearBufferiv({0}, {1}, (const GLint*)&{3}[0] + {2})", buffer, drawBuffer, bOffset, value); }
+        inline static function glClearBufferiv(buffer:Int, drawBuffer:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glClearBufferiv({0}, {1}, (const GLint*)&({2}[0]))", buffer, drawBuffer, value); }
 
-        inline static function glClearBufferuiv(buffer:Int, drawBuffer:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glClearBufferuiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", buffer, drawBuffer, bOffset, value); }
+        inline static function glClearBufferuiv(buffer:Int, drawBuffer:Int, value:Array<UInt>) : Void
+          { untyped __cpp__("glClearBufferuiv({0}, {1}, (const GLuint*)&({2}[0]))", buffer, drawBuffer, value); }
 
-        inline static function glGetBooleani_v(pname:Int, index:UInt, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetBooleani_v({0}, {1}, (GLboolean*)&{3}[0] + {2})", pname, index, bOffset, data); }
+        inline static function glGetBooleani_v(pname:Int, index:UInt, data:Array<Bool>) : Void
+          { untyped __cpp__("glGetBooleani_v({0}, {1}, (GLboolean*)&({2}[0]))", pname, index, data); }
 
         inline static function glGetStringi(name:Int, index:UInt) : String
           { untyped __cpp__("const char* __val = (const char*)glGetStringi({0},{1}); if(!__val)__val=\"\"", name,index);
             return untyped __cpp__("::String(__val)"); }
 
-        inline static function glGetTexParameterIiv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTexParameterIiv({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetTexParameterIiv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetTexParameterIiv({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetTexParameterIuiv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTexParameterIuiv({0}, {1}, (GLuint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetTexParameterIuiv(target:Int, pname:Int, params:Array<UInt>) : Void
+          { untyped __cpp__("glGetTexParameterIuiv({0}, {1}, (GLuint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetUniformuiv(program:UInt, location:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetUniformuiv({0}, {1}, (GLuint*)&{3}[0] + {2})", program, location, bOffset, params); }
+        inline static function glGetUniformuiv(program:UInt, location:Int, params:Array<UInt>) : Void
+          { untyped __cpp__("glGetUniformuiv({0}, {1}, (GLuint*)&({2}[0]))", program, location, params); }
 
-        inline static function glGetVertexAttribIiv(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribIiv({0}, {1}, (GLint*)&{3}[0] + {2})", index, pname, bOffset, params); }
+        inline static function glGetVertexAttribIiv(index:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetVertexAttribIiv({0}, {1}, (GLint*)&({2}[0]))", index, pname, params); }
 
-        inline static function glGetVertexAttribIuiv(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribIuiv({0}, {1}, (GLuint*)&{3}[0] + {2})", index, pname, bOffset, params); }
+        inline static function glGetVertexAttribIuiv(index:UInt, pname:Int, params:Array<UInt>) : Void
+          { untyped __cpp__("glGetVertexAttribIuiv({0}, {1}, (GLuint*)&({2}[0]))", index, pname, params); }
 
-        inline static function glTexParameterIiv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTexParameterIiv({0}, {1}, (const GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glTexParameterIiv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glTexParameterIiv({0}, {1}, (const GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glTexParameterIuiv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTexParameterIuiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glTexParameterIuiv(target:Int, pname:Int, params:Array<UInt>) : Void
+          { untyped __cpp__("glTexParameterIuiv({0}, {1}, (const GLuint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glUniform1uiv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform1uiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform1uiv(location:Int, count:Int, value:Array<UInt>) : Void
+          { untyped __cpp__("glUniform1uiv({0}, {1}, (const GLuint*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform2uiv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform2uiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform2uiv(location:Int, count:Int, value:Array<UInt>) : Void
+          { untyped __cpp__("glUniform2uiv({0}, {1}, (const GLuint*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform3uiv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform3uiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform3uiv(location:Int, count:Int, value:Array<UInt>) : Void
+          { untyped __cpp__("glUniform3uiv({0}, {1}, (const GLuint*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform4uiv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform4uiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform4uiv(location:Int, count:Int, value:Array<UInt>) : Void
+          { untyped __cpp__("glUniform4uiv({0}, {1}, (const GLuint*)&({2}[0]))", location, count, value); }
 
-        inline static function glVertexAttribI1iv(index:UInt, ?bOffset:Int=0, v0:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI1iv({0}, (const GLint*)&{2}[0] + {1})", index, bOffset, v0); }
+        inline static function glVertexAttribI1iv(index:UInt, v0:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttribI1iv({0}, (const GLint*)&({1}[0]))", index, v0); }
 
-        inline static function glVertexAttribI1uiv(index:UInt, ?bOffset:Int=0, v0:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI1uiv({0}, (const GLuint*)&{2}[0] + {1})", index, bOffset, v0); }
+        inline static function glVertexAttribI1uiv(index:UInt, v0:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttribI1uiv({0}, (const GLuint*)&({1}[0]))", index, v0); }
 
-        inline static function glVertexAttribI2iv(index:UInt, ?bOffset:Int=0, v0:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI2iv({0}, (const GLint*)&{2}[0] + {1})", index, bOffset, v0); }
+        inline static function glVertexAttribI2iv(index:UInt, v0:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttribI2iv({0}, (const GLint*)&({1}[0]))", index, v0); }
 
-        inline static function glVertexAttribI2uiv(index:UInt, ?bOffset:Int=0, v0:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI2uiv({0}, (const GLuint*)&{2}[0] + {1})", index, bOffset, v0); }
+        inline static function glVertexAttribI2uiv(index:UInt, v0:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttribI2uiv({0}, (const GLuint*)&({1}[0]))", index, v0); }
 
-        inline static function glVertexAttribI3iv(index:UInt, ?bOffset:Int=0, v0:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI3iv({0}, (const GLint*)&{2}[0] + {1})", index, bOffset, v0); }
+        inline static function glVertexAttribI3iv(index:UInt, v0:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttribI3iv({0}, (const GLint*)&({1}[0]))", index, v0); }
 
-        inline static function glVertexAttribI3uiv(index:UInt, ?bOffset:Int=0, v0:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI3uiv({0}, (const GLuint*)&{2}[0] + {1})", index, bOffset, v0); }
+        inline static function glVertexAttribI3uiv(index:UInt, v0:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttribI3uiv({0}, (const GLuint*)&({1}[0]))", index, v0); }
 
-        inline static function glVertexAttribI4bv(index:UInt, ?bOffset:Int=0, v0:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI4bv({0}, (const GLbyte*)&{2}[0] + {1})", index, bOffset, v0); }
+        inline static function glVertexAttribI4bv(index:UInt, v0:Array<cpp.Int8>) : Void
+          { untyped __cpp__("glVertexAttribI4bv({0}, (const GLbyte*)&({1}[0]))", index, v0); }
 
-        inline static function glVertexAttribI4iv(index:UInt, ?bOffset:Int=0, v0:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI4iv({0}, (const GLint*)&{2}[0] + {1})", index, bOffset, v0); }
+        inline static function glVertexAttribI4iv(index:UInt, v0:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttribI4iv({0}, (const GLint*)&({1}[0]))", index, v0); }
 
-        inline static function glVertexAttribI4sv(index:UInt, ?bOffset:Int=0, v0:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI4sv({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v0); }
+        inline static function glVertexAttribI4sv(index:UInt, v0:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttribI4sv({0}, (const GLshort*)&({1}[0]))", index, v0); }
 
-        inline static function glVertexAttribI4ubv(index:UInt, ?bOffset:Int=0, v0:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI4ubv({0}, (const GLubyte*)&{2}[0] + {1})", index, bOffset, v0); }
+        inline static function glVertexAttribI4ubv(index:UInt, v0:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glVertexAttribI4ubv({0}, (const GLubyte*)&({1}[0]))", index, v0); }
 
-        inline static function glVertexAttribI4uiv(index:UInt, ?bOffset:Int=0, v0:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI4uiv({0}, (const GLuint*)&{2}[0] + {1})", index, bOffset, v0); }
+        inline static function glVertexAttribI4uiv(index:UInt, v0:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttribI4uiv({0}, (const GLuint*)&({1}[0]))", index, v0); }
 
-        inline static function glVertexAttribI4usv(index:UInt, ?bOffset:Int=0, v0:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI4usv({0}, (const GLushort*)&{2}[0] + {1})", index, bOffset, v0); }
+        inline static function glVertexAttribI4usv(index:UInt, v0:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttribI4usv({0}, (const GLushort*)&({1}[0]))", index, v0); }
 
 
 
@@ -2966,8 +2966,8 @@ extern class GL {
         static function glTexBuffer(target:Int, internalFormat:Int, buffer:UInt) : Void;
 
 
-        inline static function glDrawElementsInstanced(mode:Int, count:Int, type:Int, ?bOffset:Int=0, indices:BytesData, primcount:Int) : Void
-          { untyped __cpp__("glDrawElementsInstanced({0}, {1}, {2}, (const void*)&{4}[0] + {3}, {5})", mode, count, type, bOffset, indices, primcount); }
+        inline static function glDrawElementsInstanced(mode:Int, count:Int, type:Int, indices:BytesData, primcount:Int) : Void
+          { untyped __cpp__("glDrawElementsInstanced({0}, {1}, {2}, (const void*)&({3}[0]), {4})", mode, count, type, indices, primcount); }
 
 
 
@@ -3068,7 +3068,7 @@ extern class GL {
         static function glBlendFunci(buf:UInt, src:Int, dst:Int) : Void;
 
         @:native('glMinSampleShading')
-        static function glMinSampleShading(value:Float) : Void;
+        static function glMinSampleShading(value:cpp.Float32) : Void;
 
 
 
@@ -3114,1054 +3114,6 @@ extern class GL {
 
 
 
-//GL_3DFX_multisample
-
-    // GL_3DFX_multisample defines
-
-        inline static var GL_3DFX_multisample                                             = 1;
-        inline static var GL_MULTISAMPLE_3DFX                                             = 0x86B2;
-        inline static var GL_SAMPLE_BUFFERS_3DFX                                          = 0x86B3;
-        inline static var GL_SAMPLES_3DFX                                                 = 0x86B4;
-        inline static var GL_MULTISAMPLE_BIT_3DFX                                         = 0x20000000;
-
-
-//GL_3DFX_tbuffer
-
-    // GL_3DFX_tbuffer defines
-
-        inline static var GL_3DFX_tbuffer                                                 = 1;
-
-
-
-
-    // GL_3DFX_tbuffer functions
-
-        @:native('glTbufferMask3DFX')
-        static function glTbufferMask3DFX(mask:UInt) : Void;
-
-
-
-
-
-//GL_3DFX_texture_compression_FXT1
-
-    // GL_3DFX_texture_compression_FXT1 defines
-
-        inline static var GL_3DFX_texture_compression_FXT1                                = 1;
-        inline static var GL_COMPRESSED_RGB_FXT1_3DFX                                     = 0x86B0;
-        inline static var GL_COMPRESSED_RGBA_FXT1_3DFX                                    = 0x86B1;
-
-
-//GL_AMD_blend_minmax_factor
-
-    // GL_AMD_blend_minmax_factor defines
-
-        inline static var GL_AMD_blend_minmax_factor                                      = 1;
-        inline static var GL_FACTOR_MIN_AMD                                               = 0x901C;
-        inline static var GL_FACTOR_MAX_AMD                                               = 0x901D;
-
-
-//GL_AMD_conservative_depth
-
-    // GL_AMD_conservative_depth defines
-
-        inline static var GL_AMD_conservative_depth                                       = 1;
-
-
-//GL_AMD_debug_output
-
-    // GL_AMD_debug_output defines
-
-        inline static var GL_AMD_debug_output                                             = 1;
-        inline static var GL_MAX_DEBUG_MESSAGE_LENGTH_AMD                                 = 0x9143;
-        inline static var GL_MAX_DEBUG_LOGGED_MESSAGES_AMD                                = 0x9144;
-        inline static var GL_DEBUG_LOGGED_MESSAGES_AMD                                    = 0x9145;
-        inline static var GL_DEBUG_SEVERITY_HIGH_AMD                                      = 0x9146;
-        inline static var GL_DEBUG_SEVERITY_MEDIUM_AMD                                    = 0x9147;
-        inline static var GL_DEBUG_SEVERITY_LOW_AMD                                       = 0x9148;
-        inline static var GL_DEBUG_CATEGORY_API_ERROR_AMD                                 = 0x9149;
-        inline static var GL_DEBUG_CATEGORY_WINDOW_SYSTEM_AMD                             = 0x914A;
-        inline static var GL_DEBUG_CATEGORY_DEPRECATION_AMD                               = 0x914B;
-        inline static var GL_DEBUG_CATEGORY_UNDEFINED_BEHAVIOR_AMD                        = 0x914C;
-        inline static var GL_DEBUG_CATEGORY_PERFORMANCE_AMD                               = 0x914D;
-        inline static var GL_DEBUG_CATEGORY_SHADER_COMPILER_AMD                           = 0x914E;
-        inline static var GL_DEBUG_CATEGORY_APPLICATION_AMD                               = 0x914F;
-        inline static var GL_DEBUG_CATEGORY_OTHER_AMD                                     = 0x9150;
-
-
-
-
-    // GL_AMD_debug_output functions
-
-        @:native('glDebugMessageInsertAMD')
-        static function glDebugMessageInsertAMD(category:Int, severity:Int, id:UInt, length:Int, buf:String) : Void;
-
-
-        inline static function glDebugMessageEnableAMD(category:Int, severity:Int, count:Int, ids:Array<UInt>, enabled:Bool) : Void
-          { untyped __cpp__("glDebugMessageEnableAMD({0}, {1}, {2}, (const GLuint*)&{3}[0], {4})", category, severity, count, ids, enabled); }
-
-
-
-    // TODO functions
-
-            
-        // inline static function glDebugMessageCallbackAMD(callback:GLDEBUGPROCAMD, ?bOffset:Int=0, userParam:BytesData) : Void
-        // { untyped __cpp__("glDebugMessageCallbackAMD({0}, (void*)&{2}[0] + {1})", callback, bOffset, userParam); }
-            
-        // inline static function glGetDebugMessageLogAMD(count:UInt, bufsize:Int, categories:GLenum*, severities:Array<UInt>, ids:Array<UInt>, lengths:GLsizei*, message:String) : UInt
-        // { return untyped __cpp__("glGetDebugMessageLogAMD({0}, {1}, {2}, (GLuint*)&{3}[0], (GLuint*)&{4}[0], {5}, {6})", count, bufsize, categories, severities, ids, lengths, message); }
-
-
-//GL_AMD_depth_clamp_separate
-
-    // GL_AMD_depth_clamp_separate defines
-
-        inline static var GL_AMD_depth_clamp_separate                                     = 1;
-        inline static var GL_DEPTH_CLAMP_NEAR_AMD                                         = 0x901E;
-        inline static var GL_DEPTH_CLAMP_FAR_AMD                                          = 0x901F;
-
-
-//GL_AMD_draw_buffers_blend
-
-    // GL_AMD_draw_buffers_blend defines
-
-        inline static var GL_AMD_draw_buffers_blend                                       = 1;
-
-
-
-
-    // GL_AMD_draw_buffers_blend functions
-
-        @:native('glBlendEquationIndexedAMD')
-        static function glBlendEquationIndexedAMD(buf:UInt, mode:Int) : Void;
-
-        @:native('glBlendEquationSeparateIndexedAMD')
-        static function glBlendEquationSeparateIndexedAMD(buf:UInt, modeRGB:Int, modeAlpha:Int) : Void;
-
-        @:native('glBlendFuncIndexedAMD')
-        static function glBlendFuncIndexedAMD(buf:UInt, src:Int, dst:Int) : Void;
-
-        @:native('glBlendFuncSeparateIndexedAMD')
-        static function glBlendFuncSeparateIndexedAMD(buf:UInt, srcRGB:Int, dstRGB:Int, srcAlpha:Int, dstAlpha:Int) : Void;
-
-
-
-
-
-//GL_AMD_gcn_shader
-
-    // GL_AMD_gcn_shader defines
-
-        inline static var GL_AMD_gcn_shader                                               = 1;
-
-
-//GL_AMD_gpu_shader_int64
-
-    // GL_AMD_gpu_shader_int64 defines
-
-        inline static var GL_AMD_gpu_shader_int64                                         = 1;
-
-
-//GL_AMD_interleaved_elements
-
-    // GL_AMD_interleaved_elements defines
-
-        inline static var GL_AMD_interleaved_elements                                     = 1;
-        inline static var GL_RG8UI                                                        = 0x8238;
-        inline static var GL_RG16UI                                                       = 0x823A;
-        inline static var GL_VERTEX_ELEMENT_SWIZZLE_AMD                                   = 0x91A4;
-        inline static var GL_VERTEX_ID_SWIZZLE_AMD                                        = 0x91A5;
-
-
-
-
-    // GL_AMD_interleaved_elements functions
-
-        @:native('glVertexAttribParameteriAMD')
-        static function glVertexAttribParameteriAMD(index:UInt, pname:Int, param:Int) : Void;
-
-
-
-
-
-//GL_AMD_multi_draw_indirect
-
-    // GL_AMD_multi_draw_indirect defines
-
-        inline static var GL_AMD_multi_draw_indirect                                      = 1;
-
-
-
-
-    // GL_AMD_multi_draw_indirect functions
-
-
-        inline static function glMultiDrawArraysIndirectAMD(mode:Int, ?bOffset:Int=0, indirect:BytesData, primcount:Int, stride:Int) : Void
-          { untyped __cpp__("glMultiDrawArraysIndirectAMD({0}, (const void*)&{2}[0] + {1}, {3}, {4})", mode, bOffset, indirect, primcount, stride); }
-
-        inline static function glMultiDrawElementsIndirectAMD(mode:Int, type:Int, ?bOffset:Int=0, indirect:BytesData, primcount:Int, stride:Int) : Void
-          { untyped __cpp__("glMultiDrawElementsIndirectAMD({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5})", mode, type, bOffset, indirect, primcount, stride); }
-
-
-
-
-//GL_AMD_name_gen_delete
-
-    // GL_AMD_name_gen_delete defines
-
-        inline static var GL_AMD_name_gen_delete                                          = 1;
-        inline static var GL_DATA_BUFFER_AMD                                              = 0x9151;
-        inline static var GL_PERFORMANCE_MONITOR_AMD                                      = 0x9152;
-        inline static var GL_QUERY_OBJECT_AMD                                             = 0x9153;
-        inline static var GL_VERTEX_ARRAY_OBJECT_AMD                                      = 0x9154;
-        inline static var GL_SAMPLER_OBJECT_AMD                                           = 0x9155;
-
-
-
-
-    // GL_AMD_name_gen_delete functions
-
-        @:native('glIsNameAMD')
-        static function glIsNameAMD(identifier:Int, name:UInt) : Bool;
-
-
-        inline static function glDeleteNamesAMD(identifier:Int, num:UInt, names:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteNamesAMD({0}, {1}, (const GLuint*)&{2}[0])", identifier, num, names); }
-
-        inline static function glGenNamesAMD(identifier:Int, num:UInt, names:Array<UInt>) : Void
-          { untyped __cpp__("glGenNamesAMD({0}, {1}, (GLuint*)&{2}[0])", identifier, num, names); }
-
-
-
-
-//GL_AMD_occlusion_query_event
-
-    // GL_AMD_occlusion_query_event defines
-
-        inline static var GL_AMD_occlusion_query_event                                    = 1;
-        inline static var GL_QUERY_DEPTH_PASS_EVENT_BIT_AMD                               = 0x00000001;
-        inline static var GL_QUERY_DEPTH_FAIL_EVENT_BIT_AMD                               = 0x00000002;
-        inline static var GL_QUERY_STENCIL_FAIL_EVENT_BIT_AMD                             = 0x00000004;
-        inline static var GL_QUERY_DEPTH_BOUNDS_FAIL_EVENT_BIT_AMD                        = 0x00000008;
-        inline static var GL_OCCLUSION_QUERY_EVENT_MASK_AMD                               = 0x874F;
-        inline static var GL_QUERY_ALL_EVENT_BITS_AMD                                     = 0xFFFFFFFF;
-
-
-
-
-    // GL_AMD_occlusion_query_event functions
-
-        @:native('glQueryObjectParameteruiAMD')
-        static function glQueryObjectParameteruiAMD(target:Int, id:UInt, pname:Int, param:UInt) : Void;
-
-
-
-
-
-//GL_AMD_performance_monitor
-
-    // GL_AMD_performance_monitor defines
-
-        inline static var GL_AMD_performance_monitor                                      = 1;
-        inline static var GL_COUNTER_TYPE_AMD                                             = 0x8BC0;
-        inline static var GL_COUNTER_RANGE_AMD                                            = 0x8BC1;
-        inline static var GL_UNSIGNED_INT64_AMD                                           = 0x8BC2;
-        inline static var GL_PERCENTAGE_AMD                                               = 0x8BC3;
-        inline static var GL_PERFMON_RESULT_AVAILABLE_AMD                                 = 0x8BC4;
-        inline static var GL_PERFMON_RESULT_SIZE_AMD                                      = 0x8BC5;
-        inline static var GL_PERFMON_RESULT_AMD                                           = 0x8BC6;
-
-
-
-
-    // GL_AMD_performance_monitor functions
-
-        @:native('glBeginPerfMonitorAMD')
-        static function glBeginPerfMonitorAMD(monitor:UInt) : Void;
-
-        @:native('glEndPerfMonitorAMD')
-        static function glEndPerfMonitorAMD(monitor:UInt) : Void;
-
-
-        inline static function glDeletePerfMonitorsAMD(n:Int, monitors:Array<UInt>) : Void
-          { untyped __cpp__("glDeletePerfMonitorsAMD({0}, (GLuint*)&{1}[0])", n, monitors); }
-
-        inline static function glGenPerfMonitorsAMD(n:Int, monitors:Array<UInt>) : Void
-          { untyped __cpp__("glGenPerfMonitorsAMD({0}, (GLuint*)&{1}[0])", n, monitors); }
-
-        inline static function glGetPerfMonitorCounterDataAMD(monitor:UInt, pname:Int, dataSize:Int, data:Array<UInt>, bytesWritten:Array<Int>) : Void
-          { untyped __cpp__("glGetPerfMonitorCounterDataAMD({0}, {1}, {2}, (GLuint*)&{3}[0], (GLint*)&{4}[0])", monitor, pname, dataSize, data, bytesWritten); }
-
-        inline static function glGetPerfMonitorCounterInfoAMD(group:UInt, counter:UInt, pname:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetPerfMonitorCounterInfoAMD({0}, {1}, {2}, (void*)&{4}[0] + {3})", group, counter, pname, bOffset, data); }
-
-        inline static function glGetPerfMonitorCountersAMD(group:UInt, numCounters:Array<Int>, maxActiveCounters:Array<Int>, countersSize:Int, counters:Array<UInt>) : Void
-          { untyped __cpp__("glGetPerfMonitorCountersAMD({0}, (GLint*)&{1}[0], (GLint*)&{2}[0], {3}, (GLuint*)&{4}[0])", group, numCounters, maxActiveCounters, countersSize, counters); }
-
-        inline static function glGetPerfMonitorGroupsAMD(numGroups:Array<Int>, groupsSize:Int, groups:Array<UInt>) : Void
-          { untyped __cpp__("glGetPerfMonitorGroupsAMD((GLint*)&{0}[0], {1}, (GLuint*)&{2}[0])", numGroups, groupsSize, groups); }
-
-        inline static function glSelectPerfMonitorCountersAMD(monitor:UInt, enable:Bool, group:UInt, numCounters:Int, counterList:Array<UInt>) : Void
-          { untyped __cpp__("glSelectPerfMonitorCountersAMD({0}, {1}, {2}, {3}, (GLuint*)&{4}[0])", monitor, enable, group, numCounters, counterList); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetPerfMonitorCounterStringAMD')
-        // static function glGetPerfMonitorCounterStringAMD(group:UInt, counter:UInt, bufSize:Int, length:GLsizei*, counterString:String) : Void;
-            
-        // @:native('glGetPerfMonitorGroupStringAMD')
-        // static function glGetPerfMonitorGroupStringAMD(group:UInt, bufSize:Int, length:GLsizei*, groupString:String) : Void;
-
-
-//GL_AMD_pinned_memory
-
-    // GL_AMD_pinned_memory defines
-
-        inline static var GL_AMD_pinned_memory                                            = 1;
-        inline static var GL_EXTERNAL_VIRTUAL_MEMORY_BUFFER_AMD                           = 0x9160;
-
-
-//GL_AMD_query_buffer_object
-
-    // GL_AMD_query_buffer_object defines
-
-        inline static var GL_AMD_query_buffer_object                                      = 1;
-        inline static var GL_QUERY_BUFFER_AMD                                             = 0x9192;
-        inline static var GL_QUERY_BUFFER_BINDING_AMD                                     = 0x9193;
-        inline static var GL_QUERY_RESULT_NO_WAIT_AMD                                     = 0x9194;
-
-
-//GL_AMD_sample_positions
-
-    // GL_AMD_sample_positions defines
-
-        inline static var GL_AMD_sample_positions                                         = 1;
-        inline static var GL_SUBSAMPLE_DISTANCE_AMD                                       = 0x883F;
-
-
-
-
-    // GL_AMD_sample_positions functions
-
-
-        inline static function glSetMultisamplefvAMD(pname:Int, index:UInt, ?bOffset:Int=0, val:BytesData) : Void
-          { untyped __cpp__("glSetMultisamplefvAMD({0}, {1}, (const GLfloat*)&{3}[0] + {2})", pname, index, bOffset, val); }
-
-
-
-
-//GL_AMD_seamless_cubemap_per_texture
-
-    // GL_AMD_seamless_cubemap_per_texture defines
-
-        inline static var GL_AMD_seamless_cubemap_per_texture                             = 1;
-        inline static var GL_TEXTURE_CUBE_MAP_SEAMLESS_ARB                                = 0x884F;
-
-
-//GL_AMD_shader_atomic_counter_ops
-
-    // GL_AMD_shader_atomic_counter_ops defines
-
-        inline static var GL_AMD_shader_atomic_counter_ops                                = 1;
-
-
-//GL_AMD_shader_stencil_export
-
-    // GL_AMD_shader_stencil_export defines
-
-        inline static var GL_AMD_shader_stencil_export                                    = 1;
-
-
-//GL_AMD_shader_stencil_value_export
-
-    // GL_AMD_shader_stencil_value_export defines
-
-        inline static var GL_AMD_shader_stencil_value_export                              = 1;
-
-
-//GL_AMD_shader_trinary_minmax
-
-    // GL_AMD_shader_trinary_minmax defines
-
-        inline static var GL_AMD_shader_trinary_minmax                                    = 1;
-
-
-//GL_AMD_sparse_texture
-
-    // GL_AMD_sparse_texture defines
-
-        inline static var GL_AMD_sparse_texture                                           = 1;
-        inline static var GL_TEXTURE_STORAGE_SPARSE_BIT_AMD                               = 0x00000001;
-        inline static var GL_VIRTUAL_PAGE_SIZE_X_AMD                                      = 0x9195;
-        inline static var GL_VIRTUAL_PAGE_SIZE_Y_AMD                                      = 0x9196;
-        inline static var GL_VIRTUAL_PAGE_SIZE_Z_AMD                                      = 0x9197;
-        inline static var GL_MAX_SPARSE_TEXTURE_SIZE_AMD                                  = 0x9198;
-        inline static var GL_MAX_SPARSE_3D_TEXTURE_SIZE_AMD                               = 0x9199;
-        inline static var GL_MAX_SPARSE_ARRAY_TEXTURE_LAYERS                              = 0x919A;
-        inline static var GL_MIN_SPARSE_LEVEL_AMD                                         = 0x919B;
-        inline static var GL_MIN_LOD_WARNING_AMD                                          = 0x919C;
-
-
-
-
-    // GL_AMD_sparse_texture functions
-
-        @:native('glTexStorageSparseAMD')
-        static function glTexStorageSparseAMD(target:Int, internalFormat:Int, width:Int, height:Int, depth:Int, layers:Int, flags:Int) : Void;
-
-        @:native('glTextureStorageSparseAMD')
-        static function glTextureStorageSparseAMD(texture:UInt, target:Int, internalFormat:Int, width:Int, height:Int, depth:Int, layers:Int, flags:Int) : Void;
-
-
-
-
-
-//GL_AMD_stencil_operation_extended
-
-    // GL_AMD_stencil_operation_extended defines
-
-        inline static var GL_AMD_stencil_operation_extended                               = 1;
-        inline static var GL_SET_AMD                                                      = 0x874A;
-        inline static var GL_REPLACE_VALUE_AMD                                            = 0x874B;
-        inline static var GL_STENCIL_OP_VALUE_AMD                                         = 0x874C;
-        inline static var GL_STENCIL_BACK_OP_VALUE_AMD                                    = 0x874D;
-
-
-
-
-    // GL_AMD_stencil_operation_extended functions
-
-        @:native('glStencilOpValueAMD')
-        static function glStencilOpValueAMD(face:Int, value:UInt) : Void;
-
-
-
-
-
-//GL_AMD_texture_texture4
-
-    // GL_AMD_texture_texture4 defines
-
-        inline static var GL_AMD_texture_texture4                                         = 1;
-
-
-//GL_AMD_transform_feedback3_lines_triangles
-
-    // GL_AMD_transform_feedback3_lines_triangles defines
-
-        inline static var GL_AMD_transform_feedback3_lines_triangles                      = 1;
-
-
-//GL_AMD_transform_feedback4
-
-    // GL_AMD_transform_feedback4 defines
-
-        inline static var GL_AMD_transform_feedback4                                      = 1;
-        inline static var GL_STREAM_RASTERIZATION_AMD                                     = 0x91A0;
-
-
-//GL_AMD_vertex_shader_layer
-
-    // GL_AMD_vertex_shader_layer defines
-
-        inline static var GL_AMD_vertex_shader_layer                                      = 1;
-
-
-//GL_AMD_vertex_shader_tessellator
-
-    // GL_AMD_vertex_shader_tessellator defines
-
-        inline static var GL_AMD_vertex_shader_tessellator                                = 1;
-        inline static var GL_SAMPLER_BUFFER_AMD                                           = 0x9001;
-        inline static var GL_INT_SAMPLER_BUFFER_AMD                                       = 0x9002;
-        inline static var GL_UNSIGNED_INT_SAMPLER_BUFFER_AMD                              = 0x9003;
-        inline static var GL_TESSELLATION_MODE_AMD                                        = 0x9004;
-        inline static var GL_TESSELLATION_FACTOR_AMD                                      = 0x9005;
-        inline static var GL_DISCRETE_AMD                                                 = 0x9006;
-        inline static var GL_CONTINUOUS_AMD                                               = 0x9007;
-
-
-
-
-    // GL_AMD_vertex_shader_tessellator functions
-
-        @:native('glTessellationFactorAMD')
-        static function glTessellationFactorAMD(factor:Float) : Void;
-
-        @:native('glTessellationModeAMD')
-        static function glTessellationModeAMD(mode:Int) : Void;
-
-
-
-
-
-//GL_AMD_vertex_shader_viewport_index
-
-    // GL_AMD_vertex_shader_viewport_index defines
-
-        inline static var GL_AMD_vertex_shader_viewport_index                             = 1;
-
-
-//GL_ANGLE_depth_texture
-
-    // GL_ANGLE_depth_texture defines
-
-        inline static var GL_ANGLE_depth_texture                                          = 1;
-
-
-//GL_ANGLE_framebuffer_blit
-
-    // GL_ANGLE_framebuffer_blit defines
-
-        inline static var GL_ANGLE_framebuffer_blit                                       = 1;
-        inline static var GL_DRAW_FRAMEBUFFER_BINDING_ANGLE                               = 0x8CA6;
-        inline static var GL_READ_FRAMEBUFFER_ANGLE                                       = 0x8CA8;
-        inline static var GL_DRAW_FRAMEBUFFER_ANGLE                                       = 0x8CA9;
-        inline static var GL_READ_FRAMEBUFFER_BINDING_ANGLE                               = 0x8CAA;
-
-
-
-
-    // GL_ANGLE_framebuffer_blit functions
-
-        @:native('glBlitFramebufferANGLE')
-        static function glBlitFramebufferANGLE(srcX0:Int, srcY0:Int, srcX1:Int, srcY1:Int, dstX0:Int, dstY0:Int, dstX1:Int, dstY1:Int, mask:Int, filter:Int) : Void;
-
-
-
-
-
-//GL_ANGLE_framebuffer_multisample
-
-    // GL_ANGLE_framebuffer_multisample defines
-
-        inline static var GL_ANGLE_framebuffer_multisample                                = 1;
-        inline static var GL_RENDERBUFFER_SAMPLES_ANGLE                                   = 0x8CAB;
-        inline static var GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_ANGLE                     = 0x8D56;
-        inline static var GL_MAX_SAMPLES_ANGLE                                            = 0x8D57;
-
-
-
-
-    // GL_ANGLE_framebuffer_multisample functions
-
-        @:native('glRenderbufferStorageMultisampleANGLE')
-        static function glRenderbufferStorageMultisampleANGLE(target:Int, samples:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-
-
-
-
-//GL_ANGLE_instanced_arrays
-
-    // GL_ANGLE_instanced_arrays defines
-
-        inline static var GL_ANGLE_instanced_arrays                                       = 1;
-        inline static var GL_VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE                            = 0x88FE;
-
-
-
-
-    // GL_ANGLE_instanced_arrays functions
-
-        @:native('glDrawArraysInstancedANGLE')
-        static function glDrawArraysInstancedANGLE(mode:Int, first:Int, count:Int, primcount:Int) : Void;
-
-        @:native('glVertexAttribDivisorANGLE')
-        static function glVertexAttribDivisorANGLE(index:UInt, divisor:UInt) : Void;
-
-
-        inline static function glDrawElementsInstancedANGLE(mode:Int, count:Int, type:Int, ?bOffset:Int=0, indices:BytesData, primcount:Int) : Void
-          { untyped __cpp__("glDrawElementsInstancedANGLE({0}, {1}, {2}, (const void*)&{4}[0] + {3}, {5})", mode, count, type, bOffset, indices, primcount); }
-
-
-
-
-//GL_ANGLE_pack_reverse_row_order
-
-    // GL_ANGLE_pack_reverse_row_order defines
-
-        inline static var GL_ANGLE_pack_reverse_row_order                                 = 1;
-        inline static var GL_PACK_REVERSE_ROW_ORDER_ANGLE                                 = 0x93A4;
-
-
-//GL_ANGLE_program_binary
-
-    // GL_ANGLE_program_binary defines
-
-        inline static var GL_ANGLE_program_binary                                         = 1;
-        inline static var GL_PROGRAM_BINARY_ANGLE                                         = 0x93A6;
-
-
-//GL_ANGLE_texture_compression_dxt1
-
-    // GL_ANGLE_texture_compression_dxt1 defines
-
-        inline static var GL_ANGLE_texture_compression_dxt1                               = 1;
-        inline static var GL_COMPRESSED_RGB_S3TC_DXT1_ANGLE                               = 0x83F0;
-        inline static var GL_COMPRESSED_RGBA_S3TC_DXT1_ANGLE                              = 0x83F1;
-        inline static var GL_COMPRESSED_RGBA_S3TC_DXT3_ANGLE                              = 0x83F2;
-        inline static var GL_COMPRESSED_RGBA_S3TC_DXT5_ANGLE                              = 0x83F3;
-
-
-//GL_ANGLE_texture_compression_dxt3
-
-    // GL_ANGLE_texture_compression_dxt3 defines
-
-        inline static var GL_ANGLE_texture_compression_dxt3                               = 1;
-
-
-//GL_ANGLE_texture_compression_dxt5
-
-    // GL_ANGLE_texture_compression_dxt5 defines
-
-        inline static var GL_ANGLE_texture_compression_dxt5                               = 1;
-
-
-//GL_ANGLE_texture_usage
-
-    // GL_ANGLE_texture_usage defines
-
-        inline static var GL_ANGLE_texture_usage                                          = 1;
-        inline static var GL_TEXTURE_USAGE_ANGLE                                          = 0x93A2;
-        inline static var GL_FRAMEBUFFER_ATTACHMENT_ANGLE                                 = 0x93A3;
-
-
-//GL_ANGLE_timer_query
-
-    // GL_ANGLE_timer_query defines
-
-        inline static var GL_ANGLE_timer_query                                            = 1;
-        inline static var GL_QUERY_COUNTER_BITS_ANGLE                                     = 0x8864;
-        inline static var GL_CURRENT_QUERY_ANGLE                                          = 0x8865;
-        inline static var GL_QUERY_RESULT_ANGLE                                           = 0x8866;
-        inline static var GL_QUERY_RESULT_AVAILABLE_ANGLE                                 = 0x8867;
-        inline static var GL_TIME_ELAPSED_ANGLE                                           = 0x88BF;
-        inline static var GL_TIMESTAMP_ANGLE                                              = 0x8E28;
-
-
-
-
-    // GL_ANGLE_timer_query functions
-
-        @:native('glBeginQueryANGLE')
-        static function glBeginQueryANGLE(target:Int, id:UInt) : Void;
-
-        @:native('glEndQueryANGLE')
-        static function glEndQueryANGLE(target:Int) : Void;
-
-        @:native('glIsQueryANGLE')
-        static function glIsQueryANGLE(id:UInt) : Bool;
-
-        @:native('glQueryCounterANGLE')
-        static function glQueryCounterANGLE(id:UInt, target:Int) : Void;
-
-
-        inline static function glDeleteQueriesANGLE(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteQueriesANGLE({0}, (const GLuint*)&{1}[0])", n, ids); }
-
-        inline static function glGenQueriesANGLE(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glGenQueriesANGLE({0}, (GLuint*)&{1}[0])", n, ids); }
-
-        inline static function glGetQueryObjectivANGLE(id:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetQueryObjectivANGLE({0}, {1}, (GLint*)&{3}[0] + {2})", id, pname, bOffset, params); }
-
-        inline static function glGetQueryObjectuivANGLE(id:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetQueryObjectuivANGLE({0}, {1}, (GLuint*)&{3}[0] + {2})", id, pname, bOffset, params); }
-
-        inline static function glGetQueryivANGLE(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetQueryivANGLE({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetQueryObjecti64vANGLE')
-        // static function glGetQueryObjecti64vANGLE(id:UInt, pname:Int, params:GLint64*) : Void;
-            
-        // @:native('glGetQueryObjectui64vANGLE')
-        // static function glGetQueryObjectui64vANGLE(id:UInt, pname:Int, params:GLuint64*) : Void;
-
-
-//GL_ANGLE_translated_shader_source
-
-    // GL_ANGLE_translated_shader_source defines
-
-        inline static var GL_ANGLE_translated_shader_source                               = 1;
-        inline static var GL_TRANSLATED_SHADER_SOURCE_LENGTH_ANGLE                        = 0x93A0;
-
-
-
-
-    // GL_ANGLE_translated_shader_source functions
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetTranslatedShaderSourceANGLE')
-        // static function glGetTranslatedShaderSourceANGLE(shader:UInt, bufsize:Int, length:GLsizei*, source:String) : Void;
-
-
-//GL_APPLE_aux_depth_stencil
-
-    // GL_APPLE_aux_depth_stencil defines
-
-        inline static var GL_APPLE_aux_depth_stencil                                      = 1;
-        inline static var GL_AUX_DEPTH_STENCIL_APPLE                                      = 0x8A14;
-
-
-//GL_APPLE_client_storage
-
-    // GL_APPLE_client_storage defines
-
-        inline static var GL_APPLE_client_storage                                         = 1;
-        inline static var GL_UNPACK_CLIENT_STORAGE_APPLE                                  = 0x85B2;
-
-
-//GL_APPLE_element_array
-
-    // GL_APPLE_element_array defines
-
-        inline static var GL_APPLE_element_array                                          = 1;
-        inline static var GL_ELEMENT_ARRAY_APPLE                                          = 0x8A0C;
-        inline static var GL_ELEMENT_ARRAY_TYPE_APPLE                                     = 0x8A0D;
-        inline static var GL_ELEMENT_ARRAY_POINTER_APPLE                                  = 0x8A0E;
-
-
-
-
-    // GL_APPLE_element_array functions
-
-        @:native('glDrawElementArrayAPPLE')
-        static function glDrawElementArrayAPPLE(mode:Int, first:Int, count:Int) : Void;
-
-        @:native('glDrawRangeElementArrayAPPLE')
-        static function glDrawRangeElementArrayAPPLE(mode:Int, start:UInt, end:UInt, first:Int, count:Int) : Void;
-
-
-        inline static function glElementPointerAPPLE(type:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glElementPointerAPPLE({0}, (const void*)&{2}[0] + {1})", type, bOffset, pointer); }
-
-
-
-    // TODO functions
-
-            
-        // inline static function glMultiDrawElementArrayAPPLE(mode:Int, first:Array<Int>, count:const GLsizei*, primcount:Int) : Void
-        // { untyped __cpp__("glMultiDrawElementArrayAPPLE({0}, (const GLint*)&{1}[0], {2}, {3})", mode, first, count, primcount); }
-            
-        // inline static function glMultiDrawRangeElementArrayAPPLE(mode:Int, start:UInt, end:UInt, first:Array<Int>, count:const GLsizei*, primcount:Int) : Void
-        // { untyped __cpp__("glMultiDrawRangeElementArrayAPPLE({0}, {1}, {2}, (const GLint*)&{3}[0], {4}, {5})", mode, start, end, first, count, primcount); }
-
-
-//GL_APPLE_fence
-
-    // GL_APPLE_fence defines
-
-        inline static var GL_APPLE_fence                                                  = 1;
-        inline static var GL_DRAW_PIXELS_APPLE                                            = 0x8A0A;
-        inline static var GL_FENCE_APPLE                                                  = 0x8A0B;
-
-
-
-
-    // GL_APPLE_fence functions
-
-        @:native('glFinishFenceAPPLE')
-        static function glFinishFenceAPPLE(fence:UInt) : Void;
-
-        @:native('glFinishObjectAPPLE')
-        static function glFinishObjectAPPLE(object:Int, name:Int) : Void;
-
-        @:native('glIsFenceAPPLE')
-        static function glIsFenceAPPLE(fence:UInt) : Bool;
-
-        @:native('glSetFenceAPPLE')
-        static function glSetFenceAPPLE(fence:UInt) : Void;
-
-        @:native('glTestFenceAPPLE')
-        static function glTestFenceAPPLE(fence:UInt) : Bool;
-
-        @:native('glTestObjectAPPLE')
-        static function glTestObjectAPPLE(object:Int, name:UInt) : Bool;
-
-
-        inline static function glDeleteFencesAPPLE(n:Int, fences:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteFencesAPPLE({0}, (const GLuint*)&{1}[0])", n, fences); }
-
-        inline static function glGenFencesAPPLE(n:Int, fences:Array<UInt>) : Void
-          { untyped __cpp__("glGenFencesAPPLE({0}, (GLuint*)&{1}[0])", n, fences); }
-
-
-
-
-//GL_APPLE_float_pixels
-
-    // GL_APPLE_float_pixels defines
-
-        inline static var GL_APPLE_float_pixels                                           = 1;
-        inline static var GL_HALF_APPLE                                                   = 0x140B;
-        inline static var GL_RGBA_FLOAT32_APPLE                                           = 0x8814;
-        inline static var GL_RGB_FLOAT32_APPLE                                            = 0x8815;
-        inline static var GL_ALPHA_FLOAT32_APPLE                                          = 0x8816;
-        inline static var GL_INTENSITY_FLOAT32_APPLE                                      = 0x8817;
-        inline static var GL_LUMINANCE_FLOAT32_APPLE                                      = 0x8818;
-        inline static var GL_LUMINANCE_ALPHA_FLOAT32_APPLE                                = 0x8819;
-        inline static var GL_RGBA_FLOAT16_APPLE                                           = 0x881A;
-        inline static var GL_RGB_FLOAT16_APPLE                                            = 0x881B;
-        inline static var GL_ALPHA_FLOAT16_APPLE                                          = 0x881C;
-        inline static var GL_INTENSITY_FLOAT16_APPLE                                      = 0x881D;
-        inline static var GL_LUMINANCE_FLOAT16_APPLE                                      = 0x881E;
-        inline static var GL_LUMINANCE_ALPHA_FLOAT16_APPLE                                = 0x881F;
-        inline static var GL_COLOR_FLOAT_APPLE                                            = 0x8A0F;
-
-
-//GL_APPLE_flush_buffer_range
-
-    // GL_APPLE_flush_buffer_range defines
-
-        inline static var GL_APPLE_flush_buffer_range                                     = 1;
-        inline static var GL_BUFFER_SERIALIZED_MODIFY_APPLE                               = 0x8A12;
-        inline static var GL_BUFFER_FLUSHING_UNMAP_APPLE                                  = 0x8A13;
-
-
-
-
-    // GL_APPLE_flush_buffer_range functions
-
-        @:native('glBufferParameteriAPPLE')
-        static function glBufferParameteriAPPLE(target:Int, pname:Int, param:Int) : Void;
-
-        @:native('glFlushMappedBufferRangeAPPLE')
-        static function glFlushMappedBufferRangeAPPLE(target:Int, offset:Int, size:Int) : Void;
-
-
-
-
-
-//GL_APPLE_object_purgeable
-
-    // GL_APPLE_object_purgeable defines
-
-        inline static var GL_APPLE_object_purgeable                                       = 1;
-        inline static var GL_BUFFER_OBJECT_APPLE                                          = 0x85B3;
-        inline static var GL_RELEASED_APPLE                                               = 0x8A19;
-        inline static var GL_VOLATILE_APPLE                                               = 0x8A1A;
-        inline static var GL_RETAINED_APPLE                                               = 0x8A1B;
-        inline static var GL_UNDEFINED_APPLE                                              = 0x8A1C;
-        inline static var GL_PURGEABLE_APPLE                                              = 0x8A1D;
-
-
-
-
-    // GL_APPLE_object_purgeable functions
-
-        @:native('glObjectPurgeableAPPLE')
-        static function glObjectPurgeableAPPLE(objectType:Int, name:UInt, option:Int) : Int;
-
-        @:native('glObjectUnpurgeableAPPLE')
-        static function glObjectUnpurgeableAPPLE(objectType:Int, name:UInt, option:Int) : Int;
-
-
-        inline static function glGetObjectParameterivAPPLE(objectType:Int, name:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetObjectParameterivAPPLE({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", objectType, name, pname, bOffset, params); }
-
-
-
-
-//GL_APPLE_pixel_buffer
-
-    // GL_APPLE_pixel_buffer defines
-
-        inline static var GL_APPLE_pixel_buffer                                           = 1;
-        inline static var GL_MIN_PBUFFER_VIEWPORT_DIMS_APPLE                              = 0x8A10;
-
-
-//GL_APPLE_rgb_422
-
-    // GL_APPLE_rgb_422 defines
-
-        inline static var GL_APPLE_rgb_422                                                = 1;
-        inline static var GL_UNSIGNED_SHORT_8_8_APPLE                                     = 0x85BA;
-        inline static var GL_UNSIGNED_SHORT_8_8_REV_APPLE                                 = 0x85BB;
-        inline static var GL_RGB_422_APPLE                                                = 0x8A1F;
-        inline static var GL_RGB_RAW_422_APPLE                                            = 0x8A51;
-
-
-//GL_APPLE_row_bytes
-
-    // GL_APPLE_row_bytes defines
-
-        inline static var GL_APPLE_row_bytes                                              = 1;
-        inline static var GL_PACK_ROW_BYTES_APPLE                                         = 0x8A15;
-        inline static var GL_UNPACK_ROW_BYTES_APPLE                                       = 0x8A16;
-
-
-//GL_APPLE_specular_vector
-
-    // GL_APPLE_specular_vector defines
-
-        inline static var GL_APPLE_specular_vector                                        = 1;
-        inline static var GL_LIGHT_MODEL_SPECULAR_VECTOR_APPLE                            = 0x85B0;
-
-
-//GL_APPLE_texture_range
-
-    // GL_APPLE_texture_range defines
-
-        inline static var GL_APPLE_texture_range                                          = 1;
-        inline static var GL_TEXTURE_RANGE_LENGTH_APPLE                                   = 0x85B7;
-        inline static var GL_TEXTURE_RANGE_POINTER_APPLE                                  = 0x85B8;
-        inline static var GL_TEXTURE_STORAGE_HINT_APPLE                                   = 0x85BC;
-        inline static var GL_STORAGE_PRIVATE_APPLE                                        = 0x85BD;
-        inline static var GL_STORAGE_CACHED_APPLE                                         = 0x85BE;
-        inline static var GL_STORAGE_SHARED_APPLE                                         = 0x85BF;
-
-
-
-
-    // GL_APPLE_texture_range functions
-
-
-        inline static function glTextureRangeAPPLE(target:Int, length:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glTextureRangeAPPLE({0}, {1}, (void*)&{3}[0] + {2})", target, length, bOffset, pointer); }
-
-
-
-    // TODO functions
-
-            
-        // inline static function glGetTexParameterPointervAPPLE(target:Int, pname:Int, ?bOffset:Int=0, *params:BytesData) : Void
-        // { untyped __cpp__("glGetTexParameterPointervAPPLE({0}, {1}, (void*)&{3}[0] + {2})", target, pname, bOffset, *params); }
-
-
-//GL_APPLE_transform_hint
-
-    // GL_APPLE_transform_hint defines
-
-        inline static var GL_APPLE_transform_hint                                         = 1;
-        inline static var GL_TRANSFORM_HINT_APPLE                                         = 0x85B1;
-
-
-//GL_APPLE_vertex_array_object
-
-    // GL_APPLE_vertex_array_object defines
-
-        inline static var GL_APPLE_vertex_array_object                                    = 1;
-        inline static var GL_VERTEX_ARRAY_BINDING_APPLE                                   = 0x85B5;
-
-
-
-
-    // GL_APPLE_vertex_array_object functions
-
-        @:native('glBindVertexArrayAPPLE')
-        static function glBindVertexArrayAPPLE(array:UInt) : Void;
-
-        @:native('glIsVertexArrayAPPLE')
-        static function glIsVertexArrayAPPLE(array:UInt) : Bool;
-
-
-        inline static function glDeleteVertexArraysAPPLE(n:Int, arrays:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteVertexArraysAPPLE({0}, (const GLuint*)&{1}[0])", n, arrays); }
-
-        inline static function glGenVertexArraysAPPLE(n:Int, arrays:Array<UInt>) : Void
-          { untyped __cpp__("glGenVertexArraysAPPLE({0}, (const GLuint*)&{1}[0])", n, arrays); }
-
-
-
-
-//GL_APPLE_vertex_array_range
-
-    // GL_APPLE_vertex_array_range defines
-
-        inline static var GL_APPLE_vertex_array_range                                     = 1;
-        inline static var GL_VERTEX_ARRAY_RANGE_APPLE                                     = 0x851D;
-        inline static var GL_VERTEX_ARRAY_RANGE_LENGTH_APPLE                              = 0x851E;
-        inline static var GL_VERTEX_ARRAY_STORAGE_HINT_APPLE                              = 0x851F;
-        inline static var GL_MAX_VERTEX_ARRAY_RANGE_ELEMENT_APPLE                         = 0x8520;
-        inline static var GL_VERTEX_ARRAY_RANGE_POINTER_APPLE                             = 0x8521;
-        inline static var GL_STORAGE_CLIENT_APPLE                                         = 0x85B4;
-
-
-
-
-    // GL_APPLE_vertex_array_range functions
-
-        @:native('glVertexArrayParameteriAPPLE')
-        static function glVertexArrayParameteriAPPLE(pname:Int, param:Int) : Void;
-
-
-        inline static function glFlushVertexArrayRangeAPPLE(length:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glFlushVertexArrayRangeAPPLE({0}, (void*)&{2}[0] + {1})", length, bOffset, pointer); }
-
-        inline static function glVertexArrayRangeAPPLE(length:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glVertexArrayRangeAPPLE({0}, (void*)&{2}[0] + {1})", length, bOffset, pointer); }
-
-
-
-
-//GL_APPLE_vertex_program_evaluators
-
-    // GL_APPLE_vertex_program_evaluators defines
-
-        inline static var GL_APPLE_vertex_program_evaluators                              = 1;
-        inline static var GL_VERTEX_ATTRIB_MAP1_APPLE                                     = 0x8A00;
-        inline static var GL_VERTEX_ATTRIB_MAP2_APPLE                                     = 0x8A01;
-        inline static var GL_VERTEX_ATTRIB_MAP1_SIZE_APPLE                                = 0x8A02;
-        inline static var GL_VERTEX_ATTRIB_MAP1_COEFF_APPLE                               = 0x8A03;
-        inline static var GL_VERTEX_ATTRIB_MAP1_ORDER_APPLE                               = 0x8A04;
-        inline static var GL_VERTEX_ATTRIB_MAP1_DOMAIN_APPLE                              = 0x8A05;
-        inline static var GL_VERTEX_ATTRIB_MAP2_SIZE_APPLE                                = 0x8A06;
-        inline static var GL_VERTEX_ATTRIB_MAP2_COEFF_APPLE                               = 0x8A07;
-        inline static var GL_VERTEX_ATTRIB_MAP2_ORDER_APPLE                               = 0x8A08;
-        inline static var GL_VERTEX_ATTRIB_MAP2_DOMAIN_APPLE                              = 0x8A09;
-
-
-
-
-    // GL_APPLE_vertex_program_evaluators functions
-
-        @:native('glDisableVertexAttribAPPLE')
-        static function glDisableVertexAttribAPPLE(index:UInt, pname:Int) : Void;
-
-        @:native('glEnableVertexAttribAPPLE')
-        static function glEnableVertexAttribAPPLE(index:UInt, pname:Int) : Void;
-
-        @:native('glIsVertexAttribEnabledAPPLE')
-        static function glIsVertexAttribEnabledAPPLE(index:UInt, pname:Int) : Bool;
-
-
-        inline static function glMapVertexAttrib1dAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, stride:Int, order:Int, points:Array<Float>) : Void
-          { untyped __cpp__("glMapVertexAttrib1dAPPLE({0}, {1}, {2}, {3}, {4}, {5}, (const GLdouble*)&{6}[0])", index, size, u1, u2, stride, order, points); }
-
-        inline static function glMapVertexAttrib1fAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, stride:Int, order:Int, points:Array<Float>) : Void
-          { untyped __cpp__("glMapVertexAttrib1fAPPLE({0}, {1}, {2}, {3}, {4}, {5}, (const GLfloat*)&{6}[0])", index, size, u1, u2, stride, order, points); }
-
-        inline static function glMapVertexAttrib2dAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, points:Array<Float>) : Void
-          { untyped __cpp__("glMapVertexAttrib2dAPPLE({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const GLdouble*)&{10}[0])", index, size, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points); }
-
-        inline static function glMapVertexAttrib2fAPPLE(index:UInt, size:UInt, u1:Float, u2:Float, ustride:Int, uorder:Int, v1:Float, v2:Float, vstride:Int, vorder:Int, points:Array<Float>) : Void
-          { untyped __cpp__("glMapVertexAttrib2fAPPLE({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const GLfloat*)&{10}[0])", index, size, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points); }
-
-
-
-
-//GL_APPLE_ycbcr_422
-
-    // GL_APPLE_ycbcr_422 defines
-
-        inline static var GL_APPLE_ycbcr_422                                              = 1;
-        inline static var GL_YCBCR_422_APPLE                                              = 0x85B9;
-
-
 //GL_ARB_ES2_compatibility
 
     // GL_ARB_ES2_compatibility defines
@@ -4190,20 +3142,20 @@ extern class GL {
     // GL_ARB_ES2_compatibility functions
 
         @:native('glClearDepthf')
-        static function glClearDepthf(d:Float) : Void;
+        static function glClearDepthf(d:cpp.Float32) : Void;
 
         @:native('glDepthRangef')
-        static function glDepthRangef(n:Float, f:Float) : Void;
+        static function glDepthRangef(n:cpp.Float32, f:cpp.Float32) : Void;
 
         @:native('glReleaseShaderCompiler')
         static function glReleaseShaderCompiler() : Void;
 
 
         inline static function glGetShaderPrecisionFormat(shadertype:Int, precisiontype:Int, range:Array<Int>, precision:Array<Int>) : Void
-          { untyped __cpp__("glGetShaderPrecisionFormat({0}, {1}, (GLint*)&{2}[0], (GLint*)&{3}[0])", shadertype, precisiontype, range, precision); }
+          { untyped __cpp__("glGetShaderPrecisionFormat({0}, {1}, (GLint*)&({2}[0]), (GLint*)&({3}[0]))", shadertype, precisiontype, range, precision); }
 
-        inline static function glShaderBinary(count:Int, shaders:Array<UInt>, binaryformat:Int, ?bOffset:Int=0, binary:BytesData, length:Int) : Void
-          { untyped __cpp__("glShaderBinary({0}, (const GLuint*)&{1}[0], {2}, (const void*)&{4}[0] + {3}, {5})", count, shaders, binaryformat, bOffset, binary, length); }
+        inline static function glShaderBinary(count:Int, shaders:Array<UInt>, binaryformat:Int, binary:BytesData, length:Int) : Void
+          { untyped __cpp__("glShaderBinary({0}, (const GLuint*)&({1}[0]), {2}, (const void*)&({3}[0]), {4})", count, shaders, binaryformat, binary, length); }
 
 
 
@@ -4269,11 +3221,11 @@ extern class GL {
         static function glDrawArraysInstancedBaseInstance(mode:Int, first:Int, count:Int, primcount:Int, baseinstance:UInt) : Void;
 
 
-        inline static function glDrawElementsInstancedBaseInstance(mode:Int, count:Int, type:Int, ?bOffset:Int=0, indices:BytesData, primcount:Int, baseinstance:UInt) : Void
-          { untyped __cpp__("glDrawElementsInstancedBaseInstance({0}, {1}, {2}, (const void*)&{4}[0] + {3}, {5}, {6})", mode, count, type, bOffset, indices, primcount, baseinstance); }
+        inline static function glDrawElementsInstancedBaseInstance(mode:Int, count:Int, type:Int, indices:BytesData, primcount:Int, baseinstance:UInt) : Void
+          { untyped __cpp__("glDrawElementsInstancedBaseInstance({0}, {1}, {2}, (const void*)&({3}[0]), {4}, {5})", mode, count, type, indices, primcount, baseinstance); }
 
-        inline static function glDrawElementsInstancedBaseVertexBaseInstance(mode:Int, count:Int, type:Int, ?bOffset:Int=0, indices:BytesData, primcount:Int, basevertex:Int, baseinstance:UInt) : Void
-          { untyped __cpp__("glDrawElementsInstancedBaseVertexBaseInstance({0}, {1}, {2}, (const void*)&{4}[0] + {3}, {5}, {6}, {7})", mode, count, type, bOffset, indices, primcount, basevertex, baseinstance); }
+        inline static function glDrawElementsInstancedBaseVertexBaseInstance(mode:Int, count:Int, type:Int, indices:BytesData, primcount:Int, basevertex:Int, baseinstance:UInt) : Void
+          { untyped __cpp__("glDrawElementsInstancedBaseVertexBaseInstance({0}, {1}, {2}, (const void*)&({3}[0]), {4}, {5}, {6})", mode, count, type, indices, primcount, basevertex, baseinstance); }
 
 
 
@@ -4391,11 +3343,11 @@ extern class GL {
     // GL_ARB_buffer_storage functions
 
 
-        inline static function glBufferStorage(target:Int, size:Int, ?bOffset:Int=0, data:BytesData, flags:Int) : Void
-          { untyped __cpp__("glBufferStorage({0}, {1}, (const void*)&{3}[0] + {2}, {4})", target, size, bOffset, data, flags); }
+        inline static function glBufferStorage(target:Int, size:Int, data:BytesData, flags:Int) : Void
+          { untyped __cpp__("glBufferStorage({0}, {1}, (const void*)&({2}[0]), {3})", target, size, data, flags); }
 
-        inline static function glNamedBufferStorageEXT(buffer:UInt, size:Int, ?bOffset:Int=0, data:BytesData, flags:Int) : Void
-          { untyped __cpp__("glNamedBufferStorageEXT({0}, {1}, (const void*)&{3}[0] + {2}, {4})", buffer, size, bOffset, data, flags); }
+        inline static function glNamedBufferStorageEXT(buffer:UInt, size:Int, data:BytesData, flags:Int) : Void
+          { untyped __cpp__("glNamedBufferStorageEXT({0}, {1}, (const void*)&({2}[0]), {3})", buffer, size, data, flags); }
 
 
 
@@ -4435,17 +3387,17 @@ extern class GL {
     // GL_ARB_clear_buffer_object functions
 
 
-        inline static function glClearBufferData(target:Int, internalformat:Int, format:Int, type:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glClearBufferData({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", target, internalformat, format, type, bOffset, data); }
+        inline static function glClearBufferData(target:Int, internalformat:Int, format:Int, type:Int, data:BytesData) : Void
+          { untyped __cpp__("glClearBufferData({0}, {1}, {2}, {3}, (const void*)&({4}[0]))", target, internalformat, format, type, data); }
 
-        inline static function glClearBufferSubData(target:Int, internalformat:Int, offset:Int, size:Int, format:Int, type:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glClearBufferSubData({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6})", target, internalformat, offset, size, format, type, bOffset, data); }
+        inline static function glClearBufferSubData(target:Int, internalformat:Int, offset:Int, size:Int, format:Int, type:Int, data:BytesData) : Void
+          { untyped __cpp__("glClearBufferSubData({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&({6}[0]))", target, internalformat, offset, size, format, type, data); }
 
-        inline static function glClearNamedBufferDataEXT(buffer:UInt, internalformat:Int, format:Int, type:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glClearNamedBufferDataEXT({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", buffer, internalformat, format, type, bOffset, data); }
+        inline static function glClearNamedBufferDataEXT(buffer:UInt, internalformat:Int, format:Int, type:Int, data:BytesData) : Void
+          { untyped __cpp__("glClearNamedBufferDataEXT({0}, {1}, {2}, {3}, (const void*)&({4}[0]))", buffer, internalformat, format, type, data); }
 
-        inline static function glClearNamedBufferSubDataEXT(buffer:UInt, internalformat:Int, offset:Int, size:Int, format:Int, type:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glClearNamedBufferSubDataEXT({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6})", buffer, internalformat, offset, size, format, type, bOffset, data); }
+        inline static function glClearNamedBufferSubDataEXT(buffer:UInt, internalformat:Int, offset:Int, size:Int, format:Int, type:Int, data:BytesData) : Void
+          { untyped __cpp__("glClearNamedBufferSubDataEXT({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&({6}[0]))", buffer, internalformat, offset, size, format, type, data); }
 
 
 
@@ -4463,11 +3415,11 @@ extern class GL {
     // GL_ARB_clear_texture functions
 
 
-        inline static function glClearTexImage(texture:UInt, level:Int, format:Int, type:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glClearTexImage({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", texture, level, format, type, bOffset, data); }
+        inline static function glClearTexImage(texture:UInt, level:Int, format:Int, type:Int, data:BytesData) : Void
+          { untyped __cpp__("glClearTexImage({0}, {1}, {2}, {3}, (const void*)&({4}[0]))", texture, level, format, type, data); }
 
-        inline static function glClearTexSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glClearTexSubImage({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&{11}[0] + {10})", texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, bOffset, data); }
+        inline static function glClearTexSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, data:BytesData) : Void
+          { untyped __cpp__("glClearTexSubImage({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&({10}[0]))", texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, data); }
 
 
 
@@ -4703,18 +3655,18 @@ extern class GL {
 
 
         inline static function glDebugMessageControlARB(source:Int, type:Int, severity:Int, count:Int, ids:Array<UInt>, enabled:Bool) : Void
-          { untyped __cpp__("glDebugMessageControlARB({0}, {1}, {2}, {3}, (const GLuint*)&{4}[0], {5})", source, type, severity, count, ids, enabled); }
+          { untyped __cpp__("glDebugMessageControlARB({0}, {1}, {2}, {3}, (const GLuint*)&({4}[0]), {5})", source, type, severity, count, ids, enabled); }
 
 
 
     // TODO functions
 
             
-        // inline static function glDebugMessageCallbackARB(callback:GLDEBUGPROCARB, ?bOffset:Int=0, userParam:BytesData) : Void
-        // { untyped __cpp__("glDebugMessageCallbackARB({0}, (const void*)&{2}[0] + {1})", callback, bOffset, userParam); }
+        // inline static function glDebugMessageCallbackARB(callback:GLDEBUGPROCARB, userParam:BytesData) : Void
+        // { untyped __cpp__("glDebugMessageCallbackARB({0}, (const void*)&({1}[0]))", callback, userParam); }
             
         // inline static function glGetDebugMessageLogARB(count:UInt, bufSize:Int, sources:GLenum*, types:GLenum*, ids:Array<UInt>, severities:GLenum*, lengths:GLsizei*, messageLog:String) : UInt
-        // { return untyped __cpp__("glGetDebugMessageLogARB({0}, {1}, {2}, {3}, (GLuint*)&{4}[0], {5}, {6}, {7})", count, bufSize, sources, types, ids, severities, lengths, messageLog); }
+        // { return untyped __cpp__("glGetDebugMessageLogARB({0}, {1}, {2}, {3}, (GLuint*)&({4}[0]), {5}, {6}, {7})", count, bufSize, sources, types, ids, severities, lengths, messageLog); }
 
 
 //GL_ARB_depth_buffer_float
@@ -4777,7 +3729,7 @@ extern class GL {
         static function glCheckNamedFramebufferStatus(framebuffer:UInt, target:Int) : Int;
 
         @:native('glClearNamedFramebufferfi')
-        static function glClearNamedFramebufferfi(framebuffer:UInt, buffer:Int, depth:Float, stencil:Int) : Void;
+        static function glClearNamedFramebufferfi(framebuffer:UInt, buffer:Int, depth:cpp.Float32, stencil:Int) : Void;
 
         @:native('glCopyNamedBufferSubData')
         static function glCopyNamedBufferSubData(readBuffer:UInt, writeBuffer:UInt, readOffset:Int, writeOffset:Int, size:Int) : Void;
@@ -4846,7 +3798,7 @@ extern class GL {
         static function glTextureBufferRange(texture:UInt, internalformat:Int, buffer:UInt, offset:Int, size:Int) : Void;
 
         @:native('glTextureParameterf')
-        static function glTextureParameterf(texture:UInt, pname:Int, param:Float) : Void;
+        static function glTextureParameterf(texture:UInt, pname:Int, param:cpp.Float32) : Void;
 
         @:native('glTextureParameteri')
         static function glTextureParameteri(texture:UInt, pname:Int, param:Int) : Void;
@@ -4897,146 +3849,146 @@ extern class GL {
         static function glVertexArrayVertexBuffer(vaobj:UInt, bindingindex:UInt, buffer:UInt, offset:Int, stride:Int) : Void;
 
 
-        inline static function glClearNamedBufferData(buffer:UInt, internalformat:Int, format:Int, type:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glClearNamedBufferData({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", buffer, internalformat, format, type, bOffset, data); }
+        inline static function glClearNamedBufferData(buffer:UInt, internalformat:Int, format:Int, type:Int, data:BytesData) : Void
+          { untyped __cpp__("glClearNamedBufferData({0}, {1}, {2}, {3}, (const void*)&({4}[0]))", buffer, internalformat, format, type, data); }
 
-        inline static function glClearNamedBufferSubData(buffer:UInt, internalformat:Int, offset:Int, size:Int, format:Int, type:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glClearNamedBufferSubData({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6})", buffer, internalformat, offset, size, format, type, bOffset, data); }
+        inline static function glClearNamedBufferSubData(buffer:UInt, internalformat:Int, offset:Int, size:Int, format:Int, type:Int, data:BytesData) : Void
+          { untyped __cpp__("glClearNamedBufferSubData({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&({6}[0]))", buffer, internalformat, offset, size, format, type, data); }
 
-        inline static function glClearNamedFramebufferfv(framebuffer:UInt, buffer:Int, drawbuffer:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glClearNamedFramebufferfv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", framebuffer, buffer, drawbuffer, bOffset, value); }
+        inline static function glClearNamedFramebufferfv(framebuffer:UInt, buffer:Int, drawbuffer:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glClearNamedFramebufferfv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", framebuffer, buffer, drawbuffer, value); }
 
-        inline static function glClearNamedFramebufferiv(framebuffer:UInt, buffer:Int, drawbuffer:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glClearNamedFramebufferiv({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", framebuffer, buffer, drawbuffer, bOffset, value); }
+        inline static function glClearNamedFramebufferiv(framebuffer:UInt, buffer:Int, drawbuffer:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glClearNamedFramebufferiv({0}, {1}, {2}, (const GLint*)&({3}[0]))", framebuffer, buffer, drawbuffer, value); }
 
-        inline static function glClearNamedFramebufferuiv(framebuffer:UInt, buffer:Int, drawbuffer:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glClearNamedFramebufferuiv({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", framebuffer, buffer, drawbuffer, bOffset, value); }
+        inline static function glClearNamedFramebufferuiv(framebuffer:UInt, buffer:Int, drawbuffer:Int, value:Array<UInt>) : Void
+          { untyped __cpp__("glClearNamedFramebufferuiv({0}, {1}, {2}, (const GLuint*)&({3}[0]))", framebuffer, buffer, drawbuffer, value); }
 
-        inline static function glCompressedTextureSubImage1D(texture:UInt, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTextureSubImage1D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6})", texture, level, xoffset, width, format, imageSize, bOffset, data); }
+        inline static function glCompressedTextureSubImage1D(texture:UInt, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTextureSubImage1D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&({6}[0]))", texture, level, xoffset, width, format, imageSize, data); }
 
-        inline static function glCompressedTextureSubImage2D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTextureSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", texture, level, xoffset, yoffset, width, height, format, imageSize, bOffset, data); }
+        inline static function glCompressedTextureSubImage2D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTextureSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&({8}[0]))", texture, level, xoffset, yoffset, width, height, format, imageSize, data); }
 
-        inline static function glCompressedTextureSubImage3D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTextureSubImage3D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&{11}[0] + {10})", texture, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, bOffset, data); }
+        inline static function glCompressedTextureSubImage3D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTextureSubImage3D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&({10}[0]))", texture, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data); }
 
         inline static function glCreateBuffers(n:Int, buffers:Array<UInt>) : Void
-          { untyped __cpp__("glCreateBuffers({0}, (GLuint*)&{1}[0])", n, buffers); }
+          { untyped __cpp__("glCreateBuffers({0}, (GLuint*)&({1}[0]))", n, buffers); }
 
         inline static function glCreateFramebuffers(n:Int, framebuffers:Array<UInt>) : Void
-          { untyped __cpp__("glCreateFramebuffers({0}, (GLuint*)&{1}[0])", n, framebuffers); }
+          { untyped __cpp__("glCreateFramebuffers({0}, (GLuint*)&({1}[0]))", n, framebuffers); }
 
         inline static function glCreateProgramPipelines(n:Int, pipelines:Array<UInt>) : Void
-          { untyped __cpp__("glCreateProgramPipelines({0}, (GLuint*)&{1}[0])", n, pipelines); }
+          { untyped __cpp__("glCreateProgramPipelines({0}, (GLuint*)&({1}[0]))", n, pipelines); }
 
         inline static function glCreateQueries(target:Int, n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glCreateQueries({0}, {1}, (GLuint*)&{2}[0])", target, n, ids); }
+          { untyped __cpp__("glCreateQueries({0}, {1}, (GLuint*)&({2}[0]))", target, n, ids); }
 
         inline static function glCreateRenderbuffers(n:Int, renderbuffers:Array<UInt>) : Void
-          { untyped __cpp__("glCreateRenderbuffers({0}, (GLuint*)&{1}[0])", n, renderbuffers); }
+          { untyped __cpp__("glCreateRenderbuffers({0}, (GLuint*)&({1}[0]))", n, renderbuffers); }
 
         inline static function glCreateSamplers(n:Int, samplers:Array<UInt>) : Void
-          { untyped __cpp__("glCreateSamplers({0}, (GLuint*)&{1}[0])", n, samplers); }
+          { untyped __cpp__("glCreateSamplers({0}, (GLuint*)&({1}[0]))", n, samplers); }
 
         inline static function glCreateTextures(target:Int, n:Int, textures:Array<UInt>) : Void
-          { untyped __cpp__("glCreateTextures({0}, {1}, (GLuint*)&{2}[0])", target, n, textures); }
+          { untyped __cpp__("glCreateTextures({0}, {1}, (GLuint*)&({2}[0]))", target, n, textures); }
 
         inline static function glCreateTransformFeedbacks(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glCreateTransformFeedbacks({0}, (GLuint*)&{1}[0])", n, ids); }
+          { untyped __cpp__("glCreateTransformFeedbacks({0}, (GLuint*)&({1}[0]))", n, ids); }
 
         inline static function glCreateVertexArrays(n:Int, arrays:Array<UInt>) : Void
-          { untyped __cpp__("glCreateVertexArrays({0}, (GLuint*)&{1}[0])", n, arrays); }
+          { untyped __cpp__("glCreateVertexArrays({0}, (GLuint*)&({1}[0]))", n, arrays); }
 
-        inline static function glGetCompressedTextureImage(texture:UInt, level:Int, bufSize:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glGetCompressedTextureImage({0}, {1}, {2}, (void*)&{4}[0] + {3})", texture, level, bufSize, bOffset, pixels); }
+        inline static function glGetCompressedTextureImage(texture:UInt, level:Int, bufSize:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glGetCompressedTextureImage({0}, {1}, {2}, (void*)&({3}[0]))", texture, level, bufSize, pixels); }
 
-        inline static function glGetNamedBufferParameteriv(buffer:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetNamedBufferParameteriv({0}, {1}, (GLint*)&{3}[0] + {2})", buffer, pname, bOffset, params); }
+        inline static function glGetNamedBufferParameteriv(buffer:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetNamedBufferParameteriv({0}, {1}, (GLint*)&({2}[0]))", buffer, pname, params); }
 
-        inline static function glGetNamedBufferSubData(buffer:UInt, offset:Int, size:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetNamedBufferSubData({0}, {1}, {2}, (void*)&{4}[0] + {3})", buffer, offset, size, bOffset, data); }
+        inline static function glGetNamedBufferSubData(buffer:UInt, offset:Int, size:Int, data:BytesData) : Void
+          { untyped __cpp__("glGetNamedBufferSubData({0}, {1}, {2}, (void*)&({3}[0]))", buffer, offset, size, data); }
 
-        inline static function glGetNamedFramebufferAttachmentParameteriv(framebuffer:UInt, attachment:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetNamedFramebufferAttachmentParameteriv({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", framebuffer, attachment, pname, bOffset, params); }
+        inline static function glGetNamedFramebufferAttachmentParameteriv(framebuffer:UInt, attachment:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetNamedFramebufferAttachmentParameteriv({0}, {1}, {2}, (GLint*)&({3}[0]))", framebuffer, attachment, pname, params); }
 
-        inline static function glGetNamedFramebufferParameteriv(framebuffer:UInt, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glGetNamedFramebufferParameteriv({0}, {1}, (GLint*)&{3}[0] + {2})", framebuffer, pname, bOffset, param); }
+        inline static function glGetNamedFramebufferParameteriv(framebuffer:UInt, pname:Int, param:Array<Int>) : Void
+          { untyped __cpp__("glGetNamedFramebufferParameteriv({0}, {1}, (GLint*)&({2}[0]))", framebuffer, pname, param); }
 
-        inline static function glGetNamedRenderbufferParameteriv(renderbuffer:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetNamedRenderbufferParameteriv({0}, {1}, (GLint*)&{3}[0] + {2})", renderbuffer, pname, bOffset, params); }
+        inline static function glGetNamedRenderbufferParameteriv(renderbuffer:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetNamedRenderbufferParameteriv({0}, {1}, (GLint*)&({2}[0]))", renderbuffer, pname, params); }
 
-        inline static function glGetTextureImage(texture:UInt, level:Int, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glGetTextureImage({0}, {1}, {2}, {3}, {4}, (void*)&{6}[0] + {5})", texture, level, format, type, bufSize, bOffset, pixels); }
+        inline static function glGetTextureImage(texture:UInt, level:Int, format:Int, type:Int, bufSize:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glGetTextureImage({0}, {1}, {2}, {3}, {4}, (void*)&({5}[0]))", texture, level, format, type, bufSize, pixels); }
 
-        inline static function glGetTextureLevelParameterfv(texture:UInt, level:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTextureLevelParameterfv({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", texture, level, pname, bOffset, params); }
+        inline static function glGetTextureLevelParameterfv(texture:UInt, level:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetTextureLevelParameterfv({0}, {1}, {2}, (GLfloat*)&({3}[0]))", texture, level, pname, params); }
 
-        inline static function glGetTextureLevelParameteriv(texture:UInt, level:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTextureLevelParameteriv({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", texture, level, pname, bOffset, params); }
+        inline static function glGetTextureLevelParameteriv(texture:UInt, level:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetTextureLevelParameteriv({0}, {1}, {2}, (GLint*)&({3}[0]))", texture, level, pname, params); }
 
-        inline static function glGetTextureParameterIiv(texture:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTextureParameterIiv({0}, {1}, (GLint*)&{3}[0] + {2})", texture, pname, bOffset, params); }
+        inline static function glGetTextureParameterIiv(texture:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetTextureParameterIiv({0}, {1}, (GLint*)&({2}[0]))", texture, pname, params); }
 
-        inline static function glGetTextureParameterIuiv(texture:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTextureParameterIuiv({0}, {1}, (GLuint*)&{3}[0] + {2})", texture, pname, bOffset, params); }
+        inline static function glGetTextureParameterIuiv(texture:UInt, pname:Int, params:Array<UInt>) : Void
+          { untyped __cpp__("glGetTextureParameterIuiv({0}, {1}, (GLuint*)&({2}[0]))", texture, pname, params); }
 
-        inline static function glGetTextureParameterfv(texture:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTextureParameterfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", texture, pname, bOffset, params); }
+        inline static function glGetTextureParameterfv(texture:UInt, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetTextureParameterfv({0}, {1}, (GLfloat*)&({2}[0]))", texture, pname, params); }
 
-        inline static function glGetTextureParameteriv(texture:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTextureParameteriv({0}, {1}, (GLint*)&{3}[0] + {2})", texture, pname, bOffset, params); }
+        inline static function glGetTextureParameteriv(texture:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetTextureParameteriv({0}, {1}, (GLint*)&({2}[0]))", texture, pname, params); }
 
-        inline static function glGetTransformFeedbacki_v(xfb:UInt, pname:Int, index:UInt, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glGetTransformFeedbacki_v({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", xfb, pname, index, bOffset, param); }
+        inline static function glGetTransformFeedbacki_v(xfb:UInt, pname:Int, index:UInt, param:Array<Int>) : Void
+          { untyped __cpp__("glGetTransformFeedbacki_v({0}, {1}, {2}, (GLint*)&({3}[0]))", xfb, pname, index, param); }
 
-        inline static function glGetTransformFeedbackiv(xfb:UInt, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glGetTransformFeedbackiv({0}, {1}, (GLint*)&{3}[0] + {2})", xfb, pname, bOffset, param); }
+        inline static function glGetTransformFeedbackiv(xfb:UInt, pname:Int, param:Array<Int>) : Void
+          { untyped __cpp__("glGetTransformFeedbackiv({0}, {1}, (GLint*)&({2}[0]))", xfb, pname, param); }
 
-        inline static function glGetVertexArrayIndexediv(vaobj:UInt, index:UInt, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glGetVertexArrayIndexediv({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", vaobj, index, pname, bOffset, param); }
+        inline static function glGetVertexArrayIndexediv(vaobj:UInt, index:UInt, pname:Int, param:Array<Int>) : Void
+          { untyped __cpp__("glGetVertexArrayIndexediv({0}, {1}, {2}, (GLint*)&({3}[0]))", vaobj, index, pname, param); }
 
-        inline static function glGetVertexArrayiv(vaobj:UInt, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glGetVertexArrayiv({0}, {1}, (GLint*)&{3}[0] + {2})", vaobj, pname, bOffset, param); }
+        inline static function glGetVertexArrayiv(vaobj:UInt, pname:Int, param:Array<Int>) : Void
+          { untyped __cpp__("glGetVertexArrayiv({0}, {1}, (GLint*)&({2}[0]))", vaobj, pname, param); }
 
         inline static function glInvalidateNamedFramebufferData(framebuffer:UInt, numAttachments:Int, attachments:Array<Int>) : Void
-          { untyped __cpp__("glInvalidateNamedFramebufferData({0}, {1}, (const GLenum*)&{2}[0])", framebuffer, numAttachments, attachments); }
+          { untyped __cpp__("glInvalidateNamedFramebufferData({0}, {1}, (const GLenum*)&({2}[0]))", framebuffer, numAttachments, attachments); }
 
         inline static function glInvalidateNamedFramebufferSubData(framebuffer:UInt, numAttachments:Int, attachments:Array<Int>, x:Int, y:Int, width:Int, height:Int) : Void
-          { untyped __cpp__("glInvalidateNamedFramebufferSubData({0}, {1}, (const GLenum*)&{2}[0], {3}, {4}, {5}, {6})", framebuffer, numAttachments, attachments, x, y, width, height); }
+          { untyped __cpp__("glInvalidateNamedFramebufferSubData({0}, {1}, (const GLenum*)&({2}[0]), {3}, {4}, {5}, {6})", framebuffer, numAttachments, attachments, x, y, width, height); }
 
-        inline static function glNamedBufferData(buffer:UInt, size:Int, ?bOffset:Int=0, data:BytesData, usage:Int) : Void
-          { untyped __cpp__("glNamedBufferData({0}, {1}, (const void*)&{3}[0] + {2}, {4})", buffer, size, bOffset, data, usage); }
+        inline static function glNamedBufferData(buffer:UInt, size:Int, data:BytesData, usage:Int) : Void
+          { untyped __cpp__("glNamedBufferData({0}, {1}, (const void*)&({2}[0]), {3})", buffer, size, data, usage); }
 
-        inline static function glNamedBufferStorage(buffer:UInt, size:Int, ?bOffset:Int=0, data:BytesData, flags:Int) : Void
-          { untyped __cpp__("glNamedBufferStorage({0}, {1}, (const void*)&{3}[0] + {2}, {4})", buffer, size, bOffset, data, flags); }
+        inline static function glNamedBufferStorage(buffer:UInt, size:Int, data:BytesData, flags:Int) : Void
+          { untyped __cpp__("glNamedBufferStorage({0}, {1}, (const void*)&({2}[0]), {3})", buffer, size, data, flags); }
 
-        inline static function glNamedBufferSubData(buffer:UInt, offset:Int, size:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glNamedBufferSubData({0}, {1}, {2}, (const void*)&{4}[0] + {3})", buffer, offset, size, bOffset, data); }
+        inline static function glNamedBufferSubData(buffer:UInt, offset:Int, size:Int, data:BytesData) : Void
+          { untyped __cpp__("glNamedBufferSubData({0}, {1}, {2}, (const void*)&({3}[0]))", buffer, offset, size, data); }
 
         inline static function glNamedFramebufferDrawBuffers(framebuffer:UInt, n:Int, bufs:Array<Int>) : Void
-          { untyped __cpp__("glNamedFramebufferDrawBuffers({0}, {1}, (const GLenum*)&{2}[0])", framebuffer, n, bufs); }
+          { untyped __cpp__("glNamedFramebufferDrawBuffers({0}, {1}, (const GLenum*)&({2}[0]))", framebuffer, n, bufs); }
 
-        inline static function glTextureParameterIiv(texture:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTextureParameterIiv({0}, {1}, (const GLint*)&{3}[0] + {2})", texture, pname, bOffset, params); }
+        inline static function glTextureParameterIiv(texture:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glTextureParameterIiv({0}, {1}, (const GLint*)&({2}[0]))", texture, pname, params); }
 
-        inline static function glTextureParameterIuiv(texture:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTextureParameterIuiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", texture, pname, bOffset, params); }
+        inline static function glTextureParameterIuiv(texture:UInt, pname:Int, params:Array<UInt>) : Void
+          { untyped __cpp__("glTextureParameterIuiv({0}, {1}, (const GLuint*)&({2}[0]))", texture, pname, params); }
 
-        inline static function glTextureParameterfv(texture:UInt, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glTextureParameterfv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", texture, pname, bOffset, param); }
+        inline static function glTextureParameterfv(texture:UInt, pname:Int, param:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glTextureParameterfv({0}, {1}, (const GLfloat*)&({2}[0]))", texture, pname, param); }
 
-        inline static function glTextureParameteriv(texture:UInt, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glTextureParameteriv({0}, {1}, (const GLint*)&{3}[0] + {2})", texture, pname, bOffset, param); }
+        inline static function glTextureParameteriv(texture:UInt, pname:Int, param:Array<Int>) : Void
+          { untyped __cpp__("glTextureParameteriv({0}, {1}, (const GLint*)&({2}[0]))", texture, pname, param); }
 
-        inline static function glTextureSubImage1D(texture:UInt, level:Int, xoffset:Int, width:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTextureSubImage1D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6})", texture, level, xoffset, width, format, type, bOffset, pixels); }
+        inline static function glTextureSubImage1D(texture:UInt, level:Int, xoffset:Int, width:Int, format:Int, type:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glTextureSubImage1D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&({6}[0]))", texture, level, xoffset, width, format, type, pixels); }
 
-        inline static function glTextureSubImage2D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTextureSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", texture, level, xoffset, yoffset, width, height, format, type, bOffset, pixels); }
+        inline static function glTextureSubImage2D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glTextureSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&({8}[0]))", texture, level, xoffset, yoffset, width, height, format, type, pixels); }
 
-        inline static function glTextureSubImage3D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTextureSubImage3D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&{11}[0] + {10})", texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, bOffset, pixels); }
+        inline static function glTextureSubImage3D(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glTextureSubImage3D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&({10}[0]))", texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels); }
 
 
 
@@ -5062,7 +4014,7 @@ extern class GL {
         // static function glMapNamedBufferRange(buffer:UInt, offset:Int, length:Int, access:Int) : void *;
             
         // inline static function glVertexArrayVertexBuffers(vaobj:UInt, first:UInt, count:Int, buffers:Array<UInt>, offsets:const GLintptr*, strides:const GLsizei*) : Void
-        // { untyped __cpp__("glVertexArrayVertexBuffers({0}, {1}, {2}, (const GLuint*)&{3}[0], {4}, {5})", vaobj, first, count, buffers, offsets, strides); }
+        // { untyped __cpp__("glVertexArrayVertexBuffers({0}, {1}, {2}, (const GLuint*)&({3}[0]), {4}, {5})", vaobj, first, count, buffers, offsets, strides); }
 
 
 //GL_ARB_draw_buffers
@@ -5095,7 +4047,7 @@ extern class GL {
 
 
         inline static function glDrawBuffersARB(n:Int, bufs:Array<Int>) : Void
-          { untyped __cpp__("glDrawBuffersARB({0}, (const GLenum*)&{1}[0])", n, bufs); }
+          { untyped __cpp__("glDrawBuffersARB({0}, (const GLenum*)&({1}[0]))", n, bufs); }
 
 
 
@@ -5139,14 +4091,14 @@ extern class GL {
     // GL_ARB_draw_elements_base_vertex functions
 
 
-        inline static function glDrawElementsBaseVertex(mode:Int, count:Int, type:Int, ?bOffset:Int=0, indices:BytesData, basevertex:Int) : Void
-          { untyped __cpp__("glDrawElementsBaseVertex({0}, {1}, {2}, (const void*)&{4}[0] + {3}, {5})", mode, count, type, bOffset, indices, basevertex); }
+        inline static function glDrawElementsBaseVertex(mode:Int, count:Int, type:Int, indices:BytesData, basevertex:Int) : Void
+          { untyped __cpp__("glDrawElementsBaseVertex({0}, {1}, {2}, (const void*)&({3}[0]), {4})", mode, count, type, indices, basevertex); }
 
-        inline static function glDrawElementsInstancedBaseVertex(mode:Int, count:Int, type:Int, ?bOffset:Int=0, indices:BytesData, primcount:Int, basevertex:Int) : Void
-          { untyped __cpp__("glDrawElementsInstancedBaseVertex({0}, {1}, {2}, (const void*)&{4}[0] + {3}, {5}, {6})", mode, count, type, bOffset, indices, primcount, basevertex); }
+        inline static function glDrawElementsInstancedBaseVertex(mode:Int, count:Int, type:Int, indices:BytesData, primcount:Int, basevertex:Int) : Void
+          { untyped __cpp__("glDrawElementsInstancedBaseVertex({0}, {1}, {2}, (const void*)&({3}[0]), {4}, {5})", mode, count, type, indices, primcount, basevertex); }
 
-        inline static function glDrawRangeElementsBaseVertex(mode:Int, start:UInt, end:UInt, count:Int, type:Int, ?bOffset:Int=0, indices:BytesData, basevertex:Int) : Void
-          { untyped __cpp__("glDrawRangeElementsBaseVertex({0}, {1}, {2}, {3}, {4}, (const void*)&{6}[0] + {5}, {7})", mode, start, end, count, type, bOffset, indices, basevertex); }
+        inline static function glDrawRangeElementsBaseVertex(mode:Int, start:UInt, end:UInt, count:Int, type:Int, indices:BytesData, basevertex:Int) : Void
+          { untyped __cpp__("glDrawRangeElementsBaseVertex({0}, {1}, {2}, {3}, {4}, (const void*)&({5}[0]), {6})", mode, start, end, count, type, indices, basevertex); }
 
 
 
@@ -5154,7 +4106,7 @@ extern class GL {
 
             
         // inline static function glMultiDrawElementsBaseVertex(mode:Int, count:const GLsizei*, type:Int, indices:const void *const*, primcount:Int, basevertex:Array<Int>) : Void
-        // { untyped __cpp__("glMultiDrawElementsBaseVertex({0}, {1}, {2}, {3}, {4}, (const GLint*)&{5}[0])", mode, count, type, indices, primcount, basevertex); }
+        // { untyped __cpp__("glMultiDrawElementsBaseVertex({0}, {1}, {2}, {3}, {4}, (const GLint*)&({5}[0]))", mode, count, type, indices, primcount, basevertex); }
 
 
 //GL_ARB_draw_indirect
@@ -5171,11 +4123,11 @@ extern class GL {
     // GL_ARB_draw_indirect functions
 
 
-        inline static function glDrawArraysIndirect(mode:Int, ?bOffset:Int=0, indirect:BytesData) : Void
-          { untyped __cpp__("glDrawArraysIndirect({0}, (const void*)&{2}[0] + {1})", mode, bOffset, indirect); }
+        inline static function glDrawArraysIndirect(mode:Int, indirect:BytesData) : Void
+          { untyped __cpp__("glDrawArraysIndirect({0}, (const void*)&({1}[0]))", mode, indirect); }
 
-        inline static function glDrawElementsIndirect(mode:Int, type:Int, ?bOffset:Int=0, indirect:BytesData) : Void
-          { untyped __cpp__("glDrawElementsIndirect({0}, {1}, (const void*)&{3}[0] + {2})", mode, type, bOffset, indirect); }
+        inline static function glDrawElementsIndirect(mode:Int, type:Int, indirect:BytesData) : Void
+          { untyped __cpp__("glDrawElementsIndirect({0}, {1}, (const void*)&({2}[0]))", mode, type, indirect); }
 
 
 
@@ -5292,11 +4244,11 @@ extern class GL {
         static function glNamedFramebufferParameteriEXT(framebuffer:UInt, pname:Int, param:Int) : Void;
 
 
-        inline static function glGetFramebufferParameteriv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetFramebufferParameteriv({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetFramebufferParameteriv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetFramebufferParameteriv({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetNamedFramebufferParameterivEXT(framebuffer:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetNamedFramebufferParameterivEXT({0}, {1}, (GLint*)&{3}[0] + {2})", framebuffer, pname, bOffset, params); }
+        inline static function glGetNamedFramebufferParameterivEXT(framebuffer:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetNamedFramebufferParameterivEXT({0}, {1}, (GLint*)&({2}[0]))", framebuffer, pname, params); }
 
 
 
@@ -5429,22 +4381,22 @@ extern class GL {
 
 
         inline static function glDeleteFramebuffers(n:Int, framebuffers:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteFramebuffers({0}, (const GLuint*)&{1}[0])", n, framebuffers); }
+          { untyped __cpp__("glDeleteFramebuffers({0}, (const GLuint*)&({1}[0]))", n, framebuffers); }
 
         inline static function glDeleteRenderbuffers(n:Int, renderbuffers:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteRenderbuffers({0}, (const GLuint*)&{1}[0])", n, renderbuffers); }
+          { untyped __cpp__("glDeleteRenderbuffers({0}, (const GLuint*)&({1}[0]))", n, renderbuffers); }
 
         inline static function glGenFramebuffers(n:Int, framebuffers:Array<UInt>) : Void
-          { untyped __cpp__("glGenFramebuffers({0}, (GLuint*)&{1}[0])", n, framebuffers); }
+          { untyped __cpp__("glGenFramebuffers({0}, (GLuint*)&({1}[0]))", n, framebuffers); }
 
         inline static function glGenRenderbuffers(n:Int, renderbuffers:Array<UInt>) : Void
-          { untyped __cpp__("glGenRenderbuffers({0}, (GLuint*)&{1}[0])", n, renderbuffers); }
+          { untyped __cpp__("glGenRenderbuffers({0}, (GLuint*)&({1}[0]))", n, renderbuffers); }
 
-        inline static function glGetFramebufferAttachmentParameteriv(target:Int, attachment:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetFramebufferAttachmentParameteriv({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", target, attachment, pname, bOffset, params); }
+        inline static function glGetFramebufferAttachmentParameteriv(target:Int, attachment:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetFramebufferAttachmentParameteriv({0}, {1}, {2}, (GLint*)&({3}[0]))", target, attachment, pname, params); }
 
-        inline static function glGetRenderbufferParameteriv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetRenderbufferParameteriv({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetRenderbufferParameteriv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetRenderbufferParameteriv({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
 
 
@@ -5521,8 +4473,8 @@ extern class GL {
         static function glProgramParameteri(program:UInt, pname:Int, value:Int) : Void;
 
 
-        inline static function glProgramBinary(program:UInt, binaryFormat:Int, ?bOffset:Int=0, binary:BytesData, length:Int) : Void
-          { untyped __cpp__("glProgramBinary({0}, {1}, (const void*)&{3}[0] + {2}, {4})", program, binaryFormat, bOffset, binary, length); }
+        inline static function glProgramBinary(program:UInt, binaryFormat:Int, binary:BytesData, length:Int) : Void
+          { untyped __cpp__("glProgramBinary({0}, {1}, (const void*)&({2}[0]), {3})", program, binaryFormat, binary, length); }
 
 
 
@@ -5545,11 +4497,11 @@ extern class GL {
     // GL_ARB_get_texture_sub_image functions
 
 
-        inline static function glGetCompressedTextureSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, bufSize:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glGetCompressedTextureSubImage({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (void*)&{10}[0] + {9})", texture, level, xoffset, yoffset, zoffset, width, height, depth, bufSize, bOffset, pixels); }
+        inline static function glGetCompressedTextureSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, bufSize:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glGetCompressedTextureSubImage({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (void*)&({9}[0]))", texture, level, xoffset, yoffset, zoffset, width, height, depth, bufSize, pixels); }
 
-        inline static function glGetTextureSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glGetTextureSubImage({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, (void*)&{12}[0] + {11})", texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, bufSize, bOffset, pixels); }
+        inline static function glGetTextureSubImage(texture:UInt, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, bufSize:Int, pixels:BytesData) : Void
+          { untyped __cpp__("glGetTextureSubImage({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, (void*)&({11}[0]))", texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, bufSize, pixels); }
 
 
 
@@ -5591,59 +4543,59 @@ extern class GL {
     // GL_ARB_gpu_shader_fp64 functions
 
         @:native('glUniform1d')
-        static function glUniform1d(location:Int, x:Float) : Void;
+        static function glUniform1d(location:Int, x:cpp.Float64) : Void;
 
         @:native('glUniform2d')
-        static function glUniform2d(location:Int, x:Float, y:Float) : Void;
+        static function glUniform2d(location:Int, x:cpp.Float64, y:cpp.Float64) : Void;
 
         @:native('glUniform3d')
-        static function glUniform3d(location:Int, x:Float, y:Float, z:Float) : Void;
+        static function glUniform3d(location:Int, x:cpp.Float64, y:cpp.Float64, z:cpp.Float64) : Void;
 
         @:native('glUniform4d')
-        static function glUniform4d(location:Int, x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glUniform4d(location:Int, x:cpp.Float64, y:cpp.Float64, z:cpp.Float64, w:cpp.Float64) : Void;
 
 
-        inline static function glGetUniformdv(program:UInt, location:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetUniformdv({0}, {1}, (GLdouble*)&{3}[0] + {2})", program, location, bOffset, params); }
+        inline static function glGetUniformdv(program:UInt, location:Int, params:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glGetUniformdv({0}, {1}, (GLdouble*)&({2}[0]))", program, location, params); }
 
-        inline static function glUniform1dv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform1dv({0}, {1}, (const GLdouble*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform1dv(location:Int, count:Int, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glUniform1dv({0}, {1}, (const GLdouble*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform2dv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform2dv({0}, {1}, (const GLdouble*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform2dv(location:Int, count:Int, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glUniform2dv({0}, {1}, (const GLdouble*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform3dv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform3dv({0}, {1}, (const GLdouble*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform3dv(location:Int, count:Int, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glUniform3dv({0}, {1}, (const GLdouble*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform4dv(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform4dv({0}, {1}, (const GLdouble*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform4dv(location:Int, count:Int, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glUniform4dv({0}, {1}, (const GLdouble*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniformMatrix2dv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix2dv({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix2dv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glUniformMatrix2dv({0}, {1}, {2}, (const GLdouble*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix2x3dv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix2x3dv({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix2x3dv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glUniformMatrix2x3dv({0}, {1}, {2}, (const GLdouble*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix2x4dv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix2x4dv({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix2x4dv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glUniformMatrix2x4dv({0}, {1}, {2}, (const GLdouble*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix3dv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix3dv({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix3dv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glUniformMatrix3dv({0}, {1}, {2}, (const GLdouble*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix3x2dv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix3x2dv({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix3x2dv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glUniformMatrix3x2dv({0}, {1}, {2}, (const GLdouble*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix3x4dv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix3x4dv({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix3x4dv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glUniformMatrix3x4dv({0}, {1}, {2}, (const GLdouble*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix4dv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix4dv({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix4dv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glUniformMatrix4dv({0}, {1}, {2}, (const GLdouble*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix4x2dv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix4x2dv({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix4x2dv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glUniformMatrix4x2dv({0}, {1}, {2}, (const GLdouble*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix4x3dv(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix4x3dv({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix4x3dv(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glUniformMatrix4x3dv({0}, {1}, {2}, (const GLdouble*)&({3}[0]))", location, count, transpose, value); }
 
 
 
@@ -5753,7 +4705,7 @@ extern class GL {
     // GL_ARB_imaging functions
 
         @:native('glConvolutionParameterf')
-        static function glConvolutionParameterf(target:Int, pname:Int, params:Float) : Void;
+        static function glConvolutionParameterf(target:Int, pname:Int, params:cpp.Float32) : Void;
 
         @:native('glConvolutionParameteri')
         static function glConvolutionParameteri(target:Int, pname:Int, params:Int) : Void;
@@ -5783,71 +4735,71 @@ extern class GL {
         static function glResetMinmax(target:Int) : Void;
 
 
-        inline static function glColorSubTable(target:Int, start:Int, count:Int, format:Int, type:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glColorSubTable({0}, {1}, {2}, {3}, {4}, (const void*)&{6}[0] + {5})", target, start, count, format, type, bOffset, data); }
+        inline static function glColorSubTable(target:Int, start:Int, count:Int, format:Int, type:Int, data:BytesData) : Void
+          { untyped __cpp__("glColorSubTable({0}, {1}, {2}, {3}, {4}, (const void*)&({5}[0]))", target, start, count, format, type, data); }
 
-        inline static function glColorTable(target:Int, internalformat:Int, width:Int, format:Int, type:Int, ?bOffset:Int=0, table:BytesData) : Void
-          { untyped __cpp__("glColorTable({0}, {1}, {2}, {3}, {4}, (const void*)&{6}[0] + {5})", target, internalformat, width, format, type, bOffset, table); }
+        inline static function glColorTable(target:Int, internalformat:Int, width:Int, format:Int, type:Int, table:BytesData) : Void
+          { untyped __cpp__("glColorTable({0}, {1}, {2}, {3}, {4}, (const void*)&({5}[0]))", target, internalformat, width, format, type, table); }
 
-        inline static function glColorTableParameterfv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glColorTableParameterfv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glColorTableParameterfv(target:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glColorTableParameterfv({0}, {1}, (const GLfloat*)&({2}[0]))", target, pname, params); }
 
-        inline static function glColorTableParameteriv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glColorTableParameteriv({0}, {1}, (const GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glColorTableParameteriv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glColorTableParameteriv({0}, {1}, (const GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glConvolutionFilter1D(target:Int, internalformat:Int, width:Int, format:Int, type:Int, ?bOffset:Int=0, image:BytesData) : Void
-          { untyped __cpp__("glConvolutionFilter1D({0}, {1}, {2}, {3}, {4}, (const void*)&{6}[0] + {5})", target, internalformat, width, format, type, bOffset, image); }
+        inline static function glConvolutionFilter1D(target:Int, internalformat:Int, width:Int, format:Int, type:Int, image:BytesData) : Void
+          { untyped __cpp__("glConvolutionFilter1D({0}, {1}, {2}, {3}, {4}, (const void*)&({5}[0]))", target, internalformat, width, format, type, image); }
 
-        inline static function glConvolutionFilter2D(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, ?bOffset:Int=0, image:BytesData) : Void
-          { untyped __cpp__("glConvolutionFilter2D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6})", target, internalformat, width, height, format, type, bOffset, image); }
+        inline static function glConvolutionFilter2D(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, image:BytesData) : Void
+          { untyped __cpp__("glConvolutionFilter2D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&({6}[0]))", target, internalformat, width, height, format, type, image); }
 
-        inline static function glConvolutionParameterfv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glConvolutionParameterfv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glConvolutionParameterfv(target:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glConvolutionParameterfv({0}, {1}, (const GLfloat*)&({2}[0]))", target, pname, params); }
 
-        inline static function glConvolutionParameteriv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glConvolutionParameteriv({0}, {1}, (const GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glConvolutionParameteriv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glConvolutionParameteriv({0}, {1}, (const GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetColorTable(target:Int, format:Int, type:Int, ?bOffset:Int=0, table:BytesData) : Void
-          { untyped __cpp__("glGetColorTable({0}, {1}, {2}, (void*)&{4}[0] + {3})", target, format, type, bOffset, table); }
+        inline static function glGetColorTable(target:Int, format:Int, type:Int, table:BytesData) : Void
+          { untyped __cpp__("glGetColorTable({0}, {1}, {2}, (void*)&({3}[0]))", target, format, type, table); }
 
-        inline static function glGetColorTableParameterfv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetColorTableParameterfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetColorTableParameterfv(target:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetColorTableParameterfv({0}, {1}, (GLfloat*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetColorTableParameteriv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetColorTableParameteriv({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetColorTableParameteriv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetColorTableParameteriv({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetConvolutionFilter(target:Int, format:Int, type:Int, ?bOffset:Int=0, image:BytesData) : Void
-          { untyped __cpp__("glGetConvolutionFilter({0}, {1}, {2}, (void*)&{4}[0] + {3})", target, format, type, bOffset, image); }
+        inline static function glGetConvolutionFilter(target:Int, format:Int, type:Int, image:BytesData) : Void
+          { untyped __cpp__("glGetConvolutionFilter({0}, {1}, {2}, (void*)&({3}[0]))", target, format, type, image); }
 
-        inline static function glGetConvolutionParameterfv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetConvolutionParameterfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetConvolutionParameterfv(target:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetConvolutionParameterfv({0}, {1}, (GLfloat*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetConvolutionParameteriv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetConvolutionParameteriv({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetConvolutionParameteriv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetConvolutionParameteriv({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetHistogram(target:Int, reset:Bool, format:Int, type:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetHistogram({0}, {1}, {2}, {3}, (void*)&{5}[0] + {4})", target, reset, format, type, bOffset, values); }
+        inline static function glGetHistogram(target:Int, reset:Bool, format:Int, type:Int, values:BytesData) : Void
+          { untyped __cpp__("glGetHistogram({0}, {1}, {2}, {3}, (void*)&({4}[0]))", target, reset, format, type, values); }
 
-        inline static function glGetHistogramParameterfv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetHistogramParameterfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetHistogramParameterfv(target:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetHistogramParameterfv({0}, {1}, (GLfloat*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetHistogramParameteriv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetHistogramParameteriv({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetHistogramParameteriv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetHistogramParameteriv({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetMinmax(target:Int, reset:Bool, format:Int, types:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetMinmax({0}, {1}, {2}, {3}, (void*)&{5}[0] + {4})", target, reset, format, types, bOffset, values); }
+        inline static function glGetMinmax(target:Int, reset:Bool, format:Int, types:Int, values:BytesData) : Void
+          { untyped __cpp__("glGetMinmax({0}, {1}, {2}, {3}, (void*)&({4}[0]))", target, reset, format, types, values); }
 
-        inline static function glGetMinmaxParameterfv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMinmaxParameterfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetMinmaxParameterfv(target:Int, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetMinmaxParameterfv({0}, {1}, (GLfloat*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetMinmaxParameteriv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMinmaxParameteriv({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetMinmaxParameteriv(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetMinmaxParameteriv({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetSeparableFilter(target:Int, format:Int, type:Int, ?bOffset:Int=0, row:BytesData, ?bOffset:Int=0, column:BytesData, ?bOffset:Int=0, span:BytesData) : Void
-          { untyped __cpp__("glGetSeparableFilter({0}, {1}, {2}, (void*)&{4}[0] + {3}, (void*)&{6}[0] + {5}, (void*)&{8}[0] + {7})", target, format, type, bOffset, row, bOffset, column, bOffset, span); }
+        inline static function glGetSeparableFilter(target:Int, format:Int, type:Int, row:BytesData, column:BytesData, span:BytesData) : Void
+          { untyped __cpp__("glGetSeparableFilter({0}, {1}, {2}, (void*)&({3}[0]), (void*)&({4}[0]), (void*)&({5}[0]))", target, format, type, row, column, span); }
 
-        inline static function glSeparableFilter2D(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, ?bOffset:Int=0, row:BytesData, ?bOffset:Int=0, column:BytesData) : Void
-          { untyped __cpp__("glSeparableFilter2D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6}, (const void*)&{9}[0] + {8})", target, internalformat, width, height, format, type, bOffset, row, bOffset, column); }
+        inline static function glSeparableFilter2D(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, row:BytesData, column:BytesData) : Void
+          { untyped __cpp__("glSeparableFilter2D({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&({6}[0]), (const void*)&({7}[0]))", target, internalformat, width, height, format, type, row, column); }
 
 
 
@@ -5866,11 +4818,11 @@ extern class GL {
     // GL_ARB_indirect_parameters functions
 
 
-        inline static function glMultiDrawArraysIndirectCountARB(mode:Int, ?bOffset:Int=0, indirect:BytesData, drawcount:Int, maxdrawcount:Int, stride:Int) : Void
-          { untyped __cpp__("glMultiDrawArraysIndirectCountARB({0}, (const void*)&{2}[0] + {1}, {3}, {4}, {5})", mode, bOffset, indirect, drawcount, maxdrawcount, stride); }
+        inline static function glMultiDrawArraysIndirectCountARB(mode:Int, indirect:BytesData, drawcount:Int, maxdrawcount:Int, stride:Int) : Void
+          { untyped __cpp__("glMultiDrawArraysIndirectCountARB({0}, (const void*)&({1}[0]), {2}, {3}, {4})", mode, indirect, drawcount, maxdrawcount, stride); }
 
-        inline static function glMultiDrawElementsIndirectCountARB(mode:Int, type:Int, ?bOffset:Int=0, indirect:BytesData, drawcount:Int, maxdrawcount:Int, stride:Int) : Void
-          { untyped __cpp__("glMultiDrawElementsIndirectCountARB({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5}, {6})", mode, type, bOffset, indirect, drawcount, maxdrawcount, stride); }
+        inline static function glMultiDrawElementsIndirectCountARB(mode:Int, type:Int, indirect:BytesData, drawcount:Int, maxdrawcount:Int, stride:Int) : Void
+          { untyped __cpp__("glMultiDrawElementsIndirectCountARB({0}, {1}, (const void*)&({2}[0]), {3}, {4}, {5})", mode, type, indirect, drawcount, maxdrawcount, stride); }
 
 
 
@@ -5894,8 +4846,8 @@ extern class GL {
         static function glVertexAttribDivisorARB(index:UInt, divisor:UInt) : Void;
 
 
-        inline static function glDrawElementsInstancedARB(mode:Int, count:Int, type:Int, ?bOffset:Int=0, indices:BytesData, primcount:Int) : Void
-          { untyped __cpp__("glDrawElementsInstancedARB({0}, {1}, {2}, (const void*)&{4}[0] + {3}, {5})", mode, count, type, bOffset, indices, primcount); }
+        inline static function glDrawElementsInstancedARB(mode:Int, count:Int, type:Int, indices:BytesData, primcount:Int) : Void
+          { untyped __cpp__("glDrawElementsInstancedARB({0}, {1}, {2}, (const void*)&({3}[0]), {4})", mode, count, type, indices, primcount); }
 
 
 
@@ -5913,8 +4865,8 @@ extern class GL {
     // GL_ARB_internalformat_query functions
 
 
-        inline static function glGetInternalformativ(target:Int, internalformat:Int, pname:Int, bufSize:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetInternalformativ({0}, {1}, {2}, {3}, (GLint*)&{5}[0] + {4})", target, internalformat, pname, bufSize, bOffset, params); }
+        inline static function glGetInternalformativ(target:Int, internalformat:Int, pname:Int, bufSize:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetInternalformativ({0}, {1}, {2}, {3}, (GLint*)&({4}[0]))", target, internalformat, pname, bufSize, params); }
 
 
 
@@ -6064,10 +5016,10 @@ extern class GL {
 
 
         inline static function glInvalidateFramebuffer(target:Int, numAttachments:Int, attachments:Array<Int>) : Void
-          { untyped __cpp__("glInvalidateFramebuffer({0}, {1}, (const GLenum*)&{2}[0])", target, numAttachments, attachments); }
+          { untyped __cpp__("glInvalidateFramebuffer({0}, {1}, (const GLenum*)&({2}[0]))", target, numAttachments, attachments); }
 
         inline static function glInvalidateSubFramebuffer(target:Int, numAttachments:Int, attachments:Array<Int>, x:Int, y:Int, width:Int, height:Int) : Void
-          { untyped __cpp__("glInvalidateSubFramebuffer({0}, {1}, (const GLenum*)&{2}[0], {3}, {4}, {5}, {6})", target, numAttachments, attachments, x, y, width, height); }
+          { untyped __cpp__("glInvalidateSubFramebuffer({0}, {1}, (const GLenum*)&({2}[0]), {3}, {4}, {5}, {6})", target, numAttachments, attachments, x, y, width, height); }
 
 
 
@@ -6133,17 +5085,17 @@ extern class GL {
         static function glCurrentPaletteMatrixARB(index:Int) : Void;
 
 
-        inline static function glMatrixIndexPointerARB(size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glMatrixIndexPointerARB({0}, {1}, {2}, (void*)&{4}[0] + {3})", size, type, stride, bOffset, pointer); }
+        inline static function glMatrixIndexPointerARB(size:Int, type:Int, stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glMatrixIndexPointerARB({0}, {1}, {2}, (void*)&({3}[0]))", size, type, stride, pointer); }
 
-        inline static function glMatrixIndexubvARB(size:Int, ?bOffset:Int=0, indices:BytesData) : Void
-          { untyped __cpp__("glMatrixIndexubvARB({0}, (GLubyte*)&{2}[0] + {1})", size, bOffset, indices); }
+        inline static function glMatrixIndexubvARB(size:Int, indices:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glMatrixIndexubvARB({0}, (GLubyte*)&({1}[0]))", size, indices); }
 
-        inline static function glMatrixIndexuivARB(size:Int, ?bOffset:Int=0, indices:BytesData) : Void
-          { untyped __cpp__("glMatrixIndexuivARB({0}, (GLuint*)&{2}[0] + {1})", size, bOffset, indices); }
+        inline static function glMatrixIndexuivARB(size:Int, indices:Array<UInt>) : Void
+          { untyped __cpp__("glMatrixIndexuivARB({0}, (GLuint*)&({1}[0]))", size, indices); }
 
-        inline static function glMatrixIndexusvARB(size:Int, ?bOffset:Int=0, indices:BytesData) : Void
-          { untyped __cpp__("glMatrixIndexusvARB({0}, (GLushort*)&{2}[0] + {1})", size, bOffset, indices); }
+        inline static function glMatrixIndexusvARB(size:Int, indices:Array<UInt>) : Void
+          { untyped __cpp__("glMatrixIndexusvARB({0}, (GLushort*)&({1}[0]))", size, indices); }
 
 
 
@@ -6161,16 +5113,16 @@ extern class GL {
 
 
         inline static function glBindBuffersBase(target:Int, first:UInt, count:Int, buffers:Array<UInt>) : Void
-          { untyped __cpp__("glBindBuffersBase({0}, {1}, {2}, (const GLuint*)&{3}[0])", target, first, count, buffers); }
+          { untyped __cpp__("glBindBuffersBase({0}, {1}, {2}, (const GLuint*)&({3}[0]))", target, first, count, buffers); }
 
         inline static function glBindImageTextures(first:UInt, count:Int, textures:Array<UInt>) : Void
-          { untyped __cpp__("glBindImageTextures({0}, {1}, (const GLuint*)&{2}[0])", first, count, textures); }
+          { untyped __cpp__("glBindImageTextures({0}, {1}, (const GLuint*)&({2}[0]))", first, count, textures); }
 
         inline static function glBindSamplers(first:UInt, count:Int, samplers:Array<UInt>) : Void
-          { untyped __cpp__("glBindSamplers({0}, {1}, (const GLuint*)&{2}[0])", first, count, samplers); }
+          { untyped __cpp__("glBindSamplers({0}, {1}, (const GLuint*)&({2}[0]))", first, count, samplers); }
 
         inline static function glBindTextures(first:UInt, count:Int, textures:Array<UInt>) : Void
-          { untyped __cpp__("glBindTextures({0}, {1}, (const GLuint*)&{2}[0])", first, count, textures); }
+          { untyped __cpp__("glBindTextures({0}, {1}, (const GLuint*)&({2}[0]))", first, count, textures); }
 
 
 
@@ -6178,10 +5130,10 @@ extern class GL {
 
             
         // inline static function glBindBuffersRange(target:Int, first:UInt, count:Int, buffers:Array<UInt>, offsets:const GLintptr*, sizes:const GLsizeiptr*) : Void
-        // { untyped __cpp__("glBindBuffersRange({0}, {1}, {2}, (const GLuint*)&{3}[0], {4}, {5})", target, first, count, buffers, offsets, sizes); }
+        // { untyped __cpp__("glBindBuffersRange({0}, {1}, {2}, (const GLuint*)&({3}[0]), {4}, {5})", target, first, count, buffers, offsets, sizes); }
             
         // inline static function glBindVertexBuffers(first:UInt, count:Int, buffers:Array<UInt>, offsets:const GLintptr*, strides:const GLsizei*) : Void
-        // { untyped __cpp__("glBindVertexBuffers({0}, {1}, (const GLuint*)&{2}[0], {3}, {4})", first, count, buffers, offsets, strides); }
+        // { untyped __cpp__("glBindVertexBuffers({0}, {1}, (const GLuint*)&({2}[0]), {3}, {4})", first, count, buffers, offsets, strides); }
 
 
 //GL_ARB_multi_draw_indirect
@@ -6196,11 +5148,11 @@ extern class GL {
     // GL_ARB_multi_draw_indirect functions
 
 
-        inline static function glMultiDrawArraysIndirect(mode:Int, ?bOffset:Int=0, indirect:BytesData, primcount:Int, stride:Int) : Void
-          { untyped __cpp__("glMultiDrawArraysIndirect({0}, (const void*)&{2}[0] + {1}, {3}, {4})", mode, bOffset, indirect, primcount, stride); }
+        inline static function glMultiDrawArraysIndirect(mode:Int, indirect:BytesData, primcount:Int, stride:Int) : Void
+          { untyped __cpp__("glMultiDrawArraysIndirect({0}, (const void*)&({1}[0]), {2}, {3})", mode, indirect, primcount, stride); }
 
-        inline static function glMultiDrawElementsIndirect(mode:Int, type:Int, ?bOffset:Int=0, indirect:BytesData, primcount:Int, stride:Int) : Void
-          { untyped __cpp__("glMultiDrawElementsIndirect({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5})", mode, type, bOffset, indirect, primcount, stride); }
+        inline static function glMultiDrawElementsIndirect(mode:Int, type:Int, indirect:BytesData, primcount:Int, stride:Int) : Void
+          { untyped __cpp__("glMultiDrawElementsIndirect({0}, {1}, (const void*)&({2}[0]), {3}, {4})", mode, type, indirect, primcount, stride); }
 
 
 
@@ -6226,7 +5178,7 @@ extern class GL {
     // GL_ARB_multisample functions
 
         @:native('glSampleCoverageARB')
-        static function glSampleCoverageARB(value:Float, invert:Bool) : Void;
+        static function glSampleCoverageARB(value:cpp.Float32, invert:Bool) : Void;
 
 
 
@@ -6285,10 +5237,10 @@ extern class GL {
         static function glClientActiveTextureARB(texture:Int) : Void;
 
         @:native('glMultiTexCoord1dARB')
-        static function glMultiTexCoord1dARB(target:Int, s:Float) : Void;
+        static function glMultiTexCoord1dARB(target:Int, s:cpp.Float64) : Void;
 
         @:native('glMultiTexCoord1fARB')
-        static function glMultiTexCoord1fARB(target:Int, s:Float) : Void;
+        static function glMultiTexCoord1fARB(target:Int, s:cpp.Float32) : Void;
 
         @:native('glMultiTexCoord1iARB')
         static function glMultiTexCoord1iARB(target:Int, s:Int) : Void;
@@ -6297,10 +5249,10 @@ extern class GL {
         static function glMultiTexCoord1sARB(target:Int, s:Int) : Void;
 
         @:native('glMultiTexCoord2dARB')
-        static function glMultiTexCoord2dARB(target:Int, s:Float, t:Float) : Void;
+        static function glMultiTexCoord2dARB(target:Int, s:cpp.Float64, t:cpp.Float64) : Void;
 
         @:native('glMultiTexCoord2fARB')
-        static function glMultiTexCoord2fARB(target:Int, s:Float, t:Float) : Void;
+        static function glMultiTexCoord2fARB(target:Int, s:cpp.Float32, t:cpp.Float32) : Void;
 
         @:native('glMultiTexCoord2iARB')
         static function glMultiTexCoord2iARB(target:Int, s:Int, t:Int) : Void;
@@ -6309,10 +5261,10 @@ extern class GL {
         static function glMultiTexCoord2sARB(target:Int, s:Int, t:Int) : Void;
 
         @:native('glMultiTexCoord3dARB')
-        static function glMultiTexCoord3dARB(target:Int, s:Float, t:Float, r:Float) : Void;
+        static function glMultiTexCoord3dARB(target:Int, s:cpp.Float64, t:cpp.Float64, r:cpp.Float64) : Void;
 
         @:native('glMultiTexCoord3fARB')
-        static function glMultiTexCoord3fARB(target:Int, s:Float, t:Float, r:Float) : Void;
+        static function glMultiTexCoord3fARB(target:Int, s:cpp.Float32, t:cpp.Float32, r:cpp.Float32) : Void;
 
         @:native('glMultiTexCoord3iARB')
         static function glMultiTexCoord3iARB(target:Int, s:Int, t:Int, r:Int) : Void;
@@ -6321,10 +5273,10 @@ extern class GL {
         static function glMultiTexCoord3sARB(target:Int, s:Int, t:Int, r:Int) : Void;
 
         @:native('glMultiTexCoord4dARB')
-        static function glMultiTexCoord4dARB(target:Int, s:Float, t:Float, r:Float, q:Float) : Void;
+        static function glMultiTexCoord4dARB(target:Int, s:cpp.Float64, t:cpp.Float64, r:cpp.Float64, q:cpp.Float64) : Void;
 
         @:native('glMultiTexCoord4fARB')
-        static function glMultiTexCoord4fARB(target:Int, s:Float, t:Float, r:Float, q:Float) : Void;
+        static function glMultiTexCoord4fARB(target:Int, s:cpp.Float32, t:cpp.Float32, r:cpp.Float32, q:cpp.Float32) : Void;
 
         @:native('glMultiTexCoord4iARB')
         static function glMultiTexCoord4iARB(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;
@@ -6333,53 +5285,53 @@ extern class GL {
         static function glMultiTexCoord4sARB(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;
 
 
-        inline static function glMultiTexCoord1dvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord1dvARB({0}, (const GLdouble*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord1dvARB(target:Int, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glMultiTexCoord1dvARB({0}, (const GLdouble*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord1fvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord1fvARB({0}, (const GLfloat*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord1fvARB(target:Int, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glMultiTexCoord1fvARB({0}, (const GLfloat*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord1ivARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord1ivARB({0}, (const GLint*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord1ivARB(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord1ivARB({0}, (const GLint*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord1svARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord1svARB({0}, (const GLshort*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord1svARB(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord1svARB({0}, (const GLshort*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord2dvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord2dvARB({0}, (const GLdouble*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord2dvARB(target:Int, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glMultiTexCoord2dvARB({0}, (const GLdouble*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord2fvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord2fvARB({0}, (const GLfloat*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord2fvARB(target:Int, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glMultiTexCoord2fvARB({0}, (const GLfloat*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord2ivARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord2ivARB({0}, (const GLint*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord2ivARB(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord2ivARB({0}, (const GLint*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord2svARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord2svARB({0}, (const GLshort*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord2svARB(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord2svARB({0}, (const GLshort*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord3dvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord3dvARB({0}, (const GLdouble*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord3dvARB(target:Int, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glMultiTexCoord3dvARB({0}, (const GLdouble*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord3fvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord3fvARB({0}, (const GLfloat*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord3fvARB(target:Int, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glMultiTexCoord3fvARB({0}, (const GLfloat*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord3ivARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord3ivARB({0}, (const GLint*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord3ivARB(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord3ivARB({0}, (const GLint*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord3svARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord3svARB({0}, (const GLshort*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord3svARB(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord3svARB({0}, (const GLshort*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord4dvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord4dvARB({0}, (const GLdouble*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord4dvARB(target:Int, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glMultiTexCoord4dvARB({0}, (const GLdouble*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord4fvARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord4fvARB({0}, (const GLfloat*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord4fvARB(target:Int, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glMultiTexCoord4fvARB({0}, (const GLfloat*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord4ivARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord4ivARB({0}, (const GLint*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord4ivARB(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord4ivARB({0}, (const GLint*)&({1}[0]))", target, v); }
 
-        inline static function glMultiTexCoord4svARB(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord4svARB({0}, (const GLshort*)&{2}[0] + {1})", target, bOffset, v); }
+        inline static function glMultiTexCoord4svARB(target:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glMultiTexCoord4svARB({0}, (const GLshort*)&({1}[0]))", target, v); }
 
 
 
@@ -6411,19 +5363,19 @@ extern class GL {
 
 
         inline static function glDeleteQueriesARB(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteQueriesARB({0}, (const GLuint*)&{1}[0])", n, ids); }
+          { untyped __cpp__("glDeleteQueriesARB({0}, (const GLuint*)&({1}[0]))", n, ids); }
 
         inline static function glGenQueriesARB(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glGenQueriesARB({0}, (GLuint*)&{1}[0])", n, ids); }
+          { untyped __cpp__("glGenQueriesARB({0}, (GLuint*)&({1}[0]))", n, ids); }
 
-        inline static function glGetQueryObjectivARB(id:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetQueryObjectivARB({0}, {1}, (GLint*)&{3}[0] + {2})", id, pname, bOffset, params); }
+        inline static function glGetQueryObjectivARB(id:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetQueryObjectivARB({0}, {1}, (GLint*)&({2}[0]))", id, pname, params); }
 
-        inline static function glGetQueryObjectuivARB(id:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetQueryObjectuivARB({0}, {1}, (GLuint*)&{3}[0] + {2})", id, pname, bOffset, params); }
+        inline static function glGetQueryObjectuivARB(id:UInt, pname:Int, params:Array<UInt>) : Void
+          { untyped __cpp__("glGetQueryObjectuivARB({0}, {1}, (GLuint*)&({2}[0]))", id, pname, params); }
 
-        inline static function glGetQueryivARB(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetQueryivARB({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetQueryivARB(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetQueryivARB({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
 
 
@@ -6480,11 +5432,11 @@ extern class GL {
     // GL_ARB_point_parameters functions
 
         @:native('glPointParameterfARB')
-        static function glPointParameterfARB(pname:Int, param:Float) : Void;
+        static function glPointParameterfARB(pname:Int, param:cpp.Float32) : Void;
 
 
-        inline static function glPointParameterfvARB(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glPointParameterfvARB({0}, (const GLfloat*)&{2}[0] + {1})", pname, bOffset, params); }
+        inline static function glPointParameterfvARB(pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glPointParameterfvARB({0}, (const GLfloat*)&({1}[0]))", pname, params); }
 
 
 
@@ -6566,8 +5518,8 @@ extern class GL {
         static function glGetProgramResourceLocationIndex(program:UInt, programInterface:Int, name:String) : Int;
 
 
-        inline static function glGetProgramInterfaceiv(program:UInt, programInterface:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetProgramInterfaceiv({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", program, programInterface, pname, bOffset, params); }
+        inline static function glGetProgramInterfaceiv(program:UInt, programInterface:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetProgramInterfaceiv({0}, {1}, {2}, (GLint*)&({3}[0]))", program, programInterface, pname, params); }
 
 
 
@@ -6577,8 +5529,8 @@ extern class GL {
         // @:native('glGetProgramResourceName')
         // static function glGetProgramResourceName(program:UInt, programInterface:Int, index:UInt, bufSize:Int, length:GLsizei*, name:String) : Void;
             
-        // inline static function glGetProgramResourceiv(program:UInt, programInterface:Int, index:UInt, propCount:Int, ?bOffset:Int=0, props:BytesData, bufSize:Int, length:GLsizei*, ?bOffset:Int=0, params:BytesData) : Void
-        // { untyped __cpp__("glGetProgramResourceiv({0}, {1}, {2}, {3}, (const GLenum*)&{5}[0] + {4}, {6}, {7}, (GLint*)&{9}[0] + {8})", program, programInterface, index, propCount, bOffset, props, bufSize, length, bOffset, params); }
+        // inline static function glGetProgramResourceiv(program:UInt, programInterface:Int, index:UInt, propCount:Int, props:Array<Int>, bufSize:Int, length:GLsizei*, params:Array<Int>) : Void
+        // { untyped __cpp__("glGetProgramResourceiv({0}, {1}, {2}, {3}, (const GLenum*)&({4}[0]), {5}, {6}, (GLint*)&({7}[0]))", program, programInterface, index, propCount, props, bufSize, length, params); }
 
 
 //GL_ARB_provoking_vertex
@@ -6643,67 +5595,67 @@ extern class GL {
         static function glGetGraphicsResetStatusARB() : Int;
 
 
-        inline static function glGetnColorTableARB(target:Int, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, table:BytesData) : Void
-          { untyped __cpp__("glGetnColorTableARB({0}, {1}, {2}, {3}, (void*)&{5}[0] + {4})", target, format, type, bufSize, bOffset, table); }
+        inline static function glGetnColorTableARB(target:Int, format:Int, type:Int, bufSize:Int, table:BytesData) : Void
+          { untyped __cpp__("glGetnColorTableARB({0}, {1}, {2}, {3}, (void*)&({4}[0]))", target, format, type, bufSize, table); }
 
-        inline static function glGetnCompressedTexImageARB(target:Int, lod:Int, bufSize:Int, ?bOffset:Int=0, img:BytesData) : Void
-          { untyped __cpp__("glGetnCompressedTexImageARB({0}, {1}, {2}, (void*)&{4}[0] + {3})", target, lod, bufSize, bOffset, img); }
+        inline static function glGetnCompressedTexImageARB(target:Int, lod:Int, bufSize:Int, img:BytesData) : Void
+          { untyped __cpp__("glGetnCompressedTexImageARB({0}, {1}, {2}, (void*)&({3}[0]))", target, lod, bufSize, img); }
 
-        inline static function glGetnConvolutionFilterARB(target:Int, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, image:BytesData) : Void
-          { untyped __cpp__("glGetnConvolutionFilterARB({0}, {1}, {2}, {3}, (void*)&{5}[0] + {4})", target, format, type, bufSize, bOffset, image); }
+        inline static function glGetnConvolutionFilterARB(target:Int, format:Int, type:Int, bufSize:Int, image:BytesData) : Void
+          { untyped __cpp__("glGetnConvolutionFilterARB({0}, {1}, {2}, {3}, (void*)&({4}[0]))", target, format, type, bufSize, image); }
 
-        inline static function glGetnHistogramARB(target:Int, reset:Bool, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetnHistogramARB({0}, {1}, {2}, {3}, {4}, (void*)&{6}[0] + {5})", target, reset, format, type, bufSize, bOffset, values); }
+        inline static function glGetnHistogramARB(target:Int, reset:Bool, format:Int, type:Int, bufSize:Int, values:BytesData) : Void
+          { untyped __cpp__("glGetnHistogramARB({0}, {1}, {2}, {3}, {4}, (void*)&({5}[0]))", target, reset, format, type, bufSize, values); }
 
-        inline static function glGetnMapdvARB(target:Int, query:Int, bufSize:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glGetnMapdvARB({0}, {1}, {2}, (GLdouble*)&{4}[0] + {3})", target, query, bufSize, bOffset, v); }
+        inline static function glGetnMapdvARB(target:Int, query:Int, bufSize:Int, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glGetnMapdvARB({0}, {1}, {2}, (GLdouble*)&({3}[0]))", target, query, bufSize, v); }
 
-        inline static function glGetnMapfvARB(target:Int, query:Int, bufSize:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glGetnMapfvARB({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", target, query, bufSize, bOffset, v); }
+        inline static function glGetnMapfvARB(target:Int, query:Int, bufSize:Int, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetnMapfvARB({0}, {1}, {2}, (GLfloat*)&({3}[0]))", target, query, bufSize, v); }
 
-        inline static function glGetnMapivARB(target:Int, query:Int, bufSize:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glGetnMapivARB({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", target, query, bufSize, bOffset, v); }
+        inline static function glGetnMapivARB(target:Int, query:Int, bufSize:Int, v:Array<Int>) : Void
+          { untyped __cpp__("glGetnMapivARB({0}, {1}, {2}, (GLint*)&({3}[0]))", target, query, bufSize, v); }
 
-        inline static function glGetnMinmaxARB(target:Int, reset:Bool, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetnMinmaxARB({0}, {1}, {2}, {3}, {4}, (void*)&{6}[0] + {5})", target, reset, format, type, bufSize, bOffset, values); }
+        inline static function glGetnMinmaxARB(target:Int, reset:Bool, format:Int, type:Int, bufSize:Int, values:BytesData) : Void
+          { untyped __cpp__("glGetnMinmaxARB({0}, {1}, {2}, {3}, {4}, (void*)&({5}[0]))", target, reset, format, type, bufSize, values); }
 
-        inline static function glGetnPixelMapfvARB(map:Int, bufSize:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetnPixelMapfvARB({0}, {1}, (GLfloat*)&{3}[0] + {2})", map, bufSize, bOffset, values); }
+        inline static function glGetnPixelMapfvARB(map:Int, bufSize:Int, values:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetnPixelMapfvARB({0}, {1}, (GLfloat*)&({2}[0]))", map, bufSize, values); }
 
-        inline static function glGetnPixelMapuivARB(map:Int, bufSize:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetnPixelMapuivARB({0}, {1}, (GLuint*)&{3}[0] + {2})", map, bufSize, bOffset, values); }
+        inline static function glGetnPixelMapuivARB(map:Int, bufSize:Int, values:Array<UInt>) : Void
+          { untyped __cpp__("glGetnPixelMapuivARB({0}, {1}, (GLuint*)&({2}[0]))", map, bufSize, values); }
 
-        inline static function glGetnPixelMapusvARB(map:Int, bufSize:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetnPixelMapusvARB({0}, {1}, (GLushort*)&{3}[0] + {2})", map, bufSize, bOffset, values); }
+        inline static function glGetnPixelMapusvARB(map:Int, bufSize:Int, values:Array<UInt>) : Void
+          { untyped __cpp__("glGetnPixelMapusvARB({0}, {1}, (GLushort*)&({2}[0]))", map, bufSize, values); }
 
-        inline static function glGetnPolygonStippleARB(bufSize:Int, pattern:Array<String>) : Void
-          { untyped __cpp__("glGetnPolygonStippleARB({0}, (GLubyte*)&{1}[0])", bufSize, pattern); }
+        inline static function glGetnPolygonStippleARB(bufSize:Int, pattern:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glGetnPolygonStippleARB({0}, (GLubyte*)&({1}[0]))", bufSize, pattern); }
 
-        inline static function glGetnTexImageARB(target:Int, level:Int, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, img:BytesData) : Void
-          { untyped __cpp__("glGetnTexImageARB({0}, {1}, {2}, {3}, {4}, (void*)&{6}[0] + {5})", target, level, format, type, bufSize, bOffset, img); }
+        inline static function glGetnTexImageARB(target:Int, level:Int, format:Int, type:Int, bufSize:Int, img:BytesData) : Void
+          { untyped __cpp__("glGetnTexImageARB({0}, {1}, {2}, {3}, {4}, (void*)&({5}[0]))", target, level, format, type, bufSize, img); }
 
-        inline static function glGetnUniformdvARB(program:UInt, location:Int, bufSize:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetnUniformdvARB({0}, {1}, {2}, (GLdouble*)&{4}[0] + {3})", program, location, bufSize, bOffset, params); }
+        inline static function glGetnUniformdvARB(program:UInt, location:Int, bufSize:Int, params:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glGetnUniformdvARB({0}, {1}, {2}, (GLdouble*)&({3}[0]))", program, location, bufSize, params); }
 
-        inline static function glGetnUniformfvARB(program:UInt, location:Int, bufSize:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetnUniformfvARB({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", program, location, bufSize, bOffset, params); }
+        inline static function glGetnUniformfvARB(program:UInt, location:Int, bufSize:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetnUniformfvARB({0}, {1}, {2}, (GLfloat*)&({3}[0]))", program, location, bufSize, params); }
 
-        inline static function glGetnUniformivARB(program:UInt, location:Int, bufSize:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetnUniformivARB({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", program, location, bufSize, bOffset, params); }
+        inline static function glGetnUniformivARB(program:UInt, location:Int, bufSize:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetnUniformivARB({0}, {1}, {2}, (GLint*)&({3}[0]))", program, location, bufSize, params); }
 
-        inline static function glGetnUniformuivARB(program:UInt, location:Int, bufSize:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetnUniformuivARB({0}, {1}, {2}, (GLuint*)&{4}[0] + {3})", program, location, bufSize, bOffset, params); }
+        inline static function glGetnUniformuivARB(program:UInt, location:Int, bufSize:Int, params:Array<UInt>) : Void
+          { untyped __cpp__("glGetnUniformuivARB({0}, {1}, {2}, (GLuint*)&({3}[0]))", program, location, bufSize, params); }
 
-        inline static function glReadnPixelsARB(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glReadnPixelsARB({0}, {1}, {2}, {3}, {4}, {5}, {6}, (void*)&{8}[0] + {7})", x, y, width, height, format, type, bufSize, bOffset, data); }
+        inline static function glReadnPixelsARB(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, bufSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glReadnPixelsARB({0}, {1}, {2}, {3}, {4}, {5}, {6}, (void*)&({7}[0]))", x, y, width, height, format, type, bufSize, data); }
 
 
 
     // TODO functions
 
             
-        // inline static function glGetnSeparableFilterARB(target:Int, format:Int, type:Int, rowBufSize:Int, ?bOffset:Int=0, row:BytesData, columnBufSize:Int, void*column:, void*span:) : Void
-        // { untyped __cpp__("glGetnSeparableFilterARB({0}, {1}, {2}, {3}, (void*)&{5}[0] + {4}, {6}, {7}, {8})", target, format, type, rowBufSize, bOffset, row, columnBufSize, void*column, void*span); }
+        // inline static function glGetnSeparableFilterARB(target:Int, format:Int, type:Int, rowBufSize:Int, row:BytesData, columnBufSize:Int, void*column:, void*span:) : Void
+        // { untyped __cpp__("glGetnSeparableFilterARB({0}, {1}, {2}, {3}, (void*)&({4}[0]), {5}, {6}, {7})", target, format, type, rowBufSize, row, columnBufSize, void*column, void*span); }
 
 
 //GL_ARB_robustness_application_isolation
@@ -6734,7 +5686,7 @@ extern class GL {
     // GL_ARB_sample_shading functions
 
         @:native('glMinSampleShadingARB')
-        static function glMinSampleShadingARB(value:Float) : Void;
+        static function glMinSampleShadingARB(value:cpp.Float32) : Void;
 
 
 
@@ -6759,38 +5711,38 @@ extern class GL {
         static function glIsSampler(sampler:UInt) : Bool;
 
         @:native('glSamplerParameterf')
-        static function glSamplerParameterf(sampler:UInt, pname:Int, param:Float) : Void;
+        static function glSamplerParameterf(sampler:UInt, pname:Int, param:cpp.Float32) : Void;
 
         @:native('glSamplerParameteri')
         static function glSamplerParameteri(sampler:UInt, pname:Int, param:Int) : Void;
 
 
         inline static function glGenSamplers(count:Int, samplers:Array<UInt>) : Void
-          { untyped __cpp__("glGenSamplers({0}, (GLuint*)&{1}[0])", count, samplers); }
+          { untyped __cpp__("glGenSamplers({0}, (GLuint*)&({1}[0]))", count, samplers); }
 
-        inline static function glGetSamplerParameterIiv(sampler:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetSamplerParameterIiv({0}, {1}, (GLint*)&{3}[0] + {2})", sampler, pname, bOffset, params); }
+        inline static function glGetSamplerParameterIiv(sampler:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetSamplerParameterIiv({0}, {1}, (GLint*)&({2}[0]))", sampler, pname, params); }
 
-        inline static function glGetSamplerParameterIuiv(sampler:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetSamplerParameterIuiv({0}, {1}, (GLuint*)&{3}[0] + {2})", sampler, pname, bOffset, params); }
+        inline static function glGetSamplerParameterIuiv(sampler:UInt, pname:Int, params:Array<UInt>) : Void
+          { untyped __cpp__("glGetSamplerParameterIuiv({0}, {1}, (GLuint*)&({2}[0]))", sampler, pname, params); }
 
-        inline static function glGetSamplerParameterfv(sampler:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetSamplerParameterfv({0}, {1}, (GLfloat*)&{3}[0] + {2})", sampler, pname, bOffset, params); }
+        inline static function glGetSamplerParameterfv(sampler:UInt, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetSamplerParameterfv({0}, {1}, (GLfloat*)&({2}[0]))", sampler, pname, params); }
 
-        inline static function glGetSamplerParameteriv(sampler:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetSamplerParameteriv({0}, {1}, (GLint*)&{3}[0] + {2})", sampler, pname, bOffset, params); }
+        inline static function glGetSamplerParameteriv(sampler:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetSamplerParameteriv({0}, {1}, (GLint*)&({2}[0]))", sampler, pname, params); }
 
-        inline static function glSamplerParameterIiv(sampler:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glSamplerParameterIiv({0}, {1}, (const GLint*)&{3}[0] + {2})", sampler, pname, bOffset, params); }
+        inline static function glSamplerParameterIiv(sampler:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glSamplerParameterIiv({0}, {1}, (const GLint*)&({2}[0]))", sampler, pname, params); }
 
-        inline static function glSamplerParameterIuiv(sampler:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glSamplerParameterIuiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", sampler, pname, bOffset, params); }
+        inline static function glSamplerParameterIuiv(sampler:UInt, pname:Int, params:Array<UInt>) : Void
+          { untyped __cpp__("glSamplerParameterIuiv({0}, {1}, (const GLuint*)&({2}[0]))", sampler, pname, params); }
 
-        inline static function glSamplerParameterfv(sampler:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glSamplerParameterfv({0}, {1}, (const GLfloat*)&{3}[0] + {2})", sampler, pname, bOffset, params); }
+        inline static function glSamplerParameterfv(sampler:UInt, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glSamplerParameterfv({0}, {1}, (const GLfloat*)&({2}[0]))", sampler, pname, params); }
 
-        inline static function glSamplerParameteriv(sampler:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glSamplerParameteriv({0}, {1}, (const GLint*)&{3}[0] + {2})", sampler, pname, bOffset, params); }
+        inline static function glSamplerParameteriv(sampler:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glSamplerParameteriv({0}, {1}, (const GLint*)&({2}[0]))", sampler, pname, params); }
 
 
 
@@ -6846,10 +5798,10 @@ extern class GL {
         static function glIsProgramPipeline(pipeline:UInt) : Bool;
 
         @:native('glProgramUniform1d')
-        static function glProgramUniform1d(program:UInt, location:Int, x:Float) : Void;
+        static function glProgramUniform1d(program:UInt, location:Int, x:cpp.Float64) : Void;
 
         @:native('glProgramUniform1f')
-        static function glProgramUniform1f(program:UInt, location:Int, x:Float) : Void;
+        static function glProgramUniform1f(program:UInt, location:Int, x:cpp.Float32) : Void;
 
         @:native('glProgramUniform1i')
         static function glProgramUniform1i(program:UInt, location:Int, x:Int) : Void;
@@ -6858,10 +5810,10 @@ extern class GL {
         static function glProgramUniform1ui(program:UInt, location:Int, x:UInt) : Void;
 
         @:native('glProgramUniform2d')
-        static function glProgramUniform2d(program:UInt, location:Int, x:Float, y:Float) : Void;
+        static function glProgramUniform2d(program:UInt, location:Int, x:cpp.Float64, y:cpp.Float64) : Void;
 
         @:native('glProgramUniform2f')
-        static function glProgramUniform2f(program:UInt, location:Int, x:Float, y:Float) : Void;
+        static function glProgramUniform2f(program:UInt, location:Int, x:cpp.Float32, y:cpp.Float32) : Void;
 
         @:native('glProgramUniform2i')
         static function glProgramUniform2i(program:UInt, location:Int, x:Int, y:Int) : Void;
@@ -6870,10 +5822,10 @@ extern class GL {
         static function glProgramUniform2ui(program:UInt, location:Int, x:UInt, y:UInt) : Void;
 
         @:native('glProgramUniform3d')
-        static function glProgramUniform3d(program:UInt, location:Int, x:Float, y:Float, z:Float) : Void;
+        static function glProgramUniform3d(program:UInt, location:Int, x:cpp.Float64, y:cpp.Float64, z:cpp.Float64) : Void;
 
         @:native('glProgramUniform3f')
-        static function glProgramUniform3f(program:UInt, location:Int, x:Float, y:Float, z:Float) : Void;
+        static function glProgramUniform3f(program:UInt, location:Int, x:cpp.Float32, y:cpp.Float32, z:cpp.Float32) : Void;
 
         @:native('glProgramUniform3i')
         static function glProgramUniform3i(program:UInt, location:Int, x:Int, y:Int, z:Int) : Void;
@@ -6882,10 +5834,10 @@ extern class GL {
         static function glProgramUniform3ui(program:UInt, location:Int, x:UInt, y:UInt, z:UInt) : Void;
 
         @:native('glProgramUniform4d')
-        static function glProgramUniform4d(program:UInt, location:Int, x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glProgramUniform4d(program:UInt, location:Int, x:cpp.Float64, y:cpp.Float64, z:cpp.Float64, w:cpp.Float64) : Void;
 
         @:native('glProgramUniform4f')
-        static function glProgramUniform4f(program:UInt, location:Int, x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glProgramUniform4f(program:UInt, location:Int, x:cpp.Float32, y:cpp.Float32, z:cpp.Float32, w:cpp.Float32) : Void;
 
         @:native('glProgramUniform4i')
         static function glProgramUniform4i(program:UInt, location:Int, x:Int, y:Int, z:Int, w:Int) : Void;
@@ -6901,115 +5853,115 @@ extern class GL {
 
 
         inline static function glDeleteProgramPipelines(n:Int, pipelines:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteProgramPipelines({0}, (const GLuint*)&{1}[0])", n, pipelines); }
+          { untyped __cpp__("glDeleteProgramPipelines({0}, (const GLuint*)&({1}[0]))", n, pipelines); }
 
         inline static function glGenProgramPipelines(n:Int, pipelines:Array<UInt>) : Void
-          { untyped __cpp__("glGenProgramPipelines({0}, (GLuint*)&{1}[0])", n, pipelines); }
+          { untyped __cpp__("glGenProgramPipelines({0}, (GLuint*)&({1}[0]))", n, pipelines); }
 
-        inline static function glGetProgramPipelineiv(pipeline:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetProgramPipelineiv({0}, {1}, (GLint*)&{3}[0] + {2})", pipeline, pname, bOffset, params); }
+        inline static function glGetProgramPipelineiv(pipeline:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetProgramPipelineiv({0}, {1}, (GLint*)&({2}[0]))", pipeline, pname, params); }
 
-        inline static function glProgramUniform1dv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform1dv({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform1dv(program:UInt, location:Int, count:Int, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramUniform1dv({0}, {1}, {2}, (const GLdouble*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform1fv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform1fv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform1fv(program:UInt, location:Int, count:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramUniform1fv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform1iv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform1iv({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform1iv(program:UInt, location:Int, count:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glProgramUniform1iv({0}, {1}, {2}, (const GLint*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform1uiv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform1uiv({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform1uiv(program:UInt, location:Int, count:Int, value:Array<UInt>) : Void
+          { untyped __cpp__("glProgramUniform1uiv({0}, {1}, {2}, (const GLuint*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform2dv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform2dv({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform2dv(program:UInt, location:Int, count:Int, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramUniform2dv({0}, {1}, {2}, (const GLdouble*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform2fv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform2fv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform2fv(program:UInt, location:Int, count:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramUniform2fv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform2iv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform2iv({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform2iv(program:UInt, location:Int, count:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glProgramUniform2iv({0}, {1}, {2}, (const GLint*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform2uiv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform2uiv({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform2uiv(program:UInt, location:Int, count:Int, value:Array<UInt>) : Void
+          { untyped __cpp__("glProgramUniform2uiv({0}, {1}, {2}, (const GLuint*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform3dv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform3dv({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform3dv(program:UInt, location:Int, count:Int, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramUniform3dv({0}, {1}, {2}, (const GLdouble*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform3fv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform3fv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform3fv(program:UInt, location:Int, count:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramUniform3fv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform3iv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform3iv({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform3iv(program:UInt, location:Int, count:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glProgramUniform3iv({0}, {1}, {2}, (const GLint*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform3uiv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform3uiv({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform3uiv(program:UInt, location:Int, count:Int, value:Array<UInt>) : Void
+          { untyped __cpp__("glProgramUniform3uiv({0}, {1}, {2}, (const GLuint*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform4dv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform4dv({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform4dv(program:UInt, location:Int, count:Int, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramUniform4dv({0}, {1}, {2}, (const GLdouble*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform4fv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform4fv({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform4fv(program:UInt, location:Int, count:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramUniform4fv({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform4iv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform4iv({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform4iv(program:UInt, location:Int, count:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glProgramUniform4iv({0}, {1}, {2}, (const GLint*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniform4uiv(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform4uiv({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
+        inline static function glProgramUniform4uiv(program:UInt, location:Int, count:Int, value:Array<UInt>) : Void
+          { untyped __cpp__("glProgramUniform4uiv({0}, {1}, {2}, (const GLuint*)&({3}[0]))", program, location, count, value); }
 
-        inline static function glProgramUniformMatrix2dv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix2dv({0}, {1}, {2}, {3}, (const GLdouble*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix2dv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramUniformMatrix2dv({0}, {1}, {2}, {3}, (const GLdouble*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix2fv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix2fv({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix2fv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramUniformMatrix2fv({0}, {1}, {2}, {3}, (const GLfloat*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix2x3dv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix2x3dv({0}, {1}, {2}, {3}, (const GLdouble*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix2x3dv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramUniformMatrix2x3dv({0}, {1}, {2}, {3}, (const GLdouble*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix2x3fv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix2x3fv({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix2x3fv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramUniformMatrix2x3fv({0}, {1}, {2}, {3}, (const GLfloat*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix2x4dv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix2x4dv({0}, {1}, {2}, {3}, (const GLdouble*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix2x4dv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramUniformMatrix2x4dv({0}, {1}, {2}, {3}, (const GLdouble*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix2x4fv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix2x4fv({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix2x4fv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramUniformMatrix2x4fv({0}, {1}, {2}, {3}, (const GLfloat*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix3dv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix3dv({0}, {1}, {2}, {3}, (const GLdouble*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix3dv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramUniformMatrix3dv({0}, {1}, {2}, {3}, (const GLdouble*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix3fv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix3fv({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix3fv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramUniformMatrix3fv({0}, {1}, {2}, {3}, (const GLfloat*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix3x2dv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix3x2dv({0}, {1}, {2}, {3}, (const GLdouble*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix3x2dv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramUniformMatrix3x2dv({0}, {1}, {2}, {3}, (const GLdouble*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix3x2fv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix3x2fv({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix3x2fv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramUniformMatrix3x2fv({0}, {1}, {2}, {3}, (const GLfloat*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix3x4dv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix3x4dv({0}, {1}, {2}, {3}, (const GLdouble*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix3x4dv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramUniformMatrix3x4dv({0}, {1}, {2}, {3}, (const GLdouble*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix3x4fv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix3x4fv({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix3x4fv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramUniformMatrix3x4fv({0}, {1}, {2}, {3}, (const GLfloat*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix4dv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix4dv({0}, {1}, {2}, {3}, (const GLdouble*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix4dv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramUniformMatrix4dv({0}, {1}, {2}, {3}, (const GLdouble*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix4fv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix4fv({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix4fv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramUniformMatrix4fv({0}, {1}, {2}, {3}, (const GLfloat*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix4x2dv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix4x2dv({0}, {1}, {2}, {3}, (const GLdouble*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix4x2dv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramUniformMatrix4x2dv({0}, {1}, {2}, {3}, (const GLdouble*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix4x2fv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix4x2fv({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix4x2fv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramUniformMatrix4x2fv({0}, {1}, {2}, {3}, (const GLfloat*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix4x3dv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix4x3dv({0}, {1}, {2}, {3}, (const GLdouble*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix4x3dv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramUniformMatrix4x3dv({0}, {1}, {2}, {3}, (const GLdouble*)&({4}[0]))", program, location, count, transpose, value); }
 
-        inline static function glProgramUniformMatrix4x3fv(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix4x3fv({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
+        inline static function glProgramUniformMatrix4x3fv(program:UInt, location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramUniformMatrix4x3fv({0}, {1}, {2}, {3}, (const GLfloat*)&({4}[0]))", program, location, count, transpose, value); }
 
 
 
@@ -7064,8 +6016,8 @@ extern class GL {
     // GL_ARB_shader_atomic_counters functions
 
 
-        inline static function glGetActiveAtomicCounterBufferiv(program:UInt, bufferIndex:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetActiveAtomicCounterBufferiv({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", program, bufferIndex, pname, bOffset, params); }
+        inline static function glGetActiveAtomicCounterBufferiv(program:UInt, bufferIndex:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetActiveAtomicCounterBufferiv({0}, {1}, {2}, (GLint*)&({3}[0]))", program, bufferIndex, pname, params); }
 
 
 
@@ -7253,25 +6205,25 @@ extern class GL {
         static function glLinkProgramARB(programObj:UInt) : Void;
 
         @:native('glUniform1fARB')
-        static function glUniform1fARB(location:Int, v0:Float) : Void;
+        static function glUniform1fARB(location:Int, v0:cpp.Float32) : Void;
 
         @:native('glUniform1iARB')
         static function glUniform1iARB(location:Int, v0:Int) : Void;
 
         @:native('glUniform2fARB')
-        static function glUniform2fARB(location:Int, v0:Float, v1:Float) : Void;
+        static function glUniform2fARB(location:Int, v0:cpp.Float32, v1:cpp.Float32) : Void;
 
         @:native('glUniform2iARB')
         static function glUniform2iARB(location:Int, v0:Int, v1:Int) : Void;
 
         @:native('glUniform3fARB')
-        static function glUniform3fARB(location:Int, v0:Float, v1:Float, v2:Float) : Void;
+        static function glUniform3fARB(location:Int, v0:cpp.Float32, v1:cpp.Float32, v2:cpp.Float32) : Void;
 
         @:native('glUniform3iARB')
         static function glUniform3iARB(location:Int, v0:Int, v1:Int, v2:Int) : Void;
 
         @:native('glUniform4fARB')
-        static function glUniform4fARB(location:Int, v0:Float, v1:Float, v2:Float, v3:Float) : Void;
+        static function glUniform4fARB(location:Int, v0:cpp.Float32, v1:cpp.Float32, v2:cpp.Float32, v3:cpp.Float32) : Void;
 
         @:native('glUniform4iARB')
         static function glUniform4iARB(location:Int, v0:Int, v1:Int, v2:Int, v3:Int) : Void;
@@ -7283,50 +6235,50 @@ extern class GL {
         static function glValidateProgramARB(programObj:UInt) : Void;
 
 
-        inline static function glGetObjectParameterfvARB(obj:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetObjectParameterfvARB({0}, {1}, (GLfloat*)&{3}[0] + {2})", obj, pname, bOffset, params); }
+        inline static function glGetObjectParameterfvARB(obj:UInt, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetObjectParameterfvARB({0}, {1}, (GLfloat*)&({2}[0]))", obj, pname, params); }
 
-        inline static function glGetObjectParameterivARB(obj:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetObjectParameterivARB({0}, {1}, (GLint*)&{3}[0] + {2})", obj, pname, bOffset, params); }
+        inline static function glGetObjectParameterivARB(obj:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetObjectParameterivARB({0}, {1}, (GLint*)&({2}[0]))", obj, pname, params); }
 
-        inline static function glGetUniformfvARB(programObj:UInt, location:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetUniformfvARB({0}, {1}, (GLfloat*)&{3}[0] + {2})", programObj, location, bOffset, params); }
+        inline static function glGetUniformfvARB(programObj:UInt, location:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetUniformfvARB({0}, {1}, (GLfloat*)&({2}[0]))", programObj, location, params); }
 
-        inline static function glGetUniformivARB(programObj:UInt, location:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetUniformivARB({0}, {1}, (GLint*)&{3}[0] + {2})", programObj, location, bOffset, params); }
+        inline static function glGetUniformivARB(programObj:UInt, location:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetUniformivARB({0}, {1}, (GLint*)&({2}[0]))", programObj, location, params); }
 
-        inline static function glUniform1fvARB(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform1fvARB({0}, {1}, (const GLfloat*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform1fvARB(location:Int, count:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniform1fvARB({0}, {1}, (const GLfloat*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform1ivARB(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform1ivARB({0}, {1}, (const GLint*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform1ivARB(location:Int, count:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glUniform1ivARB({0}, {1}, (const GLint*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform2fvARB(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform2fvARB({0}, {1}, (const GLfloat*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform2fvARB(location:Int, count:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniform2fvARB({0}, {1}, (const GLfloat*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform2ivARB(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform2ivARB({0}, {1}, (const GLint*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform2ivARB(location:Int, count:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glUniform2ivARB({0}, {1}, (const GLint*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform3fvARB(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform3fvARB({0}, {1}, (const GLfloat*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform3fvARB(location:Int, count:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniform3fvARB({0}, {1}, (const GLfloat*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform3ivARB(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform3ivARB({0}, {1}, (const GLint*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform3ivARB(location:Int, count:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glUniform3ivARB({0}, {1}, (const GLint*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform4fvARB(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform4fvARB({0}, {1}, (const GLfloat*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform4fvARB(location:Int, count:Int, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniform4fvARB({0}, {1}, (const GLfloat*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniform4ivARB(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform4ivARB({0}, {1}, (const GLint*)&{3}[0] + {2})", location, count, bOffset, value); }
+        inline static function glUniform4ivARB(location:Int, count:Int, value:Array<Int>) : Void
+          { untyped __cpp__("glUniform4ivARB({0}, {1}, (const GLint*)&({2}[0]))", location, count, value); }
 
-        inline static function glUniformMatrix2fvARB(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix2fvARB({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix2fvARB(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniformMatrix2fvARB({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix3fvARB(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix3fvARB({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix3fvARB(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniformMatrix3fvARB({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", location, count, transpose, value); }
 
-        inline static function glUniformMatrix4fvARB(location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniformMatrix4fvARB({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", location, count, transpose, bOffset, value); }
+        inline static function glUniformMatrix4fvARB(location:Int, count:Int, transpose:Bool, value:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glUniformMatrix4fvARB({0}, {1}, {2}, (const GLfloat*)&({3}[0]))", location, count, transpose, value); }
 
 
 
@@ -7334,7 +6286,7 @@ extern class GL {
 
             
         // inline static function glGetActiveUniformARB(programObj:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:Array<Int>, type:GLenum*, name:GLcharARB*) : Void
-        // { untyped __cpp__("glGetActiveUniformARB({0}, {1}, {2}, {3}, (GLint*)&{4}[0], {5}, {6})", programObj, index, maxLength, length, size, type, name); }
+        // { untyped __cpp__("glGetActiveUniformARB({0}, {1}, {2}, {3}, (GLint*)&({4}[0]), {5}, {6})", programObj, index, maxLength, length, size, type, name); }
             
         // @:native('glGetAttachedObjectsARB')
         // static function glGetAttachedObjectsARB(containerObj:UInt, maxCount:Int, count:GLsizei*, obj:GLhandleARB*) : Void;
@@ -7349,7 +6301,7 @@ extern class GL {
         // static function glGetUniformLocationARB(programObj:UInt, name:const GLcharARB*) : Int;
             
         // inline static function glShaderSourceARB(shaderObj:UInt, count:Int, string:const GLcharARB **, length:Array<Int>) : Void
-        // { untyped __cpp__("glShaderSourceARB({0}, {1}, {2}, (const GLint*)&{3}[0])", shaderObj, count, string, length); }
+        // { untyped __cpp__("glShaderSourceARB({0}, {1}, {2}, (const GLint*)&({3}[0]))", shaderObj, count, string, length); }
 
 
 //GL_ARB_shader_precision
@@ -7427,17 +6379,17 @@ extern class GL {
         static function glGetSubroutineUniformLocation(program:UInt, shadertype:Int, name:String) : Int;
 
 
-        inline static function glGetActiveSubroutineUniformiv(program:UInt, shadertype:Int, index:UInt, pname:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetActiveSubroutineUniformiv({0}, {1}, {2}, {3}, (GLint*)&{5}[0] + {4})", program, shadertype, index, pname, bOffset, values); }
+        inline static function glGetActiveSubroutineUniformiv(program:UInt, shadertype:Int, index:UInt, pname:Int, values:Array<Int>) : Void
+          { untyped __cpp__("glGetActiveSubroutineUniformiv({0}, {1}, {2}, {3}, (GLint*)&({4}[0]))", program, shadertype, index, pname, values); }
 
-        inline static function glGetProgramStageiv(program:UInt, shadertype:Int, pname:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetProgramStageiv({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", program, shadertype, pname, bOffset, values); }
+        inline static function glGetProgramStageiv(program:UInt, shadertype:Int, pname:Int, values:Array<Int>) : Void
+          { untyped __cpp__("glGetProgramStageiv({0}, {1}, {2}, (GLint*)&({3}[0]))", program, shadertype, pname, values); }
 
-        inline static function glGetUniformSubroutineuiv(shadertype:Int, location:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetUniformSubroutineuiv({0}, {1}, (GLuint*)&{3}[0] + {2})", shadertype, location, bOffset, params); }
+        inline static function glGetUniformSubroutineuiv(shadertype:Int, location:Int, params:Array<UInt>) : Void
+          { untyped __cpp__("glGetUniformSubroutineuiv({0}, {1}, (GLuint*)&({2}[0]))", shadertype, location, params); }
 
-        inline static function glUniformSubroutinesuiv(shadertype:Int, count:Int, ?bOffset:Int=0, indices:BytesData) : Void
-          { untyped __cpp__("glUniformSubroutinesuiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", shadertype, count, bOffset, indices); }
+        inline static function glUniformSubroutinesuiv(shadertype:Int, count:Int, indices:Array<UInt>) : Void
+          { untyped __cpp__("glUniformSubroutinesuiv({0}, {1}, (const GLuint*)&({2}[0]))", shadertype, count, indices); }
 
 
 
@@ -7505,10 +6457,10 @@ extern class GL {
 
 
         inline static function glGetNamedStringARB(namelen:Int, name:String, bufSize:Int, stringlen:Array<Int>, string:String) : Void
-          { untyped __cpp__("glGetNamedStringARB({0}, {1}, {2}, (GLint*)&{3}[0], {4})", namelen, name, bufSize, stringlen, string); }
+          { untyped __cpp__("glGetNamedStringARB({0}, {1}, {2}, (GLint*)&({3}[0]), {4})", namelen, name, bufSize, stringlen, string); }
 
-        inline static function glGetNamedStringivARB(namelen:Int, name:String, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetNamedStringivARB({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", namelen, name, pname, bOffset, params); }
+        inline static function glGetNamedStringivARB(namelen:Int, name:String, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetNamedStringivARB({0}, {1}, {2}, (GLint*)&({3}[0]))", namelen, name, pname, params); }
 
 
 
@@ -7516,7 +6468,7 @@ extern class GL {
 
             
         // inline static function glCompileShaderIncludeARB(shader:UInt, count:Int, path:const GLchar* const*, length:Array<Int>) : Void
-        // { untyped __cpp__("glCompileShaderIncludeARB({0}, {1}, {2}, (const GLint*)&{3}[0])", shader, count, path, length); }
+        // { untyped __cpp__("glCompileShaderIncludeARB({0}, {1}, {2}, (const GLint*)&({3}[0]))", shader, count, path, length); }
 
 
 //GL_ARB_shading_language_packing
@@ -7648,8 +6600,8 @@ extern class GL {
         // @:native('glGetInteger64v')
         // static function glGetInteger64v(pname:Int, params:GLint64*) : Void;
             
-        // inline static function glGetSynciv(GLsync:GLsync, pname:Int, bufSize:Int, length:GLsizei*, ?bOffset:Int=0, values:BytesData) : Void
-        // { untyped __cpp__("glGetSynciv({0}, {1}, {2}, {3}, (GLint*)&{5}[0] + {4})", GLsync, pname, bufSize, length, bOffset, values); }
+        // inline static function glGetSynciv(GLsync:GLsync, pname:Int, bufSize:Int, length:GLsizei*, values:Array<Int>) : Void
+        // { untyped __cpp__("glGetSynciv({0}, {1}, {2}, {3}, (GLint*)&({4}[0]))", GLsync, pname, bufSize, length, values); }
             
         // @:native('glIsSync')
         // static function glIsSync(GLsync:GLsync) : Bool;
@@ -7705,8 +6657,8 @@ extern class GL {
         static function glPatchParameteri(pname:Int, value:Int) : Void;
 
 
-        inline static function glPatchParameterfv(pname:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glPatchParameterfv({0}, (const GLfloat*)&{2}[0] + {1})", pname, bOffset, values); }
+        inline static function glPatchParameterfv(pname:Int, values:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glPatchParameterfv({0}, (const GLfloat*)&({1}[0]))", pname, values); }
 
 
 
@@ -7814,26 +6766,26 @@ extern class GL {
     // GL_ARB_texture_compression functions
 
 
-        inline static function glCompressedTexImage1DARB(target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTexImage1DARB({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6})", target, level, internalformat, width, border, imageSize, bOffset, data); }
+        inline static function glCompressedTexImage1DARB(target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTexImage1DARB({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&({6}[0]))", target, level, internalformat, width, border, imageSize, data); }
 
-        inline static function glCompressedTexImage2DARB(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTexImage2DARB({0}, {1}, {2}, {3}, {4}, {5}, {6}, (const void*)&{8}[0] + {7})", target, level, internalformat, width, height, border, imageSize, bOffset, data); }
+        inline static function glCompressedTexImage2DARB(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTexImage2DARB({0}, {1}, {2}, {3}, {4}, {5}, {6}, (const void*)&({7}[0]))", target, level, internalformat, width, height, border, imageSize, data); }
 
-        inline static function glCompressedTexImage3DARB(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTexImage3DARB({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", target, level, internalformat, width, height, depth, border, imageSize, bOffset, data); }
+        inline static function glCompressedTexImage3DARB(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTexImage3DARB({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&({8}[0]))", target, level, internalformat, width, height, depth, border, imageSize, data); }
 
-        inline static function glCompressedTexSubImage1DARB(target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTexSubImage1DARB({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6})", target, level, xoffset, width, format, imageSize, bOffset, data); }
+        inline static function glCompressedTexSubImage1DARB(target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTexSubImage1DARB({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&({6}[0]))", target, level, xoffset, width, format, imageSize, data); }
 
-        inline static function glCompressedTexSubImage2DARB(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTexSubImage2DARB({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", target, level, xoffset, yoffset, width, height, format, imageSize, bOffset, data); }
+        inline static function glCompressedTexSubImage2DARB(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTexSubImage2DARB({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&({8}[0]))", target, level, xoffset, yoffset, width, height, format, imageSize, data); }
 
-        inline static function glCompressedTexSubImage3DARB(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTexSubImage3DARB({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&{11}[0] + {10})", target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, bOffset, data); }
+        inline static function glCompressedTexSubImage3DARB(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, data:BytesData) : Void
+          { untyped __cpp__("glCompressedTexSubImage3DARB({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&({10}[0]))", target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data); }
 
-        inline static function glGetCompressedTexImageARB(target:Int, lod:Int, ?bOffset:Int=0, img:BytesData) : Void
-          { untyped __cpp__("glGetCompressedTexImageARB({0}, {1}, (void*)&{3}[0] + {2})", target, lod, bOffset, img); }
+        inline static function glGetCompressedTexImageARB(target:Int, lod:Int, img:BytesData) : Void
+          { untyped __cpp__("glGetCompressedTexImageARB({0}, {1}, (void*)&({2}[0]))", target, lod, img); }
 
 
 
@@ -8040,8 +6992,8 @@ extern class GL {
         static function glTexImage3DMultisample(target:Int, samples:Int, internalformat:Int, width:Int, height:Int, depth:Int, fixedsamplelocations:Bool) : Void;
 
 
-        inline static function glGetMultisamplefv(pname:Int, index:UInt, ?bOffset:Int=0, val:BytesData) : Void
-          { untyped __cpp__("glGetMultisamplefv({0}, {1}, (GLfloat*)&{3}[0] + {2})", pname, index, bOffset, val); }
+        inline static function glGetMultisamplefv(pname:Int, index:UInt, val:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetMultisamplefv({0}, {1}, (GLfloat*)&({2}[0]))", pname, index, val); }
 
 
 
@@ -8102,7 +7054,9 @@ extern class GL {
         inline static var GL_R32I                                                         = 0x8235;
         inline static var GL_R32UI                                                        = 0x8236;
         inline static var GL_RG8I                                                         = 0x8237;
+        inline static var GL_RG8UI                                                        = 0x8238;
         inline static var GL_RG16I                                                        = 0x8239;
+        inline static var GL_RG16UI                                                       = 0x823A;
         inline static var GL_RG32I                                                        = 0x823B;
         inline static var GL_RG32UI                                                       = 0x823C;
 
@@ -8277,10 +7231,10 @@ extern class GL {
 
 
         inline static function glDeleteTransformFeedbacks(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteTransformFeedbacks({0}, (const GLuint*)&{1}[0])", n, ids); }
+          { untyped __cpp__("glDeleteTransformFeedbacks({0}, (const GLuint*)&({1}[0]))", n, ids); }
 
         inline static function glGenTransformFeedbacks(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glGenTransformFeedbacks({0}, (GLuint*)&{1}[0])", n, ids); }
+          { untyped __cpp__("glGenTransformFeedbacks({0}, (GLuint*)&({1}[0]))", n, ids); }
 
 
 
@@ -8307,8 +7261,8 @@ extern class GL {
         static function glEndQueryIndexed(target:Int, index:UInt) : Void;
 
 
-        inline static function glGetQueryIndexediv(target:Int, index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetQueryIndexediv({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", target, index, pname, bOffset, params); }
+        inline static function glGetQueryIndexediv(target:Int, index:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetQueryIndexediv({0}, {1}, {2}, (GLint*)&({3}[0]))", target, index, pname, params); }
 
 
 
@@ -8365,16 +7319,16 @@ extern class GL {
 
             
         // @:native('glLoadTransposeMatrixdARB')
-        // static function glLoadTransposeMatrixdARB(m:Array<Float>) : Void;
+        // static function glLoadTransposeMatrixdARB(m:Array<cpp.Float64>) : Void;
             
         // @:native('glLoadTransposeMatrixfARB')
-        // static function glLoadTransposeMatrixfARB(m:Array<Float>) : Void;
+        // static function glLoadTransposeMatrixfARB(m:Array<cpp.Float32>) : Void;
             
         // @:native('glMultTransposeMatrixdARB')
-        // static function glMultTransposeMatrixdARB(m:Array<Float>) : Void;
+        // static function glMultTransposeMatrixdARB(m:Array<cpp.Float64>) : Void;
             
         // @:native('glMultTransposeMatrixfARB')
-        // static function glMultTransposeMatrixfARB(m:Array<Float>) : Void;
+        // static function glMultTransposeMatrixfARB(m:Array<cpp.Float32>) : Void;
 
 
 //GL_ARB_uniform_buffer_object
@@ -8434,14 +7388,14 @@ extern class GL {
         static function glUniformBlockBinding(program:UInt, uniformBlockIndex:UInt, uniformBlockBinding:UInt) : Void;
 
 
-        inline static function glGetActiveUniformBlockiv(program:UInt, uniformBlockIndex:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetActiveUniformBlockiv({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", program, uniformBlockIndex, pname, bOffset, params); }
+        inline static function glGetActiveUniformBlockiv(program:UInt, uniformBlockIndex:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetActiveUniformBlockiv({0}, {1}, {2}, (GLint*)&({3}[0]))", program, uniformBlockIndex, pname, params); }
 
-        inline static function glGetActiveUniformsiv(program:UInt, uniformCount:Int, ?bOffset:Int=0, uniformIndices:BytesData, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetActiveUniformsiv({0}, {1}, (const GLuint*)&{3}[0] + {2}, {4}, (GLint*)&{6}[0] + {5})", program, uniformCount, bOffset, uniformIndices, pname, bOffset, params); }
+        inline static function glGetActiveUniformsiv(program:UInt, uniformCount:Int, uniformIndices:Array<UInt>, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetActiveUniformsiv({0}, {1}, (const GLuint*)&({2}[0]), {3}, (GLint*)&({4}[0]))", program, uniformCount, uniformIndices, pname, params); }
 
-        inline static function glGetIntegeri_v(target:Int, index:UInt, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetIntegeri_v({0}, {1}, (GLint*)&{3}[0] + {2})", target, index, bOffset, data); }
+        inline static function glGetIntegeri_v(target:Int, index:UInt, data:Array<Int>) : Void
+          { untyped __cpp__("glGetIntegeri_v({0}, {1}, (GLint*)&({2}[0]))", target, index, data); }
 
 
 
@@ -8455,7 +7409,7 @@ extern class GL {
         // static function glGetActiveUniformName(program:UInt, uniformIndex:UInt, bufSize:Int, length:GLsizei*, uniformName:String) : Void;
             
         // inline static function glGetUniformIndices(program:UInt, uniformCount:Int, uniformNames:const GLchar* const *, uniformIndices:Array<UInt>) : Void
-        // { untyped __cpp__("glGetUniformIndices({0}, {1}, {2}, (GLuint*)&{3}[0])", program, uniformCount, uniformNames, uniformIndices); }
+        // { untyped __cpp__("glGetUniformIndices({0}, {1}, {2}, (GLuint*)&({3}[0]))", program, uniformCount, uniformNames, uniformIndices); }
 
 
 //GL_ARB_vertex_array_bgra
@@ -8485,10 +7439,10 @@ extern class GL {
 
 
         inline static function glDeleteVertexArrays(n:Int, arrays:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteVertexArrays({0}, (const GLuint*)&{1}[0])", n, arrays); }
+          { untyped __cpp__("glDeleteVertexArrays({0}, (const GLuint*)&({1}[0]))", n, arrays); }
 
         inline static function glGenVertexArrays(n:Int, arrays:Array<UInt>) : Void
-          { untyped __cpp__("glGenVertexArrays({0}, (GLuint*)&{1}[0])", n, arrays); }
+          { untyped __cpp__("glGenVertexArrays({0}, (GLuint*)&({1}[0]))", n, arrays); }
 
 
 
@@ -8505,35 +7459,35 @@ extern class GL {
     // GL_ARB_vertex_attrib_64bit functions
 
         @:native('glVertexAttribL1d')
-        static function glVertexAttribL1d(index:UInt, x:Float) : Void;
+        static function glVertexAttribL1d(index:UInt, x:cpp.Float64) : Void;
 
         @:native('glVertexAttribL2d')
-        static function glVertexAttribL2d(index:UInt, x:Float, y:Float) : Void;
+        static function glVertexAttribL2d(index:UInt, x:cpp.Float64, y:cpp.Float64) : Void;
 
         @:native('glVertexAttribL3d')
-        static function glVertexAttribL3d(index:UInt, x:Float, y:Float, z:Float) : Void;
+        static function glVertexAttribL3d(index:UInt, x:cpp.Float64, y:cpp.Float64, z:cpp.Float64) : Void;
 
         @:native('glVertexAttribL4d')
-        static function glVertexAttribL4d(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glVertexAttribL4d(index:UInt, x:cpp.Float64, y:cpp.Float64, z:cpp.Float64, w:cpp.Float64) : Void;
 
 
-        inline static function glGetVertexAttribLdv(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribLdv({0}, {1}, (GLdouble*)&{3}[0] + {2})", index, pname, bOffset, params); }
+        inline static function glGetVertexAttribLdv(index:UInt, pname:Int, params:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glGetVertexAttribLdv({0}, {1}, (GLdouble*)&({2}[0]))", index, pname, params); }
 
-        inline static function glVertexAttribL1dv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribL1dv({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttribL1dv(index:UInt, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertexAttribL1dv({0}, (const GLdouble*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttribL2dv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribL2dv({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttribL2dv(index:UInt, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertexAttribL2dv({0}, (const GLdouble*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttribL3dv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribL3dv({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttribL3dv(index:UInt, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertexAttribL3dv({0}, (const GLdouble*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttribL4dv(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribL4dv({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttribL4dv(index:UInt, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertexAttribL4dv({0}, (const GLdouble*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttribLPointer(index:UInt, size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glVertexAttribLPointer({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", index, size, type, stride, bOffset, pointer); }
+        inline static function glVertexAttribLPointer(index:UInt, size:Int, type:Int, stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glVertexAttribLPointer({0}, {1}, {2}, {3}, (const void*)&({4}[0]))", index, size, type, stride, pointer); }
 
 
 
@@ -8654,26 +7608,26 @@ extern class GL {
         static function glVertexBlendARB(count:Int) : Void;
 
 
-        inline static function glWeightPointerARB(size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glWeightPointerARB({0}, {1}, {2}, (void*)&{4}[0] + {3})", size, type, stride, bOffset, pointer); }
+        inline static function glWeightPointerARB(size:Int, type:Int, stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glWeightPointerARB({0}, {1}, {2}, (void*)&({3}[0]))", size, type, stride, pointer); }
 
-        inline static function glWeightdvARB(size:Int, ?bOffset:Int=0, weights:BytesData) : Void
-          { untyped __cpp__("glWeightdvARB({0}, (GLdouble*)&{2}[0] + {1})", size, bOffset, weights); }
+        inline static function glWeightdvARB(size:Int, weights:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glWeightdvARB({0}, (GLdouble*)&({1}[0]))", size, weights); }
 
-        inline static function glWeightfvARB(size:Int, ?bOffset:Int=0, weights:BytesData) : Void
-          { untyped __cpp__("glWeightfvARB({0}, (GLfloat*)&{2}[0] + {1})", size, bOffset, weights); }
+        inline static function glWeightfvARB(size:Int, weights:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glWeightfvARB({0}, (GLfloat*)&({1}[0]))", size, weights); }
 
-        inline static function glWeightivARB(size:Int, ?bOffset:Int=0, weights:BytesData) : Void
-          { untyped __cpp__("glWeightivARB({0}, (GLint*)&{2}[0] + {1})", size, bOffset, weights); }
+        inline static function glWeightivARB(size:Int, weights:Array<Int>) : Void
+          { untyped __cpp__("glWeightivARB({0}, (GLint*)&({1}[0]))", size, weights); }
 
-        inline static function glWeightubvARB(size:Int, ?bOffset:Int=0, weights:BytesData) : Void
-          { untyped __cpp__("glWeightubvARB({0}, (GLubyte*)&{2}[0] + {1})", size, bOffset, weights); }
+        inline static function glWeightubvARB(size:Int, weights:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glWeightubvARB({0}, (GLubyte*)&({1}[0]))", size, weights); }
 
-        inline static function glWeightuivARB(size:Int, ?bOffset:Int=0, weights:BytesData) : Void
-          { untyped __cpp__("glWeightuivARB({0}, (GLuint*)&{2}[0] + {1})", size, bOffset, weights); }
+        inline static function glWeightuivARB(size:Int, weights:Array<UInt>) : Void
+          { untyped __cpp__("glWeightuivARB({0}, (GLuint*)&({1}[0]))", size, weights); }
 
-        inline static function glWeightusvARB(size:Int, ?bOffset:Int=0, weights:BytesData) : Void
-          { untyped __cpp__("glWeightusvARB({0}, (GLushort*)&{2}[0] + {1})", size, bOffset, weights); }
+        inline static function glWeightusvARB(size:Int, weights:Array<UInt>) : Void
+          { untyped __cpp__("glWeightusvARB({0}, (GLushort*)&({1}[0]))", size, weights); }
 
 
 
@@ -8740,30 +7694,30 @@ extern class GL {
 
 
         inline static function glDeleteBuffersARB(n:Int, buffers:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteBuffersARB({0}, (const GLuint*)&{1}[0])", n, buffers); }
+          { untyped __cpp__("glDeleteBuffersARB({0}, (const GLuint*)&({1}[0]))", n, buffers); }
 
         inline static function glGenBuffersARB(n:Int, buffers:Array<UInt>) : Void
-          { untyped __cpp__("glGenBuffersARB({0}, (GLuint*)&{1}[0])", n, buffers); }
+          { untyped __cpp__("glGenBuffersARB({0}, (GLuint*)&({1}[0]))", n, buffers); }
 
-        inline static function glGetBufferParameterivARB(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetBufferParameterivARB({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetBufferParameterivARB(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetBufferParameterivARB({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
 
 
     // TODO functions
 
             
-        // inline static function glBufferDataARB(target:Int, size:GLsizeiptrARB, ?bOffset:Int=0, data:BytesData, usage:Int) : Void
-        // { untyped __cpp__("glBufferDataARB({0}, {1}, (const void*)&{3}[0] + {2}, {4})", target, size, bOffset, data, usage); }
+        // inline static function glBufferDataARB(target:Int, size:GLsizeiptrARB, data:BytesData, usage:Int) : Void
+        // { untyped __cpp__("glBufferDataARB({0}, {1}, (const void*)&({2}[0]), {3})", target, size, data, usage); }
             
-        // inline static function glBufferSubDataARB(target:Int, offset:GLintptrARB, size:GLsizeiptrARB, ?bOffset:Int=0, data:BytesData) : Void
-        // { untyped __cpp__("glBufferSubDataARB({0}, {1}, {2}, (const void*)&{4}[0] + {3})", target, offset, size, bOffset, data); }
+        // inline static function glBufferSubDataARB(target:Int, offset:GLintptrARB, size:GLsizeiptrARB, data:BytesData) : Void
+        // { untyped __cpp__("glBufferSubDataARB({0}, {1}, {2}, (const void*)&({3}[0]))", target, offset, size, data); }
             
         // @:native('glGetBufferPointervARB')
         // static function glGetBufferPointervARB(target:Int, pname:Int, params:void**) : Void;
             
-        // inline static function glGetBufferSubDataARB(target:Int, offset:GLintptrARB, size:GLsizeiptrARB, ?bOffset:Int=0, data:BytesData) : Void
-        // { untyped __cpp__("glGetBufferSubDataARB({0}, {1}, {2}, (void*)&{4}[0] + {3})", target, offset, size, bOffset, data); }
+        // inline static function glGetBufferSubDataARB(target:Int, offset:GLintptrARB, size:GLsizeiptrARB, data:BytesData) : Void
+        // { untyped __cpp__("glGetBufferSubDataARB({0}, {1}, {2}, (void*)&({3}[0]))", target, offset, size, data); }
             
         // @:native('glMapBufferARB')
         // static function glMapBufferARB(target:Int, access:Int) : void *;
@@ -8872,176 +7826,176 @@ extern class GL {
         static function glIsProgramARB(program:UInt) : Bool;
 
         @:native('glProgramEnvParameter4dARB')
-        static function glProgramEnvParameter4dARB(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glProgramEnvParameter4dARB(target:Int, index:UInt, x:cpp.Float64, y:cpp.Float64, z:cpp.Float64, w:cpp.Float64) : Void;
 
         @:native('glProgramEnvParameter4fARB')
-        static function glProgramEnvParameter4fARB(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glProgramEnvParameter4fARB(target:Int, index:UInt, x:cpp.Float32, y:cpp.Float32, z:cpp.Float32, w:cpp.Float32) : Void;
 
         @:native('glProgramLocalParameter4dARB')
-        static function glProgramLocalParameter4dARB(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glProgramLocalParameter4dARB(target:Int, index:UInt, x:cpp.Float64, y:cpp.Float64, z:cpp.Float64, w:cpp.Float64) : Void;
 
         @:native('glProgramLocalParameter4fARB')
-        static function glProgramLocalParameter4fARB(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glProgramLocalParameter4fARB(target:Int, index:UInt, x:cpp.Float32, y:cpp.Float32, z:cpp.Float32, w:cpp.Float32) : Void;
 
         @:native('glVertexAttrib1dARB')
-        static function glVertexAttrib1dARB(index:UInt, x:Float) : Void;
+        static function glVertexAttrib1dARB(index:UInt, x:cpp.Float64) : Void;
 
         @:native('glVertexAttrib1fARB')
-        static function glVertexAttrib1fARB(index:UInt, x:Float) : Void;
+        static function glVertexAttrib1fARB(index:UInt, x:cpp.Float32) : Void;
 
         @:native('glVertexAttrib1sARB')
         static function glVertexAttrib1sARB(index:UInt, x:Int) : Void;
 
         @:native('glVertexAttrib2dARB')
-        static function glVertexAttrib2dARB(index:UInt, x:Float, y:Float) : Void;
+        static function glVertexAttrib2dARB(index:UInt, x:cpp.Float64, y:cpp.Float64) : Void;
 
         @:native('glVertexAttrib2fARB')
-        static function glVertexAttrib2fARB(index:UInt, x:Float, y:Float) : Void;
+        static function glVertexAttrib2fARB(index:UInt, x:cpp.Float32, y:cpp.Float32) : Void;
 
         @:native('glVertexAttrib2sARB')
         static function glVertexAttrib2sARB(index:UInt, x:Int, y:Int) : Void;
 
         @:native('glVertexAttrib3dARB')
-        static function glVertexAttrib3dARB(index:UInt, x:Float, y:Float, z:Float) : Void;
+        static function glVertexAttrib3dARB(index:UInt, x:cpp.Float64, y:cpp.Float64, z:cpp.Float64) : Void;
 
         @:native('glVertexAttrib3fARB')
-        static function glVertexAttrib3fARB(index:UInt, x:Float, y:Float, z:Float) : Void;
+        static function glVertexAttrib3fARB(index:UInt, x:cpp.Float32, y:cpp.Float32, z:cpp.Float32) : Void;
 
         @:native('glVertexAttrib3sARB')
         static function glVertexAttrib3sARB(index:UInt, x:Int, y:Int, z:Int) : Void;
 
         @:native('glVertexAttrib4NubARB')
-        static function glVertexAttrib4NubARB(index:UInt, x:String, y:String, z:String, w:String) : Void;
+        static function glVertexAttrib4NubARB(index:UInt, x:cpp.UInt8, y:cpp.UInt8, z:cpp.UInt8, w:cpp.UInt8) : Void;
 
         @:native('glVertexAttrib4dARB')
-        static function glVertexAttrib4dARB(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glVertexAttrib4dARB(index:UInt, x:cpp.Float64, y:cpp.Float64, z:cpp.Float64, w:cpp.Float64) : Void;
 
         @:native('glVertexAttrib4fARB')
-        static function glVertexAttrib4fARB(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
+        static function glVertexAttrib4fARB(index:UInt, x:cpp.Float32, y:cpp.Float32, z:cpp.Float32, w:cpp.Float32) : Void;
 
         @:native('glVertexAttrib4sARB')
         static function glVertexAttrib4sARB(index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
 
 
         inline static function glDeleteProgramsARB(n:Int, programs:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteProgramsARB({0}, (const GLuint*)&{1}[0])", n, programs); }
+          { untyped __cpp__("glDeleteProgramsARB({0}, (const GLuint*)&({1}[0]))", n, programs); }
 
         inline static function glGenProgramsARB(n:Int, programs:Array<UInt>) : Void
-          { untyped __cpp__("glGenProgramsARB({0}, (GLuint*)&{1}[0])", n, programs); }
+          { untyped __cpp__("glGenProgramsARB({0}, (GLuint*)&({1}[0]))", n, programs); }
 
-        inline static function glGetProgramEnvParameterdvARB(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetProgramEnvParameterdvARB({0}, {1}, (GLdouble*)&{3}[0] + {2})", target, index, bOffset, params); }
+        inline static function glGetProgramEnvParameterdvARB(target:Int, index:UInt, params:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glGetProgramEnvParameterdvARB({0}, {1}, (GLdouble*)&({2}[0]))", target, index, params); }
 
-        inline static function glGetProgramEnvParameterfvARB(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetProgramEnvParameterfvARB({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, index, bOffset, params); }
+        inline static function glGetProgramEnvParameterfvARB(target:Int, index:UInt, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetProgramEnvParameterfvARB({0}, {1}, (GLfloat*)&({2}[0]))", target, index, params); }
 
-        inline static function glGetProgramLocalParameterdvARB(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetProgramLocalParameterdvARB({0}, {1}, (GLdouble*)&{3}[0] + {2})", target, index, bOffset, params); }
+        inline static function glGetProgramLocalParameterdvARB(target:Int, index:UInt, params:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glGetProgramLocalParameterdvARB({0}, {1}, (GLdouble*)&({2}[0]))", target, index, params); }
 
-        inline static function glGetProgramLocalParameterfvARB(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetProgramLocalParameterfvARB({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, index, bOffset, params); }
+        inline static function glGetProgramLocalParameterfvARB(target:Int, index:UInt, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetProgramLocalParameterfvARB({0}, {1}, (GLfloat*)&({2}[0]))", target, index, params); }
 
-        inline static function glGetProgramStringARB(target:Int, pname:Int, ?bOffset:Int=0, string:BytesData) : Void
-          { untyped __cpp__("glGetProgramStringARB({0}, {1}, (void*)&{3}[0] + {2})", target, pname, bOffset, string); }
+        inline static function glGetProgramStringARB(target:Int, pname:Int, string:BytesData) : Void
+          { untyped __cpp__("glGetProgramStringARB({0}, {1}, (void*)&({2}[0]))", target, pname, string); }
 
-        inline static function glGetProgramivARB(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetProgramivARB({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
+        inline static function glGetProgramivARB(target:Int, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetProgramivARB({0}, {1}, (GLint*)&({2}[0]))", target, pname, params); }
 
-        inline static function glGetVertexAttribdvARB(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribdvARB({0}, {1}, (GLdouble*)&{3}[0] + {2})", index, pname, bOffset, params); }
+        inline static function glGetVertexAttribdvARB(index:UInt, pname:Int, params:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glGetVertexAttribdvARB({0}, {1}, (GLdouble*)&({2}[0]))", index, pname, params); }
 
-        inline static function glGetVertexAttribfvARB(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribfvARB({0}, {1}, (GLfloat*)&{3}[0] + {2})", index, pname, bOffset, params); }
+        inline static function glGetVertexAttribfvARB(index:UInt, pname:Int, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetVertexAttribfvARB({0}, {1}, (GLfloat*)&({2}[0]))", index, pname, params); }
 
-        inline static function glGetVertexAttribivARB(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribivARB({0}, {1}, (GLint*)&{3}[0] + {2})", index, pname, bOffset, params); }
+        inline static function glGetVertexAttribivARB(index:UInt, pname:Int, params:Array<Int>) : Void
+          { untyped __cpp__("glGetVertexAttribivARB({0}, {1}, (GLint*)&({2}[0]))", index, pname, params); }
 
-        inline static function glProgramEnvParameter4dvARB(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramEnvParameter4dvARB({0}, {1}, (const GLdouble*)&{3}[0] + {2})", target, index, bOffset, params); }
+        inline static function glProgramEnvParameter4dvARB(target:Int, index:UInt, params:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramEnvParameter4dvARB({0}, {1}, (const GLdouble*)&({2}[0]))", target, index, params); }
 
-        inline static function glProgramEnvParameter4fvARB(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramEnvParameter4fvARB({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, index, bOffset, params); }
+        inline static function glProgramEnvParameter4fvARB(target:Int, index:UInt, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramEnvParameter4fvARB({0}, {1}, (const GLfloat*)&({2}[0]))", target, index, params); }
 
-        inline static function glProgramLocalParameter4dvARB(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramLocalParameter4dvARB({0}, {1}, (const GLdouble*)&{3}[0] + {2})", target, index, bOffset, params); }
+        inline static function glProgramLocalParameter4dvARB(target:Int, index:UInt, params:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glProgramLocalParameter4dvARB({0}, {1}, (const GLdouble*)&({2}[0]))", target, index, params); }
 
-        inline static function glProgramLocalParameter4fvARB(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramLocalParameter4fvARB({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, index, bOffset, params); }
+        inline static function glProgramLocalParameter4fvARB(target:Int, index:UInt, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glProgramLocalParameter4fvARB({0}, {1}, (const GLfloat*)&({2}[0]))", target, index, params); }
 
-        inline static function glProgramStringARB(target:Int, format:Int, len:Int, ?bOffset:Int=0, string:BytesData) : Void
-          { untyped __cpp__("glProgramStringARB({0}, {1}, {2}, (const void*)&{4}[0] + {3})", target, format, len, bOffset, string); }
+        inline static function glProgramStringARB(target:Int, format:Int, len:Int, string:BytesData) : Void
+          { untyped __cpp__("glProgramStringARB({0}, {1}, {2}, (const void*)&({3}[0]))", target, format, len, string); }
 
-        inline static function glVertexAttrib1dvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib1dvARB({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib1dvARB(index:UInt, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertexAttrib1dvARB({0}, (const GLdouble*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib1fvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib1fvARB({0}, (const GLfloat*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib1fvARB(index:UInt, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glVertexAttrib1fvARB({0}, (const GLfloat*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib1svARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib1svARB({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib1svARB(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib1svARB({0}, (const GLshort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib2dvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib2dvARB({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib2dvARB(index:UInt, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertexAttrib2dvARB({0}, (const GLdouble*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib2fvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib2fvARB({0}, (const GLfloat*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib2fvARB(index:UInt, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glVertexAttrib2fvARB({0}, (const GLfloat*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib2svARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib2svARB({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib2svARB(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib2svARB({0}, (const GLshort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib3dvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib3dvARB({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib3dvARB(index:UInt, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertexAttrib3dvARB({0}, (const GLdouble*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib3fvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib3fvARB({0}, (const GLfloat*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib3fvARB(index:UInt, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glVertexAttrib3fvARB({0}, (const GLfloat*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib3svARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib3svARB({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib3svARB(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib3svARB({0}, (const GLshort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4NbvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4NbvARB({0}, (const GLbyte*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4NbvARB(index:UInt, v:Array<cpp.Int8>) : Void
+          { untyped __cpp__("glVertexAttrib4NbvARB({0}, (const GLbyte*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4NivARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4NivARB({0}, (const GLint*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4NivARB(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib4NivARB({0}, (const GLint*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4NsvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4NsvARB({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4NsvARB(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib4NsvARB({0}, (const GLshort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4NubvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4NubvARB({0}, (const GLubyte*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4NubvARB(index:UInt, v:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glVertexAttrib4NubvARB({0}, (const GLubyte*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4NuivARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4NuivARB({0}, (const GLuint*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4NuivARB(index:UInt, v:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttrib4NuivARB({0}, (const GLuint*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4NusvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4NusvARB({0}, (const GLushort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4NusvARB(index:UInt, v:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttrib4NusvARB({0}, (const GLushort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4bvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4bvARB({0}, (const GLbyte*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4bvARB(index:UInt, v:Array<cpp.Int8>) : Void
+          { untyped __cpp__("glVertexAttrib4bvARB({0}, (const GLbyte*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4dvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4dvARB({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4dvARB(index:UInt, v:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glVertexAttrib4dvARB({0}, (const GLdouble*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4fvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4fvARB({0}, (const GLfloat*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4fvARB(index:UInt, v:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glVertexAttrib4fvARB({0}, (const GLfloat*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4ivARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4ivARB({0}, (const GLint*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4ivARB(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib4ivARB({0}, (const GLint*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4svARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4svARB({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4svARB(index:UInt, v:Array<Int>) : Void
+          { untyped __cpp__("glVertexAttrib4svARB({0}, (const GLshort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4ubvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4ubvARB({0}, (const GLubyte*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4ubvARB(index:UInt, v:Array<cpp.UInt8>) : Void
+          { untyped __cpp__("glVertexAttrib4ubvARB({0}, (const GLubyte*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4uivARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4uivARB({0}, (const GLuint*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4uivARB(index:UInt, v:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttrib4uivARB({0}, (const GLuint*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttrib4usvARB(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4usvARB({0}, (const GLushort*)&{2}[0] + {1})", index, bOffset, v); }
+        inline static function glVertexAttrib4usvARB(index:UInt, v:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttrib4usvARB({0}, (const GLushort*)&({1}[0]))", index, v); }
 
-        inline static function glVertexAttribPointerARB(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glVertexAttribPointerARB({0}, {1}, {2}, {3}, {4}, (const void*)&{6}[0] + {5})", index, size, type, normalized, stride, bOffset, pointer); }
+        inline static function glVertexAttribPointerARB(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, pointer:BytesData) : Void
+          { untyped __cpp__("glVertexAttribPointerARB({0}, {1}, {2}, {3}, {4}, (const void*)&({5}[0]))", index, size, type, normalized, stride, pointer); }
 
 
 
@@ -9080,7 +8034,7 @@ extern class GL {
         // static function glBindAttribLocationARB(programObj:UInt, index:UInt, name:const GLcharARB*) : Void;
             
         // inline static function glGetActiveAttribARB(programObj:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:Array<Int>, type:GLenum*, name:GLcharARB*) : Void
-        // { untyped __cpp__("glGetActiveAttribARB({0}, {1}, {2}, {3}, (GLint*)&{4}[0], {5}, {6})", programObj, index, maxLength, length, size, type, name); }
+        // { untyped __cpp__("glGetActiveAttribARB({0}, {1}, {2}, {3}, (GLint*)&({4}[0]), {5}, {6})", programObj, index, maxLength, length, size, type, name); }
             
         // @:native('glGetAttribLocationARB')
         // static function glGetAttribLocationARB(programObj:UInt, name:const GLcharARB*) : Int;
@@ -9164,62 +8118,62 @@ extern class GL {
         static function glVertexP4ui(type:Int, value:UInt) : Void;
 
 
-        inline static function glColorP3uiv(type:Int, ?bOffset:Int=0, color:BytesData) : Void
-          { untyped __cpp__("glColorP3uiv({0}, (const GLuint*)&{2}[0] + {1})", type, bOffset, color); }
+        inline static function glColorP3uiv(type:Int, color:Array<UInt>) : Void
+          { untyped __cpp__("glColorP3uiv({0}, (const GLuint*)&({1}[0]))", type, color); }
 
-        inline static function glColorP4uiv(type:Int, ?bOffset:Int=0, color:BytesData) : Void
-          { untyped __cpp__("glColorP4uiv({0}, (const GLuint*)&{2}[0] + {1})", type, bOffset, color); }
+        inline static function glColorP4uiv(type:Int, color:Array<UInt>) : Void
+          { untyped __cpp__("glColorP4uiv({0}, (const GLuint*)&({1}[0]))", type, color); }
 
-        inline static function glMultiTexCoordP1uiv(texture:Int, type:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoordP1uiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", texture, type, bOffset, coords); }
+        inline static function glMultiTexCoordP1uiv(texture:Int, type:Int, coords:Array<UInt>) : Void
+          { untyped __cpp__("glMultiTexCoordP1uiv({0}, {1}, (const GLuint*)&({2}[0]))", texture, type, coords); }
 
-        inline static function glMultiTexCoordP2uiv(texture:Int, type:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoordP2uiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", texture, type, bOffset, coords); }
+        inline static function glMultiTexCoordP2uiv(texture:Int, type:Int, coords:Array<UInt>) : Void
+          { untyped __cpp__("glMultiTexCoordP2uiv({0}, {1}, (const GLuint*)&({2}[0]))", texture, type, coords); }
 
-        inline static function glMultiTexCoordP3uiv(texture:Int, type:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoordP3uiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", texture, type, bOffset, coords); }
+        inline static function glMultiTexCoordP3uiv(texture:Int, type:Int, coords:Array<UInt>) : Void
+          { untyped __cpp__("glMultiTexCoordP3uiv({0}, {1}, (const GLuint*)&({2}[0]))", texture, type, coords); }
 
-        inline static function glMultiTexCoordP4uiv(texture:Int, type:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoordP4uiv({0}, {1}, (const GLuint*)&{3}[0] + {2})", texture, type, bOffset, coords); }
+        inline static function glMultiTexCoordP4uiv(texture:Int, type:Int, coords:Array<UInt>) : Void
+          { untyped __cpp__("glMultiTexCoordP4uiv({0}, {1}, (const GLuint*)&({2}[0]))", texture, type, coords); }
 
-        inline static function glNormalP3uiv(type:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glNormalP3uiv({0}, (const GLuint*)&{2}[0] + {1})", type, bOffset, coords); }
+        inline static function glNormalP3uiv(type:Int, coords:Array<UInt>) : Void
+          { untyped __cpp__("glNormalP3uiv({0}, (const GLuint*)&({1}[0]))", type, coords); }
 
-        inline static function glSecondaryColorP3uiv(type:Int, ?bOffset:Int=0, color:BytesData) : Void
-          { untyped __cpp__("glSecondaryColorP3uiv({0}, (const GLuint*)&{2}[0] + {1})", type, bOffset, color); }
+        inline static function glSecondaryColorP3uiv(type:Int, color:Array<UInt>) : Void
+          { untyped __cpp__("glSecondaryColorP3uiv({0}, (const GLuint*)&({1}[0]))", type, color); }
 
-        inline static function glTexCoordP1uiv(type:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glTexCoordP1uiv({0}, (const GLuint*)&{2}[0] + {1})", type, bOffset, coords); }
+        inline static function glTexCoordP1uiv(type:Int, coords:Array<UInt>) : Void
+          { untyped __cpp__("glTexCoordP1uiv({0}, (const GLuint*)&({1}[0]))", type, coords); }
 
-        inline static function glTexCoordP2uiv(type:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glTexCoordP2uiv({0}, (const GLuint*)&{2}[0] + {1})", type, bOffset, coords); }
+        inline static function glTexCoordP2uiv(type:Int, coords:Array<UInt>) : Void
+          { untyped __cpp__("glTexCoordP2uiv({0}, (const GLuint*)&({1}[0]))", type, coords); }
 
-        inline static function glTexCoordP3uiv(type:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glTexCoordP3uiv({0}, (const GLuint*)&{2}[0] + {1})", type, bOffset, coords); }
+        inline static function glTexCoordP3uiv(type:Int, coords:Array<UInt>) : Void
+          { untyped __cpp__("glTexCoordP3uiv({0}, (const GLuint*)&({1}[0]))", type, coords); }
 
-        inline static function glTexCoordP4uiv(type:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glTexCoordP4uiv({0}, (const GLuint*)&{2}[0] + {1})", type, bOffset, coords); }
+        inline static function glTexCoordP4uiv(type:Int, coords:Array<UInt>) : Void
+          { untyped __cpp__("glTexCoordP4uiv({0}, (const GLuint*)&({1}[0]))", type, coords); }
 
-        inline static function glVertexAttribP1uiv(index:UInt, type:Int, normalized:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glVertexAttribP1uiv({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", index, type, normalized, bOffset, value); }
+        inline static function glVertexAttribP1uiv(index:UInt, type:Int, normalized:Bool, value:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttribP1uiv({0}, {1}, {2}, (const GLuint*)&({3}[0]))", index, type, normalized, value); }
 
-        inline static function glVertexAttribP2uiv(index:UInt, type:Int, normalized:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glVertexAttribP2uiv({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", index, type, normalized, bOffset, value); }
+        inline static function glVertexAttribP2uiv(index:UInt, type:Int, normalized:Bool, value:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttribP2uiv({0}, {1}, {2}, (const GLuint*)&({3}[0]))", index, type, normalized, value); }
 
-        inline static function glVertexAttribP3uiv(index:UInt, type:Int, normalized:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glVertexAttribP3uiv({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", index, type, normalized, bOffset, value); }
+        inline static function glVertexAttribP3uiv(index:UInt, type:Int, normalized:Bool, value:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttribP3uiv({0}, {1}, {2}, (const GLuint*)&({3}[0]))", index, type, normalized, value); }
 
-        inline static function glVertexAttribP4uiv(index:UInt, type:Int, normalized:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glVertexAttribP4uiv({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", index, type, normalized, bOffset, value); }
+        inline static function glVertexAttribP4uiv(index:UInt, type:Int, normalized:Bool, value:Array<UInt>) : Void
+          { untyped __cpp__("glVertexAttribP4uiv({0}, {1}, {2}, (const GLuint*)&({3}[0]))", index, type, normalized, value); }
 
-        inline static function glVertexP2uiv(type:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glVertexP2uiv({0}, (const GLuint*)&{2}[0] + {1})", type, bOffset, value); }
+        inline static function glVertexP2uiv(type:Int, value:Array<UInt>) : Void
+          { untyped __cpp__("glVertexP2uiv({0}, (const GLuint*)&({1}[0]))", type, value); }
 
-        inline static function glVertexP3uiv(type:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glVertexP3uiv({0}, (const GLuint*)&{2}[0] + {1})", type, bOffset, value); }
+        inline static function glVertexP3uiv(type:Int, value:Array<UInt>) : Void
+          { untyped __cpp__("glVertexP3uiv({0}, (const GLuint*)&({1}[0]))", type, value); }
 
-        inline static function glVertexP4uiv(type:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glVertexP4uiv({0}, (const GLuint*)&{2}[0] + {1})", type, bOffset, value); }
+        inline static function glVertexP4uiv(type:Int, value:Array<UInt>) : Void
+          { untyped __cpp__("glVertexP4uiv({0}, (const GLuint*)&({1}[0]))", type, value); }
 
 
 
@@ -9242,20 +8196,20 @@ extern class GL {
     // GL_ARB_viewport_array functions
 
         @:native('glDepthRangeIndexed')
-        static function glDepthRangeIndexed(index:UInt, n:Float, f:Float) : Void;
+        static function glDepthRangeIndexed(index:UInt, n:cpp.Float64, f:cpp.Float64) : Void;
 
         @:native('glScissorIndexed')
         static function glScissorIndexed(index:UInt, left:Int, bottom:Int, width:Int, height:Int) : Void;
 
         @:native('glViewportIndexedf')
-        static function glViewportIndexedf(index:UInt, x:Float, y:Float, w:Float, h:Float) : Void;
+        static function glViewportIndexedf(index:UInt, x:cpp.Float32, y:cpp.Float32, w:cpp.Float32, h:cpp.Float32) : Void;
 
 
-        inline static function glGetDoublei_v(target:Int, index:UInt, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetDoublei_v({0}, {1}, (GLdouble*)&{3}[0] + {2})", target, index, bOffset, data); }
+        inline static function glGetDoublei_v(target:Int, index:UInt, data:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glGetDoublei_v({0}, {1}, (GLdouble*)&({2}[0]))", target, index, data); }
 
-        inline static function glGetFloati_v(target:Int, index:UInt, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetFloati_v({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, index, bOffset, data); }
+        inline static function glGetFloati_v(target:Int, index:UInt, data:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetFloati_v({0}, {1}, (GLfloat*)&({2}[0]))", target, index, data); }
 
 
 
@@ -9290,10 +8244,10 @@ extern class GL {
     // GL_ARB_window_pos functions
 
         @:native('glWindowPos2dARB')
-        static function glWindowPos2dARB(x:Float, y:Float) : Void;
+        static function glWindowPos2dARB(x:cpp.Float64, y:cpp.Float64) : Void;
 
         @:native('glWindowPos2fARB')
-        static function glWindowPos2fARB(x:Float, y:Float) : Void;
+        static function glWindowPos2fARB(x:cpp.Float32, y:cpp.Float32) : Void;
 
         @:native('glWindowPos2iARB')
         static function glWindowPos2iARB(x:Int, y:Int) : Void;
@@ -9302,10 +8256,10 @@ extern class GL {
         static function glWindowPos2sARB(x:Int, y:Int) : Void;
 
         @:native('glWindowPos3dARB')
-        static function glWindowPos3dARB(x:Float, y:Float, z:Float) : Void;
+        static function glWindowPos3dARB(x:cpp.Float64, y:cpp.Float64, z:cpp.Float64) : Void;
 
         @:native('glWindowPos3fARB')
-        static function glWindowPos3fARB(x:Float, y:Float, z:Float) : Void;
+        static function glWindowPos3fARB(x:cpp.Float32, y:cpp.Float32, z:cpp.Float32) : Void;
 
         @:native('glWindowPos3iARB')
         static function glWindowPos3iARB(x:Int, y:Int, z:Int) : Void;
@@ -9314,9589 +8268,29 @@ extern class GL {
         static function glWindowPos3sARB(x:Int, y:Int, z:Int) : Void;
 
 
-        inline static function glWindowPos2dvARB(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos2dvARB((const GLdouble*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos2dvARB(p:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glWindowPos2dvARB((const GLdouble*)&({0}[0]))", p); }
 
-        inline static function glWindowPos2fvARB(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos2fvARB((const GLfloat*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos2fvARB(p:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glWindowPos2fvARB((const GLfloat*)&({0}[0]))", p); }
 
-        inline static function glWindowPos2ivARB(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos2ivARB((const GLint*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos2ivARB(p:Array<Int>) : Void
+          { untyped __cpp__("glWindowPos2ivARB((const GLint*)&({0}[0]))", p); }
 
-        inline static function glWindowPos2svARB(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos2svARB((const GLshort*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos2svARB(p:Array<Int>) : Void
+          { untyped __cpp__("glWindowPos2svARB((const GLshort*)&({0}[0]))", p); }
 
-        inline static function glWindowPos3dvARB(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos3dvARB((const GLdouble*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos3dvARB(p:Array<cpp.Float64>) : Void
+          { untyped __cpp__("glWindowPos3dvARB((const GLdouble*)&({0}[0]))", p); }
 
-        inline static function glWindowPos3fvARB(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos3fvARB((const GLfloat*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos3fvARB(p:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glWindowPos3fvARB((const GLfloat*)&({0}[0]))", p); }
 
-        inline static function glWindowPos3ivARB(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos3ivARB((const GLint*)&{1}[0] + {0})", bOffset, p); }
+        inline static function glWindowPos3ivARB(p:Array<Int>) : Void
+          { untyped __cpp__("glWindowPos3ivARB((const GLint*)&({0}[0]))", p); }
 
-        inline static function glWindowPos3svARB(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos3svARB((const GLshort*)&{1}[0] + {0})", bOffset, p); }
-
-
-
-
-//GL_ATIX_point_sprites
-
-    // GL_ATIX_point_sprites defines
-
-        inline static var GL_ATIX_point_sprites                                           = 1;
-        inline static var GL_TEXTURE_POINT_MODE_ATIX                                      = 0x60B0;
-        inline static var GL_TEXTURE_POINT_ONE_COORD_ATIX                                 = 0x60B1;
-        inline static var GL_TEXTURE_POINT_SPRITE_ATIX                                    = 0x60B2;
-        inline static var GL_POINT_SPRITE_CULL_MODE_ATIX                                  = 0x60B3;
-        inline static var GL_POINT_SPRITE_CULL_CENTER_ATIX                                = 0x60B4;
-        inline static var GL_POINT_SPRITE_CULL_CLIP_ATIX                                  = 0x60B5;
-
-
-//GL_ATIX_texture_env_combine3
-
-    // GL_ATIX_texture_env_combine3 defines
-
-        inline static var GL_ATIX_texture_env_combine3                                    = 1;
-        inline static var GL_MODULATE_ADD_ATIX                                            = 0x8744;
-        inline static var GL_MODULATE_SIGNED_ADD_ATIX                                     = 0x8745;
-        inline static var GL_MODULATE_SUBTRACT_ATIX                                       = 0x8746;
-
-
-//GL_ATIX_texture_env_route
-
-    // GL_ATIX_texture_env_route defines
-
-        inline static var GL_ATIX_texture_env_route                                       = 1;
-        inline static var GL_SECONDARY_COLOR_ATIX                                         = 0x8747;
-        inline static var GL_TEXTURE_OUTPUT_RGB_ATIX                                      = 0x8748;
-        inline static var GL_TEXTURE_OUTPUT_ALPHA_ATIX                                    = 0x8749;
-
-
-//GL_ATIX_vertex_shader_output_point_size
-
-    // GL_ATIX_vertex_shader_output_point_size defines
-
-        inline static var GL_ATIX_vertex_shader_output_point_size                         = 1;
-        inline static var GL_OUTPUT_POINT_SIZE_ATIX                                       = 0x610E;
-
-
-//GL_ATI_draw_buffers
-
-    // GL_ATI_draw_buffers defines
-
-        inline static var GL_ATI_draw_buffers                                             = 1;
-        inline static var GL_MAX_DRAW_BUFFERS_ATI                                         = 0x8824;
-        inline static var GL_DRAW_BUFFER0_ATI                                             = 0x8825;
-        inline static var GL_DRAW_BUFFER1_ATI                                             = 0x8826;
-        inline static var GL_DRAW_BUFFER2_ATI                                             = 0x8827;
-        inline static var GL_DRAW_BUFFER3_ATI                                             = 0x8828;
-        inline static var GL_DRAW_BUFFER4_ATI                                             = 0x8829;
-        inline static var GL_DRAW_BUFFER5_ATI                                             = 0x882A;
-        inline static var GL_DRAW_BUFFER6_ATI                                             = 0x882B;
-        inline static var GL_DRAW_BUFFER7_ATI                                             = 0x882C;
-        inline static var GL_DRAW_BUFFER8_ATI                                             = 0x882D;
-        inline static var GL_DRAW_BUFFER9_ATI                                             = 0x882E;
-        inline static var GL_DRAW_BUFFER10_ATI                                            = 0x882F;
-        inline static var GL_DRAW_BUFFER11_ATI                                            = 0x8830;
-        inline static var GL_DRAW_BUFFER12_ATI                                            = 0x8831;
-        inline static var GL_DRAW_BUFFER13_ATI                                            = 0x8832;
-        inline static var GL_DRAW_BUFFER14_ATI                                            = 0x8833;
-        inline static var GL_DRAW_BUFFER15_ATI                                            = 0x8834;
-
-
-
-
-    // GL_ATI_draw_buffers functions
-
-
-        inline static function glDrawBuffersATI(n:Int, bufs:Array<Int>) : Void
-          { untyped __cpp__("glDrawBuffersATI({0}, (const GLenum*)&{1}[0])", n, bufs); }
-
-
-
-
-//GL_ATI_element_array
-
-    // GL_ATI_element_array defines
-
-        inline static var GL_ATI_element_array                                            = 1;
-        inline static var GL_ELEMENT_ARRAY_ATI                                            = 0x8768;
-        inline static var GL_ELEMENT_ARRAY_TYPE_ATI                                       = 0x8769;
-        inline static var GL_ELEMENT_ARRAY_POINTER_ATI                                    = 0x876A;
-
-
-
-
-    // GL_ATI_element_array functions
-
-        @:native('glDrawElementArrayATI')
-        static function glDrawElementArrayATI(mode:Int, count:Int) : Void;
-
-        @:native('glDrawRangeElementArrayATI')
-        static function glDrawRangeElementArrayATI(mode:Int, start:UInt, end:UInt, count:Int) : Void;
-
-
-        inline static function glElementPointerATI(type:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glElementPointerATI({0}, (const void*)&{2}[0] + {1})", type, bOffset, pointer); }
-
-
-
-
-//GL_ATI_envmap_bumpmap
-
-    // GL_ATI_envmap_bumpmap defines
-
-        inline static var GL_ATI_envmap_bumpmap                                           = 1;
-        inline static var GL_BUMP_ROT_MATRIX_ATI                                          = 0x8775;
-        inline static var GL_BUMP_ROT_MATRIX_SIZE_ATI                                     = 0x8776;
-        inline static var GL_BUMP_NUM_TEX_UNITS_ATI                                       = 0x8777;
-        inline static var GL_BUMP_TEX_UNITS_ATI                                           = 0x8778;
-        inline static var GL_DUDV_ATI                                                     = 0x8779;
-        inline static var GL_DU8DV8_ATI                                                   = 0x877A;
-        inline static var GL_BUMP_ENVMAP_ATI                                              = 0x877B;
-        inline static var GL_BUMP_TARGET_ATI                                              = 0x877C;
-
-
-
-
-    // GL_ATI_envmap_bumpmap functions
-
-
-        inline static function glGetTexBumpParameterfvATI(pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glGetTexBumpParameterfvATI({0}, (GLfloat*)&{2}[0] + {1})", pname, bOffset, param); }
-
-        inline static function glGetTexBumpParameterivATI(pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glGetTexBumpParameterivATI({0}, (GLint*)&{2}[0] + {1})", pname, bOffset, param); }
-
-        inline static function glTexBumpParameterfvATI(pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glTexBumpParameterfvATI({0}, (GLfloat*)&{2}[0] + {1})", pname, bOffset, param); }
-
-        inline static function glTexBumpParameterivATI(pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glTexBumpParameterivATI({0}, (GLint*)&{2}[0] + {1})", pname, bOffset, param); }
-
-
-
-
-//GL_ATI_fragment_shader
-
-    // GL_ATI_fragment_shader defines
-
-        inline static var GL_ATI_fragment_shader                                          = 1;
-        inline static var GL_2X_BIT_ATI                                                   = 0x00000001;
-        inline static var GL_RED_BIT_ATI                                                  = 0x00000001;
-        inline static var GL_4X_BIT_ATI                                                   = 0x00000002;
-        inline static var GL_COMP_BIT_ATI                                                 = 0x00000002;
-        inline static var GL_GREEN_BIT_ATI                                                = 0x00000002;
-        inline static var GL_8X_BIT_ATI                                                   = 0x00000004;
-        inline static var GL_BLUE_BIT_ATI                                                 = 0x00000004;
-        inline static var GL_NEGATE_BIT_ATI                                               = 0x00000004;
-        inline static var GL_BIAS_BIT_ATI                                                 = 0x00000008;
-        inline static var GL_HALF_BIT_ATI                                                 = 0x00000008;
-        inline static var GL_QUARTER_BIT_ATI                                              = 0x00000010;
-        inline static var GL_EIGHTH_BIT_ATI                                               = 0x00000020;
-        inline static var GL_SATURATE_BIT_ATI                                             = 0x00000040;
-        inline static var GL_FRAGMENT_SHADER_ATI                                          = 0x8920;
-        inline static var GL_REG_0_ATI                                                    = 0x8921;
-        inline static var GL_REG_1_ATI                                                    = 0x8922;
-        inline static var GL_REG_2_ATI                                                    = 0x8923;
-        inline static var GL_REG_3_ATI                                                    = 0x8924;
-        inline static var GL_REG_4_ATI                                                    = 0x8925;
-        inline static var GL_REG_5_ATI                                                    = 0x8926;
-        inline static var GL_CON_0_ATI                                                    = 0x8941;
-        inline static var GL_CON_1_ATI                                                    = 0x8942;
-        inline static var GL_CON_2_ATI                                                    = 0x8943;
-        inline static var GL_CON_3_ATI                                                    = 0x8944;
-        inline static var GL_CON_4_ATI                                                    = 0x8945;
-        inline static var GL_CON_5_ATI                                                    = 0x8946;
-        inline static var GL_CON_6_ATI                                                    = 0x8947;
-        inline static var GL_CON_7_ATI                                                    = 0x8948;
-        inline static var GL_MOV_ATI                                                      = 0x8961;
-        inline static var GL_ADD_ATI                                                      = 0x8963;
-        inline static var GL_MUL_ATI                                                      = 0x8964;
-        inline static var GL_SUB_ATI                                                      = 0x8965;
-        inline static var GL_DOT3_ATI                                                     = 0x8966;
-        inline static var GL_DOT4_ATI                                                     = 0x8967;
-        inline static var GL_MAD_ATI                                                      = 0x8968;
-        inline static var GL_LERP_ATI                                                     = 0x8969;
-        inline static var GL_CND_ATI                                                      = 0x896A;
-        inline static var GL_CND0_ATI                                                     = 0x896B;
-        inline static var GL_DOT2_ADD_ATI                                                 = 0x896C;
-        inline static var GL_SECONDARY_INTERPOLATOR_ATI                                   = 0x896D;
-        inline static var GL_NUM_FRAGMENT_REGISTERS_ATI                                   = 0x896E;
-        inline static var GL_NUM_FRAGMENT_CONSTANTS_ATI                                   = 0x896F;
-        inline static var GL_NUM_PASSES_ATI                                               = 0x8970;
-        inline static var GL_NUM_INSTRUCTIONS_PER_PASS_ATI                                = 0x8971;
-        inline static var GL_NUM_INSTRUCTIONS_TOTAL_ATI                                   = 0x8972;
-        inline static var GL_NUM_INPUT_INTERPOLATOR_COMPONENTS_ATI                        = 0x8973;
-        inline static var GL_NUM_LOOPBACK_COMPONENTS_ATI                                  = 0x8974;
-        inline static var GL_COLOR_ALPHA_PAIRING_ATI                                      = 0x8975;
-        inline static var GL_SWIZZLE_STR_ATI                                              = 0x8976;
-        inline static var GL_SWIZZLE_STQ_ATI                                              = 0x8977;
-        inline static var GL_SWIZZLE_STR_DR_ATI                                           = 0x8978;
-        inline static var GL_SWIZZLE_STQ_DQ_ATI                                           = 0x8979;
-        inline static var GL_SWIZZLE_STRQ_ATI                                             = 0x897A;
-        inline static var GL_SWIZZLE_STRQ_DQ_ATI                                          = 0x897B;
-
-
-
-
-    // GL_ATI_fragment_shader functions
-
-        @:native('glAlphaFragmentOp1ATI')
-        static function glAlphaFragmentOp1ATI(op:Int, dst:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt) : Void;
-
-        @:native('glAlphaFragmentOp2ATI')
-        static function glAlphaFragmentOp2ATI(op:Int, dst:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt, arg2:UInt, arg2Rep:UInt, arg2Mod:UInt) : Void;
-
-        @:native('glAlphaFragmentOp3ATI')
-        static function glAlphaFragmentOp3ATI(op:Int, dst:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt, arg2:UInt, arg2Rep:UInt, arg2Mod:UInt, arg3:UInt, arg3Rep:UInt, arg3Mod:UInt) : Void;
-
-        @:native('glBeginFragmentShaderATI')
-        static function glBeginFragmentShaderATI() : Void;
-
-        @:native('glBindFragmentShaderATI')
-        static function glBindFragmentShaderATI(id:UInt) : Void;
-
-        @:native('glColorFragmentOp1ATI')
-        static function glColorFragmentOp1ATI(op:Int, dst:UInt, dstMask:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt) : Void;
-
-        @:native('glColorFragmentOp2ATI')
-        static function glColorFragmentOp2ATI(op:Int, dst:UInt, dstMask:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt, arg2:UInt, arg2Rep:UInt, arg2Mod:UInt) : Void;
-
-        @:native('glColorFragmentOp3ATI')
-        static function glColorFragmentOp3ATI(op:Int, dst:UInt, dstMask:UInt, dstMod:UInt, arg1:UInt, arg1Rep:UInt, arg1Mod:UInt, arg2:UInt, arg2Rep:UInt, arg2Mod:UInt, arg3:UInt, arg3Rep:UInt, arg3Mod:UInt) : Void;
-
-        @:native('glDeleteFragmentShaderATI')
-        static function glDeleteFragmentShaderATI(id:UInt) : Void;
-
-        @:native('glEndFragmentShaderATI')
-        static function glEndFragmentShaderATI() : Void;
-
-        @:native('glGenFragmentShadersATI')
-        static function glGenFragmentShadersATI(range:UInt) : UInt;
-
-        @:native('glPassTexCoordATI')
-        static function glPassTexCoordATI(dst:UInt, coord:UInt, swizzle:Int) : Void;
-
-        @:native('glSampleMapATI')
-        static function glSampleMapATI(dst:UInt, interp:UInt, swizzle:Int) : Void;
-
-
-        inline static function glSetFragmentShaderConstantATI(dst:UInt, value:Array<Float>) : Void
-          { untyped __cpp__("glSetFragmentShaderConstantATI({0}, (const GLfloat*)&{1}[0])", dst, value); }
-
-
-
-
-//GL_ATI_map_object_buffer
-
-    // GL_ATI_map_object_buffer defines
-
-        inline static var GL_ATI_map_object_buffer                                        = 1;
-
-
-
-
-    // GL_ATI_map_object_buffer functions
-
-        @:native('glUnmapObjectBufferATI')
-        static function glUnmapObjectBufferATI(buffer:UInt) : Void;
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glMapObjectBufferATI')
-        // static function glMapObjectBufferATI(buffer:UInt) : void *;
-
-
-//GL_ATI_meminfo
-
-    // GL_ATI_meminfo defines
-
-        inline static var GL_ATI_meminfo                                                  = 1;
-        inline static var GL_VBO_FREE_MEMORY_ATI                                          = 0x87FB;
-        inline static var GL_TEXTURE_FREE_MEMORY_ATI                                      = 0x87FC;
-        inline static var GL_RENDERBUFFER_FREE_MEMORY_ATI                                 = 0x87FD;
-
-
-//GL_ATI_pn_triangles
-
-    // GL_ATI_pn_triangles defines
-
-        inline static var GL_ATI_pn_triangles                                             = 1;
-        inline static var GL_PN_TRIANGLES_ATI                                             = 0x87F0;
-        inline static var GL_MAX_PN_TRIANGLES_TESSELATION_LEVEL_ATI                       = 0x87F1;
-        inline static var GL_PN_TRIANGLES_POINT_MODE_ATI                                  = 0x87F2;
-        inline static var GL_PN_TRIANGLES_NORMAL_MODE_ATI                                 = 0x87F3;
-        inline static var GL_PN_TRIANGLES_TESSELATION_LEVEL_ATI                           = 0x87F4;
-        inline static var GL_PN_TRIANGLES_POINT_MODE_LINEAR_ATI                           = 0x87F5;
-        inline static var GL_PN_TRIANGLES_POINT_MODE_CUBIC_ATI                            = 0x87F6;
-        inline static var GL_PN_TRIANGLES_NORMAL_MODE_LINEAR_ATI                          = 0x87F7;
-        inline static var GL_PN_TRIANGLES_NORMAL_MODE_QUADRATIC_ATI                       = 0x87F8;
-
-
-
-
-    // GL_ATI_pn_triangles functions
-
-        @:native('glPNTrianglesfATI')
-        static function glPNTrianglesfATI(pname:Int, param:Float) : Void;
-
-        @:native('glPNTrianglesiATI')
-        static function glPNTrianglesiATI(pname:Int, param:Int) : Void;
-
-
-
-
-
-//GL_ATI_separate_stencil
-
-    // GL_ATI_separate_stencil defines
-
-        inline static var GL_ATI_separate_stencil                                         = 1;
-        inline static var GL_STENCIL_BACK_FUNC_ATI                                        = 0x8800;
-        inline static var GL_STENCIL_BACK_FAIL_ATI                                        = 0x8801;
-        inline static var GL_STENCIL_BACK_PASS_DEPTH_FAIL_ATI                             = 0x8802;
-        inline static var GL_STENCIL_BACK_PASS_DEPTH_PASS_ATI                             = 0x8803;
-
-
-
-
-    // GL_ATI_separate_stencil functions
-
-        @:native('glStencilFuncSeparateATI')
-        static function glStencilFuncSeparateATI(frontfunc:Int, backfunc:Int, ref:Int, mask:UInt) : Void;
-
-        @:native('glStencilOpSeparateATI')
-        static function glStencilOpSeparateATI(face:Int, sfail:Int, dpfail:Int, dppass:Int) : Void;
-
-
-
-
-
-//GL_ATI_shader_texture_lod
-
-    // GL_ATI_shader_texture_lod defines
-
-        inline static var GL_ATI_shader_texture_lod                                       = 1;
-
-
-//GL_ATI_text_fragment_shader
-
-    // GL_ATI_text_fragment_shader defines
-
-        inline static var GL_ATI_text_fragment_shader                                     = 1;
-        inline static var GL_TEXT_FRAGMENT_SHADER_ATI                                     = 0x8200;
-
-
-//GL_ATI_texture_compression_3dc
-
-    // GL_ATI_texture_compression_3dc defines
-
-        inline static var GL_ATI_texture_compression_3dc                                  = 1;
-        inline static var GL_COMPRESSED_LUMINANCE_ALPHA_3DC_ATI                           = 0x8837;
-
-
-//GL_ATI_texture_env_combine3
-
-    // GL_ATI_texture_env_combine3 defines
-
-        inline static var GL_ATI_texture_env_combine3                                     = 1;
-        inline static var GL_MODULATE_ADD_ATI                                             = 0x8744;
-        inline static var GL_MODULATE_SIGNED_ADD_ATI                                      = 0x8745;
-        inline static var GL_MODULATE_SUBTRACT_ATI                                        = 0x8746;
-
-
-//GL_ATI_texture_float
-
-    // GL_ATI_texture_float defines
-
-        inline static var GL_ATI_texture_float                                            = 1;
-        inline static var GL_RGBA_FLOAT32_ATI                                             = 0x8814;
-        inline static var GL_RGB_FLOAT32_ATI                                              = 0x8815;
-        inline static var GL_ALPHA_FLOAT32_ATI                                            = 0x8816;
-        inline static var GL_INTENSITY_FLOAT32_ATI                                        = 0x8817;
-        inline static var GL_LUMINANCE_FLOAT32_ATI                                        = 0x8818;
-        inline static var GL_LUMINANCE_ALPHA_FLOAT32_ATI                                  = 0x8819;
-        inline static var GL_RGBA_FLOAT16_ATI                                             = 0x881A;
-        inline static var GL_RGB_FLOAT16_ATI                                              = 0x881B;
-        inline static var GL_ALPHA_FLOAT16_ATI                                            = 0x881C;
-        inline static var GL_INTENSITY_FLOAT16_ATI                                        = 0x881D;
-        inline static var GL_LUMINANCE_FLOAT16_ATI                                        = 0x881E;
-        inline static var GL_LUMINANCE_ALPHA_FLOAT16_ATI                                  = 0x881F;
-
-
-//GL_ATI_texture_mirror_once
-
-    // GL_ATI_texture_mirror_once defines
-
-        inline static var GL_ATI_texture_mirror_once                                      = 1;
-        inline static var GL_MIRROR_CLAMP_ATI                                             = 0x8742;
-        inline static var GL_MIRROR_CLAMP_TO_EDGE_ATI                                     = 0x8743;
-
-
-//GL_ATI_vertex_array_object
-
-    // GL_ATI_vertex_array_object defines
-
-        inline static var GL_ATI_vertex_array_object                                      = 1;
-        inline static var GL_STATIC_ATI                                                   = 0x8760;
-        inline static var GL_DYNAMIC_ATI                                                  = 0x8761;
-        inline static var GL_PRESERVE_ATI                                                 = 0x8762;
-        inline static var GL_DISCARD_ATI                                                  = 0x8763;
-        inline static var GL_OBJECT_BUFFER_SIZE_ATI                                       = 0x8764;
-        inline static var GL_OBJECT_BUFFER_USAGE_ATI                                      = 0x8765;
-        inline static var GL_ARRAY_OBJECT_BUFFER_ATI                                      = 0x8766;
-        inline static var GL_ARRAY_OBJECT_OFFSET_ATI                                      = 0x8767;
-
-
-
-
-    // GL_ATI_vertex_array_object functions
-
-        @:native('glArrayObjectATI')
-        static function glArrayObjectATI(array:Int, size:Int, type:Int, stride:Int, buffer:UInt, offset:UInt) : Void;
-
-        @:native('glFreeObjectBufferATI')
-        static function glFreeObjectBufferATI(buffer:UInt) : Void;
-
-        @:native('glIsObjectBufferATI')
-        static function glIsObjectBufferATI(buffer:UInt) : Bool;
-
-        @:native('glVariantArrayObjectATI')
-        static function glVariantArrayObjectATI(id:UInt, type:Int, stride:Int, buffer:UInt, offset:UInt) : Void;
-
-
-        inline static function glGetArrayObjectfvATI(array:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetArrayObjectfvATI({0}, {1}, (GLfloat*)&{3}[0] + {2})", array, pname, bOffset, params); }
-
-        inline static function glGetArrayObjectivATI(array:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetArrayObjectivATI({0}, {1}, (GLint*)&{3}[0] + {2})", array, pname, bOffset, params); }
-
-        inline static function glGetObjectBufferfvATI(buffer:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetObjectBufferfvATI({0}, {1}, (GLfloat*)&{3}[0] + {2})", buffer, pname, bOffset, params); }
-
-        inline static function glGetObjectBufferivATI(buffer:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetObjectBufferivATI({0}, {1}, (GLint*)&{3}[0] + {2})", buffer, pname, bOffset, params); }
-
-        inline static function glGetVariantArrayObjectfvATI(id:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVariantArrayObjectfvATI({0}, {1}, (GLfloat*)&{3}[0] + {2})", id, pname, bOffset, params); }
-
-        inline static function glGetVariantArrayObjectivATI(id:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVariantArrayObjectivATI({0}, {1}, (GLint*)&{3}[0] + {2})", id, pname, bOffset, params); }
-
-        inline static function glNewObjectBufferATI(size:Int, ?bOffset:Int=0, pointer:BytesData, usage:Int) : UInt
-          { return untyped __cpp__("glNewObjectBufferATI({0}, (const void*)&{2}[0] + {1}, {3})", size, bOffset, pointer, usage); }
-
-        inline static function glUpdateObjectBufferATI(buffer:UInt, offset:UInt, size:Int, ?bOffset:Int=0, pointer:BytesData, preserve:Int) : Void
-          { untyped __cpp__("glUpdateObjectBufferATI({0}, {1}, {2}, (const void*)&{4}[0] + {3}, {5})", buffer, offset, size, bOffset, pointer, preserve); }
-
-
-
-
-//GL_ATI_vertex_attrib_array_object
-
-    // GL_ATI_vertex_attrib_array_object defines
-
-        inline static var GL_ATI_vertex_attrib_array_object                               = 1;
-
-
-
-
-    // GL_ATI_vertex_attrib_array_object functions
-
-        @:native('glVertexAttribArrayObjectATI')
-        static function glVertexAttribArrayObjectATI(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, buffer:UInt, offset:UInt) : Void;
-
-
-        inline static function glGetVertexAttribArrayObjectfvATI(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribArrayObjectfvATI({0}, {1}, (GLfloat*)&{3}[0] + {2})", index, pname, bOffset, params); }
-
-        inline static function glGetVertexAttribArrayObjectivATI(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribArrayObjectivATI({0}, {1}, (GLint*)&{3}[0] + {2})", index, pname, bOffset, params); }
-
-
-
-
-//GL_ATI_vertex_streams
-
-    // GL_ATI_vertex_streams defines
-
-        inline static var GL_ATI_vertex_streams                                           = 1;
-        inline static var GL_MAX_VERTEX_STREAMS_ATI                                       = 0x876B;
-        inline static var GL_VERTEX_SOURCE_ATI                                            = 0x876C;
-        inline static var GL_VERTEX_STREAM0_ATI                                           = 0x876D;
-        inline static var GL_VERTEX_STREAM1_ATI                                           = 0x876E;
-        inline static var GL_VERTEX_STREAM2_ATI                                           = 0x876F;
-        inline static var GL_VERTEX_STREAM3_ATI                                           = 0x8770;
-        inline static var GL_VERTEX_STREAM4_ATI                                           = 0x8771;
-        inline static var GL_VERTEX_STREAM5_ATI                                           = 0x8772;
-        inline static var GL_VERTEX_STREAM6_ATI                                           = 0x8773;
-        inline static var GL_VERTEX_STREAM7_ATI                                           = 0x8774;
-
-
-
-
-    // GL_ATI_vertex_streams functions
-
-        @:native('glClientActiveVertexStreamATI')
-        static function glClientActiveVertexStreamATI(stream:Int) : Void;
-
-        @:native('glNormalStream3bATI')
-        static function glNormalStream3bATI(stream:Int, x:String, y:String, z:String) : Void;
-
-        @:native('glNormalStream3dATI')
-        static function glNormalStream3dATI(stream:Int, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glNormalStream3fATI')
-        static function glNormalStream3fATI(stream:Int, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glNormalStream3iATI')
-        static function glNormalStream3iATI(stream:Int, x:Int, y:Int, z:Int) : Void;
-
-        @:native('glNormalStream3sATI')
-        static function glNormalStream3sATI(stream:Int, x:Int, y:Int, z:Int) : Void;
-
-        @:native('glVertexBlendEnvfATI')
-        static function glVertexBlendEnvfATI(pname:Int, param:Float) : Void;
-
-        @:native('glVertexBlendEnviATI')
-        static function glVertexBlendEnviATI(pname:Int, param:Int) : Void;
-
-        @:native('glVertexStream1dATI')
-        static function glVertexStream1dATI(stream:Int, x:Float) : Void;
-
-        @:native('glVertexStream1fATI')
-        static function glVertexStream1fATI(stream:Int, x:Float) : Void;
-
-        @:native('glVertexStream1iATI')
-        static function glVertexStream1iATI(stream:Int, x:Int) : Void;
-
-        @:native('glVertexStream1sATI')
-        static function glVertexStream1sATI(stream:Int, x:Int) : Void;
-
-        @:native('glVertexStream2dATI')
-        static function glVertexStream2dATI(stream:Int, x:Float, y:Float) : Void;
-
-        @:native('glVertexStream2fATI')
-        static function glVertexStream2fATI(stream:Int, x:Float, y:Float) : Void;
-
-        @:native('glVertexStream2iATI')
-        static function glVertexStream2iATI(stream:Int, x:Int, y:Int) : Void;
-
-        @:native('glVertexStream2sATI')
-        static function glVertexStream2sATI(stream:Int, x:Int, y:Int) : Void;
-
-        @:native('glVertexStream3dATI')
-        static function glVertexStream3dATI(stream:Int, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glVertexStream3fATI')
-        static function glVertexStream3fATI(stream:Int, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glVertexStream3iATI')
-        static function glVertexStream3iATI(stream:Int, x:Int, y:Int, z:Int) : Void;
-
-        @:native('glVertexStream3sATI')
-        static function glVertexStream3sATI(stream:Int, x:Int, y:Int, z:Int) : Void;
-
-        @:native('glVertexStream4dATI')
-        static function glVertexStream4dATI(stream:Int, x:Float, y:Float, z:Float, w:Float) : Void;
-
-        @:native('glVertexStream4fATI')
-        static function glVertexStream4fATI(stream:Int, x:Float, y:Float, z:Float, w:Float) : Void;
-
-        @:native('glVertexStream4iATI')
-        static function glVertexStream4iATI(stream:Int, x:Int, y:Int, z:Int, w:Int) : Void;
-
-        @:native('glVertexStream4sATI')
-        static function glVertexStream4sATI(stream:Int, x:Int, y:Int, z:Int, w:Int) : Void;
-
-
-        inline static function glNormalStream3bvATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glNormalStream3bvATI({0}, (const GLbyte*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glNormalStream3dvATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glNormalStream3dvATI({0}, (const GLdouble*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glNormalStream3fvATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glNormalStream3fvATI({0}, (const GLfloat*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glNormalStream3ivATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glNormalStream3ivATI({0}, (const GLint*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glNormalStream3svATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glNormalStream3svATI({0}, (const GLshort*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream1dvATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream1dvATI({0}, (const GLdouble*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream1fvATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream1fvATI({0}, (const GLfloat*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream1ivATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream1ivATI({0}, (const GLint*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream1svATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream1svATI({0}, (const GLshort*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream2dvATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream2dvATI({0}, (const GLdouble*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream2fvATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream2fvATI({0}, (const GLfloat*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream2ivATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream2ivATI({0}, (const GLint*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream2svATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream2svATI({0}, (const GLshort*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream3dvATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream3dvATI({0}, (const GLdouble*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream3fvATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream3fvATI({0}, (const GLfloat*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream3ivATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream3ivATI({0}, (const GLint*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream3svATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream3svATI({0}, (const GLshort*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream4dvATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream4dvATI({0}, (const GLdouble*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream4fvATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream4fvATI({0}, (const GLfloat*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream4ivATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream4ivATI({0}, (const GLint*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-        inline static function glVertexStream4svATI(stream:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glVertexStream4svATI({0}, (const GLshort*)&{2}[0] + {1})", stream, bOffset, coords); }
-
-
-
-
-//GL_EXT_422_pixels
-
-    // GL_EXT_422_pixels defines
-
-        inline static var GL_EXT_422_pixels                                               = 1;
-        inline static var GL_422_EXT                                                      = 0x80CC;
-        inline static var GL_422_REV_EXT                                                  = 0x80CD;
-        inline static var GL_422_AVERAGE_EXT                                              = 0x80CE;
-        inline static var GL_422_REV_AVERAGE_EXT                                          = 0x80CF;
-
-
-//GL_EXT_Cg_shader
-
-    // GL_EXT_Cg_shader defines
-
-        inline static var GL_EXT_Cg_shader                                                = 1;
-        inline static var GL_CG_VERTEX_SHADER_EXT                                         = 0x890E;
-        inline static var GL_CG_FRAGMENT_SHADER_EXT                                       = 0x890F;
-
-
-//GL_EXT_abgr
-
-    // GL_EXT_abgr defines
-
-        inline static var GL_EXT_abgr                                                     = 1;
-        inline static var GL_ABGR_EXT                                                     = 0x8000;
-
-
-//GL_EXT_bgra
-
-    // GL_EXT_bgra defines
-
-        inline static var GL_EXT_bgra                                                     = 1;
-        inline static var GL_BGR_EXT                                                      = 0x80E0;
-        inline static var GL_BGRA_EXT                                                     = 0x80E1;
-
-
-//GL_EXT_bindable_uniform
-
-    // GL_EXT_bindable_uniform defines
-
-        inline static var GL_EXT_bindable_uniform                                         = 1;
-        inline static var GL_MAX_VERTEX_BINDABLE_UNIFORMS_EXT                             = 0x8DE2;
-        inline static var GL_MAX_FRAGMENT_BINDABLE_UNIFORMS_EXT                           = 0x8DE3;
-        inline static var GL_MAX_GEOMETRY_BINDABLE_UNIFORMS_EXT                           = 0x8DE4;
-        inline static var GL_MAX_BINDABLE_UNIFORM_SIZE_EXT                                = 0x8DED;
-        inline static var GL_UNIFORM_BUFFER_EXT                                           = 0x8DEE;
-        inline static var GL_UNIFORM_BUFFER_BINDING_EXT                                   = 0x8DEF;
-
-
-
-
-    // GL_EXT_bindable_uniform functions
-
-        @:native('glGetUniformBufferSizeEXT')
-        static function glGetUniformBufferSizeEXT(program:UInt, location:Int) : Int;
-
-        @:native('glGetUniformOffsetEXT')
-        static function glGetUniformOffsetEXT(program:UInt, location:Int) : Int;
-
-        @:native('glUniformBufferEXT')
-        static function glUniformBufferEXT(program:UInt, location:Int, buffer:UInt) : Void;
-
-
-
-
-
-//GL_EXT_blend_color
-
-    // GL_EXT_blend_color defines
-
-        inline static var GL_EXT_blend_color                                              = 1;
-        inline static var GL_CONSTANT_COLOR_EXT                                           = 0x8001;
-        inline static var GL_ONE_MINUS_CONSTANT_COLOR_EXT                                 = 0x8002;
-        inline static var GL_CONSTANT_ALPHA_EXT                                           = 0x8003;
-        inline static var GL_ONE_MINUS_CONSTANT_ALPHA_EXT                                 = 0x8004;
-        inline static var GL_BLEND_COLOR_EXT                                              = 0x8005;
-
-
-
-
-    // GL_EXT_blend_color functions
-
-        @:native('glBlendColorEXT')
-        static function glBlendColorEXT(red:Float, green:Float, blue:Float, alpha:Float) : Void;
-
-
-
-
-
-//GL_EXT_blend_equation_separate
-
-    // GL_EXT_blend_equation_separate defines
-
-        inline static var GL_EXT_blend_equation_separate                                  = 1;
-        inline static var GL_BLEND_EQUATION_RGB_EXT                                       = 0x8009;
-        inline static var GL_BLEND_EQUATION_ALPHA_EXT                                     = 0x883D;
-
-
-
-
-    // GL_EXT_blend_equation_separate functions
-
-        @:native('glBlendEquationSeparateEXT')
-        static function glBlendEquationSeparateEXT(modeRGB:Int, modeAlpha:Int) : Void;
-
-
-
-
-
-//GL_EXT_blend_func_separate
-
-    // GL_EXT_blend_func_separate defines
-
-        inline static var GL_EXT_blend_func_separate                                      = 1;
-        inline static var GL_BLEND_DST_RGB_EXT                                            = 0x80C8;
-        inline static var GL_BLEND_SRC_RGB_EXT                                            = 0x80C9;
-        inline static var GL_BLEND_DST_ALPHA_EXT                                          = 0x80CA;
-        inline static var GL_BLEND_SRC_ALPHA_EXT                                          = 0x80CB;
-
-
-
-
-    // GL_EXT_blend_func_separate functions
-
-        @:native('glBlendFuncSeparateEXT')
-        static function glBlendFuncSeparateEXT(sfactorRGB:Int, dfactorRGB:Int, sfactorAlpha:Int, dfactorAlpha:Int) : Void;
-
-
-
-
-
-//GL_EXT_blend_logic_op
-
-    // GL_EXT_blend_logic_op defines
-
-        inline static var GL_EXT_blend_logic_op                                           = 1;
-
-
-//GL_EXT_blend_minmax
-
-    // GL_EXT_blend_minmax defines
-
-        inline static var GL_EXT_blend_minmax                                             = 1;
-        inline static var GL_FUNC_ADD_EXT                                                 = 0x8006;
-        inline static var GL_MIN_EXT                                                      = 0x8007;
-        inline static var GL_MAX_EXT                                                      = 0x8008;
-        inline static var GL_BLEND_EQUATION_EXT                                           = 0x8009;
-
-
-
-
-    // GL_EXT_blend_minmax functions
-
-        @:native('glBlendEquationEXT')
-        static function glBlendEquationEXT(mode:Int) : Void;
-
-
-
-
-
-//GL_EXT_blend_subtract
-
-    // GL_EXT_blend_subtract defines
-
-        inline static var GL_EXT_blend_subtract                                           = 1;
-        inline static var GL_FUNC_SUBTRACT_EXT                                            = 0x800A;
-        inline static var GL_FUNC_REVERSE_SUBTRACT_EXT                                    = 0x800B;
-
-
-//GL_EXT_clip_volume_hint
-
-    // GL_EXT_clip_volume_hint defines
-
-        inline static var GL_EXT_clip_volume_hint                                         = 1;
-        inline static var GL_CLIP_VOLUME_CLIPPING_HINT_EXT                                = 0x80F0;
-
-
-//GL_EXT_cmyka
-
-    // GL_EXT_cmyka defines
-
-        inline static var GL_EXT_cmyka                                                    = 1;
-        inline static var GL_CMYK_EXT                                                     = 0x800C;
-        inline static var GL_CMYKA_EXT                                                    = 0x800D;
-        inline static var GL_PACK_CMYK_HINT_EXT                                           = 0x800E;
-        inline static var GL_UNPACK_CMYK_HINT_EXT                                         = 0x800F;
-
-
-//GL_EXT_color_subtable
-
-    // GL_EXT_color_subtable defines
-
-        inline static var GL_EXT_color_subtable                                           = 1;
-
-
-
-
-    // GL_EXT_color_subtable functions
-
-        @:native('glCopyColorSubTableEXT')
-        static function glCopyColorSubTableEXT(target:Int, start:Int, x:Int, y:Int, width:Int) : Void;
-
-
-        inline static function glColorSubTableEXT(target:Int, start:Int, count:Int, format:Int, type:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glColorSubTableEXT({0}, {1}, {2}, {3}, {4}, (const void*)&{6}[0] + {5})", target, start, count, format, type, bOffset, data); }
-
-
-
-
-//GL_EXT_compiled_vertex_array
-
-    // GL_EXT_compiled_vertex_array defines
-
-        inline static var GL_EXT_compiled_vertex_array                                    = 1;
-        inline static var GL_ARRAY_ELEMENT_LOCK_FIRST_EXT                                 = 0x81A8;
-        inline static var GL_ARRAY_ELEMENT_LOCK_COUNT_EXT                                 = 0x81A9;
-
-
-
-
-    // GL_EXT_compiled_vertex_array functions
-
-        @:native('glLockArraysEXT')
-        static function glLockArraysEXT(first:Int, count:Int) : Void;
-
-        @:native('glUnlockArraysEXT')
-        static function glUnlockArraysEXT() : Void;
-
-
-
-
-
-//GL_EXT_convolution
-
-    // GL_EXT_convolution defines
-
-        inline static var GL_EXT_convolution                                              = 1;
-        inline static var GL_CONVOLUTION_1D_EXT                                           = 0x8010;
-        inline static var GL_CONVOLUTION_2D_EXT                                           = 0x8011;
-        inline static var GL_SEPARABLE_2D_EXT                                             = 0x8012;
-        inline static var GL_CONVOLUTION_BORDER_MODE_EXT                                  = 0x8013;
-        inline static var GL_CONVOLUTION_FILTER_SCALE_EXT                                 = 0x8014;
-        inline static var GL_CONVOLUTION_FILTER_BIAS_EXT                                  = 0x8015;
-        inline static var GL_REDUCE_EXT                                                   = 0x8016;
-        inline static var GL_CONVOLUTION_FORMAT_EXT                                       = 0x8017;
-        inline static var GL_CONVOLUTION_WIDTH_EXT                                        = 0x8018;
-        inline static var GL_CONVOLUTION_HEIGHT_EXT                                       = 0x8019;
-        inline static var GL_MAX_CONVOLUTION_WIDTH_EXT                                    = 0x801A;
-        inline static var GL_MAX_CONVOLUTION_HEIGHT_EXT                                   = 0x801B;
-        inline static var GL_POST_CONVOLUTION_RED_SCALE_EXT                               = 0x801C;
-        inline static var GL_POST_CONVOLUTION_GREEN_SCALE_EXT                             = 0x801D;
-        inline static var GL_POST_CONVOLUTION_BLUE_SCALE_EXT                              = 0x801E;
-        inline static var GL_POST_CONVOLUTION_ALPHA_SCALE_EXT                             = 0x801F;
-        inline static var GL_POST_CONVOLUTION_RED_BIAS_EXT                                = 0x8020;
-        inline static var GL_POST_CONVOLUTION_GREEN_BIAS_EXT                              = 0x8021;
-        inline static var GL_POST_CONVOLUTION_BLUE_BIAS_EXT                               = 0x8022;
-        inline static var GL_POST_CONVOLUTION_ALPHA_BIAS_EXT                              = 0x8023;
-
-
-
-
-    // GL_EXT_convolution functions
-
-        @:native('glConvolutionParameterfEXT')
-        static function glConvolutionParameterfEXT(target:Int, pname:Int, param:Float) : Void;
-
-        @:native('glConvolutionParameteriEXT')
-        static function glConvolutionParameteriEXT(target:Int, pname:Int, param:Int) : Void;
-
-        @:native('glCopyConvolutionFilter1DEXT')
-        static function glCopyConvolutionFilter1DEXT(target:Int, internalformat:Int, x:Int, y:Int, width:Int) : Void;
-
-        @:native('glCopyConvolutionFilter2DEXT')
-        static function glCopyConvolutionFilter2DEXT(target:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-
-        inline static function glConvolutionFilter1DEXT(target:Int, internalformat:Int, width:Int, format:Int, type:Int, ?bOffset:Int=0, image:BytesData) : Void
-          { untyped __cpp__("glConvolutionFilter1DEXT({0}, {1}, {2}, {3}, {4}, (const void*)&{6}[0] + {5})", target, internalformat, width, format, type, bOffset, image); }
-
-        inline static function glConvolutionFilter2DEXT(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, ?bOffset:Int=0, image:BytesData) : Void
-          { untyped __cpp__("glConvolutionFilter2DEXT({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6})", target, internalformat, width, height, format, type, bOffset, image); }
-
-        inline static function glConvolutionParameterfvEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glConvolutionParameterfvEXT({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glConvolutionParameterivEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glConvolutionParameterivEXT({0}, {1}, (const GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glGetConvolutionFilterEXT(target:Int, format:Int, type:Int, ?bOffset:Int=0, image:BytesData) : Void
-          { untyped __cpp__("glGetConvolutionFilterEXT({0}, {1}, {2}, (void*)&{4}[0] + {3})", target, format, type, bOffset, image); }
-
-        inline static function glGetConvolutionParameterfvEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetConvolutionParameterfvEXT({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glGetConvolutionParameterivEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetConvolutionParameterivEXT({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glGetSeparableFilterEXT(target:Int, format:Int, type:Int, ?bOffset:Int=0, row:BytesData, ?bOffset:Int=0, column:BytesData, ?bOffset:Int=0, span:BytesData) : Void
-          { untyped __cpp__("glGetSeparableFilterEXT({0}, {1}, {2}, (void*)&{4}[0] + {3}, (void*)&{6}[0] + {5}, (void*)&{8}[0] + {7})", target, format, type, bOffset, row, bOffset, column, bOffset, span); }
-
-        inline static function glSeparableFilter2DEXT(target:Int, internalformat:Int, width:Int, height:Int, format:Int, type:Int, ?bOffset:Int=0, row:BytesData, ?bOffset:Int=0, column:BytesData) : Void
-          { untyped __cpp__("glSeparableFilter2DEXT({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6}, (const void*)&{9}[0] + {8})", target, internalformat, width, height, format, type, bOffset, row, bOffset, column); }
-
-
-
-
-//GL_EXT_coordinate_frame
-
-    // GL_EXT_coordinate_frame defines
-
-        inline static var GL_EXT_coordinate_frame                                         = 1;
-        inline static var GL_TANGENT_ARRAY_EXT                                            = 0x8439;
-        inline static var GL_BINORMAL_ARRAY_EXT                                           = 0x843A;
-        inline static var GL_CURRENT_TANGENT_EXT                                          = 0x843B;
-        inline static var GL_CURRENT_BINORMAL_EXT                                         = 0x843C;
-        inline static var GL_TANGENT_ARRAY_TYPE_EXT                                       = 0x843E;
-        inline static var GL_TANGENT_ARRAY_STRIDE_EXT                                     = 0x843F;
-        inline static var GL_BINORMAL_ARRAY_TYPE_EXT                                      = 0x8440;
-        inline static var GL_BINORMAL_ARRAY_STRIDE_EXT                                    = 0x8441;
-        inline static var GL_TANGENT_ARRAY_POINTER_EXT                                    = 0x8442;
-        inline static var GL_BINORMAL_ARRAY_POINTER_EXT                                   = 0x8443;
-        inline static var GL_MAP1_TANGENT_EXT                                             = 0x8444;
-        inline static var GL_MAP2_TANGENT_EXT                                             = 0x8445;
-        inline static var GL_MAP1_BINORMAL_EXT                                            = 0x8446;
-        inline static var GL_MAP2_BINORMAL_EXT                                            = 0x8447;
-
-
-
-
-    // GL_EXT_coordinate_frame functions
-
-
-        inline static function glBinormalPointerEXT(type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glBinormalPointerEXT({0}, {1}, (void*)&{3}[0] + {2})", type, stride, bOffset, pointer); }
-
-        inline static function glTangentPointerEXT(type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glTangentPointerEXT({0}, {1}, (void*)&{3}[0] + {2})", type, stride, bOffset, pointer); }
-
-
-
-
-//GL_EXT_copy_texture
-
-    // GL_EXT_copy_texture defines
-
-        inline static var GL_EXT_copy_texture                                             = 1;
-
-
-
-
-    // GL_EXT_copy_texture functions
-
-        @:native('glCopyTexImage1DEXT')
-        static function glCopyTexImage1DEXT(target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, border:Int) : Void;
-
-        @:native('glCopyTexImage2DEXT')
-        static function glCopyTexImage2DEXT(target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int, border:Int) : Void;
-
-        @:native('glCopyTexSubImage1DEXT')
-        static function glCopyTexSubImage1DEXT(target:Int, level:Int, xoffset:Int, x:Int, y:Int, width:Int) : Void;
-
-        @:native('glCopyTexSubImage2DEXT')
-        static function glCopyTexSubImage2DEXT(target:Int, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-        @:native('glCopyTexSubImage3DEXT')
-        static function glCopyTexSubImage3DEXT(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-
-
-
-
-//GL_EXT_cull_vertex
-
-    // GL_EXT_cull_vertex defines
-
-        inline static var GL_EXT_cull_vertex                                              = 1;
-        inline static var GL_CULL_VERTEX_EXT                                              = 0x81AA;
-        inline static var GL_CULL_VERTEX_EYE_POSITION_EXT                                 = 0x81AB;
-        inline static var GL_CULL_VERTEX_OBJECT_POSITION_EXT                              = 0x81AC;
-
-
-
-
-    // GL_EXT_cull_vertex functions
-
-
-        inline static function glCullParameterdvEXT(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glCullParameterdvEXT({0}, (GLdouble*)&{2}[0] + {1})", pname, bOffset, params); }
-
-        inline static function glCullParameterfvEXT(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glCullParameterfvEXT({0}, (GLfloat*)&{2}[0] + {1})", pname, bOffset, params); }
-
-
-
-
-//GL_EXT_debug_label
-
-    // GL_EXT_debug_label defines
-
-        inline static var GL_EXT_debug_label                                              = 1;
-        inline static var GL_PROGRAM_PIPELINE_OBJECT_EXT                                  = 0x8A4F;
-        inline static var GL_PROGRAM_OBJECT_EXT                                           = 0x8B40;
-        inline static var GL_SHADER_OBJECT_EXT                                            = 0x8B48;
-        inline static var GL_BUFFER_OBJECT_EXT                                            = 0x9151;
-        inline static var GL_QUERY_OBJECT_EXT                                             = 0x9153;
-        inline static var GL_VERTEX_ARRAY_OBJECT_EXT                                      = 0x9154;
-
-
-
-
-    // GL_EXT_debug_label functions
-
-        @:native('glLabelObjectEXT')
-        static function glLabelObjectEXT(type:Int, object:UInt, length:Int, label:String) : Void;
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetObjectLabelEXT')
-        // static function glGetObjectLabelEXT(type:Int, object:UInt, bufSize:Int, length:GLsizei*, label:String) : Void;
-
-
-//GL_EXT_debug_marker
-
-    // GL_EXT_debug_marker defines
-
-        inline static var GL_EXT_debug_marker                                             = 1;
-
-
-
-
-    // GL_EXT_debug_marker functions
-
-        @:native('glInsertEventMarkerEXT')
-        static function glInsertEventMarkerEXT(length:Int, marker:String) : Void;
-
-        @:native('glPopGroupMarkerEXT')
-        static function glPopGroupMarkerEXT() : Void;
-
-        @:native('glPushGroupMarkerEXT')
-        static function glPushGroupMarkerEXT(length:Int, marker:String) : Void;
-
-
-
-
-
-//GL_EXT_depth_bounds_test
-
-    // GL_EXT_depth_bounds_test defines
-
-        inline static var GL_EXT_depth_bounds_test                                        = 1;
-        inline static var GL_DEPTH_BOUNDS_TEST_EXT                                        = 0x8890;
-        inline static var GL_DEPTH_BOUNDS_EXT                                             = 0x8891;
-
-
-
-
-    // GL_EXT_depth_bounds_test functions
-
-        @:native('glDepthBoundsEXT')
-        static function glDepthBoundsEXT(zmin:Float, zmax:Float) : Void;
-
-
-
-
-
-//GL_EXT_direct_state_access
-
-    // GL_EXT_direct_state_access defines
-
-        inline static var GL_EXT_direct_state_access                                      = 1;
-        inline static var GL_PROGRAM_MATRIX_EXT                                           = 0x8E2D;
-        inline static var GL_TRANSPOSE_PROGRAM_MATRIX_EXT                                 = 0x8E2E;
-        inline static var GL_PROGRAM_MATRIX_STACK_DEPTH_EXT                               = 0x8E2F;
-
-
-
-
-    // GL_EXT_direct_state_access functions
-
-        @:native('glBindMultiTextureEXT')
-        static function glBindMultiTextureEXT(texunit:Int, target:Int, texture:UInt) : Void;
-
-        @:native('glCheckNamedFramebufferStatusEXT')
-        static function glCheckNamedFramebufferStatusEXT(framebuffer:UInt, target:Int) : Int;
-
-        @:native('glClientAttribDefaultEXT')
-        static function glClientAttribDefaultEXT(mask:Int) : Void;
-
-        @:native('glCopyMultiTexImage1DEXT')
-        static function glCopyMultiTexImage1DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, border:Int) : Void;
-
-        @:native('glCopyMultiTexImage2DEXT')
-        static function glCopyMultiTexImage2DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int, border:Int) : Void;
-
-        @:native('glCopyMultiTexSubImage1DEXT')
-        static function glCopyMultiTexSubImage1DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, x:Int, y:Int, width:Int) : Void;
-
-        @:native('glCopyMultiTexSubImage2DEXT')
-        static function glCopyMultiTexSubImage2DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-        @:native('glCopyMultiTexSubImage3DEXT')
-        static function glCopyMultiTexSubImage3DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-        @:native('glCopyTextureImage1DEXT')
-        static function glCopyTextureImage1DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, border:Int) : Void;
-
-        @:native('glCopyTextureImage2DEXT')
-        static function glCopyTextureImage2DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int, border:Int) : Void;
-
-        @:native('glCopyTextureSubImage1DEXT')
-        static function glCopyTextureSubImage1DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, x:Int, y:Int, width:Int) : Void;
-
-        @:native('glCopyTextureSubImage2DEXT')
-        static function glCopyTextureSubImage2DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-        @:native('glCopyTextureSubImage3DEXT')
-        static function glCopyTextureSubImage3DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, x:Int, y:Int, width:Int, height:Int) : Void;
-
-        @:native('glDisableClientStateIndexedEXT')
-        static function glDisableClientStateIndexedEXT(array:Int, index:UInt) : Void;
-
-        @:native('glDisableClientStateiEXT')
-        static function glDisableClientStateiEXT(array:Int, index:UInt) : Void;
-
-        @:native('glDisableVertexArrayAttribEXT')
-        static function glDisableVertexArrayAttribEXT(vaobj:UInt, index:UInt) : Void;
-
-        @:native('glDisableVertexArrayEXT')
-        static function glDisableVertexArrayEXT(vaobj:UInt, array:Int) : Void;
-
-        @:native('glEnableClientStateIndexedEXT')
-        static function glEnableClientStateIndexedEXT(array:Int, index:UInt) : Void;
-
-        @:native('glEnableClientStateiEXT')
-        static function glEnableClientStateiEXT(array:Int, index:UInt) : Void;
-
-        @:native('glEnableVertexArrayAttribEXT')
-        static function glEnableVertexArrayAttribEXT(vaobj:UInt, index:UInt) : Void;
-
-        @:native('glEnableVertexArrayEXT')
-        static function glEnableVertexArrayEXT(vaobj:UInt, array:Int) : Void;
-
-        @:native('glFlushMappedNamedBufferRangeEXT')
-        static function glFlushMappedNamedBufferRangeEXT(buffer:UInt, offset:Int, length:Int) : Void;
-
-        @:native('glFramebufferDrawBufferEXT')
-        static function glFramebufferDrawBufferEXT(framebuffer:UInt, mode:Int) : Void;
-
-        @:native('glFramebufferReadBufferEXT')
-        static function glFramebufferReadBufferEXT(framebuffer:UInt, mode:Int) : Void;
-
-        @:native('glGenerateMultiTexMipmapEXT')
-        static function glGenerateMultiTexMipmapEXT(texunit:Int, target:Int) : Void;
-
-        @:native('glGenerateTextureMipmapEXT')
-        static function glGenerateTextureMipmapEXT(texture:UInt, target:Int) : Void;
-
-        @:native('glMatrixFrustumEXT')
-        static function glMatrixFrustumEXT(matrixMode:Int, l:Float, r:Float, b:Float, t:Float, n:Float, f:Float) : Void;
-
-        @:native('glMatrixLoadIdentityEXT')
-        static function glMatrixLoadIdentityEXT(matrixMode:Int) : Void;
-
-        @:native('glMatrixOrthoEXT')
-        static function glMatrixOrthoEXT(matrixMode:Int, l:Float, r:Float, b:Float, t:Float, n:Float, f:Float) : Void;
-
-        @:native('glMatrixPopEXT')
-        static function glMatrixPopEXT(matrixMode:Int) : Void;
-
-        @:native('glMatrixPushEXT')
-        static function glMatrixPushEXT(matrixMode:Int) : Void;
-
-        @:native('glMatrixRotatedEXT')
-        static function glMatrixRotatedEXT(matrixMode:Int, angle:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glMatrixRotatefEXT')
-        static function glMatrixRotatefEXT(matrixMode:Int, angle:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glMatrixScaledEXT')
-        static function glMatrixScaledEXT(matrixMode:Int, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glMatrixScalefEXT')
-        static function glMatrixScalefEXT(matrixMode:Int, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glMatrixTranslatedEXT')
-        static function glMatrixTranslatedEXT(matrixMode:Int, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glMatrixTranslatefEXT')
-        static function glMatrixTranslatefEXT(matrixMode:Int, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glMultiTexBufferEXT')
-        static function glMultiTexBufferEXT(texunit:Int, target:Int, internalformat:Int, buffer:UInt) : Void;
-
-        @:native('glMultiTexEnvfEXT')
-        static function glMultiTexEnvfEXT(texunit:Int, target:Int, pname:Int, param:Float) : Void;
-
-        @:native('glMultiTexEnviEXT')
-        static function glMultiTexEnviEXT(texunit:Int, target:Int, pname:Int, param:Int) : Void;
-
-        @:native('glMultiTexGendEXT')
-        static function glMultiTexGendEXT(texunit:Int, coord:Int, pname:Int, param:Float) : Void;
-
-        @:native('glMultiTexGenfEXT')
-        static function glMultiTexGenfEXT(texunit:Int, coord:Int, pname:Int, param:Float) : Void;
-
-        @:native('glMultiTexGeniEXT')
-        static function glMultiTexGeniEXT(texunit:Int, coord:Int, pname:Int, param:Int) : Void;
-
-        @:native('glMultiTexParameterfEXT')
-        static function glMultiTexParameterfEXT(texunit:Int, target:Int, pname:Int, param:Float) : Void;
-
-        @:native('glMultiTexParameteriEXT')
-        static function glMultiTexParameteriEXT(texunit:Int, target:Int, pname:Int, param:Int) : Void;
-
-        @:native('glMultiTexRenderbufferEXT')
-        static function glMultiTexRenderbufferEXT(texunit:Int, target:Int, renderbuffer:UInt) : Void;
-
-        @:native('glNamedCopyBufferSubDataEXT')
-        static function glNamedCopyBufferSubDataEXT(readBuffer:UInt, writeBuffer:UInt, readOffset:Int, writeOffset:Int, size:Int) : Void;
-
-        @:native('glNamedFramebufferRenderbufferEXT')
-        static function glNamedFramebufferRenderbufferEXT(framebuffer:UInt, attachment:Int, renderbuffertarget:Int, renderbuffer:UInt) : Void;
-
-        @:native('glNamedFramebufferTexture1DEXT')
-        static function glNamedFramebufferTexture1DEXT(framebuffer:UInt, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;
-
-        @:native('glNamedFramebufferTexture2DEXT')
-        static function glNamedFramebufferTexture2DEXT(framebuffer:UInt, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;
-
-        @:native('glNamedFramebufferTexture3DEXT')
-        static function glNamedFramebufferTexture3DEXT(framebuffer:UInt, attachment:Int, textarget:Int, texture:UInt, level:Int, zoffset:Int) : Void;
-
-        @:native('glNamedFramebufferTextureEXT')
-        static function glNamedFramebufferTextureEXT(framebuffer:UInt, attachment:Int, texture:UInt, level:Int) : Void;
-
-        @:native('glNamedFramebufferTextureFaceEXT')
-        static function glNamedFramebufferTextureFaceEXT(framebuffer:UInt, attachment:Int, texture:UInt, level:Int, face:Int) : Void;
-
-        @:native('glNamedFramebufferTextureLayerEXT')
-        static function glNamedFramebufferTextureLayerEXT(framebuffer:UInt, attachment:Int, texture:UInt, level:Int, layer:Int) : Void;
-
-        @:native('glNamedProgramLocalParameter4dEXT')
-        static function glNamedProgramLocalParameter4dEXT(program:UInt, target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-        @:native('glNamedProgramLocalParameter4fEXT')
-        static function glNamedProgramLocalParameter4fEXT(program:UInt, target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-        @:native('glNamedProgramLocalParameterI4iEXT')
-        static function glNamedProgramLocalParameterI4iEXT(program:UInt, target:Int, index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
-
-        @:native('glNamedProgramLocalParameterI4uiEXT')
-        static function glNamedProgramLocalParameterI4uiEXT(program:UInt, target:Int, index:UInt, x:UInt, y:UInt, z:UInt, w:UInt) : Void;
-
-        @:native('glNamedRenderbufferStorageEXT')
-        static function glNamedRenderbufferStorageEXT(renderbuffer:UInt, internalformat:Int, width:Int, height:Int) : Void;
-
-        @:native('glNamedRenderbufferStorageMultisampleCoverageEXT')
-        static function glNamedRenderbufferStorageMultisampleCoverageEXT(renderbuffer:UInt, coverageSamples:Int, colorSamples:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-        @:native('glNamedRenderbufferStorageMultisampleEXT')
-        static function glNamedRenderbufferStorageMultisampleEXT(renderbuffer:UInt, samples:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-        @:native('glProgramUniform1fEXT')
-        static function glProgramUniform1fEXT(program:UInt, location:Int, v0:Float) : Void;
-
-        @:native('glProgramUniform1iEXT')
-        static function glProgramUniform1iEXT(program:UInt, location:Int, v0:Int) : Void;
-
-        @:native('glProgramUniform1uiEXT')
-        static function glProgramUniform1uiEXT(program:UInt, location:Int, v0:UInt) : Void;
-
-        @:native('glProgramUniform2fEXT')
-        static function glProgramUniform2fEXT(program:UInt, location:Int, v0:Float, v1:Float) : Void;
-
-        @:native('glProgramUniform2iEXT')
-        static function glProgramUniform2iEXT(program:UInt, location:Int, v0:Int, v1:Int) : Void;
-
-        @:native('glProgramUniform2uiEXT')
-        static function glProgramUniform2uiEXT(program:UInt, location:Int, v0:UInt, v1:UInt) : Void;
-
-        @:native('glProgramUniform3fEXT')
-        static function glProgramUniform3fEXT(program:UInt, location:Int, v0:Float, v1:Float, v2:Float) : Void;
-
-        @:native('glProgramUniform3iEXT')
-        static function glProgramUniform3iEXT(program:UInt, location:Int, v0:Int, v1:Int, v2:Int) : Void;
-
-        @:native('glProgramUniform3uiEXT')
-        static function glProgramUniform3uiEXT(program:UInt, location:Int, v0:UInt, v1:UInt, v2:UInt) : Void;
-
-        @:native('glProgramUniform4fEXT')
-        static function glProgramUniform4fEXT(program:UInt, location:Int, v0:Float, v1:Float, v2:Float, v3:Float) : Void;
-
-        @:native('glProgramUniform4iEXT')
-        static function glProgramUniform4iEXT(program:UInt, location:Int, v0:Int, v1:Int, v2:Int, v3:Int) : Void;
-
-        @:native('glProgramUniform4uiEXT')
-        static function glProgramUniform4uiEXT(program:UInt, location:Int, v0:UInt, v1:UInt, v2:UInt, v3:UInt) : Void;
-
-        @:native('glPushClientAttribDefaultEXT')
-        static function glPushClientAttribDefaultEXT(mask:Int) : Void;
-
-        @:native('glTextureBufferEXT')
-        static function glTextureBufferEXT(texture:UInt, target:Int, internalformat:Int, buffer:UInt) : Void;
-
-        @:native('glTextureParameterfEXT')
-        static function glTextureParameterfEXT(texture:UInt, target:Int, pname:Int, param:Float) : Void;
-
-        @:native('glTextureParameteriEXT')
-        static function glTextureParameteriEXT(texture:UInt, target:Int, pname:Int, param:Int) : Void;
-
-        @:native('glTextureRenderbufferEXT')
-        static function glTextureRenderbufferEXT(texture:UInt, target:Int, renderbuffer:UInt) : Void;
-
-        @:native('glUnmapNamedBufferEXT')
-        static function glUnmapNamedBufferEXT(buffer:UInt) : Bool;
-
-        @:native('glVertexArrayColorOffsetEXT')
-        static function glVertexArrayColorOffsetEXT(vaobj:UInt, buffer:UInt, size:Int, type:Int, stride:Int, offset:Int) : Void;
-
-        @:native('glVertexArrayEdgeFlagOffsetEXT')
-        static function glVertexArrayEdgeFlagOffsetEXT(vaobj:UInt, buffer:UInt, stride:Int, offset:Int) : Void;
-
-        @:native('glVertexArrayFogCoordOffsetEXT')
-        static function glVertexArrayFogCoordOffsetEXT(vaobj:UInt, buffer:UInt, type:Int, stride:Int, offset:Int) : Void;
-
-        @:native('glVertexArrayIndexOffsetEXT')
-        static function glVertexArrayIndexOffsetEXT(vaobj:UInt, buffer:UInt, type:Int, stride:Int, offset:Int) : Void;
-
-        @:native('glVertexArrayMultiTexCoordOffsetEXT')
-        static function glVertexArrayMultiTexCoordOffsetEXT(vaobj:UInt, buffer:UInt, texunit:Int, size:Int, type:Int, stride:Int, offset:Int) : Void;
-
-        @:native('glVertexArrayNormalOffsetEXT')
-        static function glVertexArrayNormalOffsetEXT(vaobj:UInt, buffer:UInt, type:Int, stride:Int, offset:Int) : Void;
-
-        @:native('glVertexArraySecondaryColorOffsetEXT')
-        static function glVertexArraySecondaryColorOffsetEXT(vaobj:UInt, buffer:UInt, size:Int, type:Int, stride:Int, offset:Int) : Void;
-
-        @:native('glVertexArrayTexCoordOffsetEXT')
-        static function glVertexArrayTexCoordOffsetEXT(vaobj:UInt, buffer:UInt, size:Int, type:Int, stride:Int, offset:Int) : Void;
-
-        @:native('glVertexArrayVertexAttribDivisorEXT')
-        static function glVertexArrayVertexAttribDivisorEXT(vaobj:UInt, index:UInt, divisor:UInt) : Void;
-
-        @:native('glVertexArrayVertexAttribIOffsetEXT')
-        static function glVertexArrayVertexAttribIOffsetEXT(vaobj:UInt, buffer:UInt, index:UInt, size:Int, type:Int, stride:Int, offset:Int) : Void;
-
-        @:native('glVertexArrayVertexAttribOffsetEXT')
-        static function glVertexArrayVertexAttribOffsetEXT(vaobj:UInt, buffer:UInt, index:UInt, size:Int, type:Int, normalized:Bool, stride:Int, offset:Int) : Void;
-
-        @:native('glVertexArrayVertexOffsetEXT')
-        static function glVertexArrayVertexOffsetEXT(vaobj:UInt, buffer:UInt, size:Int, type:Int, stride:Int, offset:Int) : Void;
-
-
-        inline static function glCompressedMultiTexImage1DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedMultiTexImage1DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, (const void*)&{8}[0] + {7})", texunit, target, level, internalformat, width, border, imageSize, bOffset, data); }
-
-        inline static function glCompressedMultiTexImage2DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedMultiTexImage2DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", texunit, target, level, internalformat, width, height, border, imageSize, bOffset, data); }
-
-        inline static function glCompressedMultiTexImage3DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedMultiTexImage3DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const void*)&{10}[0] + {9})", texunit, target, level, internalformat, width, height, depth, border, imageSize, bOffset, data); }
-
-        inline static function glCompressedMultiTexSubImage1DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedMultiTexSubImage1DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, (const void*)&{8}[0] + {7})", texunit, target, level, xoffset, width, format, imageSize, bOffset, data); }
-
-        inline static function glCompressedMultiTexSubImage2DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedMultiTexSubImage2DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const void*)&{10}[0] + {9})", texunit, target, level, xoffset, yoffset, width, height, format, imageSize, bOffset, data); }
-
-        inline static function glCompressedMultiTexSubImage3DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedMultiTexSubImage3DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, (const void*)&{12}[0] + {11})", texunit, target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, bOffset, data); }
-
-        inline static function glCompressedTextureImage1DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, border:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTextureImage1DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, (const void*)&{8}[0] + {7})", texture, target, level, internalformat, width, border, imageSize, bOffset, data); }
-
-        inline static function glCompressedTextureImage2DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTextureImage2DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", texture, target, level, internalformat, width, height, border, imageSize, bOffset, data); }
-
-        inline static function glCompressedTextureImage3DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTextureImage3DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const void*)&{10}[0] + {9})", texture, target, level, internalformat, width, height, depth, border, imageSize, bOffset, data); }
-
-        inline static function glCompressedTextureSubImage1DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, width:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTextureSubImage1DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, (const void*)&{8}[0] + {7})", texture, target, level, xoffset, width, format, imageSize, bOffset, data); }
-
-        inline static function glCompressedTextureSubImage2DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTextureSubImage2DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const void*)&{10}[0] + {9})", texture, target, level, xoffset, yoffset, width, height, format, imageSize, bOffset, data); }
-
-        inline static function glCompressedTextureSubImage3DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, imageSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glCompressedTextureSubImage3DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, (const void*)&{12}[0] + {11})", texture, target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, bOffset, data); }
-
-        inline static function glFramebufferDrawBuffersEXT(framebuffer:UInt, n:Int, bufs:Array<Int>) : Void
-          { untyped __cpp__("glFramebufferDrawBuffersEXT({0}, {1}, (const GLenum*)&{2}[0])", framebuffer, n, bufs); }
-
-        inline static function glGetCompressedMultiTexImageEXT(texunit:Int, target:Int, level:Int, ?bOffset:Int=0, img:BytesData) : Void
-          { untyped __cpp__("glGetCompressedMultiTexImageEXT({0}, {1}, {2}, (void*)&{4}[0] + {3})", texunit, target, level, bOffset, img); }
-
-        inline static function glGetCompressedTextureImageEXT(texture:UInt, target:Int, level:Int, ?bOffset:Int=0, img:BytesData) : Void
-          { untyped __cpp__("glGetCompressedTextureImageEXT({0}, {1}, {2}, (void*)&{4}[0] + {3})", texture, target, level, bOffset, img); }
-
-        inline static function glGetDoubleIndexedvEXT(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetDoubleIndexedvEXT({0}, {1}, (GLdouble*)&{3}[0] + {2})", target, index, bOffset, params); }
-
-        inline static function glGetDoublei_vEXT(pname:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetDoublei_vEXT({0}, {1}, (GLdouble*)&{3}[0] + {2})", pname, index, bOffset, params); }
-
-        inline static function glGetFloatIndexedvEXT(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetFloatIndexedvEXT({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, index, bOffset, params); }
-
-        inline static function glGetFloati_vEXT(pname:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetFloati_vEXT({0}, {1}, (GLfloat*)&{3}[0] + {2})", pname, index, bOffset, params); }
-
-        inline static function glGetFramebufferParameterivEXT(framebuffer:UInt, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glGetFramebufferParameterivEXT({0}, {1}, (GLint*)&{3}[0] + {2})", framebuffer, pname, bOffset, param); }
-
-        inline static function glGetMultiTexEnvfvEXT(texunit:Int, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMultiTexEnvfvEXT({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", texunit, target, pname, bOffset, params); }
-
-        inline static function glGetMultiTexEnvivEXT(texunit:Int, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMultiTexEnvivEXT({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", texunit, target, pname, bOffset, params); }
-
-        inline static function glGetMultiTexGendvEXT(texunit:Int, coord:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMultiTexGendvEXT({0}, {1}, {2}, (GLdouble*)&{4}[0] + {3})", texunit, coord, pname, bOffset, params); }
-
-        inline static function glGetMultiTexGenfvEXT(texunit:Int, coord:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMultiTexGenfvEXT({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", texunit, coord, pname, bOffset, params); }
-
-        inline static function glGetMultiTexGenivEXT(texunit:Int, coord:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMultiTexGenivEXT({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", texunit, coord, pname, bOffset, params); }
-
-        inline static function glGetMultiTexImageEXT(texunit:Int, target:Int, level:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glGetMultiTexImageEXT({0}, {1}, {2}, {3}, {4}, (void*)&{6}[0] + {5})", texunit, target, level, format, type, bOffset, pixels); }
-
-        inline static function glGetMultiTexLevelParameterfvEXT(texunit:Int, target:Int, level:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMultiTexLevelParameterfvEXT({0}, {1}, {2}, {3}, (GLfloat*)&{5}[0] + {4})", texunit, target, level, pname, bOffset, params); }
-
-        inline static function glGetMultiTexLevelParameterivEXT(texunit:Int, target:Int, level:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMultiTexLevelParameterivEXT({0}, {1}, {2}, {3}, (GLint*)&{5}[0] + {4})", texunit, target, level, pname, bOffset, params); }
-
-        inline static function glGetMultiTexParameterIivEXT(texunit:Int, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMultiTexParameterIivEXT({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", texunit, target, pname, bOffset, params); }
-
-        inline static function glGetMultiTexParameterIuivEXT(texunit:Int, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMultiTexParameterIuivEXT({0}, {1}, {2}, (GLuint*)&{4}[0] + {3})", texunit, target, pname, bOffset, params); }
-
-        inline static function glGetMultiTexParameterfvEXT(texunit:Int, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMultiTexParameterfvEXT({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", texunit, target, pname, bOffset, params); }
-
-        inline static function glGetMultiTexParameterivEXT(texunit:Int, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMultiTexParameterivEXT({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", texunit, target, pname, bOffset, params); }
-
-        inline static function glGetNamedBufferParameterivEXT(buffer:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetNamedBufferParameterivEXT({0}, {1}, (GLint*)&{3}[0] + {2})", buffer, pname, bOffset, params); }
-
-        inline static function glGetNamedBufferSubDataEXT(buffer:UInt, offset:Int, size:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetNamedBufferSubDataEXT({0}, {1}, {2}, (void*)&{4}[0] + {3})", buffer, offset, size, bOffset, data); }
-
-        inline static function glGetNamedFramebufferAttachmentParameterivEXT(framebuffer:UInt, attachment:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetNamedFramebufferAttachmentParameterivEXT({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", framebuffer, attachment, pname, bOffset, params); }
-
-        inline static function glGetNamedProgramLocalParameterIivEXT(program:UInt, target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetNamedProgramLocalParameterIivEXT({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", program, target, index, bOffset, params); }
-
-        inline static function glGetNamedProgramLocalParameterIuivEXT(program:UInt, target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetNamedProgramLocalParameterIuivEXT({0}, {1}, {2}, (GLuint*)&{4}[0] + {3})", program, target, index, bOffset, params); }
-
-        inline static function glGetNamedProgramLocalParameterdvEXT(program:UInt, target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetNamedProgramLocalParameterdvEXT({0}, {1}, {2}, (GLdouble*)&{4}[0] + {3})", program, target, index, bOffset, params); }
-
-        inline static function glGetNamedProgramLocalParameterfvEXT(program:UInt, target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetNamedProgramLocalParameterfvEXT({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", program, target, index, bOffset, params); }
-
-        inline static function glGetNamedProgramStringEXT(program:UInt, target:Int, pname:Int, ?bOffset:Int=0, string:BytesData) : Void
-          { untyped __cpp__("glGetNamedProgramStringEXT({0}, {1}, {2}, (void*)&{4}[0] + {3})", program, target, pname, bOffset, string); }
-
-        inline static function glGetNamedProgramivEXT(program:UInt, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetNamedProgramivEXT({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", program, target, pname, bOffset, params); }
-
-        inline static function glGetNamedRenderbufferParameterivEXT(renderbuffer:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetNamedRenderbufferParameterivEXT({0}, {1}, (GLint*)&{3}[0] + {2})", renderbuffer, pname, bOffset, params); }
-
-        inline static function glGetTextureImageEXT(texture:UInt, target:Int, level:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glGetTextureImageEXT({0}, {1}, {2}, {3}, {4}, (void*)&{6}[0] + {5})", texture, target, level, format, type, bOffset, pixels); }
-
-        inline static function glGetTextureLevelParameterfvEXT(texture:UInt, target:Int, level:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTextureLevelParameterfvEXT({0}, {1}, {2}, {3}, (GLfloat*)&{5}[0] + {4})", texture, target, level, pname, bOffset, params); }
-
-        inline static function glGetTextureLevelParameterivEXT(texture:UInt, target:Int, level:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTextureLevelParameterivEXT({0}, {1}, {2}, {3}, (GLint*)&{5}[0] + {4})", texture, target, level, pname, bOffset, params); }
-
-        inline static function glGetTextureParameterIivEXT(texture:UInt, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTextureParameterIivEXT({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", texture, target, pname, bOffset, params); }
-
-        inline static function glGetTextureParameterIuivEXT(texture:UInt, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTextureParameterIuivEXT({0}, {1}, {2}, (GLuint*)&{4}[0] + {3})", texture, target, pname, bOffset, params); }
-
-        inline static function glGetTextureParameterfvEXT(texture:UInt, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTextureParameterfvEXT({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", texture, target, pname, bOffset, params); }
-
-        inline static function glGetTextureParameterivEXT(texture:UInt, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTextureParameterivEXT({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", texture, target, pname, bOffset, params); }
-
-        inline static function glGetVertexArrayIntegeri_vEXT(vaobj:UInt, index:UInt, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glGetVertexArrayIntegeri_vEXT({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", vaobj, index, pname, bOffset, param); }
-
-        inline static function glGetVertexArrayIntegervEXT(vaobj:UInt, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glGetVertexArrayIntegervEXT({0}, {1}, (GLint*)&{3}[0] + {2})", vaobj, pname, bOffset, param); }
-
-        inline static function glMatrixLoadTransposedEXT(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixLoadTransposedEXT({0}, (const GLdouble*)&{1}[0])", matrixMode, m); }
-
-        inline static function glMatrixLoadTransposefEXT(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixLoadTransposefEXT({0}, (const GLfloat*)&{1}[0])", matrixMode, m); }
-
-        inline static function glMatrixLoaddEXT(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixLoaddEXT({0}, (const GLdouble*)&{1}[0])", matrixMode, m); }
-
-        inline static function glMatrixLoadfEXT(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixLoadfEXT({0}, (const GLfloat*)&{1}[0])", matrixMode, m); }
-
-        inline static function glMatrixMultTransposedEXT(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixMultTransposedEXT({0}, (const GLdouble*)&{1}[0])", matrixMode, m); }
-
-        inline static function glMatrixMultTransposefEXT(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixMultTransposefEXT({0}, (const GLfloat*)&{1}[0])", matrixMode, m); }
-
-        inline static function glMatrixMultdEXT(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixMultdEXT({0}, (const GLdouble*)&{1}[0])", matrixMode, m); }
-
-        inline static function glMatrixMultfEXT(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixMultfEXT({0}, (const GLfloat*)&{1}[0])", matrixMode, m); }
-
-        inline static function glMultiTexCoordPointerEXT(texunit:Int, size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoordPointerEXT({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", texunit, size, type, stride, bOffset, pointer); }
-
-        inline static function glMultiTexEnvfvEXT(texunit:Int, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glMultiTexEnvfvEXT({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", texunit, target, pname, bOffset, params); }
-
-        inline static function glMultiTexEnvivEXT(texunit:Int, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glMultiTexEnvivEXT({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", texunit, target, pname, bOffset, params); }
-
-        inline static function glMultiTexGendvEXT(texunit:Int, coord:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glMultiTexGendvEXT({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", texunit, coord, pname, bOffset, params); }
-
-        inline static function glMultiTexGenfvEXT(texunit:Int, coord:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glMultiTexGenfvEXT({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", texunit, coord, pname, bOffset, params); }
-
-        inline static function glMultiTexGenivEXT(texunit:Int, coord:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glMultiTexGenivEXT({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", texunit, coord, pname, bOffset, params); }
-
-        inline static function glMultiTexImage1DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, border:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glMultiTexImage1DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", texunit, target, level, internalformat, width, border, format, type, bOffset, pixels); }
-
-        inline static function glMultiTexImage2DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glMultiTexImage2DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const void*)&{10}[0] + {9})", texunit, target, level, internalformat, width, height, border, format, type, bOffset, pixels); }
-
-        inline static function glMultiTexImage3DEXT(texunit:Int, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glMultiTexImage3DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&{11}[0] + {10})", texunit, target, level, internalformat, width, height, depth, border, format, type, bOffset, pixels); }
-
-        inline static function glMultiTexParameterIivEXT(texunit:Int, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glMultiTexParameterIivEXT({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", texunit, target, pname, bOffset, params); }
-
-        inline static function glMultiTexParameterIuivEXT(texunit:Int, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glMultiTexParameterIuivEXT({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", texunit, target, pname, bOffset, params); }
-
-        inline static function glMultiTexParameterfvEXT(texunit:Int, target:Int, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glMultiTexParameterfvEXT({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", texunit, target, pname, bOffset, param); }
-
-        inline static function glMultiTexParameterivEXT(texunit:Int, target:Int, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glMultiTexParameterivEXT({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", texunit, target, pname, bOffset, param); }
-
-        inline static function glMultiTexSubImage1DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glMultiTexSubImage1DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, (const void*)&{8}[0] + {7})", texunit, target, level, xoffset, width, format, type, bOffset, pixels); }
-
-        inline static function glMultiTexSubImage2DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glMultiTexSubImage2DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const void*)&{10}[0] + {9})", texunit, target, level, xoffset, yoffset, width, height, format, type, bOffset, pixels); }
-
-        inline static function glMultiTexSubImage3DEXT(texunit:Int, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glMultiTexSubImage3DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, (const void*)&{12}[0] + {11})", texunit, target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, bOffset, pixels); }
-
-        inline static function glNamedBufferDataEXT(buffer:UInt, size:Int, ?bOffset:Int=0, data:BytesData, usage:Int) : Void
-          { untyped __cpp__("glNamedBufferDataEXT({0}, {1}, (const void*)&{3}[0] + {2}, {4})", buffer, size, bOffset, data, usage); }
-
-        inline static function glNamedBufferSubDataEXT(buffer:UInt, offset:Int, size:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glNamedBufferSubDataEXT({0}, {1}, {2}, (const void*)&{4}[0] + {3})", buffer, offset, size, bOffset, data); }
-
-        inline static function glNamedProgramLocalParameter4dvEXT(program:UInt, target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glNamedProgramLocalParameter4dvEXT({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", program, target, index, bOffset, params); }
-
-        inline static function glNamedProgramLocalParameter4fvEXT(program:UInt, target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glNamedProgramLocalParameter4fvEXT({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", program, target, index, bOffset, params); }
-
-        inline static function glNamedProgramLocalParameterI4ivEXT(program:UInt, target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glNamedProgramLocalParameterI4ivEXT({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", program, target, index, bOffset, params); }
-
-        inline static function glNamedProgramLocalParameterI4uivEXT(program:UInt, target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glNamedProgramLocalParameterI4uivEXT({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", program, target, index, bOffset, params); }
-
-        inline static function glNamedProgramLocalParameters4fvEXT(program:UInt, target:Int, index:UInt, count:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glNamedProgramLocalParameters4fvEXT({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, target, index, count, bOffset, params); }
-
-        inline static function glNamedProgramLocalParametersI4ivEXT(program:UInt, target:Int, index:UInt, count:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glNamedProgramLocalParametersI4ivEXT({0}, {1}, {2}, {3}, (const GLint*)&{5}[0] + {4})", program, target, index, count, bOffset, params); }
-
-        inline static function glNamedProgramLocalParametersI4uivEXT(program:UInt, target:Int, index:UInt, count:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glNamedProgramLocalParametersI4uivEXT({0}, {1}, {2}, {3}, (const GLuint*)&{5}[0] + {4})", program, target, index, count, bOffset, params); }
-
-        inline static function glNamedProgramStringEXT(program:UInt, target:Int, format:Int, len:Int, ?bOffset:Int=0, string:BytesData) : Void
-          { untyped __cpp__("glNamedProgramStringEXT({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", program, target, format, len, bOffset, string); }
-
-        inline static function glProgramUniform1fvEXT(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform1fvEXT({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", program, location, count, bOffset, value); }
-
-        inline static function glProgramUniform1ivEXT(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform1ivEXT({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
-
-        inline static function glProgramUniform1uivEXT(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform1uivEXT({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
-
-        inline static function glProgramUniform2fvEXT(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform2fvEXT({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", program, location, count, bOffset, value); }
-
-        inline static function glProgramUniform2ivEXT(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform2ivEXT({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
-
-        inline static function glProgramUniform2uivEXT(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform2uivEXT({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
-
-        inline static function glProgramUniform3fvEXT(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform3fvEXT({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", program, location, count, bOffset, value); }
-
-        inline static function glProgramUniform3ivEXT(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform3ivEXT({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
-
-        inline static function glProgramUniform3uivEXT(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform3uivEXT({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
-
-        inline static function glProgramUniform4fvEXT(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform4fvEXT({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", program, location, count, bOffset, value); }
-
-        inline static function glProgramUniform4ivEXT(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform4ivEXT({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
-
-        inline static function glProgramUniform4uivEXT(program:UInt, location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniform4uivEXT({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", program, location, count, bOffset, value); }
-
-        inline static function glProgramUniformMatrix2fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix2fvEXT({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
-
-        inline static function glProgramUniformMatrix2x3fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix2x3fvEXT({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
-
-        inline static function glProgramUniformMatrix2x4fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix2x4fvEXT({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
-
-        inline static function glProgramUniformMatrix3fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix3fvEXT({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
-
-        inline static function glProgramUniformMatrix3x2fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix3x2fvEXT({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
-
-        inline static function glProgramUniformMatrix3x4fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix3x4fvEXT({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
-
-        inline static function glProgramUniformMatrix4fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix4fvEXT({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
-
-        inline static function glProgramUniformMatrix4x2fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix4x2fvEXT({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
-
-        inline static function glProgramUniformMatrix4x3fvEXT(program:UInt, location:Int, count:Int, transpose:Bool, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glProgramUniformMatrix4x3fvEXT({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", program, location, count, transpose, bOffset, value); }
-
-        inline static function glTextureImage1DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, border:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTextureImage1DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", texture, target, level, internalformat, width, border, format, type, bOffset, pixels); }
-
-        inline static function glTextureImage2DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTextureImage2DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const void*)&{10}[0] + {9})", texture, target, level, internalformat, width, height, border, format, type, bOffset, pixels); }
-
-        inline static function glTextureImage3DEXT(texture:UInt, target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTextureImage3DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&{11}[0] + {10})", texture, target, level, internalformat, width, height, depth, border, format, type, bOffset, pixels); }
-
-        inline static function glTextureParameterIivEXT(texture:UInt, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTextureParameterIivEXT({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", texture, target, pname, bOffset, params); }
-
-        inline static function glTextureParameterIuivEXT(texture:UInt, target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTextureParameterIuivEXT({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", texture, target, pname, bOffset, params); }
-
-        inline static function glTextureParameterfvEXT(texture:UInt, target:Int, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glTextureParameterfvEXT({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", texture, target, pname, bOffset, param); }
-
-        inline static function glTextureParameterivEXT(texture:UInt, target:Int, pname:Int, ?bOffset:Int=0, param:BytesData) : Void
-          { untyped __cpp__("glTextureParameterivEXT({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", texture, target, pname, bOffset, param); }
-
-        inline static function glTextureSubImage1DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTextureSubImage1DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, (const void*)&{8}[0] + {7})", texture, target, level, xoffset, width, format, type, bOffset, pixels); }
-
-        inline static function glTextureSubImage2DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTextureSubImage2DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const void*)&{10}[0] + {9})", texture, target, level, xoffset, yoffset, width, height, format, type, bOffset, pixels); }
-
-        inline static function glTextureSubImage3DEXT(texture:UInt, target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTextureSubImage3DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, (const void*)&{12}[0] + {11})", texture, target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, bOffset, pixels); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetNamedBufferPointervEXT')
-        // static function glGetNamedBufferPointervEXT(buffer:UInt, pname:Int, params:void**) : Void;
-            
-        // @:native('glGetPointerIndexedvEXT')
-        // static function glGetPointerIndexedvEXT(target:Int, index:UInt, params:void**) : Void;
-            
-        // @:native('glGetPointeri_vEXT')
-        // static function glGetPointeri_vEXT(pname:Int, index:UInt, params:void**) : Void;
-            
-        // @:native('glGetVertexArrayPointeri_vEXT')
-        // static function glGetVertexArrayPointeri_vEXT(vaobj:UInt, index:UInt, pname:Int, param:void**) : Void;
-            
-        // @:native('glGetVertexArrayPointervEXT')
-        // static function glGetVertexArrayPointervEXT(vaobj:UInt, pname:Int, param:void**) : Void;
-            
-        // @:native('glMapNamedBufferEXT')
-        // static function glMapNamedBufferEXT(buffer:UInt, access:Int) : void *;
-            
-        // @:native('glMapNamedBufferRangeEXT')
-        // static function glMapNamedBufferRangeEXT(buffer:UInt, offset:Int, length:Int, access:Int) : void *;
-
-
-//GL_EXT_draw_buffers2
-
-    // GL_EXT_draw_buffers2 defines
-
-        inline static var GL_EXT_draw_buffers2                                            = 1;
-
-
-
-
-    // GL_EXT_draw_buffers2 functions
-
-        @:native('glColorMaskIndexedEXT')
-        static function glColorMaskIndexedEXT(buf:UInt, r:Bool, g:Bool, b:Bool, a:Bool) : Void;
-
-        @:native('glDisableIndexedEXT')
-        static function glDisableIndexedEXT(target:Int, index:UInt) : Void;
-
-        @:native('glEnableIndexedEXT')
-        static function glEnableIndexedEXT(target:Int, index:UInt) : Void;
-
-        @:native('glIsEnabledIndexedEXT')
-        static function glIsEnabledIndexedEXT(target:Int, index:UInt) : Bool;
-
-
-        inline static function glGetBooleanIndexedvEXT(value:Int, index:UInt, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetBooleanIndexedvEXT({0}, {1}, (GLboolean*)&{3}[0] + {2})", value, index, bOffset, data); }
-
-        inline static function glGetIntegerIndexedvEXT(value:Int, index:UInt, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetIntegerIndexedvEXT({0}, {1}, (GLint*)&{3}[0] + {2})", value, index, bOffset, data); }
-
-
-
-
-//GL_EXT_draw_instanced
-
-    // GL_EXT_draw_instanced defines
-
-        inline static var GL_EXT_draw_instanced                                           = 1;
-
-
-
-
-    // GL_EXT_draw_instanced functions
-
-        @:native('glDrawArraysInstancedEXT')
-        static function glDrawArraysInstancedEXT(mode:Int, start:Int, count:Int, primcount:Int) : Void;
-
-
-        inline static function glDrawElementsInstancedEXT(mode:Int, count:Int, type:Int, ?bOffset:Int=0, indices:BytesData, primcount:Int) : Void
-          { untyped __cpp__("glDrawElementsInstancedEXT({0}, {1}, {2}, (const void*)&{4}[0] + {3}, {5})", mode, count, type, bOffset, indices, primcount); }
-
-
-
-
-//GL_EXT_draw_range_elements
-
-    // GL_EXT_draw_range_elements defines
-
-        inline static var GL_EXT_draw_range_elements                                      = 1;
-        inline static var GL_MAX_ELEMENTS_VERTICES_EXT                                    = 0x80E8;
-        inline static var GL_MAX_ELEMENTS_INDICES_EXT                                     = 0x80E9;
-
-
-
-
-    // GL_EXT_draw_range_elements functions
-
-
-        inline static function glDrawRangeElementsEXT(mode:Int, start:UInt, end:UInt, count:Int, type:Int, ?bOffset:Int=0, indices:BytesData) : Void
-          { untyped __cpp__("glDrawRangeElementsEXT({0}, {1}, {2}, {3}, {4}, (const void*)&{6}[0] + {5})", mode, start, end, count, type, bOffset, indices); }
-
-
-
-
-//GL_EXT_fog_coord
-
-    // GL_EXT_fog_coord defines
-
-        inline static var GL_EXT_fog_coord                                                = 1;
-        inline static var GL_FOG_COORDINATE_SOURCE_EXT                                    = 0x8450;
-        inline static var GL_FOG_COORDINATE_EXT                                           = 0x8451;
-        inline static var GL_FRAGMENT_DEPTH_EXT                                           = 0x8452;
-        inline static var GL_CURRENT_FOG_COORDINATE_EXT                                   = 0x8453;
-        inline static var GL_FOG_COORDINATE_ARRAY_TYPE_EXT                                = 0x8454;
-        inline static var GL_FOG_COORDINATE_ARRAY_STRIDE_EXT                              = 0x8455;
-        inline static var GL_FOG_COORDINATE_ARRAY_POINTER_EXT                             = 0x8456;
-        inline static var GL_FOG_COORDINATE_ARRAY_EXT                                     = 0x8457;
-
-
-
-
-    // GL_EXT_fog_coord functions
-
-        @:native('glFogCoorddEXT')
-        static function glFogCoorddEXT(coord:Float) : Void;
-
-        @:native('glFogCoordfEXT')
-        static function glFogCoordfEXT(coord:Float) : Void;
-
-
-        inline static function glFogCoordPointerEXT(type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glFogCoordPointerEXT({0}, {1}, (const void*)&{3}[0] + {2})", type, stride, bOffset, pointer); }
-
-        inline static function glFogCoorddvEXT(?bOffset:Int=0, coord:BytesData) : Void
-          { untyped __cpp__("glFogCoorddvEXT((const GLdouble*)&{1}[0] + {0})", bOffset, coord); }
-
-        inline static function glFogCoordfvEXT(?bOffset:Int=0, coord:BytesData) : Void
-          { untyped __cpp__("glFogCoordfvEXT((const GLfloat*)&{1}[0] + {0})", bOffset, coord); }
-
-
-
-
-//GL_EXT_fragment_lighting
-
-    // GL_EXT_fragment_lighting defines
-
-        inline static var GL_EXT_fragment_lighting                                        = 1;
-        inline static var GL_FRAGMENT_LIGHTING_EXT                                        = 0x8400;
-        inline static var GL_FRAGMENT_COLOR_MATERIAL_EXT                                  = 0x8401;
-        inline static var GL_FRAGMENT_COLOR_MATERIAL_FACE_EXT                             = 0x8402;
-        inline static var GL_FRAGMENT_COLOR_MATERIAL_PARAMETER_EXT                        = 0x8403;
-        inline static var GL_MAX_FRAGMENT_LIGHTS_EXT                                      = 0x8404;
-        inline static var GL_MAX_ACTIVE_LIGHTS_EXT                                        = 0x8405;
-        inline static var GL_CURRENT_RASTER_NORMAL_EXT                                    = 0x8406;
-        inline static var GL_LIGHT_ENV_MODE_EXT                                           = 0x8407;
-        inline static var GL_FRAGMENT_LIGHT_MODEL_LOCAL_VIEWER_EXT                        = 0x8408;
-        inline static var GL_FRAGMENT_LIGHT_MODEL_TWO_SIDE_EXT                            = 0x8409;
-        inline static var GL_FRAGMENT_LIGHT_MODEL_AMBIENT_EXT                             = 0x840A;
-        inline static var GL_FRAGMENT_LIGHT_MODEL_NORMAL_INTERPOLATION_EXT                = 0x840B;
-        inline static var GL_FRAGMENT_LIGHT0_EXT                                          = 0x840C;
-        inline static var GL_FRAGMENT_LIGHT7_EXT                                          = 0x8413;
-
-
-
-
-    // GL_EXT_fragment_lighting functions
-
-        @:native('glFragmentColorMaterialEXT')
-        static function glFragmentColorMaterialEXT(face:Int, mode:Int) : Void;
-
-        @:native('glFragmentLightModelfEXT')
-        static function glFragmentLightModelfEXT(pname:Int, param:Float) : Void;
-
-        @:native('glFragmentLightModeliEXT')
-        static function glFragmentLightModeliEXT(pname:Int, param:Int) : Void;
-
-        @:native('glFragmentLightfEXT')
-        static function glFragmentLightfEXT(light:Int, pname:Int, param:Float) : Void;
-
-        @:native('glFragmentLightiEXT')
-        static function glFragmentLightiEXT(light:Int, pname:Int, param:Int) : Void;
-
-        @:native('glFragmentMaterialfEXT')
-        static function glFragmentMaterialfEXT(face:Int, pname:Int, param:Float) : Void;
-
-        @:native('glLightEnviEXT')
-        static function glLightEnviEXT(pname:Int, param:Int) : Void;
-
-
-        inline static function glFragmentLightModelfvEXT(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFragmentLightModelfvEXT({0}, (GLfloat*)&{2}[0] + {1})", pname, bOffset, params); }
-
-        inline static function glFragmentLightModelivEXT(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFragmentLightModelivEXT({0}, (GLint*)&{2}[0] + {1})", pname, bOffset, params); }
-
-        inline static function glFragmentLightfvEXT(light:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFragmentLightfvEXT({0}, {1}, (GLfloat*)&{3}[0] + {2})", light, pname, bOffset, params); }
-
-        inline static function glFragmentLightivEXT(light:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFragmentLightivEXT({0}, {1}, (GLint*)&{3}[0] + {2})", light, pname, bOffset, params); }
-
-        inline static function glFragmentMaterialfvEXT(face:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFragmentMaterialfvEXT({0}, {1}, (const GLfloat*)&{3}[0] + {2})", face, pname, bOffset, params); }
-
-        inline static function glFragmentMaterialivEXT(face:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFragmentMaterialivEXT({0}, {1}, (const GLint*)&{3}[0] + {2})", face, pname, bOffset, params); }
-
-        inline static function glGetFragmentLightfvEXT(light:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetFragmentLightfvEXT({0}, {1}, (GLfloat*)&{3}[0] + {2})", light, pname, bOffset, params); }
-
-        inline static function glGetFragmentLightivEXT(light:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetFragmentLightivEXT({0}, {1}, (GLint*)&{3}[0] + {2})", light, pname, bOffset, params); }
-
-        inline static function glGetFragmentMaterialfvEXT(face:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetFragmentMaterialfvEXT({0}, {1}, (const GLfloat*)&{3}[0] + {2})", face, pname, bOffset, params); }
-
-        inline static function glGetFragmentMaterialivEXT(face:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetFragmentMaterialivEXT({0}, {1}, (const GLint*)&{3}[0] + {2})", face, pname, bOffset, params); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glFragmentMaterialiEXT')
-        // static function glFragmentMaterialiEXT(face:Int, pname:Int, param:const GLint) : Void;
-
-
-//GL_EXT_framebuffer_blit
-
-    // GL_EXT_framebuffer_blit defines
-
-        inline static var GL_EXT_framebuffer_blit                                         = 1;
-        inline static var GL_DRAW_FRAMEBUFFER_BINDING_EXT                                 = 0x8CA6;
-        inline static var GL_READ_FRAMEBUFFER_EXT                                         = 0x8CA8;
-        inline static var GL_DRAW_FRAMEBUFFER_EXT                                         = 0x8CA9;
-        inline static var GL_READ_FRAMEBUFFER_BINDING_EXT                                 = 0x8CAA;
-
-
-
-
-    // GL_EXT_framebuffer_blit functions
-
-        @:native('glBlitFramebufferEXT')
-        static function glBlitFramebufferEXT(srcX0:Int, srcY0:Int, srcX1:Int, srcY1:Int, dstX0:Int, dstY0:Int, dstX1:Int, dstY1:Int, mask:Int, filter:Int) : Void;
-
-
-
-
-
-//GL_EXT_framebuffer_multisample
-
-    // GL_EXT_framebuffer_multisample defines
-
-        inline static var GL_EXT_framebuffer_multisample                                  = 1;
-        inline static var GL_RENDERBUFFER_SAMPLES_EXT                                     = 0x8CAB;
-        inline static var GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT                       = 0x8D56;
-        inline static var GL_MAX_SAMPLES_EXT                                              = 0x8D57;
-
-
-
-
-    // GL_EXT_framebuffer_multisample functions
-
-        @:native('glRenderbufferStorageMultisampleEXT')
-        static function glRenderbufferStorageMultisampleEXT(target:Int, samples:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-
-
-
-
-//GL_EXT_framebuffer_multisample_blit_scaled
-
-    // GL_EXT_framebuffer_multisample_blit_scaled defines
-
-        inline static var GL_EXT_framebuffer_multisample_blit_scaled                      = 1;
-        inline static var GL_SCALED_RESOLVE_FASTEST_EXT                                   = 0x90BA;
-        inline static var GL_SCALED_RESOLVE_NICEST_EXT                                    = 0x90BB;
-
-
-//GL_EXT_framebuffer_object
-
-    // GL_EXT_framebuffer_object defines
-
-        inline static var GL_EXT_framebuffer_object                                       = 1;
-        inline static var GL_INVALID_FRAMEBUFFER_OPERATION_EXT                            = 0x0506;
-        inline static var GL_MAX_RENDERBUFFER_SIZE_EXT                                    = 0x84E8;
-        inline static var GL_FRAMEBUFFER_BINDING_EXT                                      = 0x8CA6;
-        inline static var GL_RENDERBUFFER_BINDING_EXT                                     = 0x8CA7;
-        inline static var GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_EXT                       = 0x8CD0;
-        inline static var GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_EXT                       = 0x8CD1;
-        inline static var GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_EXT                     = 0x8CD2;
-        inline static var GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_EXT             = 0x8CD3;
-        inline static var GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_3D_ZOFFSET_EXT                = 0x8CD4;
-        inline static var GL_FRAMEBUFFER_COMPLETE_EXT                                     = 0x8CD5;
-        inline static var GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_EXT                        = 0x8CD6;
-        inline static var GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_EXT                = 0x8CD7;
-        inline static var GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_EXT                        = 0x8CD9;
-        inline static var GL_FRAMEBUFFER_INCOMPLETE_FORMATS_EXT                           = 0x8CDA;
-        inline static var GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_EXT                       = 0x8CDB;
-        inline static var GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_EXT                       = 0x8CDC;
-        inline static var GL_FRAMEBUFFER_UNSUPPORTED_EXT                                  = 0x8CDD;
-        inline static var GL_MAX_COLOR_ATTACHMENTS_EXT                                    = 0x8CDF;
-        inline static var GL_COLOR_ATTACHMENT0_EXT                                        = 0x8CE0;
-        inline static var GL_COLOR_ATTACHMENT1_EXT                                        = 0x8CE1;
-        inline static var GL_COLOR_ATTACHMENT2_EXT                                        = 0x8CE2;
-        inline static var GL_COLOR_ATTACHMENT3_EXT                                        = 0x8CE3;
-        inline static var GL_COLOR_ATTACHMENT4_EXT                                        = 0x8CE4;
-        inline static var GL_COLOR_ATTACHMENT5_EXT                                        = 0x8CE5;
-        inline static var GL_COLOR_ATTACHMENT6_EXT                                        = 0x8CE6;
-        inline static var GL_COLOR_ATTACHMENT7_EXT                                        = 0x8CE7;
-        inline static var GL_COLOR_ATTACHMENT8_EXT                                        = 0x8CE8;
-        inline static var GL_COLOR_ATTACHMENT9_EXT                                        = 0x8CE9;
-        inline static var GL_COLOR_ATTACHMENT10_EXT                                       = 0x8CEA;
-        inline static var GL_COLOR_ATTACHMENT11_EXT                                       = 0x8CEB;
-        inline static var GL_COLOR_ATTACHMENT12_EXT                                       = 0x8CEC;
-        inline static var GL_COLOR_ATTACHMENT13_EXT                                       = 0x8CED;
-        inline static var GL_COLOR_ATTACHMENT14_EXT                                       = 0x8CEE;
-        inline static var GL_COLOR_ATTACHMENT15_EXT                                       = 0x8CEF;
-        inline static var GL_DEPTH_ATTACHMENT_EXT                                         = 0x8D00;
-        inline static var GL_STENCIL_ATTACHMENT_EXT                                       = 0x8D20;
-        inline static var GL_FRAMEBUFFER_EXT                                              = 0x8D40;
-        inline static var GL_RENDERBUFFER_EXT                                             = 0x8D41;
-        inline static var GL_RENDERBUFFER_WIDTH_EXT                                       = 0x8D42;
-        inline static var GL_RENDERBUFFER_HEIGHT_EXT                                      = 0x8D43;
-        inline static var GL_RENDERBUFFER_INTERNAL_FORMAT_EXT                             = 0x8D44;
-        inline static var GL_STENCIL_INDEX1_EXT                                           = 0x8D46;
-        inline static var GL_STENCIL_INDEX4_EXT                                           = 0x8D47;
-        inline static var GL_STENCIL_INDEX8_EXT                                           = 0x8D48;
-        inline static var GL_STENCIL_INDEX16_EXT                                          = 0x8D49;
-        inline static var GL_RENDERBUFFER_RED_SIZE_EXT                                    = 0x8D50;
-        inline static var GL_RENDERBUFFER_GREEN_SIZE_EXT                                  = 0x8D51;
-        inline static var GL_RENDERBUFFER_BLUE_SIZE_EXT                                   = 0x8D52;
-        inline static var GL_RENDERBUFFER_ALPHA_SIZE_EXT                                  = 0x8D53;
-        inline static var GL_RENDERBUFFER_DEPTH_SIZE_EXT                                  = 0x8D54;
-        inline static var GL_RENDERBUFFER_STENCIL_SIZE_EXT                                = 0x8D55;
-
-
-
-
-    // GL_EXT_framebuffer_object functions
-
-        @:native('glBindFramebufferEXT')
-        static function glBindFramebufferEXT(target:Int, framebuffer:UInt) : Void;
-
-        @:native('glBindRenderbufferEXT')
-        static function glBindRenderbufferEXT(target:Int, renderbuffer:UInt) : Void;
-
-        @:native('glCheckFramebufferStatusEXT')
-        static function glCheckFramebufferStatusEXT(target:Int) : Int;
-
-        @:native('glFramebufferRenderbufferEXT')
-        static function glFramebufferRenderbufferEXT(target:Int, attachment:Int, renderbuffertarget:Int, renderbuffer:UInt) : Void;
-
-        @:native('glFramebufferTexture1DEXT')
-        static function glFramebufferTexture1DEXT(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;
-
-        @:native('glFramebufferTexture2DEXT')
-        static function glFramebufferTexture2DEXT(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int) : Void;
-
-        @:native('glFramebufferTexture3DEXT')
-        static function glFramebufferTexture3DEXT(target:Int, attachment:Int, textarget:Int, texture:UInt, level:Int, zoffset:Int) : Void;
-
-        @:native('glGenerateMipmapEXT')
-        static function glGenerateMipmapEXT(target:Int) : Void;
-
-        @:native('glIsFramebufferEXT')
-        static function glIsFramebufferEXT(framebuffer:UInt) : Bool;
-
-        @:native('glIsRenderbufferEXT')
-        static function glIsRenderbufferEXT(renderbuffer:UInt) : Bool;
-
-        @:native('glRenderbufferStorageEXT')
-        static function glRenderbufferStorageEXT(target:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-
-        inline static function glDeleteFramebuffersEXT(n:Int, framebuffers:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteFramebuffersEXT({0}, (const GLuint*)&{1}[0])", n, framebuffers); }
-
-        inline static function glDeleteRenderbuffersEXT(n:Int, renderbuffers:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteRenderbuffersEXT({0}, (const GLuint*)&{1}[0])", n, renderbuffers); }
-
-        inline static function glGenFramebuffersEXT(n:Int, framebuffers:Array<UInt>) : Void
-          { untyped __cpp__("glGenFramebuffersEXT({0}, (GLuint*)&{1}[0])", n, framebuffers); }
-
-        inline static function glGenRenderbuffersEXT(n:Int, renderbuffers:Array<UInt>) : Void
-          { untyped __cpp__("glGenRenderbuffersEXT({0}, (GLuint*)&{1}[0])", n, renderbuffers); }
-
-        inline static function glGetFramebufferAttachmentParameterivEXT(target:Int, attachment:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetFramebufferAttachmentParameterivEXT({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", target, attachment, pname, bOffset, params); }
-
-        inline static function glGetRenderbufferParameterivEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetRenderbufferParameterivEXT({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-
-
-
-//GL_EXT_framebuffer_sRGB
-
-    // GL_EXT_framebuffer_sRGB defines
-
-        inline static var GL_EXT_framebuffer_sRGB                                         = 1;
-        inline static var GL_FRAMEBUFFER_SRGB_EXT                                         = 0x8DB9;
-        inline static var GL_FRAMEBUFFER_SRGB_CAPABLE_EXT                                 = 0x8DBA;
-
-
-//GL_EXT_geometry_shader4
-
-    // GL_EXT_geometry_shader4 defines
-
-        inline static var GL_EXT_geometry_shader4                                         = 1;
-        inline static var GL_LINES_ADJACENCY_EXT                                          = 0xA;
-        inline static var GL_LINE_STRIP_ADJACENCY_EXT                                     = 0xB;
-        inline static var GL_TRIANGLES_ADJACENCY_EXT                                      = 0xC;
-        inline static var GL_TRIANGLE_STRIP_ADJACENCY_EXT                                 = 0xD;
-        inline static var GL_PROGRAM_POINT_SIZE_EXT                                       = 0x8642;
-        inline static var GL_MAX_VARYING_COMPONENTS_EXT                                   = 0x8B4B;
-        inline static var GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS_EXT                         = 0x8C29;
-        inline static var GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER_EXT                     = 0x8CD4;
-        inline static var GL_FRAMEBUFFER_ATTACHMENT_LAYERED_EXT                           = 0x8DA7;
-        inline static var GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS_EXT                     = 0x8DA8;
-        inline static var GL_FRAMEBUFFER_INCOMPLETE_LAYER_COUNT_EXT                       = 0x8DA9;
-        inline static var GL_GEOMETRY_SHADER_EXT                                          = 0x8DD9;
-        inline static var GL_GEOMETRY_VERTICES_OUT_EXT                                    = 0x8DDA;
-        inline static var GL_GEOMETRY_INPUT_TYPE_EXT                                      = 0x8DDB;
-        inline static var GL_GEOMETRY_OUTPUT_TYPE_EXT                                     = 0x8DDC;
-        inline static var GL_MAX_GEOMETRY_VARYING_COMPONENTS_EXT                          = 0x8DDD;
-        inline static var GL_MAX_VERTEX_VARYING_COMPONENTS_EXT                            = 0x8DDE;
-        inline static var GL_MAX_GEOMETRY_UNIFORM_COMPONENTS_EXT                          = 0x8DDF;
-        inline static var GL_MAX_GEOMETRY_OUTPUT_VERTICES_EXT                             = 0x8DE0;
-        inline static var GL_MAX_GEOMETRY_TOTAL_OUTPUT_COMPONENTS_EXT                     = 0x8DE1;
-
-
-
-
-    // GL_EXT_geometry_shader4 functions
-
-        @:native('glFramebufferTextureEXT')
-        static function glFramebufferTextureEXT(target:Int, attachment:Int, texture:UInt, level:Int) : Void;
-
-        @:native('glFramebufferTextureFaceEXT')
-        static function glFramebufferTextureFaceEXT(target:Int, attachment:Int, texture:UInt, level:Int, face:Int) : Void;
-
-        @:native('glProgramParameteriEXT')
-        static function glProgramParameteriEXT(program:UInt, pname:Int, value:Int) : Void;
-
-
-
-
-
-//GL_EXT_gpu_program_parameters
-
-    // GL_EXT_gpu_program_parameters defines
-
-        inline static var GL_EXT_gpu_program_parameters                                   = 1;
-
-
-
-
-    // GL_EXT_gpu_program_parameters functions
-
-
-        inline static function glProgramEnvParameters4fvEXT(target:Int, index:UInt, count:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramEnvParameters4fvEXT({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", target, index, count, bOffset, params); }
-
-        inline static function glProgramLocalParameters4fvEXT(target:Int, index:UInt, count:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramLocalParameters4fvEXT({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", target, index, count, bOffset, params); }
-
-
-
-
-//GL_EXT_gpu_shader4
-
-    // GL_EXT_gpu_shader4 defines
-
-        inline static var GL_EXT_gpu_shader4                                              = 1;
-        inline static var GL_VERTEX_ATTRIB_ARRAY_INTEGER_EXT                              = 0x88FD;
-        inline static var GL_SAMPLER_1D_ARRAY_EXT                                         = 0x8DC0;
-        inline static var GL_SAMPLER_2D_ARRAY_EXT                                         = 0x8DC1;
-        inline static var GL_SAMPLER_BUFFER_EXT                                           = 0x8DC2;
-        inline static var GL_SAMPLER_1D_ARRAY_SHADOW_EXT                                  = 0x8DC3;
-        inline static var GL_SAMPLER_2D_ARRAY_SHADOW_EXT                                  = 0x8DC4;
-        inline static var GL_SAMPLER_CUBE_SHADOW_EXT                                      = 0x8DC5;
-        inline static var GL_UNSIGNED_INT_VEC2_EXT                                        = 0x8DC6;
-        inline static var GL_UNSIGNED_INT_VEC3_EXT                                        = 0x8DC7;
-        inline static var GL_UNSIGNED_INT_VEC4_EXT                                        = 0x8DC8;
-        inline static var GL_INT_SAMPLER_1D_EXT                                           = 0x8DC9;
-        inline static var GL_INT_SAMPLER_2D_EXT                                           = 0x8DCA;
-        inline static var GL_INT_SAMPLER_3D_EXT                                           = 0x8DCB;
-        inline static var GL_INT_SAMPLER_CUBE_EXT                                         = 0x8DCC;
-        inline static var GL_INT_SAMPLER_2D_RECT_EXT                                      = 0x8DCD;
-        inline static var GL_INT_SAMPLER_1D_ARRAY_EXT                                     = 0x8DCE;
-        inline static var GL_INT_SAMPLER_2D_ARRAY_EXT                                     = 0x8DCF;
-        inline static var GL_INT_SAMPLER_BUFFER_EXT                                       = 0x8DD0;
-        inline static var GL_UNSIGNED_INT_SAMPLER_1D_EXT                                  = 0x8DD1;
-        inline static var GL_UNSIGNED_INT_SAMPLER_2D_EXT                                  = 0x8DD2;
-        inline static var GL_UNSIGNED_INT_SAMPLER_3D_EXT                                  = 0x8DD3;
-        inline static var GL_UNSIGNED_INT_SAMPLER_CUBE_EXT                                = 0x8DD4;
-        inline static var GL_UNSIGNED_INT_SAMPLER_2D_RECT_EXT                             = 0x8DD5;
-        inline static var GL_UNSIGNED_INT_SAMPLER_1D_ARRAY_EXT                            = 0x8DD6;
-        inline static var GL_UNSIGNED_INT_SAMPLER_2D_ARRAY_EXT                            = 0x8DD7;
-        inline static var GL_UNSIGNED_INT_SAMPLER_BUFFER_EXT                              = 0x8DD8;
-
-
-
-
-    // GL_EXT_gpu_shader4 functions
-
-        @:native('glBindFragDataLocationEXT')
-        static function glBindFragDataLocationEXT(program:UInt, color:UInt, name:String) : Void;
-
-        @:native('glGetFragDataLocationEXT')
-        static function glGetFragDataLocationEXT(program:UInt, name:String) : Int;
-
-        @:native('glUniform1uiEXT')
-        static function glUniform1uiEXT(location:Int, v0:UInt) : Void;
-
-        @:native('glUniform2uiEXT')
-        static function glUniform2uiEXT(location:Int, v0:UInt, v1:UInt) : Void;
-
-        @:native('glUniform3uiEXT')
-        static function glUniform3uiEXT(location:Int, v0:UInt, v1:UInt, v2:UInt) : Void;
-
-        @:native('glUniform4uiEXT')
-        static function glUniform4uiEXT(location:Int, v0:UInt, v1:UInt, v2:UInt, v3:UInt) : Void;
-
-        @:native('glVertexAttribI1iEXT')
-        static function glVertexAttribI1iEXT(index:UInt, x:Int) : Void;
-
-        @:native('glVertexAttribI1uiEXT')
-        static function glVertexAttribI1uiEXT(index:UInt, x:UInt) : Void;
-
-        @:native('glVertexAttribI2iEXT')
-        static function glVertexAttribI2iEXT(index:UInt, x:Int, y:Int) : Void;
-
-        @:native('glVertexAttribI2uiEXT')
-        static function glVertexAttribI2uiEXT(index:UInt, x:UInt, y:UInt) : Void;
-
-        @:native('glVertexAttribI3iEXT')
-        static function glVertexAttribI3iEXT(index:UInt, x:Int, y:Int, z:Int) : Void;
-
-        @:native('glVertexAttribI3uiEXT')
-        static function glVertexAttribI3uiEXT(index:UInt, x:UInt, y:UInt, z:UInt) : Void;
-
-        @:native('glVertexAttribI4iEXT')
-        static function glVertexAttribI4iEXT(index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
-
-        @:native('glVertexAttribI4uiEXT')
-        static function glVertexAttribI4uiEXT(index:UInt, x:UInt, y:UInt, z:UInt, w:UInt) : Void;
-
-
-        inline static function glGetUniformuivEXT(program:UInt, location:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetUniformuivEXT({0}, {1}, (GLuint*)&{3}[0] + {2})", program, location, bOffset, params); }
-
-        inline static function glGetVertexAttribIivEXT(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribIivEXT({0}, {1}, (GLint*)&{3}[0] + {2})", index, pname, bOffset, params); }
-
-        inline static function glGetVertexAttribIuivEXT(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribIuivEXT({0}, {1}, (GLuint*)&{3}[0] + {2})", index, pname, bOffset, params); }
-
-        inline static function glUniform1uivEXT(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform1uivEXT({0}, {1}, (const GLuint*)&{3}[0] + {2})", location, count, bOffset, value); }
-
-        inline static function glUniform2uivEXT(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform2uivEXT({0}, {1}, (const GLuint*)&{3}[0] + {2})", location, count, bOffset, value); }
-
-        inline static function glUniform3uivEXT(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform3uivEXT({0}, {1}, (const GLuint*)&{3}[0] + {2})", location, count, bOffset, value); }
-
-        inline static function glUniform4uivEXT(location:Int, count:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glUniform4uivEXT({0}, {1}, (const GLuint*)&{3}[0] + {2})", location, count, bOffset, value); }
-
-        inline static function glVertexAttribI1ivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI1ivEXT({0}, (const GLint*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribI1uivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI1uivEXT({0}, (const GLuint*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribI2ivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI2ivEXT({0}, (const GLint*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribI2uivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI2uivEXT({0}, (const GLuint*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribI3ivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI3ivEXT({0}, (const GLint*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribI3uivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI3uivEXT({0}, (const GLuint*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribI4bvEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI4bvEXT({0}, (const GLbyte*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribI4ivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI4ivEXT({0}, (const GLint*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribI4svEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI4svEXT({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribI4ubvEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI4ubvEXT({0}, (const GLubyte*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribI4uivEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI4uivEXT({0}, (const GLuint*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribI4usvEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribI4usvEXT({0}, (const GLushort*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribIPointerEXT(index:UInt, size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glVertexAttribIPointerEXT({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", index, size, type, stride, bOffset, pointer); }
-
-
-
-
-//GL_EXT_histogram
-
-    // GL_EXT_histogram defines
-
-        inline static var GL_EXT_histogram                                                = 1;
-        inline static var GL_HISTOGRAM_EXT                                                = 0x8024;
-        inline static var GL_PROXY_HISTOGRAM_EXT                                          = 0x8025;
-        inline static var GL_HISTOGRAM_WIDTH_EXT                                          = 0x8026;
-        inline static var GL_HISTOGRAM_FORMAT_EXT                                         = 0x8027;
-        inline static var GL_HISTOGRAM_RED_SIZE_EXT                                       = 0x8028;
-        inline static var GL_HISTOGRAM_GREEN_SIZE_EXT                                     = 0x8029;
-        inline static var GL_HISTOGRAM_BLUE_SIZE_EXT                                      = 0x802A;
-        inline static var GL_HISTOGRAM_ALPHA_SIZE_EXT                                     = 0x802B;
-        inline static var GL_HISTOGRAM_LUMINANCE_SIZE_EXT                                 = 0x802C;
-        inline static var GL_HISTOGRAM_SINK_EXT                                           = 0x802D;
-        inline static var GL_MINMAX_EXT                                                   = 0x802E;
-        inline static var GL_MINMAX_FORMAT_EXT                                            = 0x802F;
-        inline static var GL_MINMAX_SINK_EXT                                              = 0x8030;
-
-
-
-
-    // GL_EXT_histogram functions
-
-        @:native('glHistogramEXT')
-        static function glHistogramEXT(target:Int, width:Int, internalformat:Int, sink:Bool) : Void;
-
-        @:native('glMinmaxEXT')
-        static function glMinmaxEXT(target:Int, internalformat:Int, sink:Bool) : Void;
-
-        @:native('glResetHistogramEXT')
-        static function glResetHistogramEXT(target:Int) : Void;
-
-        @:native('glResetMinmaxEXT')
-        static function glResetMinmaxEXT(target:Int) : Void;
-
-
-        inline static function glGetHistogramEXT(target:Int, reset:Bool, format:Int, type:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetHistogramEXT({0}, {1}, {2}, {3}, (void*)&{5}[0] + {4})", target, reset, format, type, bOffset, values); }
-
-        inline static function glGetHistogramParameterfvEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetHistogramParameterfvEXT({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glGetHistogramParameterivEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetHistogramParameterivEXT({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glGetMinmaxEXT(target:Int, reset:Bool, format:Int, type:Int, ?bOffset:Int=0, values:BytesData) : Void
-          { untyped __cpp__("glGetMinmaxEXT({0}, {1}, {2}, {3}, (void*)&{5}[0] + {4})", target, reset, format, type, bOffset, values); }
-
-        inline static function glGetMinmaxParameterfvEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMinmaxParameterfvEXT({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glGetMinmaxParameterivEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMinmaxParameterivEXT({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-
-
-
-//GL_EXT_index_array_formats
-
-    // GL_EXT_index_array_formats defines
-
-        inline static var GL_EXT_index_array_formats                                      = 1;
-
-
-//GL_EXT_index_func
-
-    // GL_EXT_index_func defines
-
-        inline static var GL_EXT_index_func                                               = 1;
-
-
-
-
-    // GL_EXT_index_func functions
-
-        @:native('glIndexFuncEXT')
-        static function glIndexFuncEXT(func:Int, ref:Float) : Void;
-
-
-
-
-
-//GL_EXT_index_material
-
-    // GL_EXT_index_material defines
-
-        inline static var GL_EXT_index_material                                           = 1;
-
-
-
-
-    // GL_EXT_index_material functions
-
-        @:native('glIndexMaterialEXT')
-        static function glIndexMaterialEXT(face:Int, mode:Int) : Void;
-
-
-
-
-
-//GL_EXT_index_texture
-
-    // GL_EXT_index_texture defines
-
-        inline static var GL_EXT_index_texture                                            = 1;
-
-
-//GL_EXT_light_texture
-
-    // GL_EXT_light_texture defines
-
-        inline static var GL_EXT_light_texture                                            = 1;
-        inline static var GL_FRAGMENT_MATERIAL_EXT                                        = 0x8349;
-        inline static var GL_FRAGMENT_NORMAL_EXT                                          = 0x834A;
-        inline static var GL_FRAGMENT_COLOR_EXT                                           = 0x834C;
-        inline static var GL_ATTENUATION_EXT                                              = 0x834D;
-        inline static var GL_SHADOW_ATTENUATION_EXT                                       = 0x834E;
-        inline static var GL_TEXTURE_APPLICATION_MODE_EXT                                 = 0x834F;
-        inline static var GL_TEXTURE_LIGHT_EXT                                            = 0x8350;
-        inline static var GL_TEXTURE_MATERIAL_FACE_EXT                                    = 0x8351;
-        inline static var GL_TEXTURE_MATERIAL_PARAMETER_EXT                               = 0x8352;
-
-
-
-
-    // GL_EXT_light_texture functions
-
-        @:native('glApplyTextureEXT')
-        static function glApplyTextureEXT(mode:Int) : Void;
-
-        @:native('glTextureLightEXT')
-        static function glTextureLightEXT(pname:Int) : Void;
-
-        @:native('glTextureMaterialEXT')
-        static function glTextureMaterialEXT(face:Int, mode:Int) : Void;
-
-
-
-
-
-//GL_EXT_misc_attribute
-
-    // GL_EXT_misc_attribute defines
-
-        inline static var GL_EXT_misc_attribute                                           = 1;
-
-
-//GL_EXT_multi_draw_arrays
-
-    // GL_EXT_multi_draw_arrays defines
-
-        inline static var GL_EXT_multi_draw_arrays                                        = 1;
-
-
-
-
-    // GL_EXT_multi_draw_arrays functions
-
-
-
-
-    // TODO functions
-
-            
-        // inline static function glMultiDrawArraysEXT(mode:Int, first:Array<Int>, count:const GLsizei*, primcount:Int) : Void
-        // { untyped __cpp__("glMultiDrawArraysEXT({0}, (const GLint*)&{1}[0], {2}, {3})", mode, first, count, primcount); }
-            
-        // @:native('glMultiDrawElementsEXT')
-        // static function glMultiDrawElementsEXT(mode:Int, count:GLsizei*, type:Int, indices:const void *const*, primcount:Int) : Void;
-
-
-//GL_EXT_multisample
-
-    // GL_EXT_multisample defines
-
-        inline static var GL_EXT_multisample                                              = 1;
-        inline static var GL_MULTISAMPLE_EXT                                              = 0x809D;
-        inline static var GL_SAMPLE_ALPHA_TO_MASK_EXT                                     = 0x809E;
-        inline static var GL_SAMPLE_ALPHA_TO_ONE_EXT                                      = 0x809F;
-        inline static var GL_SAMPLE_MASK_EXT                                              = 0x80A0;
-        inline static var GL_1PASS_EXT                                                    = 0x80A1;
-        inline static var GL_2PASS_0_EXT                                                  = 0x80A2;
-        inline static var GL_2PASS_1_EXT                                                  = 0x80A3;
-        inline static var GL_4PASS_0_EXT                                                  = 0x80A4;
-        inline static var GL_4PASS_1_EXT                                                  = 0x80A5;
-        inline static var GL_4PASS_2_EXT                                                  = 0x80A6;
-        inline static var GL_4PASS_3_EXT                                                  = 0x80A7;
-        inline static var GL_SAMPLE_BUFFERS_EXT                                           = 0x80A8;
-        inline static var GL_SAMPLES_EXT                                                  = 0x80A9;
-        inline static var GL_SAMPLE_MASK_VALUE_EXT                                        = 0x80AA;
-        inline static var GL_SAMPLE_MASK_INVERT_EXT                                       = 0x80AB;
-        inline static var GL_SAMPLE_PATTERN_EXT                                           = 0x80AC;
-        inline static var GL_MULTISAMPLE_BIT_EXT                                          = 0x20000000;
-
-
-
-
-    // GL_EXT_multisample functions
-
-        @:native('glSampleMaskEXT')
-        static function glSampleMaskEXT(value:Float, invert:Bool) : Void;
-
-        @:native('glSamplePatternEXT')
-        static function glSamplePatternEXT(pattern:Int) : Void;
-
-
-
-
-
-//GL_EXT_packed_depth_stencil
-
-    // GL_EXT_packed_depth_stencil defines
-
-        inline static var GL_EXT_packed_depth_stencil                                     = 1;
-        inline static var GL_DEPTH_STENCIL_EXT                                            = 0x84F9;
-        inline static var GL_UNSIGNED_INT_24_8_EXT                                        = 0x84FA;
-        inline static var GL_DEPTH24_STENCIL8_EXT                                         = 0x88F0;
-        inline static var GL_TEXTURE_STENCIL_SIZE_EXT                                     = 0x88F1;
-
-
-//GL_EXT_packed_float
-
-    // GL_EXT_packed_float defines
-
-        inline static var GL_EXT_packed_float                                             = 1;
-        inline static var GL_R11F_G11F_B10F_EXT                                           = 0x8C3A;
-        inline static var GL_UNSIGNED_INT_10F_11F_11F_REV_EXT                             = 0x8C3B;
-        inline static var GL_RGBA_SIGNED_COMPONENTS_EXT                                   = 0x8C3C;
-
-
-//GL_EXT_packed_pixels
-
-    // GL_EXT_packed_pixels defines
-
-        inline static var GL_EXT_packed_pixels                                            = 1;
-        inline static var GL_UNSIGNED_BYTE_3_3_2_EXT                                      = 0x8032;
-        inline static var GL_UNSIGNED_SHORT_4_4_4_4_EXT                                   = 0x8033;
-        inline static var GL_UNSIGNED_SHORT_5_5_5_1_EXT                                   = 0x8034;
-        inline static var GL_UNSIGNED_INT_8_8_8_8_EXT                                     = 0x8035;
-        inline static var GL_UNSIGNED_INT_10_10_10_2_EXT                                  = 0x8036;
-
-
-//GL_EXT_paletted_texture
-
-    // GL_EXT_paletted_texture defines
-
-        inline static var GL_EXT_paletted_texture                                         = 1;
-        inline static var GL_COLOR_TABLE_FORMAT_EXT                                       = 0x80D8;
-        inline static var GL_COLOR_TABLE_WIDTH_EXT                                        = 0x80D9;
-        inline static var GL_COLOR_TABLE_RED_SIZE_EXT                                     = 0x80DA;
-        inline static var GL_COLOR_TABLE_GREEN_SIZE_EXT                                   = 0x80DB;
-        inline static var GL_COLOR_TABLE_BLUE_SIZE_EXT                                    = 0x80DC;
-        inline static var GL_COLOR_TABLE_ALPHA_SIZE_EXT                                   = 0x80DD;
-        inline static var GL_COLOR_TABLE_LUMINANCE_SIZE_EXT                               = 0x80DE;
-        inline static var GL_COLOR_TABLE_INTENSITY_SIZE_EXT                               = 0x80DF;
-        inline static var GL_TEXTURE_INDEX_SIZE_EXT                                       = 0x80ED;
-
-
-
-
-    // GL_EXT_paletted_texture functions
-
-
-        inline static function glColorTableEXT(target:Int, internalFormat:Int, width:Int, format:Int, type:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glColorTableEXT({0}, {1}, {2}, {3}, {4}, (const void*)&{6}[0] + {5})", target, internalFormat, width, format, type, bOffset, data); }
-
-        inline static function glGetColorTableEXT(target:Int, format:Int, type:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetColorTableEXT({0}, {1}, {2}, (void*)&{4}[0] + {3})", target, format, type, bOffset, data); }
-
-        inline static function glGetColorTableParameterfvEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetColorTableParameterfvEXT({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glGetColorTableParameterivEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetColorTableParameterivEXT({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-
-
-
-//GL_EXT_pixel_buffer_object
-
-    // GL_EXT_pixel_buffer_object defines
-
-        inline static var GL_EXT_pixel_buffer_object                                      = 1;
-        inline static var GL_PIXEL_PACK_BUFFER_EXT                                        = 0x88EB;
-        inline static var GL_PIXEL_UNPACK_BUFFER_EXT                                      = 0x88EC;
-        inline static var GL_PIXEL_PACK_BUFFER_BINDING_EXT                                = 0x88ED;
-        inline static var GL_PIXEL_UNPACK_BUFFER_BINDING_EXT                              = 0x88EF;
-
-
-//GL_EXT_pixel_transform
-
-    // GL_EXT_pixel_transform defines
-
-        inline static var GL_EXT_pixel_transform                                          = 1;
-        inline static var GL_PIXEL_TRANSFORM_2D_EXT                                       = 0x8330;
-        inline static var GL_PIXEL_MAG_FILTER_EXT                                         = 0x8331;
-        inline static var GL_PIXEL_MIN_FILTER_EXT                                         = 0x8332;
-        inline static var GL_PIXEL_CUBIC_WEIGHT_EXT                                       = 0x8333;
-        inline static var GL_CUBIC_EXT                                                    = 0x8334;
-        inline static var GL_AVERAGE_EXT                                                  = 0x8335;
-        inline static var GL_PIXEL_TRANSFORM_2D_STACK_DEPTH_EXT                           = 0x8336;
-        inline static var GL_MAX_PIXEL_TRANSFORM_2D_STACK_DEPTH_EXT                       = 0x8337;
-        inline static var GL_PIXEL_TRANSFORM_2D_MATRIX_EXT                                = 0x8338;
-
-
-
-
-    // GL_EXT_pixel_transform functions
-
-        @:native('glPixelTransformParameterfEXT')
-        static function glPixelTransformParameterfEXT(target:Int, pname:Int, param:Float) : Void;
-
-
-        inline static function glGetPixelTransformParameterfvEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetPixelTransformParameterfvEXT({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glGetPixelTransformParameterivEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetPixelTransformParameterivEXT({0}, {1}, (const GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glPixelTransformParameterfvEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glPixelTransformParameterfvEXT({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glPixelTransformParameterivEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glPixelTransformParameterivEXT({0}, {1}, (const GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glPixelTransformParameteriEXT')
-        // static function glPixelTransformParameteriEXT(target:Int, pname:Int, param:const GLint) : Void;
-
-
-//GL_EXT_pixel_transform_color_table
-
-    // GL_EXT_pixel_transform_color_table defines
-
-        inline static var GL_EXT_pixel_transform_color_table                              = 1;
-
-
-//GL_EXT_point_parameters
-
-    // GL_EXT_point_parameters defines
-
-        inline static var GL_EXT_point_parameters                                         = 1;
-        inline static var GL_POINT_SIZE_MIN_EXT                                           = 0x8126;
-        inline static var GL_POINT_SIZE_MAX_EXT                                           = 0x8127;
-        inline static var GL_POINT_FADE_THRESHOLD_SIZE_EXT                                = 0x8128;
-        inline static var GL_DISTANCE_ATTENUATION_EXT                                     = 0x8129;
-
-
-
-
-    // GL_EXT_point_parameters functions
-
-        @:native('glPointParameterfEXT')
-        static function glPointParameterfEXT(pname:Int, param:Float) : Void;
-
-
-        inline static function glPointParameterfvEXT(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glPointParameterfvEXT({0}, (const GLfloat*)&{2}[0] + {1})", pname, bOffset, params); }
-
-
-
-
-//GL_EXT_polygon_offset
-
-    // GL_EXT_polygon_offset defines
-
-        inline static var GL_EXT_polygon_offset                                           = 1;
-        inline static var GL_POLYGON_OFFSET_EXT                                           = 0x8037;
-        inline static var GL_POLYGON_OFFSET_FACTOR_EXT                                    = 0x8038;
-        inline static var GL_POLYGON_OFFSET_BIAS_EXT                                      = 0x8039;
-
-
-
-
-    // GL_EXT_polygon_offset functions
-
-        @:native('glPolygonOffsetEXT')
-        static function glPolygonOffsetEXT(factor:Float, bias:Float) : Void;
-
-
-
-
-
-//GL_EXT_polygon_offset_clamp
-
-    // GL_EXT_polygon_offset_clamp defines
-
-        inline static var GL_EXT_polygon_offset_clamp                                     = 1;
-        inline static var GL_POLYGON_OFFSET_CLAMP_EXT                                     = 0x8E1B;
-
-
-
-
-    // GL_EXT_polygon_offset_clamp functions
-
-        @:native('glPolygonOffsetClampEXT')
-        static function glPolygonOffsetClampEXT(factor:Float, units:Float, clamp:Float) : Void;
-
-
-
-
-
-//GL_EXT_post_depth_coverage
-
-    // GL_EXT_post_depth_coverage defines
-
-        inline static var GL_EXT_post_depth_coverage                                      = 1;
-
-
-//GL_EXT_provoking_vertex
-
-    // GL_EXT_provoking_vertex defines
-
-        inline static var GL_EXT_provoking_vertex                                         = 1;
-        inline static var GL_QUADS_FOLLOW_PROVOKING_VERTEX_CONVENTION_EXT                 = 0x8E4C;
-        inline static var GL_FIRST_VERTEX_CONVENTION_EXT                                  = 0x8E4D;
-        inline static var GL_LAST_VERTEX_CONVENTION_EXT                                   = 0x8E4E;
-        inline static var GL_PROVOKING_VERTEX_EXT                                         = 0x8E4F;
-
-
-
-
-    // GL_EXT_provoking_vertex functions
-
-        @:native('glProvokingVertexEXT')
-        static function glProvokingVertexEXT(mode:Int) : Void;
-
-
-
-
-
-//GL_EXT_raster_multisample
-
-    // GL_EXT_raster_multisample defines
-
-        inline static var GL_EXT_raster_multisample                                       = 1;
-        inline static var GL_COLOR_SAMPLES_NV                                             = 0x8E20;
-        inline static var GL_RASTER_MULTISAMPLE_EXT                                       = 0x9327;
-        inline static var GL_RASTER_SAMPLES_EXT                                           = 0x9328;
-        inline static var GL_MAX_RASTER_SAMPLES_EXT                                       = 0x9329;
-        inline static var GL_RASTER_FIXED_SAMPLE_LOCATIONS_EXT                            = 0x932A;
-        inline static var GL_MULTISAMPLE_RASTERIZATION_ALLOWED_EXT                        = 0x932B;
-        inline static var GL_EFFECTIVE_RASTER_SAMPLES_EXT                                 = 0x932C;
-        inline static var GL_DEPTH_SAMPLES_NV                                             = 0x932D;
-        inline static var GL_STENCIL_SAMPLES_NV                                           = 0x932E;
-        inline static var GL_MIXED_DEPTH_SAMPLES_SUPPORTED_NV                             = 0x932F;
-        inline static var GL_MIXED_STENCIL_SAMPLES_SUPPORTED_NV                           = 0x9330;
-        inline static var GL_COVERAGE_MODULATION_TABLE_NV                                 = 0x9331;
-        inline static var GL_COVERAGE_MODULATION_NV                                       = 0x9332;
-        inline static var GL_COVERAGE_MODULATION_TABLE_SIZE_NV                            = 0x9333;
-
-
-
-
-    // GL_EXT_raster_multisample functions
-
-        @:native('glCoverageModulationNV')
-        static function glCoverageModulationNV(components:Int) : Void;
-
-        @:native('glRasterSamplesEXT')
-        static function glRasterSamplesEXT(samples:UInt, fixedsamplelocations:Bool) : Void;
-
-
-        inline static function glCoverageModulationTableNV(n:Int, v:Array<Float>) : Void
-          { untyped __cpp__("glCoverageModulationTableNV({0}, (const GLfloat*)&{1}[0])", n, v); }
-
-        inline static function glGetCoverageModulationTableNV(bufsize:Int, v:Array<Float>) : Void
-          { untyped __cpp__("glGetCoverageModulationTableNV({0}, (GLfloat*)&{1}[0])", bufsize, v); }
-
-
-
-
-//GL_EXT_rescale_normal
-
-    // GL_EXT_rescale_normal defines
-
-        inline static var GL_EXT_rescale_normal                                           = 1;
-        inline static var GL_RESCALE_NORMAL_EXT                                           = 0x803A;
-
-
-//GL_EXT_scene_marker
-
-    // GL_EXT_scene_marker defines
-
-        inline static var GL_EXT_scene_marker                                             = 1;
-
-
-
-
-    // GL_EXT_scene_marker functions
-
-        @:native('glBeginSceneEXT')
-        static function glBeginSceneEXT() : Void;
-
-        @:native('glEndSceneEXT')
-        static function glEndSceneEXT() : Void;
-
-
-
-
-
-//GL_EXT_secondary_color
-
-    // GL_EXT_secondary_color defines
-
-        inline static var GL_EXT_secondary_color                                          = 1;
-        inline static var GL_COLOR_SUM_EXT                                                = 0x8458;
-        inline static var GL_CURRENT_SECONDARY_COLOR_EXT                                  = 0x8459;
-        inline static var GL_SECONDARY_COLOR_ARRAY_SIZE_EXT                               = 0x845A;
-        inline static var GL_SECONDARY_COLOR_ARRAY_TYPE_EXT                               = 0x845B;
-        inline static var GL_SECONDARY_COLOR_ARRAY_STRIDE_EXT                             = 0x845C;
-        inline static var GL_SECONDARY_COLOR_ARRAY_POINTER_EXT                            = 0x845D;
-        inline static var GL_SECONDARY_COLOR_ARRAY_EXT                                    = 0x845E;
-
-
-
-
-    // GL_EXT_secondary_color functions
-
-        @:native('glSecondaryColor3bEXT')
-        static function glSecondaryColor3bEXT(red:String, green:String, blue:String) : Void;
-
-        @:native('glSecondaryColor3dEXT')
-        static function glSecondaryColor3dEXT(red:Float, green:Float, blue:Float) : Void;
-
-        @:native('glSecondaryColor3fEXT')
-        static function glSecondaryColor3fEXT(red:Float, green:Float, blue:Float) : Void;
-
-        @:native('glSecondaryColor3iEXT')
-        static function glSecondaryColor3iEXT(red:Int, green:Int, blue:Int) : Void;
-
-        @:native('glSecondaryColor3sEXT')
-        static function glSecondaryColor3sEXT(red:Int, green:Int, blue:Int) : Void;
-
-        @:native('glSecondaryColor3ubEXT')
-        static function glSecondaryColor3ubEXT(red:String, green:String, blue:String) : Void;
-
-        @:native('glSecondaryColor3uiEXT')
-        static function glSecondaryColor3uiEXT(red:UInt, green:UInt, blue:UInt) : Void;
-
-        @:native('glSecondaryColor3usEXT')
-        static function glSecondaryColor3usEXT(red:UInt, green:UInt, blue:UInt) : Void;
-
-
-        inline static function glSecondaryColor3bvEXT(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3bvEXT((const GLbyte*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glSecondaryColor3dvEXT(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3dvEXT((const GLdouble*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glSecondaryColor3fvEXT(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3fvEXT((const GLfloat*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glSecondaryColor3ivEXT(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3ivEXT((const GLint*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glSecondaryColor3svEXT(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3svEXT((const GLshort*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glSecondaryColor3ubvEXT(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3ubvEXT((const GLubyte*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glSecondaryColor3uivEXT(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3uivEXT((const GLuint*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glSecondaryColor3usvEXT(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3usvEXT((const GLushort*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glSecondaryColorPointerEXT(size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glSecondaryColorPointerEXT({0}, {1}, {2}, (const void*)&{4}[0] + {3})", size, type, stride, bOffset, pointer); }
-
-
-
-
-//GL_EXT_separate_shader_objects
-
-    // GL_EXT_separate_shader_objects defines
-
-        inline static var GL_EXT_separate_shader_objects                                  = 1;
-        inline static var GL_ACTIVE_PROGRAM_EXT                                           = 0x8B8D;
-
-
-
-
-    // GL_EXT_separate_shader_objects functions
-
-        @:native('glActiveProgramEXT')
-        static function glActiveProgramEXT(program:UInt) : Void;
-
-        @:native('glCreateShaderProgramEXT')
-        static function glCreateShaderProgramEXT(type:Int, string:String) : UInt;
-
-        @:native('glUseShaderProgramEXT')
-        static function glUseShaderProgramEXT(type:Int, program:UInt) : Void;
-
-
-
-
-
-//GL_EXT_separate_specular_color
-
-    // GL_EXT_separate_specular_color defines
-
-        inline static var GL_EXT_separate_specular_color                                  = 1;
-        inline static var GL_LIGHT_MODEL_COLOR_CONTROL_EXT                                = 0x81F8;
-        inline static var GL_SINGLE_COLOR_EXT                                             = 0x81F9;
-        inline static var GL_SEPARATE_SPECULAR_COLOR_EXT                                  = 0x81FA;
-
-
-//GL_EXT_shader_image_load_formatted
-
-    // GL_EXT_shader_image_load_formatted defines
-
-        inline static var GL_EXT_shader_image_load_formatted                              = 1;
-
-
-//GL_EXT_shader_image_load_store
-
-    // GL_EXT_shader_image_load_store defines
-
-        inline static var GL_EXT_shader_image_load_store                                  = 1;
-        inline static var GL_VERTEX_ATTRIB_ARRAY_BARRIER_BIT_EXT                          = 0x00000001;
-        inline static var GL_ELEMENT_ARRAY_BARRIER_BIT_EXT                                = 0x00000002;
-        inline static var GL_UNIFORM_BARRIER_BIT_EXT                                      = 0x00000004;
-        inline static var GL_TEXTURE_FETCH_BARRIER_BIT_EXT                                = 0x00000008;
-        inline static var GL_SHADER_IMAGE_ACCESS_BARRIER_BIT_EXT                          = 0x00000020;
-        inline static var GL_COMMAND_BARRIER_BIT_EXT                                      = 0x00000040;
-        inline static var GL_PIXEL_BUFFER_BARRIER_BIT_EXT                                 = 0x00000080;
-        inline static var GL_TEXTURE_UPDATE_BARRIER_BIT_EXT                               = 0x00000100;
-        inline static var GL_BUFFER_UPDATE_BARRIER_BIT_EXT                                = 0x00000200;
-        inline static var GL_FRAMEBUFFER_BARRIER_BIT_EXT                                  = 0x00000400;
-        inline static var GL_TRANSFORM_FEEDBACK_BARRIER_BIT_EXT                           = 0x00000800;
-        inline static var GL_ATOMIC_COUNTER_BARRIER_BIT_EXT                               = 0x00001000;
-        inline static var GL_MAX_IMAGE_UNITS_EXT                                          = 0x8F38;
-        inline static var GL_MAX_COMBINED_IMAGE_UNITS_AND_FRAGMENT_OUTPUTS_EXT            = 0x8F39;
-        inline static var GL_IMAGE_BINDING_NAME_EXT                                       = 0x8F3A;
-        inline static var GL_IMAGE_BINDING_LEVEL_EXT                                      = 0x8F3B;
-        inline static var GL_IMAGE_BINDING_LAYERED_EXT                                    = 0x8F3C;
-        inline static var GL_IMAGE_BINDING_LAYER_EXT                                      = 0x8F3D;
-        inline static var GL_IMAGE_BINDING_ACCESS_EXT                                     = 0x8F3E;
-        inline static var GL_IMAGE_1D_EXT                                                 = 0x904C;
-        inline static var GL_IMAGE_2D_EXT                                                 = 0x904D;
-        inline static var GL_IMAGE_3D_EXT                                                 = 0x904E;
-        inline static var GL_IMAGE_2D_RECT_EXT                                            = 0x904F;
-        inline static var GL_IMAGE_CUBE_EXT                                               = 0x9050;
-        inline static var GL_IMAGE_BUFFER_EXT                                             = 0x9051;
-        inline static var GL_IMAGE_1D_ARRAY_EXT                                           = 0x9052;
-        inline static var GL_IMAGE_2D_ARRAY_EXT                                           = 0x9053;
-        inline static var GL_IMAGE_CUBE_MAP_ARRAY_EXT                                     = 0x9054;
-        inline static var GL_IMAGE_2D_MULTISAMPLE_EXT                                     = 0x9055;
-        inline static var GL_IMAGE_2D_MULTISAMPLE_ARRAY_EXT                               = 0x9056;
-        inline static var GL_INT_IMAGE_1D_EXT                                             = 0x9057;
-        inline static var GL_INT_IMAGE_2D_EXT                                             = 0x9058;
-        inline static var GL_INT_IMAGE_3D_EXT                                             = 0x9059;
-        inline static var GL_INT_IMAGE_2D_RECT_EXT                                        = 0x905A;
-        inline static var GL_INT_IMAGE_CUBE_EXT                                           = 0x905B;
-        inline static var GL_INT_IMAGE_BUFFER_EXT                                         = 0x905C;
-        inline static var GL_INT_IMAGE_1D_ARRAY_EXT                                       = 0x905D;
-        inline static var GL_INT_IMAGE_2D_ARRAY_EXT                                       = 0x905E;
-        inline static var GL_INT_IMAGE_CUBE_MAP_ARRAY_EXT                                 = 0x905F;
-        inline static var GL_INT_IMAGE_2D_MULTISAMPLE_EXT                                 = 0x9060;
-        inline static var GL_INT_IMAGE_2D_MULTISAMPLE_ARRAY_EXT                           = 0x9061;
-        inline static var GL_UNSIGNED_INT_IMAGE_1D_EXT                                    = 0x9062;
-        inline static var GL_UNSIGNED_INT_IMAGE_2D_EXT                                    = 0x9063;
-        inline static var GL_UNSIGNED_INT_IMAGE_3D_EXT                                    = 0x9064;
-        inline static var GL_UNSIGNED_INT_IMAGE_2D_RECT_EXT                               = 0x9065;
-        inline static var GL_UNSIGNED_INT_IMAGE_CUBE_EXT                                  = 0x9066;
-        inline static var GL_UNSIGNED_INT_IMAGE_BUFFER_EXT                                = 0x9067;
-        inline static var GL_UNSIGNED_INT_IMAGE_1D_ARRAY_EXT                              = 0x9068;
-        inline static var GL_UNSIGNED_INT_IMAGE_2D_ARRAY_EXT                              = 0x9069;
-        inline static var GL_UNSIGNED_INT_IMAGE_CUBE_MAP_ARRAY_EXT                        = 0x906A;
-        inline static var GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE_EXT                        = 0x906B;
-        inline static var GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE_ARRAY_EXT                  = 0x906C;
-        inline static var GL_MAX_IMAGE_SAMPLES_EXT                                        = 0x906D;
-        inline static var GL_IMAGE_BINDING_FORMAT_EXT                                     = 0x906E;
-        inline static var GL_ALL_BARRIER_BITS_EXT                                         = 0xFFFFFFFF;
-
-
-
-
-    // GL_EXT_shader_image_load_store functions
-
-        @:native('glBindImageTextureEXT')
-        static function glBindImageTextureEXT(index:UInt, texture:UInt, level:Int, layered:Bool, layer:Int, access:Int, format:Int) : Void;
-
-        @:native('glMemoryBarrierEXT')
-        static function glMemoryBarrierEXT(barriers:Int) : Void;
-
-
-
-
-
-//GL_EXT_shader_integer_mix
-
-    // GL_EXT_shader_integer_mix defines
-
-        inline static var GL_EXT_shader_integer_mix                                       = 1;
-
-
-//GL_EXT_shadow_funcs
-
-    // GL_EXT_shadow_funcs defines
-
-        inline static var GL_EXT_shadow_funcs                                             = 1;
-
-
-//GL_EXT_shared_texture_palette
-
-    // GL_EXT_shared_texture_palette defines
-
-        inline static var GL_EXT_shared_texture_palette                                   = 1;
-        inline static var GL_SHARED_TEXTURE_PALETTE_EXT                                   = 0x81FB;
-
-
-//GL_EXT_sparse_texture2
-
-    // GL_EXT_sparse_texture2 defines
-
-        inline static var GL_EXT_sparse_texture2                                          = 1;
-
-
-//GL_EXT_stencil_clear_tag
-
-    // GL_EXT_stencil_clear_tag defines
-
-        inline static var GL_EXT_stencil_clear_tag                                        = 1;
-        inline static var GL_STENCIL_TAG_BITS_EXT                                         = 0x88F2;
-        inline static var GL_STENCIL_CLEAR_TAG_VALUE_EXT                                  = 0x88F3;
-
-
-//GL_EXT_stencil_two_side
-
-    // GL_EXT_stencil_two_side defines
-
-        inline static var GL_EXT_stencil_two_side                                         = 1;
-        inline static var GL_STENCIL_TEST_TWO_SIDE_EXT                                    = 0x8910;
-        inline static var GL_ACTIVE_STENCIL_FACE_EXT                                      = 0x8911;
-
-
-
-
-    // GL_EXT_stencil_two_side functions
-
-        @:native('glActiveStencilFaceEXT')
-        static function glActiveStencilFaceEXT(face:Int) : Void;
-
-
-
-
-
-//GL_EXT_stencil_wrap
-
-    // GL_EXT_stencil_wrap defines
-
-        inline static var GL_EXT_stencil_wrap                                             = 1;
-        inline static var GL_INCR_WRAP_EXT                                                = 0x8507;
-        inline static var GL_DECR_WRAP_EXT                                                = 0x8508;
-
-
-//GL_EXT_subtexture
-
-    // GL_EXT_subtexture defines
-
-        inline static var GL_EXT_subtexture                                               = 1;
-
-
-
-
-    // GL_EXT_subtexture functions
-
-
-        inline static function glTexSubImage1DEXT(target:Int, level:Int, xoffset:Int, width:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTexSubImage1DEXT({0}, {1}, {2}, {3}, {4}, {5}, (const void*)&{7}[0] + {6})", target, level, xoffset, width, format, type, bOffset, pixels); }
-
-        inline static function glTexSubImage2DEXT(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTexSubImage2DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", target, level, xoffset, yoffset, width, height, format, type, bOffset, pixels); }
-
-        inline static function glTexSubImage3DEXT(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, width:Int, height:Int, depth:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTexSubImage3DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&{11}[0] + {10})", target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, bOffset, pixels); }
-
-
-
-
-//GL_EXT_texture
-
-    // GL_EXT_texture defines
-
-        inline static var GL_EXT_texture                                                  = 1;
-        inline static var GL_ALPHA4_EXT                                                   = 0x803B;
-        inline static var GL_ALPHA8_EXT                                                   = 0x803C;
-        inline static var GL_ALPHA12_EXT                                                  = 0x803D;
-        inline static var GL_ALPHA16_EXT                                                  = 0x803E;
-        inline static var GL_LUMINANCE4_EXT                                               = 0x803F;
-        inline static var GL_LUMINANCE8_EXT                                               = 0x8040;
-        inline static var GL_LUMINANCE12_EXT                                              = 0x8041;
-        inline static var GL_LUMINANCE16_EXT                                              = 0x8042;
-        inline static var GL_LUMINANCE4_ALPHA4_EXT                                        = 0x8043;
-        inline static var GL_LUMINANCE6_ALPHA2_EXT                                        = 0x8044;
-        inline static var GL_LUMINANCE8_ALPHA8_EXT                                        = 0x8045;
-        inline static var GL_LUMINANCE12_ALPHA4_EXT                                       = 0x8046;
-        inline static var GL_LUMINANCE12_ALPHA12_EXT                                      = 0x8047;
-        inline static var GL_LUMINANCE16_ALPHA16_EXT                                      = 0x8048;
-        inline static var GL_INTENSITY_EXT                                                = 0x8049;
-        inline static var GL_INTENSITY4_EXT                                               = 0x804A;
-        inline static var GL_INTENSITY8_EXT                                               = 0x804B;
-        inline static var GL_INTENSITY12_EXT                                              = 0x804C;
-        inline static var GL_INTENSITY16_EXT                                              = 0x804D;
-        inline static var GL_RGB2_EXT                                                     = 0x804E;
-        inline static var GL_RGB4_EXT                                                     = 0x804F;
-        inline static var GL_RGB5_EXT                                                     = 0x8050;
-        inline static var GL_RGB8_EXT                                                     = 0x8051;
-        inline static var GL_RGB10_EXT                                                    = 0x8052;
-        inline static var GL_RGB12_EXT                                                    = 0x8053;
-        inline static var GL_RGB16_EXT                                                    = 0x8054;
-        inline static var GL_RGBA2_EXT                                                    = 0x8055;
-        inline static var GL_RGBA4_EXT                                                    = 0x8056;
-        inline static var GL_RGB5_A1_EXT                                                  = 0x8057;
-        inline static var GL_RGBA8_EXT                                                    = 0x8058;
-        inline static var GL_RGB10_A2_EXT                                                 = 0x8059;
-        inline static var GL_RGBA12_EXT                                                   = 0x805A;
-        inline static var GL_RGBA16_EXT                                                   = 0x805B;
-        inline static var GL_TEXTURE_RED_SIZE_EXT                                         = 0x805C;
-        inline static var GL_TEXTURE_GREEN_SIZE_EXT                                       = 0x805D;
-        inline static var GL_TEXTURE_BLUE_SIZE_EXT                                        = 0x805E;
-        inline static var GL_TEXTURE_ALPHA_SIZE_EXT                                       = 0x805F;
-        inline static var GL_TEXTURE_LUMINANCE_SIZE_EXT                                   = 0x8060;
-        inline static var GL_TEXTURE_INTENSITY_SIZE_EXT                                   = 0x8061;
-        inline static var GL_REPLACE_EXT                                                  = 0x8062;
-        inline static var GL_PROXY_TEXTURE_1D_EXT                                         = 0x8063;
-        inline static var GL_PROXY_TEXTURE_2D_EXT                                         = 0x8064;
-
-
-//GL_EXT_texture3D
-
-    // GL_EXT_texture3D defines
-
-        inline static var GL_EXT_texture3D                                                = 1;
-        inline static var GL_PACK_SKIP_IMAGES_EXT                                         = 0x806B;
-        inline static var GL_PACK_IMAGE_HEIGHT_EXT                                        = 0x806C;
-        inline static var GL_UNPACK_SKIP_IMAGES_EXT                                       = 0x806D;
-        inline static var GL_UNPACK_IMAGE_HEIGHT_EXT                                      = 0x806E;
-        inline static var GL_TEXTURE_3D_EXT                                               = 0x806F;
-        inline static var GL_PROXY_TEXTURE_3D_EXT                                         = 0x8070;
-        inline static var GL_TEXTURE_DEPTH_EXT                                            = 0x8071;
-        inline static var GL_TEXTURE_WRAP_R_EXT                                           = 0x8072;
-        inline static var GL_MAX_3D_TEXTURE_SIZE_EXT                                      = 0x8073;
-
-
-
-
-    // GL_EXT_texture3D functions
-
-
-        inline static function glTexImage3DEXT(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, border:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTexImage3DEXT({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, (const void*)&{10}[0] + {9})", target, level, internalformat, width, height, depth, border, format, type, bOffset, pixels); }
-
-
-
-
-//GL_EXT_texture_array
-
-    // GL_EXT_texture_array defines
-
-        inline static var GL_EXT_texture_array                                            = 1;
-        inline static var GL_COMPARE_REF_DEPTH_TO_TEXTURE_EXT                             = 0x884E;
-        inline static var GL_MAX_ARRAY_TEXTURE_LAYERS_EXT                                 = 0x88FF;
-        inline static var GL_TEXTURE_1D_ARRAY_EXT                                         = 0x8C18;
-        inline static var GL_PROXY_TEXTURE_1D_ARRAY_EXT                                   = 0x8C19;
-        inline static var GL_TEXTURE_2D_ARRAY_EXT                                         = 0x8C1A;
-        inline static var GL_PROXY_TEXTURE_2D_ARRAY_EXT                                   = 0x8C1B;
-        inline static var GL_TEXTURE_BINDING_1D_ARRAY_EXT                                 = 0x8C1C;
-        inline static var GL_TEXTURE_BINDING_2D_ARRAY_EXT                                 = 0x8C1D;
-
-
-
-
-    // GL_EXT_texture_array functions
-
-        @:native('glFramebufferTextureLayerEXT')
-        static function glFramebufferTextureLayerEXT(target:Int, attachment:Int, texture:UInt, level:Int, layer:Int) : Void;
-
-
-
-
-
-//GL_EXT_texture_buffer_object
-
-    // GL_EXT_texture_buffer_object defines
-
-        inline static var GL_EXT_texture_buffer_object                                    = 1;
-        inline static var GL_TEXTURE_BUFFER_EXT                                           = 0x8C2A;
-        inline static var GL_MAX_TEXTURE_BUFFER_SIZE_EXT                                  = 0x8C2B;
-        inline static var GL_TEXTURE_BINDING_BUFFER_EXT                                   = 0x8C2C;
-        inline static var GL_TEXTURE_BUFFER_DATA_STORE_BINDING_EXT                        = 0x8C2D;
-        inline static var GL_TEXTURE_BUFFER_FORMAT_EXT                                    = 0x8C2E;
-
-
-
-
-    // GL_EXT_texture_buffer_object functions
-
-        @:native('glTexBufferEXT')
-        static function glTexBufferEXT(target:Int, internalformat:Int, buffer:UInt) : Void;
-
-
-
-
-
-//GL_EXT_texture_compression_dxt1
-
-    // GL_EXT_texture_compression_dxt1 defines
-
-        inline static var GL_EXT_texture_compression_dxt1                                 = 1;
-
-
-//GL_EXT_texture_compression_latc
-
-    // GL_EXT_texture_compression_latc defines
-
-        inline static var GL_EXT_texture_compression_latc                                 = 1;
-        inline static var GL_COMPRESSED_LUMINANCE_LATC1_EXT                               = 0x8C70;
-        inline static var GL_COMPRESSED_SIGNED_LUMINANCE_LATC1_EXT                        = 0x8C71;
-        inline static var GL_COMPRESSED_LUMINANCE_ALPHA_LATC2_EXT                         = 0x8C72;
-        inline static var GL_COMPRESSED_SIGNED_LUMINANCE_ALPHA_LATC2_EXT                  = 0x8C73;
-
-
-//GL_EXT_texture_compression_rgtc
-
-    // GL_EXT_texture_compression_rgtc defines
-
-        inline static var GL_EXT_texture_compression_rgtc                                 = 1;
-        inline static var GL_COMPRESSED_RED_RGTC1_EXT                                     = 0x8DBB;
-        inline static var GL_COMPRESSED_SIGNED_RED_RGTC1_EXT                              = 0x8DBC;
-        inline static var GL_COMPRESSED_RED_GREEN_RGTC2_EXT                               = 0x8DBD;
-        inline static var GL_COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT                        = 0x8DBE;
-
-
-//GL_EXT_texture_compression_s3tc
-
-    // GL_EXT_texture_compression_s3tc defines
-
-        inline static var GL_EXT_texture_compression_s3tc                                 = 1;
-        inline static var GL_COMPRESSED_RGB_S3TC_DXT1_EXT                                 = 0x83F0;
-        inline static var GL_COMPRESSED_RGBA_S3TC_DXT1_EXT                                = 0x83F1;
-        inline static var GL_COMPRESSED_RGBA_S3TC_DXT3_EXT                                = 0x83F2;
-        inline static var GL_COMPRESSED_RGBA_S3TC_DXT5_EXT                                = 0x83F3;
-
-
-//GL_EXT_texture_cube_map
-
-    // GL_EXT_texture_cube_map defines
-
-        inline static var GL_EXT_texture_cube_map                                         = 1;
-        inline static var GL_NORMAL_MAP_EXT                                               = 0x8511;
-        inline static var GL_REFLECTION_MAP_EXT                                           = 0x8512;
-        inline static var GL_TEXTURE_CUBE_MAP_EXT                                         = 0x8513;
-        inline static var GL_TEXTURE_BINDING_CUBE_MAP_EXT                                 = 0x8514;
-        inline static var GL_TEXTURE_CUBE_MAP_POSITIVE_X_EXT                              = 0x8515;
-        inline static var GL_TEXTURE_CUBE_MAP_NEGATIVE_X_EXT                              = 0x8516;
-        inline static var GL_TEXTURE_CUBE_MAP_POSITIVE_Y_EXT                              = 0x8517;
-        inline static var GL_TEXTURE_CUBE_MAP_NEGATIVE_Y_EXT                              = 0x8518;
-        inline static var GL_TEXTURE_CUBE_MAP_POSITIVE_Z_EXT                              = 0x8519;
-        inline static var GL_TEXTURE_CUBE_MAP_NEGATIVE_Z_EXT                              = 0x851A;
-        inline static var GL_PROXY_TEXTURE_CUBE_MAP_EXT                                   = 0x851B;
-        inline static var GL_MAX_CUBE_MAP_TEXTURE_SIZE_EXT                                = 0x851C;
-
-
-//GL_EXT_texture_edge_clamp
-
-    // GL_EXT_texture_edge_clamp defines
-
-        inline static var GL_EXT_texture_edge_clamp                                       = 1;
-        inline static var GL_CLAMP_TO_EDGE_EXT                                            = 0x812F;
-
-
-//GL_EXT_texture_env
-
-    // GL_EXT_texture_env defines
-
-        inline static var GL_EXT_texture_env                                              = 1;
-
-
-//GL_EXT_texture_env_add
-
-    // GL_EXT_texture_env_add defines
-
-        inline static var GL_EXT_texture_env_add                                          = 1;
-
-
-//GL_EXT_texture_env_combine
-
-    // GL_EXT_texture_env_combine defines
-
-        inline static var GL_EXT_texture_env_combine                                      = 1;
-        inline static var GL_COMBINE_EXT                                                  = 0x8570;
-        inline static var GL_COMBINE_RGB_EXT                                              = 0x8571;
-        inline static var GL_COMBINE_ALPHA_EXT                                            = 0x8572;
-        inline static var GL_RGB_SCALE_EXT                                                = 0x8573;
-        inline static var GL_ADD_SIGNED_EXT                                               = 0x8574;
-        inline static var GL_INTERPOLATE_EXT                                              = 0x8575;
-        inline static var GL_CONSTANT_EXT                                                 = 0x8576;
-        inline static var GL_PRIMARY_COLOR_EXT                                            = 0x8577;
-        inline static var GL_PREVIOUS_EXT                                                 = 0x8578;
-        inline static var GL_SOURCE0_RGB_EXT                                              = 0x8580;
-        inline static var GL_SOURCE1_RGB_EXT                                              = 0x8581;
-        inline static var GL_SOURCE2_RGB_EXT                                              = 0x8582;
-        inline static var GL_SOURCE0_ALPHA_EXT                                            = 0x8588;
-        inline static var GL_SOURCE1_ALPHA_EXT                                            = 0x8589;
-        inline static var GL_SOURCE2_ALPHA_EXT                                            = 0x858A;
-        inline static var GL_OPERAND0_RGB_EXT                                             = 0x8590;
-        inline static var GL_OPERAND1_RGB_EXT                                             = 0x8591;
-        inline static var GL_OPERAND2_RGB_EXT                                             = 0x8592;
-        inline static var GL_OPERAND0_ALPHA_EXT                                           = 0x8598;
-        inline static var GL_OPERAND1_ALPHA_EXT                                           = 0x8599;
-        inline static var GL_OPERAND2_ALPHA_EXT                                           = 0x859A;
-
-
-//GL_EXT_texture_env_dot3
-
-    // GL_EXT_texture_env_dot3 defines
-
-        inline static var GL_EXT_texture_env_dot3                                         = 1;
-        inline static var GL_DOT3_RGB_EXT                                                 = 0x8740;
-        inline static var GL_DOT3_RGBA_EXT                                                = 0x8741;
-
-
-//GL_EXT_texture_filter_anisotropic
-
-    // GL_EXT_texture_filter_anisotropic defines
-
-        inline static var GL_EXT_texture_filter_anisotropic                               = 1;
-        inline static var GL_TEXTURE_MAX_ANISOTROPY_EXT                                   = 0x84FE;
-        inline static var GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT                               = 0x84FF;
-
-
-//GL_EXT_texture_filter_minmax
-
-    // GL_EXT_texture_filter_minmax defines
-
-        inline static var GL_EXT_texture_filter_minmax                                    = 1;
-        inline static var GL_TEXTURE_REDUCTION_MODE_EXT                                   = 0x9366;
-        inline static var GL_WEIGHTED_AVERAGE_EXT                                         = 0x9367;
-
-
-//GL_EXT_texture_integer
-
-    // GL_EXT_texture_integer defines
-
-        inline static var GL_EXT_texture_integer                                          = 1;
-        inline static var GL_RGBA32UI_EXT                                                 = 0x8D70;
-        inline static var GL_RGB32UI_EXT                                                  = 0x8D71;
-        inline static var GL_ALPHA32UI_EXT                                                = 0x8D72;
-        inline static var GL_INTENSITY32UI_EXT                                            = 0x8D73;
-        inline static var GL_LUMINANCE32UI_EXT                                            = 0x8D74;
-        inline static var GL_LUMINANCE_ALPHA32UI_EXT                                      = 0x8D75;
-        inline static var GL_RGBA16UI_EXT                                                 = 0x8D76;
-        inline static var GL_RGB16UI_EXT                                                  = 0x8D77;
-        inline static var GL_ALPHA16UI_EXT                                                = 0x8D78;
-        inline static var GL_INTENSITY16UI_EXT                                            = 0x8D79;
-        inline static var GL_LUMINANCE16UI_EXT                                            = 0x8D7A;
-        inline static var GL_LUMINANCE_ALPHA16UI_EXT                                      = 0x8D7B;
-        inline static var GL_RGBA8UI_EXT                                                  = 0x8D7C;
-        inline static var GL_RGB8UI_EXT                                                   = 0x8D7D;
-        inline static var GL_ALPHA8UI_EXT                                                 = 0x8D7E;
-        inline static var GL_INTENSITY8UI_EXT                                             = 0x8D7F;
-        inline static var GL_LUMINANCE8UI_EXT                                             = 0x8D80;
-        inline static var GL_LUMINANCE_ALPHA8UI_EXT                                       = 0x8D81;
-        inline static var GL_RGBA32I_EXT                                                  = 0x8D82;
-        inline static var GL_RGB32I_EXT                                                   = 0x8D83;
-        inline static var GL_ALPHA32I_EXT                                                 = 0x8D84;
-        inline static var GL_INTENSITY32I_EXT                                             = 0x8D85;
-        inline static var GL_LUMINANCE32I_EXT                                             = 0x8D86;
-        inline static var GL_LUMINANCE_ALPHA32I_EXT                                       = 0x8D87;
-        inline static var GL_RGBA16I_EXT                                                  = 0x8D88;
-        inline static var GL_RGB16I_EXT                                                   = 0x8D89;
-        inline static var GL_ALPHA16I_EXT                                                 = 0x8D8A;
-        inline static var GL_INTENSITY16I_EXT                                             = 0x8D8B;
-        inline static var GL_LUMINANCE16I_EXT                                             = 0x8D8C;
-        inline static var GL_LUMINANCE_ALPHA16I_EXT                                       = 0x8D8D;
-        inline static var GL_RGBA8I_EXT                                                   = 0x8D8E;
-        inline static var GL_RGB8I_EXT                                                    = 0x8D8F;
-        inline static var GL_ALPHA8I_EXT                                                  = 0x8D90;
-        inline static var GL_INTENSITY8I_EXT                                              = 0x8D91;
-        inline static var GL_LUMINANCE8I_EXT                                              = 0x8D92;
-        inline static var GL_LUMINANCE_ALPHA8I_EXT                                        = 0x8D93;
-        inline static var GL_RED_INTEGER_EXT                                              = 0x8D94;
-        inline static var GL_GREEN_INTEGER_EXT                                            = 0x8D95;
-        inline static var GL_BLUE_INTEGER_EXT                                             = 0x8D96;
-        inline static var GL_ALPHA_INTEGER_EXT                                            = 0x8D97;
-        inline static var GL_RGB_INTEGER_EXT                                              = 0x8D98;
-        inline static var GL_RGBA_INTEGER_EXT                                             = 0x8D99;
-        inline static var GL_BGR_INTEGER_EXT                                              = 0x8D9A;
-        inline static var GL_BGRA_INTEGER_EXT                                             = 0x8D9B;
-        inline static var GL_LUMINANCE_INTEGER_EXT                                        = 0x8D9C;
-        inline static var GL_LUMINANCE_ALPHA_INTEGER_EXT                                  = 0x8D9D;
-        inline static var GL_RGBA_INTEGER_MODE_EXT                                        = 0x8D9E;
-
-
-
-
-    // GL_EXT_texture_integer functions
-
-        @:native('glClearColorIiEXT')
-        static function glClearColorIiEXT(red:Int, green:Int, blue:Int, alpha:Int) : Void;
-
-        @:native('glClearColorIuiEXT')
-        static function glClearColorIuiEXT(red:UInt, green:UInt, blue:UInt, alpha:UInt) : Void;
-
-
-        inline static function glGetTexParameterIivEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTexParameterIivEXT({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glGetTexParameterIuivEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTexParameterIuivEXT({0}, {1}, (GLuint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glTexParameterIivEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTexParameterIivEXT({0}, {1}, (const GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glTexParameterIuivEXT(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTexParameterIuivEXT({0}, {1}, (const GLuint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-
-
-
-//GL_EXT_texture_lod_bias
-
-    // GL_EXT_texture_lod_bias defines
-
-        inline static var GL_EXT_texture_lod_bias                                         = 1;
-        inline static var GL_MAX_TEXTURE_LOD_BIAS_EXT                                     = 0x84FD;
-        inline static var GL_TEXTURE_FILTER_CONTROL_EXT                                   = 0x8500;
-        inline static var GL_TEXTURE_LOD_BIAS_EXT                                         = 0x8501;
-
-
-//GL_EXT_texture_mirror_clamp
-
-    // GL_EXT_texture_mirror_clamp defines
-
-        inline static var GL_EXT_texture_mirror_clamp                                     = 1;
-        inline static var GL_MIRROR_CLAMP_EXT                                             = 0x8742;
-        inline static var GL_MIRROR_CLAMP_TO_EDGE_EXT                                     = 0x8743;
-        inline static var GL_MIRROR_CLAMP_TO_BORDER_EXT                                   = 0x8912;
-
-
-//GL_EXT_texture_object
-
-    // GL_EXT_texture_object defines
-
-        inline static var GL_EXT_texture_object                                           = 1;
-        inline static var GL_TEXTURE_PRIORITY_EXT                                         = 0x8066;
-        inline static var GL_TEXTURE_RESIDENT_EXT                                         = 0x8067;
-        inline static var GL_TEXTURE_1D_BINDING_EXT                                       = 0x8068;
-        inline static var GL_TEXTURE_2D_BINDING_EXT                                       = 0x8069;
-        inline static var GL_TEXTURE_3D_BINDING_EXT                                       = 0x806A;
-
-
-
-
-    // GL_EXT_texture_object functions
-
-        @:native('glBindTextureEXT')
-        static function glBindTextureEXT(target:Int, texture:UInt) : Void;
-
-        @:native('glIsTextureEXT')
-        static function glIsTextureEXT(texture:UInt) : Bool;
-
-
-        inline static function glAreTexturesResidentEXT(n:Int, textures:Array<UInt>, residences:Array<Bool>) : Bool
-          { return untyped __cpp__("glAreTexturesResidentEXT({0}, (const GLuint*)&{1}[0], (GLboolean*)&{2}[0])", n, textures, residences); }
-
-        inline static function glDeleteTexturesEXT(n:Int, textures:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteTexturesEXT({0}, (const GLuint*)&{1}[0])", n, textures); }
-
-        inline static function glGenTexturesEXT(n:Int, textures:Array<UInt>) : Void
-          { untyped __cpp__("glGenTexturesEXT({0}, (GLuint*)&{1}[0])", n, textures); }
-
-
-
-    // TODO functions
-
-            
-        // inline static function glPrioritizeTexturesEXT(n:Int, textures:Array<UInt>, priorities:const GLclampf*) : Void
-        // { untyped __cpp__("glPrioritizeTexturesEXT({0}, (const GLuint*)&{1}[0], {2})", n, textures, priorities); }
-
-
-//GL_EXT_texture_perturb_normal
-
-    // GL_EXT_texture_perturb_normal defines
-
-        inline static var GL_EXT_texture_perturb_normal                                   = 1;
-        inline static var GL_PERTURB_EXT                                                  = 0x85AE;
-        inline static var GL_TEXTURE_NORMAL_EXT                                           = 0x85AF;
-
-
-
-
-    // GL_EXT_texture_perturb_normal functions
-
-        @:native('glTextureNormalEXT')
-        static function glTextureNormalEXT(mode:Int) : Void;
-
-
-
-
-
-//GL_EXT_texture_rectangle
-
-    // GL_EXT_texture_rectangle defines
-
-        inline static var GL_EXT_texture_rectangle                                        = 1;
-        inline static var GL_TEXTURE_RECTANGLE_EXT                                        = 0x84F5;
-        inline static var GL_TEXTURE_BINDING_RECTANGLE_EXT                                = 0x84F6;
-        inline static var GL_PROXY_TEXTURE_RECTANGLE_EXT                                  = 0x84F7;
-        inline static var GL_MAX_RECTANGLE_TEXTURE_SIZE_EXT                               = 0x84F8;
-
-
-//GL_EXT_texture_sRGB
-
-    // GL_EXT_texture_sRGB defines
-
-        inline static var GL_EXT_texture_sRGB                                             = 1;
-        inline static var GL_SRGB_EXT                                                     = 0x8C40;
-        inline static var GL_SRGB8_EXT                                                    = 0x8C41;
-        inline static var GL_SRGB_ALPHA_EXT                                               = 0x8C42;
-        inline static var GL_SRGB8_ALPHA8_EXT                                             = 0x8C43;
-        inline static var GL_SLUMINANCE_ALPHA_EXT                                         = 0x8C44;
-        inline static var GL_SLUMINANCE8_ALPHA8_EXT                                       = 0x8C45;
-        inline static var GL_SLUMINANCE_EXT                                               = 0x8C46;
-        inline static var GL_SLUMINANCE8_EXT                                              = 0x8C47;
-        inline static var GL_COMPRESSED_SRGB_EXT                                          = 0x8C48;
-        inline static var GL_COMPRESSED_SRGB_ALPHA_EXT                                    = 0x8C49;
-        inline static var GL_COMPRESSED_SLUMINANCE_EXT                                    = 0x8C4A;
-        inline static var GL_COMPRESSED_SLUMINANCE_ALPHA_EXT                              = 0x8C4B;
-        inline static var GL_COMPRESSED_SRGB_S3TC_DXT1_EXT                                = 0x8C4C;
-        inline static var GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT                          = 0x8C4D;
-        inline static var GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT                          = 0x8C4E;
-        inline static var GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT                          = 0x8C4F;
-
-
-//GL_EXT_texture_sRGB_decode
-
-    // GL_EXT_texture_sRGB_decode defines
-
-        inline static var GL_EXT_texture_sRGB_decode                                      = 1;
-        inline static var GL_TEXTURE_SRGB_DECODE_EXT                                      = 0x8A48;
-        inline static var GL_DECODE_EXT                                                   = 0x8A49;
-        inline static var GL_SKIP_DECODE_EXT                                              = 0x8A4A;
-
-
-//GL_EXT_texture_shared_exponent
-
-    // GL_EXT_texture_shared_exponent defines
-
-        inline static var GL_EXT_texture_shared_exponent                                  = 1;
-        inline static var GL_RGB9_E5_EXT                                                  = 0x8C3D;
-        inline static var GL_UNSIGNED_INT_5_9_9_9_REV_EXT                                 = 0x8C3E;
-        inline static var GL_TEXTURE_SHARED_SIZE_EXT                                      = 0x8C3F;
-
-
-//GL_EXT_texture_snorm
-
-    // GL_EXT_texture_snorm defines
-
-        inline static var GL_EXT_texture_snorm                                            = 1;
-        inline static var GL_ALPHA_SNORM                                                  = 0x9010;
-        inline static var GL_LUMINANCE_SNORM                                              = 0x9011;
-        inline static var GL_LUMINANCE_ALPHA_SNORM                                        = 0x9012;
-        inline static var GL_INTENSITY_SNORM                                              = 0x9013;
-        inline static var GL_ALPHA8_SNORM                                                 = 0x9014;
-        inline static var GL_LUMINANCE8_SNORM                                             = 0x9015;
-        inline static var GL_LUMINANCE8_ALPHA8_SNORM                                      = 0x9016;
-        inline static var GL_INTENSITY8_SNORM                                             = 0x9017;
-        inline static var GL_ALPHA16_SNORM                                                = 0x9018;
-        inline static var GL_LUMINANCE16_SNORM                                            = 0x9019;
-        inline static var GL_LUMINANCE16_ALPHA16_SNORM                                    = 0x901A;
-        inline static var GL_INTENSITY16_SNORM                                            = 0x901B;
-
-
-//GL_EXT_texture_swizzle
-
-    // GL_EXT_texture_swizzle defines
-
-        inline static var GL_EXT_texture_swizzle                                          = 1;
-        inline static var GL_TEXTURE_SWIZZLE_R_EXT                                        = 0x8E42;
-        inline static var GL_TEXTURE_SWIZZLE_G_EXT                                        = 0x8E43;
-        inline static var GL_TEXTURE_SWIZZLE_B_EXT                                        = 0x8E44;
-        inline static var GL_TEXTURE_SWIZZLE_A_EXT                                        = 0x8E45;
-        inline static var GL_TEXTURE_SWIZZLE_RGBA_EXT                                     = 0x8E46;
-
-
-//GL_EXT_timer_query
-
-    // GL_EXT_timer_query defines
-
-        inline static var GL_EXT_timer_query                                              = 1;
-        inline static var GL_TIME_ELAPSED_EXT                                             = 0x88BF;
-
-
-
-
-    // GL_EXT_timer_query functions
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetQueryObjecti64vEXT')
-        // static function glGetQueryObjecti64vEXT(id:UInt, pname:Int, params:GLint64EXT*) : Void;
-            
-        // @:native('glGetQueryObjectui64vEXT')
-        // static function glGetQueryObjectui64vEXT(id:UInt, pname:Int, params:GLuint64EXT*) : Void;
-
-
-//GL_EXT_transform_feedback
-
-    // GL_EXT_transform_feedback defines
-
-        inline static var GL_EXT_transform_feedback                                       = 1;
-        inline static var GL_TRANSFORM_FEEDBACK_VARYING_MAX_LENGTH_EXT                    = 0x8C76;
-        inline static var GL_TRANSFORM_FEEDBACK_BUFFER_MODE_EXT                           = 0x8C7F;
-        inline static var GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS_EXT               = 0x8C80;
-        inline static var GL_TRANSFORM_FEEDBACK_VARYINGS_EXT                              = 0x8C83;
-        inline static var GL_TRANSFORM_FEEDBACK_BUFFER_START_EXT                          = 0x8C84;
-        inline static var GL_TRANSFORM_FEEDBACK_BUFFER_SIZE_EXT                           = 0x8C85;
-        inline static var GL_PRIMITIVES_GENERATED_EXT                                     = 0x8C87;
-        inline static var GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN_EXT                    = 0x8C88;
-        inline static var GL_RASTERIZER_DISCARD_EXT                                       = 0x8C89;
-        inline static var GL_MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS_EXT            = 0x8C8A;
-        inline static var GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS_EXT                  = 0x8C8B;
-        inline static var GL_INTERLEAVED_ATTRIBS_EXT                                      = 0x8C8C;
-        inline static var GL_SEPARATE_ATTRIBS_EXT                                         = 0x8C8D;
-        inline static var GL_TRANSFORM_FEEDBACK_BUFFER_EXT                                = 0x8C8E;
-        inline static var GL_TRANSFORM_FEEDBACK_BUFFER_BINDING_EXT                        = 0x8C8F;
-
-
-
-
-    // GL_EXT_transform_feedback functions
-
-        @:native('glBeginTransformFeedbackEXT')
-        static function glBeginTransformFeedbackEXT(primitiveMode:Int) : Void;
-
-        @:native('glBindBufferBaseEXT')
-        static function glBindBufferBaseEXT(target:Int, index:UInt, buffer:UInt) : Void;
-
-        @:native('glBindBufferOffsetEXT')
-        static function glBindBufferOffsetEXT(target:Int, index:UInt, buffer:UInt, offset:Int) : Void;
-
-        @:native('glBindBufferRangeEXT')
-        static function glBindBufferRangeEXT(target:Int, index:UInt, buffer:UInt, offset:Int, size:Int) : Void;
-
-        @:native('glEndTransformFeedbackEXT')
-        static function glEndTransformFeedbackEXT() : Void;
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetTransformFeedbackVaryingEXT')
-        // static function glGetTransformFeedbackVaryingEXT(program:UInt, index:UInt, bufSize:Int, length:GLsizei*, size:GLsizei*, type:GLenum*, name:String) : Void;
-            
-        // @:native('glTransformFeedbackVaryingsEXT')
-        // static function glTransformFeedbackVaryingsEXT(program:UInt, count:Int, varyings:const GLchar * const*, bufferMode:Int) : Void;
-
-
-//GL_EXT_vertex_array
-
-    // GL_EXT_vertex_array defines
-
-        inline static var GL_EXT_vertex_array                                             = 1;
-        inline static var GL_DOUBLE_EXT                                                   = 0x140A;
-        inline static var GL_VERTEX_ARRAY_EXT                                             = 0x8074;
-        inline static var GL_NORMAL_ARRAY_EXT                                             = 0x8075;
-        inline static var GL_COLOR_ARRAY_EXT                                              = 0x8076;
-        inline static var GL_INDEX_ARRAY_EXT                                              = 0x8077;
-        inline static var GL_TEXTURE_COORD_ARRAY_EXT                                      = 0x8078;
-        inline static var GL_EDGE_FLAG_ARRAY_EXT                                          = 0x8079;
-        inline static var GL_VERTEX_ARRAY_SIZE_EXT                                        = 0x807A;
-        inline static var GL_VERTEX_ARRAY_TYPE_EXT                                        = 0x807B;
-        inline static var GL_VERTEX_ARRAY_STRIDE_EXT                                      = 0x807C;
-        inline static var GL_VERTEX_ARRAY_COUNT_EXT                                       = 0x807D;
-        inline static var GL_NORMAL_ARRAY_TYPE_EXT                                        = 0x807E;
-        inline static var GL_NORMAL_ARRAY_STRIDE_EXT                                      = 0x807F;
-        inline static var GL_NORMAL_ARRAY_COUNT_EXT                                       = 0x8080;
-        inline static var GL_COLOR_ARRAY_SIZE_EXT                                         = 0x8081;
-        inline static var GL_COLOR_ARRAY_TYPE_EXT                                         = 0x8082;
-        inline static var GL_COLOR_ARRAY_STRIDE_EXT                                       = 0x8083;
-        inline static var GL_COLOR_ARRAY_COUNT_EXT                                        = 0x8084;
-        inline static var GL_INDEX_ARRAY_TYPE_EXT                                         = 0x8085;
-        inline static var GL_INDEX_ARRAY_STRIDE_EXT                                       = 0x8086;
-        inline static var GL_INDEX_ARRAY_COUNT_EXT                                        = 0x8087;
-        inline static var GL_TEXTURE_COORD_ARRAY_SIZE_EXT                                 = 0x8088;
-        inline static var GL_TEXTURE_COORD_ARRAY_TYPE_EXT                                 = 0x8089;
-        inline static var GL_TEXTURE_COORD_ARRAY_STRIDE_EXT                               = 0x808A;
-        inline static var GL_TEXTURE_COORD_ARRAY_COUNT_EXT                                = 0x808B;
-        inline static var GL_EDGE_FLAG_ARRAY_STRIDE_EXT                                   = 0x808C;
-        inline static var GL_EDGE_FLAG_ARRAY_COUNT_EXT                                    = 0x808D;
-        inline static var GL_VERTEX_ARRAY_POINTER_EXT                                     = 0x808E;
-        inline static var GL_NORMAL_ARRAY_POINTER_EXT                                     = 0x808F;
-        inline static var GL_COLOR_ARRAY_POINTER_EXT                                      = 0x8090;
-        inline static var GL_INDEX_ARRAY_POINTER_EXT                                      = 0x8091;
-        inline static var GL_TEXTURE_COORD_ARRAY_POINTER_EXT                              = 0x8092;
-        inline static var GL_EDGE_FLAG_ARRAY_POINTER_EXT                                  = 0x8093;
-
-
-
-
-    // GL_EXT_vertex_array functions
-
-        @:native('glArrayElementEXT')
-        static function glArrayElementEXT(i:Int) : Void;
-
-        @:native('glDrawArraysEXT')
-        static function glDrawArraysEXT(mode:Int, first:Int, count:Int) : Void;
-
-
-        inline static function glColorPointerEXT(size:Int, type:Int, stride:Int, count:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glColorPointerEXT({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", size, type, stride, count, bOffset, pointer); }
-
-        inline static function glIndexPointerEXT(type:Int, stride:Int, count:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glIndexPointerEXT({0}, {1}, {2}, (const void*)&{4}[0] + {3})", type, stride, count, bOffset, pointer); }
-
-        inline static function glNormalPointerEXT(type:Int, stride:Int, count:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glNormalPointerEXT({0}, {1}, {2}, (const void*)&{4}[0] + {3})", type, stride, count, bOffset, pointer); }
-
-        inline static function glTexCoordPointerEXT(size:Int, type:Int, stride:Int, count:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glTexCoordPointerEXT({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", size, type, stride, count, bOffset, pointer); }
-
-        inline static function glVertexPointerEXT(size:Int, type:Int, stride:Int, count:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glVertexPointerEXT({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", size, type, stride, count, bOffset, pointer); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glEdgeFlagPointerEXT')
-        // static function glEdgeFlagPointerEXT(stride:Int, count:Int, pointer:const GLboolean*) : Void;
-
-
-//GL_EXT_vertex_array_bgra
-
-    // GL_EXT_vertex_array_bgra defines
-
-        inline static var GL_EXT_vertex_array_bgra                                        = 1;
-
-
-//GL_EXT_vertex_attrib_64bit
-
-    // GL_EXT_vertex_attrib_64bit defines
-
-        inline static var GL_EXT_vertex_attrib_64bit                                      = 1;
-        inline static var GL_DOUBLE_MAT2_EXT                                              = 0x8F46;
-        inline static var GL_DOUBLE_MAT3_EXT                                              = 0x8F47;
-        inline static var GL_DOUBLE_MAT4_EXT                                              = 0x8F48;
-        inline static var GL_DOUBLE_MAT2x3_EXT                                            = 0x8F49;
-        inline static var GL_DOUBLE_MAT2x4_EXT                                            = 0x8F4A;
-        inline static var GL_DOUBLE_MAT3x2_EXT                                            = 0x8F4B;
-        inline static var GL_DOUBLE_MAT3x4_EXT                                            = 0x8F4C;
-        inline static var GL_DOUBLE_MAT4x2_EXT                                            = 0x8F4D;
-        inline static var GL_DOUBLE_MAT4x3_EXT                                            = 0x8F4E;
-        inline static var GL_DOUBLE_VEC2_EXT                                              = 0x8FFC;
-        inline static var GL_DOUBLE_VEC3_EXT                                              = 0x8FFD;
-        inline static var GL_DOUBLE_VEC4_EXT                                              = 0x8FFE;
-
-
-
-
-    // GL_EXT_vertex_attrib_64bit functions
-
-        @:native('glVertexArrayVertexAttribLOffsetEXT')
-        static function glVertexArrayVertexAttribLOffsetEXT(vaobj:UInt, buffer:UInt, index:UInt, size:Int, type:Int, stride:Int, offset:Int) : Void;
-
-        @:native('glVertexAttribL1dEXT')
-        static function glVertexAttribL1dEXT(index:UInt, x:Float) : Void;
-
-        @:native('glVertexAttribL2dEXT')
-        static function glVertexAttribL2dEXT(index:UInt, x:Float, y:Float) : Void;
-
-        @:native('glVertexAttribL3dEXT')
-        static function glVertexAttribL3dEXT(index:UInt, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glVertexAttribL4dEXT')
-        static function glVertexAttribL4dEXT(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-
-        inline static function glGetVertexAttribLdvEXT(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribLdvEXT({0}, {1}, (GLdouble*)&{3}[0] + {2})", index, pname, bOffset, params); }
-
-        inline static function glVertexAttribL1dvEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribL1dvEXT({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribL2dvEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribL2dvEXT({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribL3dvEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribL3dvEXT({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribL4dvEXT(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribL4dvEXT({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribLPointerEXT(index:UInt, size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glVertexAttribLPointerEXT({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", index, size, type, stride, bOffset, pointer); }
-
-
-
-
-//GL_EXT_vertex_shader
-
-    // GL_EXT_vertex_shader defines
-
-        inline static var GL_EXT_vertex_shader                                            = 1;
-        inline static var GL_VERTEX_SHADER_EXT                                            = 0x8780;
-        inline static var GL_VERTEX_SHADER_BINDING_EXT                                    = 0x8781;
-        inline static var GL_OP_INDEX_EXT                                                 = 0x8782;
-        inline static var GL_OP_NEGATE_EXT                                                = 0x8783;
-        inline static var GL_OP_DOT3_EXT                                                  = 0x8784;
-        inline static var GL_OP_DOT4_EXT                                                  = 0x8785;
-        inline static var GL_OP_MUL_EXT                                                   = 0x8786;
-        inline static var GL_OP_ADD_EXT                                                   = 0x8787;
-        inline static var GL_OP_MADD_EXT                                                  = 0x8788;
-        inline static var GL_OP_FRAC_EXT                                                  = 0x8789;
-        inline static var GL_OP_MAX_EXT                                                   = 0x878A;
-        inline static var GL_OP_MIN_EXT                                                   = 0x878B;
-        inline static var GL_OP_SET_GE_EXT                                                = 0x878C;
-        inline static var GL_OP_SET_LT_EXT                                                = 0x878D;
-        inline static var GL_OP_CLAMP_EXT                                                 = 0x878E;
-        inline static var GL_OP_FLOOR_EXT                                                 = 0x878F;
-        inline static var GL_OP_ROUND_EXT                                                 = 0x8790;
-        inline static var GL_OP_EXP_BASE_2_EXT                                            = 0x8791;
-        inline static var GL_OP_LOG_BASE_2_EXT                                            = 0x8792;
-        inline static var GL_OP_POWER_EXT                                                 = 0x8793;
-        inline static var GL_OP_RECIP_EXT                                                 = 0x8794;
-        inline static var GL_OP_RECIP_SQRT_EXT                                            = 0x8795;
-        inline static var GL_OP_SUB_EXT                                                   = 0x8796;
-        inline static var GL_OP_CROSS_PRODUCT_EXT                                         = 0x8797;
-        inline static var GL_OP_MULTIPLY_MATRIX_EXT                                       = 0x8798;
-        inline static var GL_OP_MOV_EXT                                                   = 0x8799;
-        inline static var GL_OUTPUT_VERTEX_EXT                                            = 0x879A;
-        inline static var GL_OUTPUT_COLOR0_EXT                                            = 0x879B;
-        inline static var GL_OUTPUT_COLOR1_EXT                                            = 0x879C;
-        inline static var GL_OUTPUT_TEXTURE_COORD0_EXT                                    = 0x879D;
-        inline static var GL_OUTPUT_TEXTURE_COORD1_EXT                                    = 0x879E;
-        inline static var GL_OUTPUT_TEXTURE_COORD2_EXT                                    = 0x879F;
-        inline static var GL_OUTPUT_TEXTURE_COORD3_EXT                                    = 0x87A0;
-        inline static var GL_OUTPUT_TEXTURE_COORD4_EXT                                    = 0x87A1;
-        inline static var GL_OUTPUT_TEXTURE_COORD5_EXT                                    = 0x87A2;
-        inline static var GL_OUTPUT_TEXTURE_COORD6_EXT                                    = 0x87A3;
-        inline static var GL_OUTPUT_TEXTURE_COORD7_EXT                                    = 0x87A4;
-        inline static var GL_OUTPUT_TEXTURE_COORD8_EXT                                    = 0x87A5;
-        inline static var GL_OUTPUT_TEXTURE_COORD9_EXT                                    = 0x87A6;
-        inline static var GL_OUTPUT_TEXTURE_COORD10_EXT                                   = 0x87A7;
-        inline static var GL_OUTPUT_TEXTURE_COORD11_EXT                                   = 0x87A8;
-        inline static var GL_OUTPUT_TEXTURE_COORD12_EXT                                   = 0x87A9;
-        inline static var GL_OUTPUT_TEXTURE_COORD13_EXT                                   = 0x87AA;
-        inline static var GL_OUTPUT_TEXTURE_COORD14_EXT                                   = 0x87AB;
-        inline static var GL_OUTPUT_TEXTURE_COORD15_EXT                                   = 0x87AC;
-        inline static var GL_OUTPUT_TEXTURE_COORD16_EXT                                   = 0x87AD;
-        inline static var GL_OUTPUT_TEXTURE_COORD17_EXT                                   = 0x87AE;
-        inline static var GL_OUTPUT_TEXTURE_COORD18_EXT                                   = 0x87AF;
-        inline static var GL_OUTPUT_TEXTURE_COORD19_EXT                                   = 0x87B0;
-        inline static var GL_OUTPUT_TEXTURE_COORD20_EXT                                   = 0x87B1;
-        inline static var GL_OUTPUT_TEXTURE_COORD21_EXT                                   = 0x87B2;
-        inline static var GL_OUTPUT_TEXTURE_COORD22_EXT                                   = 0x87B3;
-        inline static var GL_OUTPUT_TEXTURE_COORD23_EXT                                   = 0x87B4;
-        inline static var GL_OUTPUT_TEXTURE_COORD24_EXT                                   = 0x87B5;
-        inline static var GL_OUTPUT_TEXTURE_COORD25_EXT                                   = 0x87B6;
-        inline static var GL_OUTPUT_TEXTURE_COORD26_EXT                                   = 0x87B7;
-        inline static var GL_OUTPUT_TEXTURE_COORD27_EXT                                   = 0x87B8;
-        inline static var GL_OUTPUT_TEXTURE_COORD28_EXT                                   = 0x87B9;
-        inline static var GL_OUTPUT_TEXTURE_COORD29_EXT                                   = 0x87BA;
-        inline static var GL_OUTPUT_TEXTURE_COORD30_EXT                                   = 0x87BB;
-        inline static var GL_OUTPUT_TEXTURE_COORD31_EXT                                   = 0x87BC;
-        inline static var GL_OUTPUT_FOG_EXT                                               = 0x87BD;
-        inline static var GL_SCALAR_EXT                                                   = 0x87BE;
-        inline static var GL_VECTOR_EXT                                                   = 0x87BF;
-        inline static var GL_MATRIX_EXT                                                   = 0x87C0;
-        inline static var GL_VARIANT_EXT                                                  = 0x87C1;
-        inline static var GL_INVARIANT_EXT                                                = 0x87C2;
-        inline static var GL_LOCAL_CONSTANT_EXT                                           = 0x87C3;
-        inline static var GL_LOCAL_EXT                                                    = 0x87C4;
-        inline static var GL_MAX_VERTEX_SHADER_INSTRUCTIONS_EXT                           = 0x87C5;
-        inline static var GL_MAX_VERTEX_SHADER_VARIANTS_EXT                               = 0x87C6;
-        inline static var GL_MAX_VERTEX_SHADER_INVARIANTS_EXT                             = 0x87C7;
-        inline static var GL_MAX_VERTEX_SHADER_LOCAL_CONSTANTS_EXT                        = 0x87C8;
-        inline static var GL_MAX_VERTEX_SHADER_LOCALS_EXT                                 = 0x87C9;
-        inline static var GL_MAX_OPTIMIZED_VERTEX_SHADER_INSTRUCTIONS_EXT                 = 0x87CA;
-        inline static var GL_MAX_OPTIMIZED_VERTEX_SHADER_VARIANTS_EXT                     = 0x87CB;
-        inline static var GL_MAX_OPTIMIZED_VERTEX_SHADER_INVARIANTS_EXT                   = 0x87CC;
-        inline static var GL_MAX_OPTIMIZED_VERTEX_SHADER_LOCAL_CONSTANTS_EXT              = 0x87CD;
-        inline static var GL_MAX_OPTIMIZED_VERTEX_SHADER_LOCALS_EXT                       = 0x87CE;
-        inline static var GL_VERTEX_SHADER_INSTRUCTIONS_EXT                               = 0x87CF;
-        inline static var GL_VERTEX_SHADER_VARIANTS_EXT                                   = 0x87D0;
-        inline static var GL_VERTEX_SHADER_INVARIANTS_EXT                                 = 0x87D1;
-        inline static var GL_VERTEX_SHADER_LOCAL_CONSTANTS_EXT                            = 0x87D2;
-        inline static var GL_VERTEX_SHADER_LOCALS_EXT                                     = 0x87D3;
-        inline static var GL_VERTEX_SHADER_OPTIMIZED_EXT                                  = 0x87D4;
-        inline static var GL_X_EXT                                                        = 0x87D5;
-        inline static var GL_Y_EXT                                                        = 0x87D6;
-        inline static var GL_Z_EXT                                                        = 0x87D7;
-        inline static var GL_W_EXT                                                        = 0x87D8;
-        inline static var GL_NEGATIVE_X_EXT                                               = 0x87D9;
-        inline static var GL_NEGATIVE_Y_EXT                                               = 0x87DA;
-        inline static var GL_NEGATIVE_Z_EXT                                               = 0x87DB;
-        inline static var GL_NEGATIVE_W_EXT                                               = 0x87DC;
-        inline static var GL_ZERO_EXT                                                     = 0x87DD;
-        inline static var GL_ONE_EXT                                                      = 0x87DE;
-        inline static var GL_NEGATIVE_ONE_EXT                                             = 0x87DF;
-        inline static var GL_NORMALIZED_RANGE_EXT                                         = 0x87E0;
-        inline static var GL_FULL_RANGE_EXT                                               = 0x87E1;
-        inline static var GL_CURRENT_VERTEX_EXT                                           = 0x87E2;
-        inline static var GL_MVP_MATRIX_EXT                                               = 0x87E3;
-        inline static var GL_VARIANT_VALUE_EXT                                            = 0x87E4;
-        inline static var GL_VARIANT_DATATYPE_EXT                                         = 0x87E5;
-        inline static var GL_VARIANT_ARRAY_STRIDE_EXT                                     = 0x87E6;
-        inline static var GL_VARIANT_ARRAY_TYPE_EXT                                       = 0x87E7;
-        inline static var GL_VARIANT_ARRAY_EXT                                            = 0x87E8;
-        inline static var GL_VARIANT_ARRAY_POINTER_EXT                                    = 0x87E9;
-        inline static var GL_INVARIANT_VALUE_EXT                                          = 0x87EA;
-        inline static var GL_INVARIANT_DATATYPE_EXT                                       = 0x87EB;
-        inline static var GL_LOCAL_CONSTANT_VALUE_EXT                                     = 0x87EC;
-        inline static var GL_LOCAL_CONSTANT_DATATYPE_EXT                                  = 0x87ED;
-
-
-
-
-    // GL_EXT_vertex_shader functions
-
-        @:native('glBeginVertexShaderEXT')
-        static function glBeginVertexShaderEXT() : Void;
-
-        @:native('glBindLightParameterEXT')
-        static function glBindLightParameterEXT(light:Int, value:Int) : UInt;
-
-        @:native('glBindMaterialParameterEXT')
-        static function glBindMaterialParameterEXT(face:Int, value:Int) : UInt;
-
-        @:native('glBindParameterEXT')
-        static function glBindParameterEXT(value:Int) : UInt;
-
-        @:native('glBindTexGenParameterEXT')
-        static function glBindTexGenParameterEXT(unit:Int, coord:Int, value:Int) : UInt;
-
-        @:native('glBindTextureUnitParameterEXT')
-        static function glBindTextureUnitParameterEXT(unit:Int, value:Int) : UInt;
-
-        @:native('glBindVertexShaderEXT')
-        static function glBindVertexShaderEXT(id:UInt) : Void;
-
-        @:native('glDeleteVertexShaderEXT')
-        static function glDeleteVertexShaderEXT(id:UInt) : Void;
-
-        @:native('glDisableVariantClientStateEXT')
-        static function glDisableVariantClientStateEXT(id:UInt) : Void;
-
-        @:native('glEnableVariantClientStateEXT')
-        static function glEnableVariantClientStateEXT(id:UInt) : Void;
-
-        @:native('glEndVertexShaderEXT')
-        static function glEndVertexShaderEXT() : Void;
-
-        @:native('glExtractComponentEXT')
-        static function glExtractComponentEXT(res:UInt, src:UInt, num:UInt) : Void;
-
-        @:native('glGenSymbolsEXT')
-        static function glGenSymbolsEXT(dataType:Int, storageType:Int, range:Int, components:UInt) : UInt;
-
-        @:native('glGenVertexShadersEXT')
-        static function glGenVertexShadersEXT(range:UInt) : UInt;
-
-        @:native('glInsertComponentEXT')
-        static function glInsertComponentEXT(res:UInt, src:UInt, num:UInt) : Void;
-
-        @:native('glIsVariantEnabledEXT')
-        static function glIsVariantEnabledEXT(id:UInt, cap:Int) : Bool;
-
-        @:native('glShaderOp1EXT')
-        static function glShaderOp1EXT(op:Int, res:UInt, arg1:UInt) : Void;
-
-        @:native('glShaderOp2EXT')
-        static function glShaderOp2EXT(op:Int, res:UInt, arg1:UInt, arg2:UInt) : Void;
-
-        @:native('glShaderOp3EXT')
-        static function glShaderOp3EXT(op:Int, res:UInt, arg1:UInt, arg2:UInt, arg3:UInt) : Void;
-
-        @:native('glSwizzleEXT')
-        static function glSwizzleEXT(res:UInt, inval:UInt, outX:Int, outY:Int, outZ:Int, outW:Int) : Void;
-
-        @:native('glWriteMaskEXT')
-        static function glWriteMaskEXT(res:UInt, inval:UInt, outX:Int, outY:Int, outZ:Int, outW:Int) : Void;
-
-
-        inline static function glGetInvariantBooleanvEXT(id:UInt, value:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetInvariantBooleanvEXT({0}, {1}, (GLboolean*)&{3}[0] + {2})", id, value, bOffset, data); }
-
-        inline static function glGetInvariantFloatvEXT(id:UInt, value:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetInvariantFloatvEXT({0}, {1}, (GLfloat*)&{3}[0] + {2})", id, value, bOffset, data); }
-
-        inline static function glGetInvariantIntegervEXT(id:UInt, value:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetInvariantIntegervEXT({0}, {1}, (GLint*)&{3}[0] + {2})", id, value, bOffset, data); }
-
-        inline static function glGetLocalConstantBooleanvEXT(id:UInt, value:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetLocalConstantBooleanvEXT({0}, {1}, (GLboolean*)&{3}[0] + {2})", id, value, bOffset, data); }
-
-        inline static function glGetLocalConstantFloatvEXT(id:UInt, value:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetLocalConstantFloatvEXT({0}, {1}, (GLfloat*)&{3}[0] + {2})", id, value, bOffset, data); }
-
-        inline static function glGetLocalConstantIntegervEXT(id:UInt, value:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetLocalConstantIntegervEXT({0}, {1}, (GLint*)&{3}[0] + {2})", id, value, bOffset, data); }
-
-        inline static function glGetVariantBooleanvEXT(id:UInt, value:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetVariantBooleanvEXT({0}, {1}, (GLboolean*)&{3}[0] + {2})", id, value, bOffset, data); }
-
-        inline static function glGetVariantFloatvEXT(id:UInt, value:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetVariantFloatvEXT({0}, {1}, (GLfloat*)&{3}[0] + {2})", id, value, bOffset, data); }
-
-        inline static function glGetVariantIntegervEXT(id:UInt, value:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetVariantIntegervEXT({0}, {1}, (GLint*)&{3}[0] + {2})", id, value, bOffset, data); }
-
-        inline static function glSetInvariantEXT(id:UInt, type:Int, ?bOffset:Int=0, addr:BytesData) : Void
-          { untyped __cpp__("glSetInvariantEXT({0}, {1}, (void*)&{3}[0] + {2})", id, type, bOffset, addr); }
-
-        inline static function glSetLocalConstantEXT(id:UInt, type:Int, ?bOffset:Int=0, addr:BytesData) : Void
-          { untyped __cpp__("glSetLocalConstantEXT({0}, {1}, (void*)&{3}[0] + {2})", id, type, bOffset, addr); }
-
-        inline static function glVariantPointerEXT(id:UInt, type:Int, stride:UInt, ?bOffset:Int=0, addr:BytesData) : Void
-          { untyped __cpp__("glVariantPointerEXT({0}, {1}, {2}, (void*)&{4}[0] + {3})", id, type, stride, bOffset, addr); }
-
-        inline static function glVariantdvEXT(id:UInt, ?bOffset:Int=0, addr:BytesData) : Void
-          { untyped __cpp__("glVariantdvEXT({0}, (GLdouble*)&{2}[0] + {1})", id, bOffset, addr); }
-
-        inline static function glVariantfvEXT(id:UInt, ?bOffset:Int=0, addr:BytesData) : Void
-          { untyped __cpp__("glVariantfvEXT({0}, (GLfloat*)&{2}[0] + {1})", id, bOffset, addr); }
-
-        inline static function glVariantivEXT(id:UInt, ?bOffset:Int=0, addr:BytesData) : Void
-          { untyped __cpp__("glVariantivEXT({0}, (GLint*)&{2}[0] + {1})", id, bOffset, addr); }
-
-        inline static function glVariantubvEXT(id:UInt, ?bOffset:Int=0, addr:BytesData) : Void
-          { untyped __cpp__("glVariantubvEXT({0}, (GLubyte*)&{2}[0] + {1})", id, bOffset, addr); }
-
-        inline static function glVariantuivEXT(id:UInt, ?bOffset:Int=0, addr:BytesData) : Void
-          { untyped __cpp__("glVariantuivEXT({0}, (GLuint*)&{2}[0] + {1})", id, bOffset, addr); }
-
-        inline static function glVariantusvEXT(id:UInt, ?bOffset:Int=0, addr:BytesData) : Void
-          { untyped __cpp__("glVariantusvEXT({0}, (GLushort*)&{2}[0] + {1})", id, bOffset, addr); }
-
-
-
-    // TODO functions
-
-            
-        // inline static function glGetVariantPointervEXT(id:UInt, value:Int, ?bOffset:Int=0, *data:BytesData) : Void
-        // { untyped __cpp__("glGetVariantPointervEXT({0}, {1}, (void*)&{3}[0] + {2})", id, value, bOffset, *data); }
-            
-        // @:native('glVariantbvEXT')
-        // static function glVariantbvEXT(id:UInt, addr:GLbyte*) : Void;
-            
-        // @:native('glVariantsvEXT')
-        // static function glVariantsvEXT(id:UInt, addr:GLshort*) : Void;
-
-
-//GL_EXT_vertex_weighting
-
-    // GL_EXT_vertex_weighting defines
-
-        inline static var GL_EXT_vertex_weighting                                         = 1;
-        inline static var GL_MODELVIEW0_STACK_DEPTH_EXT                                   = 0x0BA3;
-        inline static var GL_MODELVIEW0_MATRIX_EXT                                        = 0x0BA6;
-        inline static var GL_MODELVIEW0_EXT                                               = 0x1700;
-        inline static var GL_MODELVIEW1_STACK_DEPTH_EXT                                   = 0x8502;
-        inline static var GL_MODELVIEW1_MATRIX_EXT                                        = 0x8506;
-        inline static var GL_VERTEX_WEIGHTING_EXT                                         = 0x8509;
-        inline static var GL_MODELVIEW1_EXT                                               = 0x850A;
-        inline static var GL_CURRENT_VERTEX_WEIGHT_EXT                                    = 0x850B;
-        inline static var GL_VERTEX_WEIGHT_ARRAY_EXT                                      = 0x850C;
-        inline static var GL_VERTEX_WEIGHT_ARRAY_SIZE_EXT                                 = 0x850D;
-        inline static var GL_VERTEX_WEIGHT_ARRAY_TYPE_EXT                                 = 0x850E;
-        inline static var GL_VERTEX_WEIGHT_ARRAY_STRIDE_EXT                               = 0x850F;
-        inline static var GL_VERTEX_WEIGHT_ARRAY_POINTER_EXT                              = 0x8510;
-
-
-
-
-    // GL_EXT_vertex_weighting functions
-
-        @:native('glVertexWeightfEXT')
-        static function glVertexWeightfEXT(weight:Float) : Void;
-
-
-        inline static function glVertexWeightPointerEXT(size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glVertexWeightPointerEXT({0}, {1}, {2}, (void*)&{4}[0] + {3})", size, type, stride, bOffset, pointer); }
-
-        inline static function glVertexWeightfvEXT(?bOffset:Int=0, weight:BytesData) : Void
-          { untyped __cpp__("glVertexWeightfvEXT((GLfloat*)&{1}[0] + {0})", bOffset, weight); }
-
-
-
-
-//GL_EXT_x11_sync_object
-
-    // GL_EXT_x11_sync_object defines
-
-        inline static var GL_EXT_x11_sync_object                                          = 1;
-        inline static var GL_SYNC_X11_FENCE_EXT                                           = 0x90E1;
-
-
-
-
-    // GL_EXT_x11_sync_object functions
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glImportSyncEXT')
-        // static function glImportSyncEXT(external_sync_type:Int, external_sync:Int, flags:Int) : GLsync;
-
-
-//GL_GREMEDY_frame_terminator
-
-    // GL_GREMEDY_frame_terminator defines
-
-        inline static var GL_GREMEDY_frame_terminator                                     = 1;
-
-
-
-
-    // GL_GREMEDY_frame_terminator functions
-
-        @:native('glFrameTerminatorGREMEDY')
-        static function glFrameTerminatorGREMEDY() : Void;
-
-
-
-
-
-//GL_GREMEDY_string_marker
-
-    // GL_GREMEDY_string_marker defines
-
-        inline static var GL_GREMEDY_string_marker                                        = 1;
-
-
-
-
-    // GL_GREMEDY_string_marker functions
-
-
-        inline static function glStringMarkerGREMEDY(len:Int, ?bOffset:Int=0, string:BytesData) : Void
-          { untyped __cpp__("glStringMarkerGREMEDY({0}, (const void*)&{2}[0] + {1})", len, bOffset, string); }
-
-
-
-
-//GL_HP_convolution_border_modes
-
-    // GL_HP_convolution_border_modes defines
-
-        inline static var GL_HP_convolution_border_modes                                  = 1;
-
-
-//GL_HP_image_transform
-
-    // GL_HP_image_transform defines
-
-        inline static var GL_HP_image_transform                                           = 1;
-
-
-
-
-    // GL_HP_image_transform functions
-
-        @:native('glImageTransformParameterfHP')
-        static function glImageTransformParameterfHP(target:Int, pname:Int, param:Float) : Void;
-
-
-        inline static function glGetImageTransformParameterfvHP(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetImageTransformParameterfvHP({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glGetImageTransformParameterivHP(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetImageTransformParameterivHP({0}, {1}, (const GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glImageTransformParameterfvHP(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glImageTransformParameterfvHP({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glImageTransformParameterivHP(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glImageTransformParameterivHP({0}, {1}, (const GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glImageTransformParameteriHP')
-        // static function glImageTransformParameteriHP(target:Int, pname:Int, param:const GLint) : Void;
-
-
-//GL_HP_occlusion_test
-
-    // GL_HP_occlusion_test defines
-
-        inline static var GL_HP_occlusion_test                                            = 1;
-
-
-//GL_HP_texture_lighting
-
-    // GL_HP_texture_lighting defines
-
-        inline static var GL_HP_texture_lighting                                          = 1;
-
-
-//GL_IBM_cull_vertex
-
-    // GL_IBM_cull_vertex defines
-
-        inline static var GL_IBM_cull_vertex                                              = 1;
-        inline static var GL_CULL_VERTEX_IBM                                              = 103050;
-
-
-//GL_IBM_multimode_draw_arrays
-
-    // GL_IBM_multimode_draw_arrays defines
-
-        inline static var GL_IBM_multimode_draw_arrays                                    = 1;
-
-
-
-
-    // GL_IBM_multimode_draw_arrays functions
-
-
-
-
-    // TODO functions
-
-            
-        // inline static function glMultiModeDrawArraysIBM(mode:Array<Int>, first:Array<Int>, count:const GLsizei*, primcount:Int, modestride:Int) : Void
-        // { untyped __cpp__("glMultiModeDrawArraysIBM((const GLenum*)&{0}[0], (const GLint*)&{1}[0], {2}, {3}, {4})", mode, first, count, primcount, modestride); }
-            
-        // inline static function glMultiModeDrawElementsIBM(mode:Array<Int>, count:const GLsizei*, type:Int, indices:const void *const*, primcount:Int, modestride:Int) : Void
-        // { untyped __cpp__("glMultiModeDrawElementsIBM((const GLenum*)&{0}[0], {1}, {2}, {3}, {4}, {5})", mode, count, type, indices, primcount, modestride); }
-
-
-//GL_IBM_rasterpos_clip
-
-    // GL_IBM_rasterpos_clip defines
-
-        inline static var GL_IBM_rasterpos_clip                                           = 1;
-        inline static var GL_RASTER_POSITION_UNCLIPPED_IBM                                = 103010;
-
-
-//GL_IBM_static_data
-
-    // GL_IBM_static_data defines
-
-        inline static var GL_IBM_static_data                                              = 1;
-        inline static var GL_ALL_STATIC_DATA_IBM                                          = 103060;
-        inline static var GL_STATIC_VERTEX_ARRAY_IBM                                      = 103061;
-
-
-//GL_IBM_texture_mirrored_repeat
-
-    // GL_IBM_texture_mirrored_repeat defines
-
-        inline static var GL_IBM_texture_mirrored_repeat                                  = 1;
-        inline static var GL_MIRRORED_REPEAT_IBM                                          = 0x8370;
-
-
-//GL_IBM_vertex_array_lists
-
-    // GL_IBM_vertex_array_lists defines
-
-        inline static var GL_IBM_vertex_array_lists                                       = 1;
-        inline static var GL_VERTEX_ARRAY_LIST_IBM                                        = 103070;
-        inline static var GL_NORMAL_ARRAY_LIST_IBM                                        = 103071;
-        inline static var GL_COLOR_ARRAY_LIST_IBM                                         = 103072;
-        inline static var GL_INDEX_ARRAY_LIST_IBM                                         = 103073;
-        inline static var GL_TEXTURE_COORD_ARRAY_LIST_IBM                                 = 103074;
-        inline static var GL_EDGE_FLAG_ARRAY_LIST_IBM                                     = 103075;
-        inline static var GL_FOG_COORDINATE_ARRAY_LIST_IBM                                = 103076;
-        inline static var GL_SECONDARY_COLOR_ARRAY_LIST_IBM                               = 103077;
-        inline static var GL_VERTEX_ARRAY_LIST_STRIDE_IBM                                 = 103080;
-        inline static var GL_NORMAL_ARRAY_LIST_STRIDE_IBM                                 = 103081;
-        inline static var GL_COLOR_ARRAY_LIST_STRIDE_IBM                                  = 103082;
-        inline static var GL_INDEX_ARRAY_LIST_STRIDE_IBM                                  = 103083;
-        inline static var GL_TEXTURE_COORD_ARRAY_LIST_STRIDE_IBM                          = 103084;
-        inline static var GL_EDGE_FLAG_ARRAY_LIST_STRIDE_IBM                              = 103085;
-        inline static var GL_FOG_COORDINATE_ARRAY_LIST_STRIDE_IBM                         = 103086;
-        inline static var GL_SECONDARY_COLOR_ARRAY_LIST_STRIDE_IBM                        = 103087;
-
-
-
-
-    // GL_IBM_vertex_array_lists functions
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glColorPointerListIBM')
-        // static function glColorPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-            
-        // @:native('glEdgeFlagPointerListIBM')
-        // static function glEdgeFlagPointerListIBM(stride:Int, pointer:const GLboolean **, ptrstride:Int) : Void;
-            
-        // @:native('glFogCoordPointerListIBM')
-        // static function glFogCoordPointerListIBM(type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-            
-        // @:native('glIndexPointerListIBM')
-        // static function glIndexPointerListIBM(type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-            
-        // @:native('glNormalPointerListIBM')
-        // static function glNormalPointerListIBM(type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-            
-        // @:native('glSecondaryColorPointerListIBM')
-        // static function glSecondaryColorPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-            
-        // @:native('glTexCoordPointerListIBM')
-        // static function glTexCoordPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-            
-        // @:native('glVertexPointerListIBM')
-        // static function glVertexPointerListIBM(size:Int, type:Int, stride:Int, pointer:const void**, ptrstride:Int) : Void;
-
-
-//GL_INGR_color_clamp
-
-    // GL_INGR_color_clamp defines
-
-        inline static var GL_INGR_color_clamp                                             = 1;
-        inline static var GL_RED_MIN_CLAMP_INGR                                           = 0x8560;
-        inline static var GL_GREEN_MIN_CLAMP_INGR                                         = 0x8561;
-        inline static var GL_BLUE_MIN_CLAMP_INGR                                          = 0x8562;
-        inline static var GL_ALPHA_MIN_CLAMP_INGR                                         = 0x8563;
-        inline static var GL_RED_MAX_CLAMP_INGR                                           = 0x8564;
-        inline static var GL_GREEN_MAX_CLAMP_INGR                                         = 0x8565;
-        inline static var GL_BLUE_MAX_CLAMP_INGR                                          = 0x8566;
-        inline static var GL_ALPHA_MAX_CLAMP_INGR                                         = 0x8567;
-
-
-//GL_INGR_interlace_read
-
-    // GL_INGR_interlace_read defines
-
-        inline static var GL_INGR_interlace_read                                          = 1;
-        inline static var GL_INTERLACE_READ_INGR                                          = 0x8568;
-
-
-//GL_INTEL_fragment_shader_ordering
-
-    // GL_INTEL_fragment_shader_ordering defines
-
-        inline static var GL_INTEL_fragment_shader_ordering                               = 1;
-
-
-//GL_INTEL_map_texture
-
-    // GL_INTEL_map_texture defines
-
-        inline static var GL_INTEL_map_texture                                            = 1;
-        inline static var GL_LAYOUT_DEFAULT_INTEL                                         = 0;
-        inline static var GL_LAYOUT_LINEAR_INTEL                                          = 1;
-        inline static var GL_LAYOUT_LINEAR_CPU_CACHED_INTEL                               = 2;
-        inline static var GL_TEXTURE_MEMORY_LAYOUT_INTEL                                  = 0x83FF;
-
-
-
-
-    // GL_INTEL_map_texture functions
-
-        @:native('glSyncTextureINTEL')
-        static function glSyncTextureINTEL(texture:UInt) : Void;
-
-        @:native('glUnmapTexture2DINTEL')
-        static function glUnmapTexture2DINTEL(texture:UInt, level:Int) : Void;
-
-
-
-
-    // TODO functions
-
-            
-        // inline static function glMapTexture2DINTEL(texture:UInt, level:Int, access:Int, stride:Array<Int>, layout:GLenum*) : void *
-        // { return untyped __cpp__("glMapTexture2DINTEL({0}, {1}, {2}, (GLint*)&{3}[0], {4})", texture, level, access, stride, layout); }
-
-
-//GL_INTEL_parallel_arrays
-
-    // GL_INTEL_parallel_arrays defines
-
-        inline static var GL_INTEL_parallel_arrays                                        = 1;
-        inline static var GL_PARALLEL_ARRAYS_INTEL                                        = 0x83F4;
-        inline static var GL_VERTEX_ARRAY_PARALLEL_POINTERS_INTEL                         = 0x83F5;
-        inline static var GL_NORMAL_ARRAY_PARALLEL_POINTERS_INTEL                         = 0x83F6;
-        inline static var GL_COLOR_ARRAY_PARALLEL_POINTERS_INTEL                          = 0x83F7;
-        inline static var GL_TEXTURE_COORD_ARRAY_PARALLEL_POINTERS_INTEL                  = 0x83F8;
-
-
-
-
-    // GL_INTEL_parallel_arrays functions
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glColorPointervINTEL')
-        // static function glColorPointervINTEL(size:Int, type:Int, pointer:const void**) : Void;
-            
-        // @:native('glNormalPointervINTEL')
-        // static function glNormalPointervINTEL(type:Int, pointer:const void**) : Void;
-            
-        // @:native('glTexCoordPointervINTEL')
-        // static function glTexCoordPointervINTEL(size:Int, type:Int, pointer:const void**) : Void;
-            
-        // @:native('glVertexPointervINTEL')
-        // static function glVertexPointervINTEL(size:Int, type:Int, pointer:const void**) : Void;
-
-
-//GL_INTEL_performance_query
-
-    // GL_INTEL_performance_query defines
-
-        inline static var GL_INTEL_performance_query                                      = 1;
-        inline static var GL_PERFQUERY_SINGLE_CONTEXT_INTEL                               = 0x0000;
-        inline static var GL_PERFQUERY_GLOBAL_CONTEXT_INTEL                               = 0x0001;
-        inline static var GL_PERFQUERY_DONOT_FLUSH_INTEL                                  = 0x83F9;
-        inline static var GL_PERFQUERY_FLUSH_INTEL                                        = 0x83FA;
-        inline static var GL_PERFQUERY_WAIT_INTEL                                         = 0x83FB;
-        inline static var GL_PERFQUERY_COUNTER_EVENT_INTEL                                = 0x94F0;
-        inline static var GL_PERFQUERY_COUNTER_DURATION_NORM_INTEL                        = 0x94F1;
-        inline static var GL_PERFQUERY_COUNTER_DURATION_RAW_INTEL                         = 0x94F2;
-        inline static var GL_PERFQUERY_COUNTER_THROUGHPUT_INTEL                           = 0x94F3;
-        inline static var GL_PERFQUERY_COUNTER_RAW_INTEL                                  = 0x94F4;
-        inline static var GL_PERFQUERY_COUNTER_TIMESTAMP_INTEL                            = 0x94F5;
-        inline static var GL_PERFQUERY_COUNTER_DATA_UINT32_INTEL                          = 0x94F8;
-        inline static var GL_PERFQUERY_COUNTER_DATA_UINT64_INTEL                          = 0x94F9;
-        inline static var GL_PERFQUERY_COUNTER_DATA_FLOAT_INTEL                           = 0x94FA;
-        inline static var GL_PERFQUERY_COUNTER_DATA_DOUBLE_INTEL                          = 0x94FB;
-        inline static var GL_PERFQUERY_COUNTER_DATA_BOOL32_INTEL                          = 0x94FC;
-        inline static var GL_PERFQUERY_QUERY_NAME_LENGTH_MAX_INTEL                        = 0x94FD;
-        inline static var GL_PERFQUERY_COUNTER_NAME_LENGTH_MAX_INTEL                      = 0x94FE;
-        inline static var GL_PERFQUERY_COUNTER_DESC_LENGTH_MAX_INTEL                      = 0x94FF;
-        inline static var GL_PERFQUERY_GPA_EXTENDED_COUNTERS_INTEL                        = 0x9500;
-
-
-
-
-    // GL_INTEL_performance_query functions
-
-        @:native('glBeginPerfQueryINTEL')
-        static function glBeginPerfQueryINTEL(queryHandle:UInt) : Void;
-
-        @:native('glDeletePerfQueryINTEL')
-        static function glDeletePerfQueryINTEL(queryHandle:UInt) : Void;
-
-        @:native('glEndPerfQueryINTEL')
-        static function glEndPerfQueryINTEL(queryHandle:UInt) : Void;
-
-
-        inline static function glCreatePerfQueryINTEL(queryId:UInt, queryHandle:Array<UInt>) : Void
-          { untyped __cpp__("glCreatePerfQueryINTEL({0}, (GLuint*)&{1}[0])", queryId, queryHandle); }
-
-        inline static function glGetFirstPerfQueryIdINTEL(queryId:Array<UInt>) : Void
-          { untyped __cpp__("glGetFirstPerfQueryIdINTEL((GLuint*)&{0}[0])", queryId); }
-
-        inline static function glGetNextPerfQueryIdINTEL(queryId:UInt, nextQueryId:Array<UInt>) : Void
-          { untyped __cpp__("glGetNextPerfQueryIdINTEL({0}, (GLuint*)&{1}[0])", queryId, nextQueryId); }
-
-        inline static function glGetPerfQueryDataINTEL(queryHandle:UInt, flags:UInt, dataSize:Int, ?bOffset:Int=0, data:BytesData, bytesWritten:Array<UInt>) : Void
-          { untyped __cpp__("glGetPerfQueryDataINTEL({0}, {1}, {2}, (void*)&{4}[0] + {3}, (GLuint*)&{5}[0])", queryHandle, flags, dataSize, bOffset, data, bytesWritten); }
-
-        inline static function glGetPerfQueryIdByNameINTEL(queryName:String, queryId:Array<UInt>) : Void
-          { untyped __cpp__("glGetPerfQueryIdByNameINTEL({0}, (GLuint*)&{1}[0])", queryName, queryId); }
-
-        inline static function glGetPerfQueryInfoINTEL(queryId:UInt, queryNameLength:UInt, queryName:String, dataSize:Array<UInt>, noCounters:Array<UInt>, noInstances:Array<UInt>, capsMask:Array<UInt>) : Void
-          { untyped __cpp__("glGetPerfQueryInfoINTEL({0}, {1}, {2}, (GLuint*)&{3}[0], (GLuint*)&{4}[0], (GLuint*)&{5}[0], (GLuint*)&{6}[0])", queryId, queryNameLength, queryName, dataSize, noCounters, noInstances, capsMask); }
-
-
-
-    // TODO functions
-
-            
-        // inline static function glGetPerfCounterInfoINTEL(queryId:UInt, counterId:UInt, counterNameLength:UInt, counterName:String, counterDescLength:UInt, counterDesc:String, counterOffset:Array<UInt>, counterDataSize:Array<UInt>, counterTypeEnum:Array<UInt>, counterDataTypeEnum:Array<UInt>, rawCounterMaxValue:GLuint64*) : Void
-        // { untyped __cpp__("glGetPerfCounterInfoINTEL({0}, {1}, {2}, {3}, {4}, {5}, (GLuint*)&{6}[0], (GLuint*)&{7}[0], (GLuint*)&{8}[0], (GLuint*)&{9}[0], {10})", queryId, counterId, counterNameLength, counterName, counterDescLength, counterDesc, counterOffset, counterDataSize, counterTypeEnum, counterDataTypeEnum, rawCounterMaxValue); }
-
-
-//GL_INTEL_texture_scissor
-
-    // GL_INTEL_texture_scissor defines
-
-        inline static var GL_INTEL_texture_scissor                                        = 1;
-
-
-
-
-    // GL_INTEL_texture_scissor functions
-
-        @:native('glTexScissorFuncINTEL')
-        static function glTexScissorFuncINTEL(target:Int, lfunc:Int, hfunc:Int) : Void;
-
-        @:native('glTexScissorINTEL')
-        static function glTexScissorINTEL(target:Int, tlow:Float, thigh:Float) : Void;
-
-
-
-
-
-//GL_KHR_blend_equation_advanced
-
-    // GL_KHR_blend_equation_advanced defines
-
-        inline static var GL_KHR_blend_equation_advanced                                  = 1;
-        inline static var GL_BLEND_ADVANCED_COHERENT_KHR                                  = 0x9285;
-        inline static var GL_MULTIPLY_KHR                                                 = 0x9294;
-        inline static var GL_SCREEN_KHR                                                   = 0x9295;
-        inline static var GL_OVERLAY_KHR                                                  = 0x9296;
-        inline static var GL_DARKEN_KHR                                                   = 0x9297;
-        inline static var GL_LIGHTEN_KHR                                                  = 0x9298;
-        inline static var GL_COLORDODGE_KHR                                               = 0x9299;
-        inline static var GL_COLORBURN_KHR                                                = 0x929A;
-        inline static var GL_HARDLIGHT_KHR                                                = 0x929B;
-        inline static var GL_SOFTLIGHT_KHR                                                = 0x929C;
-        inline static var GL_DIFFERENCE_KHR                                               = 0x929E;
-        inline static var GL_EXCLUSION_KHR                                                = 0x92A0;
-        inline static var GL_HSL_HUE_KHR                                                  = 0x92AD;
-        inline static var GL_HSL_SATURATION_KHR                                           = 0x92AE;
-        inline static var GL_HSL_COLOR_KHR                                                = 0x92AF;
-        inline static var GL_HSL_LUMINOSITY_KHR                                           = 0x92B0;
-
-
-
-
-    // GL_KHR_blend_equation_advanced functions
-
-        @:native('glBlendBarrierKHR')
-        static function glBlendBarrierKHR() : Void;
-
-
-
-
-
-//GL_KHR_blend_equation_advanced_coherent
-
-    // GL_KHR_blend_equation_advanced_coherent defines
-
-        inline static var GL_KHR_blend_equation_advanced_coherent                         = 1;
-
-
-//GL_KHR_context_flush_control
-
-    // GL_KHR_context_flush_control defines
-
-        inline static var GL_KHR_context_flush_control                                    = 1;
-        inline static var GL_CONTEXT_RELEASE_BEHAVIOR                                     = 0x82FB;
-        inline static var GL_CONTEXT_RELEASE_BEHAVIOR_FLUSH                               = 0x82FC;
-
-
-//GL_KHR_debug
-
-    // GL_KHR_debug defines
-
-        inline static var GL_KHR_debug                                                    = 1;
-        inline static var GL_CONTEXT_FLAG_DEBUG_BIT                                       = 0x00000002;
-        inline static var GL_DEBUG_OUTPUT_SYNCHRONOUS                                     = 0x8242;
-        inline static var GL_DEBUG_NEXT_LOGGED_MESSAGE_LENGTH                             = 0x8243;
-        inline static var GL_DEBUG_CALLBACK_FUNCTION                                      = 0x8244;
-        inline static var GL_DEBUG_CALLBACK_USER_PARAM                                    = 0x8245;
-        inline static var GL_DEBUG_SOURCE_API                                             = 0x8246;
-        inline static var GL_DEBUG_SOURCE_WINDOW_SYSTEM                                   = 0x8247;
-        inline static var GL_DEBUG_SOURCE_SHADER_COMPILER                                 = 0x8248;
-        inline static var GL_DEBUG_SOURCE_THIRD_PARTY                                     = 0x8249;
-        inline static var GL_DEBUG_SOURCE_APPLICATION                                     = 0x824A;
-        inline static var GL_DEBUG_SOURCE_OTHER                                           = 0x824B;
-        inline static var GL_DEBUG_TYPE_ERROR                                             = 0x824C;
-        inline static var GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR                               = 0x824D;
-        inline static var GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR                                = 0x824E;
-        inline static var GL_DEBUG_TYPE_PORTABILITY                                       = 0x824F;
-        inline static var GL_DEBUG_TYPE_PERFORMANCE                                       = 0x8250;
-        inline static var GL_DEBUG_TYPE_OTHER                                             = 0x8251;
-        inline static var GL_DEBUG_TYPE_MARKER                                            = 0x8268;
-        inline static var GL_DEBUG_TYPE_PUSH_GROUP                                        = 0x8269;
-        inline static var GL_DEBUG_TYPE_POP_GROUP                                         = 0x826A;
-        inline static var GL_DEBUG_SEVERITY_NOTIFICATION                                  = 0x826B;
-        inline static var GL_MAX_DEBUG_GROUP_STACK_DEPTH                                  = 0x826C;
-        inline static var GL_DEBUG_GROUP_STACK_DEPTH                                      = 0x826D;
-        inline static var GL_BUFFER                                                       = 0x82E0;
-        inline static var GL_SHADER                                                       = 0x82E1;
-        inline static var GL_PROGRAM                                                      = 0x82E2;
-        inline static var GL_QUERY                                                        = 0x82E3;
-        inline static var GL_PROGRAM_PIPELINE                                             = 0x82E4;
-        inline static var GL_SAMPLER                                                      = 0x82E6;
-        inline static var GL_DISPLAY_LIST                                                 = 0x82E7;
-        inline static var GL_MAX_LABEL_LENGTH                                             = 0x82E8;
-        inline static var GL_MAX_DEBUG_MESSAGE_LENGTH                                     = 0x9143;
-        inline static var GL_MAX_DEBUG_LOGGED_MESSAGES                                    = 0x9144;
-        inline static var GL_DEBUG_LOGGED_MESSAGES                                        = 0x9145;
-        inline static var GL_DEBUG_SEVERITY_HIGH                                          = 0x9146;
-        inline static var GL_DEBUG_SEVERITY_MEDIUM                                        = 0x9147;
-        inline static var GL_DEBUG_SEVERITY_LOW                                           = 0x9148;
-        inline static var GL_DEBUG_OUTPUT                                                 = 0x92E0;
-
-
-
-
-    // GL_KHR_debug functions
-
-        @:native('glDebugMessageInsert')
-        static function glDebugMessageInsert(source:Int, type:Int, id:UInt, severity:Int, length:Int, buf:String) : Void;
-
-        @:native('glObjectLabel')
-        static function glObjectLabel(identifier:Int, name:UInt, length:Int, label:String) : Void;
-
-        @:native('glPopDebugGroup')
-        static function glPopDebugGroup() : Void;
-
-        @:native('glPushDebugGroup')
-        static function glPushDebugGroup(source:Int, id:UInt, length:Int, message:String) : Void;
-
-
-        inline static function glDebugMessageControl(source:Int, type:Int, severity:Int, count:Int, ids:Array<UInt>, enabled:Bool) : Void
-          { untyped __cpp__("glDebugMessageControl({0}, {1}, {2}, {3}, (const GLuint*)&{4}[0], {5})", source, type, severity, count, ids, enabled); }
-
-        inline static function glObjectPtrLabel(?bOffset:Int=0, ptr:BytesData, length:Int, label:String) : Void
-          { untyped __cpp__("glObjectPtrLabel((const void*)&{1}[0] + {0}, {2}, {3})", bOffset, ptr, length, label); }
-
-
-
-    // TODO functions
-
-            
-        // inline static function glDebugMessageCallback(callback:GLDEBUGPROC, ?bOffset:Int=0, userParam:BytesData) : Void
-        // { untyped __cpp__("glDebugMessageCallback({0}, (const void*)&{2}[0] + {1})", callback, bOffset, userParam); }
-            
-        // inline static function glGetDebugMessageLog(count:UInt, bufSize:Int, sources:GLenum*, types:GLenum*, ids:Array<UInt>, severities:GLenum*, lengths:GLsizei*, messageLog:String) : UInt
-        // { return untyped __cpp__("glGetDebugMessageLog({0}, {1}, {2}, {3}, (GLuint*)&{4}[0], {5}, {6}, {7})", count, bufSize, sources, types, ids, severities, lengths, messageLog); }
-            
-        // @:native('glGetObjectLabel')
-        // static function glGetObjectLabel(identifier:Int, name:UInt, bufSize:Int, length:GLsizei*, label:String) : Void;
-            
-        // inline static function glGetObjectPtrLabel(?bOffset:Int=0, ptr:BytesData, bufSize:Int, length:GLsizei*, label:String) : Void
-        // { untyped __cpp__("glGetObjectPtrLabel((const void*)&{1}[0] + {0}, {2}, {3}, {4})", bOffset, ptr, bufSize, length, label); }
-
-
-//GL_KHR_no_error
-
-    // GL_KHR_no_error defines
-
-        inline static var GL_KHR_no_error                                                 = 1;
-        inline static var GL_CONTEXT_FLAG_NO_ERROR_BIT_KHR                                = 0x00000008;
-
-
-//GL_KHR_robust_buffer_access_behavior
-
-    // GL_KHR_robust_buffer_access_behavior defines
-
-        inline static var GL_KHR_robust_buffer_access_behavior                            = 1;
-
-
-//GL_KHR_robustness
-
-    // GL_KHR_robustness defines
-
-        inline static var GL_KHR_robustness                                               = 1;
-        inline static var GL_CONTEXT_LOST                                                 = 0x0507;
-        inline static var GL_LOSE_CONTEXT_ON_RESET                                        = 0x8252;
-        inline static var GL_GUILTY_CONTEXT_RESET                                         = 0x8253;
-        inline static var GL_INNOCENT_CONTEXT_RESET                                       = 0x8254;
-        inline static var GL_UNKNOWN_CONTEXT_RESET                                        = 0x8255;
-        inline static var GL_RESET_NOTIFICATION_STRATEGY                                  = 0x8256;
-        inline static var GL_NO_RESET_NOTIFICATION                                        = 0x8261;
-        inline static var GL_CONTEXT_ROBUST_ACCESS                                        = 0x90F3;
-
-
-
-
-    // GL_KHR_robustness functions
-
-
-        inline static function glGetnUniformfv(program:UInt, location:Int, bufSize:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetnUniformfv({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", program, location, bufSize, bOffset, params); }
-
-        inline static function glGetnUniformiv(program:UInt, location:Int, bufSize:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetnUniformiv({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", program, location, bufSize, bOffset, params); }
-
-        inline static function glGetnUniformuiv(program:UInt, location:Int, bufSize:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetnUniformuiv({0}, {1}, {2}, (GLuint*)&{4}[0] + {3})", program, location, bufSize, bOffset, params); }
-
-        inline static function glReadnPixels(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, bufSize:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glReadnPixels({0}, {1}, {2}, {3}, {4}, {5}, {6}, (void*)&{8}[0] + {7})", x, y, width, height, format, type, bufSize, bOffset, data); }
-
-
-
-
-//GL_KHR_texture_compression_astc_hdr
-
-    // GL_KHR_texture_compression_astc_hdr defines
-
-        inline static var GL_KHR_texture_compression_astc_hdr                             = 1;
-        inline static var GL_COMPRESSED_RGBA_ASTC_4x4_KHR                                 = 0x93B0;
-        inline static var GL_COMPRESSED_RGBA_ASTC_5x4_KHR                                 = 0x93B1;
-        inline static var GL_COMPRESSED_RGBA_ASTC_5x5_KHR                                 = 0x93B2;
-        inline static var GL_COMPRESSED_RGBA_ASTC_6x5_KHR                                 = 0x93B3;
-        inline static var GL_COMPRESSED_RGBA_ASTC_6x6_KHR                                 = 0x93B4;
-        inline static var GL_COMPRESSED_RGBA_ASTC_8x5_KHR                                 = 0x93B5;
-        inline static var GL_COMPRESSED_RGBA_ASTC_8x6_KHR                                 = 0x93B6;
-        inline static var GL_COMPRESSED_RGBA_ASTC_8x8_KHR                                 = 0x93B7;
-        inline static var GL_COMPRESSED_RGBA_ASTC_10x5_KHR                                = 0x93B8;
-        inline static var GL_COMPRESSED_RGBA_ASTC_10x6_KHR                                = 0x93B9;
-        inline static var GL_COMPRESSED_RGBA_ASTC_10x8_KHR                                = 0x93BA;
-        inline static var GL_COMPRESSED_RGBA_ASTC_10x10_KHR                               = 0x93BB;
-        inline static var GL_COMPRESSED_RGBA_ASTC_12x10_KHR                               = 0x93BC;
-        inline static var GL_COMPRESSED_RGBA_ASTC_12x12_KHR                               = 0x93BD;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR                         = 0x93D0;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR                         = 0x93D1;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR                         = 0x93D2;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR                         = 0x93D3;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR                         = 0x93D4;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR                         = 0x93D5;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR                         = 0x93D6;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR                         = 0x93D7;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR                        = 0x93D8;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR                        = 0x93D9;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR                        = 0x93DA;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR                       = 0x93DB;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR                       = 0x93DC;
-        inline static var GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR                       = 0x93DD;
-
-
-//GL_KHR_texture_compression_astc_ldr
-
-    // GL_KHR_texture_compression_astc_ldr defines
-
-        inline static var GL_KHR_texture_compression_astc_ldr                             = 1;
-
-
-//GL_KTX_buffer_region
-
-    // GL_KTX_buffer_region defines
-
-        inline static var GL_KTX_buffer_region                                            = 1;
-        inline static var GL_KTX_FRONT_REGION                                             = 0x0;
-        inline static var GL_KTX_BACK_REGION                                              = 0x1;
-        inline static var GL_KTX_Z_REGION                                                 = 0x2;
-        inline static var GL_KTX_STENCIL_REGION                                           = 0x3;
-
-
-
-
-    // GL_KTX_buffer_region functions
-
-        @:native('glBufferRegionEnabled')
-        static function glBufferRegionEnabled() : UInt;
-
-        @:native('glDeleteBufferRegion')
-        static function glDeleteBufferRegion(region:Int) : Void;
-
-        @:native('glDrawBufferRegion')
-        static function glDrawBufferRegion(region:UInt, x:Int, y:Int, width:Int, height:Int, xDest:Int, yDest:Int) : Void;
-
-        @:native('glNewBufferRegion')
-        static function glNewBufferRegion(region:Int) : UInt;
-
-        @:native('glReadBufferRegion')
-        static function glReadBufferRegion(region:UInt, x:Int, y:Int, width:Int, height:Int) : Void;
-
-
-
-
-
-//GL_MESAX_texture_stack
-
-    // GL_MESAX_texture_stack defines
-
-        inline static var GL_MESAX_texture_stack                                          = 1;
-        inline static var GL_TEXTURE_1D_STACK_MESAX                                       = 0x8759;
-        inline static var GL_TEXTURE_2D_STACK_MESAX                                       = 0x875A;
-        inline static var GL_PROXY_TEXTURE_1D_STACK_MESAX                                 = 0x875B;
-        inline static var GL_PROXY_TEXTURE_2D_STACK_MESAX                                 = 0x875C;
-        inline static var GL_TEXTURE_1D_STACK_BINDING_MESAX                               = 0x875D;
-        inline static var GL_TEXTURE_2D_STACK_BINDING_MESAX                               = 0x875E;
-
-
-//GL_MESA_pack_invert
-
-    // GL_MESA_pack_invert defines
-
-        inline static var GL_MESA_pack_invert                                             = 1;
-        inline static var GL_PACK_INVERT_MESA                                             = 0x8758;
-
-
-//GL_MESA_resize_buffers
-
-    // GL_MESA_resize_buffers defines
-
-        inline static var GL_MESA_resize_buffers                                          = 1;
-
-
-
-
-    // GL_MESA_resize_buffers functions
-
-        @:native('glResizeBuffersMESA')
-        static function glResizeBuffersMESA() : Void;
-
-
-
-
-
-//GL_MESA_window_pos
-
-    // GL_MESA_window_pos defines
-
-        inline static var GL_MESA_window_pos                                              = 1;
-
-
-
-
-    // GL_MESA_window_pos functions
-
-        @:native('glWindowPos2dMESA')
-        static function glWindowPos2dMESA(x:Float, y:Float) : Void;
-
-        @:native('glWindowPos2fMESA')
-        static function glWindowPos2fMESA(x:Float, y:Float) : Void;
-
-        @:native('glWindowPos2iMESA')
-        static function glWindowPos2iMESA(x:Int, y:Int) : Void;
-
-        @:native('glWindowPos2sMESA')
-        static function glWindowPos2sMESA(x:Int, y:Int) : Void;
-
-        @:native('glWindowPos3dMESA')
-        static function glWindowPos3dMESA(x:Float, y:Float, z:Float) : Void;
-
-        @:native('glWindowPos3fMESA')
-        static function glWindowPos3fMESA(x:Float, y:Float, z:Float) : Void;
-
-        @:native('glWindowPos3iMESA')
-        static function glWindowPos3iMESA(x:Int, y:Int, z:Int) : Void;
-
-        @:native('glWindowPos3sMESA')
-        static function glWindowPos3sMESA(x:Int, y:Int, z:Int) : Void;
-
-        @:native('glWindowPos4fMESA')
-        static function glWindowPos4fMESA(x:Float, y:Float, z:Float, w:Float) : Void;
-
-        @:native('glWindowPos4iMESA')
-        static function glWindowPos4iMESA(x:Int, y:Int, z:Int, w:Int) : Void;
-
-        @:native('glWindowPos4sMESA')
-        static function glWindowPos4sMESA(x:Int, y:Int, z:Int, w:Int) : Void;
-
-
-        inline static function glWindowPos2dvMESA(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos2dvMESA((const GLdouble*)&{1}[0] + {0})", bOffset, p); }
-
-        inline static function glWindowPos2fvMESA(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos2fvMESA((const GLfloat*)&{1}[0] + {0})", bOffset, p); }
-
-        inline static function glWindowPos2ivMESA(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos2ivMESA((const GLint*)&{1}[0] + {0})", bOffset, p); }
-
-        inline static function glWindowPos2svMESA(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos2svMESA((const GLshort*)&{1}[0] + {0})", bOffset, p); }
-
-        inline static function glWindowPos3dvMESA(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos3dvMESA((const GLdouble*)&{1}[0] + {0})", bOffset, p); }
-
-        inline static function glWindowPos3fvMESA(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos3fvMESA((const GLfloat*)&{1}[0] + {0})", bOffset, p); }
-
-        inline static function glWindowPos3ivMESA(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos3ivMESA((const GLint*)&{1}[0] + {0})", bOffset, p); }
-
-        inline static function glWindowPos3svMESA(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos3svMESA((const GLshort*)&{1}[0] + {0})", bOffset, p); }
-
-        inline static function glWindowPos4dvMESA(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos4dvMESA((const GLdouble*)&{1}[0] + {0})", bOffset, p); }
-
-        inline static function glWindowPos4fvMESA(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos4fvMESA((const GLfloat*)&{1}[0] + {0})", bOffset, p); }
-
-        inline static function glWindowPos4ivMESA(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos4ivMESA((const GLint*)&{1}[0] + {0})", bOffset, p); }
-
-        inline static function glWindowPos4svMESA(?bOffset:Int=0, p:BytesData) : Void
-          { untyped __cpp__("glWindowPos4svMESA((const GLshort*)&{1}[0] + {0})", bOffset, p); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glWindowPos4dMESA')
-        // static function glWindowPos4dMESA(x:Float, y:Float, z:Float, GLdouble:) : Void;
-
-
-//GL_MESA_ycbcr_texture
-
-    // GL_MESA_ycbcr_texture defines
-
-        inline static var GL_MESA_ycbcr_texture                                           = 1;
-        inline static var GL_UNSIGNED_SHORT_8_8_MESA                                      = 0x85BA;
-        inline static var GL_UNSIGNED_SHORT_8_8_REV_MESA                                  = 0x85BB;
-        inline static var GL_YCBCR_MESA                                                   = 0x8757;
-
-
-//GL_NVX_conditional_render
-
-    // GL_NVX_conditional_render defines
-
-        inline static var GL_NVX_conditional_render                                       = 1;
-
-
-
-
-    // GL_NVX_conditional_render functions
-
-        @:native('glBeginConditionalRenderNVX')
-        static function glBeginConditionalRenderNVX(id:UInt) : Void;
-
-        @:native('glEndConditionalRenderNVX')
-        static function glEndConditionalRenderNVX() : Void;
-
-
-
-
-
-//GL_NVX_gpu_memory_info
-
-    // GL_NVX_gpu_memory_info defines
-
-        inline static var GL_NVX_gpu_memory_info                                          = 1;
-        inline static var GL_GPU_MEMORY_INFO_DEDICATED_VIDMEM_NVX                         = 0x9047;
-        inline static var GL_GPU_MEMORY_INFO_TOTAL_AVAILABLE_MEMORY_NVX                   = 0x9048;
-        inline static var GL_GPU_MEMORY_INFO_CURRENT_AVAILABLE_VIDMEM_NVX                 = 0x9049;
-        inline static var GL_GPU_MEMORY_INFO_EVICTION_COUNT_NVX                           = 0x904A;
-        inline static var GL_GPU_MEMORY_INFO_EVICTED_MEMORY_NVX                           = 0x904B;
-
-
-//GL_NV_bindless_multi_draw_indirect
-
-    // GL_NV_bindless_multi_draw_indirect defines
-
-        inline static var GL_NV_bindless_multi_draw_indirect                              = 1;
-
-
-
-
-    // GL_NV_bindless_multi_draw_indirect functions
-
-
-        inline static function glMultiDrawArraysIndirectBindlessNV(mode:Int, ?bOffset:Int=0, indirect:BytesData, drawCount:Int, stride:Int, vertexBufferCount:Int) : Void
-          { untyped __cpp__("glMultiDrawArraysIndirectBindlessNV({0}, (const void*)&{2}[0] + {1}, {3}, {4}, {5})", mode, bOffset, indirect, drawCount, stride, vertexBufferCount); }
-
-        inline static function glMultiDrawElementsIndirectBindlessNV(mode:Int, type:Int, ?bOffset:Int=0, indirect:BytesData, drawCount:Int, stride:Int, vertexBufferCount:Int) : Void
-          { untyped __cpp__("glMultiDrawElementsIndirectBindlessNV({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5}, {6})", mode, type, bOffset, indirect, drawCount, stride, vertexBufferCount); }
-
-
-
-
-//GL_NV_bindless_multi_draw_indirect_count
-
-    // GL_NV_bindless_multi_draw_indirect_count defines
-
-        inline static var GL_NV_bindless_multi_draw_indirect_count                        = 1;
-
-
-
-
-    // GL_NV_bindless_multi_draw_indirect_count functions
-
-
-        inline static function glMultiDrawArraysIndirectBindlessCountNV(mode:Int, ?bOffset:Int=0, indirect:BytesData, drawCount:Int, maxDrawCount:Int, stride:Int, vertexBufferCount:Int) : Void
-          { untyped __cpp__("glMultiDrawArraysIndirectBindlessCountNV({0}, (const void*)&{2}[0] + {1}, {3}, {4}, {5}, {6})", mode, bOffset, indirect, drawCount, maxDrawCount, stride, vertexBufferCount); }
-
-        inline static function glMultiDrawElementsIndirectBindlessCountNV(mode:Int, type:Int, ?bOffset:Int=0, indirect:BytesData, drawCount:Int, maxDrawCount:Int, stride:Int, vertexBufferCount:Int) : Void
-          { untyped __cpp__("glMultiDrawElementsIndirectBindlessCountNV({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5}, {6}, {7})", mode, type, bOffset, indirect, drawCount, maxDrawCount, stride, vertexBufferCount); }
-
-
-
-
-//GL_NV_bindless_texture
-
-    // GL_NV_bindless_texture defines
-
-        inline static var GL_NV_bindless_texture                                          = 1;
-
-
-
-
-    // GL_NV_bindless_texture functions
-
-        @:native('glGetImageHandleNV')
-        static function glGetImageHandleNV(texture:UInt, level:Int, layered:Bool, layer:Int, format:Int) : cpp.UInt64;
-
-        @:native('glGetTextureHandleNV')
-        static function glGetTextureHandleNV(texture:UInt) : cpp.UInt64;
-
-        @:native('glGetTextureSamplerHandleNV')
-        static function glGetTextureSamplerHandleNV(texture:UInt, sampler:UInt) : cpp.UInt64;
-
-        @:native('glIsImageHandleResidentNV')
-        static function glIsImageHandleResidentNV(handle:cpp.UInt64) : Bool;
-
-        @:native('glIsTextureHandleResidentNV')
-        static function glIsTextureHandleResidentNV(handle:cpp.UInt64) : Bool;
-
-        @:native('glMakeImageHandleNonResidentNV')
-        static function glMakeImageHandleNonResidentNV(handle:cpp.UInt64) : Void;
-
-        @:native('glMakeImageHandleResidentNV')
-        static function glMakeImageHandleResidentNV(handle:cpp.UInt64, access:Int) : Void;
-
-        @:native('glMakeTextureHandleNonResidentNV')
-        static function glMakeTextureHandleNonResidentNV(handle:cpp.UInt64) : Void;
-
-        @:native('glMakeTextureHandleResidentNV')
-        static function glMakeTextureHandleResidentNV(handle:cpp.UInt64) : Void;
-
-        @:native('glProgramUniformHandleui64NV')
-        static function glProgramUniformHandleui64NV(program:UInt, location:Int, value:cpp.UInt64) : Void;
-
-        @:native('glUniformHandleui64NV')
-        static function glUniformHandleui64NV(location:Int, value:cpp.UInt64) : Void;
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glProgramUniformHandleui64vNV')
-        // static function glProgramUniformHandleui64vNV(program:UInt, location:Int, count:Int, values:const GLuint64*) : Void;
-            
-        // @:native('glUniformHandleui64vNV')
-        // static function glUniformHandleui64vNV(location:Int, count:Int, value:const GLuint64*) : Void;
-
-
-//GL_NV_blend_equation_advanced
-
-    // GL_NV_blend_equation_advanced defines
-
-        inline static var GL_NV_blend_equation_advanced                                   = 1;
-        inline static var GL_XOR_NV                                                       = 0x1506;
-        inline static var GL_RED_NV                                                       = 0x1903;
-        inline static var GL_GREEN_NV                                                     = 0x1904;
-        inline static var GL_BLUE_NV                                                      = 0x1905;
-        inline static var GL_BLEND_PREMULTIPLIED_SRC_NV                                   = 0x9280;
-        inline static var GL_BLEND_OVERLAP_NV                                             = 0x9281;
-        inline static var GL_UNCORRELATED_NV                                              = 0x9282;
-        inline static var GL_DISJOINT_NV                                                  = 0x9283;
-        inline static var GL_CONJOINT_NV                                                  = 0x9284;
-        inline static var GL_BLEND_ADVANCED_COHERENT_NV                                   = 0x9285;
-        inline static var GL_SRC_NV                                                       = 0x9286;
-        inline static var GL_DST_NV                                                       = 0x9287;
-        inline static var GL_SRC_OVER_NV                                                  = 0x9288;
-        inline static var GL_DST_OVER_NV                                                  = 0x9289;
-        inline static var GL_SRC_IN_NV                                                    = 0x928A;
-        inline static var GL_DST_IN_NV                                                    = 0x928B;
-        inline static var GL_SRC_OUT_NV                                                   = 0x928C;
-        inline static var GL_DST_OUT_NV                                                   = 0x928D;
-        inline static var GL_SRC_ATOP_NV                                                  = 0x928E;
-        inline static var GL_DST_ATOP_NV                                                  = 0x928F;
-        inline static var GL_PLUS_NV                                                      = 0x9291;
-        inline static var GL_PLUS_DARKER_NV                                               = 0x9292;
-        inline static var GL_MULTIPLY_NV                                                  = 0x9294;
-        inline static var GL_SCREEN_NV                                                    = 0x9295;
-        inline static var GL_OVERLAY_NV                                                   = 0x9296;
-        inline static var GL_DARKEN_NV                                                    = 0x9297;
-        inline static var GL_LIGHTEN_NV                                                   = 0x9298;
-        inline static var GL_COLORDODGE_NV                                                = 0x9299;
-        inline static var GL_COLORBURN_NV                                                 = 0x929A;
-        inline static var GL_HARDLIGHT_NV                                                 = 0x929B;
-        inline static var GL_SOFTLIGHT_NV                                                 = 0x929C;
-        inline static var GL_DIFFERENCE_NV                                                = 0x929E;
-        inline static var GL_MINUS_NV                                                     = 0x929F;
-        inline static var GL_EXCLUSION_NV                                                 = 0x92A0;
-        inline static var GL_CONTRAST_NV                                                  = 0x92A1;
-        inline static var GL_INVERT_RGB_NV                                                = 0x92A3;
-        inline static var GL_LINEARDODGE_NV                                               = 0x92A4;
-        inline static var GL_LINEARBURN_NV                                                = 0x92A5;
-        inline static var GL_VIVIDLIGHT_NV                                                = 0x92A6;
-        inline static var GL_LINEARLIGHT_NV                                               = 0x92A7;
-        inline static var GL_PINLIGHT_NV                                                  = 0x92A8;
-        inline static var GL_HARDMIX_NV                                                   = 0x92A9;
-        inline static var GL_HSL_HUE_NV                                                   = 0x92AD;
-        inline static var GL_HSL_SATURATION_NV                                            = 0x92AE;
-        inline static var GL_HSL_COLOR_NV                                                 = 0x92AF;
-        inline static var GL_HSL_LUMINOSITY_NV                                            = 0x92B0;
-        inline static var GL_PLUS_CLAMPED_NV                                              = 0x92B1;
-        inline static var GL_PLUS_CLAMPED_ALPHA_NV                                        = 0x92B2;
-        inline static var GL_MINUS_CLAMPED_NV                                             = 0x92B3;
-        inline static var GL_INVERT_OVG_NV                                                = 0x92B4;
-
-
-
-
-    // GL_NV_blend_equation_advanced functions
-
-        @:native('glBlendBarrierNV')
-        static function glBlendBarrierNV() : Void;
-
-        @:native('glBlendParameteriNV')
-        static function glBlendParameteriNV(pname:Int, value:Int) : Void;
-
-
-
-
-
-//GL_NV_blend_equation_advanced_coherent
-
-    // GL_NV_blend_equation_advanced_coherent defines
-
-        inline static var GL_NV_blend_equation_advanced_coherent                          = 1;
-
-
-//GL_NV_blend_square
-
-    // GL_NV_blend_square defines
-
-        inline static var GL_NV_blend_square                                              = 1;
-
-
-//GL_NV_compute_program5
-
-    // GL_NV_compute_program5 defines
-
-        inline static var GL_NV_compute_program5                                          = 1;
-        inline static var GL_COMPUTE_PROGRAM_NV                                           = 0x90FB;
-        inline static var GL_COMPUTE_PROGRAM_PARAMETER_BUFFER_NV                          = 0x90FC;
-
-
-//GL_NV_conditional_render
-
-    // GL_NV_conditional_render defines
-
-        inline static var GL_NV_conditional_render                                        = 1;
-        inline static var GL_QUERY_WAIT_NV                                                = 0x8E13;
-        inline static var GL_QUERY_NO_WAIT_NV                                             = 0x8E14;
-        inline static var GL_QUERY_BY_REGION_WAIT_NV                                      = 0x8E15;
-        inline static var GL_QUERY_BY_REGION_NO_WAIT_NV                                   = 0x8E16;
-
-
-
-
-    // GL_NV_conditional_render functions
-
-        @:native('glBeginConditionalRenderNV')
-        static function glBeginConditionalRenderNV(id:UInt, mode:Int) : Void;
-
-        @:native('glEndConditionalRenderNV')
-        static function glEndConditionalRenderNV() : Void;
-
-
-
-
-
-//GL_NV_conservative_raster
-
-    // GL_NV_conservative_raster defines
-
-        inline static var GL_NV_conservative_raster                                       = 1;
-        inline static var GL_CONSERVATIVE_RASTERIZATION_NV                                = 0x9346;
-        inline static var GL_SUBPIXEL_PRECISION_BIAS_X_BITS_NV                            = 0x9347;
-        inline static var GL_SUBPIXEL_PRECISION_BIAS_Y_BITS_NV                            = 0x9348;
-        inline static var GL_MAX_SUBPIXEL_PRECISION_BIAS_BITS_NV                          = 0x9349;
-
-
-
-
-    // GL_NV_conservative_raster functions
-
-        @:native('glSubpixelPrecisionBiasNV')
-        static function glSubpixelPrecisionBiasNV(xbits:UInt, ybits:UInt) : Void;
-
-
-
-
-
-//GL_NV_copy_depth_to_color
-
-    // GL_NV_copy_depth_to_color defines
-
-        inline static var GL_NV_copy_depth_to_color                                       = 1;
-        inline static var GL_DEPTH_STENCIL_TO_RGBA_NV                                     = 0x886E;
-        inline static var GL_DEPTH_STENCIL_TO_BGRA_NV                                     = 0x886F;
-
-
-//GL_NV_copy_image
-
-    // GL_NV_copy_image defines
-
-        inline static var GL_NV_copy_image                                                = 1;
-
-
-
-
-    // GL_NV_copy_image functions
-
-        @:native('glCopyImageSubDataNV')
-        static function glCopyImageSubDataNV(srcName:UInt, srcTarget:Int, srcLevel:Int, srcX:Int, srcY:Int, srcZ:Int, dstName:UInt, dstTarget:Int, dstLevel:Int, dstX:Int, dstY:Int, dstZ:Int, width:Int, height:Int, depth:Int) : Void;
-
-
-
-
-
-//GL_NV_deep_texture3D
-
-    // GL_NV_deep_texture3D defines
-
-        inline static var GL_NV_deep_texture3D                                            = 1;
-        inline static var GL_MAX_DEEP_3D_TEXTURE_WIDTH_HEIGHT_NV                          = 0x90D0;
-        inline static var GL_MAX_DEEP_3D_TEXTURE_DEPTH_NV                                 = 0x90D1;
-
-
-//GL_NV_depth_buffer_float
-
-    // GL_NV_depth_buffer_float defines
-
-        inline static var GL_NV_depth_buffer_float                                        = 1;
-        inline static var GL_DEPTH_COMPONENT32F_NV                                        = 0x8DAB;
-        inline static var GL_DEPTH32F_STENCIL8_NV                                         = 0x8DAC;
-        inline static var GL_FLOAT_32_UNSIGNED_INT_24_8_REV_NV                            = 0x8DAD;
-        inline static var GL_DEPTH_BUFFER_FLOAT_MODE_NV                                   = 0x8DAF;
-
-
-
-
-    // GL_NV_depth_buffer_float functions
-
-        @:native('glClearDepthdNV')
-        static function glClearDepthdNV(depth:Float) : Void;
-
-        @:native('glDepthBoundsdNV')
-        static function glDepthBoundsdNV(zmin:Float, zmax:Float) : Void;
-
-        @:native('glDepthRangedNV')
-        static function glDepthRangedNV(zNear:Float, zFar:Float) : Void;
-
-
-
-
-
-//GL_NV_depth_clamp
-
-    // GL_NV_depth_clamp defines
-
-        inline static var GL_NV_depth_clamp                                               = 1;
-        inline static var GL_DEPTH_CLAMP_NV                                               = 0x864F;
-
-
-//GL_NV_depth_range_unclamped
-
-    // GL_NV_depth_range_unclamped defines
-
-        inline static var GL_NV_depth_range_unclamped                                     = 1;
-        inline static var GL_SAMPLE_COUNT_BITS_NV                                         = 0x8864;
-        inline static var GL_CURRENT_SAMPLE_COUNT_QUERY_NV                                = 0x8865;
-        inline static var GL_QUERY_RESULT_NV                                              = 0x8866;
-        inline static var GL_QUERY_RESULT_AVAILABLE_NV                                    = 0x8867;
-        inline static var GL_SAMPLE_COUNT_NV                                              = 0x8914;
-
-
-//GL_NV_draw_texture
-
-    // GL_NV_draw_texture defines
-
-        inline static var GL_NV_draw_texture                                              = 1;
-
-
-
-
-    // GL_NV_draw_texture functions
-
-        @:native('glDrawTextureNV')
-        static function glDrawTextureNV(texture:UInt, sampler:UInt, x0:Float, y0:Float, x1:Float, y1:Float, z:Float, s0:Float, t0:Float, s1:Float, t1:Float) : Void;
-
-
-
-
-
-//GL_NV_evaluators
-
-    // GL_NV_evaluators defines
-
-        inline static var GL_NV_evaluators                                                = 1;
-        inline static var GL_EVAL_2D_NV                                                   = 0x86C0;
-        inline static var GL_EVAL_TRIANGULAR_2D_NV                                        = 0x86C1;
-        inline static var GL_MAP_TESSELLATION_NV                                          = 0x86C2;
-        inline static var GL_MAP_ATTRIB_U_ORDER_NV                                        = 0x86C3;
-        inline static var GL_MAP_ATTRIB_V_ORDER_NV                                        = 0x86C4;
-        inline static var GL_EVAL_FRACTIONAL_TESSELLATION_NV                              = 0x86C5;
-        inline static var GL_EVAL_VERTEX_ATTRIB0_NV                                       = 0x86C6;
-        inline static var GL_EVAL_VERTEX_ATTRIB1_NV                                       = 0x86C7;
-        inline static var GL_EVAL_VERTEX_ATTRIB2_NV                                       = 0x86C8;
-        inline static var GL_EVAL_VERTEX_ATTRIB3_NV                                       = 0x86C9;
-        inline static var GL_EVAL_VERTEX_ATTRIB4_NV                                       = 0x86CA;
-        inline static var GL_EVAL_VERTEX_ATTRIB5_NV                                       = 0x86CB;
-        inline static var GL_EVAL_VERTEX_ATTRIB6_NV                                       = 0x86CC;
-        inline static var GL_EVAL_VERTEX_ATTRIB7_NV                                       = 0x86CD;
-        inline static var GL_EVAL_VERTEX_ATTRIB8_NV                                       = 0x86CE;
-        inline static var GL_EVAL_VERTEX_ATTRIB9_NV                                       = 0x86CF;
-        inline static var GL_EVAL_VERTEX_ATTRIB10_NV                                      = 0x86D0;
-        inline static var GL_EVAL_VERTEX_ATTRIB11_NV                                      = 0x86D1;
-        inline static var GL_EVAL_VERTEX_ATTRIB12_NV                                      = 0x86D2;
-        inline static var GL_EVAL_VERTEX_ATTRIB13_NV                                      = 0x86D3;
-        inline static var GL_EVAL_VERTEX_ATTRIB14_NV                                      = 0x86D4;
-        inline static var GL_EVAL_VERTEX_ATTRIB15_NV                                      = 0x86D5;
-        inline static var GL_MAX_MAP_TESSELLATION_NV                                      = 0x86D6;
-        inline static var GL_MAX_RATIONAL_EVAL_ORDER_NV                                   = 0x86D7;
-
-
-
-
-    // GL_NV_evaluators functions
-
-        @:native('glEvalMapsNV')
-        static function glEvalMapsNV(target:Int, mode:Int) : Void;
-
-
-        inline static function glGetMapAttribParameterfvNV(target:Int, index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMapAttribParameterfvNV({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", target, index, pname, bOffset, params); }
-
-        inline static function glGetMapAttribParameterivNV(target:Int, index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMapAttribParameterivNV({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", target, index, pname, bOffset, params); }
-
-        inline static function glGetMapControlPointsNV(target:Int, index:UInt, type:Int, ustride:Int, vstride:Int, packed:Bool, ?bOffset:Int=0, points:BytesData) : Void
-          { untyped __cpp__("glGetMapControlPointsNV({0}, {1}, {2}, {3}, {4}, {5}, (void*)&{7}[0] + {6})", target, index, type, ustride, vstride, packed, bOffset, points); }
-
-        inline static function glGetMapParameterfvNV(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMapParameterfvNV({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glGetMapParameterivNV(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetMapParameterivNV({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glMapControlPointsNV(target:Int, index:UInt, type:Int, ustride:Int, vstride:Int, uorder:Int, vorder:Int, packed:Bool, ?bOffset:Int=0, points:BytesData) : Void
-          { untyped __cpp__("glMapControlPointsNV({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (const void*)&{9}[0] + {8})", target, index, type, ustride, vstride, uorder, vorder, packed, bOffset, points); }
-
-        inline static function glMapParameterfvNV(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glMapParameterfvNV({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glMapParameterivNV(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glMapParameterivNV({0}, {1}, (const GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-
-
-
-//GL_NV_explicit_multisample
-
-    // GL_NV_explicit_multisample defines
-
-        inline static var GL_NV_explicit_multisample                                      = 1;
-        inline static var GL_SAMPLE_POSITION_NV                                           = 0x8E50;
-        inline static var GL_SAMPLE_MASK_NV                                               = 0x8E51;
-        inline static var GL_SAMPLE_MASK_VALUE_NV                                         = 0x8E52;
-        inline static var GL_TEXTURE_BINDING_RENDERBUFFER_NV                              = 0x8E53;
-        inline static var GL_TEXTURE_RENDERBUFFER_DATA_STORE_BINDING_NV                   = 0x8E54;
-        inline static var GL_TEXTURE_RENDERBUFFER_NV                                      = 0x8E55;
-        inline static var GL_SAMPLER_RENDERBUFFER_NV                                      = 0x8E56;
-        inline static var GL_INT_SAMPLER_RENDERBUFFER_NV                                  = 0x8E57;
-        inline static var GL_UNSIGNED_INT_SAMPLER_RENDERBUFFER_NV                         = 0x8E58;
-        inline static var GL_MAX_SAMPLE_MASK_WORDS_NV                                     = 0x8E59;
-
-
-
-
-    // GL_NV_explicit_multisample functions
-
-        @:native('glSampleMaskIndexedNV')
-        static function glSampleMaskIndexedNV(index:UInt, mask:Int) : Void;
-
-        @:native('glTexRenderbufferNV')
-        static function glTexRenderbufferNV(target:Int, renderbuffer:UInt) : Void;
-
-
-        inline static function glGetMultisamplefvNV(pname:Int, index:UInt, ?bOffset:Int=0, val:BytesData) : Void
-          { untyped __cpp__("glGetMultisamplefvNV({0}, {1}, (GLfloat*)&{3}[0] + {2})", pname, index, bOffset, val); }
-
-
-
-
-//GL_NV_fence
-
-    // GL_NV_fence defines
-
-        inline static var GL_NV_fence                                                     = 1;
-        inline static var GL_ALL_COMPLETED_NV                                             = 0x84F2;
-        inline static var GL_FENCE_STATUS_NV                                              = 0x84F3;
-        inline static var GL_FENCE_CONDITION_NV                                           = 0x84F4;
-
-
-
-
-    // GL_NV_fence functions
-
-        @:native('glFinishFenceNV')
-        static function glFinishFenceNV(fence:UInt) : Void;
-
-        @:native('glIsFenceNV')
-        static function glIsFenceNV(fence:UInt) : Bool;
-
-        @:native('glSetFenceNV')
-        static function glSetFenceNV(fence:UInt, condition:Int) : Void;
-
-        @:native('glTestFenceNV')
-        static function glTestFenceNV(fence:UInt) : Bool;
-
-
-        inline static function glDeleteFencesNV(n:Int, fences:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteFencesNV({0}, (const GLuint*)&{1}[0])", n, fences); }
-
-        inline static function glGenFencesNV(n:Int, fences:Array<UInt>) : Void
-          { untyped __cpp__("glGenFencesNV({0}, (GLuint*)&{1}[0])", n, fences); }
-
-        inline static function glGetFenceivNV(fence:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetFenceivNV({0}, {1}, (GLint*)&{3}[0] + {2})", fence, pname, bOffset, params); }
-
-
-
-
-//GL_NV_fill_rectangle
-
-    // GL_NV_fill_rectangle defines
-
-        inline static var GL_NV_fill_rectangle                                            = 1;
-        inline static var GL_FILL_RECTANGLE_NV                                            = 0x933C;
-
-
-//GL_NV_float_buffer
-
-    // GL_NV_float_buffer defines
-
-        inline static var GL_NV_float_buffer                                              = 1;
-        inline static var GL_FLOAT_R_NV                                                   = 0x8880;
-        inline static var GL_FLOAT_RG_NV                                                  = 0x8881;
-        inline static var GL_FLOAT_RGB_NV                                                 = 0x8882;
-        inline static var GL_FLOAT_RGBA_NV                                                = 0x8883;
-        inline static var GL_FLOAT_R16_NV                                                 = 0x8884;
-        inline static var GL_FLOAT_R32_NV                                                 = 0x8885;
-        inline static var GL_FLOAT_RG16_NV                                                = 0x8886;
-        inline static var GL_FLOAT_RG32_NV                                                = 0x8887;
-        inline static var GL_FLOAT_RGB16_NV                                               = 0x8888;
-        inline static var GL_FLOAT_RGB32_NV                                               = 0x8889;
-        inline static var GL_FLOAT_RGBA16_NV                                              = 0x888A;
-        inline static var GL_FLOAT_RGBA32_NV                                              = 0x888B;
-        inline static var GL_TEXTURE_FLOAT_COMPONENTS_NV                                  = 0x888C;
-        inline static var GL_FLOAT_CLEAR_COLOR_VALUE_NV                                   = 0x888D;
-        inline static var GL_FLOAT_RGBA_MODE_NV                                           = 0x888E;
-
-
-//GL_NV_fog_distance
-
-    // GL_NV_fog_distance defines
-
-        inline static var GL_NV_fog_distance                                              = 1;
-        inline static var GL_FOG_DISTANCE_MODE_NV                                         = 0x855A;
-        inline static var GL_EYE_RADIAL_NV                                                = 0x855B;
-        inline static var GL_EYE_PLANE_ABSOLUTE_NV                                        = 0x855C;
-
-
-//GL_NV_fragment_coverage_to_color
-
-    // GL_NV_fragment_coverage_to_color defines
-
-        inline static var GL_NV_fragment_coverage_to_color                                = 1;
-        inline static var GL_FRAGMENT_COVERAGE_TO_COLOR_NV                                = 0x92DD;
-        inline static var GL_FRAGMENT_COVERAGE_COLOR_NV                                   = 0x92DE;
-
-
-
-
-    // GL_NV_fragment_coverage_to_color functions
-
-        @:native('glFragmentCoverageColorNV')
-        static function glFragmentCoverageColorNV(color:UInt) : Void;
-
-
-
-
-
-//GL_NV_fragment_program
-
-    // GL_NV_fragment_program defines
-
-        inline static var GL_NV_fragment_program                                          = 1;
-        inline static var GL_MAX_FRAGMENT_PROGRAM_LOCAL_PARAMETERS_NV                     = 0x8868;
-        inline static var GL_FRAGMENT_PROGRAM_NV                                          = 0x8870;
-        inline static var GL_MAX_TEXTURE_COORDS_NV                                        = 0x8871;
-        inline static var GL_MAX_TEXTURE_IMAGE_UNITS_NV                                   = 0x8872;
-        inline static var GL_FRAGMENT_PROGRAM_BINDING_NV                                  = 0x8873;
-        inline static var GL_PROGRAM_ERROR_STRING_NV                                      = 0x8874;
-
-
-
-
-    // GL_NV_fragment_program functions
-
-
-        inline static function glGetProgramNamedParameterdvNV(id:UInt, len:Int, ?bOffset:Int=0, name:BytesData, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetProgramNamedParameterdvNV({0}, {1}, (const GLubyte*)&{3}[0] + {2}, (GLdouble*)&{5}[0] + {4})", id, len, bOffset, name, bOffset, params); }
-
-        inline static function glGetProgramNamedParameterfvNV(id:UInt, len:Int, ?bOffset:Int=0, name:BytesData, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetProgramNamedParameterfvNV({0}, {1}, (const GLubyte*)&{3}[0] + {2}, (GLfloat*)&{5}[0] + {4})", id, len, bOffset, name, bOffset, params); }
-
-        inline static function glProgramNamedParameter4dNV(id:UInt, len:Int, name:Array<String>, x:Float, y:Float, z:Float, w:Float) : Void
-          { untyped __cpp__("glProgramNamedParameter4dNV({0}, {1}, (const GLubyte*)&{2}[0], {3}, {4}, {5}, {6})", id, len, name, x, y, z, w); }
-
-        inline static function glProgramNamedParameter4fNV(id:UInt, len:Int, name:Array<String>, x:Float, y:Float, z:Float, w:Float) : Void
-          { untyped __cpp__("glProgramNamedParameter4fNV({0}, {1}, (const GLubyte*)&{2}[0], {3}, {4}, {5}, {6})", id, len, name, x, y, z, w); }
-
-
-
-    // TODO functions
-
-            
-        // inline static function glProgramNamedParameter4dvNV(id:UInt, len:Int, ?bOffset:Int=0, name:BytesData, v:Array<Float>) : Void
-        // { untyped __cpp__("glProgramNamedParameter4dvNV({0}, {1}, (const GLubyte*)&{3}[0] + {2}, {4})", id, len, bOffset, name, v); }
-            
-        // inline static function glProgramNamedParameter4fvNV(id:UInt, len:Int, ?bOffset:Int=0, name:BytesData, v:Array<Float>) : Void
-        // { untyped __cpp__("glProgramNamedParameter4fvNV({0}, {1}, (const GLubyte*)&{3}[0] + {2}, {4})", id, len, bOffset, name, v); }
-
-
-//GL_NV_fragment_program2
-
-    // GL_NV_fragment_program2 defines
-
-        inline static var GL_NV_fragment_program2                                         = 1;
-        inline static var GL_MAX_PROGRAM_EXEC_INSTRUCTIONS_NV                             = 0x88F4;
-        inline static var GL_MAX_PROGRAM_CALL_DEPTH_NV                                    = 0x88F5;
-        inline static var GL_MAX_PROGRAM_IF_DEPTH_NV                                      = 0x88F6;
-        inline static var GL_MAX_PROGRAM_LOOP_DEPTH_NV                                    = 0x88F7;
-        inline static var GL_MAX_PROGRAM_LOOP_COUNT_NV                                    = 0x88F8;
-
-
-//GL_NV_fragment_program4
-
-    // GL_NV_fragment_program4 defines
-
-        inline static var GL_NV_fragment_program4                                         = 1;
-
-
-//GL_NV_fragment_program_option
-
-    // GL_NV_fragment_program_option defines
-
-        inline static var GL_NV_fragment_program_option                                   = 1;
-
-
-//GL_NV_fragment_shader_interlock
-
-    // GL_NV_fragment_shader_interlock defines
-
-        inline static var GL_NV_fragment_shader_interlock                                 = 1;
-
-
-//GL_NV_framebuffer_mixed_samples
-
-    // GL_NV_framebuffer_mixed_samples defines
-
-        inline static var GL_NV_framebuffer_mixed_samples                                 = 1;
-
-
-//GL_NV_framebuffer_multisample_coverage
-
-    // GL_NV_framebuffer_multisample_coverage defines
-
-        inline static var GL_NV_framebuffer_multisample_coverage                          = 1;
-        inline static var GL_RENDERBUFFER_COVERAGE_SAMPLES_NV                             = 0x8CAB;
-        inline static var GL_RENDERBUFFER_COLOR_SAMPLES_NV                                = 0x8E10;
-        inline static var GL_MAX_MULTISAMPLE_COVERAGE_MODES_NV                            = 0x8E11;
-        inline static var GL_MULTISAMPLE_COVERAGE_MODES_NV                                = 0x8E12;
-
-
-
-
-    // GL_NV_framebuffer_multisample_coverage functions
-
-        @:native('glRenderbufferStorageMultisampleCoverageNV')
-        static function glRenderbufferStorageMultisampleCoverageNV(target:Int, coverageSamples:Int, colorSamples:Int, internalformat:Int, width:Int, height:Int) : Void;
-
-
-
-
-
-//GL_NV_geometry_program4
-
-    // GL_NV_geometry_program4 defines
-
-        inline static var GL_NV_geometry_program4                                         = 1;
-        inline static var GL_GEOMETRY_PROGRAM_NV                                          = 0x8C26;
-        inline static var GL_MAX_PROGRAM_OUTPUT_VERTICES_NV                               = 0x8C27;
-        inline static var GL_MAX_PROGRAM_TOTAL_OUTPUT_COMPONENTS_NV                       = 0x8C28;
-
-
-
-
-    // GL_NV_geometry_program4 functions
-
-        @:native('glProgramVertexLimitNV')
-        static function glProgramVertexLimitNV(target:Int, limit:Int) : Void;
-
-
-
-
-
-//GL_NV_geometry_shader4
-
-    // GL_NV_geometry_shader4 defines
-
-        inline static var GL_NV_geometry_shader4                                          = 1;
-
-
-//GL_NV_geometry_shader_passthrough
-
-    // GL_NV_geometry_shader_passthrough defines
-
-        inline static var GL_NV_geometry_shader_passthrough                               = 1;
-
-
-//GL_NV_gpu_program4
-
-    // GL_NV_gpu_program4 defines
-
-        inline static var GL_NV_gpu_program4                                              = 1;
-        inline static var GL_MIN_PROGRAM_TEXEL_OFFSET_NV                                  = 0x8904;
-        inline static var GL_MAX_PROGRAM_TEXEL_OFFSET_NV                                  = 0x8905;
-        inline static var GL_PROGRAM_ATTRIB_COMPONENTS_NV                                 = 0x8906;
-        inline static var GL_PROGRAM_RESULT_COMPONENTS_NV                                 = 0x8907;
-        inline static var GL_MAX_PROGRAM_ATTRIB_COMPONENTS_NV                             = 0x8908;
-        inline static var GL_MAX_PROGRAM_RESULT_COMPONENTS_NV                             = 0x8909;
-        inline static var GL_MAX_PROGRAM_GENERIC_ATTRIBS_NV                               = 0x8DA5;
-        inline static var GL_MAX_PROGRAM_GENERIC_RESULTS_NV                               = 0x8DA6;
-
-
-
-
-    // GL_NV_gpu_program4 functions
-
-        @:native('glProgramEnvParameterI4iNV')
-        static function glProgramEnvParameterI4iNV(target:Int, index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
-
-        @:native('glProgramEnvParameterI4uiNV')
-        static function glProgramEnvParameterI4uiNV(target:Int, index:UInt, x:UInt, y:UInt, z:UInt, w:UInt) : Void;
-
-        @:native('glProgramLocalParameterI4iNV')
-        static function glProgramLocalParameterI4iNV(target:Int, index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
-
-        @:native('glProgramLocalParameterI4uiNV')
-        static function glProgramLocalParameterI4uiNV(target:Int, index:UInt, x:UInt, y:UInt, z:UInt, w:UInt) : Void;
-
-
-        inline static function glProgramEnvParameterI4ivNV(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramEnvParameterI4ivNV({0}, {1}, (const GLint*)&{3}[0] + {2})", target, index, bOffset, params); }
-
-        inline static function glProgramEnvParameterI4uivNV(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramEnvParameterI4uivNV({0}, {1}, (const GLuint*)&{3}[0] + {2})", target, index, bOffset, params); }
-
-        inline static function glProgramEnvParametersI4ivNV(target:Int, index:UInt, count:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramEnvParametersI4ivNV({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", target, index, count, bOffset, params); }
-
-        inline static function glProgramEnvParametersI4uivNV(target:Int, index:UInt, count:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramEnvParametersI4uivNV({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", target, index, count, bOffset, params); }
-
-        inline static function glProgramLocalParameterI4ivNV(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramLocalParameterI4ivNV({0}, {1}, (const GLint*)&{3}[0] + {2})", target, index, bOffset, params); }
-
-        inline static function glProgramLocalParameterI4uivNV(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramLocalParameterI4uivNV({0}, {1}, (const GLuint*)&{3}[0] + {2})", target, index, bOffset, params); }
-
-        inline static function glProgramLocalParametersI4ivNV(target:Int, index:UInt, count:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramLocalParametersI4ivNV({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", target, index, count, bOffset, params); }
-
-        inline static function glProgramLocalParametersI4uivNV(target:Int, index:UInt, count:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramLocalParametersI4uivNV({0}, {1}, {2}, (const GLuint*)&{4}[0] + {3})", target, index, count, bOffset, params); }
-
-
-
-
-//GL_NV_gpu_program5
-
-    // GL_NV_gpu_program5 defines
-
-        inline static var GL_NV_gpu_program5                                              = 1;
-        inline static var GL_MAX_GEOMETRY_PROGRAM_INVOCATIONS_NV                          = 0x8E5A;
-        inline static var GL_MIN_FRAGMENT_INTERPOLATION_OFFSET_NV                         = 0x8E5B;
-        inline static var GL_MAX_FRAGMENT_INTERPOLATION_OFFSET_NV                         = 0x8E5C;
-        inline static var GL_FRAGMENT_PROGRAM_INTERPOLATION_OFFSET_BITS_NV                = 0x8E5D;
-        inline static var GL_MIN_PROGRAM_TEXTURE_GATHER_OFFSET_NV                         = 0x8E5E;
-        inline static var GL_MAX_PROGRAM_TEXTURE_GATHER_OFFSET_NV                         = 0x8E5F;
-
-
-//GL_NV_gpu_program5_mem_extended
-
-    // GL_NV_gpu_program5_mem_extended defines
-
-        inline static var GL_NV_gpu_program5_mem_extended                                 = 1;
-
-
-//GL_NV_gpu_program_fp64
-
-    // GL_NV_gpu_program_fp64 defines
-
-        inline static var GL_NV_gpu_program_fp64                                          = 1;
-
-
-//GL_NV_gpu_shader5
-
-    // GL_NV_gpu_shader5 defines
-
-        inline static var GL_NV_gpu_shader5                                               = 1;
-        inline static var GL_INT64_NV                                                     = 0x140E;
-        inline static var GL_UNSIGNED_INT64_NV                                            = 0x140F;
-        inline static var GL_INT8_NV                                                      = 0x8FE0;
-        inline static var GL_INT8_VEC2_NV                                                 = 0x8FE1;
-        inline static var GL_INT8_VEC3_NV                                                 = 0x8FE2;
-        inline static var GL_INT8_VEC4_NV                                                 = 0x8FE3;
-        inline static var GL_INT16_NV                                                     = 0x8FE4;
-        inline static var GL_INT16_VEC2_NV                                                = 0x8FE5;
-        inline static var GL_INT16_VEC3_NV                                                = 0x8FE6;
-        inline static var GL_INT16_VEC4_NV                                                = 0x8FE7;
-        inline static var GL_INT64_VEC2_NV                                                = 0x8FE9;
-        inline static var GL_INT64_VEC3_NV                                                = 0x8FEA;
-        inline static var GL_INT64_VEC4_NV                                                = 0x8FEB;
-        inline static var GL_UNSIGNED_INT8_NV                                             = 0x8FEC;
-        inline static var GL_UNSIGNED_INT8_VEC2_NV                                        = 0x8FED;
-        inline static var GL_UNSIGNED_INT8_VEC3_NV                                        = 0x8FEE;
-        inline static var GL_UNSIGNED_INT8_VEC4_NV                                        = 0x8FEF;
-        inline static var GL_UNSIGNED_INT16_NV                                            = 0x8FF0;
-        inline static var GL_UNSIGNED_INT16_VEC2_NV                                       = 0x8FF1;
-        inline static var GL_UNSIGNED_INT16_VEC3_NV                                       = 0x8FF2;
-        inline static var GL_UNSIGNED_INT16_VEC4_NV                                       = 0x8FF3;
-        inline static var GL_UNSIGNED_INT64_VEC2_NV                                       = 0x8FF5;
-        inline static var GL_UNSIGNED_INT64_VEC3_NV                                       = 0x8FF6;
-        inline static var GL_UNSIGNED_INT64_VEC4_NV                                       = 0x8FF7;
-        inline static var GL_FLOAT16_NV                                                   = 0x8FF8;
-        inline static var GL_FLOAT16_VEC2_NV                                              = 0x8FF9;
-        inline static var GL_FLOAT16_VEC3_NV                                              = 0x8FFA;
-        inline static var GL_FLOAT16_VEC4_NV                                              = 0x8FFB;
-
-
-
-
-    // GL_NV_gpu_shader5 functions
-
-        @:native('glProgramUniform1i64NV')
-        static function glProgramUniform1i64NV(program:UInt, location:Int, x:cpp.Int64) : Void;
-
-        @:native('glProgramUniform1ui64NV')
-        static function glProgramUniform1ui64NV(program:UInt, location:Int, x:cpp.UInt64) : Void;
-
-        @:native('glProgramUniform2i64NV')
-        static function glProgramUniform2i64NV(program:UInt, location:Int, x:cpp.Int64, y:cpp.Int64) : Void;
-
-        @:native('glProgramUniform2ui64NV')
-        static function glProgramUniform2ui64NV(program:UInt, location:Int, x:cpp.UInt64, y:cpp.UInt64) : Void;
-
-        @:native('glProgramUniform3i64NV')
-        static function glProgramUniform3i64NV(program:UInt, location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64) : Void;
-
-        @:native('glProgramUniform3ui64NV')
-        static function glProgramUniform3ui64NV(program:UInt, location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64) : Void;
-
-        @:native('glProgramUniform4i64NV')
-        static function glProgramUniform4i64NV(program:UInt, location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64, w:cpp.Int64) : Void;
-
-        @:native('glProgramUniform4ui64NV')
-        static function glProgramUniform4ui64NV(program:UInt, location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64, w:cpp.UInt64) : Void;
-
-        @:native('glUniform1i64NV')
-        static function glUniform1i64NV(location:Int, x:cpp.Int64) : Void;
-
-        @:native('glUniform1ui64NV')
-        static function glUniform1ui64NV(location:Int, x:cpp.UInt64) : Void;
-
-        @:native('glUniform2i64NV')
-        static function glUniform2i64NV(location:Int, x:cpp.Int64, y:cpp.Int64) : Void;
-
-        @:native('glUniform2ui64NV')
-        static function glUniform2ui64NV(location:Int, x:cpp.UInt64, y:cpp.UInt64) : Void;
-
-        @:native('glUniform3i64NV')
-        static function glUniform3i64NV(location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64) : Void;
-
-        @:native('glUniform3ui64NV')
-        static function glUniform3ui64NV(location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64) : Void;
-
-        @:native('glUniform4i64NV')
-        static function glUniform4i64NV(location:Int, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64, w:cpp.Int64) : Void;
-
-        @:native('glUniform4ui64NV')
-        static function glUniform4ui64NV(location:Int, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64, w:cpp.UInt64) : Void;
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetUniformi64vNV')
-        // static function glGetUniformi64vNV(program:UInt, location:Int, params:GLint64EXT*) : Void;
-            
-        // @:native('glGetUniformui64vNV')
-        // static function glGetUniformui64vNV(program:UInt, location:Int, params:GLuint64EXT*) : Void;
-            
-        // @:native('glProgramUniform1i64vNV')
-        // static function glProgramUniform1i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;
-            
-        // @:native('glProgramUniform1ui64vNV')
-        // static function glProgramUniform1ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
-            
-        // @:native('glProgramUniform2i64vNV')
-        // static function glProgramUniform2i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;
-            
-        // @:native('glProgramUniform2ui64vNV')
-        // static function glProgramUniform2ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
-            
-        // @:native('glProgramUniform3i64vNV')
-        // static function glProgramUniform3i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;
-            
-        // @:native('glProgramUniform3ui64vNV')
-        // static function glProgramUniform3ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
-            
-        // @:native('glProgramUniform4i64vNV')
-        // static function glProgramUniform4i64vNV(program:UInt, location:Int, count:Int, value:const GLint64EXT*) : Void;
-            
-        // @:native('glProgramUniform4ui64vNV')
-        // static function glProgramUniform4ui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
-            
-        // @:native('glUniform1i64vNV')
-        // static function glUniform1i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;
-            
-        // @:native('glUniform1ui64vNV')
-        // static function glUniform1ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
-            
-        // @:native('glUniform2i64vNV')
-        // static function glUniform2i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;
-            
-        // @:native('glUniform2ui64vNV')
-        // static function glUniform2ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
-            
-        // @:native('glUniform3i64vNV')
-        // static function glUniform3i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;
-            
-        // @:native('glUniform3ui64vNV')
-        // static function glUniform3ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
-            
-        // @:native('glUniform4i64vNV')
-        // static function glUniform4i64vNV(location:Int, count:Int, value:const GLint64EXT*) : Void;
-            
-        // @:native('glUniform4ui64vNV')
-        // static function glUniform4ui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
-
-
-//GL_NV_half_float
-
-    // GL_NV_half_float defines
-
-        inline static var GL_NV_half_float                                                = 1;
-        inline static var GL_HALF_FLOAT_NV                                                = 0x140B;
-
-
-
-
-    // GL_NV_half_float functions
-
-        @:native('glColor3hNV')
-        static function glColor3hNV(red:UInt, green:UInt, blue:UInt) : Void;
-
-        @:native('glColor4hNV')
-        static function glColor4hNV(red:UInt, green:UInt, blue:UInt, alpha:UInt) : Void;
-
-        @:native('glFogCoordhNV')
-        static function glFogCoordhNV(fog:UInt) : Void;
-
-        @:native('glMultiTexCoord1hNV')
-        static function glMultiTexCoord1hNV(target:Int, s:UInt) : Void;
-
-        @:native('glMultiTexCoord2hNV')
-        static function glMultiTexCoord2hNV(target:Int, s:UInt, t:UInt) : Void;
-
-        @:native('glMultiTexCoord3hNV')
-        static function glMultiTexCoord3hNV(target:Int, s:UInt, t:UInt, r:UInt) : Void;
-
-        @:native('glMultiTexCoord4hNV')
-        static function glMultiTexCoord4hNV(target:Int, s:UInt, t:UInt, r:UInt, q:UInt) : Void;
-
-        @:native('glNormal3hNV')
-        static function glNormal3hNV(nx:UInt, ny:UInt, nz:UInt) : Void;
-
-        @:native('glSecondaryColor3hNV')
-        static function glSecondaryColor3hNV(red:UInt, green:UInt, blue:UInt) : Void;
-
-        @:native('glTexCoord1hNV')
-        static function glTexCoord1hNV(s:UInt) : Void;
-
-        @:native('glTexCoord2hNV')
-        static function glTexCoord2hNV(s:UInt, t:UInt) : Void;
-
-        @:native('glTexCoord3hNV')
-        static function glTexCoord3hNV(s:UInt, t:UInt, r:UInt) : Void;
-
-        @:native('glTexCoord4hNV')
-        static function glTexCoord4hNV(s:UInt, t:UInt, r:UInt, q:UInt) : Void;
-
-        @:native('glVertex2hNV')
-        static function glVertex2hNV(x:UInt, y:UInt) : Void;
-
-        @:native('glVertex3hNV')
-        static function glVertex3hNV(x:UInt, y:UInt, z:UInt) : Void;
-
-        @:native('glVertex4hNV')
-        static function glVertex4hNV(x:UInt, y:UInt, z:UInt, w:UInt) : Void;
-
-        @:native('glVertexAttrib1hNV')
-        static function glVertexAttrib1hNV(index:UInt, x:UInt) : Void;
-
-        @:native('glVertexAttrib2hNV')
-        static function glVertexAttrib2hNV(index:UInt, x:UInt, y:UInt) : Void;
-
-        @:native('glVertexAttrib3hNV')
-        static function glVertexAttrib3hNV(index:UInt, x:UInt, y:UInt, z:UInt) : Void;
-
-        @:native('glVertexAttrib4hNV')
-        static function glVertexAttrib4hNV(index:UInt, x:UInt, y:UInt, z:UInt, w:UInt) : Void;
-
-        @:native('glVertexWeighthNV')
-        static function glVertexWeighthNV(weight:UInt) : Void;
-
-
-        inline static function glColor3hvNV(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor3hvNV((const GLhalf*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glColor4hvNV(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor4hvNV((const GLhalf*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glFogCoordhvNV(?bOffset:Int=0, fog:BytesData) : Void
-          { untyped __cpp__("glFogCoordhvNV((const GLhalf*)&{1}[0] + {0})", bOffset, fog); }
-
-        inline static function glMultiTexCoord1hvNV(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord1hvNV({0}, (const GLhalf*)&{2}[0] + {1})", target, bOffset, v); }
-
-        inline static function glMultiTexCoord2hvNV(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord2hvNV({0}, (const GLhalf*)&{2}[0] + {1})", target, bOffset, v); }
-
-        inline static function glMultiTexCoord3hvNV(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord3hvNV({0}, (const GLhalf*)&{2}[0] + {1})", target, bOffset, v); }
-
-        inline static function glMultiTexCoord4hvNV(target:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glMultiTexCoord4hvNV({0}, (const GLhalf*)&{2}[0] + {1})", target, bOffset, v); }
-
-        inline static function glNormal3hvNV(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glNormal3hvNV((const GLhalf*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glSecondaryColor3hvNV(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glSecondaryColor3hvNV((const GLhalf*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glTexCoord1hvNV(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord1hvNV((const GLhalf*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glTexCoord2hvNV(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord2hvNV((const GLhalf*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glTexCoord3hvNV(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord3hvNV((const GLhalf*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glTexCoord4hvNV(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord4hvNV((const GLhalf*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glVertex2hvNV(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex2hvNV((const GLhalf*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glVertex3hvNV(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex3hvNV((const GLhalf*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glVertex4hvNV(?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertex4hvNV((const GLhalf*)&{1}[0] + {0})", bOffset, v); }
-
-        inline static function glVertexAttrib1hvNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib1hvNV({0}, (const GLhalf*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib2hvNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib2hvNV({0}, (const GLhalf*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib3hvNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib3hvNV({0}, (const GLhalf*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib4hvNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4hvNV({0}, (const GLhalf*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribs1hvNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs1hvNV({0}, {1}, (const GLhalf*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs2hvNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs2hvNV({0}, {1}, (const GLhalf*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs3hvNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs3hvNV({0}, {1}, (const GLhalf*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs4hvNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs4hvNV({0}, {1}, (const GLhalf*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexWeighthvNV(?bOffset:Int=0, weight:BytesData) : Void
-          { untyped __cpp__("glVertexWeighthvNV((const GLhalf*)&{1}[0] + {0})", bOffset, weight); }
-
-
-
-
-//GL_NV_internalformat_sample_query
-
-    // GL_NV_internalformat_sample_query defines
-
-        inline static var GL_NV_internalformat_sample_query                               = 1;
-        inline static var GL_MULTISAMPLES_NV                                              = 0x9371;
-        inline static var GL_SUPERSAMPLE_SCALE_X_NV                                       = 0x9372;
-        inline static var GL_SUPERSAMPLE_SCALE_Y_NV                                       = 0x9373;
-        inline static var GL_CONFORMANT_NV                                                = 0x9374;
-
-
-
-
-    // GL_NV_internalformat_sample_query functions
-
-
-        inline static function glGetInternalformatSampleivNV(target:Int, internalformat:Int, samples:Int, pname:Int, bufSize:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetInternalformatSampleivNV({0}, {1}, {2}, {3}, {4}, (GLint*)&{6}[0] + {5})", target, internalformat, samples, pname, bufSize, bOffset, params); }
-
-
-
-
-//GL_NV_light_max_exponent
-
-    // GL_NV_light_max_exponent defines
-
-        inline static var GL_NV_light_max_exponent                                        = 1;
-        inline static var GL_MAX_SHININESS_NV                                             = 0x8504;
-        inline static var GL_MAX_SPOT_EXPONENT_NV                                         = 0x8505;
-
-
-//GL_NV_multisample_coverage
-
-    // GL_NV_multisample_coverage defines
-
-        inline static var GL_NV_multisample_coverage                                      = 1;
-
-
-//GL_NV_multisample_filter_hint
-
-    // GL_NV_multisample_filter_hint defines
-
-        inline static var GL_NV_multisample_filter_hint                                   = 1;
-        inline static var GL_MULTISAMPLE_FILTER_HINT_NV                                   = 0x8534;
-
-
-//GL_NV_occlusion_query
-
-    // GL_NV_occlusion_query defines
-
-        inline static var GL_NV_occlusion_query                                           = 1;
-        inline static var GL_PIXEL_COUNTER_BITS_NV                                        = 0x8864;
-        inline static var GL_CURRENT_OCCLUSION_QUERY_ID_NV                                = 0x8865;
-        inline static var GL_PIXEL_COUNT_NV                                               = 0x8866;
-        inline static var GL_PIXEL_COUNT_AVAILABLE_NV                                     = 0x8867;
-
-
-
-
-    // GL_NV_occlusion_query functions
-
-        @:native('glBeginOcclusionQueryNV')
-        static function glBeginOcclusionQueryNV(id:UInt) : Void;
-
-        @:native('glEndOcclusionQueryNV')
-        static function glEndOcclusionQueryNV() : Void;
-
-        @:native('glIsOcclusionQueryNV')
-        static function glIsOcclusionQueryNV(id:UInt) : Bool;
-
-
-        inline static function glDeleteOcclusionQueriesNV(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteOcclusionQueriesNV({0}, (const GLuint*)&{1}[0])", n, ids); }
-
-        inline static function glGenOcclusionQueriesNV(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glGenOcclusionQueriesNV({0}, (GLuint*)&{1}[0])", n, ids); }
-
-        inline static function glGetOcclusionQueryivNV(id:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetOcclusionQueryivNV({0}, {1}, (GLint*)&{3}[0] + {2})", id, pname, bOffset, params); }
-
-        inline static function glGetOcclusionQueryuivNV(id:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetOcclusionQueryuivNV({0}, {1}, (GLuint*)&{3}[0] + {2})", id, pname, bOffset, params); }
-
-
-
-
-//GL_NV_packed_depth_stencil
-
-    // GL_NV_packed_depth_stencil defines
-
-        inline static var GL_NV_packed_depth_stencil                                      = 1;
-        inline static var GL_DEPTH_STENCIL_NV                                             = 0x84F9;
-        inline static var GL_UNSIGNED_INT_24_8_NV                                         = 0x84FA;
-
-
-//GL_NV_parameter_buffer_object
-
-    // GL_NV_parameter_buffer_object defines
-
-        inline static var GL_NV_parameter_buffer_object                                   = 1;
-        inline static var GL_MAX_PROGRAM_PARAMETER_BUFFER_BINDINGS_NV                     = 0x8DA0;
-        inline static var GL_MAX_PROGRAM_PARAMETER_BUFFER_SIZE_NV                         = 0x8DA1;
-        inline static var GL_VERTEX_PROGRAM_PARAMETER_BUFFER_NV                           = 0x8DA2;
-        inline static var GL_GEOMETRY_PROGRAM_PARAMETER_BUFFER_NV                         = 0x8DA3;
-        inline static var GL_FRAGMENT_PROGRAM_PARAMETER_BUFFER_NV                         = 0x8DA4;
-
-
-
-
-    // GL_NV_parameter_buffer_object functions
-
-
-        inline static function glProgramBufferParametersIivNV(target:Int, buffer:UInt, index:UInt, count:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramBufferParametersIivNV({0}, {1}, {2}, {3}, (const GLint*)&{5}[0] + {4})", target, buffer, index, count, bOffset, params); }
-
-        inline static function glProgramBufferParametersIuivNV(target:Int, buffer:UInt, index:UInt, count:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramBufferParametersIuivNV({0}, {1}, {2}, {3}, (const GLuint*)&{5}[0] + {4})", target, buffer, index, count, bOffset, params); }
-
-        inline static function glProgramBufferParametersfvNV(target:Int, buffer:UInt, index:UInt, count:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramBufferParametersfvNV({0}, {1}, {2}, {3}, (const GLfloat*)&{5}[0] + {4})", target, buffer, index, count, bOffset, params); }
-
-
-
-
-//GL_NV_parameter_buffer_object2
-
-    // GL_NV_parameter_buffer_object2 defines
-
-        inline static var GL_NV_parameter_buffer_object2                                  = 1;
-
-
-//GL_NV_path_rendering
-
-    // GL_NV_path_rendering defines
-
-        inline static var GL_NV_path_rendering                                            = 1;
-        inline static var GL_CLOSE_PATH_NV                                                = 0x00;
-        inline static var GL_BOLD_BIT_NV                                                  = 0x01;
-        inline static var GL_GLYPH_WIDTH_BIT_NV                                           = 0x01;
-        inline static var GL_GLYPH_HEIGHT_BIT_NV                                          = 0x02;
-        inline static var GL_ITALIC_BIT_NV                                                = 0x02;
-        inline static var GL_MOVE_TO_NV                                                   = 0x02;
-        inline static var GL_RELATIVE_MOVE_TO_NV                                          = 0x03;
-        inline static var GL_GLYPH_HORIZONTAL_BEARING_X_BIT_NV                            = 0x04;
-        inline static var GL_LINE_TO_NV                                                   = 0x04;
-        inline static var GL_RELATIVE_LINE_TO_NV                                          = 0x05;
-        inline static var GL_HORIZONTAL_LINE_TO_NV                                        = 0x06;
-        inline static var GL_RELATIVE_HORIZONTAL_LINE_TO_NV                               = 0x07;
-        inline static var GL_GLYPH_HORIZONTAL_BEARING_Y_BIT_NV                            = 0x08;
-        inline static var GL_VERTICAL_LINE_TO_NV                                          = 0x08;
-        inline static var GL_RELATIVE_VERTICAL_LINE_TO_NV                                 = 0x09;
-        inline static var GL_QUADRATIC_CURVE_TO_NV                                        = 0x0A;
-        inline static var GL_RELATIVE_QUADRATIC_CURVE_TO_NV                               = 0x0B;
-        inline static var GL_CUBIC_CURVE_TO_NV                                            = 0x0C;
-        inline static var GL_RELATIVE_CUBIC_CURVE_TO_NV                                   = 0x0D;
-        inline static var GL_SMOOTH_QUADRATIC_CURVE_TO_NV                                 = 0x0E;
-        inline static var GL_RELATIVE_SMOOTH_QUADRATIC_CURVE_TO_NV                        = 0x0F;
-        inline static var GL_GLYPH_HORIZONTAL_BEARING_ADVANCE_BIT_NV                      = 0x10;
-        inline static var GL_SMOOTH_CUBIC_CURVE_TO_NV                                     = 0x10;
-        inline static var GL_RELATIVE_SMOOTH_CUBIC_CURVE_TO_NV                            = 0x11;
-        inline static var GL_SMALL_CCW_ARC_TO_NV                                          = 0x12;
-        inline static var GL_RELATIVE_SMALL_CCW_ARC_TO_NV                                 = 0x13;
-        inline static var GL_SMALL_CW_ARC_TO_NV                                           = 0x14;
-        inline static var GL_RELATIVE_SMALL_CW_ARC_TO_NV                                  = 0x15;
-        inline static var GL_LARGE_CCW_ARC_TO_NV                                          = 0x16;
-        inline static var GL_RELATIVE_LARGE_CCW_ARC_TO_NV                                 = 0x17;
-        inline static var GL_LARGE_CW_ARC_TO_NV                                           = 0x18;
-        inline static var GL_RELATIVE_LARGE_CW_ARC_TO_NV                                  = 0x19;
-        inline static var GL_CONIC_CURVE_TO_NV                                            = 0x1A;
-        inline static var GL_RELATIVE_CONIC_CURVE_TO_NV                                   = 0x1B;
-        inline static var GL_GLYPH_VERTICAL_BEARING_X_BIT_NV                              = 0x20;
-        inline static var GL_GLYPH_VERTICAL_BEARING_Y_BIT_NV                              = 0x40;
-        inline static var GL_GLYPH_VERTICAL_BEARING_ADVANCE_BIT_NV                        = 0x80;
-        inline static var GL_ROUNDED_RECT_NV                                              = 0xE8;
-        inline static var GL_RELATIVE_ROUNDED_RECT_NV                                     = 0xE9;
-        inline static var GL_ROUNDED_RECT2_NV                                             = 0xEA;
-        inline static var GL_RELATIVE_ROUNDED_RECT2_NV                                    = 0xEB;
-        inline static var GL_ROUNDED_RECT4_NV                                             = 0xEC;
-        inline static var GL_RELATIVE_ROUNDED_RECT4_NV                                    = 0xED;
-        inline static var GL_ROUNDED_RECT8_NV                                             = 0xEE;
-        inline static var GL_RELATIVE_ROUNDED_RECT8_NV                                    = 0xEF;
-        inline static var GL_RESTART_PATH_NV                                              = 0xF0;
-        inline static var GL_DUP_FIRST_CUBIC_CURVE_TO_NV                                  = 0xF2;
-        inline static var GL_DUP_LAST_CUBIC_CURVE_TO_NV                                   = 0xF4;
-        inline static var GL_RECT_NV                                                      = 0xF6;
-        inline static var GL_RELATIVE_RECT_NV                                             = 0xF7;
-        inline static var GL_CIRCULAR_CCW_ARC_TO_NV                                       = 0xF8;
-        inline static var GL_CIRCULAR_CW_ARC_TO_NV                                        = 0xFA;
-        inline static var GL_CIRCULAR_TANGENT_ARC_TO_NV                                   = 0xFC;
-        inline static var GL_ARC_TO_NV                                                    = 0xFE;
-        inline static var GL_RELATIVE_ARC_TO_NV                                           = 0xFF;
-        inline static var GL_GLYPH_HAS_KERNING_BIT_NV                                     = 0x100;
-        inline static var GL_PRIMARY_COLOR_NV                                             = 0x852C;
-        inline static var GL_SECONDARY_COLOR_NV                                           = 0x852D;
-        inline static var GL_PATH_FORMAT_SVG_NV                                           = 0x9070;
-        inline static var GL_PATH_FORMAT_PS_NV                                            = 0x9071;
-        inline static var GL_STANDARD_FONT_NAME_NV                                        = 0x9072;
-        inline static var GL_SYSTEM_FONT_NAME_NV                                          = 0x9073;
-        inline static var GL_FILE_NAME_NV                                                 = 0x9074;
-        inline static var GL_PATH_STROKE_WIDTH_NV                                         = 0x9075;
-        inline static var GL_PATH_END_CAPS_NV                                             = 0x9076;
-        inline static var GL_PATH_INITIAL_END_CAP_NV                                      = 0x9077;
-        inline static var GL_PATH_TERMINAL_END_CAP_NV                                     = 0x9078;
-        inline static var GL_PATH_JOIN_STYLE_NV                                           = 0x9079;
-        inline static var GL_PATH_MITER_LIMIT_NV                                          = 0x907A;
-        inline static var GL_PATH_DASH_CAPS_NV                                            = 0x907B;
-        inline static var GL_PATH_INITIAL_DASH_CAP_NV                                     = 0x907C;
-        inline static var GL_PATH_TERMINAL_DASH_CAP_NV                                    = 0x907D;
-        inline static var GL_PATH_DASH_OFFSET_NV                                          = 0x907E;
-        inline static var GL_PATH_CLIENT_LENGTH_NV                                        = 0x907F;
-        inline static var GL_PATH_FILL_MODE_NV                                            = 0x9080;
-        inline static var GL_PATH_FILL_MASK_NV                                            = 0x9081;
-        inline static var GL_PATH_FILL_COVER_MODE_NV                                      = 0x9082;
-        inline static var GL_PATH_STROKE_COVER_MODE_NV                                    = 0x9083;
-        inline static var GL_PATH_STROKE_MASK_NV                                          = 0x9084;
-        inline static var GL_PATH_STROKE_BOUND_NV                                         = 0x9086;
-        inline static var GL_COUNT_UP_NV                                                  = 0x9088;
-        inline static var GL_COUNT_DOWN_NV                                                = 0x9089;
-        inline static var GL_PATH_OBJECT_BOUNDING_BOX_NV                                  = 0x908A;
-        inline static var GL_CONVEX_HULL_NV                                               = 0x908B;
-        inline static var GL_BOUNDING_BOX_NV                                              = 0x908D;
-        inline static var GL_TRANSLATE_X_NV                                               = 0x908E;
-        inline static var GL_TRANSLATE_Y_NV                                               = 0x908F;
-        inline static var GL_TRANSLATE_2D_NV                                              = 0x9090;
-        inline static var GL_TRANSLATE_3D_NV                                              = 0x9091;
-        inline static var GL_AFFINE_2D_NV                                                 = 0x9092;
-        inline static var GL_AFFINE_3D_NV                                                 = 0x9094;
-        inline static var GL_TRANSPOSE_AFFINE_2D_NV                                       = 0x9096;
-        inline static var GL_TRANSPOSE_AFFINE_3D_NV                                       = 0x9098;
-        inline static var GL_UTF8_NV                                                      = 0x909A;
-        inline static var GL_UTF16_NV                                                     = 0x909B;
-        inline static var GL_BOUNDING_BOX_OF_BOUNDING_BOXES_NV                            = 0x909C;
-        inline static var GL_PATH_COMMAND_COUNT_NV                                        = 0x909D;
-        inline static var GL_PATH_COORD_COUNT_NV                                          = 0x909E;
-        inline static var GL_PATH_DASH_ARRAY_COUNT_NV                                     = 0x909F;
-        inline static var GL_PATH_COMPUTED_LENGTH_NV                                      = 0x90A0;
-        inline static var GL_PATH_FILL_BOUNDING_BOX_NV                                    = 0x90A1;
-        inline static var GL_PATH_STROKE_BOUNDING_BOX_NV                                  = 0x90A2;
-        inline static var GL_SQUARE_NV                                                    = 0x90A3;
-        inline static var GL_ROUND_NV                                                     = 0x90A4;
-        inline static var GL_TRIANGULAR_NV                                                = 0x90A5;
-        inline static var GL_BEVEL_NV                                                     = 0x90A6;
-        inline static var GL_MITER_REVERT_NV                                              = 0x90A7;
-        inline static var GL_MITER_TRUNCATE_NV                                            = 0x90A8;
-        inline static var GL_SKIP_MISSING_GLYPH_NV                                        = 0x90A9;
-        inline static var GL_USE_MISSING_GLYPH_NV                                         = 0x90AA;
-        inline static var GL_PATH_ERROR_POSITION_NV                                       = 0x90AB;
-        inline static var GL_PATH_FOG_GEN_MODE_NV                                         = 0x90AC;
-        inline static var GL_ACCUM_ADJACENT_PAIRS_NV                                      = 0x90AD;
-        inline static var GL_ADJACENT_PAIRS_NV                                            = 0x90AE;
-        inline static var GL_FIRST_TO_REST_NV                                             = 0x90AF;
-        inline static var GL_PATH_GEN_MODE_NV                                             = 0x90B0;
-        inline static var GL_PATH_GEN_COEFF_NV                                            = 0x90B1;
-        inline static var GL_PATH_GEN_COLOR_FORMAT_NV                                     = 0x90B2;
-        inline static var GL_PATH_GEN_COMPONENTS_NV                                       = 0x90B3;
-        inline static var GL_PATH_DASH_OFFSET_RESET_NV                                    = 0x90B4;
-        inline static var GL_MOVE_TO_RESETS_NV                                            = 0x90B5;
-        inline static var GL_MOVE_TO_CONTINUES_NV                                         = 0x90B6;
-        inline static var GL_PATH_STENCIL_FUNC_NV                                         = 0x90B7;
-        inline static var GL_PATH_STENCIL_REF_NV                                          = 0x90B8;
-        inline static var GL_PATH_STENCIL_VALUE_MASK_NV                                   = 0x90B9;
-        inline static var GL_PATH_STENCIL_DEPTH_OFFSET_FACTOR_NV                          = 0x90BD;
-        inline static var GL_PATH_STENCIL_DEPTH_OFFSET_UNITS_NV                           = 0x90BE;
-        inline static var GL_PATH_COVER_DEPTH_FUNC_NV                                     = 0x90BF;
-        inline static var GL_FONT_GLYPHS_AVAILABLE_NV                                     = 0x9368;
-        inline static var GL_FONT_TARGET_UNAVAILABLE_NV                                   = 0x9369;
-        inline static var GL_FONT_UNAVAILABLE_NV                                          = 0x936A;
-        inline static var GL_FONT_UNINTELLIGIBLE_NV                                       = 0x936B;
-        inline static var GL_STANDARD_FONT_FORMAT_NV                                      = 0x936C;
-        inline static var GL_FRAGMENT_INPUT_NV                                            = 0x936D;
-        inline static var GL_FONT_X_MIN_BOUNDS_BIT_NV                                     = 0x00010000;
-        inline static var GL_FONT_Y_MIN_BOUNDS_BIT_NV                                     = 0x00020000;
-        inline static var GL_FONT_X_MAX_BOUNDS_BIT_NV                                     = 0x00040000;
-        inline static var GL_FONT_Y_MAX_BOUNDS_BIT_NV                                     = 0x00080000;
-        inline static var GL_FONT_UNITS_PER_EM_BIT_NV                                     = 0x00100000;
-        inline static var GL_FONT_ASCENDER_BIT_NV                                         = 0x00200000;
-        inline static var GL_FONT_DESCENDER_BIT_NV                                        = 0x00400000;
-        inline static var GL_FONT_HEIGHT_BIT_NV                                           = 0x00800000;
-        inline static var GL_FONT_MAX_ADVANCE_WIDTH_BIT_NV                                = 0x01000000;
-        inline static var GL_FONT_MAX_ADVANCE_HEIGHT_BIT_NV                               = 0x02000000;
-        inline static var GL_FONT_UNDERLINE_POSITION_BIT_NV                               = 0x04000000;
-        inline static var GL_FONT_UNDERLINE_THICKNESS_BIT_NV                              = 0x08000000;
-        inline static var GL_FONT_HAS_KERNING_BIT_NV                                      = 0x10000000;
-        inline static var GL_FONT_NUM_GLYPH_INDICES_BIT_NV                                = 0x20000000;
-
-
-
-
-    // GL_NV_path_rendering functions
-
-        @:native('glCopyPathNV')
-        static function glCopyPathNV(resultPath:UInt, srcPath:UInt) : Void;
-
-        @:native('glCoverFillPathNV')
-        static function glCoverFillPathNV(path:UInt, coverMode:Int) : Void;
-
-        @:native('glCoverStrokePathNV')
-        static function glCoverStrokePathNV(path:UInt, coverMode:Int) : Void;
-
-        @:native('glDeletePathsNV')
-        static function glDeletePathsNV(path:UInt, range:Int) : Void;
-
-        @:native('glGenPathsNV')
-        static function glGenPathsNV(range:Int) : UInt;
-
-        @:native('glGetPathLengthNV')
-        static function glGetPathLengthNV(path:UInt, startSegment:Int, numSegments:Int) : Float;
-
-        @:native('glInterpolatePathsNV')
-        static function glInterpolatePathsNV(resultPath:UInt, pathA:UInt, pathB:UInt, weight:Float) : Void;
-
-        @:native('glIsPathNV')
-        static function glIsPathNV(path:UInt) : Bool;
-
-        @:native('glIsPointInFillPathNV')
-        static function glIsPointInFillPathNV(path:UInt, mask:UInt, x:Float, y:Float) : Bool;
-
-        @:native('glIsPointInStrokePathNV')
-        static function glIsPointInStrokePathNV(path:UInt, x:Float, y:Float) : Bool;
-
-        @:native('glPathCoverDepthFuncNV')
-        static function glPathCoverDepthFuncNV(zfunc:Int) : Void;
-
-        @:native('glPathFogGenNV')
-        static function glPathFogGenNV(genMode:Int) : Void;
-
-        @:native('glPathParameterfNV')
-        static function glPathParameterfNV(path:UInt, pname:Int, value:Float) : Void;
-
-        @:native('glPathParameteriNV')
-        static function glPathParameteriNV(path:UInt, pname:Int, value:Int) : Void;
-
-        @:native('glPathStencilDepthOffsetNV')
-        static function glPathStencilDepthOffsetNV(factor:Float, units:Float) : Void;
-
-        @:native('glPathStencilFuncNV')
-        static function glPathStencilFuncNV(func:Int, ref:Int, mask:UInt) : Void;
-
-        @:native('glStencilFillPathNV')
-        static function glStencilFillPathNV(path:UInt, fillMode:Int, mask:UInt) : Void;
-
-        @:native('glStencilStrokePathNV')
-        static function glStencilStrokePathNV(path:UInt, reference:Int, mask:UInt) : Void;
-
-        @:native('glStencilThenCoverFillPathNV')
-        static function glStencilThenCoverFillPathNV(path:UInt, fillMode:Int, mask:UInt, coverMode:Int) : Void;
-
-        @:native('glStencilThenCoverStrokePathNV')
-        static function glStencilThenCoverStrokePathNV(path:UInt, reference:Int, mask:UInt, coverMode:Int) : Void;
-
-
-        inline static function glCoverFillPathInstancedNV(numPaths:Int, pathNameType:Int, ?bOffset:Int=0, paths:BytesData, pathBase:UInt, coverMode:Int, transformType:Int, transformValues:Array<Float>) : Void
-          { untyped __cpp__("glCoverFillPathInstancedNV({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5}, {6}, (const GLfloat*)&{7}[0])", numPaths, pathNameType, bOffset, paths, pathBase, coverMode, transformType, transformValues); }
-
-        inline static function glCoverStrokePathInstancedNV(numPaths:Int, pathNameType:Int, ?bOffset:Int=0, paths:BytesData, pathBase:UInt, coverMode:Int, transformType:Int, transformValues:Array<Float>) : Void
-          { untyped __cpp__("glCoverStrokePathInstancedNV({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5}, {6}, (const GLfloat*)&{7}[0])", numPaths, pathNameType, bOffset, paths, pathBase, coverMode, transformType, transformValues); }
-
-        inline static function glGetPathColorGenfvNV(color:Int, pname:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glGetPathColorGenfvNV({0}, {1}, (GLfloat*)&{3}[0] + {2})", color, pname, bOffset, value); }
-
-        inline static function glGetPathColorGenivNV(color:Int, pname:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glGetPathColorGenivNV({0}, {1}, (GLint*)&{3}[0] + {2})", color, pname, bOffset, value); }
-
-        inline static function glGetPathCommandsNV(path:UInt, commands:Array<String>) : Void
-          { untyped __cpp__("glGetPathCommandsNV({0}, (GLubyte*)&{1}[0])", path, commands); }
-
-        inline static function glGetPathCoordsNV(path:UInt, coords:Array<Float>) : Void
-          { untyped __cpp__("glGetPathCoordsNV({0}, (GLfloat*)&{1}[0])", path, coords); }
-
-        inline static function glGetPathDashArrayNV(path:UInt, dashArray:Array<Float>) : Void
-          { untyped __cpp__("glGetPathDashArrayNV({0}, (GLfloat*)&{1}[0])", path, dashArray); }
-
-        inline static function glGetPathMetricRangeNV(metricQueryMask:Int, firstPathName:UInt, numPaths:Int, stride:Int, metrics:Array<Float>) : Void
-          { untyped __cpp__("glGetPathMetricRangeNV({0}, {1}, {2}, {3}, (GLfloat*)&{4}[0])", metricQueryMask, firstPathName, numPaths, stride, metrics); }
-
-        inline static function glGetPathMetricsNV(metricQueryMask:Int, numPaths:Int, pathNameType:Int, ?bOffset:Int=0, paths:BytesData, pathBase:UInt, stride:Int, metrics:Array<Float>) : Void
-          { untyped __cpp__("glGetPathMetricsNV({0}, {1}, {2}, (const void*)&{4}[0] + {3}, {5}, {6}, (GLfloat*)&{7}[0])", metricQueryMask, numPaths, pathNameType, bOffset, paths, pathBase, stride, metrics); }
-
-        inline static function glGetPathParameterfvNV(path:UInt, pname:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glGetPathParameterfvNV({0}, {1}, (GLfloat*)&{3}[0] + {2})", path, pname, bOffset, value); }
-
-        inline static function glGetPathParameterivNV(path:UInt, pname:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glGetPathParameterivNV({0}, {1}, (GLint*)&{3}[0] + {2})", path, pname, bOffset, value); }
-
-        inline static function glGetPathSpacingNV(pathListMode:Int, numPaths:Int, pathNameType:Int, ?bOffset:Int=0, paths:BytesData, pathBase:UInt, advanceScale:Float, kerningScale:Float, transformType:Int, returnedSpacing:Array<Float>) : Void
-          { untyped __cpp__("glGetPathSpacingNV({0}, {1}, {2}, (const void*)&{4}[0] + {3}, {5}, {6}, {7}, {8}, (GLfloat*)&{9}[0])", pathListMode, numPaths, pathNameType, bOffset, paths, pathBase, advanceScale, kerningScale, transformType, returnedSpacing); }
-
-        inline static function glGetPathTexGenfvNV(texCoordSet:Int, pname:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glGetPathTexGenfvNV({0}, {1}, (GLfloat*)&{3}[0] + {2})", texCoordSet, pname, bOffset, value); }
-
-        inline static function glGetPathTexGenivNV(texCoordSet:Int, pname:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glGetPathTexGenivNV({0}, {1}, (GLint*)&{3}[0] + {2})", texCoordSet, pname, bOffset, value); }
-
-        inline static function glMatrixLoad3x2fNV(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixLoad3x2fNV({0}, (const GLfloat*)&{1}[0])", matrixMode, m); }
-
-        inline static function glMatrixLoad3x3fNV(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixLoad3x3fNV({0}, (const GLfloat*)&{1}[0])", matrixMode, m); }
-
-        inline static function glMatrixLoadTranspose3x3fNV(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixLoadTranspose3x3fNV({0}, (const GLfloat*)&{1}[0])", matrixMode, m); }
-
-        inline static function glMatrixMult3x2fNV(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixMult3x2fNV({0}, (const GLfloat*)&{1}[0])", matrixMode, m); }
-
-        inline static function glMatrixMult3x3fNV(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixMult3x3fNV({0}, (const GLfloat*)&{1}[0])", matrixMode, m); }
-
-        inline static function glMatrixMultTranspose3x3fNV(matrixMode:Int, m:Array<Float>) : Void
-          { untyped __cpp__("glMatrixMultTranspose3x3fNV({0}, (const GLfloat*)&{1}[0])", matrixMode, m); }
-
-        inline static function glPathColorGenNV(color:Int, genMode:Int, colorFormat:Int, coeffs:Array<Float>) : Void
-          { untyped __cpp__("glPathColorGenNV({0}, {1}, {2}, (const GLfloat*)&{3}[0])", color, genMode, colorFormat, coeffs); }
-
-        inline static function glPathCoordsNV(path:UInt, numCoords:Int, coordType:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glPathCoordsNV({0}, {1}, {2}, (const void*)&{4}[0] + {3})", path, numCoords, coordType, bOffset, coords); }
-
-        inline static function glPathDashArrayNV(path:UInt, dashCount:Int, dashArray:Array<Float>) : Void
-          { untyped __cpp__("glPathDashArrayNV({0}, {1}, (const GLfloat*)&{2}[0])", path, dashCount, dashArray); }
-
-        inline static function glPathGlyphIndexArrayNV(firstPathName:UInt, fontTarget:Int, ?bOffset:Int=0, fontName:BytesData, fontStyle:Int, firstGlyphIndex:UInt, numGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Int
-          { return untyped __cpp__("glPathGlyphIndexArrayNV({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5}, {6}, {7}, {8})", firstPathName, fontTarget, bOffset, fontName, fontStyle, firstGlyphIndex, numGlyphs, pathParameterTemplate, emScale); }
-
-        inline static function glPathGlyphRangeNV(firstPathName:UInt, fontTarget:Int, ?bOffset:Int=0, fontName:BytesData, fontStyle:Int, firstGlyph:UInt, numGlyphs:Int, handleMissingGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Void
-          { untyped __cpp__("glPathGlyphRangeNV({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5}, {6}, {7}, {8}, {9})", firstPathName, fontTarget, bOffset, fontName, fontStyle, firstGlyph, numGlyphs, handleMissingGlyphs, pathParameterTemplate, emScale); }
-
-        inline static function glPathMemoryGlyphIndexArrayNV(firstPathName:UInt, fontTarget:Int, fontSize:Int, ?bOffset:Int=0, fontData:BytesData, faceIndex:Int, firstGlyphIndex:UInt, numGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Int
-          { return untyped __cpp__("glPathMemoryGlyphIndexArrayNV({0}, {1}, {2}, (const void*)&{4}[0] + {3}, {5}, {6}, {7}, {8}, {9})", firstPathName, fontTarget, fontSize, bOffset, fontData, faceIndex, firstGlyphIndex, numGlyphs, pathParameterTemplate, emScale); }
-
-        inline static function glPathParameterfvNV(path:UInt, pname:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glPathParameterfvNV({0}, {1}, (const GLfloat*)&{3}[0] + {2})", path, pname, bOffset, value); }
-
-        inline static function glPathParameterivNV(path:UInt, pname:Int, ?bOffset:Int=0, value:BytesData) : Void
-          { untyped __cpp__("glPathParameterivNV({0}, {1}, (const GLint*)&{3}[0] + {2})", path, pname, bOffset, value); }
-
-        inline static function glPathStringNV(path:UInt, format:Int, length:Int, ?bOffset:Int=0, pathString:BytesData) : Void
-          { untyped __cpp__("glPathStringNV({0}, {1}, {2}, (const void*)&{4}[0] + {3})", path, format, length, bOffset, pathString); }
-
-        inline static function glPathSubCoordsNV(path:UInt, coordStart:Int, numCoords:Int, coordType:Int, ?bOffset:Int=0, coords:BytesData) : Void
-          { untyped __cpp__("glPathSubCoordsNV({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", path, coordStart, numCoords, coordType, bOffset, coords); }
-
-        inline static function glPathTexGenNV(texCoordSet:Int, genMode:Int, components:Int, coeffs:Array<Float>) : Void
-          { untyped __cpp__("glPathTexGenNV({0}, {1}, {2}, (const GLfloat*)&{3}[0])", texCoordSet, genMode, components, coeffs); }
-
-        inline static function glPointAlongPathNV(path:UInt, startSegment:Int, numSegments:Int, distance:Float, x:Array<Float>, y:Array<Float>, tangentX:Array<Float>, tangentY:Array<Float>) : Bool
-          { return untyped __cpp__("glPointAlongPathNV({0}, {1}, {2}, {3}, (GLfloat*)&{4}[0], (GLfloat*)&{5}[0], (GLfloat*)&{6}[0], (GLfloat*)&{7}[0])", path, startSegment, numSegments, distance, x, y, tangentX, tangentY); }
-
-        inline static function glProgramPathFragmentInputGenNV(program:UInt, location:Int, genMode:Int, components:Int, coeffs:Array<Float>) : Void
-          { untyped __cpp__("glProgramPathFragmentInputGenNV({0}, {1}, {2}, {3}, (const GLfloat*)&{4}[0])", program, location, genMode, components, coeffs); }
-
-        inline static function glStencilFillPathInstancedNV(numPaths:Int, pathNameType:Int, ?bOffset:Int=0, paths:BytesData, pathBase:UInt, fillMode:Int, mask:UInt, transformType:Int, transformValues:Array<Float>) : Void
-          { untyped __cpp__("glStencilFillPathInstancedNV({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5}, {6}, {7}, (const GLfloat*)&{8}[0])", numPaths, pathNameType, bOffset, paths, pathBase, fillMode, mask, transformType, transformValues); }
-
-        inline static function glStencilStrokePathInstancedNV(numPaths:Int, pathNameType:Int, ?bOffset:Int=0, paths:BytesData, pathBase:UInt, reference:Int, mask:UInt, transformType:Int, transformValues:Array<Float>) : Void
-          { untyped __cpp__("glStencilStrokePathInstancedNV({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5}, {6}, {7}, (const GLfloat*)&{8}[0])", numPaths, pathNameType, bOffset, paths, pathBase, reference, mask, transformType, transformValues); }
-
-        inline static function glStencilThenCoverFillPathInstancedNV(numPaths:Int, pathNameType:Int, ?bOffset:Int=0, paths:BytesData, pathBase:UInt, fillMode:Int, mask:UInt, coverMode:Int, transformType:Int, transformValues:Array<Float>) : Void
-          { untyped __cpp__("glStencilThenCoverFillPathInstancedNV({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5}, {6}, {7}, {8}, (const GLfloat*)&{9}[0])", numPaths, pathNameType, bOffset, paths, pathBase, fillMode, mask, coverMode, transformType, transformValues); }
-
-        inline static function glStencilThenCoverStrokePathInstancedNV(numPaths:Int, pathNameType:Int, ?bOffset:Int=0, paths:BytesData, pathBase:UInt, reference:Int, mask:UInt, coverMode:Int, transformType:Int, transformValues:Array<Float>) : Void
-          { untyped __cpp__("glStencilThenCoverStrokePathInstancedNV({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5}, {6}, {7}, {8}, (const GLfloat*)&{9}[0])", numPaths, pathNameType, bOffset, paths, pathBase, reference, mask, coverMode, transformType, transformValues); }
-
-        inline static function glTransformPathNV(resultPath:UInt, srcPath:UInt, transformType:Int, transformValues:Array<Float>) : Void
-          { untyped __cpp__("glTransformPathNV({0}, {1}, {2}, (const GLfloat*)&{3}[0])", resultPath, srcPath, transformType, transformValues); }
-
-
-
-    // TODO functions
-
-            
-        // inline static function glGetProgramResourcefvNV(program:UInt, programInterface:Int, index:UInt, propCount:Int, ?bOffset:Int=0, props:BytesData, bufSize:Int, length:GLsizei*, ?bOffset:Int=0, params:BytesData) : Void
-        // { untyped __cpp__("glGetProgramResourcefvNV({0}, {1}, {2}, {3}, (const GLenum*)&{5}[0] + {4}, {6}, {7}, (GLfloat*)&{9}[0] + {8})", program, programInterface, index, propCount, bOffset, props, bufSize, length, bOffset, params); }
-            
-        // inline static function glPathCommandsNV(path:UInt, numCommands:Int, commands:Array<String>, numCoords:Int, coordType:Int, void*coords:const) : Void
-        // { untyped __cpp__("glPathCommandsNV({0}, {1}, (const GLubyte*)&{2}[0], {3}, {4}, {5})", path, numCommands, commands, numCoords, coordType, void*coords); }
-            
-        // inline static function glPathGlyphIndexRangeNV(fontTarget:Int, ?bOffset:Int=0, fontName:BytesData, fontStyle:Int, pathParameterTemplate:UInt, emScale:Float, baseAndCount:Array<UInt>) : Int
-        // { return untyped __cpp__("glPathGlyphIndexRangeNV({0}, (const void*)&{2}[0] + {1}, {3}, {4}, {5}, {6})", fontTarget, bOffset, fontName, fontStyle, pathParameterTemplate, emScale, baseAndCount); }
-            
-        // inline static function glPathGlyphsNV(firstPathName:UInt, fontTarget:Int, ?bOffset:Int=0, fontName:BytesData, fontStyle:Int, numGlyphs:Int, type:Int, void*charcodes:const, handleMissingGlyphs:Int, pathParameterTemplate:UInt, emScale:Float) : Void
-        // { untyped __cpp__("glPathGlyphsNV({0}, {1}, (const void*)&{3}[0] + {2}, {4}, {5}, {6}, {7}, {8}, {9}, {10})", firstPathName, fontTarget, bOffset, fontName, fontStyle, numGlyphs, type, void*charcodes, handleMissingGlyphs, pathParameterTemplate, emScale); }
-            
-        // inline static function glPathSubCommandsNV(path:UInt, commandStart:Int, commandsToDelete:Int, numCommands:Int, commands:Array<String>, numCoords:Int, coordType:Int, void*coords:const) : Void
-        // { untyped __cpp__("glPathSubCommandsNV({0}, {1}, {2}, {3}, (const GLubyte*)&{4}[0], {5}, {6}, {7})", path, commandStart, commandsToDelete, numCommands, commands, numCoords, coordType, void*coords); }
-            
-        // @:native('glWeightPathsNV')
-        // static function glWeightPathsNV(resultPath:UInt, numPaths:Int, paths:Array<const GLuint>, weights:Array<Float>) : Void;
-
-
-//GL_NV_path_rendering_shared_edge
-
-    // GL_NV_path_rendering_shared_edge defines
-
-        inline static var GL_NV_path_rendering_shared_edge                                = 1;
-        inline static var GL_SHARED_EDGE_NV                                               = 0xC0;
-
-
-//GL_NV_pixel_data_range
-
-    // GL_NV_pixel_data_range defines
-
-        inline static var GL_NV_pixel_data_range                                          = 1;
-        inline static var GL_WRITE_PIXEL_DATA_RANGE_NV                                    = 0x8878;
-        inline static var GL_READ_PIXEL_DATA_RANGE_NV                                     = 0x8879;
-        inline static var GL_WRITE_PIXEL_DATA_RANGE_LENGTH_NV                             = 0x887A;
-        inline static var GL_READ_PIXEL_DATA_RANGE_LENGTH_NV                              = 0x887B;
-        inline static var GL_WRITE_PIXEL_DATA_RANGE_POINTER_NV                            = 0x887C;
-        inline static var GL_READ_PIXEL_DATA_RANGE_POINTER_NV                             = 0x887D;
-
-
-
-
-    // GL_NV_pixel_data_range functions
-
-        @:native('glFlushPixelDataRangeNV')
-        static function glFlushPixelDataRangeNV(target:Int) : Void;
-
-
-        inline static function glPixelDataRangeNV(target:Int, length:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glPixelDataRangeNV({0}, {1}, (void*)&{3}[0] + {2})", target, length, bOffset, pointer); }
-
-
-
-
-//GL_NV_point_sprite
-
-    // GL_NV_point_sprite defines
-
-        inline static var GL_NV_point_sprite                                              = 1;
-        inline static var GL_POINT_SPRITE_NV                                              = 0x8861;
-        inline static var GL_COORD_REPLACE_NV                                             = 0x8862;
-        inline static var GL_POINT_SPRITE_R_MODE_NV                                       = 0x8863;
-
-
-
-
-    // GL_NV_point_sprite functions
-
-        @:native('glPointParameteriNV')
-        static function glPointParameteriNV(pname:Int, param:Int) : Void;
-
-
-        inline static function glPointParameterivNV(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glPointParameterivNV({0}, (const GLint*)&{2}[0] + {1})", pname, bOffset, params); }
-
-
-
-
-//GL_NV_present_video
-
-    // GL_NV_present_video defines
-
-        inline static var GL_NV_present_video                                             = 1;
-        inline static var GL_FRAME_NV                                                     = 0x8E26;
-        inline static var GL_FIELDS_NV                                                    = 0x8E27;
-        inline static var GL_CURRENT_TIME_NV                                              = 0x8E28;
-        inline static var GL_NUM_FILL_STREAMS_NV                                          = 0x8E29;
-        inline static var GL_PRESENT_TIME_NV                                              = 0x8E2A;
-        inline static var GL_PRESENT_DURATION_NV                                          = 0x8E2B;
-
-
-
-
-    // GL_NV_present_video functions
-
-        @:native('glPresentFrameDualFillNV')
-        static function glPresentFrameDualFillNV(video_slot:UInt, minPresentTime:cpp.UInt64, beginPresentTimeId:UInt, presentDurationId:UInt, type:Int, target0:Int, fill0:UInt, target1:Int, fill1:UInt, target2:Int, fill2:UInt, target3:Int, fill3:UInt) : Void;
-
-        @:native('glPresentFrameKeyedNV')
-        static function glPresentFrameKeyedNV(video_slot:UInt, minPresentTime:cpp.UInt64, beginPresentTimeId:UInt, presentDurationId:UInt, type:Int, target0:Int, fill0:UInt, key0:UInt, target1:Int, fill1:UInt, key1:UInt) : Void;
-
-
-        inline static function glGetVideoivNV(video_slot:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVideoivNV({0}, {1}, (GLint*)&{3}[0] + {2})", video_slot, pname, bOffset, params); }
-
-        inline static function glGetVideouivNV(video_slot:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVideouivNV({0}, {1}, (GLuint*)&{3}[0] + {2})", video_slot, pname, bOffset, params); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetVideoi64vNV')
-        // static function glGetVideoi64vNV(video_slot:UInt, pname:Int, params:GLint64EXT*) : Void;
-            
-        // @:native('glGetVideoui64vNV')
-        // static function glGetVideoui64vNV(video_slot:UInt, pname:Int, params:GLuint64EXT*) : Void;
-
-
-//GL_NV_primitive_restart
-
-    // GL_NV_primitive_restart defines
-
-        inline static var GL_NV_primitive_restart                                         = 1;
-        inline static var GL_PRIMITIVE_RESTART_NV                                         = 0x8558;
-        inline static var GL_PRIMITIVE_RESTART_INDEX_NV                                   = 0x8559;
-
-
-
-
-    // GL_NV_primitive_restart functions
-
-        @:native('glPrimitiveRestartIndexNV')
-        static function glPrimitiveRestartIndexNV(index:UInt) : Void;
-
-        @:native('glPrimitiveRestartNV')
-        static function glPrimitiveRestartNV() : Void;
-
-
-
-
-
-//GL_NV_register_combiners
-
-    // GL_NV_register_combiners defines
-
-        inline static var GL_NV_register_combiners                                        = 1;
-        inline static var GL_REGISTER_COMBINERS_NV                                        = 0x8522;
-        inline static var GL_VARIABLE_A_NV                                                = 0x8523;
-        inline static var GL_VARIABLE_B_NV                                                = 0x8524;
-        inline static var GL_VARIABLE_C_NV                                                = 0x8525;
-        inline static var GL_VARIABLE_D_NV                                                = 0x8526;
-        inline static var GL_VARIABLE_E_NV                                                = 0x8527;
-        inline static var GL_VARIABLE_F_NV                                                = 0x8528;
-        inline static var GL_VARIABLE_G_NV                                                = 0x8529;
-        inline static var GL_CONSTANT_COLOR0_NV                                           = 0x852A;
-        inline static var GL_CONSTANT_COLOR1_NV                                           = 0x852B;
-        inline static var GL_SPARE0_NV                                                    = 0x852E;
-        inline static var GL_SPARE1_NV                                                    = 0x852F;
-        inline static var GL_DISCARD_NV                                                   = 0x8530;
-        inline static var GL_E_TIMES_F_NV                                                 = 0x8531;
-        inline static var GL_SPARE0_PLUS_SECONDARY_COLOR_NV                               = 0x8532;
-        inline static var GL_UNSIGNED_IDENTITY_NV                                         = 0x8536;
-        inline static var GL_UNSIGNED_INVERT_NV                                           = 0x8537;
-        inline static var GL_EXPAND_NORMAL_NV                                             = 0x8538;
-        inline static var GL_EXPAND_NEGATE_NV                                             = 0x8539;
-        inline static var GL_HALF_BIAS_NORMAL_NV                                          = 0x853A;
-        inline static var GL_HALF_BIAS_NEGATE_NV                                          = 0x853B;
-        inline static var GL_SIGNED_IDENTITY_NV                                           = 0x853C;
-        inline static var GL_SIGNED_NEGATE_NV                                             = 0x853D;
-        inline static var GL_SCALE_BY_TWO_NV                                              = 0x853E;
-        inline static var GL_SCALE_BY_FOUR_NV                                             = 0x853F;
-        inline static var GL_SCALE_BY_ONE_HALF_NV                                         = 0x8540;
-        inline static var GL_BIAS_BY_NEGATIVE_ONE_HALF_NV                                 = 0x8541;
-        inline static var GL_COMBINER_INPUT_NV                                            = 0x8542;
-        inline static var GL_COMBINER_MAPPING_NV                                          = 0x8543;
-        inline static var GL_COMBINER_COMPONENT_USAGE_NV                                  = 0x8544;
-        inline static var GL_COMBINER_AB_DOT_PRODUCT_NV                                   = 0x8545;
-        inline static var GL_COMBINER_CD_DOT_PRODUCT_NV                                   = 0x8546;
-        inline static var GL_COMBINER_MUX_SUM_NV                                          = 0x8547;
-        inline static var GL_COMBINER_SCALE_NV                                            = 0x8548;
-        inline static var GL_COMBINER_BIAS_NV                                             = 0x8549;
-        inline static var GL_COMBINER_AB_OUTPUT_NV                                        = 0x854A;
-        inline static var GL_COMBINER_CD_OUTPUT_NV                                        = 0x854B;
-        inline static var GL_COMBINER_SUM_OUTPUT_NV                                       = 0x854C;
-        inline static var GL_MAX_GENERAL_COMBINERS_NV                                     = 0x854D;
-        inline static var GL_NUM_GENERAL_COMBINERS_NV                                     = 0x854E;
-        inline static var GL_COLOR_SUM_CLAMP_NV                                           = 0x854F;
-        inline static var GL_COMBINER0_NV                                                 = 0x8550;
-        inline static var GL_COMBINER1_NV                                                 = 0x8551;
-        inline static var GL_COMBINER2_NV                                                 = 0x8552;
-        inline static var GL_COMBINER3_NV                                                 = 0x8553;
-        inline static var GL_COMBINER4_NV                                                 = 0x8554;
-        inline static var GL_COMBINER5_NV                                                 = 0x8555;
-        inline static var GL_COMBINER6_NV                                                 = 0x8556;
-        inline static var GL_COMBINER7_NV                                                 = 0x8557;
-
-
-
-
-    // GL_NV_register_combiners functions
-
-        @:native('glCombinerInputNV')
-        static function glCombinerInputNV(stage:Int, portion:Int, variable:Int, input:Int, mapping:Int, componentUsage:Int) : Void;
-
-        @:native('glCombinerOutputNV')
-        static function glCombinerOutputNV(stage:Int, portion:Int, abOutput:Int, cdOutput:Int, sumOutput:Int, scale:Int, bias:Int, abDotProduct:Bool, cdDotProduct:Bool, muxSum:Bool) : Void;
-
-        @:native('glCombinerParameterfNV')
-        static function glCombinerParameterfNV(pname:Int, param:Float) : Void;
-
-        @:native('glCombinerParameteriNV')
-        static function glCombinerParameteriNV(pname:Int, param:Int) : Void;
-
-        @:native('glFinalCombinerInputNV')
-        static function glFinalCombinerInputNV(variable:Int, input:Int, mapping:Int, componentUsage:Int) : Void;
-
-
-        inline static function glCombinerParameterfvNV(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glCombinerParameterfvNV({0}, (const GLfloat*)&{2}[0] + {1})", pname, bOffset, params); }
-
-        inline static function glCombinerParameterivNV(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glCombinerParameterivNV({0}, (const GLint*)&{2}[0] + {1})", pname, bOffset, params); }
-
-        inline static function glGetCombinerInputParameterfvNV(stage:Int, portion:Int, variable:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetCombinerInputParameterfvNV({0}, {1}, {2}, {3}, (GLfloat*)&{5}[0] + {4})", stage, portion, variable, pname, bOffset, params); }
-
-        inline static function glGetCombinerInputParameterivNV(stage:Int, portion:Int, variable:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetCombinerInputParameterivNV({0}, {1}, {2}, {3}, (GLint*)&{5}[0] + {4})", stage, portion, variable, pname, bOffset, params); }
-
-        inline static function glGetCombinerOutputParameterfvNV(stage:Int, portion:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetCombinerOutputParameterfvNV({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", stage, portion, pname, bOffset, params); }
-
-        inline static function glGetCombinerOutputParameterivNV(stage:Int, portion:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetCombinerOutputParameterivNV({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", stage, portion, pname, bOffset, params); }
-
-        inline static function glGetFinalCombinerInputParameterfvNV(variable:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetFinalCombinerInputParameterfvNV({0}, {1}, (GLfloat*)&{3}[0] + {2})", variable, pname, bOffset, params); }
-
-        inline static function glGetFinalCombinerInputParameterivNV(variable:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetFinalCombinerInputParameterivNV({0}, {1}, (GLint*)&{3}[0] + {2})", variable, pname, bOffset, params); }
-
-
-
-
-//GL_NV_register_combiners2
-
-    // GL_NV_register_combiners2 defines
-
-        inline static var GL_NV_register_combiners2                                       = 1;
-        inline static var GL_PER_STAGE_CONSTANTS_NV                                       = 0x8535;
-
-
-
-
-    // GL_NV_register_combiners2 functions
-
-
-        inline static function glCombinerStageParameterfvNV(stage:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glCombinerStageParameterfvNV({0}, {1}, (const GLfloat*)&{3}[0] + {2})", stage, pname, bOffset, params); }
-
-        inline static function glGetCombinerStageParameterfvNV(stage:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetCombinerStageParameterfvNV({0}, {1}, (GLfloat*)&{3}[0] + {2})", stage, pname, bOffset, params); }
-
-
-
-
-//GL_NV_sample_locations
-
-    // GL_NV_sample_locations defines
-
-        inline static var GL_NV_sample_locations                                          = 1;
-        inline static var GL_SAMPLE_LOCATION_NV                                           = 0x8E50;
-        inline static var GL_SAMPLE_LOCATION_SUBPIXEL_BITS_NV                             = 0x933D;
-        inline static var GL_SAMPLE_LOCATION_PIXEL_GRID_WIDTH_NV                          = 0x933E;
-        inline static var GL_SAMPLE_LOCATION_PIXEL_GRID_HEIGHT_NV                         = 0x933F;
-        inline static var GL_PROGRAMMABLE_SAMPLE_LOCATION_TABLE_SIZE_NV                   = 0x9340;
-        inline static var GL_PROGRAMMABLE_SAMPLE_LOCATION_NV                              = 0x9341;
-        inline static var GL_FRAMEBUFFER_PROGRAMMABLE_SAMPLE_LOCATIONS_NV                 = 0x9342;
-        inline static var GL_FRAMEBUFFER_SAMPLE_LOCATION_PIXEL_GRID_NV                    = 0x9343;
-
-
-
-
-    // GL_NV_sample_locations functions
-
-
-        inline static function glFramebufferSampleLocationsfvNV(target:Int, start:UInt, count:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glFramebufferSampleLocationsfvNV({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", target, start, count, bOffset, v); }
-
-        inline static function glNamedFramebufferSampleLocationsfvNV(framebuffer:UInt, start:UInt, count:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glNamedFramebufferSampleLocationsfvNV({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", framebuffer, start, count, bOffset, v); }
-
-
-
-
-//GL_NV_sample_mask_override_coverage
-
-    // GL_NV_sample_mask_override_coverage defines
-
-        inline static var GL_NV_sample_mask_override_coverage                             = 1;
-
-
-//GL_NV_shader_atomic_counters
-
-    // GL_NV_shader_atomic_counters defines
-
-        inline static var GL_NV_shader_atomic_counters                                    = 1;
-
-
-//GL_NV_shader_atomic_float
-
-    // GL_NV_shader_atomic_float defines
-
-        inline static var GL_NV_shader_atomic_float                                       = 1;
-
-
-//GL_NV_shader_atomic_fp16_vector
-
-    // GL_NV_shader_atomic_fp16_vector defines
-
-        inline static var GL_NV_shader_atomic_fp16_vector                                 = 1;
-
-
-//GL_NV_shader_atomic_int64
-
-    // GL_NV_shader_atomic_int64 defines
-
-        inline static var GL_NV_shader_atomic_int64                                       = 1;
-
-
-//GL_NV_shader_buffer_load
-
-    // GL_NV_shader_buffer_load defines
-
-        inline static var GL_NV_shader_buffer_load                                        = 1;
-        inline static var GL_BUFFER_GPU_ADDRESS_NV                                        = 0x8F1D;
-        inline static var GL_GPU_ADDRESS_NV                                               = 0x8F34;
-        inline static var GL_MAX_SHADER_BUFFER_ADDRESS_NV                                 = 0x8F35;
-
-
-
-
-    // GL_NV_shader_buffer_load functions
-
-        @:native('glIsBufferResidentNV')
-        static function glIsBufferResidentNV(target:Int) : Bool;
-
-        @:native('glIsNamedBufferResidentNV')
-        static function glIsNamedBufferResidentNV(buffer:UInt) : Bool;
-
-        @:native('glMakeBufferNonResidentNV')
-        static function glMakeBufferNonResidentNV(target:Int) : Void;
-
-        @:native('glMakeBufferResidentNV')
-        static function glMakeBufferResidentNV(target:Int, access:Int) : Void;
-
-        @:native('glMakeNamedBufferNonResidentNV')
-        static function glMakeNamedBufferNonResidentNV(buffer:UInt) : Void;
-
-        @:native('glMakeNamedBufferResidentNV')
-        static function glMakeNamedBufferResidentNV(buffer:UInt, access:Int) : Void;
-
-        @:native('glProgramUniformui64NV')
-        static function glProgramUniformui64NV(program:UInt, location:Int, value:cpp.UInt64) : Void;
-
-        @:native('glUniformui64NV')
-        static function glUniformui64NV(location:Int, value:cpp.UInt64) : Void;
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetBufferParameterui64vNV')
-        // static function glGetBufferParameterui64vNV(target:Int, pname:Int, params:GLuint64EXT*) : Void;
-            
-        // @:native('glGetIntegerui64vNV')
-        // static function glGetIntegerui64vNV(value:Int, result:GLuint64EXT*) : Void;
-            
-        // @:native('glGetNamedBufferParameterui64vNV')
-        // static function glGetNamedBufferParameterui64vNV(buffer:UInt, pname:Int, params:GLuint64EXT*) : Void;
-            
-        // @:native('glProgramUniformui64vNV')
-        // static function glProgramUniformui64vNV(program:UInt, location:Int, count:Int, value:const GLuint64EXT*) : Void;
-            
-        // @:native('glUniformui64vNV')
-        // static function glUniformui64vNV(location:Int, count:Int, value:const GLuint64EXT*) : Void;
-
-
-//GL_NV_shader_storage_buffer_object
-
-    // GL_NV_shader_storage_buffer_object defines
-
-        inline static var GL_NV_shader_storage_buffer_object                              = 1;
-
-
-//GL_NV_shader_thread_group
-
-    // GL_NV_shader_thread_group defines
-
-        inline static var GL_NV_shader_thread_group                                       = 1;
-        inline static var GL_WARP_SIZE_NV                                                 = 0x9339;
-        inline static var GL_WARPS_PER_SM_NV                                              = 0x933A;
-        inline static var GL_SM_COUNT_NV                                                  = 0x933B;
-
-
-//GL_NV_shader_thread_shuffle
-
-    // GL_NV_shader_thread_shuffle defines
-
-        inline static var GL_NV_shader_thread_shuffle                                     = 1;
-
-
-//GL_NV_tessellation_program5
-
-    // GL_NV_tessellation_program5 defines
-
-        inline static var GL_NV_tessellation_program5                                     = 1;
-        inline static var GL_MAX_PROGRAM_PATCH_ATTRIBS_NV                                 = 0x86D8;
-        inline static var GL_TESS_CONTROL_PROGRAM_NV                                      = 0x891E;
-        inline static var GL_TESS_EVALUATION_PROGRAM_NV                                   = 0x891F;
-        inline static var GL_TESS_CONTROL_PROGRAM_PARAMETER_BUFFER_NV                     = 0x8C74;
-        inline static var GL_TESS_EVALUATION_PROGRAM_PARAMETER_BUFFER_NV                  = 0x8C75;
-
-
-//GL_NV_texgen_emboss
-
-    // GL_NV_texgen_emboss defines
-
-        inline static var GL_NV_texgen_emboss                                             = 1;
-        inline static var GL_EMBOSS_LIGHT_NV                                              = 0x855D;
-        inline static var GL_EMBOSS_CONSTANT_NV                                           = 0x855E;
-        inline static var GL_EMBOSS_MAP_NV                                                = 0x855F;
-
-
-//GL_NV_texgen_reflection
-
-    // GL_NV_texgen_reflection defines
-
-        inline static var GL_NV_texgen_reflection                                         = 1;
-        inline static var GL_NORMAL_MAP_NV                                                = 0x8511;
-        inline static var GL_REFLECTION_MAP_NV                                            = 0x8512;
-
-
-//GL_NV_texture_barrier
-
-    // GL_NV_texture_barrier defines
-
-        inline static var GL_NV_texture_barrier                                           = 1;
-
-
-
-
-    // GL_NV_texture_barrier functions
-
-        @:native('glTextureBarrierNV')
-        static function glTextureBarrierNV() : Void;
-
-
-
-
-
-//GL_NV_texture_compression_vtc
-
-    // GL_NV_texture_compression_vtc defines
-
-        inline static var GL_NV_texture_compression_vtc                                   = 1;
-
-
-//GL_NV_texture_env_combine4
-
-    // GL_NV_texture_env_combine4 defines
-
-        inline static var GL_NV_texture_env_combine4                                      = 1;
-        inline static var GL_COMBINE4_NV                                                  = 0x8503;
-        inline static var GL_SOURCE3_RGB_NV                                               = 0x8583;
-        inline static var GL_SOURCE3_ALPHA_NV                                             = 0x858B;
-        inline static var GL_OPERAND3_RGB_NV                                              = 0x8593;
-        inline static var GL_OPERAND3_ALPHA_NV                                            = 0x859B;
-
-
-//GL_NV_texture_expand_normal
-
-    // GL_NV_texture_expand_normal defines
-
-        inline static var GL_NV_texture_expand_normal                                     = 1;
-        inline static var GL_TEXTURE_UNSIGNED_REMAP_MODE_NV                               = 0x888F;
-
-
-//GL_NV_texture_multisample
-
-    // GL_NV_texture_multisample defines
-
-        inline static var GL_NV_texture_multisample                                       = 1;
-        inline static var GL_TEXTURE_COVERAGE_SAMPLES_NV                                  = 0x9045;
-        inline static var GL_TEXTURE_COLOR_SAMPLES_NV                                     = 0x9046;
-
-
-
-
-    // GL_NV_texture_multisample functions
-
-        @:native('glTexImage2DMultisampleCoverageNV')
-        static function glTexImage2DMultisampleCoverageNV(target:Int, coverageSamples:Int, colorSamples:Int, internalFormat:Int, width:Int, height:Int, fixedSampleLocations:Bool) : Void;
-
-        @:native('glTexImage3DMultisampleCoverageNV')
-        static function glTexImage3DMultisampleCoverageNV(target:Int, coverageSamples:Int, colorSamples:Int, internalFormat:Int, width:Int, height:Int, depth:Int, fixedSampleLocations:Bool) : Void;
-
-        @:native('glTextureImage2DMultisampleCoverageNV')
-        static function glTextureImage2DMultisampleCoverageNV(texture:UInt, target:Int, coverageSamples:Int, colorSamples:Int, internalFormat:Int, width:Int, height:Int, fixedSampleLocations:Bool) : Void;
-
-        @:native('glTextureImage2DMultisampleNV')
-        static function glTextureImage2DMultisampleNV(texture:UInt, target:Int, samples:Int, internalFormat:Int, width:Int, height:Int, fixedSampleLocations:Bool) : Void;
-
-        @:native('glTextureImage3DMultisampleCoverageNV')
-        static function glTextureImage3DMultisampleCoverageNV(texture:UInt, target:Int, coverageSamples:Int, colorSamples:Int, internalFormat:Int, width:Int, height:Int, depth:Int, fixedSampleLocations:Bool) : Void;
-
-        @:native('glTextureImage3DMultisampleNV')
-        static function glTextureImage3DMultisampleNV(texture:UInt, target:Int, samples:Int, internalFormat:Int, width:Int, height:Int, depth:Int, fixedSampleLocations:Bool) : Void;
-
-
-
-
-
-//GL_NV_texture_rectangle
-
-    // GL_NV_texture_rectangle defines
-
-        inline static var GL_NV_texture_rectangle                                         = 1;
-        inline static var GL_TEXTURE_RECTANGLE_NV                                         = 0x84F5;
-        inline static var GL_TEXTURE_BINDING_RECTANGLE_NV                                 = 0x84F6;
-        inline static var GL_PROXY_TEXTURE_RECTANGLE_NV                                   = 0x84F7;
-        inline static var GL_MAX_RECTANGLE_TEXTURE_SIZE_NV                                = 0x84F8;
-
-
-//GL_NV_texture_shader
-
-    // GL_NV_texture_shader defines
-
-        inline static var GL_NV_texture_shader                                            = 1;
-        inline static var GL_OFFSET_TEXTURE_RECTANGLE_NV                                  = 0x864C;
-        inline static var GL_OFFSET_TEXTURE_RECTANGLE_SCALE_NV                            = 0x864D;
-        inline static var GL_DOT_PRODUCT_TEXTURE_RECTANGLE_NV                             = 0x864E;
-        inline static var GL_RGBA_UNSIGNED_DOT_PRODUCT_MAPPING_NV                         = 0x86D9;
-        inline static var GL_UNSIGNED_INT_S8_S8_8_8_NV                                    = 0x86DA;
-        inline static var GL_UNSIGNED_INT_8_8_S8_S8_REV_NV                                = 0x86DB;
-        inline static var GL_DSDT_MAG_INTENSITY_NV                                        = 0x86DC;
-        inline static var GL_SHADER_CONSISTENT_NV                                         = 0x86DD;
-        inline static var GL_TEXTURE_SHADER_NV                                            = 0x86DE;
-        inline static var GL_SHADER_OPERATION_NV                                          = 0x86DF;
-        inline static var GL_CULL_MODES_NV                                                = 0x86E0;
-        inline static var GL_OFFSET_TEXTURE_2D_MATRIX_NV                                  = 0x86E1;
-        inline static var GL_OFFSET_TEXTURE_MATRIX_NV                                     = 0x86E1;
-        inline static var GL_OFFSET_TEXTURE_2D_SCALE_NV                                   = 0x86E2;
-        inline static var GL_OFFSET_TEXTURE_SCALE_NV                                      = 0x86E2;
-        inline static var GL_OFFSET_TEXTURE_2D_BIAS_NV                                    = 0x86E3;
-        inline static var GL_OFFSET_TEXTURE_BIAS_NV                                       = 0x86E3;
-        inline static var GL_PREVIOUS_TEXTURE_INPUT_NV                                    = 0x86E4;
-        inline static var GL_CONST_EYE_NV                                                 = 0x86E5;
-        inline static var GL_PASS_THROUGH_NV                                              = 0x86E6;
-        inline static var GL_CULL_FRAGMENT_NV                                             = 0x86E7;
-        inline static var GL_OFFSET_TEXTURE_2D_NV                                         = 0x86E8;
-        inline static var GL_DEPENDENT_AR_TEXTURE_2D_NV                                   = 0x86E9;
-        inline static var GL_DEPENDENT_GB_TEXTURE_2D_NV                                   = 0x86EA;
-        inline static var GL_DOT_PRODUCT_NV                                               = 0x86EC;
-        inline static var GL_DOT_PRODUCT_DEPTH_REPLACE_NV                                 = 0x86ED;
-        inline static var GL_DOT_PRODUCT_TEXTURE_2D_NV                                    = 0x86EE;
-        inline static var GL_DOT_PRODUCT_TEXTURE_CUBE_MAP_NV                              = 0x86F0;
-        inline static var GL_DOT_PRODUCT_DIFFUSE_CUBE_MAP_NV                              = 0x86F1;
-        inline static var GL_DOT_PRODUCT_REFLECT_CUBE_MAP_NV                              = 0x86F2;
-        inline static var GL_DOT_PRODUCT_CONST_EYE_REFLECT_CUBE_MAP_NV                    = 0x86F3;
-        inline static var GL_HILO_NV                                                      = 0x86F4;
-        inline static var GL_DSDT_NV                                                      = 0x86F5;
-        inline static var GL_DSDT_MAG_NV                                                  = 0x86F6;
-        inline static var GL_DSDT_MAG_VIB_NV                                              = 0x86F7;
-        inline static var GL_HILO16_NV                                                    = 0x86F8;
-        inline static var GL_SIGNED_HILO_NV                                               = 0x86F9;
-        inline static var GL_SIGNED_HILO16_NV                                             = 0x86FA;
-        inline static var GL_SIGNED_RGBA_NV                                               = 0x86FB;
-        inline static var GL_SIGNED_RGBA8_NV                                              = 0x86FC;
-        inline static var GL_SIGNED_RGB_NV                                                = 0x86FE;
-        inline static var GL_SIGNED_RGB8_NV                                               = 0x86FF;
-        inline static var GL_SIGNED_LUMINANCE_NV                                          = 0x8701;
-        inline static var GL_SIGNED_LUMINANCE8_NV                                         = 0x8702;
-        inline static var GL_SIGNED_LUMINANCE_ALPHA_NV                                    = 0x8703;
-        inline static var GL_SIGNED_LUMINANCE8_ALPHA8_NV                                  = 0x8704;
-        inline static var GL_SIGNED_ALPHA_NV                                              = 0x8705;
-        inline static var GL_SIGNED_ALPHA8_NV                                             = 0x8706;
-        inline static var GL_SIGNED_INTENSITY_NV                                          = 0x8707;
-        inline static var GL_SIGNED_INTENSITY8_NV                                         = 0x8708;
-        inline static var GL_DSDT8_NV                                                     = 0x8709;
-        inline static var GL_DSDT8_MAG8_NV                                                = 0x870A;
-        inline static var GL_DSDT8_MAG8_INTENSITY8_NV                                     = 0x870B;
-        inline static var GL_SIGNED_RGB_UNSIGNED_ALPHA_NV                                 = 0x870C;
-        inline static var GL_SIGNED_RGB8_UNSIGNED_ALPHA8_NV                               = 0x870D;
-        inline static var GL_HI_SCALE_NV                                                  = 0x870E;
-        inline static var GL_LO_SCALE_NV                                                  = 0x870F;
-        inline static var GL_DS_SCALE_NV                                                  = 0x8710;
-        inline static var GL_DT_SCALE_NV                                                  = 0x8711;
-        inline static var GL_MAGNITUDE_SCALE_NV                                           = 0x8712;
-        inline static var GL_VIBRANCE_SCALE_NV                                            = 0x8713;
-        inline static var GL_HI_BIAS_NV                                                   = 0x8714;
-        inline static var GL_LO_BIAS_NV                                                   = 0x8715;
-        inline static var GL_DS_BIAS_NV                                                   = 0x8716;
-        inline static var GL_DT_BIAS_NV                                                   = 0x8717;
-        inline static var GL_MAGNITUDE_BIAS_NV                                            = 0x8718;
-        inline static var GL_VIBRANCE_BIAS_NV                                             = 0x8719;
-        inline static var GL_TEXTURE_BORDER_VALUES_NV                                     = 0x871A;
-        inline static var GL_TEXTURE_HI_SIZE_NV                                           = 0x871B;
-        inline static var GL_TEXTURE_LO_SIZE_NV                                           = 0x871C;
-        inline static var GL_TEXTURE_DS_SIZE_NV                                           = 0x871D;
-        inline static var GL_TEXTURE_DT_SIZE_NV                                           = 0x871E;
-        inline static var GL_TEXTURE_MAG_SIZE_NV                                          = 0x871F;
-
-
-//GL_NV_texture_shader2
-
-    // GL_NV_texture_shader2 defines
-
-        inline static var GL_NV_texture_shader2                                           = 1;
-        inline static var GL_DOT_PRODUCT_TEXTURE_3D_NV                                    = 0x86EF;
-
-
-//GL_NV_texture_shader3
-
-    // GL_NV_texture_shader3 defines
-
-        inline static var GL_NV_texture_shader3                                           = 1;
-        inline static var GL_OFFSET_PROJECTIVE_TEXTURE_2D_NV                              = 0x8850;
-        inline static var GL_OFFSET_PROJECTIVE_TEXTURE_2D_SCALE_NV                        = 0x8851;
-        inline static var GL_OFFSET_PROJECTIVE_TEXTURE_RECTANGLE_NV                       = 0x8852;
-        inline static var GL_OFFSET_PROJECTIVE_TEXTURE_RECTANGLE_SCALE_NV                 = 0x8853;
-        inline static var GL_OFFSET_HILO_TEXTURE_2D_NV                                    = 0x8854;
-        inline static var GL_OFFSET_HILO_TEXTURE_RECTANGLE_NV                             = 0x8855;
-        inline static var GL_OFFSET_HILO_PROJECTIVE_TEXTURE_2D_NV                         = 0x8856;
-        inline static var GL_OFFSET_HILO_PROJECTIVE_TEXTURE_RECTANGLE_NV                  = 0x8857;
-        inline static var GL_DEPENDENT_HILO_TEXTURE_2D_NV                                 = 0x8858;
-        inline static var GL_DEPENDENT_RGB_TEXTURE_3D_NV                                  = 0x8859;
-        inline static var GL_DEPENDENT_RGB_TEXTURE_CUBE_MAP_NV                            = 0x885A;
-        inline static var GL_DOT_PRODUCT_PASS_THROUGH_NV                                  = 0x885B;
-        inline static var GL_DOT_PRODUCT_TEXTURE_1D_NV                                    = 0x885C;
-        inline static var GL_DOT_PRODUCT_AFFINE_DEPTH_REPLACE_NV                          = 0x885D;
-        inline static var GL_HILO8_NV                                                     = 0x885E;
-        inline static var GL_SIGNED_HILO8_NV                                              = 0x885F;
-        inline static var GL_FORCE_BLUE_TO_ONE_NV                                         = 0x8860;
-
-
-//GL_NV_transform_feedback
-
-    // GL_NV_transform_feedback defines
-
-        inline static var GL_NV_transform_feedback                                        = 1;
-        inline static var GL_BACK_PRIMARY_COLOR_NV                                        = 0x8C77;
-        inline static var GL_BACK_SECONDARY_COLOR_NV                                      = 0x8C78;
-        inline static var GL_TEXTURE_COORD_NV                                             = 0x8C79;
-        inline static var GL_CLIP_DISTANCE_NV                                             = 0x8C7A;
-        inline static var GL_VERTEX_ID_NV                                                 = 0x8C7B;
-        inline static var GL_PRIMITIVE_ID_NV                                              = 0x8C7C;
-        inline static var GL_GENERIC_ATTRIB_NV                                            = 0x8C7D;
-        inline static var GL_TRANSFORM_FEEDBACK_ATTRIBS_NV                                = 0x8C7E;
-        inline static var GL_TRANSFORM_FEEDBACK_BUFFER_MODE_NV                            = 0x8C7F;
-        inline static var GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS_NV                = 0x8C80;
-        inline static var GL_ACTIVE_VARYINGS_NV                                           = 0x8C81;
-        inline static var GL_ACTIVE_VARYING_MAX_LENGTH_NV                                 = 0x8C82;
-        inline static var GL_TRANSFORM_FEEDBACK_VARYINGS_NV                               = 0x8C83;
-        inline static var GL_TRANSFORM_FEEDBACK_BUFFER_START_NV                           = 0x8C84;
-        inline static var GL_TRANSFORM_FEEDBACK_BUFFER_SIZE_NV                            = 0x8C85;
-        inline static var GL_TRANSFORM_FEEDBACK_RECORD_NV                                 = 0x8C86;
-        inline static var GL_PRIMITIVES_GENERATED_NV                                      = 0x8C87;
-        inline static var GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN_NV                     = 0x8C88;
-        inline static var GL_RASTERIZER_DISCARD_NV                                        = 0x8C89;
-        inline static var GL_MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS_NV             = 0x8C8A;
-        inline static var GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS_NV                   = 0x8C8B;
-        inline static var GL_INTERLEAVED_ATTRIBS_NV                                       = 0x8C8C;
-        inline static var GL_SEPARATE_ATTRIBS_NV                                          = 0x8C8D;
-        inline static var GL_TRANSFORM_FEEDBACK_BUFFER_NV                                 = 0x8C8E;
-        inline static var GL_TRANSFORM_FEEDBACK_BUFFER_BINDING_NV                         = 0x8C8F;
-
-
-
-
-    // GL_NV_transform_feedback functions
-
-        @:native('glActiveVaryingNV')
-        static function glActiveVaryingNV(program:UInt, name:String) : Void;
-
-        @:native('glBeginTransformFeedbackNV')
-        static function glBeginTransformFeedbackNV(primitiveMode:Int) : Void;
-
-        @:native('glBindBufferBaseNV')
-        static function glBindBufferBaseNV(target:Int, index:UInt, buffer:UInt) : Void;
-
-        @:native('glBindBufferOffsetNV')
-        static function glBindBufferOffsetNV(target:Int, index:UInt, buffer:UInt, offset:Int) : Void;
-
-        @:native('glBindBufferRangeNV')
-        static function glBindBufferRangeNV(target:Int, index:UInt, buffer:UInt, offset:Int, size:Int) : Void;
-
-        @:native('glEndTransformFeedbackNV')
-        static function glEndTransformFeedbackNV() : Void;
-
-        @:native('glGetVaryingLocationNV')
-        static function glGetVaryingLocationNV(program:UInt, name:String) : Int;
-
-
-        inline static function glGetTransformFeedbackVaryingNV(program:UInt, index:UInt, location:Array<Int>) : Void
-          { untyped __cpp__("glGetTransformFeedbackVaryingNV({0}, {1}, (GLint*)&{2}[0])", program, index, location); }
-
-        inline static function glTransformFeedbackAttribsNV(count:UInt, ?bOffset:Int=0, attribs:BytesData, bufferMode:Int) : Void
-          { untyped __cpp__("glTransformFeedbackAttribsNV({0}, (const GLint*)&{2}[0] + {1}, {3})", count, bOffset, attribs, bufferMode); }
-
-        inline static function glTransformFeedbackVaryingsNV(program:UInt, count:Int, locations:Array<Int>, bufferMode:Int) : Void
-          { untyped __cpp__("glTransformFeedbackVaryingsNV({0}, {1}, (const GLint*)&{2}[0], {3})", program, count, locations, bufferMode); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetActiveVaryingNV')
-        // static function glGetActiveVaryingNV(program:UInt, index:UInt, bufSize:Int, length:GLsizei*, size:GLsizei*, type:GLenum*, name:String) : Void;
-
-
-//GL_NV_transform_feedback2
-
-    // GL_NV_transform_feedback2 defines
-
-        inline static var GL_NV_transform_feedback2                                       = 1;
-        inline static var GL_TRANSFORM_FEEDBACK_NV                                        = 0x8E22;
-        inline static var GL_TRANSFORM_FEEDBACK_BUFFER_PAUSED_NV                          = 0x8E23;
-        inline static var GL_TRANSFORM_FEEDBACK_BUFFER_ACTIVE_NV                          = 0x8E24;
-        inline static var GL_TRANSFORM_FEEDBACK_BINDING_NV                                = 0x8E25;
-
-
-
-
-    // GL_NV_transform_feedback2 functions
-
-        @:native('glBindTransformFeedbackNV')
-        static function glBindTransformFeedbackNV(target:Int, id:UInt) : Void;
-
-        @:native('glDrawTransformFeedbackNV')
-        static function glDrawTransformFeedbackNV(mode:Int, id:UInt) : Void;
-
-        @:native('glIsTransformFeedbackNV')
-        static function glIsTransformFeedbackNV(id:UInt) : Bool;
-
-        @:native('glPauseTransformFeedbackNV')
-        static function glPauseTransformFeedbackNV() : Void;
-
-        @:native('glResumeTransformFeedbackNV')
-        static function glResumeTransformFeedbackNV() : Void;
-
-
-        inline static function glDeleteTransformFeedbacksNV(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteTransformFeedbacksNV({0}, (const GLuint*)&{1}[0])", n, ids); }
-
-        inline static function glGenTransformFeedbacksNV(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glGenTransformFeedbacksNV({0}, (GLuint*)&{1}[0])", n, ids); }
-
-
-
-
-//GL_NV_uniform_buffer_unified_memory
-
-    // GL_NV_uniform_buffer_unified_memory defines
-
-        inline static var GL_NV_uniform_buffer_unified_memory                             = 1;
-        inline static var GL_UNIFORM_BUFFER_UNIFIED_NV                                    = 0x936E;
-        inline static var GL_UNIFORM_BUFFER_ADDRESS_NV                                    = 0x936F;
-        inline static var GL_UNIFORM_BUFFER_LENGTH_NV                                     = 0x9370;
-
-
-//GL_NV_vdpau_interop
-
-    // GL_NV_vdpau_interop defines
-
-        inline static var GL_NV_vdpau_interop                                             = 1;
-        inline static var GL_SURFACE_STATE_NV                                             = 0x86EB;
-        inline static var GL_SURFACE_REGISTERED_NV                                        = 0x86FD;
-        inline static var GL_SURFACE_MAPPED_NV                                            = 0x8700;
-        inline static var GL_WRITE_DISCARD_NV                                             = 0x88BE;
-
-
-
-
-    // GL_NV_vdpau_interop functions
-
-        @:native('glVDPAUFiniNV')
-        static function glVDPAUFiniNV() : Void;
-
-
-
-
-    // TODO functions
-
-            
-        // inline static function glVDPAUGetSurfaceivNV(surface:GLvdpauSurfaceNV, pname:Int, bufSize:Int, length:GLsizei*, ?bOffset:Int=0, values:BytesData) : Void
-        // { untyped __cpp__("glVDPAUGetSurfaceivNV({0}, {1}, {2}, {3}, (GLint*)&{5}[0] + {4})", surface, pname, bufSize, length, bOffset, values); }
-            
-        // inline static function glVDPAUInitNV(?bOffset:Int=0, vdpDevice:BytesData, void*getProcAddress:const) : Void
-        // { untyped __cpp__("glVDPAUInitNV((const void*)&{1}[0] + {0}, {2})", bOffset, vdpDevice, void*getProcAddress); }
-            
-        // @:native('glVDPAUIsSurfaceNV')
-        // static function glVDPAUIsSurfaceNV(surface:GLvdpauSurfaceNV) : Void;
-            
-        // @:native('glVDPAUMapSurfacesNV')
-        // static function glVDPAUMapSurfacesNV(numSurfaces:Int, surfaces:const GLvdpauSurfaceNV*) : Void;
-            
-        // inline static function glVDPAURegisterOutputSurfaceNV(?bOffset:Int=0, vdpSurface:BytesData, target:Int, numTextureNames:Int, textureNames:Array<UInt>) : GLvdpauSurfaceNV
-        // { return untyped __cpp__("glVDPAURegisterOutputSurfaceNV((const void*)&{1}[0] + {0}, {2}, {3}, (const GLuint*)&{4}[0])", bOffset, vdpSurface, target, numTextureNames, textureNames); }
-            
-        // inline static function glVDPAURegisterVideoSurfaceNV(?bOffset:Int=0, vdpSurface:BytesData, target:Int, numTextureNames:Int, textureNames:Array<UInt>) : GLvdpauSurfaceNV
-        // { return untyped __cpp__("glVDPAURegisterVideoSurfaceNV((const void*)&{1}[0] + {0}, {2}, {3}, (const GLuint*)&{4}[0])", bOffset, vdpSurface, target, numTextureNames, textureNames); }
-            
-        // @:native('glVDPAUSurfaceAccessNV')
-        // static function glVDPAUSurfaceAccessNV(surface:GLvdpauSurfaceNV, access:Int) : Void;
-            
-        // @:native('glVDPAUUnmapSurfacesNV')
-        // static function glVDPAUUnmapSurfacesNV(numSurface:Int, surfaces:const GLvdpauSurfaceNV*) : Void;
-            
-        // @:native('glVDPAUUnregisterSurfaceNV')
-        // static function glVDPAUUnregisterSurfaceNV(surface:GLvdpauSurfaceNV) : Void;
-
-
-//GL_NV_vertex_array_range
-
-    // GL_NV_vertex_array_range defines
-
-        inline static var GL_NV_vertex_array_range                                        = 1;
-        inline static var GL_VERTEX_ARRAY_RANGE_NV                                        = 0x851D;
-        inline static var GL_VERTEX_ARRAY_RANGE_LENGTH_NV                                 = 0x851E;
-        inline static var GL_VERTEX_ARRAY_RANGE_VALID_NV                                  = 0x851F;
-        inline static var GL_MAX_VERTEX_ARRAY_RANGE_ELEMENT_NV                            = 0x8520;
-        inline static var GL_VERTEX_ARRAY_RANGE_POINTER_NV                                = 0x8521;
-
-
-
-
-    // GL_NV_vertex_array_range functions
-
-        @:native('glFlushVertexArrayRangeNV')
-        static function glFlushVertexArrayRangeNV() : Void;
-
-
-        inline static function glVertexArrayRangeNV(length:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glVertexArrayRangeNV({0}, (void*)&{2}[0] + {1})", length, bOffset, pointer); }
-
-
-
-
-//GL_NV_vertex_array_range2
-
-    // GL_NV_vertex_array_range2 defines
-
-        inline static var GL_NV_vertex_array_range2                                       = 1;
-        inline static var GL_VERTEX_ARRAY_RANGE_WITHOUT_FLUSH_NV                          = 0x8533;
-
-
-//GL_NV_vertex_attrib_integer_64bit
-
-    // GL_NV_vertex_attrib_integer_64bit defines
-
-        inline static var GL_NV_vertex_attrib_integer_64bit                               = 1;
-
-
-
-
-    // GL_NV_vertex_attrib_integer_64bit functions
-
-        @:native('glVertexAttribL1i64NV')
-        static function glVertexAttribL1i64NV(index:UInt, x:cpp.Int64) : Void;
-
-        @:native('glVertexAttribL1ui64NV')
-        static function glVertexAttribL1ui64NV(index:UInt, x:cpp.UInt64) : Void;
-
-        @:native('glVertexAttribL2i64NV')
-        static function glVertexAttribL2i64NV(index:UInt, x:cpp.Int64, y:cpp.Int64) : Void;
-
-        @:native('glVertexAttribL2ui64NV')
-        static function glVertexAttribL2ui64NV(index:UInt, x:cpp.UInt64, y:cpp.UInt64) : Void;
-
-        @:native('glVertexAttribL3i64NV')
-        static function glVertexAttribL3i64NV(index:UInt, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64) : Void;
-
-        @:native('glVertexAttribL3ui64NV')
-        static function glVertexAttribL3ui64NV(index:UInt, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64) : Void;
-
-        @:native('glVertexAttribL4i64NV')
-        static function glVertexAttribL4i64NV(index:UInt, x:cpp.Int64, y:cpp.Int64, z:cpp.Int64, w:cpp.Int64) : Void;
-
-        @:native('glVertexAttribL4ui64NV')
-        static function glVertexAttribL4ui64NV(index:UInt, x:cpp.UInt64, y:cpp.UInt64, z:cpp.UInt64, w:cpp.UInt64) : Void;
-
-        @:native('glVertexAttribLFormatNV')
-        static function glVertexAttribLFormatNV(index:UInt, size:Int, type:Int, stride:Int) : Void;
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetVertexAttribLi64vNV')
-        // static function glGetVertexAttribLi64vNV(index:UInt, pname:Int, params:GLint64EXT*) : Void;
-            
-        // @:native('glGetVertexAttribLui64vNV')
-        // static function glGetVertexAttribLui64vNV(index:UInt, pname:Int, params:GLuint64EXT*) : Void;
-            
-        // @:native('glVertexAttribL1i64vNV')
-        // static function glVertexAttribL1i64vNV(index:UInt, v:const GLint64EXT*) : Void;
-            
-        // @:native('glVertexAttribL1ui64vNV')
-        // static function glVertexAttribL1ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;
-            
-        // @:native('glVertexAttribL2i64vNV')
-        // static function glVertexAttribL2i64vNV(index:UInt, v:const GLint64EXT*) : Void;
-            
-        // @:native('glVertexAttribL2ui64vNV')
-        // static function glVertexAttribL2ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;
-            
-        // @:native('glVertexAttribL3i64vNV')
-        // static function glVertexAttribL3i64vNV(index:UInt, v:const GLint64EXT*) : Void;
-            
-        // @:native('glVertexAttribL3ui64vNV')
-        // static function glVertexAttribL3ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;
-            
-        // @:native('glVertexAttribL4i64vNV')
-        // static function glVertexAttribL4i64vNV(index:UInt, v:const GLint64EXT*) : Void;
-            
-        // @:native('glVertexAttribL4ui64vNV')
-        // static function glVertexAttribL4ui64vNV(index:UInt, v:const GLuint64EXT*) : Void;
-
-
-//GL_NV_vertex_buffer_unified_memory
-
-    // GL_NV_vertex_buffer_unified_memory defines
-
-        inline static var GL_NV_vertex_buffer_unified_memory                              = 1;
-        inline static var GL_VERTEX_ATTRIB_ARRAY_UNIFIED_NV                               = 0x8F1E;
-        inline static var GL_ELEMENT_ARRAY_UNIFIED_NV                                     = 0x8F1F;
-        inline static var GL_VERTEX_ATTRIB_ARRAY_ADDRESS_NV                               = 0x8F20;
-        inline static var GL_VERTEX_ARRAY_ADDRESS_NV                                      = 0x8F21;
-        inline static var GL_NORMAL_ARRAY_ADDRESS_NV                                      = 0x8F22;
-        inline static var GL_COLOR_ARRAY_ADDRESS_NV                                       = 0x8F23;
-        inline static var GL_INDEX_ARRAY_ADDRESS_NV                                       = 0x8F24;
-        inline static var GL_TEXTURE_COORD_ARRAY_ADDRESS_NV                               = 0x8F25;
-        inline static var GL_EDGE_FLAG_ARRAY_ADDRESS_NV                                   = 0x8F26;
-        inline static var GL_SECONDARY_COLOR_ARRAY_ADDRESS_NV                             = 0x8F27;
-        inline static var GL_FOG_COORD_ARRAY_ADDRESS_NV                                   = 0x8F28;
-        inline static var GL_ELEMENT_ARRAY_ADDRESS_NV                                     = 0x8F29;
-        inline static var GL_VERTEX_ATTRIB_ARRAY_LENGTH_NV                                = 0x8F2A;
-        inline static var GL_VERTEX_ARRAY_LENGTH_NV                                       = 0x8F2B;
-        inline static var GL_NORMAL_ARRAY_LENGTH_NV                                       = 0x8F2C;
-        inline static var GL_COLOR_ARRAY_LENGTH_NV                                        = 0x8F2D;
-        inline static var GL_INDEX_ARRAY_LENGTH_NV                                        = 0x8F2E;
-        inline static var GL_TEXTURE_COORD_ARRAY_LENGTH_NV                                = 0x8F2F;
-        inline static var GL_EDGE_FLAG_ARRAY_LENGTH_NV                                    = 0x8F30;
-        inline static var GL_SECONDARY_COLOR_ARRAY_LENGTH_NV                              = 0x8F31;
-        inline static var GL_FOG_COORD_ARRAY_LENGTH_NV                                    = 0x8F32;
-        inline static var GL_ELEMENT_ARRAY_LENGTH_NV                                      = 0x8F33;
-        inline static var GL_DRAW_INDIRECT_UNIFIED_NV                                     = 0x8F40;
-        inline static var GL_DRAW_INDIRECT_ADDRESS_NV                                     = 0x8F41;
-        inline static var GL_DRAW_INDIRECT_LENGTH_NV                                      = 0x8F42;
-
-
-
-
-    // GL_NV_vertex_buffer_unified_memory functions
-
-        @:native('glBufferAddressRangeNV')
-        static function glBufferAddressRangeNV(pname:Int, index:UInt, address:cpp.UInt64, length:Int) : Void;
-
-        @:native('glColorFormatNV')
-        static function glColorFormatNV(size:Int, type:Int, stride:Int) : Void;
-
-        @:native('glEdgeFlagFormatNV')
-        static function glEdgeFlagFormatNV(stride:Int) : Void;
-
-        @:native('glFogCoordFormatNV')
-        static function glFogCoordFormatNV(type:Int, stride:Int) : Void;
-
-        @:native('glIndexFormatNV')
-        static function glIndexFormatNV(type:Int, stride:Int) : Void;
-
-        @:native('glNormalFormatNV')
-        static function glNormalFormatNV(type:Int, stride:Int) : Void;
-
-        @:native('glSecondaryColorFormatNV')
-        static function glSecondaryColorFormatNV(size:Int, type:Int, stride:Int) : Void;
-
-        @:native('glTexCoordFormatNV')
-        static function glTexCoordFormatNV(size:Int, type:Int, stride:Int) : Void;
-
-        @:native('glVertexAttribFormatNV')
-        static function glVertexAttribFormatNV(index:UInt, size:Int, type:Int, normalized:Bool, stride:Int) : Void;
-
-        @:native('glVertexAttribIFormatNV')
-        static function glVertexAttribIFormatNV(index:UInt, size:Int, type:Int, stride:Int) : Void;
-
-        @:native('glVertexFormatNV')
-        static function glVertexFormatNV(size:Int, type:Int, stride:Int) : Void;
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetIntegerui64i_vNV')
-        // static function glGetIntegerui64i_vNV(value:Int, index:UInt, result:Array<cpp.UInt64>) : Void;
-
-
-//GL_NV_vertex_program
-
-    // GL_NV_vertex_program defines
-
-        inline static var GL_NV_vertex_program                                            = 1;
-        inline static var GL_VERTEX_PROGRAM_NV                                            = 0x8620;
-        inline static var GL_VERTEX_STATE_PROGRAM_NV                                      = 0x8621;
-        inline static var GL_ATTRIB_ARRAY_SIZE_NV                                         = 0x8623;
-        inline static var GL_ATTRIB_ARRAY_STRIDE_NV                                       = 0x8624;
-        inline static var GL_ATTRIB_ARRAY_TYPE_NV                                         = 0x8625;
-        inline static var GL_CURRENT_ATTRIB_NV                                            = 0x8626;
-        inline static var GL_PROGRAM_LENGTH_NV                                            = 0x8627;
-        inline static var GL_PROGRAM_STRING_NV                                            = 0x8628;
-        inline static var GL_MODELVIEW_PROJECTION_NV                                      = 0x8629;
-        inline static var GL_IDENTITY_NV                                                  = 0x862A;
-        inline static var GL_INVERSE_NV                                                   = 0x862B;
-        inline static var GL_TRANSPOSE_NV                                                 = 0x862C;
-        inline static var GL_INVERSE_TRANSPOSE_NV                                         = 0x862D;
-        inline static var GL_MAX_TRACK_MATRIX_STACK_DEPTH_NV                              = 0x862E;
-        inline static var GL_MAX_TRACK_MATRICES_NV                                        = 0x862F;
-        inline static var GL_MATRIX0_NV                                                   = 0x8630;
-        inline static var GL_MATRIX1_NV                                                   = 0x8631;
-        inline static var GL_MATRIX2_NV                                                   = 0x8632;
-        inline static var GL_MATRIX3_NV                                                   = 0x8633;
-        inline static var GL_MATRIX4_NV                                                   = 0x8634;
-        inline static var GL_MATRIX5_NV                                                   = 0x8635;
-        inline static var GL_MATRIX6_NV                                                   = 0x8636;
-        inline static var GL_MATRIX7_NV                                                   = 0x8637;
-        inline static var GL_CURRENT_MATRIX_STACK_DEPTH_NV                                = 0x8640;
-        inline static var GL_CURRENT_MATRIX_NV                                            = 0x8641;
-        inline static var GL_VERTEX_PROGRAM_POINT_SIZE_NV                                 = 0x8642;
-        inline static var GL_VERTEX_PROGRAM_TWO_SIDE_NV                                   = 0x8643;
-        inline static var GL_PROGRAM_PARAMETER_NV                                         = 0x8644;
-        inline static var GL_ATTRIB_ARRAY_POINTER_NV                                      = 0x8645;
-        inline static var GL_PROGRAM_TARGET_NV                                            = 0x8646;
-        inline static var GL_PROGRAM_RESIDENT_NV                                          = 0x8647;
-        inline static var GL_TRACK_MATRIX_NV                                              = 0x8648;
-        inline static var GL_TRACK_MATRIX_TRANSFORM_NV                                    = 0x8649;
-        inline static var GL_VERTEX_PROGRAM_BINDING_NV                                    = 0x864A;
-        inline static var GL_PROGRAM_ERROR_POSITION_NV                                    = 0x864B;
-        inline static var GL_VERTEX_ATTRIB_ARRAY0_NV                                      = 0x8650;
-        inline static var GL_VERTEX_ATTRIB_ARRAY1_NV                                      = 0x8651;
-        inline static var GL_VERTEX_ATTRIB_ARRAY2_NV                                      = 0x8652;
-        inline static var GL_VERTEX_ATTRIB_ARRAY3_NV                                      = 0x8653;
-        inline static var GL_VERTEX_ATTRIB_ARRAY4_NV                                      = 0x8654;
-        inline static var GL_VERTEX_ATTRIB_ARRAY5_NV                                      = 0x8655;
-        inline static var GL_VERTEX_ATTRIB_ARRAY6_NV                                      = 0x8656;
-        inline static var GL_VERTEX_ATTRIB_ARRAY7_NV                                      = 0x8657;
-        inline static var GL_VERTEX_ATTRIB_ARRAY8_NV                                      = 0x8658;
-        inline static var GL_VERTEX_ATTRIB_ARRAY9_NV                                      = 0x8659;
-        inline static var GL_VERTEX_ATTRIB_ARRAY10_NV                                     = 0x865A;
-        inline static var GL_VERTEX_ATTRIB_ARRAY11_NV                                     = 0x865B;
-        inline static var GL_VERTEX_ATTRIB_ARRAY12_NV                                     = 0x865C;
-        inline static var GL_VERTEX_ATTRIB_ARRAY13_NV                                     = 0x865D;
-        inline static var GL_VERTEX_ATTRIB_ARRAY14_NV                                     = 0x865E;
-        inline static var GL_VERTEX_ATTRIB_ARRAY15_NV                                     = 0x865F;
-        inline static var GL_MAP1_VERTEX_ATTRIB0_4_NV                                     = 0x8660;
-        inline static var GL_MAP1_VERTEX_ATTRIB1_4_NV                                     = 0x8661;
-        inline static var GL_MAP1_VERTEX_ATTRIB2_4_NV                                     = 0x8662;
-        inline static var GL_MAP1_VERTEX_ATTRIB3_4_NV                                     = 0x8663;
-        inline static var GL_MAP1_VERTEX_ATTRIB4_4_NV                                     = 0x8664;
-        inline static var GL_MAP1_VERTEX_ATTRIB5_4_NV                                     = 0x8665;
-        inline static var GL_MAP1_VERTEX_ATTRIB6_4_NV                                     = 0x8666;
-        inline static var GL_MAP1_VERTEX_ATTRIB7_4_NV                                     = 0x8667;
-        inline static var GL_MAP1_VERTEX_ATTRIB8_4_NV                                     = 0x8668;
-        inline static var GL_MAP1_VERTEX_ATTRIB9_4_NV                                     = 0x8669;
-        inline static var GL_MAP1_VERTEX_ATTRIB10_4_NV                                    = 0x866A;
-        inline static var GL_MAP1_VERTEX_ATTRIB11_4_NV                                    = 0x866B;
-        inline static var GL_MAP1_VERTEX_ATTRIB12_4_NV                                    = 0x866C;
-        inline static var GL_MAP1_VERTEX_ATTRIB13_4_NV                                    = 0x866D;
-        inline static var GL_MAP1_VERTEX_ATTRIB14_4_NV                                    = 0x866E;
-        inline static var GL_MAP1_VERTEX_ATTRIB15_4_NV                                    = 0x866F;
-        inline static var GL_MAP2_VERTEX_ATTRIB0_4_NV                                     = 0x8670;
-        inline static var GL_MAP2_VERTEX_ATTRIB1_4_NV                                     = 0x8671;
-        inline static var GL_MAP2_VERTEX_ATTRIB2_4_NV                                     = 0x8672;
-        inline static var GL_MAP2_VERTEX_ATTRIB3_4_NV                                     = 0x8673;
-        inline static var GL_MAP2_VERTEX_ATTRIB4_4_NV                                     = 0x8674;
-        inline static var GL_MAP2_VERTEX_ATTRIB5_4_NV                                     = 0x8675;
-        inline static var GL_MAP2_VERTEX_ATTRIB6_4_NV                                     = 0x8676;
-        inline static var GL_MAP2_VERTEX_ATTRIB7_4_NV                                     = 0x8677;
-        inline static var GL_MAP2_VERTEX_ATTRIB8_4_NV                                     = 0x8678;
-        inline static var GL_MAP2_VERTEX_ATTRIB9_4_NV                                     = 0x8679;
-        inline static var GL_MAP2_VERTEX_ATTRIB10_4_NV                                    = 0x867A;
-        inline static var GL_MAP2_VERTEX_ATTRIB11_4_NV                                    = 0x867B;
-        inline static var GL_MAP2_VERTEX_ATTRIB12_4_NV                                    = 0x867C;
-        inline static var GL_MAP2_VERTEX_ATTRIB13_4_NV                                    = 0x867D;
-        inline static var GL_MAP2_VERTEX_ATTRIB14_4_NV                                    = 0x867E;
-        inline static var GL_MAP2_VERTEX_ATTRIB15_4_NV                                    = 0x867F;
-
-
-
-
-    // GL_NV_vertex_program functions
-
-        @:native('glBindProgramNV')
-        static function glBindProgramNV(target:Int, id:UInt) : Void;
-
-        @:native('glIsProgramNV')
-        static function glIsProgramNV(id:UInt) : Bool;
-
-        @:native('glProgramParameter4dNV')
-        static function glProgramParameter4dNV(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-        @:native('glProgramParameter4fNV')
-        static function glProgramParameter4fNV(target:Int, index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-        @:native('glTrackMatrixNV')
-        static function glTrackMatrixNV(target:Int, address:UInt, matrix:Int, transform:Int) : Void;
-
-        @:native('glVertexAttrib1dNV')
-        static function glVertexAttrib1dNV(index:UInt, x:Float) : Void;
-
-        @:native('glVertexAttrib1fNV')
-        static function glVertexAttrib1fNV(index:UInt, x:Float) : Void;
-
-        @:native('glVertexAttrib1sNV')
-        static function glVertexAttrib1sNV(index:UInt, x:Int) : Void;
-
-        @:native('glVertexAttrib2dNV')
-        static function glVertexAttrib2dNV(index:UInt, x:Float, y:Float) : Void;
-
-        @:native('glVertexAttrib2fNV')
-        static function glVertexAttrib2fNV(index:UInt, x:Float, y:Float) : Void;
-
-        @:native('glVertexAttrib2sNV')
-        static function glVertexAttrib2sNV(index:UInt, x:Int, y:Int) : Void;
-
-        @:native('glVertexAttrib3dNV')
-        static function glVertexAttrib3dNV(index:UInt, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glVertexAttrib3fNV')
-        static function glVertexAttrib3fNV(index:UInt, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glVertexAttrib3sNV')
-        static function glVertexAttrib3sNV(index:UInt, x:Int, y:Int, z:Int) : Void;
-
-        @:native('glVertexAttrib4dNV')
-        static function glVertexAttrib4dNV(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-        @:native('glVertexAttrib4fNV')
-        static function glVertexAttrib4fNV(index:UInt, x:Float, y:Float, z:Float, w:Float) : Void;
-
-        @:native('glVertexAttrib4sNV')
-        static function glVertexAttrib4sNV(index:UInt, x:Int, y:Int, z:Int, w:Int) : Void;
-
-        @:native('glVertexAttrib4ubNV')
-        static function glVertexAttrib4ubNV(index:UInt, x:String, y:String, z:String, w:String) : Void;
-
-
-        inline static function glAreProgramsResidentNV(n:Int, ids:Array<UInt>, residences:Array<Bool>) : Bool
-          { return untyped __cpp__("glAreProgramsResidentNV({0}, (const GLuint*)&{1}[0], (GLboolean*)&{2}[0])", n, ids, residences); }
-
-        inline static function glDeleteProgramsNV(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glDeleteProgramsNV({0}, (const GLuint*)&{1}[0])", n, ids); }
-
-        inline static function glExecuteProgramNV(target:Int, id:UInt, params:Array<Float>) : Void
-          { untyped __cpp__("glExecuteProgramNV({0}, {1}, (const GLfloat*)&{2}[0])", target, id, params); }
-
-        inline static function glGenProgramsNV(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glGenProgramsNV({0}, (GLuint*)&{1}[0])", n, ids); }
-
-        inline static function glGetProgramParameterdvNV(target:Int, index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetProgramParameterdvNV({0}, {1}, {2}, (GLdouble*)&{4}[0] + {3})", target, index, pname, bOffset, params); }
-
-        inline static function glGetProgramParameterfvNV(target:Int, index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetProgramParameterfvNV({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", target, index, pname, bOffset, params); }
-
-        inline static function glGetProgramStringNV(id:UInt, pname:Int, program:Array<String>) : Void
-          { untyped __cpp__("glGetProgramStringNV({0}, {1}, (GLubyte*)&{2}[0])", id, pname, program); }
-
-        inline static function glGetProgramivNV(id:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetProgramivNV({0}, {1}, (GLint*)&{3}[0] + {2})", id, pname, bOffset, params); }
-
-        inline static function glGetTrackMatrixivNV(target:Int, address:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetTrackMatrixivNV({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", target, address, pname, bOffset, params); }
-
-        inline static function glGetVertexAttribdvNV(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribdvNV({0}, {1}, (GLdouble*)&{3}[0] + {2})", index, pname, bOffset, params); }
-
-        inline static function glGetVertexAttribfvNV(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribfvNV({0}, {1}, (GLfloat*)&{3}[0] + {2})", index, pname, bOffset, params); }
-
-        inline static function glGetVertexAttribivNV(index:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVertexAttribivNV({0}, {1}, (GLint*)&{3}[0] + {2})", index, pname, bOffset, params); }
-
-        inline static function glLoadProgramNV(target:Int, id:UInt, len:Int, program:Array<String>) : Void
-          { untyped __cpp__("glLoadProgramNV({0}, {1}, {2}, (const GLubyte*)&{3}[0])", target, id, len, program); }
-
-        inline static function glProgramParameter4dvNV(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramParameter4dvNV({0}, {1}, (const GLdouble*)&{3}[0] + {2})", target, index, bOffset, params); }
-
-        inline static function glProgramParameter4fvNV(target:Int, index:UInt, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramParameter4fvNV({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, index, bOffset, params); }
-
-        inline static function glProgramParameters4dvNV(target:Int, index:UInt, num:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramParameters4dvNV({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", target, index, num, bOffset, params); }
-
-        inline static function glProgramParameters4fvNV(target:Int, index:UInt, num:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glProgramParameters4fvNV({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", target, index, num, bOffset, params); }
-
-        inline static function glRequestResidentProgramsNV(n:Int, ids:Array<UInt>) : Void
-          { untyped __cpp__("glRequestResidentProgramsNV({0}, (GLuint*)&{1}[0])", n, ids); }
-
-        inline static function glVertexAttrib1dvNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib1dvNV({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib1fvNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib1fvNV({0}, (const GLfloat*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib1svNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib1svNV({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib2dvNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib2dvNV({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib2fvNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib2fvNV({0}, (const GLfloat*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib2svNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib2svNV({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib3dvNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib3dvNV({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib3fvNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib3fvNV({0}, (const GLfloat*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib3svNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib3svNV({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib4dvNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4dvNV({0}, (const GLdouble*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib4fvNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4fvNV({0}, (const GLfloat*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib4svNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4svNV({0}, (const GLshort*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttrib4ubvNV(index:UInt, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttrib4ubvNV({0}, (const GLubyte*)&{2}[0] + {1})", index, bOffset, v); }
-
-        inline static function glVertexAttribPointerNV(index:UInt, size:Int, type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glVertexAttribPointerNV({0}, {1}, {2}, {3}, (const void*)&{5}[0] + {4})", index, size, type, stride, bOffset, pointer); }
-
-        inline static function glVertexAttribs1dvNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs1dvNV({0}, {1}, (const GLdouble*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs1fvNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs1fvNV({0}, {1}, (const GLfloat*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs1svNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs1svNV({0}, {1}, (const GLshort*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs2dvNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs2dvNV({0}, {1}, (const GLdouble*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs2fvNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs2fvNV({0}, {1}, (const GLfloat*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs2svNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs2svNV({0}, {1}, (const GLshort*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs3dvNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs3dvNV({0}, {1}, (const GLdouble*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs3fvNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs3fvNV({0}, {1}, (const GLfloat*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs3svNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs3svNV({0}, {1}, (const GLshort*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs4dvNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs4dvNV({0}, {1}, (const GLdouble*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs4fvNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs4fvNV({0}, {1}, (const GLfloat*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs4svNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs4svNV({0}, {1}, (const GLshort*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-        inline static function glVertexAttribs4ubvNV(index:UInt, n:Int, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glVertexAttribs4ubvNV({0}, {1}, (const GLubyte*)&{3}[0] + {2})", index, n, bOffset, v); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetVertexAttribPointervNV')
-        // static function glGetVertexAttribPointervNV(index:UInt, pname:Int, pointer:void**) : Void;
-
-
-//GL_NV_vertex_program1_1
-
-    // GL_NV_vertex_program1_1 defines
-
-        inline static var GL_NV_vertex_program1_1                                         = 1;
-
-
-//GL_NV_vertex_program2
-
-    // GL_NV_vertex_program2 defines
-
-        inline static var GL_NV_vertex_program2                                           = 1;
-
-
-//GL_NV_vertex_program2_option
-
-    // GL_NV_vertex_program2_option defines
-
-        inline static var GL_NV_vertex_program2_option                                    = 1;
-
-
-//GL_NV_vertex_program3
-
-    // GL_NV_vertex_program3 defines
-
-        inline static var GL_NV_vertex_program3                                           = 1;
-
-
-//GL_NV_vertex_program4
-
-    // GL_NV_vertex_program4 defines
-
-        inline static var GL_NV_vertex_program4                                           = 1;
-        inline static var GL_VERTEX_ATTRIB_ARRAY_INTEGER_NV                               = 0x88FD;
-
-
-//GL_NV_video_capture
-
-    // GL_NV_video_capture defines
-
-        inline static var GL_NV_video_capture                                             = 1;
-        inline static var GL_VIDEO_BUFFER_NV                                              = 0x9020;
-        inline static var GL_VIDEO_BUFFER_BINDING_NV                                      = 0x9021;
-        inline static var GL_FIELD_UPPER_NV                                               = 0x9022;
-        inline static var GL_FIELD_LOWER_NV                                               = 0x9023;
-        inline static var GL_NUM_VIDEO_CAPTURE_STREAMS_NV                                 = 0x9024;
-        inline static var GL_NEXT_VIDEO_CAPTURE_BUFFER_STATUS_NV                          = 0x9025;
-        inline static var GL_VIDEO_CAPTURE_TO_422_SUPPORTED_NV                            = 0x9026;
-        inline static var GL_LAST_VIDEO_CAPTURE_STATUS_NV                                 = 0x9027;
-        inline static var GL_VIDEO_BUFFER_PITCH_NV                                        = 0x9028;
-        inline static var GL_VIDEO_COLOR_CONVERSION_MATRIX_NV                             = 0x9029;
-        inline static var GL_VIDEO_COLOR_CONVERSION_MAX_NV                                = 0x902A;
-        inline static var GL_VIDEO_COLOR_CONVERSION_MIN_NV                                = 0x902B;
-        inline static var GL_VIDEO_COLOR_CONVERSION_OFFSET_NV                             = 0x902C;
-        inline static var GL_VIDEO_BUFFER_INTERNAL_FORMAT_NV                              = 0x902D;
-        inline static var GL_PARTIAL_SUCCESS_NV                                           = 0x902E;
-        inline static var GL_SUCCESS_NV                                                   = 0x902F;
-        inline static var GL_FAILURE_NV                                                   = 0x9030;
-        inline static var GL_YCBYCR8_422_NV                                               = 0x9031;
-        inline static var GL_YCBAYCR8A_4224_NV                                            = 0x9032;
-        inline static var GL_Z6Y10Z6CB10Z6Y10Z6CR10_422_NV                                = 0x9033;
-        inline static var GL_Z6Y10Z6CB10Z6A10Z6Y10Z6CR10Z6A10_4224_NV                     = 0x9034;
-        inline static var GL_Z4Y12Z4CB12Z4Y12Z4CR12_422_NV                                = 0x9035;
-        inline static var GL_Z4Y12Z4CB12Z4A12Z4Y12Z4CR12Z4A12_4224_NV                     = 0x9036;
-        inline static var GL_Z4Y12Z4CB12Z4CR12_444_NV                                     = 0x9037;
-        inline static var GL_VIDEO_CAPTURE_FRAME_WIDTH_NV                                 = 0x9038;
-        inline static var GL_VIDEO_CAPTURE_FRAME_HEIGHT_NV                                = 0x9039;
-        inline static var GL_VIDEO_CAPTURE_FIELD_UPPER_HEIGHT_NV                          = 0x903A;
-        inline static var GL_VIDEO_CAPTURE_FIELD_LOWER_HEIGHT_NV                          = 0x903B;
-        inline static var GL_VIDEO_CAPTURE_SURFACE_ORIGIN_NV                              = 0x903C;
-
-
-
-
-    // GL_NV_video_capture functions
-
-        @:native('glBeginVideoCaptureNV')
-        static function glBeginVideoCaptureNV(video_capture_slot:UInt) : Void;
-
-        @:native('glBindVideoCaptureStreamTextureNV')
-        static function glBindVideoCaptureStreamTextureNV(video_capture_slot:UInt, stream:UInt, frame_region:Int, target:Int, texture:UInt) : Void;
-
-        @:native('glEndVideoCaptureNV')
-        static function glEndVideoCaptureNV(video_capture_slot:UInt) : Void;
-
-
-        inline static function glGetVideoCaptureStreamdvNV(video_capture_slot:UInt, stream:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVideoCaptureStreamdvNV({0}, {1}, {2}, (GLdouble*)&{4}[0] + {3})", video_capture_slot, stream, pname, bOffset, params); }
-
-        inline static function glGetVideoCaptureStreamfvNV(video_capture_slot:UInt, stream:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVideoCaptureStreamfvNV({0}, {1}, {2}, (GLfloat*)&{4}[0] + {3})", video_capture_slot, stream, pname, bOffset, params); }
-
-        inline static function glGetVideoCaptureStreamivNV(video_capture_slot:UInt, stream:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVideoCaptureStreamivNV({0}, {1}, {2}, (GLint*)&{4}[0] + {3})", video_capture_slot, stream, pname, bOffset, params); }
-
-        inline static function glGetVideoCaptureivNV(video_capture_slot:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetVideoCaptureivNV({0}, {1}, (GLint*)&{3}[0] + {2})", video_capture_slot, pname, bOffset, params); }
-
-        inline static function glVideoCaptureStreamParameterdvNV(video_capture_slot:UInt, stream:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glVideoCaptureStreamParameterdvNV({0}, {1}, {2}, (const GLdouble*)&{4}[0] + {3})", video_capture_slot, stream, pname, bOffset, params); }
-
-        inline static function glVideoCaptureStreamParameterfvNV(video_capture_slot:UInt, stream:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glVideoCaptureStreamParameterfvNV({0}, {1}, {2}, (const GLfloat*)&{4}[0] + {3})", video_capture_slot, stream, pname, bOffset, params); }
-
-        inline static function glVideoCaptureStreamParameterivNV(video_capture_slot:UInt, stream:UInt, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glVideoCaptureStreamParameterivNV({0}, {1}, {2}, (const GLint*)&{4}[0] + {3})", video_capture_slot, stream, pname, bOffset, params); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glBindVideoCaptureStreamBufferNV')
-        // static function glBindVideoCaptureStreamBufferNV(video_capture_slot:UInt, stream:UInt, frame_region:Int, offset:GLintptrARB) : Void;
-            
-        // inline static function glVideoCaptureNV(video_capture_slot:UInt, sequence_num:Array<UInt>, capture_time:GLuint64EXT*) : Int
-        // { return untyped __cpp__("glVideoCaptureNV({0}, (GLuint*)&{1}[0], {2})", video_capture_slot, sequence_num, capture_time); }
-
-
-//GL_NV_viewport_array2
-
-    // GL_NV_viewport_array2 defines
-
-        inline static var GL_NV_viewport_array2                                           = 1;
-
-
-//GL_OES_byte_coordinates
-
-    // GL_OES_byte_coordinates defines
-
-        inline static var GL_OES_byte_coordinates                                         = 1;
-
-
-//GL_OES_compressed_paletted_texture
-
-    // GL_OES_compressed_paletted_texture defines
-
-        inline static var GL_OES_compressed_paletted_texture                              = 1;
-        inline static var GL_PALETTE4_RGB8_OES                                            = 0x8B90;
-        inline static var GL_PALETTE4_RGBA8_OES                                           = 0x8B91;
-        inline static var GL_PALETTE4_R5_G6_B5_OES                                        = 0x8B92;
-        inline static var GL_PALETTE4_RGBA4_OES                                           = 0x8B93;
-        inline static var GL_PALETTE4_RGB5_A1_OES                                         = 0x8B94;
-        inline static var GL_PALETTE8_RGB8_OES                                            = 0x8B95;
-        inline static var GL_PALETTE8_RGBA8_OES                                           = 0x8B96;
-        inline static var GL_PALETTE8_R5_G6_B5_OES                                        = 0x8B97;
-        inline static var GL_PALETTE8_RGBA4_OES                                           = 0x8B98;
-        inline static var GL_PALETTE8_RGB5_A1_OES                                         = 0x8B99;
-
-
-//GL_OES_read_format
-
-    // GL_OES_read_format defines
-
-        inline static var GL_OES_read_format                                              = 1;
-        inline static var GL_IMPLEMENTATION_COLOR_READ_TYPE_OES                           = 0x8B9A;
-        inline static var GL_IMPLEMENTATION_COLOR_READ_FORMAT_OES                         = 0x8B9B;
-
-
-//GL_OES_single_precision
-
-    // GL_OES_single_precision defines
-
-        inline static var GL_OES_single_precision                                         = 1;
-
-
-
-
-    // GL_OES_single_precision functions
-
-        @:native('glClearDepthfOES')
-        static function glClearDepthfOES(depth:Float) : Void;
-
-        @:native('glDepthRangefOES')
-        static function glDepthRangefOES(n:Float, f:Float) : Void;
-
-        @:native('glFrustumfOES')
-        static function glFrustumfOES(l:Float, r:Float, b:Float, t:Float, n:Float, f:Float) : Void;
-
-        @:native('glOrthofOES')
-        static function glOrthofOES(l:Float, r:Float, b:Float, t:Float, n:Float, f:Float) : Void;
-
-
-        inline static function glClipPlanefOES(plane:Int, equation:Array<Float>) : Void
-          { untyped __cpp__("glClipPlanefOES({0}, (const GLfloat*)&{1}[0])", plane, equation); }
-
-        inline static function glGetClipPlanefOES(plane:Int, equation:Array<Float>) : Void
-          { untyped __cpp__("glGetClipPlanefOES({0}, (GLfloat*)&{1}[0])", plane, equation); }
-
-
-
-
-//GL_OML_interlace
-
-    // GL_OML_interlace defines
-
-        inline static var GL_OML_interlace                                                = 1;
-        inline static var GL_INTERLACE_OML                                                = 0x8980;
-        inline static var GL_INTERLACE_READ_OML                                           = 0x8981;
-
-
-//GL_OML_resample
-
-    // GL_OML_resample defines
-
-        inline static var GL_OML_resample                                                 = 1;
-        inline static var GL_PACK_RESAMPLE_OML                                            = 0x8984;
-        inline static var GL_UNPACK_RESAMPLE_OML                                          = 0x8985;
-        inline static var GL_RESAMPLE_REPLICATE_OML                                       = 0x8986;
-        inline static var GL_RESAMPLE_ZERO_FILL_OML                                       = 0x8987;
-        inline static var GL_RESAMPLE_AVERAGE_OML                                         = 0x8988;
-        inline static var GL_RESAMPLE_DECIMATE_OML                                        = 0x8989;
-
-
-//GL_OML_subsample
-
-    // GL_OML_subsample defines
-
-        inline static var GL_OML_subsample                                                = 1;
-        inline static var GL_FORMAT_SUBSAMPLE_24_24_OML                                   = 0x8982;
-        inline static var GL_FORMAT_SUBSAMPLE_244_244_OML                                 = 0x8983;
-
-
-//GL_OVR_multiview
-
-    // GL_OVR_multiview defines
-
-        inline static var GL_OVR_multiview                                                = 1;
-        inline static var GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR                 = 0x9630;
-        inline static var GL_MAX_VIEWS_OVR                                                = 0x9631;
-        inline static var GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR           = 0x9632;
-        inline static var GL_FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR                      = 0x9633;
-
-
-
-
-    // GL_OVR_multiview functions
-
-        @:native('glFramebufferTextureMultiviewOVR')
-        static function glFramebufferTextureMultiviewOVR(target:Int, attachment:Int, texture:UInt, level:Int, baseViewIndex:Int, numViews:Int) : Void;
-
-
-
-
-
-//GL_OVR_multiview2
-
-    // GL_OVR_multiview2 defines
-
-        inline static var GL_OVR_multiview2                                               = 1;
-
-
-//GL_PGI_misc_hints
-
-    // GL_PGI_misc_hints defines
-
-        inline static var GL_PGI_misc_hints                                               = 1;
-        inline static var GL_PREFER_DOUBLEBUFFER_HINT_PGI                                 = 107000;
-        inline static var GL_CONSERVE_MEMORY_HINT_PGI                                     = 107005;
-        inline static var GL_RECLAIM_MEMORY_HINT_PGI                                      = 107006;
-        inline static var GL_NATIVE_GRAPHICS_HANDLE_PGI                                   = 107010;
-        inline static var GL_NATIVE_GRAPHICS_BEGIN_HINT_PGI                               = 107011;
-        inline static var GL_NATIVE_GRAPHICS_END_HINT_PGI                                 = 107012;
-        inline static var GL_ALWAYS_FAST_HINT_PGI                                         = 107020;
-        inline static var GL_ALWAYS_SOFT_HINT_PGI                                         = 107021;
-        inline static var GL_ALLOW_DRAW_OBJ_HINT_PGI                                      = 107022;
-        inline static var GL_ALLOW_DRAW_WIN_HINT_PGI                                      = 107023;
-        inline static var GL_ALLOW_DRAW_FRG_HINT_PGI                                      = 107024;
-        inline static var GL_ALLOW_DRAW_MEM_HINT_PGI                                      = 107025;
-        inline static var GL_STRICT_DEPTHFUNC_HINT_PGI                                    = 107030;
-        inline static var GL_STRICT_LIGHTING_HINT_PGI                                     = 107031;
-        inline static var GL_STRICT_SCISSOR_HINT_PGI                                      = 107032;
-        inline static var GL_FULL_STIPPLE_HINT_PGI                                        = 107033;
-        inline static var GL_CLIP_NEAR_HINT_PGI                                           = 107040;
-        inline static var GL_CLIP_FAR_HINT_PGI                                            = 107041;
-        inline static var GL_WIDE_LINE_HINT_PGI                                           = 107042;
-        inline static var GL_BACK_NORMALS_HINT_PGI                                        = 107043;
-
-
-//GL_PGI_vertex_hints
-
-    // GL_PGI_vertex_hints defines
-
-        inline static var GL_PGI_vertex_hints                                             = 1;
-        inline static var GL_VERTEX23_BIT_PGI                                             = 0x00000004;
-        inline static var GL_VERTEX4_BIT_PGI                                              = 0x00000008;
-        inline static var GL_COLOR3_BIT_PGI                                               = 0x00010000;
-        inline static var GL_COLOR4_BIT_PGI                                               = 0x00020000;
-        inline static var GL_EDGEFLAG_BIT_PGI                                             = 0x00040000;
-        inline static var GL_INDEX_BIT_PGI                                                = 0x00080000;
-        inline static var GL_MAT_AMBIENT_BIT_PGI                                          = 0x00100000;
-        inline static var GL_VERTEX_DATA_HINT_PGI                                         = 107050;
-        inline static var GL_VERTEX_CONSISTENT_HINT_PGI                                   = 107051;
-        inline static var GL_MATERIAL_SIDE_HINT_PGI                                       = 107052;
-        inline static var GL_MAX_VERTEX_HINT_PGI                                          = 107053;
-        inline static var GL_MAT_AMBIENT_AND_DIFFUSE_BIT_PGI                              = 0x00200000;
-        inline static var GL_MAT_DIFFUSE_BIT_PGI                                          = 0x00400000;
-        inline static var GL_MAT_EMISSION_BIT_PGI                                         = 0x00800000;
-        inline static var GL_MAT_COLOR_INDEXES_BIT_PGI                                    = 0x01000000;
-        inline static var GL_MAT_SHININESS_BIT_PGI                                        = 0x02000000;
-        inline static var GL_MAT_SPECULAR_BIT_PGI                                         = 0x04000000;
-        inline static var GL_NORMAL_BIT_PGI                                               = 0x08000000;
-        inline static var GL_TEXCOORD1_BIT_PGI                                            = 0x10000000;
-        inline static var GL_TEXCOORD2_BIT_PGI                                            = 0x20000000;
-        inline static var GL_TEXCOORD3_BIT_PGI                                            = 0x40000000;
-        inline static var GL_TEXCOORD4_BIT_PGI                                            = 0x80000000;
-
-
-//GL_REGAL_ES1_0_compatibility
-
-    // GL_REGAL_ES1_0_compatibility defines
-
-        inline static var GL_REGAL_ES1_0_compatibility                                    = 1;
-
-
-
-
-    // GL_REGAL_ES1_0_compatibility functions
-
-        @:native('glAlphaFuncx')
-        static function glAlphaFuncx(func:Int, ref:Int) : Void;
-
-        @:native('glClearColorx')
-        static function glClearColorx(red:Int, green:Int, blue:Int, alpha:Int) : Void;
-
-        @:native('glClearDepthx')
-        static function glClearDepthx(depth:Int) : Void;
-
-        @:native('glColor4x')
-        static function glColor4x(red:Int, green:Int, blue:Int, alpha:Int) : Void;
-
-        @:native('glDepthRangex')
-        static function glDepthRangex(zNear:Int, zFar:Int) : Void;
-
-        @:native('glFogx')
-        static function glFogx(pname:Int, param:Int) : Void;
-
-        @:native('glFrustumf')
-        static function glFrustumf(left:Float, right:Float, bottom:Float, top:Float, zNear:Float, zFar:Float) : Void;
-
-        @:native('glFrustumx')
-        static function glFrustumx(left:Int, right:Int, bottom:Int, top:Int, zNear:Int, zFar:Int) : Void;
-
-        @:native('glLightModelx')
-        static function glLightModelx(pname:Int, param:Int) : Void;
-
-        @:native('glLightx')
-        static function glLightx(light:Int, pname:Int, param:Int) : Void;
-
-        @:native('glLineWidthx')
-        static function glLineWidthx(width:Int) : Void;
-
-        @:native('glMaterialx')
-        static function glMaterialx(face:Int, pname:Int, param:Int) : Void;
-
-        @:native('glMultiTexCoord4x')
-        static function glMultiTexCoord4x(target:Int, s:Int, t:Int, r:Int, q:Int) : Void;
-
-        @:native('glNormal3x')
-        static function glNormal3x(nx:Int, ny:Int, nz:Int) : Void;
-
-        @:native('glOrthof')
-        static function glOrthof(left:Float, right:Float, bottom:Float, top:Float, zNear:Float, zFar:Float) : Void;
-
-        @:native('glOrthox')
-        static function glOrthox(left:Int, right:Int, bottom:Int, top:Int, zNear:Int, zFar:Int) : Void;
-
-        @:native('glPointSizex')
-        static function glPointSizex(size:Int) : Void;
-
-        @:native('glPolygonOffsetx')
-        static function glPolygonOffsetx(factor:Int, units:Int) : Void;
-
-        @:native('glRotatex')
-        static function glRotatex(angle:Int, x:Int, y:Int, z:Int) : Void;
-
-        @:native('glSampleCoveragex')
-        static function glSampleCoveragex(value:Int, invert:Bool) : Void;
-
-        @:native('glScalex')
-        static function glScalex(x:Int, y:Int, z:Int) : Void;
-
-        @:native('glTexEnvx')
-        static function glTexEnvx(target:Int, pname:Int, param:Int) : Void;
-
-        @:native('glTexParameterx')
-        static function glTexParameterx(target:Int, pname:Int, param:Int) : Void;
-
-        @:native('glTranslatex')
-        static function glTranslatex(x:Int, y:Int, z:Int) : Void;
-
-
-        inline static function glFogxv(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFogxv({0}, (const GLfixed*)&{2}[0] + {1})", pname, bOffset, params); }
-
-        inline static function glLightModelxv(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glLightModelxv({0}, (const GLfixed*)&{2}[0] + {1})", pname, bOffset, params); }
-
-        inline static function glLightxv(light:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glLightxv({0}, {1}, (const GLfixed*)&{3}[0] + {2})", light, pname, bOffset, params); }
-
-        inline static function glLoadMatrixx(?bOffset:Int=0, m:BytesData) : Void
-          { untyped __cpp__("glLoadMatrixx((const GLfixed*)&{1}[0] + {0})", bOffset, m); }
-
-        inline static function glMaterialxv(face:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glMaterialxv({0}, {1}, (const GLfixed*)&{3}[0] + {2})", face, pname, bOffset, params); }
-
-        inline static function glMultMatrixx(?bOffset:Int=0, m:BytesData) : Void
-          { untyped __cpp__("glMultMatrixx((const GLfixed*)&{1}[0] + {0})", bOffset, m); }
-
-        inline static function glTexEnvxv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTexEnvxv({0}, {1}, (const GLfixed*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-
-
-
-//GL_REGAL_ES1_1_compatibility
-
-    // GL_REGAL_ES1_1_compatibility defines
-
-        inline static var GL_REGAL_ES1_1_compatibility                                    = 1;
-
-
-
-
-    // GL_REGAL_ES1_1_compatibility functions
-
-        @:native('glPointParameterx')
-        static function glPointParameterx(pname:Int, param:Int) : Void;
-
-
-        inline static function glClipPlanef(plane:Int, equation:Array<Float>) : Void
-          { untyped __cpp__("glClipPlanef({0}, (const GLfloat*)&{1}[0])", plane, equation); }
-
-        inline static function glClipPlanex(plane:Int, equation:Array<Int>) : Void
-          { untyped __cpp__("glClipPlanex({0}, (const GLfixed*)&{1}[0])", plane, equation); }
-
-        inline static function glPointParameterxv(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glPointParameterxv({0}, (const GLfixed*)&{2}[0] + {1})", pname, bOffset, params); }
-
-        inline static function glPointSizePointerOES(type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glPointSizePointerOES({0}, {1}, (const void*)&{3}[0] + {2})", type, stride, bOffset, pointer); }
-
-        inline static function glTexParameterxv(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glTexParameterxv({0}, {1}, (const GLfixed*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetClipPlanef')
-        // static function glGetClipPlanef(pname:Int, eqn:Array<Float>) : Void;
-            
-        // @:native('glGetClipPlanex')
-        // static function glGetClipPlanex(pname:Int, eqn:Array<Int>) : Void;
-            
-        // @:native('glGetFixedv')
-        // static function glGetFixedv(pname:Int, params:GLfixed*) : Void;
-            
-        // @:native('glGetLightxv')
-        // static function glGetLightxv(light:Int, pname:Int, params:GLfixed*) : Void;
-            
-        // @:native('glGetMaterialxv')
-        // static function glGetMaterialxv(face:Int, pname:Int, params:GLfixed*) : Void;
-            
-        // @:native('glGetTexEnvxv')
-        // static function glGetTexEnvxv(env:Int, pname:Int, params:GLfixed*) : Void;
-            
-        // @:native('glGetTexParameterxv')
-        // static function glGetTexParameterxv(target:Int, pname:Int, params:GLfixed*) : Void;
-
-
-//GL_REGAL_enable
-
-    // GL_REGAL_enable defines
-
-        inline static var GL_REGAL_enable                                                 = 1;
-        inline static var GL_ERROR_REGAL                                                  = 0x9322;
-        inline static var GL_DEBUG_REGAL                                                  = 0x9323;
-        inline static var GL_LOG_REGAL                                                    = 0x9324;
-        inline static var GL_EMULATION_REGAL                                              = 0x9325;
-        inline static var GL_DRIVER_REGAL                                                 = 0x9326;
-        inline static var GL_MISSING_REGAL                                                = 0x9360;
-        inline static var GL_TRACE_REGAL                                                  = 0x9361;
-        inline static var GL_CACHE_REGAL                                                  = 0x9362;
-        inline static var GL_CODE_REGAL                                                   = 0x9363;
-        inline static var GL_STATISTICS_REGAL                                             = 0x9364;
-
-
-//GL_REGAL_error_string
-
-    // GL_REGAL_error_string defines
-
-        inline static var GL_REGAL_error_string                                           = 1;
-
-
-
-
-    // GL_REGAL_error_string functions
-
-        @:native('glErrorStringREGAL')
-        static function glErrorStringREGAL(error:Int) : String;
-
-
-
-
-
-//GL_REGAL_extension_query
-
-    // GL_REGAL_extension_query defines
-
-        inline static var GL_REGAL_extension_query                                        = 1;
-
-
-
-
-    // GL_REGAL_extension_query functions
-
-        @:native('glGetExtensionREGAL')
-        static function glGetExtensionREGAL(ext:String) : Bool;
-
-        @:native('glIsSupportedREGAL')
-        static function glIsSupportedREGAL(ext:String) : Bool;
-
-
-
-
-
-//GL_REGAL_log
-
-    // GL_REGAL_log defines
-
-        inline static var GL_REGAL_log                                                    = 1;
-        inline static var GL_LOG_ERROR_REGAL                                              = 0x9319;
-        inline static var GL_LOG_WARNING_REGAL                                            = 0x931A;
-        inline static var GL_LOG_INFO_REGAL                                               = 0x931B;
-        inline static var GL_LOG_APP_REGAL                                                = 0x931C;
-        inline static var GL_LOG_DRIVER_REGAL                                             = 0x931D;
-        inline static var GL_LOG_INTERNAL_REGAL                                           = 0x931E;
-        inline static var GL_LOG_DEBUG_REGAL                                              = 0x931F;
-        inline static var GL_LOG_STATUS_REGAL                                             = 0x9320;
-        inline static var GL_LOG_HTTP_REGAL                                               = 0x9321;
-
-
-
-
-    // GL_REGAL_log functions
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glLogMessageCallbackREGAL')
-        // static function glLogMessageCallbackREGAL(callback:GLLOGPROCREGAL) : Void;
-
-
-//GL_REGAL_proc_address
-
-    // GL_REGAL_proc_address defines
-
-        inline static var GL_REGAL_proc_address                                           = 1;
-
-
-
-
-    // GL_REGAL_proc_address functions
-
-
-
-
-    // TODO functions
-
-            
-        // @:native('glGetProcAddressREGAL')
-        // static function glGetProcAddressREGAL(name:String) : void *;
-
-
-//GL_REND_screen_coordinates
-
-    // GL_REND_screen_coordinates defines
-
-        inline static var GL_REND_screen_coordinates                                      = 1;
-        inline static var GL_SCREEN_COORDINATES_REND                                      = 0x8490;
-        inline static var GL_INVERTED_SCREEN_W_REND                                       = 0x8491;
-
-
-//GL_S3_s3tc
-
-    // GL_S3_s3tc defines
-
-        inline static var GL_S3_s3tc                                                      = 1;
-        inline static var GL_RGB_S3TC                                                     = 0x83A0;
-        inline static var GL_RGB4_S3TC                                                    = 0x83A1;
-        inline static var GL_RGBA_S3TC                                                    = 0x83A2;
-        inline static var GL_RGBA4_S3TC                                                   = 0x83A3;
-        inline static var GL_RGBA_DXT5_S3TC                                               = 0x83A4;
-        inline static var GL_RGBA4_DXT5_S3TC                                              = 0x83A5;
-
-
-//GL_SGIS_color_range
-
-    // GL_SGIS_color_range defines
-
-        inline static var GL_SGIS_color_range                                             = 1;
-        inline static var GL_EXTENDED_RANGE_SGIS                                          = 0x85A5;
-        inline static var GL_MIN_RED_SGIS                                                 = 0x85A6;
-        inline static var GL_MAX_RED_SGIS                                                 = 0x85A7;
-        inline static var GL_MIN_GREEN_SGIS                                               = 0x85A8;
-        inline static var GL_MAX_GREEN_SGIS                                               = 0x85A9;
-        inline static var GL_MIN_BLUE_SGIS                                                = 0x85AA;
-        inline static var GL_MAX_BLUE_SGIS                                                = 0x85AB;
-        inline static var GL_MIN_ALPHA_SGIS                                               = 0x85AC;
-        inline static var GL_MAX_ALPHA_SGIS                                               = 0x85AD;
-
-
-//GL_SGIS_detail_texture
-
-    // GL_SGIS_detail_texture defines
-
-        inline static var GL_SGIS_detail_texture                                          = 1;
-
-
-
-
-    // GL_SGIS_detail_texture functions
-
-
-        inline static function glDetailTexFuncSGIS(target:Int, n:Int, ?bOffset:Int=0, points:BytesData) : Void
-          { untyped __cpp__("glDetailTexFuncSGIS({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, n, bOffset, points); }
-
-        inline static function glGetDetailTexFuncSGIS(target:Int, ?bOffset:Int=0, points:BytesData) : Void
-          { untyped __cpp__("glGetDetailTexFuncSGIS({0}, (GLfloat*)&{2}[0] + {1})", target, bOffset, points); }
-
-
-
-
-//GL_SGIS_fog_function
-
-    // GL_SGIS_fog_function defines
-
-        inline static var GL_SGIS_fog_function                                            = 1;
-
-
-
-
-    // GL_SGIS_fog_function functions
-
-
-        inline static function glFogFuncSGIS(n:Int, ?bOffset:Int=0, points:BytesData) : Void
-          { untyped __cpp__("glFogFuncSGIS({0}, (const GLfloat*)&{2}[0] + {1})", n, bOffset, points); }
-
-        inline static function glGetFogFuncSGIS(?bOffset:Int=0, points:BytesData) : Void
-          { untyped __cpp__("glGetFogFuncSGIS((GLfloat*)&{1}[0] + {0})", bOffset, points); }
-
-
-
-
-//GL_SGIS_generate_mipmap
-
-    // GL_SGIS_generate_mipmap defines
-
-        inline static var GL_SGIS_generate_mipmap                                         = 1;
-        inline static var GL_GENERATE_MIPMAP_SGIS                                         = 0x8191;
-        inline static var GL_GENERATE_MIPMAP_HINT_SGIS                                    = 0x8192;
-
-
-//GL_SGIS_multisample
-
-    // GL_SGIS_multisample defines
-
-        inline static var GL_SGIS_multisample                                             = 1;
-        inline static var GL_MULTISAMPLE_SGIS                                             = 0x809D;
-        inline static var GL_SAMPLE_ALPHA_TO_MASK_SGIS                                    = 0x809E;
-        inline static var GL_SAMPLE_ALPHA_TO_ONE_SGIS                                     = 0x809F;
-        inline static var GL_SAMPLE_MASK_SGIS                                             = 0x80A0;
-        inline static var GL_1PASS_SGIS                                                   = 0x80A1;
-        inline static var GL_2PASS_0_SGIS                                                 = 0x80A2;
-        inline static var GL_2PASS_1_SGIS                                                 = 0x80A3;
-        inline static var GL_4PASS_0_SGIS                                                 = 0x80A4;
-        inline static var GL_4PASS_1_SGIS                                                 = 0x80A5;
-        inline static var GL_4PASS_2_SGIS                                                 = 0x80A6;
-        inline static var GL_4PASS_3_SGIS                                                 = 0x80A7;
-        inline static var GL_SAMPLE_BUFFERS_SGIS                                          = 0x80A8;
-        inline static var GL_SAMPLES_SGIS                                                 = 0x80A9;
-        inline static var GL_SAMPLE_MASK_VALUE_SGIS                                       = 0x80AA;
-        inline static var GL_SAMPLE_MASK_INVERT_SGIS                                      = 0x80AB;
-        inline static var GL_SAMPLE_PATTERN_SGIS                                          = 0x80AC;
-
-
-
-
-    // GL_SGIS_multisample functions
-
-        @:native('glSampleMaskSGIS')
-        static function glSampleMaskSGIS(value:Float, invert:Bool) : Void;
-
-        @:native('glSamplePatternSGIS')
-        static function glSamplePatternSGIS(pattern:Int) : Void;
-
-
-
-
-
-//GL_SGIS_pixel_texture
-
-    // GL_SGIS_pixel_texture defines
-
-        inline static var GL_SGIS_pixel_texture                                           = 1;
-
-
-//GL_SGIS_point_line_texgen
-
-    // GL_SGIS_point_line_texgen defines
-
-        inline static var GL_SGIS_point_line_texgen                                       = 1;
-        inline static var GL_EYE_DISTANCE_TO_POINT_SGIS                                   = 0x81F0;
-        inline static var GL_OBJECT_DISTANCE_TO_POINT_SGIS                                = 0x81F1;
-        inline static var GL_EYE_DISTANCE_TO_LINE_SGIS                                    = 0x81F2;
-        inline static var GL_OBJECT_DISTANCE_TO_LINE_SGIS                                 = 0x81F3;
-        inline static var GL_EYE_POINT_SGIS                                               = 0x81F4;
-        inline static var GL_OBJECT_POINT_SGIS                                            = 0x81F5;
-        inline static var GL_EYE_LINE_SGIS                                                = 0x81F6;
-        inline static var GL_OBJECT_LINE_SGIS                                             = 0x81F7;
-
-
-//GL_SGIS_sharpen_texture
-
-    // GL_SGIS_sharpen_texture defines
-
-        inline static var GL_SGIS_sharpen_texture                                         = 1;
-
-
-
-
-    // GL_SGIS_sharpen_texture functions
-
-
-        inline static function glGetSharpenTexFuncSGIS(target:Int, points:Array<Float>) : Void
-          { untyped __cpp__("glGetSharpenTexFuncSGIS({0}, (GLfloat*)&{1}[0])", target, points); }
-
-        inline static function glSharpenTexFuncSGIS(target:Int, n:Int, points:Array<Float>) : Void
-          { untyped __cpp__("glSharpenTexFuncSGIS({0}, {1}, (const GLfloat*)&{2}[0])", target, n, points); }
-
-
-
-
-//GL_SGIS_texture4D
-
-    // GL_SGIS_texture4D defines
-
-        inline static var GL_SGIS_texture4D                                               = 1;
-
-
-
-
-    // GL_SGIS_texture4D functions
-
-
-        inline static function glTexImage4DSGIS(target:Int, level:Int, internalformat:Int, width:Int, height:Int, depth:Int, extent:Int, border:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTexImage4DSGIS({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, (const void*)&{11}[0] + {10})", target, level, internalformat, width, height, depth, extent, border, format, type, bOffset, pixels); }
-
-        inline static function glTexSubImage4DSGIS(target:Int, level:Int, xoffset:Int, yoffset:Int, zoffset:Int, woffset:Int, width:Int, height:Int, depth:Int, extent:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glTexSubImage4DSGIS({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, (const void*)&{13}[0] + {12})", target, level, xoffset, yoffset, zoffset, woffset, width, height, depth, extent, format, type, bOffset, pixels); }
-
-
-
-
-//GL_SGIS_texture_border_clamp
-
-    // GL_SGIS_texture_border_clamp defines
-
-        inline static var GL_SGIS_texture_border_clamp                                    = 1;
-        inline static var GL_CLAMP_TO_BORDER_SGIS                                         = 0x812D;
-
-
-//GL_SGIS_texture_edge_clamp
-
-    // GL_SGIS_texture_edge_clamp defines
-
-        inline static var GL_SGIS_texture_edge_clamp                                      = 1;
-        inline static var GL_CLAMP_TO_EDGE_SGIS                                           = 0x812F;
-
-
-//GL_SGIS_texture_filter4
-
-    // GL_SGIS_texture_filter4 defines
-
-        inline static var GL_SGIS_texture_filter4                                         = 1;
-
-
-
-
-    // GL_SGIS_texture_filter4 functions
-
-
-        inline static function glGetTexFilterFuncSGIS(target:Int, filter:Int, weights:Array<Float>) : Void
-          { untyped __cpp__("glGetTexFilterFuncSGIS({0}, {1}, (GLfloat*)&{2}[0])", target, filter, weights); }
-
-        inline static function glTexFilterFuncSGIS(target:Int, filter:Int, n:Int, weights:Array<Float>) : Void
-          { untyped __cpp__("glTexFilterFuncSGIS({0}, {1}, {2}, (const GLfloat*)&{3}[0])", target, filter, n, weights); }
-
-
-
-
-//GL_SGIS_texture_lod
-
-    // GL_SGIS_texture_lod defines
-
-        inline static var GL_SGIS_texture_lod                                             = 1;
-        inline static var GL_TEXTURE_MIN_LOD_SGIS                                         = 0x813A;
-        inline static var GL_TEXTURE_MAX_LOD_SGIS                                         = 0x813B;
-        inline static var GL_TEXTURE_BASE_LEVEL_SGIS                                      = 0x813C;
-        inline static var GL_TEXTURE_MAX_LEVEL_SGIS                                       = 0x813D;
-
-
-//GL_SGIS_texture_select
-
-    // GL_SGIS_texture_select defines
-
-        inline static var GL_SGIS_texture_select                                          = 1;
-
-
-//GL_SGIX_async
-
-    // GL_SGIX_async defines
-
-        inline static var GL_SGIX_async                                                   = 1;
-        inline static var GL_ASYNC_MARKER_SGIX                                            = 0x8329;
-
-
-
-
-    // GL_SGIX_async functions
-
-        @:native('glAsyncMarkerSGIX')
-        static function glAsyncMarkerSGIX(marker:UInt) : Void;
-
-        @:native('glDeleteAsyncMarkersSGIX')
-        static function glDeleteAsyncMarkersSGIX(marker:UInt, range:Int) : Void;
-
-        @:native('glGenAsyncMarkersSGIX')
-        static function glGenAsyncMarkersSGIX(range:Int) : UInt;
-
-        @:native('glIsAsyncMarkerSGIX')
-        static function glIsAsyncMarkerSGIX(marker:UInt) : Bool;
-
-
-        inline static function glFinishAsyncSGIX(markerp:Array<UInt>) : Int
-          { return untyped __cpp__("glFinishAsyncSGIX((GLuint*)&{0}[0])", markerp); }
-
-        inline static function glPollAsyncSGIX(markerp:Array<UInt>) : Int
-          { return untyped __cpp__("glPollAsyncSGIX((GLuint*)&{0}[0])", markerp); }
-
-
-
-
-//GL_SGIX_async_histogram
-
-    // GL_SGIX_async_histogram defines
-
-        inline static var GL_SGIX_async_histogram                                         = 1;
-        inline static var GL_ASYNC_HISTOGRAM_SGIX                                         = 0x832C;
-        inline static var GL_MAX_ASYNC_HISTOGRAM_SGIX                                     = 0x832D;
-
-
-//GL_SGIX_async_pixel
-
-    // GL_SGIX_async_pixel defines
-
-        inline static var GL_SGIX_async_pixel                                             = 1;
-        inline static var GL_ASYNC_TEX_IMAGE_SGIX                                         = 0x835C;
-        inline static var GL_ASYNC_DRAW_PIXELS_SGIX                                       = 0x835D;
-        inline static var GL_ASYNC_READ_PIXELS_SGIX                                       = 0x835E;
-        inline static var GL_MAX_ASYNC_TEX_IMAGE_SGIX                                     = 0x835F;
-        inline static var GL_MAX_ASYNC_DRAW_PIXELS_SGIX                                   = 0x8360;
-        inline static var GL_MAX_ASYNC_READ_PIXELS_SGIX                                   = 0x8361;
-
-
-//GL_SGIX_blend_alpha_minmax
-
-    // GL_SGIX_blend_alpha_minmax defines
-
-        inline static var GL_SGIX_blend_alpha_minmax                                      = 1;
-        inline static var GL_ALPHA_MIN_SGIX                                               = 0x8320;
-        inline static var GL_ALPHA_MAX_SGIX                                               = 0x8321;
-
-
-//GL_SGIX_clipmap
-
-    // GL_SGIX_clipmap defines
-
-        inline static var GL_SGIX_clipmap                                                 = 1;
-
-
-//GL_SGIX_convolution_accuracy
-
-    // GL_SGIX_convolution_accuracy defines
-
-        inline static var GL_SGIX_convolution_accuracy                                    = 1;
-        inline static var GL_CONVOLUTION_HINT_SGIX                                        = 0x8316;
-
-
-//GL_SGIX_depth_texture
-
-    // GL_SGIX_depth_texture defines
-
-        inline static var GL_SGIX_depth_texture                                           = 1;
-        inline static var GL_DEPTH_COMPONENT16_SGIX                                       = 0x81A5;
-        inline static var GL_DEPTH_COMPONENT24_SGIX                                       = 0x81A6;
-        inline static var GL_DEPTH_COMPONENT32_SGIX                                       = 0x81A7;
-
-
-//GL_SGIX_flush_raster
-
-    // GL_SGIX_flush_raster defines
-
-        inline static var GL_SGIX_flush_raster                                            = 1;
-
-
-
-
-    // GL_SGIX_flush_raster functions
-
-        @:native('glFlushRasterSGIX')
-        static function glFlushRasterSGIX() : Void;
-
-
-
-
-
-//GL_SGIX_fog_offset
-
-    // GL_SGIX_fog_offset defines
-
-        inline static var GL_SGIX_fog_offset                                              = 1;
-        inline static var GL_FOG_OFFSET_SGIX                                              = 0x8198;
-        inline static var GL_FOG_OFFSET_VALUE_SGIX                                        = 0x8199;
-
-
-//GL_SGIX_fog_texture
-
-    // GL_SGIX_fog_texture defines
-
-        inline static var GL_SGIX_fog_texture                                             = 1;
-        inline static var GL_FOG_PATCHY_FACTOR_SGIX                                       = 0;
-        inline static var GL_FRAGMENT_FOG_SGIX                                            = 0;
-        inline static var GL_TEXTURE_FOG_SGIX                                             = 0;
-
-
-
-
-    // GL_SGIX_fog_texture functions
-
-        @:native('glTextureFogSGIX')
-        static function glTextureFogSGIX(pname:Int) : Void;
-
-
-
-
-
-//GL_SGIX_fragment_specular_lighting
-
-    // GL_SGIX_fragment_specular_lighting defines
-
-        inline static var GL_SGIX_fragment_specular_lighting                              = 1;
-
-
-
-
-    // GL_SGIX_fragment_specular_lighting functions
-
-        @:native('glFragmentColorMaterialSGIX')
-        static function glFragmentColorMaterialSGIX(face:Int, mode:Int) : Void;
-
-        @:native('glFragmentLightModelfSGIX')
-        static function glFragmentLightModelfSGIX(pname:Int, param:Float) : Void;
-
-        @:native('glFragmentLightModeliSGIX')
-        static function glFragmentLightModeliSGIX(pname:Int, param:Int) : Void;
-
-        @:native('glFragmentLightfSGIX')
-        static function glFragmentLightfSGIX(light:Int, pname:Int, param:Float) : Void;
-
-        @:native('glFragmentLightiSGIX')
-        static function glFragmentLightiSGIX(light:Int, pname:Int, param:Int) : Void;
-
-        @:native('glFragmentMaterialfSGIX')
-        static function glFragmentMaterialfSGIX(face:Int, pname:Int, param:Float) : Void;
-
-
-        inline static function glFragmentLightModelfvSGIX(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFragmentLightModelfvSGIX({0}, (GLfloat*)&{2}[0] + {1})", pname, bOffset, params); }
-
-        inline static function glFragmentLightModelivSGIX(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFragmentLightModelivSGIX({0}, (GLint*)&{2}[0] + {1})", pname, bOffset, params); }
-
-        inline static function glFragmentLightfvSGIX(light:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFragmentLightfvSGIX({0}, {1}, (GLfloat*)&{3}[0] + {2})", light, pname, bOffset, params); }
-
-        inline static function glFragmentLightivSGIX(light:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFragmentLightivSGIX({0}, {1}, (GLint*)&{3}[0] + {2})", light, pname, bOffset, params); }
-
-        inline static function glFragmentMaterialfvSGIX(face:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFragmentMaterialfvSGIX({0}, {1}, (const GLfloat*)&{3}[0] + {2})", face, pname, bOffset, params); }
-
-        inline static function glFragmentMaterialivSGIX(face:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glFragmentMaterialivSGIX({0}, {1}, (const GLint*)&{3}[0] + {2})", face, pname, bOffset, params); }
-
-        inline static function glGetFragmentLightfvSGIX(light:Int, value:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetFragmentLightfvSGIX({0}, {1}, (GLfloat*)&{3}[0] + {2})", light, value, bOffset, data); }
-
-        inline static function glGetFragmentLightivSGIX(light:Int, value:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetFragmentLightivSGIX({0}, {1}, (GLint*)&{3}[0] + {2})", light, value, bOffset, data); }
-
-        inline static function glGetFragmentMaterialfvSGIX(face:Int, pname:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetFragmentMaterialfvSGIX({0}, {1}, (const GLfloat*)&{3}[0] + {2})", face, pname, bOffset, data); }
-
-        inline static function glGetFragmentMaterialivSGIX(face:Int, pname:Int, ?bOffset:Int=0, data:BytesData) : Void
-          { untyped __cpp__("glGetFragmentMaterialivSGIX({0}, {1}, (const GLint*)&{3}[0] + {2})", face, pname, bOffset, data); }
-
-
-
-    // TODO functions
-
-            
-        // @:native('glFragmentMaterialiSGIX')
-        // static function glFragmentMaterialiSGIX(face:Int, pname:Int, param:const GLint) : Void;
-
-
-//GL_SGIX_framezoom
-
-    // GL_SGIX_framezoom defines
-
-        inline static var GL_SGIX_framezoom                                               = 1;
-
-
-
-
-    // GL_SGIX_framezoom functions
-
-        @:native('glFrameZoomSGIX')
-        static function glFrameZoomSGIX(factor:Int) : Void;
-
-
-
-
-
-//GL_SGIX_interlace
-
-    // GL_SGIX_interlace defines
-
-        inline static var GL_SGIX_interlace                                               = 1;
-        inline static var GL_INTERLACE_SGIX                                               = 0x8094;
-
-
-//GL_SGIX_ir_instrument1
-
-    // GL_SGIX_ir_instrument1 defines
-
-        inline static var GL_SGIX_ir_instrument1                                          = 1;
-
-
-//GL_SGIX_list_priority
-
-    // GL_SGIX_list_priority defines
-
-        inline static var GL_SGIX_list_priority                                           = 1;
-
-
-//GL_SGIX_pixel_texture
-
-    // GL_SGIX_pixel_texture defines
-
-        inline static var GL_SGIX_pixel_texture                                           = 1;
-
-
-
-
-    // GL_SGIX_pixel_texture functions
-
-        @:native('glPixelTexGenSGIX')
-        static function glPixelTexGenSGIX(mode:Int) : Void;
-
-
-
-
-
-//GL_SGIX_pixel_texture_bits
-
-    // GL_SGIX_pixel_texture_bits defines
-
-        inline static var GL_SGIX_pixel_texture_bits                                      = 1;
-
-
-//GL_SGIX_reference_plane
-
-    // GL_SGIX_reference_plane defines
-
-        inline static var GL_SGIX_reference_plane                                         = 1;
-
-
-
-
-    // GL_SGIX_reference_plane functions
-
-
-        inline static function glReferencePlaneSGIX(equation:Array<Float>) : Void
-          { untyped __cpp__("glReferencePlaneSGIX((const GLdouble*)&{0}[0])", equation); }
-
-
-
-
-//GL_SGIX_resample
-
-    // GL_SGIX_resample defines
-
-        inline static var GL_SGIX_resample                                                = 1;
-        inline static var GL_PACK_RESAMPLE_SGIX                                           = 0x842E;
-        inline static var GL_UNPACK_RESAMPLE_SGIX                                         = 0x842F;
-        inline static var GL_RESAMPLE_DECIMATE_SGIX                                       = 0x8430;
-        inline static var GL_RESAMPLE_REPLICATE_SGIX                                      = 0x8433;
-        inline static var GL_RESAMPLE_ZERO_FILL_SGIX                                      = 0x8434;
-
-
-//GL_SGIX_shadow
-
-    // GL_SGIX_shadow defines
-
-        inline static var GL_SGIX_shadow                                                  = 1;
-        inline static var GL_TEXTURE_COMPARE_SGIX                                         = 0x819A;
-        inline static var GL_TEXTURE_COMPARE_OPERATOR_SGIX                                = 0x819B;
-        inline static var GL_TEXTURE_LEQUAL_R_SGIX                                        = 0x819C;
-        inline static var GL_TEXTURE_GEQUAL_R_SGIX                                        = 0x819D;
-
-
-//GL_SGIX_shadow_ambient
-
-    // GL_SGIX_shadow_ambient defines
-
-        inline static var GL_SGIX_shadow_ambient                                          = 1;
-        inline static var GL_SHADOW_AMBIENT_SGIX                                          = 0x80BF;
-
-
-//GL_SGIX_sprite
-
-    // GL_SGIX_sprite defines
-
-        inline static var GL_SGIX_sprite                                                  = 1;
-
-
-
-
-    // GL_SGIX_sprite functions
-
-        @:native('glSpriteParameterfSGIX')
-        static function glSpriteParameterfSGIX(pname:Int, param:Float) : Void;
-
-        @:native('glSpriteParameteriSGIX')
-        static function glSpriteParameteriSGIX(pname:Int, param:Int) : Void;
-
-
-        inline static function glSpriteParameterfvSGIX(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glSpriteParameterfvSGIX({0}, (GLfloat*)&{2}[0] + {1})", pname, bOffset, params); }
-
-        inline static function glSpriteParameterivSGIX(pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glSpriteParameterivSGIX({0}, (GLint*)&{2}[0] + {1})", pname, bOffset, params); }
-
-
-
-
-//GL_SGIX_tag_sample_buffer
-
-    // GL_SGIX_tag_sample_buffer defines
-
-        inline static var GL_SGIX_tag_sample_buffer                                       = 1;
-
-
-
-
-    // GL_SGIX_tag_sample_buffer functions
-
-        @:native('glTagSampleBufferSGIX')
-        static function glTagSampleBufferSGIX() : Void;
-
-
-
-
-
-//GL_SGIX_texture_add_env
-
-    // GL_SGIX_texture_add_env defines
-
-        inline static var GL_SGIX_texture_add_env                                         = 1;
-
-
-//GL_SGIX_texture_coordinate_clamp
-
-    // GL_SGIX_texture_coordinate_clamp defines
-
-        inline static var GL_SGIX_texture_coordinate_clamp                                = 1;
-        inline static var GL_TEXTURE_MAX_CLAMP_S_SGIX                                     = 0x8369;
-        inline static var GL_TEXTURE_MAX_CLAMP_T_SGIX                                     = 0x836A;
-        inline static var GL_TEXTURE_MAX_CLAMP_R_SGIX                                     = 0x836B;
-
-
-//GL_SGIX_texture_lod_bias
-
-    // GL_SGIX_texture_lod_bias defines
-
-        inline static var GL_SGIX_texture_lod_bias                                        = 1;
-
-
-//GL_SGIX_texture_multi_buffer
-
-    // GL_SGIX_texture_multi_buffer defines
-
-        inline static var GL_SGIX_texture_multi_buffer                                    = 1;
-        inline static var GL_TEXTURE_MULTI_BUFFER_HINT_SGIX                               = 0x812E;
-
-
-//GL_SGIX_texture_range
-
-    // GL_SGIX_texture_range defines
-
-        inline static var GL_SGIX_texture_range                                           = 1;
-        inline static var GL_RGB_SIGNED_SGIX                                              = 0x85E0;
-        inline static var GL_RGBA_SIGNED_SGIX                                             = 0x85E1;
-        inline static var GL_ALPHA_SIGNED_SGIX                                            = 0x85E2;
-        inline static var GL_LUMINANCE_SIGNED_SGIX                                        = 0x85E3;
-        inline static var GL_INTENSITY_SIGNED_SGIX                                        = 0x85E4;
-        inline static var GL_LUMINANCE_ALPHA_SIGNED_SGIX                                  = 0x85E5;
-        inline static var GL_RGB16_SIGNED_SGIX                                            = 0x85E6;
-        inline static var GL_RGBA16_SIGNED_SGIX                                           = 0x85E7;
-        inline static var GL_ALPHA16_SIGNED_SGIX                                          = 0x85E8;
-        inline static var GL_LUMINANCE16_SIGNED_SGIX                                      = 0x85E9;
-        inline static var GL_INTENSITY16_SIGNED_SGIX                                      = 0x85EA;
-        inline static var GL_LUMINANCE16_ALPHA16_SIGNED_SGIX                              = 0x85EB;
-        inline static var GL_RGB_EXTENDED_RANGE_SGIX                                      = 0x85EC;
-        inline static var GL_RGBA_EXTENDED_RANGE_SGIX                                     = 0x85ED;
-        inline static var GL_ALPHA_EXTENDED_RANGE_SGIX                                    = 0x85EE;
-        inline static var GL_LUMINANCE_EXTENDED_RANGE_SGIX                                = 0x85EF;
-        inline static var GL_INTENSITY_EXTENDED_RANGE_SGIX                                = 0x85F0;
-        inline static var GL_LUMINANCE_ALPHA_EXTENDED_RANGE_SGIX                          = 0x85F1;
-        inline static var GL_RGB16_EXTENDED_RANGE_SGIX                                    = 0x85F2;
-        inline static var GL_RGBA16_EXTENDED_RANGE_SGIX                                   = 0x85F3;
-        inline static var GL_ALPHA16_EXTENDED_RANGE_SGIX                                  = 0x85F4;
-        inline static var GL_LUMINANCE16_EXTENDED_RANGE_SGIX                              = 0x85F5;
-        inline static var GL_INTENSITY16_EXTENDED_RANGE_SGIX                              = 0x85F6;
-        inline static var GL_LUMINANCE16_ALPHA16_EXTENDED_RANGE_SGIX                      = 0x85F7;
-        inline static var GL_MIN_LUMINANCE_SGIS                                           = 0x85F8;
-        inline static var GL_MAX_LUMINANCE_SGIS                                           = 0x85F9;
-        inline static var GL_MIN_INTENSITY_SGIS                                           = 0x85FA;
-        inline static var GL_MAX_INTENSITY_SGIS                                           = 0x85FB;
-
-
-//GL_SGIX_texture_scale_bias
-
-    // GL_SGIX_texture_scale_bias defines
-
-        inline static var GL_SGIX_texture_scale_bias                                      = 1;
-        inline static var GL_POST_TEXTURE_FILTER_BIAS_SGIX                                = 0x8179;
-        inline static var GL_POST_TEXTURE_FILTER_SCALE_SGIX                               = 0x817A;
-        inline static var GL_POST_TEXTURE_FILTER_BIAS_RANGE_SGIX                          = 0x817B;
-        inline static var GL_POST_TEXTURE_FILTER_SCALE_RANGE_SGIX                         = 0x817C;
-
-
-//GL_SGIX_vertex_preclip
-
-    // GL_SGIX_vertex_preclip defines
-
-        inline static var GL_SGIX_vertex_preclip                                          = 1;
-        inline static var GL_VERTEX_PRECLIP_SGIX                                          = 0x83EE;
-        inline static var GL_VERTEX_PRECLIP_HINT_SGIX                                     = 0x83EF;
-
-
-//GL_SGIX_vertex_preclip_hint
-
-    // GL_SGIX_vertex_preclip_hint defines
-
-        inline static var GL_SGIX_vertex_preclip_hint                                     = 1;
-
-
-//GL_SGIX_ycrcb
-
-    // GL_SGIX_ycrcb defines
-
-        inline static var GL_SGIX_ycrcb                                                   = 1;
-
-
-//GL_SGI_color_matrix
-
-    // GL_SGI_color_matrix defines
-
-        inline static var GL_SGI_color_matrix                                             = 1;
-        inline static var GL_COLOR_MATRIX_SGI                                             = 0x80B1;
-        inline static var GL_COLOR_MATRIX_STACK_DEPTH_SGI                                 = 0x80B2;
-        inline static var GL_MAX_COLOR_MATRIX_STACK_DEPTH_SGI                             = 0x80B3;
-        inline static var GL_POST_COLOR_MATRIX_RED_SCALE_SGI                              = 0x80B4;
-        inline static var GL_POST_COLOR_MATRIX_GREEN_SCALE_SGI                            = 0x80B5;
-        inline static var GL_POST_COLOR_MATRIX_BLUE_SCALE_SGI                             = 0x80B6;
-        inline static var GL_POST_COLOR_MATRIX_ALPHA_SCALE_SGI                            = 0x80B7;
-        inline static var GL_POST_COLOR_MATRIX_RED_BIAS_SGI                               = 0x80B8;
-        inline static var GL_POST_COLOR_MATRIX_GREEN_BIAS_SGI                             = 0x80B9;
-        inline static var GL_POST_COLOR_MATRIX_BLUE_BIAS_SGI                              = 0x80BA;
-        inline static var GL_POST_COLOR_MATRIX_ALPHA_BIAS_SGI                             = 0x80BB;
-
-
-//GL_SGI_color_table
-
-    // GL_SGI_color_table defines
-
-        inline static var GL_SGI_color_table                                              = 1;
-        inline static var GL_COLOR_TABLE_SGI                                              = 0x80D0;
-        inline static var GL_POST_CONVOLUTION_COLOR_TABLE_SGI                             = 0x80D1;
-        inline static var GL_POST_COLOR_MATRIX_COLOR_TABLE_SGI                            = 0x80D2;
-        inline static var GL_PROXY_COLOR_TABLE_SGI                                        = 0x80D3;
-        inline static var GL_PROXY_POST_CONVOLUTION_COLOR_TABLE_SGI                       = 0x80D4;
-        inline static var GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE_SGI                      = 0x80D5;
-        inline static var GL_COLOR_TABLE_SCALE_SGI                                        = 0x80D6;
-        inline static var GL_COLOR_TABLE_BIAS_SGI                                         = 0x80D7;
-        inline static var GL_COLOR_TABLE_FORMAT_SGI                                       = 0x80D8;
-        inline static var GL_COLOR_TABLE_WIDTH_SGI                                        = 0x80D9;
-        inline static var GL_COLOR_TABLE_RED_SIZE_SGI                                     = 0x80DA;
-        inline static var GL_COLOR_TABLE_GREEN_SIZE_SGI                                   = 0x80DB;
-        inline static var GL_COLOR_TABLE_BLUE_SIZE_SGI                                    = 0x80DC;
-        inline static var GL_COLOR_TABLE_ALPHA_SIZE_SGI                                   = 0x80DD;
-        inline static var GL_COLOR_TABLE_LUMINANCE_SIZE_SGI                               = 0x80DE;
-        inline static var GL_COLOR_TABLE_INTENSITY_SIZE_SGI                               = 0x80DF;
-
-
-
-
-    // GL_SGI_color_table functions
-
-        @:native('glCopyColorTableSGI')
-        static function glCopyColorTableSGI(target:Int, internalformat:Int, x:Int, y:Int, width:Int) : Void;
-
-
-        inline static function glColorTableParameterfvSGI(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glColorTableParameterfvSGI({0}, {1}, (const GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glColorTableParameterivSGI(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glColorTableParameterivSGI({0}, {1}, (const GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glColorTableSGI(target:Int, internalformat:Int, width:Int, format:Int, type:Int, ?bOffset:Int=0, table:BytesData) : Void
-          { untyped __cpp__("glColorTableSGI({0}, {1}, {2}, {3}, {4}, (const void*)&{6}[0] + {5})", target, internalformat, width, format, type, bOffset, table); }
-
-        inline static function glGetColorTableParameterfvSGI(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetColorTableParameterfvSGI({0}, {1}, (GLfloat*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glGetColorTableParameterivSGI(target:Int, pname:Int, ?bOffset:Int=0, params:BytesData) : Void
-          { untyped __cpp__("glGetColorTableParameterivSGI({0}, {1}, (GLint*)&{3}[0] + {2})", target, pname, bOffset, params); }
-
-        inline static function glGetColorTableSGI(target:Int, format:Int, type:Int, ?bOffset:Int=0, table:BytesData) : Void
-          { untyped __cpp__("glGetColorTableSGI({0}, {1}, {2}, (void*)&{4}[0] + {3})", target, format, type, bOffset, table); }
-
-
-
-
-//GL_SGI_texture_color_table
-
-    // GL_SGI_texture_color_table defines
-
-        inline static var GL_SGI_texture_color_table                                      = 1;
-        inline static var GL_TEXTURE_COLOR_TABLE_SGI                                      = 0x80BC;
-        inline static var GL_PROXY_TEXTURE_COLOR_TABLE_SGI                                = 0x80BD;
-
-
-//GL_SUNX_constant_data
-
-    // GL_SUNX_constant_data defines
-
-        inline static var GL_SUNX_constant_data                                           = 1;
-        inline static var GL_UNPACK_CONSTANT_DATA_SUNX                                    = 0x81D5;
-        inline static var GL_TEXTURE_CONSTANT_DATA_SUNX                                   = 0x81D6;
-
-
-
-
-    // GL_SUNX_constant_data functions
-
-        @:native('glFinishTextureSUNX')
-        static function glFinishTextureSUNX() : Void;
-
-
-
-
-
-//GL_SUN_convolution_border_modes
-
-    // GL_SUN_convolution_border_modes defines
-
-        inline static var GL_SUN_convolution_border_modes                                 = 1;
-        inline static var GL_WRAP_BORDER_SUN                                              = 0x81D4;
-
-
-//GL_SUN_global_alpha
-
-    // GL_SUN_global_alpha defines
-
-        inline static var GL_SUN_global_alpha                                             = 1;
-        inline static var GL_GLOBAL_ALPHA_SUN                                             = 0x81D9;
-        inline static var GL_GLOBAL_ALPHA_FACTOR_SUN                                      = 0x81DA;
-
-
-
-
-    // GL_SUN_global_alpha functions
-
-        @:native('glGlobalAlphaFactorbSUN')
-        static function glGlobalAlphaFactorbSUN(factor:String) : Void;
-
-        @:native('glGlobalAlphaFactordSUN')
-        static function glGlobalAlphaFactordSUN(factor:Float) : Void;
-
-        @:native('glGlobalAlphaFactorfSUN')
-        static function glGlobalAlphaFactorfSUN(factor:Float) : Void;
-
-        @:native('glGlobalAlphaFactoriSUN')
-        static function glGlobalAlphaFactoriSUN(factor:Int) : Void;
-
-        @:native('glGlobalAlphaFactorsSUN')
-        static function glGlobalAlphaFactorsSUN(factor:Int) : Void;
-
-        @:native('glGlobalAlphaFactorubSUN')
-        static function glGlobalAlphaFactorubSUN(factor:String) : Void;
-
-        @:native('glGlobalAlphaFactoruiSUN')
-        static function glGlobalAlphaFactoruiSUN(factor:UInt) : Void;
-
-        @:native('glGlobalAlphaFactorusSUN')
-        static function glGlobalAlphaFactorusSUN(factor:UInt) : Void;
-
-
-
-
-
-//GL_SUN_mesh_array
-
-    // GL_SUN_mesh_array defines
-
-        inline static var GL_SUN_mesh_array                                               = 1;
-        inline static var GL_QUAD_MESH_SUN                                                = 0x8614;
-        inline static var GL_TRIANGLE_MESH_SUN                                            = 0x8615;
-
-
-//GL_SUN_read_video_pixels
-
-    // GL_SUN_read_video_pixels defines
-
-        inline static var GL_SUN_read_video_pixels                                        = 1;
-
-
-
-
-    // GL_SUN_read_video_pixels functions
-
-
-        inline static function glReadVideoPixelsSUN(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, ?bOffset:Int=0, pixels:BytesData) : Void
-          { untyped __cpp__("glReadVideoPixelsSUN({0}, {1}, {2}, {3}, {4}, {5}, (void*)&{7}[0] + {6})", x, y, width, height, format, type, bOffset, pixels); }
-
-
-
-
-//GL_SUN_slice_accum
-
-    // GL_SUN_slice_accum defines
-
-        inline static var GL_SUN_slice_accum                                              = 1;
-        inline static var GL_SLICE_ACCUM_SUN                                              = 0x85CC;
-
-
-//GL_SUN_triangle_list
-
-    // GL_SUN_triangle_list defines
-
-        inline static var GL_SUN_triangle_list                                            = 1;
-        inline static var GL_RESTART_SUN                                                  = 0x01;
-        inline static var GL_REPLACE_MIDDLE_SUN                                           = 0x02;
-        inline static var GL_REPLACE_OLDEST_SUN                                           = 0x03;
-        inline static var GL_TRIANGLE_LIST_SUN                                            = 0x81D7;
-        inline static var GL_REPLACEMENT_CODE_SUN                                         = 0x81D8;
-        inline static var GL_REPLACEMENT_CODE_ARRAY_SUN                                   = 0x85C0;
-        inline static var GL_REPLACEMENT_CODE_ARRAY_TYPE_SUN                              = 0x85C1;
-        inline static var GL_REPLACEMENT_CODE_ARRAY_STRIDE_SUN                            = 0x85C2;
-        inline static var GL_REPLACEMENT_CODE_ARRAY_POINTER_SUN                           = 0x85C3;
-        inline static var GL_R1UI_V3F_SUN                                                 = 0x85C4;
-        inline static var GL_R1UI_C4UB_V3F_SUN                                            = 0x85C5;
-        inline static var GL_R1UI_C3F_V3F_SUN                                             = 0x85C6;
-        inline static var GL_R1UI_N3F_V3F_SUN                                             = 0x85C7;
-        inline static var GL_R1UI_C4F_N3F_V3F_SUN                                         = 0x85C8;
-        inline static var GL_R1UI_T2F_V3F_SUN                                             = 0x85C9;
-        inline static var GL_R1UI_T2F_N3F_V3F_SUN                                         = 0x85CA;
-        inline static var GL_R1UI_T2F_C4F_N3F_V3F_SUN                                     = 0x85CB;
-
-
-
-
-    // GL_SUN_triangle_list functions
-
-        @:native('glReplacementCodeubSUN')
-        static function glReplacementCodeubSUN(code:String) : Void;
-
-        @:native('glReplacementCodeuiSUN')
-        static function glReplacementCodeuiSUN(code:UInt) : Void;
-
-        @:native('glReplacementCodeusSUN')
-        static function glReplacementCodeusSUN(code:UInt) : Void;
-
-
-        inline static function glReplacementCodePointerSUN(type:Int, stride:Int, ?bOffset:Int=0, pointer:BytesData) : Void
-          { untyped __cpp__("glReplacementCodePointerSUN({0}, {1}, (const void*)&{3}[0] + {2})", type, stride, bOffset, pointer); }
-
-        inline static function glReplacementCodeubvSUN(?bOffset:Int=0, code:BytesData) : Void
-          { untyped __cpp__("glReplacementCodeubvSUN((const GLubyte*)&{1}[0] + {0})", bOffset, code); }
-
-        inline static function glReplacementCodeuivSUN(?bOffset:Int=0, code:BytesData) : Void
-          { untyped __cpp__("glReplacementCodeuivSUN((const GLuint*)&{1}[0] + {0})", bOffset, code); }
-
-        inline static function glReplacementCodeusvSUN(?bOffset:Int=0, code:BytesData) : Void
-          { untyped __cpp__("glReplacementCodeusvSUN((const GLushort*)&{1}[0] + {0})", bOffset, code); }
-
-
-
-
-//GL_SUN_vertex
-
-    // GL_SUN_vertex defines
-
-        inline static var GL_SUN_vertex                                                   = 1;
-
-
-
-
-    // GL_SUN_vertex functions
-
-        @:native('glColor3fVertex3fSUN')
-        static function glColor3fVertex3fSUN(r:Float, g:Float, b:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glColor4fNormal3fVertex3fSUN')
-        static function glColor4fNormal3fVertex3fSUN(r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glColor4ubVertex2fSUN')
-        static function glColor4ubVertex2fSUN(r:String, g:String, b:String, a:String, x:Float, y:Float) : Void;
-
-        @:native('glColor4ubVertex3fSUN')
-        static function glColor4ubVertex3fSUN(r:String, g:String, b:String, a:String, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glNormal3fVertex3fSUN')
-        static function glNormal3fVertex3fSUN(nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glReplacementCodeuiColor3fVertex3fSUN')
-        static function glReplacementCodeuiColor3fVertex3fSUN(rc:UInt, r:Float, g:Float, b:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glReplacementCodeuiColor4fNormal3fVertex3fSUN')
-        static function glReplacementCodeuiColor4fNormal3fVertex3fSUN(rc:UInt, r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glReplacementCodeuiColor4ubVertex3fSUN')
-        static function glReplacementCodeuiColor4ubVertex3fSUN(rc:UInt, r:String, g:String, b:String, a:String, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glReplacementCodeuiNormal3fVertex3fSUN')
-        static function glReplacementCodeuiNormal3fVertex3fSUN(rc:UInt, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN')
-        static function glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(rc:UInt, s:Float, t:Float, r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN')
-        static function glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(rc:UInt, s:Float, t:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glReplacementCodeuiTexCoord2fVertex3fSUN')
-        static function glReplacementCodeuiTexCoord2fVertex3fSUN(rc:UInt, s:Float, t:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glReplacementCodeuiVertex3fSUN')
-        static function glReplacementCodeuiVertex3fSUN(rc:UInt, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glTexCoord2fColor3fVertex3fSUN')
-        static function glTexCoord2fColor3fVertex3fSUN(s:Float, t:Float, r:Float, g:Float, b:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glTexCoord2fColor4fNormal3fVertex3fSUN')
-        static function glTexCoord2fColor4fNormal3fVertex3fSUN(s:Float, t:Float, r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glTexCoord2fColor4ubVertex3fSUN')
-        static function glTexCoord2fColor4ubVertex3fSUN(s:Float, t:Float, r:String, g:String, b:String, a:String, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glTexCoord2fNormal3fVertex3fSUN')
-        static function glTexCoord2fNormal3fVertex3fSUN(s:Float, t:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glTexCoord2fVertex3fSUN')
-        static function glTexCoord2fVertex3fSUN(s:Float, t:Float, x:Float, y:Float, z:Float) : Void;
-
-        @:native('glTexCoord4fColor4fNormal3fVertex4fSUN')
-        static function glTexCoord4fColor4fNormal3fVertex4fSUN(s:Float, t:Float, p:Float, q:Float, r:Float, g:Float, b:Float, a:Float, nx:Float, ny:Float, nz:Float, x:Float, y:Float, z:Float, w:Float) : Void;
-
-        @:native('glTexCoord4fVertex4fSUN')
-        static function glTexCoord4fVertex4fSUN(s:Float, t:Float, p:Float, q:Float, x:Float, y:Float, z:Float, w:Float) : Void;
-
-
-        inline static function glColor3fVertex3fvSUN(?bOffset:Int=0, c:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor3fVertex3fvSUN((const GLfloat*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2})", bOffset, c, bOffset, v); }
-
-        inline static function glColor4fNormal3fVertex3fvSUN(?bOffset:Int=0, c:BytesData, ?bOffset:Int=0, n:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor4fNormal3fVertex3fvSUN((const GLfloat*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2}, (const GLfloat*)&{5}[0] + {4})", bOffset, c, bOffset, n, bOffset, v); }
-
-        inline static function glColor4ubVertex2fvSUN(?bOffset:Int=0, c:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor4ubVertex2fvSUN((const GLubyte*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2})", bOffset, c, bOffset, v); }
-
-        inline static function glColor4ubVertex3fvSUN(?bOffset:Int=0, c:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glColor4ubVertex3fvSUN((const GLubyte*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2})", bOffset, c, bOffset, v); }
-
-        inline static function glNormal3fVertex3fvSUN(?bOffset:Int=0, n:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glNormal3fVertex3fvSUN((const GLfloat*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2})", bOffset, n, bOffset, v); }
-
-        inline static function glReplacementCodeuiColor3fVertex3fvSUN(?bOffset:Int=0, rc:BytesData, ?bOffset:Int=0, c:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glReplacementCodeuiColor3fVertex3fvSUN((const GLuint*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2}, (const GLfloat*)&{5}[0] + {4})", bOffset, rc, bOffset, c, bOffset, v); }
-
-        inline static function glReplacementCodeuiColor4fNormal3fVertex3fvSUN(?bOffset:Int=0, rc:BytesData, ?bOffset:Int=0, c:BytesData, ?bOffset:Int=0, n:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glReplacementCodeuiColor4fNormal3fVertex3fvSUN((const GLuint*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2}, (const GLfloat*)&{5}[0] + {4}, (const GLfloat*)&{7}[0] + {6})", bOffset, rc, bOffset, c, bOffset, n, bOffset, v); }
-
-        inline static function glReplacementCodeuiColor4ubVertex3fvSUN(?bOffset:Int=0, rc:BytesData, ?bOffset:Int=0, c:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glReplacementCodeuiColor4ubVertex3fvSUN((const GLuint*)&{1}[0] + {0}, (const GLubyte*)&{3}[0] + {2}, (const GLfloat*)&{5}[0] + {4})", bOffset, rc, bOffset, c, bOffset, v); }
-
-        inline static function glReplacementCodeuiNormal3fVertex3fvSUN(?bOffset:Int=0, rc:BytesData, ?bOffset:Int=0, n:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glReplacementCodeuiNormal3fVertex3fvSUN((const GLuint*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2}, (const GLfloat*)&{5}[0] + {4})", bOffset, rc, bOffset, n, bOffset, v); }
-
-        inline static function glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(?bOffset:Int=0, rc:BytesData, ?bOffset:Int=0, tc:BytesData, ?bOffset:Int=0, c:BytesData, ?bOffset:Int=0, n:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN((const GLuint*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2}, (const GLfloat*)&{5}[0] + {4}, (const GLfloat*)&{7}[0] + {6}, (const GLfloat*)&{9}[0] + {8})", bOffset, rc, bOffset, tc, bOffset, c, bOffset, n, bOffset, v); }
-
-        inline static function glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(?bOffset:Int=0, rc:BytesData, ?bOffset:Int=0, tc:BytesData, ?bOffset:Int=0, n:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN((const GLuint*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2}, (const GLfloat*)&{5}[0] + {4}, (const GLfloat*)&{7}[0] + {6})", bOffset, rc, bOffset, tc, bOffset, n, bOffset, v); }
-
-        inline static function glReplacementCodeuiTexCoord2fVertex3fvSUN(?bOffset:Int=0, rc:BytesData, ?bOffset:Int=0, tc:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glReplacementCodeuiTexCoord2fVertex3fvSUN((const GLuint*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2}, (const GLfloat*)&{5}[0] + {4})", bOffset, rc, bOffset, tc, bOffset, v); }
-
-        inline static function glReplacementCodeuiVertex3fvSUN(?bOffset:Int=0, rc:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glReplacementCodeuiVertex3fvSUN((const GLuint*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2})", bOffset, rc, bOffset, v); }
-
-        inline static function glTexCoord2fColor3fVertex3fvSUN(?bOffset:Int=0, tc:BytesData, ?bOffset:Int=0, c:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord2fColor3fVertex3fvSUN((const GLfloat*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2}, (const GLfloat*)&{5}[0] + {4})", bOffset, tc, bOffset, c, bOffset, v); }
-
-        inline static function glTexCoord2fColor4fNormal3fVertex3fvSUN(?bOffset:Int=0, tc:BytesData, ?bOffset:Int=0, c:BytesData, ?bOffset:Int=0, n:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord2fColor4fNormal3fVertex3fvSUN((const GLfloat*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2}, (const GLfloat*)&{5}[0] + {4}, (const GLfloat*)&{7}[0] + {6})", bOffset, tc, bOffset, c, bOffset, n, bOffset, v); }
-
-        inline static function glTexCoord2fColor4ubVertex3fvSUN(?bOffset:Int=0, tc:BytesData, ?bOffset:Int=0, c:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord2fColor4ubVertex3fvSUN((const GLfloat*)&{1}[0] + {0}, (const GLubyte*)&{3}[0] + {2}, (const GLfloat*)&{5}[0] + {4})", bOffset, tc, bOffset, c, bOffset, v); }
-
-        inline static function glTexCoord2fNormal3fVertex3fvSUN(?bOffset:Int=0, tc:BytesData, ?bOffset:Int=0, n:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord2fNormal3fVertex3fvSUN((const GLfloat*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2}, (const GLfloat*)&{5}[0] + {4})", bOffset, tc, bOffset, n, bOffset, v); }
-
-        inline static function glTexCoord2fVertex3fvSUN(?bOffset:Int=0, tc:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord2fVertex3fvSUN((const GLfloat*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2})", bOffset, tc, bOffset, v); }
-
-        inline static function glTexCoord4fColor4fNormal3fVertex4fvSUN(?bOffset:Int=0, tc:BytesData, ?bOffset:Int=0, c:BytesData, ?bOffset:Int=0, n:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord4fColor4fNormal3fVertex4fvSUN((const GLfloat*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2}, (const GLfloat*)&{5}[0] + {4}, (const GLfloat*)&{7}[0] + {6})", bOffset, tc, bOffset, c, bOffset, n, bOffset, v); }
-
-        inline static function glTexCoord4fVertex4fvSUN(?bOffset:Int=0, tc:BytesData, ?bOffset:Int=0, v:BytesData) : Void
-          { untyped __cpp__("glTexCoord4fVertex4fvSUN((const GLfloat*)&{1}[0] + {0}, (const GLfloat*)&{3}[0] + {2})", bOffset, tc, bOffset, v); }
-
-
-
-
-//GL_WIN_phong_shading
-
-    // GL_WIN_phong_shading defines
-
-        inline static var GL_WIN_phong_shading                                            = 1;
-        inline static var GL_PHONG_WIN                                                    = 0x80EA;
-        inline static var GL_PHONG_HINT_WIN                                               = 0x80EB;
-
-
-//GL_WIN_specular_fog
-
-    // GL_WIN_specular_fog defines
-
-        inline static var GL_WIN_specular_fog                                             = 1;
-        inline static var GL_FOG_SPECULAR_TEXTURE_WIN                                     = 0x80EC;
-
-
-//GL_WIN_swap_hint
-
-    // GL_WIN_swap_hint defines
-
-        inline static var GL_WIN_swap_hint                                                = 1;
-
-
-
-
-    // GL_WIN_swap_hint functions
-
-        @:native('glAddSwapHintRectWIN')
-        static function glAddSwapHintRectWIN(x:Int, y:Int, width:Int, height:Int) : Void;
-
+        inline static function glWindowPos3svARB(p:Array<Int>) : Void
+          { untyped __cpp__("glWindowPos3svARB((const GLshort*)&({0}[0]))", p); }
 
 
 

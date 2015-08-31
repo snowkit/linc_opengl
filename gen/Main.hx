@@ -61,9 +61,12 @@ class Main {
     static function to_haxe_type(t:String) {
         return switch(t) {
             case 'void': 'Void';
-            case 'GLfloat','GLdouble','GLclampf','GLclampd', 'const GLfloat', 'const GLdouble': 'Float';
+            case 'GLbyte': 'cpp.Int8';
+            case 'GLubyte': 'cpp.UInt8';
+            case 'GLdouble','GLclampd','const GLdouble': 'cpp.Float64';
+            case 'GLfloat','GLclampf','const GLfloat': 'cpp.Float32';
             case 'GLint','GLshort','GLsizei','GLenum','GLbitfield','GLclampx','GLfixed','GLsizeiptr','GLintptr': 'Int';
-            case 'GLubyte', 'GLbyte','const GLchar*','GLchar*', 'const GLubyte *','const GLubyte*','const GLchar *' : 'String';
+            case 'GLubyte','const GLchar*','GLchar*', 'const GLubyte *','const GLubyte*','const GLchar *' : 'String';
             case 'GLuint','GLushort','GLhalf','GLhandleARB': 'UInt';
             case 'GLboolean': 'Bool';
             case 'GLint64EXT': 'cpp.Int64';
@@ -178,32 +181,10 @@ class Main {
 
         var _datafunc = [
             'glBitmap',
-            'glGetPolygonStipple',
-            'glMap1d',
-            'glMap1f',
-            'glMap2d',
-            'glMap2f',
-            'glLoadMatrixd',
-            'glLoadMatrixf',
-            'glMultMatrixd',
-            'glMultMatrixf',
-            'glPolygonStipple',
-            'glSelectBuffer',
-            'glFeedbackBuffer',
-            'glTransformFeedbackAttribsNV',
-            'glLoadMatrixx',
-            'glMultMatrixx',
-            'glDetailTexFuncSGIS',
-            'glGetDetailTexFuncSGIS',
-            'glFogFuncSGIS',
-            'glGetFogFuncSGIS',
+            'glCallLists'
         ];
 
         var _notdatafunc = [
-            'glGetBooleanv',
-            'glGetIntegerv',
-            'glGetFloatv',
-            'glGetDoublev'
         ];
 
         for(a in args) {
@@ -216,7 +197,7 @@ class Main {
 
             if(_aname == '*v') {
                 _genbody = true;
-                outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
+                // outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
                 _aname = 'v';
                 _atype = 'BytesData';
                 _native = null;
@@ -225,7 +206,7 @@ class Main {
                 _genbody = true;
                 _native = null;
                 _wrap = true;
-                outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
+                // outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
                 _atype = 'BytesData';
 
             } else if(_datatypes.indexOf(_atype) != -1) {
@@ -234,11 +215,11 @@ class Main {
                 _wrap = true;
                 var l = _fname.length;
                 var _is_data = _datafunc.indexOf(_fname) != -1;
-                if(!_is_data && _notdatafunc.indexOf(_fname) == -1) {
-                    while(l > 0) { l--; var c = _fname.charAt(l); if(c.toUpperCase() != c) { if(c == 'v') _is_data = true; break; } }
-                }
+                // if(!_is_data && _notdatafunc.indexOf(_fname) == -1) {
+                    // while(l > 0) { l--; var c = _fname.charAt(l); if(c.toUpperCase() != c) { if(c == 'v') _is_data = true; break; } }
+                // }
                 if(_is_data) {
-                    outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
+                    // outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
                     _atype = 'BytesData';
                 } else {
                     _atype = 'Array';
@@ -290,10 +271,10 @@ class Main {
             for(a in outargs) {
                 if(a.type == 'BytesData') {
                     var p = (a.gltype.indexOf('*') == -1) ? '*' : '';
-                    var _bid = _arg_items.length;
-                    var _bfid = _bid+1;
-                    _arg_names.push('(${a.gltype}$p)&{$_bfid}[0] + {$_bid}');
-                    _arg_items.push('bOffset');
+                    var _bfid = _arg_items.length;
+                    // var _bfid = _bid+1;
+                    _arg_names.push('(${a.gltype}$p)&({$_bfid}[0])');
+                    // _arg_items.push('bOffset');
                     _arg_items.push('${a.name}');
                 }  
 
@@ -306,10 +287,12 @@ class Main {
                     if(_ta != _tb) {
                         a.type = 'Array<$_ta>';
                         var p = (a.gltype.indexOf('*') == -1) ? '*' : '';
-                        _arg_names.push('(${a.gltype}$p)&{${_arg_items.length}}[0]');
+                        _arg_names.push('(${a.gltype}$p)&({${_arg_items.length}}[0])');
                         _arg_items.push(a.name);
                     }
-                } else if(a.name != '?bOffset') {
+                } else 
+                // if(a.name != '?bOffset') 
+                {
                     _arg_names.push('{${_arg_items.length}}');
                     _arg_items.push(a.name);
                 }
@@ -442,6 +425,7 @@ class Main {
         out += '\n\n';
 
         for(e in glew.exts) {
+            if(e.name.indexOf('ARB') == -1) continue;
             out += '//${e.name}\n\n';
 
             if(e.defines.length>0) {
