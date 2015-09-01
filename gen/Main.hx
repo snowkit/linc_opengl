@@ -61,15 +61,16 @@ class Main {
     static function to_haxe_type(t:String) {
         return switch(t) {
             case 'void': 'Void';
+            case 'GLsync': 'GLSync';
             case 'GLbyte': 'cpp.Int8';
             case 'GLubyte': 'cpp.UInt8';
             case 'GLdouble','GLclampd','const GLdouble': 'cpp.Float64';
-            case 'GLfloat','GLclampf','const GLfloat': 'cpp.Float32';
-            case 'GLint','GLshort','GLsizei','GLenum','GLbitfield','GLclampx','GLfixed','GLsizeiptr','GLintptr': 'Int';
-            case 'GLubyte','const GLchar*','GLchar*', 'const GLubyte *','const GLubyte*','const GLchar *' : 'String';
+            case 'GLfloat','GLclampf','const GLfloat', 'const GLclampf': 'cpp.Float32';
+            case 'const GLint','GLint','GLshort','GLsizei','GLenum','GLbitfield','GLclampx','GLfixed','GLsizeiptr','GLsizeiptrARB','GLintptr','GLintptrARB': 'Int';
+            case 'GLchar','const GLchar*','GLchar*', 'const GLubyte *','const GLchar* const*','const GLubyte*','const GLchar *','const GLcharARB*','GLcharARB','const GLchar * const *' : 'String';
             case 'GLuint','GLushort','GLhalf','GLhandleARB': 'UInt';
             case 'GLboolean': 'Bool';
-            case 'GLint64EXT': 'cpp.Int64';
+            case 'GLint64EXT','GLint64': 'cpp.Int64';
             case 'GLuint64','GLuint64EXT': 'cpp.UInt64';
             case _: return t;
         }
@@ -90,10 +91,7 @@ class Main {
         var r = false;
         for(n in [
             '*',
-            'GLsync',
             'GLvdpauSurfaceNV',
-            'GLintptr',
-            'GLsizeiptr',
             'GLLOGPROCREGAL',
             'GLDEBUGPROC',
             'GLbyte',
@@ -161,27 +159,51 @@ class Main {
         var _datatypes = [
             'GLint*',
             'GLuint*',
+            'GLbyte*',
+            'GLfixed*',
+            'GLshort*',
             'GLubyte*',
             'GLushort*',
             'GLfloat*',
             'GLdouble*',
             'GLboolean*',
+            'GLint64EXT*',
+            'GLuint64EXT*',
+            'GLint64*',
+            'GLuint64*',
+            'const GLsizei*',
+            'const GLclampd *',
+            'const GLint *',
+            'const GLfloat *',
+            'const GLint64*',
+            'const GLuint64*',
+            'const GLboolean*',
+            'const GLint64EXT*',
+            'const GLuint64EXT*',
+            'const GLclampf*',
             'const GLhalf*',
             'const GLenum*',
             'const GLint*',
             'const GLfloat*',
             'const GLuint*',
+            'const GLuint *',
             'const GLushort*',
             'const GLubyte*',
             'const GLdouble*',
             'const GLbyte*',
             'const GLshort*',
             'const GLfixed*',
+            'const GLintptr*',
+            'const GLsizeiptr*',
+            'const GLchar * const *',
+            'const GLcharARB **',
+            'const GLchar* const *'
         ];
 
         var _datafunc = [
             'glBitmap',
-            'glCallLists'
+            'glCallLists',
+            'glMultiDrawElements'
         ];
 
         var _notdatafunc = [
@@ -202,7 +224,7 @@ class Main {
                 _atype = 'BytesData';
                 _native = null;
                 _wrap = true;
-            } else if(_atype == 'const void*' || _atype == 'void*') {
+            } else if(_atype == 'const void*' || _atype == 'void*' || _atype == 'const void *const*') {
                 _genbody = true;
                 _native = null;
                 _wrap = true;
@@ -215,9 +237,6 @@ class Main {
                 _wrap = true;
                 var l = _fname.length;
                 var _is_data = _datafunc.indexOf(_fname) != -1;
-                // if(!_is_data && _notdatafunc.indexOf(_fname) == -1) {
-                    // while(l > 0) { l--; var c = _fname.charAt(l); if(c.toUpperCase() != c) { if(c == 'v') _is_data = true; break; } }
-                // }
                 if(_is_data) {
                     // outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
                     _atype = 'BytesData';
@@ -227,8 +246,12 @@ class Main {
             }
 
             var log_hidden = false;
+            var log_hidden_force = ['glLoadTransposeMatrixdARB'];
+
+            inline function show_name() return log_hidden_force.indexOf(_fname) != -1;
+
             if(chkname(_aname,'*')) {
-                if(log_hidden) trace('hidden: $_fname  reason: pointer in argument name');
+                if(log_hidden || show_name()) trace('hidden: $_fname  reason: pointer in argument name');
                 _hidden = true;
             }
                 //convert known types
@@ -236,14 +259,14 @@ class Main {
                 //any complex types after convert?
             if(chktype(_atype)) {
                 _hidden = true;
-                if(log_hidden) trace('hidden: $_fname  reason: typecheck');
+                if(log_hidden || show_name()) trace('hidden: $_fname  reason: typecheck');
             }
                 //first letter lower case?
             var _first = _atype.charAt(0);
             if(_first == '$_first'.toLowerCase()) {
                 if(_atype.indexOf('cpp.') == -1) {
                     _hidden = true;
-                    if(log_hidden) trace('hidden: $_fname  reason: lowercase type names');
+                    if(log_hidden || show_name()) trace('hidden: $_fname  reason: lowercase type names');
                 }
             }
             
@@ -251,8 +274,8 @@ class Main {
             if(_p != -1) {
                 _aname = _aname.substr(0, _p);
                 _atype = 'Array<$_atype>';
-                _hidden = true;
-                if(log_hidden) trace('hidden: $_fname  reason: arrays in args');
+                // _hidden = true;
+                // if(log_hidden || show_name()) trace('hidden: $_fname  reason: arrays in args');
                 _wrap = true;
             }
 
@@ -283,7 +306,10 @@ class Main {
                         _tb = _tb.replace('const ','');
                         _tb = _tb.replace('const','');
                         _tb = _tb.replace('*','');
+                        _tb = _tb.trim();
                     var _ta = to_haxe_type(_tb);
+
+                    if(_fname == 'glShaderSourceARB')trace('$_fname $_ta $_tb');
                     if(_ta != _tb) {
                         a.type = 'Array<$_ta>';
                         var p = (a.gltype.indexOf('*') == -1) ? '*' : '';
@@ -392,7 +418,16 @@ class Main {
     }
     static function write_file() {
 
-        var out = 'package opengl;\n\nimport haxe.io.BytesData;\n\n@:keep\n@:include(\'linc_opengl.h\')\n@:build(linc.Linc.touch())\n@:build(linc.Linc.xml(\'opengl\'))\nextern class GL {\n\n';
+        var out = '';
+        //package
+        out += 'package opengl;\n\n';
+        //imports
+        out += 'import haxe.io.BytesData;\n\n';
+
+        out += '@:keep\n@:include(\'linc_opengl.h\')\n@:native(\'GLsync\')\nextern class GLSync {}\n\n';
+
+        //extern GL
+        out += '@:keep\n@:include(\'linc_opengl.h\')\n@:build(linc.Linc.touch())\n@:build(linc.Linc.xml(\'opengl\'))\nextern class GL {\n\n';
 
         var written_defines = [];
 
@@ -425,7 +460,7 @@ class Main {
         out += '\n\n';
 
         for(e in glew.exts) {
-            if(e.name.indexOf('ARB') == -1) continue;
+            // if(e.name.indexOf('ARB') == -1) continue;
             out += '//${e.name}\n\n';
 
             if(e.defines.length>0) {
