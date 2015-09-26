@@ -8,6 +8,11 @@ import haxe.io.BytesData;
 extern class GLSync {}
 
 @:keep
+abstract IntRef(cpp.Pointer<Int>) {
+    @:from static inline function fromInt(_val:Int) : IntRef return cast cpp.Pointer.addressOf(_val);
+}
+
+@:keep
 @:include('linc_opengl.h')
 @:build(linc.Linc.touch())
 @:build(linc.Linc.xml('opengl'))
@@ -2418,8 +2423,20 @@ extern class GL {
         inline static function glDrawBuffers(n:Int, bufs:Array<Int>) : Void
           { untyped __cpp__("glDrawBuffers({0}, (const GLenum*)&({1}[0]))", n, bufs); }
 
+        inline static function glGetAttachedShaders(program:UInt, maxCount:Int, count:Array<Int>, shaders:Array<UInt>) : Void
+          { untyped __cpp__("glGetAttachedShaders({0}, {1}, (GLsizei*)&({2}[0]), (GLuint*)&({3}[0]))", program, maxCount, count, shaders); }
+
+        inline static function glGetProgramInfoLog(program:UInt, bufSize:Int, length:Array<Int>, infoLog:String) : Void
+          { untyped __cpp__("glGetProgramInfoLog({0}, {1}, (GLsizei*)&({2}[0]), {3})", program, bufSize, length, infoLog); }
+
         inline static function glGetProgramiv(program:UInt, pname:Int, param:Array<Int>) : Void
           { untyped __cpp__("glGetProgramiv({0}, {1}, (GLint*)&({2}[0]))", program, pname, param); }
+
+        inline static function glGetShaderInfoLog(shader:UInt, bufSize:Int, length:Array<Int>, infoLog:String) : Void
+          { untyped __cpp__("glGetShaderInfoLog({0}, {1}, (GLsizei*)&({2}[0]), {3})", shader, bufSize, length, infoLog); }
+
+        inline static function glGetShaderSource(obj:UInt, maxLength:Int, length:Array<Int>, source:String) : Void
+          { untyped __cpp__("glGetShaderSource({0}, {1}, (GLsizei*)&({2}[0]), {3})", obj, maxLength, length, source); }
 
         inline static function glGetShaderiv(shader:UInt, pname:Int, param:Array<Int>) : Void
           { untyped __cpp__("glGetShaderiv({0}, {1}, (GLint*)&({2}[0]))", shader, pname, param); }
@@ -2549,23 +2566,11 @@ extern class GL {
     // TODO functions
 
             
-        // inline static function glGetActiveAttrib(program:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:Array<Int>, type:GLenum*, name:String) : Void
-        // { untyped __cpp__("glGetActiveAttrib({0}, {1}, {2}, {3}, (GLint*)&({4}[0]), {5}, {6})", program, index, maxLength, length, size, type, name); }
+        // inline static function glGetActiveAttrib(program:UInt, index:UInt, maxLength:Int, length:Array<Int>, size:Array<Int>, type:GLenum*, name:String) : Void
+        // { untyped __cpp__("glGetActiveAttrib({0}, {1}, {2}, (GLsizei*)&({3}[0]), (GLint*)&({4}[0]), {5}, {6})", program, index, maxLength, length, size, type, name); }
             
-        // inline static function glGetActiveUniform(program:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:Array<Int>, type:GLenum*, name:String) : Void
-        // { untyped __cpp__("glGetActiveUniform({0}, {1}, {2}, {3}, (GLint*)&({4}[0]), {5}, {6})", program, index, maxLength, length, size, type, name); }
-            
-        // inline static function glGetAttachedShaders(program:UInt, maxCount:Int, count:GLsizei*, shaders:Array<UInt>) : Void
-        // { untyped __cpp__("glGetAttachedShaders({0}, {1}, {2}, (GLuint*)&({3}[0]))", program, maxCount, count, shaders); }
-            
-        // @:native('glGetProgramInfoLog')
-        // static function glGetProgramInfoLog(program:UInt, bufSize:Int, length:GLsizei*, infoLog:String) : Void;
-            
-        // @:native('glGetShaderInfoLog')
-        // static function glGetShaderInfoLog(shader:UInt, bufSize:Int, length:GLsizei*, infoLog:String) : Void;
-            
-        // @:native('glGetShaderSource')
-        // static function glGetShaderSource(obj:UInt, maxLength:Int, length:GLsizei*, source:String) : Void;
+        // inline static function glGetActiveUniform(program:UInt, index:UInt, maxLength:Int, length:Array<Int>, size:Array<Int>, type:GLenum*, name:String) : Void
+        // { untyped __cpp__("glGetActiveUniform({0}, {1}, {2}, (GLsizei*)&({3}[0]), (GLint*)&({4}[0]), {5}, {6})", program, index, maxLength, length, size, type, name); }
             
         // @:native('glGetVertexAttribPointerv')
         // static function glGetVertexAttribPointerv(index:UInt, pname:Int, pointer:void**) : Void;
@@ -3207,8 +3212,8 @@ extern class GL {
         // inline static function glDebugMessageCallbackAMD(callback:GLDEBUGPROCAMD, userParam:BytesData) : Void
         // { untyped __cpp__("glDebugMessageCallbackAMD({0}, (void*)&({1}[0]))", callback, userParam); }
             
-        // inline static function glGetDebugMessageLogAMD(count:UInt, bufsize:Int, categories:GLenum*, severities:Array<UInt>, ids:Array<UInt>, lengths:GLsizei*, message:String) : UInt
-        // { return untyped __cpp__("glGetDebugMessageLogAMD({0}, {1}, {2}, (GLuint*)&({3}[0]), (GLuint*)&({4}[0]), {5}, {6})", count, bufsize, categories, severities, ids, lengths, message); }
+        // inline static function glGetDebugMessageLogAMD(count:UInt, bufsize:Int, categories:GLenum*, severities:Array<UInt>, ids:Array<UInt>, lengths:Array<Int>, message:String) : UInt
+        // { return untyped __cpp__("glGetDebugMessageLogAMD({0}, {1}, {2}, (GLuint*)&({3}[0]), (GLuint*)&({4}[0]), (GLsizei*)&({5}[0]), {6})", count, bufsize, categories, severities, ids, lengths, message); }
 
 
 //GL_AMD_depth_clamp_separate
@@ -3394,8 +3399,14 @@ extern class GL {
         inline static function glGetPerfMonitorCounterInfoAMD(group:UInt, counter:UInt, pname:Int, data:BytesData) : Void
           { untyped __cpp__("glGetPerfMonitorCounterInfoAMD({0}, {1}, {2}, (void*)&({3}[0]))", group, counter, pname, data); }
 
+        inline static function glGetPerfMonitorCounterStringAMD(group:UInt, counter:UInt, bufSize:Int, length:Array<Int>, counterString:String) : Void
+          { untyped __cpp__("glGetPerfMonitorCounterStringAMD({0}, {1}, {2}, (GLsizei*)&({3}[0]), {4})", group, counter, bufSize, length, counterString); }
+
         inline static function glGetPerfMonitorCountersAMD(group:UInt, numCounters:Array<Int>, maxActiveCounters:Array<Int>, countersSize:Int, counters:Array<UInt>) : Void
           { untyped __cpp__("glGetPerfMonitorCountersAMD({0}, (GLint*)&({1}[0]), (GLint*)&({2}[0]), {3}, (GLuint*)&({4}[0]))", group, numCounters, maxActiveCounters, countersSize, counters); }
+
+        inline static function glGetPerfMonitorGroupStringAMD(group:UInt, bufSize:Int, length:Array<Int>, groupString:String) : Void
+          { untyped __cpp__("glGetPerfMonitorGroupStringAMD({0}, {1}, (GLsizei*)&({2}[0]), {3})", group, bufSize, length, groupString); }
 
         inline static function glGetPerfMonitorGroupsAMD(numGroups:Array<Int>, groupsSize:Int, groups:Array<UInt>) : Void
           { untyped __cpp__("glGetPerfMonitorGroupsAMD((GLint*)&({0}[0]), {1}, (GLuint*)&({2}[0]))", numGroups, groupsSize, groups); }
@@ -3404,15 +3415,6 @@ extern class GL {
           { untyped __cpp__("glSelectPerfMonitorCountersAMD({0}, {1}, {2}, {3}, (GLuint*)&({4}[0]))", monitor, enable, group, numCounters, counterList); }
 
 
-
-    // TODO functions
-
-            
-        // @:native('glGetPerfMonitorCounterStringAMD')
-        // static function glGetPerfMonitorCounterStringAMD(group:UInt, counter:UInt, bufSize:Int, length:GLsizei*, counterString:String) : Void;
-            
-        // @:native('glGetPerfMonitorGroupStringAMD')
-        // static function glGetPerfMonitorGroupStringAMD(group:UInt, bufSize:Int, length:GLsizei*, groupString:String) : Void;
 
 
 //GL_AMD_pinned_memory
@@ -3796,13 +3798,10 @@ extern class GL {
     // GL_ANGLE_translated_shader_source functions
 
 
+        inline static function glGetTranslatedShaderSourceANGLE(shader:UInt, bufsize:Int, length:Array<Int>, source:String) : Void
+          { untyped __cpp__("glGetTranslatedShaderSourceANGLE({0}, {1}, (GLsizei*)&({2}[0]), {3})", shader, bufsize, length, source); }
 
 
-    // TODO functions
-
-            
-        // @:native('glGetTranslatedShaderSourceANGLE')
-        // static function glGetTranslatedShaderSourceANGLE(shader:UInt, bufsize:Int, length:GLsizei*, source:String) : Void;
 
 
 //GL_APPLE_aux_depth_stencil
@@ -4703,8 +4702,8 @@ extern class GL {
         // inline static function glDebugMessageCallbackARB(callback:GLDEBUGPROCARB, userParam:BytesData) : Void
         // { untyped __cpp__("glDebugMessageCallbackARB({0}, (const void*)&({1}[0]))", callback, userParam); }
             
-        // inline static function glGetDebugMessageLogARB(count:UInt, bufSize:Int, sources:GLenum*, types:GLenum*, ids:Array<UInt>, severities:GLenum*, lengths:GLsizei*, messageLog:String) : UInt
-        // { return untyped __cpp__("glGetDebugMessageLogARB({0}, {1}, {2}, {3}, (GLuint*)&({4}[0]), {5}, {6}, {7})", count, bufSize, sources, types, ids, severities, lengths, messageLog); }
+        // inline static function glGetDebugMessageLogARB(count:UInt, bufSize:Int, sources:GLenum*, types:GLenum*, ids:Array<UInt>, severities:GLenum*, lengths:Array<Int>, messageLog:String) : UInt
+        // { return untyped __cpp__("glGetDebugMessageLogARB({0}, {1}, {2}, {3}, (GLuint*)&({4}[0]), {5}, (GLsizei*)&({6}[0]), {7})", count, bufSize, sources, types, ids, severities, lengths, messageLog); }
 
 
 //GL_ARB_depth_buffer_float
@@ -5516,8 +5515,8 @@ extern class GL {
     // TODO functions
 
             
-        // @:native('glGetProgramBinary')
-        // static function glGetProgramBinary(program:UInt, bufSize:Int, length:GLsizei*, binaryFormat:GLenum*, void*binary:) : Void;
+        // inline static function glGetProgramBinary(program:UInt, bufSize:Int, length:Array<Int>, binaryFormat:GLenum*, void*binary:) : Void
+        // { untyped __cpp__("glGetProgramBinary({0}, {1}, (GLsizei*)&({2}[0]), {3}, {4})", program, bufSize, length, binaryFormat, void*binary); }
 
 
 //GL_ARB_get_texture_sub_image
@@ -6550,16 +6549,13 @@ extern class GL {
         inline static function glGetProgramInterfaceiv(program:UInt, programInterface:Int, pname:Int, params:Array<Int>) : Void
           { untyped __cpp__("glGetProgramInterfaceiv({0}, {1}, {2}, (GLint*)&({3}[0]))", program, programInterface, pname, params); }
 
+        inline static function glGetProgramResourceName(program:UInt, programInterface:Int, index:UInt, bufSize:Int, length:Array<Int>, name:String) : Void
+          { untyped __cpp__("glGetProgramResourceName({0}, {1}, {2}, {3}, (GLsizei*)&({4}[0]), {5})", program, programInterface, index, bufSize, length, name); }
+
+        inline static function glGetProgramResourceiv(program:UInt, programInterface:Int, index:UInt, propCount:Int, props:Array<Int>, bufSize:Int, length:Array<Int>, params:Array<Int>) : Void
+          { untyped __cpp__("glGetProgramResourceiv({0}, {1}, {2}, {3}, (const GLenum*)&({4}[0]), {5}, (GLsizei*)&({6}[0]), (GLint*)&({7}[0]))", program, programInterface, index, propCount, props, bufSize, length, params); }
 
 
-    // TODO functions
-
-            
-        // @:native('glGetProgramResourceName')
-        // static function glGetProgramResourceName(program:UInt, programInterface:Int, index:UInt, bufSize:Int, length:GLsizei*, name:String) : Void;
-            
-        // inline static function glGetProgramResourceiv(program:UInt, programInterface:Int, index:UInt, propCount:Int, props:Array<Int>, bufSize:Int, length:GLsizei*, params:Array<Int>) : Void
-        // { untyped __cpp__("glGetProgramResourceiv({0}, {1}, {2}, {3}, (const GLenum*)&({4}[0]), {5}, {6}, (GLint*)&({7}[0]))", program, programInterface, index, propCount, props, bufSize, length, params); }
 
 
 //GL_ARB_provoking_vertex
@@ -6884,6 +6880,9 @@ extern class GL {
         inline static function glGenProgramPipelines(n:Int, pipelines:Array<UInt>) : Void
           { untyped __cpp__("glGenProgramPipelines({0}, (GLuint*)&({1}[0]))", n, pipelines); }
 
+        inline static function glGetProgramPipelineInfoLog(pipeline:UInt, bufSize:Int, length:Array<Int>, infoLog:String) : Void
+          { untyped __cpp__("glGetProgramPipelineInfoLog({0}, {1}, (GLsizei*)&({2}[0]), {3})", pipeline, bufSize, length, infoLog); }
+
         inline static function glGetProgramPipelineiv(pipeline:UInt, pname:Int, params:Array<Int>) : Void
           { untyped __cpp__("glGetProgramPipelineiv({0}, {1}, (GLint*)&({2}[0]))", pipeline, pname, params); }
 
@@ -6990,12 +6989,6 @@ extern class GL {
           { untyped __cpp__("glProgramUniformMatrix4x3fv({0}, {1}, {2}, {3}, (const GLfloat*)&({4}[0]))", program, location, count, transpose, value); }
 
 
-
-    // TODO functions
-
-            
-        // @:native('glGetProgramPipelineInfoLog')
-        // static function glGetProgramPipelineInfoLog(pipeline:UInt, bufSize:Int, length:GLsizei*, infoLog:String) : Void;
 
 
 //GL_ARB_shader_atomic_counters
@@ -7314,17 +7307,17 @@ extern class GL {
     // TODO functions
 
             
-        // inline static function glGetActiveUniformARB(programObj:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:Array<Int>, type:GLenum*, name:GLcharARB*) : Void
-        // { untyped __cpp__("glGetActiveUniformARB({0}, {1}, {2}, {3}, (GLint*)&({4}[0]), {5}, {6})", programObj, index, maxLength, length, size, type, name); }
+        // inline static function glGetActiveUniformARB(programObj:UInt, index:UInt, maxLength:Int, length:Array<Int>, size:Array<Int>, type:GLenum*, name:GLcharARB*) : Void
+        // { untyped __cpp__("glGetActiveUniformARB({0}, {1}, {2}, (GLsizei*)&({3}[0]), (GLint*)&({4}[0]), {5}, {6})", programObj, index, maxLength, length, size, type, name); }
             
-        // @:native('glGetAttachedObjectsARB')
-        // static function glGetAttachedObjectsARB(containerObj:UInt, maxCount:Int, count:GLsizei*, obj:GLhandleARB*) : Void;
+        // inline static function glGetAttachedObjectsARB(containerObj:UInt, maxCount:Int, count:Array<Int>, obj:GLhandleARB*) : Void
+        // { untyped __cpp__("glGetAttachedObjectsARB({0}, {1}, (GLsizei*)&({2}[0]), {3})", containerObj, maxCount, count, obj); }
             
-        // @:native('glGetInfoLogARB')
-        // static function glGetInfoLogARB(obj:UInt, maxLength:Int, length:GLsizei*, infoLog:GLcharARB*) : Void;
+        // inline static function glGetInfoLogARB(obj:UInt, maxLength:Int, length:Array<Int>, infoLog:GLcharARB*) : Void
+        // { untyped __cpp__("glGetInfoLogARB({0}, {1}, (GLsizei*)&({2}[0]), {3})", obj, maxLength, length, infoLog); }
             
-        // @:native('glGetShaderSourceARB')
-        // static function glGetShaderSourceARB(obj:UInt, maxLength:Int, length:GLsizei*, source:GLcharARB*) : Void;
+        // inline static function glGetShaderSourceARB(obj:UInt, maxLength:Int, length:Array<Int>, source:GLcharARB*) : Void
+        // { untyped __cpp__("glGetShaderSourceARB({0}, {1}, (GLsizei*)&({2}[0]), {3})", obj, maxLength, length, source); }
 
 
 //GL_ARB_shader_precision
@@ -7402,6 +7395,12 @@ extern class GL {
         static function glGetSubroutineUniformLocation(program:UInt, shadertype:Int, name:String) : Int;
 
 
+        inline static function glGetActiveSubroutineName(program:UInt, shadertype:Int, index:UInt, bufsize:Int, length:Array<Int>, name:String) : Void
+          { untyped __cpp__("glGetActiveSubroutineName({0}, {1}, {2}, {3}, (GLsizei*)&({4}[0]), {5})", program, shadertype, index, bufsize, length, name); }
+
+        inline static function glGetActiveSubroutineUniformName(program:UInt, shadertype:Int, index:UInt, bufsize:Int, length:Array<Int>, name:String) : Void
+          { untyped __cpp__("glGetActiveSubroutineUniformName({0}, {1}, {2}, {3}, (GLsizei*)&({4}[0]), {5})", program, shadertype, index, bufsize, length, name); }
+
         inline static function glGetActiveSubroutineUniformiv(program:UInt, shadertype:Int, index:UInt, pname:Int, values:Array<Int>) : Void
           { untyped __cpp__("glGetActiveSubroutineUniformiv({0}, {1}, {2}, {3}, (GLint*)&({4}[0]))", program, shadertype, index, pname, values); }
 
@@ -7415,15 +7414,6 @@ extern class GL {
           { untyped __cpp__("glUniformSubroutinesuiv({0}, {1}, (const GLuint*)&({2}[0]))", shadertype, count, indices); }
 
 
-
-    // TODO functions
-
-            
-        // @:native('glGetActiveSubroutineName')
-        // static function glGetActiveSubroutineName(program:UInt, shadertype:Int, index:UInt, bufsize:Int, length:GLsizei*, name:String) : Void;
-            
-        // @:native('glGetActiveSubroutineUniformName')
-        // static function glGetActiveSubroutineUniformName(program:UInt, shadertype:Int, index:UInt, bufsize:Int, length:GLsizei*, name:String) : Void;
 
 
 //GL_ARB_shader_texture_image_samples
@@ -7621,13 +7611,10 @@ extern class GL {
         inline static function glGetInteger64v(pname:Int, params:Array<cpp.Int64>) : Void
           { untyped __cpp__("glGetInteger64v({0}, (GLint64*)&({1}[0]))", pname, params); }
 
+        inline static function glGetSynciv(GLsync:GLSync, pname:Int, bufSize:Int, length:Array<Int>, values:Array<Int>) : Void
+          { untyped __cpp__("glGetSynciv({0}, {1}, {2}, (GLsizei*)&({3}[0]), (GLint*)&({4}[0]))", GLsync, pname, bufSize, length, values); }
 
 
-    // TODO functions
-
-            
-        // inline static function glGetSynciv(GLsync:GLSync, pname:Int, bufSize:Int, length:GLsizei*, values:Array<Int>) : Void
-        // { untyped __cpp__("glGetSynciv({0}, {1}, {2}, {3}, (GLint*)&({4}[0]))", GLsync, pname, bufSize, length, values); }
 
 
 //GL_ARB_tessellation_shader
@@ -8400,8 +8387,14 @@ extern class GL {
         static function glUniformBlockBinding(program:UInt, uniformBlockIndex:UInt, uniformBlockBinding:UInt) : Void;
 
 
+        inline static function glGetActiveUniformBlockName(program:UInt, uniformBlockIndex:UInt, bufSize:Int, length:Array<Int>, uniformBlockName:String) : Void
+          { untyped __cpp__("glGetActiveUniformBlockName({0}, {1}, {2}, (GLsizei*)&({3}[0]), {4})", program, uniformBlockIndex, bufSize, length, uniformBlockName); }
+
         inline static function glGetActiveUniformBlockiv(program:UInt, uniformBlockIndex:UInt, pname:Int, params:Array<Int>) : Void
           { untyped __cpp__("glGetActiveUniformBlockiv({0}, {1}, {2}, (GLint*)&({3}[0]))", program, uniformBlockIndex, pname, params); }
+
+        inline static function glGetActiveUniformName(program:UInt, uniformIndex:UInt, bufSize:Int, length:BytesData, uniformName:String) : Void
+          { untyped __cpp__("glGetActiveUniformName({0}, {1}, {2}, (GLsizei*)&({3}[0]), {4})", program, uniformIndex, bufSize, length, uniformName); }
 
         inline static function glGetActiveUniformsiv(program:UInt, uniformCount:Int, uniformIndices:Array<UInt>, pname:Int, params:Array<Int>) : Void
           { untyped __cpp__("glGetActiveUniformsiv({0}, {1}, (const GLuint*)&({2}[0]), {3}, (GLint*)&({4}[0]))", program, uniformCount, uniformIndices, pname, params); }
@@ -8413,15 +8406,6 @@ extern class GL {
           { untyped __cpp__("glGetUniformIndices({0}, {1}, (const GLchar* const *)&({2}[0]), (GLuint*)&({3}[0]))", program, uniformCount, uniformNames, uniformIndices); }
 
 
-
-    // TODO functions
-
-            
-        // @:native('glGetActiveUniformBlockName')
-        // static function glGetActiveUniformBlockName(program:UInt, uniformBlockIndex:UInt, bufSize:Int, length:GLsizei*, uniformBlockName:String) : Void;
-            
-        // @:native('glGetActiveUniformName')
-        // static function glGetActiveUniformName(program:UInt, uniformIndex:UInt, bufSize:Int, length:GLsizei*, uniformName:String) : Void;
 
 
 //GL_ARB_vertex_array_bgra
@@ -9045,8 +9029,8 @@ extern class GL {
     // TODO functions
 
             
-        // inline static function glGetActiveAttribARB(programObj:UInt, index:UInt, maxLength:Int, length:GLsizei*, size:Array<Int>, type:GLenum*, name:GLcharARB*) : Void
-        // { untyped __cpp__("glGetActiveAttribARB({0}, {1}, {2}, {3}, (GLint*)&({4}[0]), {5}, {6})", programObj, index, maxLength, length, size, type, name); }
+        // inline static function glGetActiveAttribARB(programObj:UInt, index:UInt, maxLength:Int, length:Array<Int>, size:Array<Int>, type:GLenum*, name:GLcharARB*) : Void
+        // { untyped __cpp__("glGetActiveAttribARB({0}, {1}, {2}, (GLsizei*)&({3}[0]), (GLint*)&({4}[0]), {5}, {6})", programObj, index, maxLength, length, size, type, name); }
 
 
 //GL_ARB_vertex_type_10f_11f_11f_rev
@@ -10360,13 +10344,12 @@ extern class GL {
         static function glLabelObjectEXT(type:Int, object:UInt, length:Int, label:String) : Void;
 
 
+        inline static function glGetObjectLabelEXT(type:Int, object:UInt, bufSize:Int, length:IntRef, label:String) : Void
+          { untyped __cpp__("char __dest[{0}]", bufSize);
+            untyped __cpp__("glGetObjectLabelEXT({0},{1},{2},{3},__dest)", type,object,bufSize,length);
+            untyped __cpp__("{0} = ::String(__dest)", label); }
 
 
-    // TODO functions
-
-            
-        // @:native('glGetObjectLabelEXT')
-        // static function glGetObjectLabelEXT(type:Int, object:UInt, bufSize:Int, length:GLsizei*, label:String) : Void;
 
 
 //GL_EXT_debug_marker
@@ -11820,13 +11803,10 @@ extern class GL {
         inline static function glMultiDrawArraysEXT(mode:Int, first:Array<Int>, count:Array<Int>, primcount:Int) : Void
           { untyped __cpp__("glMultiDrawArraysEXT({0}, (const GLint*)&({1}[0]), (const GLsizei*)&({2}[0]), {3})", mode, first, count, primcount); }
 
+        inline static function glMultiDrawElementsEXT(mode:Int, count:Array<Int>, type:Int, indices:BytesData, primcount:Int) : Void
+          { untyped __cpp__("glMultiDrawElementsEXT({0}, (GLsizei*)&({1}[0]), {2}, (const void *const*)&({3}[0]), {4})", mode, count, type, indices, primcount); }
 
 
-    // TODO functions
-
-            
-        // inline static function glMultiDrawElementsEXT(mode:Int, count:GLsizei*, type:Int, indices:BytesData, primcount:Int) : Void
-        // { untyped __cpp__("glMultiDrawElementsEXT({0}, {1}, {2}, (const void *const*)&({3}[0]), {4})", mode, count, type, indices, primcount); }
 
 
 //GL_EXT_multisample
@@ -13015,8 +12995,8 @@ extern class GL {
     // TODO functions
 
             
-        // @:native('glGetTransformFeedbackVaryingEXT')
-        // static function glGetTransformFeedbackVaryingEXT(program:UInt, index:UInt, bufSize:Int, length:GLsizei*, size:GLsizei*, type:GLenum*, name:String) : Void;
+        // inline static function glGetTransformFeedbackVaryingEXT(program:UInt, index:UInt, bufSize:Int, length:Array<Int>, size:Array<Int>, type:GLenum*, name:String) : Void
+        // { untyped __cpp__("glGetTransformFeedbackVaryingEXT({0}, {1}, {2}, (GLsizei*)&({3}[0]), (GLsizei*)&({4}[0]), {5}, {6})", program, index, bufSize, length, size, type, name); }
             
         // @:native('glTransformFeedbackVaryingsEXT')
         // static function glTransformFeedbackVaryingsEXT(program:UInt, count:Int, varyings:const GLchar * const*, bufferMode:Int) : Void;
@@ -13970,6 +13950,12 @@ extern class GL {
         inline static function glDebugMessageControl(source:Int, type:Int, severity:Int, count:Int, ids:Array<UInt>, enabled:Bool) : Void
           { untyped __cpp__("glDebugMessageControl({0}, {1}, {2}, {3}, (const GLuint*)&({4}[0]), {5})", source, type, severity, count, ids, enabled); }
 
+        inline static function glGetObjectLabel(identifier:Int, name:UInt, bufSize:Int, length:Array<Int>, label:String) : Void
+          { untyped __cpp__("glGetObjectLabel({0}, {1}, {2}, (GLsizei*)&({3}[0]), {4})", identifier, name, bufSize, length, label); }
+
+        inline static function glGetObjectPtrLabel(ptr:BytesData, bufSize:Int, length:Array<Int>, label:String) : Void
+          { untyped __cpp__("glGetObjectPtrLabel((const void*)&({0}[0]), {1}, (GLsizei*)&({2}[0]), {3})", ptr, bufSize, length, label); }
+
         inline static function glObjectPtrLabel(ptr:BytesData, length:Int, label:String) : Void
           { untyped __cpp__("glObjectPtrLabel((const void*)&({0}[0]), {1}, {2})", ptr, length, label); }
 
@@ -13981,14 +13967,8 @@ extern class GL {
         // inline static function glDebugMessageCallback(callback:GLDEBUGPROC, userParam:BytesData) : Void
         // { untyped __cpp__("glDebugMessageCallback({0}, (const void*)&({1}[0]))", callback, userParam); }
             
-        // inline static function glGetDebugMessageLog(count:UInt, bufSize:Int, sources:GLenum*, types:GLenum*, ids:Array<UInt>, severities:GLenum*, lengths:GLsizei*, messageLog:String) : UInt
-        // { return untyped __cpp__("glGetDebugMessageLog({0}, {1}, {2}, {3}, (GLuint*)&({4}[0]), {5}, {6}, {7})", count, bufSize, sources, types, ids, severities, lengths, messageLog); }
-            
-        // @:native('glGetObjectLabel')
-        // static function glGetObjectLabel(identifier:Int, name:UInt, bufSize:Int, length:GLsizei*, label:String) : Void;
-            
-        // inline static function glGetObjectPtrLabel(ptr:BytesData, bufSize:Int, length:GLsizei*, label:String) : Void
-        // { untyped __cpp__("glGetObjectPtrLabel((const void*)&({0}[0]), {1}, {2}, {3})", ptr, bufSize, length, label); }
+        // inline static function glGetDebugMessageLog(count:UInt, bufSize:Int, sources:GLenum*, types:GLenum*, ids:Array<UInt>, severities:GLenum*, lengths:Array<Int>, messageLog:String) : UInt
+        // { return untyped __cpp__("glGetDebugMessageLog({0}, {1}, {2}, {3}, (GLuint*)&({4}[0]), {5}, (GLsizei*)&({6}[0]), {7})", count, bufSize, sources, types, ids, severities, lengths, messageLog); }
 
 
 //GL_KHR_no_error
@@ -15738,6 +15718,9 @@ extern class GL {
         inline static function glGetPathTexGenivNV(texCoordSet:Int, pname:Int, value:Array<Int>) : Void
           { untyped __cpp__("glGetPathTexGenivNV({0}, {1}, (GLint*)&({2}[0]))", texCoordSet, pname, value); }
 
+        inline static function glGetProgramResourcefvNV(program:UInt, programInterface:Int, index:UInt, propCount:Int, props:Array<Int>, bufSize:Int, length:Array<Int>, params:Array<cpp.Float32>) : Void
+          { untyped __cpp__("glGetProgramResourcefvNV({0}, {1}, {2}, {3}, (const GLenum*)&({4}[0]), {5}, (GLsizei*)&({6}[0]), (GLfloat*)&({7}[0]))", program, programInterface, index, propCount, props, bufSize, length, params); }
+
         inline static function glMatrixLoad3x2fNV(matrixMode:Int, m:Array<cpp.Float32>) : Void
           { untyped __cpp__("glMatrixLoad3x2fNV({0}, (const GLfloat*)&({1}[0]))", matrixMode, m); }
 
@@ -15817,9 +15800,6 @@ extern class GL {
 
     // TODO functions
 
-            
-        // inline static function glGetProgramResourcefvNV(program:UInt, programInterface:Int, index:UInt, propCount:Int, props:Array<Int>, bufSize:Int, length:GLsizei*, params:Array<cpp.Float32>) : Void
-        // { untyped __cpp__("glGetProgramResourcefvNV({0}, {1}, {2}, {3}, (const GLenum*)&({4}[0]), {5}, {6}, (GLfloat*)&({7}[0]))", program, programInterface, index, propCount, props, bufSize, length, params); }
             
         // inline static function glPathCommandsNV(path:UInt, numCommands:Int, commands:Array<cpp.UInt8>, numCoords:Int, coordType:Int, void*coords:const) : Void
         // { untyped __cpp__("glPathCommandsNV({0}, {1}, (const GLubyte*)&({2}[0]), {3}, {4}, {5})", path, numCommands, commands, numCoords, coordType, void*coords); }
@@ -16531,8 +16511,8 @@ extern class GL {
     // TODO functions
 
             
-        // @:native('glGetActiveVaryingNV')
-        // static function glGetActiveVaryingNV(program:UInt, index:UInt, bufSize:Int, length:GLsizei*, size:GLsizei*, type:GLenum*, name:String) : Void;
+        // inline static function glGetActiveVaryingNV(program:UInt, index:UInt, bufSize:Int, length:Array<Int>, size:Array<Int>, type:GLenum*, name:String) : Void
+        // { untyped __cpp__("glGetActiveVaryingNV({0}, {1}, {2}, (GLsizei*)&({3}[0]), (GLsizei*)&({4}[0]), {5}, {6})", program, index, bufSize, length, size, type, name); }
 
 
 //GL_NV_transform_feedback2
@@ -16609,8 +16589,8 @@ extern class GL {
     // TODO functions
 
             
-        // inline static function glVDPAUGetSurfaceivNV(surface:GLvdpauSurfaceNV, pname:Int, bufSize:Int, length:GLsizei*, values:Array<Int>) : Void
-        // { untyped __cpp__("glVDPAUGetSurfaceivNV({0}, {1}, {2}, {3}, (GLint*)&({4}[0]))", surface, pname, bufSize, length, values); }
+        // inline static function glVDPAUGetSurfaceivNV(surface:GLvdpauSurfaceNV, pname:Int, bufSize:Int, length:Array<Int>, values:Array<Int>) : Void
+        // { untyped __cpp__("glVDPAUGetSurfaceivNV({0}, {1}, {2}, (GLsizei*)&({3}[0]), (GLint*)&({4}[0]))", surface, pname, bufSize, length, values); }
             
         // inline static function glVDPAUInitNV(vdpDevice:BytesData, void*getProcAddress:const) : Void
         // { untyped __cpp__("glVDPAUInitNV((const void*)&({0}[0]), {1})", vdpDevice, void*getProcAddress); }

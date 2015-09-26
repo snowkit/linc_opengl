@@ -72,6 +72,7 @@ class Main {
             case 'GLboolean': 'Bool';
             case 'GLint64EXT','GLint64': 'cpp.Int64';
             case 'GLuint64','GLuint64EXT': 'cpp.UInt64';
+            case 'GLsizei*' : 'IntRef';
             case _: return t;
         }
     }
@@ -108,6 +109,7 @@ class Main {
     static var explicit = [
         'glGetString',
         'glGetStringi',
+        'glGetObjectLabelEXT'
     ];
 
     static function explicit_function(_fname:String, _fret:String, args:Array<GLFunctionArg>) {
@@ -137,6 +139,10 @@ class Main {
             case 'glGetStringi':
                 bc('const char* __val = (const char*)glGetStringi({0},{1}); if(!__val)__val=\\"\\"',['name','index']);
                 bc('::String(__val)', true);
+            case 'glGetObjectLabelEXT':
+                bc('char __dest[{0}]', ['bufSize']);
+                bc('glGetObjectLabelEXT({0},{1},{2},{3},__dest)', ['type', 'object', 'bufSize', 'length']);
+                bc('{0} = ::String(__dest)',['label']);
             case _: ret = null;
         }        
 
@@ -171,6 +177,7 @@ class Main {
             'GLuint64EXT*',
             'GLint64*',
             'GLuint64*',
+            'GLsizei*',
             'const GLsizei*',
             'const GLclampd *',
             'const GLint *',
@@ -203,7 +210,8 @@ class Main {
         var _datafunc = [
             'glBitmap',
             'glCallLists',
-            'glMultiDrawElements'
+            'glMultiDrawElements',
+            'glGetObjectLabelEXT'
         ];
 
         var _notdatafunc = [
@@ -425,6 +433,10 @@ class Main {
         out += 'import haxe.io.BytesData;\n\n';
 
         out += '@:keep\n@:include(\'linc_opengl.h\')\n@:native(\'GLsync\')\nextern class GLSync {}\n\n';
+
+        out += '@:keep\nabstract IntRef(cpp.Pointer<Int>) {\n';
+        out += '    @:from static inline function fromInt(_val:Int) : IntRef return cast cpp.Pointer.addressOf(_val);\n';
+        out += '}\n\n';
 
         //extern GL
         out += '@:keep\n@:include(\'linc_opengl.h\')\n@:build(linc.Linc.touch())\n@:build(linc.Linc.xml(\'opengl\'))\nextern class GL {\n\n';
