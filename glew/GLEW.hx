@@ -1,7 +1,7 @@
-package opengl;
+package glew;
 
 @:keep
-@:include('linc_opengl.h')
+@:include('linc_glew.h')
 @:build(linc.Linc.touch())
 extern class GLEW {
 
@@ -21,10 +21,8 @@ extern class GLEW {
         }
     }
 
-    inline static function init() : Int {
-        untyped glewExperimental = GL_TRUE;
-        return untyped __cpp__('(int)glewInit()');
-    }
+    @:native('linc::glew::init')
+    static function init() : Int;
 
     @:native('(bool)glewIsSupported')
     static function isSupported(name:String):Bool;
@@ -84,7 +82,3 @@ extern class GLEW {
     static inline function get_VERSION_4_5() : Bool return untyped __cpp__('GLEW_VERSION_4_5');
 
 }
-
-
-
-

@@ -3,6 +3,7 @@
     <files id='haxe'>
         <compilerflag value='-I${LINC_OPENGL_PATH}/linc/'/>
         <compilerflag value='-I${LINC_OPENGL_PATH}/lib/glew/include/'/>
+        <compilerflag value="-DGLEW_STATIC"/>
         <file name='${LINC_OPENGL_PATH}/linc/linc_opengl.cpp' />
         <file name='${LINC_OPENGL_PATH}/lib/glew/src/glew.c' />
     </files>
