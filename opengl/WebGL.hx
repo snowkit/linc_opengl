@@ -329,7 +329,7 @@ extern class WebGL {
     public static function uniform4i(location:GLUniformLocation, x:Int, y:Int, z:Int, w:Int):Void;
     
     @:native('glUseProgram')
-    public static function useProgram(program:Null<Int>):Void;
+    public static function useProgram(program:Int):Void;
     
     @:native('glValidateProgram')
     public static function validateProgram(program:Int):Void;
