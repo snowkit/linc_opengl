@@ -3,7 +3,12 @@
 
 #include <hxcpp.h>
 
+#if defined(HX_ANDROID)
+#include <GLES2/gl2.h>
+#include <GLES2/gl2ext.h>
+#else
 #include "../lib/glew/include/GL/glew.h"
+#endif
 
 namespace linc {
 

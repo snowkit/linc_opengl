@@ -7,6 +7,12 @@ namespace linc {
     namespace opengl {
         namespace webgl {
 
+            #ifdef LINC_OPENGL_GLEW
+                #define HAS_EXT_framebuffer_object GLEW_EXT_framebuffer_object
+            #else
+                #define HAS_EXT_framebuffer_object true
+            #endif
+
             int create_texture() {
                 printf("%s\\n", "inside create texture");
                 unsigned int id = 0;
@@ -177,7 +183,7 @@ namespace linc {
 
             int create_frame_buffer() {
                 GLuint id = 0;
-                if( GLEW_EXT_framebuffer_object ) {
+                if( HAS_EXT_framebuffer_object ) {
                     glGenFramebuffers( 1, &id );
                 } else {
                     printf("%s\\n", "snow / framebuffer object extension not found. / createFramebuffer");
@@ -186,7 +192,7 @@ namespace linc {
             }
 
             bool is_frame_buffer(int id) {
-                if (GLEW_EXT_framebuffer_object) {
+                if (HAS_EXT_framebuffer_object) {
                     return glIsFramebuffer(id);
                 } else {
                     printf("%s\\n", "snow / framebuffer object extension not found. / IsFramebuffer");
@@ -195,7 +201,7 @@ namespace linc {
             }
 
             bool is_render_buffer(int id) {
-                if (GLEW_EXT_framebuffer_object) {
+                if (HAS_EXT_framebuffer_object) {
                     return glIsRenderbuffer(id);
                 } else {
                     printf("%s\\n", "snow / framebuffer object extension not found. / IsRenderbuffer");
@@ -205,7 +211,7 @@ namespace linc {
 
             int create_render_buffer() {
                 GLuint id = 0;
-                if( GLEW_EXT_framebuffer_object ) {
+                if( HAS_EXT_framebuffer_object ) {
                     glGenRenderbuffers( 1, &id );
                 } else {
                     printf("%s\\n", "snow / framebuffer object extension not found. / createRenderbuffer");
@@ -214,7 +220,7 @@ namespace linc {
             }
 
             void delete_frame_buffer(int id) {
-                if (GLEW_EXT_framebuffer_object) {
+                if (HAS_EXT_framebuffer_object) {
                     glDeleteFramebuffers(1, (GLuint*)&id);
                 } else {
                     printf("%s\\n", "snow / framebuffer object extension not found. / DeleteFramebuffers");
@@ -222,7 +228,7 @@ namespace linc {
             }
 
             void delete_render_buffer(int id) {
-                if (GLEW_EXT_framebuffer_object) {
+                if (HAS_EXT_framebuffer_object) {
                     glDeleteRenderbuffers(1, (GLuint*)&id);
                 } else {
                     printf("%s\\n", "snow / framebuffer object extension not found. / DeleteRenderbuffers");

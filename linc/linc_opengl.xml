@@ -3,9 +3,10 @@
     <files id='haxe'>
         <compilerflag value='-I${LINC_OPENGL_PATH}/linc/'/>
         <compilerflag value='-I${LINC_OPENGL_PATH}/lib/glew/include/'/>
-        <compilerflag value="-DGLEW_STATIC"/>
+        <compilerflag value="-DLINC_OPENGL_GLEW" unless="android"/>
+        <compilerflag value="-DGLEW_STATIC" unless="android"/>
         <file name='${LINC_OPENGL_PATH}/linc/linc_opengl.cpp' />
-        <file name='${LINC_OPENGL_PATH}/lib/glew/src/glew.c' />
+        <file name='${LINC_OPENGL_PATH}/lib/glew/src/glew.c' unless="android"/>
     </files>
 
     <target id="haxe">
@@ -20,8 +21,9 @@
         
         <section if="android">
             <lib name="-lEGL" />
-            <lib name="-lGLESv2" />
             <lib name="-lGLESv1_CM" />
+            <lib name="-lGLESv2" />
+            <lib name="-lGLESv3" />
         </section>
         
         <section if="mac">
