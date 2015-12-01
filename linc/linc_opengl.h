@@ -2,6 +2,7 @@
 #define _LINC_OPENGL_H_
 
 #include <hxcpp.h>
+#include <haxe/io/Bytes.h>
 
 #if defined(HX_ANDROID)
 #include <GLES2/gl2.h>
