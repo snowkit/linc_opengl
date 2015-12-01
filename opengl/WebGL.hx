@@ -8,7 +8,9 @@ import opengl.GL;
 
 @:keep
 @:include('linc_opengl.h')
+#if !display
 @:build(linc.Linc.touch())
+#end
 extern class WebGL {
 
 //WebGL spec GL externs

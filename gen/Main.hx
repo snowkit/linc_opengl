@@ -439,7 +439,7 @@ class Main {
         out += '}\n\n';
 
         //extern GL
-        out += '@:keep\n@:include(\'linc_opengl.h\')\n@:build(linc.Linc.touch())\n@:build(linc.Linc.xml(\'opengl\'))\nextern class GL {\n\n';
+        out += '@:keep\n@:include(\'linc_opengl.h\')\n#if !display\n@:build(linc.Linc.touch())\n@:build(linc.Linc.xml(\'opengl\'))\n#end\nextern class GL {\n\n';
 
         var written_defines = [];
 

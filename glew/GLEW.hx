@@ -2,7 +2,9 @@ package glew;
 
 @:keep
 @:include('linc_glew.h')
+#if !display
 @:build(linc.Linc.touch())
+#end
 extern class GLEW {
 
     static inline var OK = 0;

@@ -14,8 +14,10 @@ abstract IntRef(cpp.Pointer<Int>) {
 
 @:keep
 @:include('linc_opengl.h')
+#if !display
 @:build(linc.Linc.touch())
 @:build(linc.Linc.xml('opengl'))
+#end
 extern class GL {
 
 //GL 1.1
