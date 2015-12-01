@@ -14,10 +14,8 @@ namespace linc {
             #endif
 
             int create_texture() {
-                printf("%s\\n", "inside create texture");
                 unsigned int id = 0;
                 glGenTextures(1,&id);
-                printf("%s\\n", "after create texture");
                 return id;
             }
 
