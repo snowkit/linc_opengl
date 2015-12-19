@@ -1,5 +1,7 @@
 <xml>
 
+    <set name="linc_opengl_GLES" value="" if="android || ios"/>
+
     <files id='haxe'>
         <compilerflag value='-I${LINC_OPENGL_PATH}/linc/'/>
         <compilerflag value='-I${LINC_OPENGL_PATH}/lib/glew/include/'/>

@@ -62,14 +62,18 @@ extern class WebGL {
     
     @:native('glCheckFramebufferStatus')
     static function checkFramebufferStatus(target:Int):Int;
-    
+        
     @:native('glClear')
     static function clear(mask:Int):Void;
     
     @:native('glClearColor')
     static function clearColor(red:Float, green:Float, blue:Float, alpha:Float):Void;
     
-    @:native('glClearDepth')
+    #if linc_opengl_GLES
+        @:native('glClearDepthf')
+    #else
+        @:native('glClearDepthf')
+    #end
     static function clearDepth(depth:Float):Void;
     
     @:native('glClearStencil')
