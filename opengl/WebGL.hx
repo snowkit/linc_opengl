@@ -908,24 +908,24 @@ class GLObject {
     public var id (default, null) : Int;
         /** The invalidated state. read only */
     public var invalidated (default,set) : Bool;
-    public function new( id:Int ) this.id = id;
+    inline public function new( id:Int ) this.id = id;
     function toString() : String return 'GLObject($id)';
-    function set_invalidated( value:Bool ) : Bool {
+    inline function set_invalidated( value:Bool ) : Bool {
         id = -1; return invalidated = value;
     } //set_invalidated
 }
 
 abstract GLUniformLocation(Null<Int>) from Null<Int> to Null<Int> {}
 
-@:noCompletion class GLBO extends GLObject { override function toString() return 'GLBuffer($id)'; }
-@:noCompletion class GLFBO extends GLObject { override function toString() return 'GLFramebuffer($id)'; }
-@:noCompletion class GLRBO extends GLObject { override function toString() return 'GLRenderbuffer($id)'; }
-@:noCompletion class GLSO extends GLObject { override function toString() return 'GLShader($id)'; }
-@:noCompletion class GLTO extends GLObject { override function toString() return 'GLTexture($id)'; }
+@:noCompletion class GLBO extends GLObject { override inline function toString() return 'GLBuffer($id)'; }
+@:noCompletion class GLFBO extends GLObject { override inline function toString() return 'GLFramebuffer($id)'; }
+@:noCompletion class GLRBO extends GLObject { override inline function toString() return 'GLRenderbuffer($id)'; }
+@:noCompletion class GLSO extends GLObject { override inline function toString() return 'GLShader($id)'; }
+@:noCompletion class GLTO extends GLObject { override inline function toString() return 'GLTexture($id)'; }
 @:noCompletion class GLPO extends GLObject {
     public var shaders : Array<GLShader>;
-    public function new( id:Int ) { super( id ); shaders = []; } //new
-    override function toString() return 'GLProgram($id)';
+    inline public function new( id:Int ) { super( id ); shaders = []; } //new
+    override inline function toString() return 'GLProgram($id)';
 }
 
 abstract GLBuffer(GLBO) {
