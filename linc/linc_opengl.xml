@@ -6,6 +6,7 @@
         <compilerflag value='-I${LINC_OPENGL_PATH}/linc/'/>
         <compilerflag value='-I${LINC_OPENGL_PATH}/lib/glew/include/'/>
         <compilerflag value="-DLINC_OPENGL_GLEW" unless="android || ios"/>
+        <compilerflag value="-DGLEW_STATIC" unless="android"/>
         <file name='${LINC_OPENGL_PATH}/linc/linc_opengl.cpp' />
     </files>
 
