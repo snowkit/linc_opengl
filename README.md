@@ -12,6 +12,8 @@ This is a [linc](http://snowkit.github.io/linc/) library.
 
 This library is a work in progress. This readme covers the important things to note when using the library.
 
+**Please note** that finding and reporting issues is quite important to the library being great to use - it is a collective effort. Issue reports are crucial.
+
 The library has two imports, which behave slightly different for platform consistency reasons. The two API's are "Desktop GL" from version 1.1 through 4.5 and a WebGL spec based API for portability.
 
 #### GLEW dependency
