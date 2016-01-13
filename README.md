@@ -8,6 +8,10 @@ This is a [linc](http://snowkit.github.io/linc/) library.
 
 `haxelib git linc_opengl https://github.com/snowkit/linc_opengl.git`
 
+### License
+
+See LICENSE.md
+
 ## Important notes
 
 This library is a work in progress.   
