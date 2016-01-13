@@ -1,4 +1,4 @@
-# linc/opengl
+# linc/OpenGL
 Haxe/hxcpp @:native bindings for OpenGL
 
 This is a [linc](http://snowkit.github.io/linc/) library.
