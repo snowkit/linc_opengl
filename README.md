@@ -50,7 +50,7 @@ This import pattern below makes many OpenGL examples around able to be copy past
 
 Use `import opengl.GL.*;` because the `*` will import all of the GL types and functions as if they were in the same scope - much like in C++.
 
-Then, the API calls match C++:
+Then, the API calls match C++ pretty closely:
 
 ```haxe
 glClearColor(1.0, 1.0, 1.0, 1.0);
@@ -61,11 +61,13 @@ You can still use `GL.` to invoke code completion, it's just slightly more awkwa
 
 **Testing**
 
-It's important to understand that writing a test for every one of these functions is not even possible (as some extensions are highly vendor/hardware specific, or no longer available in practice), and many of them are a part within a whole, so a test would require that the whole exist in order to validate them in usage.
+It's important to understand that writing a test for every one of these functions is not even possible as some extensions are highly vendor/hardware specific, or no longer available in practice.
 
-That might be plausible, but what it means in practice right now, is that there might be a few functions that aren't correctly mapped to the right usage pattern. For example - a GL function expecting an array of floats: the generator could misidentify this as a byte array, and generate byte array usage for the Haxe API. The only solution to this is manually check every single one (which we'll do over time I'm sure) or to just stumble into them while trying to use the library.
+Many endpoints are a part of a whole, and require the whole to test them for validation. The majority of these we will get to. 
 
-I have tested numerous fixed function and core profile tests from various sources while creating the library, and will create tests within this library for those to mitigate this. I'll also be using the library extensively in my frameworks, so chances are good this won't really be a problem except on more infrequently accessed APIs. 
+In practice right now, there might be a few functions that aren't correctly mapped to the right usage pattern. For example - a GL function expecting an array of floats: the generator could misidentify this as a byte array, and generate byte array usage for the Haxe API. The only solution to this is manually check every single one (which we'll do over time I'm sure) or to just stumble into them while trying to use the library.
+
+I have tested numerous fixed function and core profile tests from various sources while creating the library, and will create tests within this library over time for to mitigate this. I'll continually be using the library extensively in practice in [luxe/snow](http://luxeengine.com/), so chances are good this won't really be a problem for the majority of API, rather on more infrequently accessed APIs.
 
 Fixing these issues is very easy, finding them in a sea of 1000's of functions is not. The generator has a place to account for nuance like this, soon as you identify one, report it, and we'll weed them out over time.
 
@@ -73,7 +75,7 @@ Fixing these issues is very easy, finding them in a sea of 1000's of functions i
 
 **About**
 
-The WebGL.hx class contains a 1:1 mapping for the WebGL 1.0 specification. This means that you can write code for the WebGL API that runs on regular OpenGL under the hood, allowing portability and consistency (for example, the API is used on Mac, Windows, Linux, Android, iOS, and WebGL for this reason). 
+The WebGL.hx class contains a 1:1 mapping for the WebGL 1.0 specification. This means that you can write code for the WebGL API that runs on regular OpenGL under the hood, allowing portability and consistency (for example, the API is used on Mac, Windows, Linux, Android, iOS, alongside WebGL externs for this reason). 
 
 This is convenient when you want consistency at an ES 2.0/WebGL level, as a baseline, while still having access to higher versioned desktop API's on the platforms where it makes sense.
 
@@ -91,10 +93,12 @@ linc OpenGL WebGL API:
 
 **Import**
 
-To import the WebGL spec API, use `import opengl.WebGL as GL;`
+To import the WebGL spec API, use `import opengl.WebGL as GL;`   
 The `as` is optional, but will make much of the code easy to copy paste and share across actual WebGL code.
 
 #### Future
+
+**other GL API's**
 
 ES 2.x and ES 3.x API imports are on the way.
 
@@ -103,6 +107,7 @@ The goal (as with all linc libraries) is to provide access to the API's, not to 
 That means the GL1.1~4.5 API will remain generated from GLEW for the time being, and other API's will exist alongside it for your application to use at their discretion - much like with regular OpenGL includes, you would selectively include the appropriate one for the build profile and call the functions that make sense when you've done so.
 
 **new generator**
+
 The current generator is a bit messy but it does the job to get a usable API which is enough for now and validate the approach. 
 
 Though I already have a newer, cleaner generator well under way. It includes the ability to read the API (like from ES2.0 and ES3.0 API's) from the official spec, so there is no need to first parse a header file.
