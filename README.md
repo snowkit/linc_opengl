@@ -98,19 +98,16 @@ The `as` is optional, but will make much of the code easy to copy paste and shar
 
 #### Future
 
-**other GL API's**
+**Other GL API's**
 
-ES 2.x and ES 3.x API imports are on the way.
-
+ES 2.x and ES 3.x API imports are on the way.   
 The goal (as with all linc libraries) is to provide access to the API's, not to try and solve a globally portable GL API or anything. 
 
 That means the GL1.1~4.5 API will remain generated from GLEW for the time being, and other API's will exist alongside it for your application to use at their discretion - much like with regular OpenGL includes, you would selectively include the appropriate one for the build profile and call the functions that make sense when you've done so.
 
-**new generator**
+**New generator**
 
-The current generator is a bit messy but it does the job to get a usable API which is enough for now and validate the approach. 
-
-Though I already have a newer, cleaner generator well under way. It includes the ability to read the API (like from ES2.0 and ES3.0 API's) from the official spec, so there is no need to first parse a header file.
+The current generator is a bit messy but it does the job to get a usable API which is enough for now and validate the approach. I already have a newer, cleaner generator well under way. It includes the ability to read the API (like from ES2.0 and ES3.0 API's) from the official spec, so there is no need to first parse a header file.
 
 
 
