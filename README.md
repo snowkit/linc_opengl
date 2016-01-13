@@ -14,6 +14,27 @@ This library is a work in progress, specifically the generator steps and the lac
 
 The library has two imports, which behave slightly different for platform consistency reasons. The two API's are "Desktop GL" from version 1 through 4.5 and a WebGL spec based API for portability.
 
+#### GLEW dependency
+
+Currently on desktop platforms GLEW is imported as the OpenGL header.
+For now, there are no flags or ways to avoid its use - I plan to solve that in future. GLEW is pretty prevalant, does solve many annoyances and issues, and is a decent option as far as general GL wrangling goes. 
+
+Because of the dependency, on desktop platforms, you have to initialize GLEW yourself under the same conditions as you would when using GLEW and GL normally. Typically you do this after creating the GL context - see below.
+Take note that I say desktop: you will probably run into issues with GLEW on mobile platforms, so shield your code with `#if` accordingly.
+
+For simplicity, `import glew.GLEW;` is provided, with the full GLEW API. If you want to use it outside of linc_opengl for some reason there is also [linc_glew](https://github.com/snowkit/linc_glew) available.
+
+```haxe
+var res = GLEW.init();
+if(res != GLEW.OK) {
+    throw 'Failed to initialize GLEW! ' + GLEW.error(res);
+} else {
+    trace('GLEW init went ok!');
+}
+```
+
+
+
 #### GL 1.1 - GL 4.5
 
 **about**
@@ -70,9 +91,17 @@ The `as` is optional, but will make much of the code easy to copy paste and shar
 
 #### Future
 
-The goal (as with all linc libraries) is to provide access to the API's, not to try and solve a globally portable GL API or anything. That means the GL1.1~4.5 API will remain generated from GLEW for the time being, and other API's will exist alongside it for your application to use at their discretion - much like with regular OpenGL includes, you would selectively include the appropriate one for the build profile.
+ES 2.x and ES 3.x API imports are on the way.
 
-**new generator from specifications**
-I already have a newer, cleaner generator well under way. It includes the ability to read the specs from ES2.0 and ES3.0 API's from the official spec files, so there is no need to first parse a header file like I did originally with GLEW.
+The goal (as with all linc libraries) is to provide access to the API's, not to try and solve a globally portable GL API or anything. 
+
+That means the GL1.1~4.5 API will remain generated from GLEW for the time being, and other API's will exist alongside it for your application to use at their discretion - much like with regular OpenGL includes, you would selectively include the appropriate one for the build profile and call the functions that make sense when you've done so.
+
+**new generator**
+The current generator is a bit messy but it does the job to get a usable API which is enough for now and validate the approach. 
+
+Though I already have a newer, cleaner generator well under way. It includes the ability to read the API (like from ES2.0 and ES3.0 API's) from the official spec, so there is no need to first parse a header file.
+
+
 
 
