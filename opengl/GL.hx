@@ -7,6 +7,8 @@ import haxe.io.BytesData;
 @:native('GLsync')
 extern class GLSync {}
 
+
+//:todo: Was exploring the option of matching *int API's that set int values directly, not in proper use yet
 @:keep
 abstract IntRef(cpp.Pointer<Int>) {
     @:from static inline function fromInt(_val:Int) : IntRef return cast cpp.Pointer.addressOf(_val);

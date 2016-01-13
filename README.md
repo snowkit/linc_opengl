@@ -14,10 +14,16 @@ See LICENSE.md
 
 ## Important notes
 
-This library is a work in progress.   
+This library is a work in progress!   
 This readme covers the important things to note when using the library.
 
-**Please note** that finding and reporting issues is quite important to the library being great to use - it is a collective effort. Issue reports are crucial.
+**Please note**    
+That finding and reporting issues is quite important to the library being great to use - it is a collective effort. Issue reports are crucial.
+
+**Missing endpoints**   
+There are some endpoints that aren't generated yet (search for TODO inside of GL.hx for examples). These are currently mostly related to obscure extensions or C++ pointer related. 
+
+I will continue to map the pointer based functions soon, but there definitely will be some API endpoints that aren't available until then. An example is glMapBuffer which returns `void*`, expressing this in Haxe is not difficult, just that care should be taken for these type of functions more specifically than the rest.
 
 This library is specifically about access.
 
