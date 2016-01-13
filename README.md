@@ -10,10 +10,22 @@ This is a [linc](http://snowkit.github.io/linc/) library.
 
 ## Important notes
 
-This library is a work in progress. This readme covers the important things to note when using the library.
+This library is a work in progress.   
+This readme covers the important things to note when using the library.
 
 **Please note** that finding and reporting issues is quite important to the library being great to use - it is a collective effort. Issue reports are crucial.
 
+This library is specifically about access.
+
+**Does do**   
+- Gives you access to OpenGL API's from Haxe code
+- Gives you access to GLEW API from Haxe code
+
+**Doesn't do**   
+- Handle any form of windowing or GL context creation
+- Anything else, really.
+
+**Available API's**
 The library has two imports, which behave slightly different for platform consistency reasons. The two API's are "Desktop GL" from version 1.1 through 4.5 and a WebGL spec based API for portability.
 
 #### GLEW dependency
