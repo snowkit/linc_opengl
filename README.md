@@ -25,7 +25,9 @@ This library is specifically about access.
 - Handle any form of windowing or GL context creation
 - Anything else, really.
 
-**Available API's**
+This means you'd probably want to create a window, and an OpenGL context, before calling any of these functions. For example, you could do so with [linc_sdl](http://github.com/snowkit/linc_sdl). (Some examples of this will be added soon)
+
+**Available API's**   
 The library has two imports, which behave slightly different for platform consistency reasons. The two API's are "Desktop GL" from version 1.1 through 4.5 and a WebGL spec based API for portability.
 
 #### GLEW dependency
