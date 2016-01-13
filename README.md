@@ -25,6 +25,7 @@ There are some endpoints that aren't generated yet (search for TODO inside of GL
 
 I will continue to map the pointer based functions soon, but there definitely will be some API endpoints that aren't available until then. An example is glMapBuffer which returns `void*`, expressing this in Haxe is not difficult, just that care should be taken for these type of functions more specifically than the rest.
 
+**What does this library do exactly**   
 This library is specifically about access.
 
 **Does do**   
