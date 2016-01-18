@@ -68,7 +68,8 @@ class Main {
             case 'GLfloat','GLclampf','const GLfloat', 'const GLclampf': 'cpp.Float32';
             case 'const GLint','GLint','GLshort','GLsizei','GLenum','GLbitfield','GLclampx','GLfixed','GLsizeiptr','GLsizeiptrARB','GLintptr','GLintptrARB': 'Int';
             case 'GLchar','const GLchar*','GLchar*', 'const GLubyte *','const GLchar* const*','const GLubyte*','const GLchar *','const GLcharARB*','GLcharARB','const GLchar * const *' : 'String';
-            case 'GLuint','GLushort','GLhalf','GLhandleARB': 'UInt';
+            case 'GLushort','GLhalf','GLhandleARB': 'UInt';
+            case 'GLuint': 'Int';
             case 'GLboolean': 'Bool';
             case 'GLint64EXT','GLint64': 'cpp.Int64';
             case 'GLuint64','GLuint64EXT': 'cpp.UInt64';

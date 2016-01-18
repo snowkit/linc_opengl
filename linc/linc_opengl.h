@@ -19,26 +19,26 @@ namespace linc {
     namespace opengl {
 
         namespace webgl {
-            extern int create_texture();
-            extern void delete_texture(int id);
-            extern int create_buffer();
-            extern void delete_buffer(int id);
-            extern bool is_frame_buffer(int id);
-            extern bool is_render_buffer(int id);
-            extern int create_frame_buffer();
-            extern void delete_frame_buffer(int id);
-            extern int create_render_buffer();
-            extern void delete_render_buffer(int id);
-            extern int get_shader_parameter(int id, int param);
-            extern ::String get_shader_source(int id);
-            extern ::String get_shader_info_log(int id);
-            extern ::String get_program_info_log(int id);
-            extern int get_parameter(int param);
-            extern ::String get_parameter_str(int param);
-            extern Array< ::String > get_supported_extensions();
-            extern void shader_source(int id, const char* source);
-            extern int get_program_parameter(int id, int param);
-            extern ::String get_version_string();
+            extern int createTexture();
+            extern void deleteTexture(int id);
+            extern int createBuffer();
+            extern void deleteBuffer(int id);
+            extern int createFramebuffer();
+            extern void deleteFramebuffer(int id);
+            extern int createRenderbuffer();
+            extern void deleteRenderbuffer(int id);
+            extern int getShaderParameter(int id, int param);
+            extern ::String getShaderSource(int id);
+            extern ::String getShaderInfoLog(int id);
+            extern ::String getProgramInfoLog(int id);
+            extern Dynamic getParameter(int param);
+            extern Array< ::String > getSupportedExtensions();
+            extern void shaderSource(int id, const char* source);
+            extern int getProgramParameter(int program, int param);
+            extern int getRenderbufferParameter(int renderbuffer, int param);
+            extern int getTexParameter(int target, int param);
+            extern ::Array<int> getAttachedShaders(int program);
+            extern ::String getVersionString();
         }
 
     } //opengl

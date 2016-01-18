@@ -3,8 +3,12 @@ package opengl;
 import snow.api.buffers.ArrayBufferView;
 import snow.api.buffers.Float32Array;
 import snow.api.buffers.Int32Array;
-
 import opengl.GL;
+
+typedef GLenum = Int
+typedef GLuint = Int
+typedef GLbitfield = Int
+typedef Any = Dynamic
 
 @:keep
 @:include('linc_opengl.h')
@@ -14,439 +18,434 @@ import opengl.GL;
 extern class WebGL {
 
 //WebGL spec GL externs
+
+    inline static function activeTexture(texture:GLenum):Void 
+        GL.glActiveTexture(texture);
+
+    inline static function attachShader(program:GLProgram, shader:GLShader):Void 
+        GL.glAttachShader(program, shader);
+
+    inline static function bindAttribLocation(program:GLProgram, index:GLuint, name:String):Void
+        GL.glBindAttribLocation(program, index, name);
+
+    inline static function bindBuffer(target:GLenum, buffer:GLBuffer):Void 
+        GL.glBindBuffer(target, buffer);
+
+    inline static function bindFramebuffer(target:GLenum, framebuffer:GLFramebuffer):Void 
+        GL.glBindFramebuffer(target, framebuffer);
+
+    inline static function bindRenderbuffer(target:GLenum, renderbuffer:GLRenderbuffer):Void 
+        GL.glBindRenderbuffer(target, renderbuffer);
+
+    inline static function bindTexture(target:GLenum, texture:GLTexture):Void
+        GL.glBindTexture(target, texture);
+
+    inline static function blendColor(red:Float, green:Float, blue:Float, alpha:Float):Void
+        GL.glBlendColor(red, green, blue, alpha);
+
+    inline static function blendEquation(mode:GLenum):Void
+        GL.glBlendEquation(mode);
     
-    @:native('glActiveTexture')
-    static function activeTexture(texture:Int):Void;
-    
-    @:native('glAttachShader')
-    static function attachShader(program:Int, shader:Int):Void;
-    
-    @:native('glBindAttribLocation')
-    static function bindAttribLocation(program:Int, index:Int, name:String):Void;
-    
-    @:native('glBindBuffer')
-    private static function _bindBuffer(target:Int, buffer:Int):Void;
-    inline static function bindBuffer(target:Int, buffer:Null<Int>):Void {
-        _bindBuffer(target, cast buffer);
-    }
-    
-    @:native('glBindFramebuffer')
-    private static function _bindFramebuffer(target:Int, framebuffer:Int):Void;
-    inline static function bindFramebuffer(target:Int, framebuffer:Null<Int>):Void {
-        _bindFramebuffer(target, cast framebuffer);
-    }
-    
-    @:native('glBindRenderbuffer')
-    private static function _bindRenderbuffer(target:Int, renderbuffer:Int):Void;
-    inline static function bindRenderbuffer(target:Int, renderbuffer:Null<Int>):Void {
-        _bindRenderbuffer(target, cast renderbuffer);
-    }
-    
-    @:native('glBindTexture')
-    static function bindTexture(target:Int, texture:Null<Int>):Void;
-    
-    @:native('glBlendColor')
-    static function blendColor(red:Float, green:Float, blue:Float, alpha:Float):Void;
-    
-    @:native('glBlendEquation')
-    static function blendEquation(mode:Int):Void;
-    
-    @:native('glBlendEquationSeparate')
-    static function blendEquationSeparate(modeRGB:Int, modeAlpha:Int):Void;
-    
-    @:native('glBlendFunc')
-    static function blendFunc(sfactor:Int, dfactor:Int):Void;
-    
-    @:native('glBlendFuncSeparate')
-    static function blendFuncSeparate(srcRGB:Int, dstRGB:Int, srcAlpha:Int, dstAlpha:Int):Void;
-    
-    @:native('glCheckFramebufferStatus')
-    static function checkFramebufferStatus(target:Int):Int;
-        
-    @:native('glClear')
-    static function clear(mask:Int):Void;
-    
-    @:native('glClearColor')
-    static function clearColor(red:Float, green:Float, blue:Float, alpha:Float):Void;
-    
+    inline static function blendEquationSeparate(modeRGB:GLenum, modeAlpha:GLenum):Void
+        GL.glBlendEquationSeparate(modeRGB, modeAlpha);
+
+    inline static function blendFunc(sfactor:GLenum, dfactor:GLenum):Void
+        GL.glBlendFunc(sfactor, dfactor);
+
+    inline static function blendFuncSeparate(srcRGB:GLenum, dstRGB:GLenum, srcAlpha:GLenum, dstAlpha:GLenum):Void
+        GL.glBlendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha);
+
+    inline static function checkFramebufferStatus(target:GLenum):GLenum
+        return GL.glCheckFramebufferStatus(target);
+
+    inline static function clear(mask:GLbitfield):Void
+        GL.glClear(mask);
+
+    inline static function clearColor(red:Float, green:Float, blue:Float, alpha:Float):Void
+        GL.glClearColor(red, green, blue, alpha);
+
     #if linc_opengl_GLES
         @:native('glClearDepthf')
     #else
-        @:native('glClearDepthf')
+        @:native('glClearDepth')
     #end
     static function clearDepth(depth:Float):Void;
-    
-    @:native('glClearStencil')
-    static function clearStencil(s:Int):Void;
-    
-    @:native('glColorMask')
-    static function colorMask(red:Bool, green:Bool, blue:Bool, alpha:Bool):Void;
-    
-    @:native('glCompileShader')
-    static function compileShader(shader:Int):Void;
-    
-    @:native('glCopyTexImage2D')
-    static function copyTexImage2D(target:Int, level:Int, internalformat:Int, x:Int, y:Int, width:Int, height:Int, border:Int):Void;
-    
-    @:native('glCopyTexSubImage2D')
-    static function copyTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int):Void;
-    
-    @:native('linc::opengl::webgl::create_buffer')
-    static function createBuffer():Int;
-    
-    @:native('linc::opengl::webgl::create_frame_buffer')
-    static function createFramebuffer():Null<Int>;
-    
-    @:native('glCreateProgram')
-    static function createProgram():Int;
-    
-    @:native('linc::opengl::webgl::create_render_buffer')
-    static function createRenderbuffer():Null<Int>;
-    
-    @:native('glCreateShader')
-    private static function _createShader(type:Int):Int;
-    inline static function createShader(type:Int):Null<Int> {
-        var _id:Int = _createShader(type);
-        return _id == 0 ? null : _id;
+
+    inline static function clearStencil(s:Int):Void
+        GL.glClearStencil(s);
+
+    inline static function colorMask(red:Bool, green:Bool, blue:Bool, alpha:Bool):Void
+        GL.glColorMask(red, green, blue, alpha);
+
+    inline static function compileShader(shader:GLShader):Void
+        GL.glCompileShader(shader);
+
+    inline static function copyTexImage2D(target:GLenum, level:Int, internalformat:GLenum, x:Int, y:Int, width:Int, height:Int, border:Int):Void
+        GL.glCopyTexImage2D(target, level, internalformat, x, y, width, height, border);
+
+    inline static function copyTexSubImage2D(target:GLenum, level:Int, xoffset:Int, yoffset:Int, x:Int, y:Int, width:Int, height:Int):Void
+        GL.glCopyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height);
+
+    inline static function createBuffer():GLBuffer {
+        var _id:Int = _createBuffer(); return _id;
     }
     
-    @:native('linc::opengl::webgl::create_texture')
-    static function createTexture():Int;
-    
-    @:native('glCullFace')
-    static function cullFace(mode:Int):Void;
-    
-    inline static function deleteBuffer(buffer:Int):Void {
-        untyped __cpp__('glDeleteBuffers(1, (const GLuint *)(&({0})))', buffer);
+    inline static function createFramebuffer():GLFramebuffer {
+        var _id:Int = _createFramebuffer(); return _id;
+    }
+
+    inline static function createProgram():GLProgram {
+        var _id:Int = GL.glCreateProgram(); return _id;
     }
     
-    @:native('linc::opengl::webgl::delete_frame_buffer')
-    static function deleteFramebuffer(framebuffer:Int):Void;
+    inline static function createRenderbuffer():GLRenderbuffer {
+        var _id:Int = _createRenderbuffer(); return _id;
+    }
+
+    inline static function createShader(type:GLenum):GLShader {
+        var _id:Int = GL.glCreateShader(type); return _id;
+    }
     
-    @:native('glDeleteProgram')
-    static function deleteProgram(program:Int):Void;
+    inline static function createTexture():GLTexture {
+        var _id:Int = _createTexture(); return _id;
+    }
+
+    inline static function cullFace(mode:GLenum):Void
+        GL.glCullFace(mode);
+
+    inline static function deleteBuffer(buffer:GLBuffer):Void 
+        _deleteBuffer(buffer);
+
+    inline static function deleteFramebuffer(framebuffer:GLFramebuffer):Void 
+        _deleteFramebuffer(framebuffer);
+
+    inline static function deleteProgram(program:GLProgram):Void 
+        GL.glDeleteProgram(program);
+
+    inline static function deleteRenderbuffer(renderbuffer:GLRenderbuffer):Void 
+        _deleteRenderbuffer(renderbuffer);
+
+    inline static function deleteShader(shader:GLShader):Void
+        GL.glDeleteShader(shader);
     
-    @:native('linc::opengl::webgl::delete_render_buffer')
-    static function deleteRenderbuffer(renderbuffer:Int):Void;
-    
-    @:native('glDeleteShader')
-    static function deleteShader(shader:Int):Void;
-    
-    @:native('linc::opengl::webgl::delete_texture')
-    static function deleteTexture(texture:Int):Void;
-    
-    @:native('glDepthFunc')
-    static function depthFunc(func:Int):Void;
-    
-    @:native('glDepthMask')
-    static function depthMask(flag:Bool):Void;
-    
-    @:native('glDepthRange')
-    static function depthRange(zNear:Float, zFar:Float):Void;
-    
-    @:native('glDetachShader')
-    static function detachShader(program:Int, shader:Int):Void;
-    
-    @:native('glDisable')
-    static function disable(cap:Int):Void;
-    
-    @:native('glDisableVertexAttribArray')
-    static function disableVertexAttribArray(index:Int):Void;
-    
-    @:native('glDrawArrays')
-    static function drawArrays(mode:Int, first:Int, count:Int):Void;
-    
-    @:native('glDrawElements')
-    static function drawElements(mode:Int, count:Int, type:Int, offset:Int):Void;
-    
-    @:native('glEnable')
-    static function enable(cap:Int):Void;
-    
-    @:native('glEnableVertexAttribArray')
-    static function enableVertexAttribArray(index:Int):Void;
-    
-    @:native('glFinish')
-    static function finish():Void;
-    
-    @:native('glFlush')
-    static function flush():Void;
-    
-    @:native('glFramebufferRenderbuffer')
-    static function framebufferRenderbuffer(target:Int, attachment:Int, renderbuffertarget:Int, renderbuffer:Int):Void;
-    
-    @:native('glFramebufferTexture2D')
-    static function framebufferTexture2D(target:Int, attachment:Int, textarget:Int, texture:Int, level:Int):Void;
-    
-    @:native('glFrontFace')
-    static function frontFace(mode:Int):Void;
-    
-    @:native('glGenerateMipmap')
-    static function generateMipmap(target:Int):Void;
-    
-    @:native('glGetActiveAttrib')
-    static function getActiveAttrib(program:Int, index:Int):GLActiveInfo;
-    
-    @:native('glGetActiveUniform')
-    static function getActiveUniform(program:Int, index:Int):GLActiveInfo;
-    
-    @:native('glGetAttachedShaders')
-    static function getAttachedShaders(program:Int):Array<GLShader>;
-    
-    @:native('glGetAttribLocation')
-    static function getAttribLocation(program:Int, name:String):Int;
-    
-    @:native('glGetBufferParameter')
-    static function getBufferParameter(target:Int, pname:Int):Dynamic;
-    
-    @:native('glGetContextAttributes')
-    static function getContextAttributes() : GLContextAttributes;
-    
-    @:native('glGetError')
-    static function getError():Int;
-    
-    @:native('glGetExtension')
-    static function getExtension(name:String):Dynamic;
-    
-    @:native('glGetFramebufferAttachmentParameter')
-    static function getFramebufferAttachmentParameter(target:Int, attachment:Int, pname:Int):Dynamic;
-    
-    @:native('linc::opengl::webgl::get_parameter')
-    static function getParameter(pname:Int):Int;
-    
-    @:native('linc::opengl::webgl::get_parameter_str')
-    static function getParameterstr(pname:Int):String;
-    
-    @:native('linc::opengl::webgl::get_program_info_log')
-    static function getProgramInfoLog(program:Int):String;
-    
-    @:native('linc::opengl::webgl::get_program_parameter')
-    static function getProgramParameter(program:Int, pname:Int):Int;
-    
-    @:native('glGetRenderbufferParameter')
-    static function getRenderbufferParameter(target:Int, pname:Int):Dynamic;
-    
-    @:native('linc::opengl::webgl::get_shader_info_log')
-    static function getShaderInfoLog(shader:Int):String;
-    
-    @:native('linc::opengl::webgl::get_shader_parameter')
-    static function getShaderParameter(shader:Int, pname:Int):Int;
-    
-    @:native('glGetShaderPrecisionFormat')
-    static function getShaderPrecisionFormat(shadertype:Int, precisiontype:Int) : GLShaderPrecisionFormat;
-    
-    @:native('linc::opengl::webgl::get_shader_source')
-    static function getShaderSource(shader:Int):String;
-    
-    @:native('linc::opengl::webgl::get_supported_extensions')
+    inline static function deleteTexture(texture:GLTexture):Void 
+        _deleteTexture(texture);
+
+    inline static function depthFunc(func:GLenum):Void
+        GL.glDepthFunc(func);
+
+    inline static function depthMask(flag:Bool):Void
+        GL.glDepthMask(flag);
+
+    inline static function depthRange(zNear:Float, zFar:Float):Void
+        GL.glDepthRange(zNear, zFar);
+
+    inline static function detachShader(program:GLProgram, shader:GLShader):Void
+        GL.glDetachShader(program, shader);
+
+    inline static function disable(cap:GLenum):Void
+        GL.glDisable(cap);
+
+    inline static function disableVertexAttribArray(index:GLuint):Void
+        GL.glDisableVertexAttribArray(index);
+
+    inline static function drawArrays(mode:GLenum, first:Int, count:Int):Void
+        GL.glDrawArrays(mode, first, count);
+
+    inline static function drawElements(mode:GLenum, count:Int, type:GLenum, offset:Int):Void
+        untyped __cpp__('glDrawElements({0}, {1}, {2}, (void*)(intptr_t){3})', mode, count, type, offset);
+
+    inline static function enable(cap:GLenum):Void
+        GL.glEnable(cap);
+
+    inline static function enableVertexAttribArray(index:GLuint):Void
+        GL.glEnableVertexAttribArray(index);
+
+    inline static function finish():Void
+        GL.glFinish();
+
+    inline static function flush():Void
+        GL.glFlush();
+
+    inline static function framebufferRenderbuffer(target:GLenum, attachment:GLenum, renderbuffertarget:GLenum, renderbuffer:GLRenderbuffer):Void
+        GL.glFramebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer);
+
+    inline static function framebufferTexture2D(target:GLenum, attachment:GLenum, textarget:GLenum, texture:GLTexture, level:Int):Void
+        GL.glFramebufferTexture2D(target, attachment, textarget, texture, level);
+
+    inline static function frontFace(mode:GLenum):Void
+        GL.glFrontFace(mode);
+
+    inline static function generateMipmap(target:GLenum):Void
+        GL.glGenerateMipmap(target);
+
+    //:todo: glGetActiveAttrib is an OpenGL ES API so isn't available 1:1 on desktop, 
+    //       if the same information is available it can be wrapped. https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveAttrib.xml
+    // static function getActiveAttrib(program:GLProgram, index:GLuint):GLActiveInfo;
+
+    // @:native('glGetActiveUniform') //:todo:see getActiveAttrib as well
+    // static function getActiveUniform(program:GLProgram, index:GLuint):GLActiveInfo;
+
+    @:native('linc::opengl::webgl::getAttachedShaders')
+    static function getAttachedShaders(program:GLProgram):Array<GLShader>;
+
+    inline static function getAttribLocation(program:GLProgram, name:String):Int
+        return GL.glGetAttribLocation(program, name);
+
+    // @:native('glGetBufferParameter') //:todo: Requires wrapping
+    // static function getBufferParameter(target:GLenum, pname:GLenum):Any;
+
+    // @:native('glGetContextAttributes') //:todo: Requires wrapping but that information isn't 1:1 on desktop
+    // static function getContextAttributes() : GLContextAttributes;
+
+    inline static function getError():GLenum
+        return GL.glGetError();
+
+    // @:native('glGetExtension') 
+    //:todo: returns `object?` with defines and functions attached,
+    //       however, there are no real extensions that make sense from WebGL on desktop without wrapping them completely
+    //       which is plausible, but for immediate term, just making the function unavailable is best
+    // static function getExtension(name:String):Dynamic;
+    // inline static function getExtension(name:String):Dynamic
+        // throw 'getExtension is not currently available on the native bindings';
+
+    // @:native('glGetFramebufferAttachmentParameter') //:todo: Requires wrapping
+    // static function getFramebufferAttachmentParameter(target:GLenum, attachment:GLenum, pname:GLenum):Any;
+
+    @:native('linc::opengl::webgl::getParameter')
+    static function getParameter(pname:GLenum):Any;
+
+    inline static function getProgramInfoLog(program:GLProgram):String 
+        return _getProgramInfoLog(program);
+
+    inline static function getProgramParameter(program:GLProgram, pname:GLenum):Int 
+        return _getProgramParameter(program, pname);
+
+    @:native('linc::opengl::webgl::getRenderbufferParameter')
+    static function getRenderbufferParameter(target:GLenum, pname:GLenum):Int;
+
+    inline static function getShaderInfoLog(shader:GLShader):String 
+        return _getShaderInfoLog(shader);
+
+    inline static function getShaderParameter(shader:GLShader, pname:GLenum):Int 
+        return _getShaderParameter(shader, pname);
+
+    // @:native('glGetShaderPrecisionFormat') //:todo: Requires wrapping if possible
+    // static function getShaderPrecisionFormat(shadertype:Int, precisiontype:Int) : GLShaderPrecisionFormat;
+
+    inline static function getShaderSource(shader:GLShader):String 
+        return _getShaderSource(shader);
+
+    @:native('linc::opengl::webgl::getSupportedExtensions')
     static function getSupportedExtensions():Array<String>;
-    
-    @:native('glGetTexParameter')
-    static function getTexParameter(target:Int, pname:Int):Dynamic;
-    
-    @:native('glGetUniform')
-    static function getUniform(program:Int, location:GLUniformLocation):Dynamic;
-    
-    @:native('glGetUniformLocation')
-    static function getUniformLocation(program:Int, name:String):Dynamic;
-    
-    @:native('glGetVertexAttrib')
-    static function getVertexAttrib(index:Int, pname:Int):Dynamic;
-    
-    @:native('glGetVertexAttribOffset')
-    static function getVertexAttribOffset(index:Int, pname:Int):Int;
-    
-    @:native('glHint')
-    static function hint(target:Int, mode:Int):Void;
-    
-    @:native('glIsBuffer')
-    static function isBuffer(buffer:Int):Bool;
-    
-    @:native('linc::opengl::webgl::is_frame_buffer')
-    static function isFramebuffer(framebuffer:Int):Bool;
-    
-    @:native('glIsProgram')
-    static function isProgram(program:Int):Bool;
-    
-    @:native('linc::opengl::webgl::is_render_buffer')
-    static function isRenderbuffer(renderbuffer:Int):Bool;
-    
-    @:native('glIsShader')
-    static function isShader(shader:Int):Bool;
-    
-    @:native('glIsTexture')
-    static function isTexture(texture:Int):Bool;
-    
-    @:native('glLineWidth')
-    static function lineWidth(width:Float):Void;
-    
-    @:native('glLinkProgram')
-    static function linkProgram(program:Int):Void;
-    
-    @:native('glPixelStorei')
-    static function pixelStorei(pname:Int, param:Int):Void;
-    
-    @:native('glPolygonOffset')
-    static function polygonOffset(factor:Float, units:Float):Void;
-    
-    @:native('glRenderbufferStorage')
-    static function renderbufferStorage(target:Int, internalformat:Int, width:Int, height:Int):Void;
-    
-    @:native('glSampleCoverage')
-    static function sampleCoverage(value:Float, invert:Bool):Void;
-    
-    @:native('glScissor')
-    static function scissor(x:Int, y:Int, width:Int, height:Int):Void;
-    
-    @:native('linc::opengl::webgl::shader_source')
-    static function shaderSource(shader:Int, source:String):Void;
-    
-    @:native('glStencilFunc')
-    static function stencilFunc(func:Int, ref:Int, mask:Int):Void;
-    
-    @:native('glStencilFuncSeparate')
-    static function stencilFuncSeparate(face:Int, func:Int, ref:Int, mask:Int):Void;
-    
-    @:native('glStencilMask')
-    static function stencilMask(mask:Int):Void;
-    
-    @:native('glStencilMaskSeparate')
-    static function stencilMaskSeparate(face:Int, mask:Int):Void;
-    
-    @:native('glStencilOp')
-    static function stencilOp(fail:Int, zfail:Int, zpass:Int):Void;
-    
-    @:native('glStencilOpSeparate')
-    static function stencilOpSeparate(face:Int, fail:Int, zfail:Int, zpass:Int):Void;
-    
-    @:native('glTexParameterf')
-    static function texParameterf(target:Int, pname:Int, param:Float):Void;
-    
-    @:native('glTexParameteri')
-    static function texParameteri(target:Int, pname:Int, param:Int):Void;
-    
-    @:native('glUniform1f')
-    static function uniform1f(location:GLUniformLocation, x:Float):Void;
-    
-    @:native('glUniform1i')
-    static function uniform1i(location:GLUniformLocation, x:Int):Void;
-    
-    @:native('glUniform2f')
-    static function uniform2f(location:GLUniformLocation, x:Float, y:Float):Void;
-    
-    @:native('glUniform2i')
-    static function uniform2i(location:GLUniformLocation, x:Int, y:Int):Void;
-    
-    @:native('glUniform3f')
-    static function uniform3f(location:GLUniformLocation, x:Float, y:Float, z:Float):Void;
-    
-    @:native('glUniform3i')
-    static function uniform3i(location:GLUniformLocation, x:Int, y:Int, z:Int):Void;
-    
-    @:native('glUniform4f')
-    static function uniform4f(location:GLUniformLocation, x:Float, y:Float, z:Float, w:Float):Void;
-    
-    @:native('glUniform4i')
-    static function uniform4i(location:GLUniformLocation, x:Int, y:Int, z:Int, w:Int):Void;
-    
-    @:native('glUseProgram')
-    static function useProgram(program:Int):Void;
-    
-    @:native('glValidateProgram')
-    static function validateProgram(program:Int):Void;
-    
-    @:native('glVertexAttrib1f')
-    static function vertexAttrib1f(indx:Int, x:Float):Void;
-    
-    @:native('glVertexAttrib2f')
-    static function vertexAttrib2f(indx:Int, x:Float, y:Float):Void;
-    
-    @:native('glVertexAttrib3f')
-    static function vertexAttrib3f(indx:Int, x:Float, y:Float, z:Float):Void;
-    
-    @:native('glVertexAttrib4f')
-    static function vertexAttrib4f(indx:Int, x:Float, y:Float, z:Float, w:Float):Void;
-    
-    @:native('glViewport')
-    static function viewport(x:Int, y:Int, width:Int, height:Int):Void;
 
+    @:native('linc::opengl::webgl::getTexParameter')
+    static function getTexParameter(target:GLenum, pname:GLenum):Int;
 
-    
-    static inline function bufferData(target:Int, data:ArrayBufferView, usage:Int):Void
+    // @:native('glGetUniform') //:todo: Requires wrapping
+    // static function getUniform(program:Int, location:GLUniformLocation):Any;
+
+    inline static function getUniformLocation(program:GLProgram, name:String):GLUniformLocation
+        return GL.glGetUniformLocation(program, name);
+
+    // @:native('glGetVertexAttrib')  //:todo: Requires wrapping
+    // static function getVertexAttrib(index:GLuint, pname:GLenum):Any;
+
+    // @:native('glGetVertexAttribOffset') //:todo: GLES requires wrapping to GetVertexAttribPointerv
+    // static function getVertexAttribOffset(index:GLuint, pname:GLenum):Int;
+
+    inline static function hint(target:GLenum, mode:GLenum):Void
+        return GL.glHint(target, mode);
+
+    inline static function isBuffer(buffer:GLBuffer):Bool
+        return GL.glIsBuffer(buffer);
+
+    inline static function isEnabled(cap:GLenum):Bool
+        return GL.glIsEnabled(cap);
+
+    inline static function isFramebuffer(framebuffer:GLFramebuffer):Bool
+        return GL.glIsFramebuffer(framebuffer);
+
+    inline static function isProgram(program:GLProgram):Bool
+        return GL.glIsProgram(program);
+
+    inline static function isRenderbuffer(renderbuffer:GLRenderbuffer):Bool
+        return GL.glIsRenderbuffer(renderbuffer);
+
+    inline static function isShader(shader:GLShader):Bool
+        return GL.glIsShader(shader);
+
+    inline static function isTexture(texture:GLTexture):Bool
+        return GL.glIsTexture(texture);
+
+    inline static function lineWidth(width:Float):Void
+        GL.glLineWidth(width);
+
+    inline static function linkProgram(program:GLProgram):Void
+        GL.glLinkProgram(program);
+
+    inline static function pixelStorei(pname:GLenum, param:Int):Void
+        GL.glPixelStorei(pname, param);
+
+    inline static function polygonOffset(factor:Float, units:Float):Void
+        GL.glPolygonOffset(factor, units);
+
+    inline static function renderbufferStorage(target:GLenum, internalformat:GLenum, width:Int, height:Int):Void
+        GL.glRenderbufferStorage(target, internalformat, width, height);
+
+    inline static function sampleCoverage(value:Float, invert:Bool):Void
+        GL.glSampleCoverage(value, invert);
+
+    inline static function scissor(x:Int, y:Int, width:Int, height:Int):Void
+        GL.glScissor(x, y, width, height);
+
+    inline static function shaderSource(shader:GLShader, source:String):Void 
+        _shaderSource(shader, source);
+
+    inline static function stencilFunc(func:GLenum, ref:Int, mask:GLuint):Void
+        GL.glStencilFunc(func, ref, mask);
+
+    // @:native('glStencilFuncSeparate') :todo: Requires wrapping, as WebGL has different face semantics https://www.khronos.org/registry/webgl/specs/latest/1.0/#STENCIL_SEPARATE_LIMIT
+    // static function stencilFuncSeparate(face:GLenum, func:GLenum, ref:Int, mask:GLuint):Void;
+
+    inline static function stencilMask(mask:GLuint):Void
+        GL.glStencilMask(mask);
+
+    inline static function stencilMaskSeparate(face:GLenum, mask:GLuint):Void
+        GL.glStencilMaskSeparate(face, mask);
+
+    inline static function stencilOp(fail:GLenum, zfail:GLenum, zpass:GLenum):Void
+        GL.glStencilOp(fail, zfail, zpass);
+
+    inline static function stencilOpSeparate(face:GLenum, fail:GLenum, zfail:GLenum, zpass:GLenum):Void
+        GL.glStencilOpSeparate(face, fail, zfail, zpass);
+
+    inline static function texParameterf(target:GLenum, pname:GLenum, param:Float):Void
+        GL.glTexParameterf(target, pname, param);
+
+    inline static function texParameteri(target:GLenum, pname:GLenum, param:Int):Void
+        GL.glTexParameteri(target, pname, param);
+
+    inline static function uniform1f(location:GLUniformLocation, x:Float):Void
+        GL.glUniform1f(location, x);
+
+    inline static function uniform1i(location:GLUniformLocation, x:Int):Void
+        GL.glUniform1i(location, x);
+
+    inline static function uniform2f(location:GLUniformLocation, x:Float, y:Float):Void
+        GL.glUniform2f(location, x, y);
+
+    inline static function uniform2i(location:GLUniformLocation, x:Int, y:Int):Void
+        GL.glUniform2i(location, x, y);
+
+    inline static function uniform3f(location:GLUniformLocation, x:Float, y:Float, z:Float):Void
+        GL.glUniform3f(location, x, y, z);
+
+    inline static function uniform3i(location:GLUniformLocation, x:Int, y:Int, z:Int):Void
+        GL.glUniform3i(location, x, y, z);
+
+    inline static function uniform4f(location:GLUniformLocation, x:Float, y:Float, z:Float, w:Float):Void
+        GL.glUniform4f(location, x, y, z, w);
+
+    inline static function uniform4i(location:GLUniformLocation, x:Int, y:Int, z:Int, w:Int):Void
+        GL.glUniform4i(location, x, y, z, w);
+
+    inline static function useProgram(program:GLProgram):Void
+        GL.glUseProgram(program);
+
+    inline static function validateProgram(program:GLProgram):Void
+        GL.glValidateProgram(program);
+
+    inline static function vertexAttrib1f(indx:GLuint, x:Float):Void
+        GL.glVertexAttrib1f(indx, x);
+
+    inline static function vertexAttrib2f(indx:GLuint, x:Float, y:Float):Void
+        GL.glVertexAttrib2f(indx, x, y);
+
+    inline static function vertexAttrib3f(indx:GLuint, x:Float, y:Float, z:Float):Void
+        GL.glVertexAttrib3f(indx, x, y, z);
+
+    inline static function vertexAttrib4f(indx:GLuint, x:Float, y:Float, z:Float, w:Float):Void
+        GL.glVertexAttrib4f(indx, x, y, z, w);
+
+    inline static function viewport(x:Int, y:Int, width:Int, height:Int):Void
+        GL.glViewport(x, y, width, height);
+
+    static inline function bufferData(target:GLenum, data:ArrayBufferView, usage:GLenum):Void
         untyped __cpp__('glBufferData({0}, {1}->byteLength, (GLvoid*)(&{1}->buffer->b[0] + {1}->byteOffset), {2})', target, data, usage);
-    
-    static inline function bufferSubData(target:Int, offset:Int, data:ArrayBufferView ):Void
+
+    static inline function bufferSubData(target:GLenum, offset:Int, data:ArrayBufferView):Void
         untyped __cpp__('glBufferSubData({0}, {1}, {2}->byteLength, (GLvoid*)(&{2}->buffer->b[0] + {2}->byteOffset))', target, offset, data);
-    
-    static inline function compressedTexImage2D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, data:ArrayBufferView):Void
+
+    static inline function compressedTexImage2D(target:GLenum, level:Int, internalformat:GLenum, width:Int, height:Int, border:Int, data:ArrayBufferView):Void
         untyped __cpp__('glCompressedTexImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}->byteLength, (GLvoid*)(&{6}->buffer->b[0] + {6}->byteOffset))',target,level,internalformat, width, height, border, data);
-    
-    static inline function compressedTexSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, data:ArrayBufferView):Void
+
+    static inline function compressedTexSubImage2D(target:GLenum, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:GLenum, data:ArrayBufferView):Void
         untyped __cpp__('glCompressedTexSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}->byteLength, (GLvoid*)(&{7}->buffer->b[0] + {7}->byteOffset))',target,level,xoffset,yoffset,width,height,format,data);
-    
-    static inline function readPixels(x:Int, y:Int, width:Int, height:Int, format:Int, type:Int, data:ArrayBufferView):Void
+
+    static inline function readPixels(x:Int, y:Int, width:Int, height:Int, format:GLenum, type:GLenum, data:ArrayBufferView):Void
         untyped __cpp__('glReadPixels({0}, {1}, {2}, {3}, {4}, {5}, (GLvoid*)(&{6}->buffer->b[0] + {6}->byteOffset))',x,y,width,height,format,type,data);
-    
-    static inline function texImage2D(target:Int, level:Int, internalformat:Int, width:Int, height:Int, border:Int, format:Int, type:Int, data:ArrayBufferView):Void {
+
+    static inline function texImage2D(target:GLenum, level:Int, internalformat:GLenum, width:Int, height:Int, border:Int, format:GLenum, type:GLenum, data:ArrayBufferView):Void {
         untyped __cpp__('GLvoid* _data = (({0} != null()) ? (GLvoid*)(&{0}->buffer->b[0] + {0}->byteOffset) : NULL)',data);
         untyped __cpp__('glTexImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, _data)',target,level,internalformat,width,height,border,format,type);
     }
-    
-    static inline function texSubImage2D(target:Int, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:Int, type:Int, data:ArrayBufferView):Void
+
+    static inline function texSubImage2D(target:GLenum, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:GLenum, type:GLenum, data:ArrayBufferView):Void
         untyped __cpp__('glTexSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (GLvoid*)(&{8}->buffer->b[0] + {8}->byteOffset))',target,level,xoffset,yoffset,width,height,format,type,data);
-    
+
     static inline function uniform1fv(location:GLUniformLocation, data:Float32Array):Void
-        untyped __cpp__('glUniform1fv({0}, {1}->byteLength, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location, data);
-    
+        untyped __cpp__('glUniform1fv({0}, {1}->byteLength, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+
     static inline function uniform1iv(location:GLUniformLocation, data:Int32Array):Void
-        untyped __cpp__('glUniform1iv({0}, {1}->byteLength, (GLint*)(&{1}->buffer->b[0] + {1}->byteOffset))', location, data);
-    
+        untyped __cpp__('glUniform1iv({0}, {1}->byteLength, (GLint*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+
     static inline function uniform2fv(location:GLUniformLocation, data:Float32Array):Void
-        untyped __cpp__('glUniform2fv({0}, {1}->byteLength>>1, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location, data);
-    
+        untyped __cpp__('glUniform2fv({0}, {1}->byteLength>>1, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+
     static inline function uniform2iv(location:GLUniformLocation, data:Int32Array):Void
-        untyped __cpp__('glUniform2iv({0}, {1}->byteLength>>1, (GLint*)(&{1}->buffer->b[0] + {1}->byteOffset))', location, data);
-    
+        untyped __cpp__('glUniform2iv({0}, {1}->byteLength>>1, (GLint*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+
     static inline function uniform3fv(location:GLUniformLocation, data:Float32Array):Void
-        untyped __cpp__('glUniform3fv({0}, {1}->byteLength/3, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location, data);
-    
+        untyped __cpp__('glUniform3fv({0}, {1}->byteLength/3, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+
     static inline function uniform3iv(location:GLUniformLocation, data:Int32Array):Void
-        untyped __cpp__('glUniform3iv({0}, {1}->byteLength/3, (GLint*)(&{1}->buffer->b[0] + {1}->byteOffset))', location, data);
-    
+        untyped __cpp__('glUniform3iv({0}, {1}->byteLength/3, (GLint*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+
     static inline function uniform4fv(location:GLUniformLocation, data:Float32Array):Void
-        untyped __cpp__('glUniform4fv({0}, {1}->byteLength>>2, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location, data);
-    
+        untyped __cpp__('glUniform4fv({0}, {1}->byteLength>>2, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+
     static inline function uniform4iv(location:GLUniformLocation, data:Int32Array):Void
-        untyped __cpp__('glUniform4iv({0}, {1}->byteLength>>2, (GLint*)(&{1}->buffer->b[0] + {1}->byteOffset))', location, data);
-    
+        untyped __cpp__('glUniform4iv({0}, {1}->byteLength>>2, (GLint*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+
     static inline function uniformMatrix2fv(location:GLUniformLocation, transpose:Bool, data:Float32Array):Void
-        untyped __cpp__('glUniformMatrix2fv({0}, {1}->length>>2, {2}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location, data, transpose);
-    
+        untyped __cpp__('glUniformMatrix2fv({0}, {1}->length>>2, {2}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data, transpose);
+
     static inline function uniformMatrix3fv(location:GLUniformLocation, transpose:Bool, data:Float32Array):Void
-        untyped __cpp__('glUniformMatrix3fv({0}, {1}->length/9, {2}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location, data, transpose);
-    
+        untyped __cpp__('glUniformMatrix3fv({0}, {1}->length/9, {2}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data, transpose);
+
     static inline function uniformMatrix4fv(location:GLUniformLocation, transpose:Bool, data:Float32Array):Void
-        untyped __cpp__('glUniformMatrix4fv({0}, {1}->length>>4, {2}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location, data, transpose);
-    
-    static inline function vertexAttrib1fv(indx:Int, data:Float32Array):Void
+        untyped __cpp__('glUniformMatrix4fv({0}, {1}->length>>4, {2}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data, transpose);
+
+    static inline function vertexAttrib1fv(indx:GLuint, data:Float32Array):Void
         untyped __cpp__('glVertexAttrib1fv({0}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', indx, data);
-    
-    static inline function vertexAttrib2fv(indx:Int, data:Float32Array):Void
+
+    static inline function vertexAttrib2fv(indx:GLuint, data:Float32Array):Void
         untyped __cpp__('glVertexAttrib2fv({0}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', indx, data);
-    
-    static inline function vertexAttrib3fv(indx:Int, data:Float32Array):Void
+
+    static inline function vertexAttrib3fv(indx:GLuint, data:Float32Array):Void
         untyped __cpp__('glVertexAttrib3fv({0}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', indx, data);
-    
-    static inline function vertexAttrib4fv(indx:Int, data:Float32Array):Void
+
+    static inline function vertexAttrib4fv(indx:GLuint, data:Float32Array):Void
         untyped __cpp__('glVertexAttrib4fv({0}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', indx, data);
-        
-        //:todo:?
-    static inline function vertexAttribPointer(indx:Int, size:Int, type:Int, normalized:Bool, stride:Int, offset:Int):Void
+
+    static inline function vertexAttribPointer(indx:GLuint, size:Int, type:GLenum, normalized:Bool, stride:Int, offset:Int):Void
         untyped __cpp__('glVertexAttribPointer({0}, {1}, {2}, {3}, {4}, (void *)(intptr_t){5})', indx, size, type, normalized, stride, offset);
 
 
 //Unofficial helpers
 
-    @:native('linc::opengl::webgl::get_version_string')
+    @:native('linc::opengl::webgl::getVersionString')
     static function versionString():String;
 
 
@@ -871,6 +870,27 @@ extern class WebGL {
     static inline var UNPACK_COLORSPACE_CONVERSION_WEBGL = 0x9243;
     static inline var BROWSER_DEFAULT_WEBGL              = 0x9244;
 
+//Internal wrappers
+// note that these inline wrappers are needed for ideal Int cast to native side 
+// i.e instead of Dynamic on c++ side, with (int) cast, let the haxe abstract type pass the int directly
+
+    @:native('linc::opengl::webgl::createBuffer')        private static function _createBuffer():Int;
+    @:native('linc::opengl::webgl::createFramebuffer')   private static function _createFramebuffer():Int;
+    @:native('linc::opengl::webgl::createRenderbuffer')  private static function _createRenderbuffer():Int;
+    @:native('linc::opengl::webgl::createTexture')       private static function _createTexture():Int;
+    @:native('linc::opengl::webgl::deleteBuffer')        private static function _deleteBuffer(buffer:Int):Void;
+    @:native('linc::opengl::webgl::deleteFramebuffer')   private static function _deleteFramebuffer(framebuffer:Int):Void;
+    @:native('linc::opengl::webgl::deleteRenderbuffer')  private static function _deleteRenderbuffer(renderbuffer:Int):Void;    
+    @:native('linc::opengl::webgl::deleteTexture')       private static function _deleteTexture(texture:Int):Void;
+    @:native('linc::opengl::webgl::getProgramInfoLog')   private static function _getProgramInfoLog(program:Int):String;
+    @:native('linc::opengl::webgl::getProgramParameter') private static function _getProgramParameter(program:Int, pname:GLenum):Int;
+    @:native('linc::opengl::webgl::getShaderInfoLog')    private static function _getShaderInfoLog(shader:Int):String;
+    @:native('linc::opengl::webgl::getShaderParameter')  private static function _getShaderParameter(shader:Int, pname:GLenum):Int;
+    @:native('linc::opengl::webgl::getShaderSource')     private static function _getShaderSource(shader:Int):String;
+    @:native('linc::opengl::webgl::shaderSource')        private static function _shaderSource(shader:Int, source:String):Void;
+
+
+
 } //WebGL
 
 
@@ -900,116 +920,66 @@ typedef GLContextAttributes = {
     premultipliedAlpha:Bool,
     preserveDrawingBuffer:Bool
 
-} //GLContextAttributes
+} //WebGLContextAttributes
 
 
 class GLObject {
-        /** The native GL handle/id. read only */
-    public var id (default, null) : Int;
-        /** The invalidated state. read only */
-    public var invalidated (default,set) : Bool;
-    inline public function new( id:Int ) this.id = id;
-    function toString() : String return 'GLObject($id)';
-    inline function set_invalidated( value:Bool ) : Bool {
-        id = -1; return invalidated = value;
-    } //set_invalidated
-}
 
-abstract GLUniformLocation(Null<Int>) from Null<Int> to Null<Int> {}
+    public var id: Int = 0;
+    public var invalidated (get,set) : Bool;
 
-@:noCompletion class GLBO extends GLObject { override inline function toString() return 'GLBuffer($id)'; }
-@:noCompletion class GLFBO extends GLObject { override inline function toString() return 'GLFramebuffer($id)'; }
-@:noCompletion class GLRBO extends GLObject { override inline function toString() return 'GLRenderbuffer($id)'; }
-@:noCompletion class GLSO extends GLObject { override inline function toString() return 'GLShader($id)'; }
-@:noCompletion class GLTO extends GLObject { override inline function toString() return 'GLTexture($id)'; }
-@:noCompletion class GLPO extends GLObject {
-    public var shaders : Array<GLShader>;
-    inline public function new( id:Int ) { super( id ); shaders = []; } //new
-    override inline function toString() return 'GLProgram($id)';
-}
+    inline public function new(_id:Int) id = _id;
+    inline function toString() : String return 'GLObject($id)';
+    inline function get_invalidated() : Bool return id == 0;
+    inline function set_invalidated(value:Bool) : Bool { id = 0; return value; }
 
-abstract GLBuffer(GLBO) {
-    public var id (get,never):Int;
-    public var invalidated (get,set):Bool;
-    inline public function new(_id:Int) this = new GLBO(_id);
-    inline function get_id() return this.id;
-    inline function get_invalidated() return this.invalidated;
-    inline function set_invalidated(_invalidated:Bool) return this.invalidated = _invalidated;
-    @:to inline public function toInt() : Int return this.id;
-    @:to inline public function toDynamic() : Dynamic return this.id;
-    @:to inline public function toNullInt() : Null<Int> return this.id;
+} //GLObject
+
+@:forward abstract GLBuffer(GLObject) {
+    inline public function new(_id:Int) this = new GLObject(_id);
+    @:to inline public function toInt() : Int return this == null ? 0 : this.id;
     @:from inline static public function fromInt(_id:Int) return new GLBuffer(_id);
-    @:from inline static public function fromDynamic(_id:Dynamic) return new GLBuffer(Std.int(_id));
+    inline function toString() : String return 'GLBuffer(${this == null ? 0 : this.id})';
 }
 
-abstract GLFramebuffer(GLFBO) {
-    public var id (get,never) : Int;
-    public var invalidated (get,set) : Bool;
-    inline public function new(_id:Int) this = new GLFBO(_id);
-    inline function get_id() return this.id;
-    inline function get_invalidated() return this.invalidated;
-    inline function set_invalidated(_invalidated:Bool) return this.invalidated = _invalidated;
-    @:to inline public function toInt() : Int return this.id;
-    @:to inline public function toDynamic() : Dynamic return this.id;
-    @:to inline public function toNullInt() : Null<Int> return this.id;
+@:forward abstract GLFramebuffer(GLObject) {
+    inline public function new(_id:Int) this = new GLObject(_id);
+    @:to inline public function toInt() : Int return this == null ? 0 : this.id;
     @:from inline static public function fromInt(_id:Int) return new GLFramebuffer(_id);
-    @:from inline static public function fromDynamic(_id:Dynamic) return new GLFramebuffer(Std.int(_id));
-} //GLFramebuffer
-
-abstract GLRenderbuffer(GLRBO) {
-    public var id (get,never) : Int;
-    public var invalidated (get,set) : Bool;
-    inline public function new(_id:Int) this = new GLRBO(_id);
-    inline function get_id() return this.id;
-    inline function get_invalidated() return this.invalidated;
-    inline function set_invalidated(_invalidated:Bool) return this.invalidated = _invalidated;
-    @:to inline public function toInt() : Int return this.id;
-    @:to inline public function toDynamic() : Dynamic return this.id;
-    @:to inline public function toNullInt() : Null<Int> return this.id;
-    @:from inline static public function fromInt(_id:Int) return new GLRenderbuffer(_id);
-    @:from inline static public function fromDynamic(_id:Dynamic) return new GLRenderbuffer(Std.int(_id));
-} //GLRenderbuffer
-
-
-abstract GLTexture(GLTO) {
-    public var id (get,never):Int;
-    public var invalidated (get,set):Bool;
-    inline public function new(_id:Int) this = new GLTO(_id);
-    inline function get_id() return this.id;
-    inline function get_invalidated() return this.invalidated;
-    inline function set_invalidated(_invalidated:Bool) return this.invalidated = _invalidated;
-    @:to inline public function toInt() : Int return this.id;
-    @:to inline public function toDynamic() : Dynamic return this.id;
-    @:to inline public function toNullInt() : Null<Int> return this.id;
-    @:from inline static public function fromInt(_id:Int) return new GLTexture(_id);
-    @:from inline static public function fromDynamic(_id:Dynamic) return new GLTexture(Std.int(_id));
+    inline function toString() : String return 'GLFramebuffer(${this == null ? 0 : this.id})';
 }
 
-abstract GLShader(GLSO) {
-    public var id (get,never):Int;
-    public var invalidated (get,set):Bool;
-    inline public function new(_id:Int) this = new GLSO(_id);
-    inline function get_id() return this.id;
-    inline function get_invalidated() return this.invalidated;
-    inline function set_invalidated(_invalidated:Bool) return this.invalidated = _invalidated;
-    @:to inline public function toInt() : Int return this.id;
-    @:to inline public function toDynamic() : Dynamic return this.id;
-    @:to inline public function toNullInt() : Null<Int> return this.id;
-    @:from inline static public function fromInt(_id:Int) return new GLShader(_id);
-    @:from inline static public function fromDynamic(_id:Dynamic) return new GLShader(Std.int(_id));
-}
-
-@:forward(shaders)
-abstract GLProgram(GLPO) {
-    public var id (get,never):Int;
-    public var invalidated (get,set):Bool;
-    inline public function new(_id:Int) this = new GLPO(_id);
-    inline function get_id() return this.id;
-    inline function get_invalidated() return this.invalidated;
-    inline function set_invalidated(_invalidated:Bool) return this.invalidated = _invalidated;
-    @:to inline public function toInt() : Int return this.id;
-    @:to inline public function toDynamic() : Dynamic return this.id;
-    @:to inline public function toNullInt() : Null<Int> return this.id;
+@:forward abstract GLProgram(GLObject) {
+    inline public function new(_id:Int) this = new GLObject(_id);
+    @:to inline public function toInt() : Int return this == null ? 0 : this.id;
     @:from inline static public function fromInt(_id:Int) return new GLProgram(_id);
-    @:from inline static public function fromDynamic(_id:Dynamic) return new GLProgram(Std.int(_id));
+    inline function toString() : String return 'GLProgram(${this == null ? 0 : this.id})';
+}
+
+@:forward abstract GLRenderbuffer(GLObject) {
+    inline public function new(_id:Int) this = new GLObject(_id);
+    @:to inline public function toInt() : Int return this == null ? 0 : this.id;
+    @:from inline static public function fromInt(_id:Int) return new GLRenderbuffer(_id);
+    inline function toString() : String return 'GLRenderbuffer(${this == null ? 0 : this.id})';
+}
+
+@:forward abstract GLShader(GLObject) {
+    inline public function new(_id:Int) this = new GLObject(_id);
+    @:to inline public function toInt() : Int return this == null ? 0 : this.id;
+    @:from inline static public function fromInt(_id:Int) return new GLShader(_id);
+    inline function toString() : String return 'GLShader(${this == null ? 0 : this.id})';
+}
+
+@:forward abstract GLTexture(GLObject) {
+    inline public function new(_id:Int) this = new GLObject(_id);
+    @:to inline public function toInt() : Int return this == null ? 0 : this.id;
+    @:from inline static public function fromInt(_id:Int) return new GLTexture(_id);
+    inline function toString() : String return 'GLTexture(${this == null ? 0 : this.id})';
+}
+
+@:forward abstract GLUniformLocation(GLObject) {
+    inline public function new(_id:Int) this = new GLObject(_id);
+    @:to inline public function toInt() : Int return this == null ? 0 : this.id;
+    @:from inline static public function fromInt(_id:Int) return new GLUniformLocation(_id);
+    inline function toString() : String return 'GLUniformLocation(${this == null ? 0 : this.id})';
 }
