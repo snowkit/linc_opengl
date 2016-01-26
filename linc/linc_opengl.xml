@@ -1,6 +1,9 @@
 <xml>
 
-    <set name="linc_opengl_GLES" value="" if="android || ios"/>
+    <set name="linc_opengl_EGL"   value="" if="android"/>
+    <set name="linc_opengl_GLES"  value="" if="android || ios"/>
+    <set name="linc_opengl_GLES1" value="" if="android || ios"/>
+    <set name="linc_opengl_GLES2" value="" if="android || ios"/>
 
     <files id='haxe'>
         <compilerflag value='-I${LINC_OPENGL_PATH}/linc/'/>
@@ -30,10 +33,10 @@
         </section>
         
         <section if="android">
-            <lib name="-lEGL" />
-            <lib name="-lGLESv1_CM" />
-            <lib name="-lGLESv2" />
-            <lib name="-lGLESv3" />
+            <lib name="-lEGL"           if="linc_opengl_EGL"/>
+            <lib name="-lGLESv1_CM"     if="linc_opengl_GLES1"/>
+            <lib name="-lGLESv2"        if="linc_opengl_GLES2"/>
+            <lib name="-lGLESv3"        if="linc_opengl_GLES3"/>
         </section>
         
         <section if="mac">
