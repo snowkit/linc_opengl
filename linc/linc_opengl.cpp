@@ -39,6 +39,44 @@ namespace linc {
                 return result;
             }
 
+            Dynamic getActiveUniform(int program, int index) {
+
+                char buf[1024];
+                GLsizei out_len = 1024;
+                GLsizei size = 0;
+                GLenum  type = 0;
+
+                glGetActiveUniform(program, index, 1024, &out_len, &size, &type, buf);
+
+                hx::Anon result = hx::Anon_obj::Create();
+
+                    result->Add(HX_CSTRING("size"), size);
+                    result->Add(HX_CSTRING("type"), (int)type);
+                    result->Add(HX_CSTRING("name"), ::String(buf));
+
+                return result;
+
+            } //getActiveUniform
+
+            Dynamic getActiveAttrib(int program, int index) {
+
+                char buf[1024];
+                GLsizei out_len = 1024;
+                GLsizei size = 0;
+                GLenum  type = 0;
+
+                glGetActiveAttrib(program, index, 1024, &out_len, &size, &type, buf);
+
+                hx::Anon result = hx::Anon_obj::Create();
+
+                    result->Add(HX_CSTRING("size"), size);
+                    result->Add(HX_CSTRING("type"), (int)type);
+                    result->Add(HX_CSTRING("name"), ::String(buf));
+
+                return result;
+
+            } //getActiveAttrib
+
             ::String getShaderSource(int id) {
                 int len = 0;
                 glGetShaderiv(id, GL_SHADER_SOURCE_LENGTH, &len);

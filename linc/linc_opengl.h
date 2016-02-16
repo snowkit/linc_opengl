@@ -28,6 +28,8 @@ namespace linc {
             extern int createRenderbuffer();
             extern void deleteRenderbuffer(int id);
             extern int getShaderParameter(int id, int param);
+            extern Dynamic getActiveUniform(int program, int index);
+            extern Dynamic getActiveAttrib(int program, int index);
             extern ::String getShaderSource(int id);
             extern ::String getShaderInfoLog(int id);
             extern ::String getProgramInfoLog(int id);

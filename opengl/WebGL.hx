@@ -179,12 +179,17 @@ extern class WebGL {
     inline static function generateMipmap(target:GLenum):Void
         GL.glGenerateMipmap(target);
 
-    //:todo: glGetActiveAttrib is an OpenGL ES API so isn't available 1:1 on desktop, 
-    //       if the same information is available it can be wrapped. https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveAttrib.xml
-    // static function getActiveAttrib(program:GLProgram, index:GLuint):GLActiveInfo;
+    @:native('linc::opengl::webgl::getActiveAttrib')
+    private static function _getActiveAttrib(program:Int, index:GLuint):GLActiveInfo;
+    static inline function getActiveAttrib(program:GLProgram, index:GLuint):GLActiveInfo {
+        return _getActiveAttrib(program, index);
+    }
 
-    // @:native('glGetActiveUniform') //:todo:see getActiveAttrib as well
-    // static function getActiveUniform(program:GLProgram, index:GLuint):GLActiveInfo;
+    @:native('linc::opengl::webgl::getActiveUniform')
+    private static function _getActiveUniform(program:Int, index:GLuint):GLActiveInfo;
+    static inline function getActiveUniform(program:GLProgram, index:GLuint):GLActiveInfo {
+        return _getActiveUniform(program, index);
+    }
 
     @:native('linc::opengl::webgl::getAttachedShaders')
     static function getAttachedShaders(program:GLProgram):Array<GLShader>;
