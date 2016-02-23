@@ -13,12 +13,18 @@ abstract IntRef(cpp.Pointer<Int>) {
 }
 
 @:keep
-@:include('linc_opengl.h')
+@:allow(opengl.GL)
 #if !display
 @:build(linc.Linc.touch())
 @:build(linc.Linc.xml('opengl'))
 #end
+private extern class GL_linc { private inline static var LINC = 1; }
+
+@:keep
+@:include('linc_opengl.h')
 extern class GL {
+
+		private inline static var LINC = GL_linc.LINC;
 
 //GL 1.1
 

@@ -439,11 +439,19 @@ class Main {
         out += '    @:from static inline function fromInt(_val:Int) : IntRef return cast cpp.Pointer.addressOf(_val);\n';
         out += '}\n\n';
 
+        out += '@:keep\n'
+            +  '@:allow(opengl.GL)\n'
+            +  '#if !display\n'
+            +  '@:build(linc.Linc.touch())\n'
+            +  '@:build(linc.Linc.xml(\'opengl\'))\n'
+            +  '#end\n'
+            +  'private extern class GL_linc { private inline static var LINC = 1; }\n\n';
+
         //extern GL
-        out += '@:keep\n@:include(\'linc_opengl.h\')\n#if !display\n@:build(linc.Linc.touch())\n@:build(linc.Linc.xml(\'opengl\'))\n#end\nextern class GL {\n\n';
+        out += '@:keep\n@:include(\'linc_opengl.h\')\nextern class GL {\n\n';
+        out += '\t\tprivate inline static var LINC = GL_linc.LINC;\n\n';
 
         var written_defines = [];
-
 
         for(v in glew.versions) {
             out += '//GL ${v.major}.${v.minor}\n\n';
