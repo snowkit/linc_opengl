@@ -1,5 +1,6 @@
 package opengl;
 
+import haxe.io.Bytes;
 import haxe.io.BytesData;
 
 @:keep
