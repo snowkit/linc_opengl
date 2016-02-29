@@ -431,7 +431,7 @@ class Main {
         //package
         out += 'package opengl;\n\n';
         //imports
-        out += 'import haxe.io.BytesData;\n\n';
+        out += 'import haxe.io.BytesData;\nimport haxe.io.Bytes;\n\n';
 
         out += '@:keep\n@:include(\'linc_opengl.h\')\n@:native(\'GLsync\')\nextern class GLSync {}\n\n';
 
@@ -445,7 +445,10 @@ class Main {
             +  '@:build(linc.Linc.touch())\n'
             +  '@:build(linc.Linc.xml(\'opengl\'))\n'
             +  '#end\n'
-            +  'private extern class GL_linc { private inline static var LINC = 1; }\n\n';
+            +  'private extern class GL_linc {\n'
+            +  '\tprivate inline static var LINC = 1;\n'
+            +  '\t@:keep private static inline var force_bytes_include:haxe.io.Bytes = null;\n'
+            +  '}\n\n';
 
         //extern GL
         out += '@:keep\n@:include(\'linc_opengl.h\')\nextern class GL {\n\n';

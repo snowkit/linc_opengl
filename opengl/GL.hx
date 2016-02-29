@@ -1,7 +1,7 @@
 package opengl;
 
-import haxe.io.Bytes;
 import haxe.io.BytesData;
+import haxe.io.Bytes;
 
 @:keep
 @:include('linc_opengl.h')
@@ -19,7 +19,10 @@ abstract IntRef(cpp.Pointer<Int>) {
 @:build(linc.Linc.touch())
 @:build(linc.Linc.xml('opengl'))
 #end
-private extern class GL_linc { private inline static var LINC = 1; }
+private extern class GL_linc {
+	private inline static var LINC = 1;
+	@:keep private static inline var force_bytes_include:haxe.io.Bytes = null;
+}
 
 @:keep
 @:include('linc_opengl.h')
