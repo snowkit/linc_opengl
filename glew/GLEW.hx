@@ -19,7 +19,7 @@ extern class GLEW {
             case ERROR_NO_GL_VERSION: 'Missing GL version';
             case ERROR_GL_VERSION_10_ONLY: 'Need at least OpenGL 1.1';
             case ERROR_GLX_VERSION_11_ONLY: 'Need at least GLX 1.2';
-            case _: return 'Unknown error';
+            case _: 'Unknown error';
         }
     }
 
