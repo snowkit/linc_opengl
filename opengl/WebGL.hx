@@ -944,6 +944,8 @@ class GLObject {
     inline public function new(_id:Int) this = new GLObject(_id);
     @:to inline public function toInt() : Int return this == null ? 0 : this.id;
     @:from inline static public function fromInt(_id:Int) return new GLBuffer(_id);
+    @:to inline public function toDynamic() : Dynamic return this == null ? 0 : this.id;
+    @:from inline static public function fromDynamic(_id:Dynamic) return new GLBuffer(_id);
     inline function toString() : String return 'GLBuffer(${this == null ? 0 : this.id})';
 }
 
@@ -951,6 +953,8 @@ class GLObject {
     inline public function new(_id:Int) this = new GLObject(_id);
     @:to inline public function toInt() : Int return this == null ? 0 : this.id;
     @:from inline static public function fromInt(_id:Int) return new GLFramebuffer(_id);
+    @:to inline public function toDynamic() : Dynamic return this == null ? 0 : this.id;
+    @:from inline static public function fromDynamic(_id:Dynamic) return new GLFramebuffer(_id);
     inline function toString() : String return 'GLFramebuffer(${this == null ? 0 : this.id})';
 }
 
@@ -958,6 +962,8 @@ class GLObject {
     inline public function new(_id:Int) this = new GLObject(_id);
     @:to inline public function toInt() : Int return this == null ? 0 : this.id;
     @:from inline static public function fromInt(_id:Int) return new GLProgram(_id);
+    @:to inline public function toDynamic() : Dynamic return this == null ? 0 : this.id;
+    @:from inline static public function fromDynamic(_id:Dynamic) return new GLProgram(_id);
     inline function toString() : String return 'GLProgram(${this == null ? 0 : this.id})';
 }
 
@@ -965,6 +971,8 @@ class GLObject {
     inline public function new(_id:Int) this = new GLObject(_id);
     @:to inline public function toInt() : Int return this == null ? 0 : this.id;
     @:from inline static public function fromInt(_id:Int) return new GLRenderbuffer(_id);
+    @:to inline public function toDynamic() : Dynamic return this == null ? 0 : this.id;
+    @:from inline static public function fromDynamic(_id:Dynamic) return new GLRenderbuffer(_id);
     inline function toString() : String return 'GLRenderbuffer(${this == null ? 0 : this.id})';
 }
 
@@ -972,6 +980,8 @@ class GLObject {
     inline public function new(_id:Int) this = new GLObject(_id);
     @:to inline public function toInt() : Int return this == null ? 0 : this.id;
     @:from inline static public function fromInt(_id:Int) return new GLShader(_id);
+    @:to inline public function toDynamic() : Dynamic return this == null ? 0 : this.id;
+    @:from inline static public function fromDynamic(_id:Dynamic) return new GLShader(_id);
     inline function toString() : String return 'GLShader(${this == null ? 0 : this.id})';
 }
 
@@ -979,6 +989,8 @@ class GLObject {
     inline public function new(_id:Int) this = new GLObject(_id);
     @:to inline public function toInt() : Int return this == null ? 0 : this.id;
     @:from inline static public function fromInt(_id:Int) return new GLTexture(_id);
+    @:to inline public function toDynamic() : Dynamic return this == null ? 0 : this.id;
+    @:from inline static public function fromDynamic(_id:Dynamic) return new GLTexture(_id);
     inline function toString() : String return 'GLTexture(${this == null ? 0 : this.id})';
 }
 
@@ -986,5 +998,7 @@ class GLObject {
     inline public function new(_id:Int) this = new GLObject(_id);
     @:to inline public function toInt() : Int return this == null ? 0 : this.id;
     @:from inline static public function fromInt(_id:Int) return new GLUniformLocation(_id);
+    @:to inline public function toDynamic() : Dynamic return this == null ? 0 : this.id;
+    @:from inline static public function fromDynamic(_id:Dynamic) return new GLUniformLocation(_id);
     inline function toString() : String return 'GLUniformLocation(${this == null ? 0 : this.id})';
 }
