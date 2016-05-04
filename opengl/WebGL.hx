@@ -377,72 +377,72 @@ extern class WebGL {
         GL.glViewport(x, y, width, height);
 
     static inline function bufferData(target:GLenum, data:ArrayBufferView, usage:GLenum):Void
-        untyped __cpp__('glBufferData({0}, {1}->byteLength, (GLvoid*)(&{1}->buffer->b[0] + {1}->byteOffset), {2})', target, data, usage);
+        untyped __cpp__('glBufferData({0}, {1}->byteLength, (GLvoid*)(&{1}->buffer[0] + {1}->byteOffset), {2})', target, data, usage);
 
     static inline function bufferSubData(target:GLenum, offset:Int, data:ArrayBufferView):Void
-        untyped __cpp__('glBufferSubData({0}, {1}, {2}->byteLength, (GLvoid*)(&{2}->buffer->b[0] + {2}->byteOffset))', target, offset, data);
+        untyped __cpp__('glBufferSubData({0}, {1}, {2}->byteLength, (GLvoid*)(&{2}->buffer[0] + {2}->byteOffset))', target, offset, data);
 
     static inline function compressedTexImage2D(target:GLenum, level:Int, internalformat:GLenum, width:Int, height:Int, border:Int, data:ArrayBufferView):Void
-        untyped __cpp__('glCompressedTexImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}->byteLength, (GLvoid*)(&{6}->buffer->b[0] + {6}->byteOffset))',target,level,internalformat, width, height, border, data);
+        untyped __cpp__('glCompressedTexImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}->byteLength, (GLvoid*)(&{6}->buffer[0] + {6}->byteOffset))',target,level,internalformat, width, height, border, data);
 
     static inline function compressedTexSubImage2D(target:GLenum, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:GLenum, data:ArrayBufferView):Void
-        untyped __cpp__('glCompressedTexSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}->byteLength, (GLvoid*)(&{7}->buffer->b[0] + {7}->byteOffset))',target,level,xoffset,yoffset,width,height,format,data);
+        untyped __cpp__('glCompressedTexSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}->byteLength, (GLvoid*)(&{7}->buffer[0] + {7}->byteOffset))',target,level,xoffset,yoffset,width,height,format,data);
 
     static inline function readPixels(x:Int, y:Int, width:Int, height:Int, format:GLenum, type:GLenum, data:ArrayBufferView):Void
-        untyped __cpp__('glReadPixels({0}, {1}, {2}, {3}, {4}, {5}, (GLvoid*)(&{6}->buffer->b[0] + {6}->byteOffset))',x,y,width,height,format,type,data);
+        untyped __cpp__('glReadPixels({0}, {1}, {2}, {3}, {4}, {5}, (GLvoid*)(&{6}->buffer[0] + {6}->byteOffset))',x,y,width,height,format,type,data);
 
     static inline function texImage2D(target:GLenum, level:Int, internalformat:GLenum, width:Int, height:Int, border:Int, format:GLenum, type:GLenum, data:ArrayBufferView):Void {
-        untyped __cpp__('GLvoid* _data = (({0} != null()) ? (GLvoid*)(&{0}->buffer->b[0] + {0}->byteOffset) : NULL)',data);
+        untyped __cpp__('GLvoid* _data = (({0} != null()) ? (GLvoid*)(&{0}->buffer[0] + {0}->byteOffset) : NULL)',data);
         untyped __cpp__('glTexImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, _data)',target,level,internalformat,width,height,border,format,type);
     }
 
     static inline function texSubImage2D(target:GLenum, level:Int, xoffset:Int, yoffset:Int, width:Int, height:Int, format:GLenum, type:GLenum, data:ArrayBufferView):Void
-        untyped __cpp__('glTexSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (GLvoid*)(&{8}->buffer->b[0] + {8}->byteOffset))',target,level,xoffset,yoffset,width,height,format,type,data);
+        untyped __cpp__('glTexSubImage2D({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, (GLvoid*)(&{8}->buffer[0] + {8}->byteOffset))',target,level,xoffset,yoffset,width,height,format,type,data);
 
     static inline function uniform1fv(location:GLUniformLocation, data:Float32Array):Void
-        untyped __cpp__('glUniform1fv({0}, {1}->byteLength, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform1fv({0}, {1}->byteLength, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
 
     static inline function uniform1iv(location:GLUniformLocation, data:Int32Array):Void
-        untyped __cpp__('glUniform1iv({0}, {1}->byteLength, (GLint*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform1iv({0}, {1}->byteLength, (GLint*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
 
     static inline function uniform2fv(location:GLUniformLocation, data:Float32Array):Void
-        untyped __cpp__('glUniform2fv({0}, {1}->byteLength>>1, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform2fv({0}, {1}->byteLength>>1, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
 
     static inline function uniform2iv(location:GLUniformLocation, data:Int32Array):Void
-        untyped __cpp__('glUniform2iv({0}, {1}->byteLength>>1, (GLint*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform2iv({0}, {1}->byteLength>>1, (GLint*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
 
     static inline function uniform3fv(location:GLUniformLocation, data:Float32Array):Void
-        untyped __cpp__('glUniform3fv({0}, {1}->byteLength/3, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform3fv({0}, {1}->byteLength/3, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
 
     static inline function uniform3iv(location:GLUniformLocation, data:Int32Array):Void
-        untyped __cpp__('glUniform3iv({0}, {1}->byteLength/3, (GLint*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform3iv({0}, {1}->byteLength/3, (GLint*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
 
     static inline function uniform4fv(location:GLUniformLocation, data:Float32Array):Void
-        untyped __cpp__('glUniform4fv({0}, {1}->byteLength>>2, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform4fv({0}, {1}->byteLength>>2, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
 
     static inline function uniform4iv(location:GLUniformLocation, data:Int32Array):Void
-        untyped __cpp__('glUniform4iv({0}, {1}->byteLength>>2, (GLint*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform4iv({0}, {1}->byteLength>>2, (GLint*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
 
     static inline function uniformMatrix2fv(location:GLUniformLocation, transpose:Bool, data:Float32Array):Void
-        untyped __cpp__('glUniformMatrix2fv({0}, {1}->length>>2, {2}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data, transpose);
+        untyped __cpp__('glUniformMatrix2fv({0}, {1}->length>>2, {2}, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data, transpose);
 
     static inline function uniformMatrix3fv(location:GLUniformLocation, transpose:Bool, data:Float32Array):Void
-        untyped __cpp__('glUniformMatrix3fv({0}, {1}->length/9, {2}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data, transpose);
+        untyped __cpp__('glUniformMatrix3fv({0}, {1}->length/9, {2}, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data, transpose);
 
     static inline function uniformMatrix4fv(location:GLUniformLocation, transpose:Bool, data:Float32Array):Void
-        untyped __cpp__('glUniformMatrix4fv({0}, {1}->length>>4, {2}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', location.id, data, transpose);
+        untyped __cpp__('glUniformMatrix4fv({0}, {1}->length>>4, {2}, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data, transpose);
 
     static inline function vertexAttrib1fv(indx:GLuint, data:Float32Array):Void
-        untyped __cpp__('glVertexAttrib1fv({0}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', indx, data);
+        untyped __cpp__('glVertexAttrib1fv({0}, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', indx, data);
 
     static inline function vertexAttrib2fv(indx:GLuint, data:Float32Array):Void
-        untyped __cpp__('glVertexAttrib2fv({0}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', indx, data);
+        untyped __cpp__('glVertexAttrib2fv({0}, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', indx, data);
 
     static inline function vertexAttrib3fv(indx:GLuint, data:Float32Array):Void
-        untyped __cpp__('glVertexAttrib3fv({0}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', indx, data);
+        untyped __cpp__('glVertexAttrib3fv({0}, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', indx, data);
 
     static inline function vertexAttrib4fv(indx:GLuint, data:Float32Array):Void
-        untyped __cpp__('glVertexAttrib4fv({0}, (GLfloat*)(&{1}->buffer->b[0] + {1}->byteOffset))', indx, data);
+        untyped __cpp__('glVertexAttrib4fv({0}, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', indx, data);
 
     static inline function vertexAttribPointer(indx:GLuint, size:Int, type:GLenum, normalized:Bool, stride:Int, offset:Int):Void
         untyped __cpp__('glVertexAttribPointer({0}, {1}, {2}, {3}, {4}, (void *)(intptr_t){5})', indx, size, type, normalized, stride, offset);
