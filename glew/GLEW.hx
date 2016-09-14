@@ -1,5 +1,8 @@
 package glew;
 
+//required, includes the linc_opengl wirings when only glew is referenced.
+import opengl.GL;
+
 @:keep
 @:include('linc_glew.h')
 #if !display
