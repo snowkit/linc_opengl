@@ -1,14 +1,14 @@
 <xml>
 
     <set name="linc_opengl_EGL"   value="" if="android"/>
-    <set name="linc_opengl_GLES"  value="" if="android || ios"/>
-    <set name="linc_opengl_GLES1" value="" if="android || ios"/>
-    <set name="linc_opengl_GLES2" value="" if="android || ios"/>
+    <set name="linc_opengl_GLES"  value="" if="android || ios || tvos"/>
+    <set name="linc_opengl_GLES1" value="" if="android || ios || tvos"/>
+    <set name="linc_opengl_GLES2" value="" if="android || ios || tvos"/>
 
     <files id='haxe'>
         <compilerflag value='-I${LINC_OPENGL_PATH}/linc/'/>
         <compilerflag value='-I${LINC_OPENGL_PATH}/lib/glew/include/'/>
-        <compilerflag value="-DLINC_OPENGL_GLEW" unless="android || ios"/>
+        <compilerflag value="-DLINC_OPENGL_GLEW" unless="android || ios || tvos"/>
         <compilerflag value="-DGLEW_STATIC" unless="android"/>
         <file name='${LINC_OPENGL_PATH}/linc/linc_opengl.cpp' />
     </files>
@@ -17,7 +17,7 @@
         <compilerflag value='-I${LINC_OPENGL_PATH}/linc/'/>
         <compilerflag value='-I${LINC_OPENGL_PATH}/lib/glew/include/'/>
         <compilerflag value="-DGLEW_STATIC" unless="android"/>
-        <file name='${LINC_OPENGL_PATH}/lib/glew/src/glew.c' unless="android || ios"/>
+        <file name='${LINC_OPENGL_PATH}/lib/glew/src/glew.c' unless="android || ios || tvos"/>
     </files>
 
     <target id="haxe">
