@@ -291,7 +291,7 @@ namespace linc {
                 GLsizei count;
                 glGetAttachedShaders(program, 2, &count, shaders);
 
-                Array< ::Int > result = Array_obj< ::Int >::__new();
+                Array<int> result = Array_obj<int>::__new();
                 
                     result->push(shaders[0]);
                     result->push(shaders[1]);
