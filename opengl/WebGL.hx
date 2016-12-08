@@ -428,7 +428,7 @@ extern class WebGL {
 
     static inline function uniform2fv(location:GLUniformLocation, data:Float32Array):Void {
         force_include;
-        untyped __cpp__('glUniform2fv({0}, {1}->byteLength>>1, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform2fv({0}, {1}->byteLength>>3, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
     }
 
     static inline function uniform2iv(location:GLUniformLocation, data:Int32Array):Void {
