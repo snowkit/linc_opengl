@@ -418,42 +418,42 @@ extern class WebGL {
 
     static inline function uniform1fv(location:GLUniformLocation, data:Float32Array):Void {
         force_include;
-        untyped __cpp__('glUniform1fv({0}, {1}->byteLength, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform1fv({0}, {1}->byteLength/4, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
     }
 
     static inline function uniform1iv(location:GLUniformLocation, data:Int32Array):Void {
         force_include;
-        untyped __cpp__('glUniform1iv({0}, {1}->byteLength, (GLint*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform1iv({0}, {1}->byteLength/4, (GLint*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
     }
 
     static inline function uniform2fv(location:GLUniformLocation, data:Float32Array):Void {
         force_include;
-        untyped __cpp__('glUniform2fv({0}, {1}->byteLength>>3, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform2fv({0}, {1}->byteLength/8, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
     }
 
     static inline function uniform2iv(location:GLUniformLocation, data:Int32Array):Void {
         force_include;
-        untyped __cpp__('glUniform2iv({0}, {1}->byteLength>>1, (GLint*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform2iv({0}, {1}->byteLength/8, (GLint*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
     }
 
     static inline function uniform3fv(location:GLUniformLocation, data:Float32Array):Void {
         force_include;
-        untyped __cpp__('glUniform3fv({0}, {1}->byteLength/3, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform3fv({0}, {1}->byteLength/12, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
     }
 
     static inline function uniform3iv(location:GLUniformLocation, data:Int32Array):Void {
         force_include;
-        untyped __cpp__('glUniform3iv({0}, {1}->byteLength/3, (GLint*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform3iv({0}, {1}->byteLength/12, (GLint*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
     }
 
     static inline function uniform4fv(location:GLUniformLocation, data:Float32Array):Void {
         force_include;
-        untyped __cpp__('glUniform4fv({0}, {1}->byteLength>>2, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform4fv({0}, {1}->byteLength/16, (GLfloat*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
     }
 
     static inline function uniform4iv(location:GLUniformLocation, data:Int32Array):Void {
         force_include;
-        untyped __cpp__('glUniform4iv({0}, {1}->byteLength>>2, (GLint*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
+        untyped __cpp__('glUniform4iv({0}, {1}->byteLength/16, (GLint*)(&{1}->buffer[0] + {1}->byteOffset))', location.id, data);
     }
 
     static inline function uniformMatrix2fv(location:GLUniformLocation, transpose:Bool, data:Float32Array):Void {
