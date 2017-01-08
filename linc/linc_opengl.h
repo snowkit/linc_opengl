@@ -1,17 +1,16 @@
-#ifndef _LINC_OPENGL_H_
-#define _LINC_OPENGL_H_
+#pragma once
 
 #include <hxcpp.h>
 #include <haxe/io/Bytes.h>
 
 #if defined(HX_ANDROID)
-#include <GLES2/gl2.h>
-#include <GLES2/gl2ext.h>
+    #include <GLES2/gl2.h>
+    #include <GLES2/gl2ext.h>
 #elif defined(IPHONE) || defined(__IPHONEOS__) || defined(APPLETVOS) || defined(APPLETVSIM)
-#include <OpenGLES/ES2/gl.h>
-#include <OpenGLES/ES2/glext.h>
+    #include <OpenGLES/ES2/gl.h>
+    #include <OpenGLES/ES2/glext.h>
 #else
-#include "../lib/glew/include/GL/glew.h"
+    #include "../lib/glew/include/GL/glew.h"
 #endif
 
 namespace linc {
@@ -46,5 +45,3 @@ namespace linc {
     } //opengl
 
 } //linc namespace
-
-#endif

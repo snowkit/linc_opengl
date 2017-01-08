@@ -1,5 +1,4 @@
-#ifndef _LINC_GLEW_H_
-#define _LINC_GLEW_H_
+#pragma once
 
 #include "../lib/glew/include/GL/glew.h"
 
@@ -14,5 +13,3 @@ namespace linc {
 
     } //glew namespace
 } //linc namespace
-
-#endif
