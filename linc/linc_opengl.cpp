@@ -1,7 +1,6 @@
-
+#include <hxcpp.h>
 
 #include "./linc_opengl.h"
-#include <hxcpp.h>
 
 namespace linc {
     namespace opengl {
