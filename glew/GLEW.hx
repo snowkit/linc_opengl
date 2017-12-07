@@ -26,7 +26,7 @@ extern class GLEW {
         }
     }
 
-    @:native('linc::glew::init')
+    @:native('::linc::glew::init')
     static function init() : Int;
 
     @:native('(bool)glewIsSupported')
