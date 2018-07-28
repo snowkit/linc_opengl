@@ -99,7 +99,7 @@ class Main
                     builder.add('\t').add(' */'        ).newLine();
                 }
 
-                builder.add('\t').add('inline static var $name = $value').newLine();
+                builder.add('\t').add('inline static var $name = $value;').newLine();
             }
         }
     }
@@ -178,7 +178,7 @@ class Main
 
                 for (i in 0...funcParams.length)
                 {
-                    builder.add(funcParams[i].name).add(' : ').add(toHaxeType(funcParams[i].type));
+                    builder.add('_').add(funcParams[i].name).add(' : ').add(toHaxeType(funcParams[i].type));
 
                     if (i != funcParams.length - 1) builder.add(', ');
                 }
