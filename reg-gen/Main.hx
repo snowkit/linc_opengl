@@ -21,8 +21,39 @@ class Main
         var xml = Xml.parse(_xml);
         var reg = xml.firstElement();
 
+        writeHeader();
+
         writeEnums(reg);
         writeCommands(reg);
+
+        writeFooter();
+    }
+
+    /**
+     * Writes the header for the class.
+     * Includes the package, GLsync extern, linc build meta data, and GL extern.
+     */
+    static function writeHeader()
+    {
+        builder.add('package opengl;');
+        builder.newLine();
+        builder.newLine();
+        builder.add('@:keep').newLine();
+        builder.add('@:unreflective').newLine();
+        builder.add('@:include("linc_opengl.h")').newLine();
+        builder.add('@:native("GLsync")').newLine();
+        builder.add('extern class GLSync {}').newLine();
+
+        builder.newLine();
+        builder.add('@:keep').newLine();
+        builder.add('@:include("linc_opengl.h")').newLine();
+        builder.add('#if !display').newLine();
+        builder.add('@:build(linc.Linc.touch())').newLine();
+        builder.add('@:build(linc.Linc.xml("opengl"))').newLine();
+        builder.add('#end').newLine();
+        builder.add('extern class GL').newLine();
+        builder.add('{').newLine();
+        builder.newLine();
     }
 
     /**
@@ -155,6 +186,16 @@ class Main
                 builder.add(') : ${toHaxeType(funcReturn)};').newLine();
             }
         }
+    }
+
+    /**
+     * Writes the footer for the GL class.
+     * Simply writes a closing curly bracket.
+     */
+    static function writeFooter()
+    {
+        builder.newLine();
+        builder.add('}').newLine();
     }
 
     static function toHaxeType(_nativeType : String) : String
