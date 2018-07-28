@@ -1,0 +1,7 @@
+-cp reg-gen
+
+-lib haxe-strings
+
+-main Main
+
+--interp
