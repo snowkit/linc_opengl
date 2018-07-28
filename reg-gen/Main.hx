@@ -109,7 +109,7 @@ class Main
                 var funcParams = new Array<{ name : String, type : String }>();
 
                 // Find the function name and return type.
-                // If there is no ptype element in proto then proto's first child value has a non GL return type (Void or Void*).
+                // If there is no ptype element in proto then proto's first child value has a non GL return type.
                 for (element in proto.elements())
                 {
                     switch (element.nodeName)
@@ -121,6 +121,7 @@ class Main
                 if (funcReturn == '') funcReturn = proto.firstChild().nodeValue;
 
                 // Convert the param elements into haxe parameters
+                // If there is no ptype element in a param then that param has a non GL type and is found in the first childs value.
                 for (glParam in params)
                 {
                     var name = '';
@@ -134,6 +135,7 @@ class Main
                             case 'name'  : name = element.firstChild().nodeValue;
                         }
                     }
+                    if (type == '') type = glParam.firstChild().nodeValue;
 
                     funcParams.push({ name : name, type : type });
                 }
@@ -160,8 +162,12 @@ class Main
         return switch (_nativeType.trim())
         {
             // No GL types.
-            case 'void'  : 'Void';
-            case 'void *': 'cpp.RawPointer<cpp.Void>';
+            case 'void'              : 'Void';
+            case 'void *'            : 'cpp.RawPointer<cpp.Void>';
+            case 'void **'           : 'cpp.RawPointer<cpp.RawPointer<cpp.Void>>';
+            case 'const void *'      : 'cpp.RawConstPointer<cpp.Void>';
+            case 'const void **'     : 'cpp.RawPointer<cpp.RawConstPointer<cpp.Void>>';
+            case 'const void *const*': 'cpp.RawConstPointer<cpp.RawConstPointer<cpp.Void>>';
 
             // GL types.
             case 'GLsync': 'GLSync';
@@ -176,8 +182,17 @@ class Main
             case 'GLboolean': 'Bool';
             case 'GLint64EXT','GLint64': 'cpp.Int64';
             case 'GLuint64','GLuint64EXT': 'cpp.UInt64';
-            case 'GLsizei*' : 'IntRef';
-            case _: _nativeType + 'ERR';
+
+            // Vendor specific types
+            case 'GLhalfNV': 'UInt';
+            case 'GLvdpauSurfaceNV': 'Int';
+            case 'GLeglClientBufferEXT','GLeglImageOES': 'cpp.RawPointer<cpp.Void>';
+            case 'GLDEBUGPROC','GLDEBUGPROCKHR','GLDEBUGPROCARB','GLDEBUGPROCAMD': 'cpp.Callable<Int->Int->Int->Int->Int->cpp.ConstCharStar->cpp.Void>';
+            case 'GLVULKANPROCNV': 'Void';
+            case 'struct _cl_context','struct _cl_event': 'Void';
+
+            // Default, return native type with '_TYPE_NOT_FOUND' appending to make it easier to find errors.
+            case _: _nativeType + '_TYPE_NOT_FOUND';
         }
     }
 }
