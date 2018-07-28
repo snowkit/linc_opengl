@@ -1,6 +1,8 @@
 
 import hx.strings.StringBuilder;
 
+using StringTools;
+
 class Main
 {
     static var builder : StringBuilder;
@@ -143,13 +145,39 @@ class Main
 
                 for (i in 0...funcParams.length)
                 {
-                    builder.add(funcParams[i].name).add(' : ').add(funcParams[i].type);
+                    builder.add(funcParams[i].name).add(' : ').add(toHaxeType(funcParams[i].type));
 
                     if (i != funcParams.length - 1) builder.add(', ');
                 }
 
-                builder.add(') : $funcReturn;').newLine();
+                builder.add(') : ${toHaxeType(funcReturn)};').newLine();
             }
+        }
+    }
+
+    static function toHaxeType(_nativeType : String) : String
+    {
+        return switch (_nativeType.trim())
+        {
+            // No GL types.
+            case 'void'  : 'Void';
+            case 'void *': 'cpp.RawPointer<cpp.Void>';
+
+            // GL types.
+            case 'GLsync': 'GLSync';
+            case 'GLbyte': 'cpp.Int8';
+            case 'GLubyte': 'cpp.UInt8';
+            case 'GLdouble','GLclampd','const GLdouble': 'cpp.Float64';
+            case 'GLfloat','GLclampf','const GLfloat', 'const GLclampf': 'cpp.Float32';
+            case 'const GLint','GLint','GLshort','GLsizei','GLenum','GLbitfield','GLclampx','GLfixed','GLsizeiptr','GLsizeiptrARB','GLintptr','GLintptrARB': 'Int';
+            case 'GLchar','const GLchar*','GLchar*', 'const GLubyte *','const GLchar* const*','const GLubyte*','const GLchar *','const GLcharARB*','GLcharARB','const GLchar * const *' : 'String';
+            case 'GLushort','GLhalf','GLhandleARB': 'UInt';
+            case 'GLuint': 'Int';
+            case 'GLboolean': 'Bool';
+            case 'GLint64EXT','GLint64': 'cpp.Int64';
+            case 'GLuint64','GLuint64EXT': 'cpp.UInt64';
+            case 'GLsizei*' : 'IntRef';
+            case _: _nativeType + 'ERR';
         }
     }
 }
