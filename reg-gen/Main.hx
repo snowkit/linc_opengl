@@ -50,9 +50,51 @@ class Main
 {
     static var builder : StringBuilder;
 
+    static var special : Array<String>;
+
+    static var glTypes = [
+
+        // Core openGL types
+        'GLboolean'  => 'Bool',
+        'GLchar'     => 'cpp.UInt8',
+        'GLbyte'     => 'cpp.Int8',
+        'GLubyte'    => 'cpp.UInt8',
+        'GLshort'    => 'cpp.Int16',
+        'GLushort'   => 'cpp.UInt16',
+        'GLint'      => 'cpp.Int32',
+        'GLuint'     => 'cpp.UInt32',
+        'GLfixed'    => 'cpp.Int32',
+        'GLint64'    => 'cpp.Int64',
+        'GLuint64'   => 'cpp.UInt64',
+        'GLsizei'    => 'cpp.UInt32',
+        'GLenum'     => 'cpp.Int32',
+        'GLintptr'   => 'Int',
+        'GLsizeiptr' => 'Int',
+        'GLbitfield' => 'cpp.Int32',
+        'GLhalf'     => 'cpp.Float32',
+        'GLclampf'   => 'cpp.Float32',
+        'GLdouble'   => 'cpp.Float64',
+        'GLclampd'   => 'cpp.Float64',
+
+        // Extension types
+        'GLeglClientBufferEXT' => 'cpp.RawPointer<cpp.Void>',
+        'GLeglImageOES'        => 'cpp.RawPointer<cpp.Void>',
+        'GLhandleARB'          => 'cpp.UInt32',
+        'GLcharARB'            => 'cpp.UInt8',
+        'GLhalfARB'            => 'cpp.Float32',
+        'GLintptrARB'          => 'Int',
+        'GLsizeiptrARB'        => 'Int',
+        'GLint64EXT'           => 'cpp.Int64',
+        'GLuint64EXT'          => 'cpp.UInt64',
+        'GLhalfNV'             => 'cpp.Float32',
+        'GLvdpauSurfaceNV'     => 'Int',
+        'GLVULKANPROCNV'       => 'Int'
+    ];
+
     public static function main()
     {
         builder = new StringBuilder();
+        special = [];
 
         build(sys.io.File.getContent('gl.xml'));
 
@@ -70,6 +112,8 @@ class Main
         writeCommands(reg);
 
         writeFooter();
+
+        trace(special);
     }
 
     /**
@@ -173,12 +217,12 @@ class Main
 
                 for (i in 0...definition.param.length)
                 {
-                    builder.add('_').add(definition.param[i].name).add(' : ').add(definition.param[i].type);
+                    builder.add('_').add(definition.param[i].name).add(' : ').add(toHaxeType(definition.param[i].type));
 
                     if (i != definition.param.length - 1) builder.add(', ');
                 }
 
-                builder.add(') : ${ definition.proto.type };').newLine();
+                builder.add(') : ${ toHaxeType(definition.proto.type) };').newLine();
             }
         }
     }
@@ -276,5 +320,63 @@ class Main
         }
         
         return { name : name, type : type };
+    }
+
+    static function toHaxeType(_native : String) : String
+    {
+        // Special check for 'const char *' and various other similar ones.
+        // These can be converted to a haxe 'String'
+        if (_native == 'const GLchar *' || _native == 'const GLcharARB *') return 'String';
+
+        // Special check for non GL types.
+        // These are all void pointers of some sorts
+        if (_native == 'const void *') return 'cpp.RawConstPointer<cpp.Void>';
+        if (_native == 'void *') return 'cpp.RawPointer<cpp.Void>';
+
+        // Then check normal GL types and pointer wrappers
+
+        // Split parts by space to separate any GL types from pointer modifiers
+        // We cannot check if a string contains a string equivilent of a GL types due to ARB, and other extension types being named the same with different postfixes.
+        var typeParts = _native.split(' ');
+
+        for (part in typeParts)
+        {
+            for (type in glTypes.keys())
+            {
+                if (part == type)
+                {
+                    // Remove the GL type so we only have the pointer stuff remaining
+                    typeParts.remove(type);
+
+                    var remaining = typeParts.join('').replace(' ', '');
+                    if (remaining == '')
+                    {
+                        // If there is no remaining type data then we pass a haxe type back.
+                        if (glTypes.exists(type))
+                        {
+                            return glTypes.get(type);
+                        }
+                        else
+                        {
+                            throw 'unknown openGL type $type';
+                        }
+                    }
+                    else
+                    {
+                        // If there is still data left that means the type is wrapped as a pointer
+                        return switch (remaining)
+                        {
+                            case '*', '[2]'    : 'cpp.RawPointer<${ glTypes.get(type) }>';
+                            case 'const*'      : 'cpp.RawConstPointer<${ glTypes.get(type) }>';
+                            case 'const**'     : 'cpp.RawPointer<cpp.RawConstPointer<${ glTypes.get(type) }>>';
+                            case 'const*const*': 'cpp.RawConstPointer<cpp.RawConstPointer<${ glTypes.get(type) }>>';
+                            case unknown: throw 'unknown pointer type "$unknown"';
+                        }
+                    }
+                }
+            }
+        }
+
+        return 'Void';
     }
 }
