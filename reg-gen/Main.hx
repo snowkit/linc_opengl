@@ -3,6 +3,49 @@ import hx.strings.StringBuilder;
 
 using StringTools;
 
+typedef CommandProto = {
+
+    /**
+     * Name of the function.
+     */
+    var name : String;
+
+    /**
+     * Parameter type.
+     * Return type is an array since there are potentially two parts to a return type.
+     * 
+     * [0] OpenGL / native return type.
+     * [1] Pointer modifier.
+     * 
+     * If return type length > 1 then the return type is a pointer instead of a primitive.
+     */
+    var type : String;
+}
+
+typedef CommandParam = {
+
+    /**
+     * The name of the parameter.
+     */
+    var name : String;
+
+    /**
+     * Parameter type.
+     * Return type is an array as there are potentially two parts to a parameter type.
+     * 
+     * [0] OpenGL parameter type.
+     * [1] Pointer modifier.
+     * 
+     * If return type length > 1 then the parameters type is a pointer instead of a primitive.
+     */
+    var type : String;
+}
+
+typedef Command = {
+    var proto : CommandProto;
+    var param : Array<CommandParam>;
+}
+
 class Main
 {
     static var builder : StringBuilder;
@@ -121,69 +164,21 @@ class Main
         {
             for (glCommand in element.elementsNamed('command'))
             {
-                var proto : Xml = null;
-                var params = new Array<Xml>();
-
-                // Find the proto element and all param elements
-                for (part in glCommand.elements())
-                {
-                    switch (part.nodeName)
-                    {
-                        case 'proto': proto = part;
-                        case 'param': params.push(part);
-                    }
-                }
-
-                // Get the function name, return type, and setup params.
-                var funcReturn = '';
-                var funcName   = '';
-                var funcParams = new Array<{ name : String, type : String }>();
-
-                // Find the function name and return type.
-                // If there is no ptype element in proto then proto's first child value has a non GL return type.
-                for (element in proto.elements())
-                {
-                    switch (element.nodeName)
-                    {
-                        case 'name' : funcName   = element.firstChild().nodeValue;
-                        case 'ptype': funcReturn = element.firstChild().nodeValue;
-                    }
-                }
-                if (funcReturn == '') funcReturn = proto.firstChild().nodeValue;
-
-                // Convert the param elements into haxe parameters
-                // If there is no ptype element in a param then that param has a non GL type and is found in the first childs value.
-                for (glParam in params)
-                {
-                    var name = '';
-                    var type = '';
-
-                    for (element in glParam.elements())
-                    {
-                        switch (element.nodeName)
-                        {
-                            case 'ptype' : type = element.firstChild().nodeValue;
-                            case 'name'  : name = element.firstChild().nodeValue;
-                        }
-                    }
-                    if (type == '') type = glParam.firstChild().nodeValue;
-
-                    funcParams.push({ name : name, type : type });
-                }
+                var definition = parseCommand(glCommand);
 
                 // Write the haxe equivilent function
                 builder.newLine();
-                builder.add('\t').add('@:native(\'$funcName\')').newLine();
-                builder.add('\t').add('static function $funcName(');
+                builder.add('\t').add('@:native("${definition.proto.name}")').newLine();
+                builder.add('\t').add('static function ${definition.proto.name}(');
 
-                for (i in 0...funcParams.length)
+                for (i in 0...definition.param.length)
                 {
-                    builder.add('_').add(funcParams[i].name).add(' : ').add(toHaxeType(funcParams[i].type));
+                    builder.add('_').add(definition.param[i].name).add(' : ').add(definition.param[i].type);
 
-                    if (i != funcParams.length - 1) builder.add(', ');
+                    if (i != definition.param.length - 1) builder.add(', ');
                 }
 
-                builder.add(') : ${toHaxeType(funcReturn)};').newLine();
+                builder.add(') : ${ definition.proto.type };').newLine();
             }
         }
     }
@@ -198,42 +193,88 @@ class Main
         builder.add('}').newLine();
     }
 
-    static function toHaxeType(_nativeType : String) : String
+    /**
+     * Takes a XML structure defining an openGL function and reads all data from it.
+     * The returned anonymouse structure contains a command proto (name and return value) and an array of parameters (name and type).
+     * 
+     * @param _xml Xml to parse.
+     * @return Command
+     */
+    static function parseCommand(_xml : Xml) : Command
     {
-        return switch (_nativeType.trim())
+        var proto : CommandProto = null;
+        var param = new Array<CommandParam>();
+
+        for (element in _xml.elements())
         {
-            // No GL types.
-            case 'void'              : 'Void';
-            case 'void *'            : 'cpp.RawPointer<cpp.Void>';
-            case 'void **'           : 'cpp.RawPointer<cpp.RawPointer<cpp.Void>>';
-            case 'const void *'      : 'cpp.RawConstPointer<cpp.Void>';
-            case 'const void **'     : 'cpp.RawPointer<cpp.RawConstPointer<cpp.Void>>';
-            case 'const void *const*': 'cpp.RawConstPointer<cpp.RawConstPointer<cpp.Void>>';
-
-            // GL types.
-            case 'GLsync': 'GLSync';
-            case 'GLbyte': 'cpp.Int8';
-            case 'GLubyte': 'cpp.UInt8';
-            case 'GLdouble','GLclampd','const GLdouble': 'cpp.Float64';
-            case 'GLfloat','GLclampf','const GLfloat', 'const GLclampf': 'cpp.Float32';
-            case 'const GLint','GLint','GLshort','GLsizei','GLenum','GLbitfield','GLclampx','GLfixed','GLsizeiptr','GLsizeiptrARB','GLintptr','GLintptrARB': 'Int';
-            case 'GLchar','const GLchar*','GLchar*', 'const GLubyte *','const GLchar* const*','const GLubyte*','const GLchar *','const GLcharARB*','GLcharARB','const GLchar * const *' : 'String';
-            case 'GLushort','GLhalf','GLhandleARB': 'UInt';
-            case 'GLuint': 'Int';
-            case 'GLboolean': 'Bool';
-            case 'GLint64EXT','GLint64': 'cpp.Int64';
-            case 'GLuint64','GLuint64EXT': 'cpp.UInt64';
-
-            // Vendor specific types
-            case 'GLhalfNV': 'UInt';
-            case 'GLvdpauSurfaceNV': 'Int';
-            case 'GLeglClientBufferEXT','GLeglImageOES': 'cpp.RawPointer<cpp.Void>';
-            case 'GLDEBUGPROC','GLDEBUGPROCKHR','GLDEBUGPROCARB','GLDEBUGPROCAMD': 'cpp.Callable<Int->Int->Int->Int->Int->cpp.ConstCharStar->cpp.Void>';
-            case 'GLVULKANPROCNV': 'Void';
-            case 'struct _cl_context','struct _cl_event': 'Void';
-
-            // Default, return native type with '_TYPE_NOT_FOUND' appending to make it easier to find errors.
-            case _: _nativeType + '_TYPE_NOT_FOUND';
+            switch (element.nodeName)
+            {
+                case 'proto': proto = parseCommandProto(element);
+                case 'param': param.push(parseCommandParam(element));
+            }
         }
+
+        return { proto : proto, param : param };
+    }
+
+    /**
+     * Parses the proto element of a command.
+     * Reads the function name and its return type.
+     * 
+     * @param _xml Xml to parse.
+     * @return CommandProto
+     */
+    static function parseCommandProto(_xml : Xml) : CommandProto
+    {
+        var name = '';
+        var type = '';
+
+        for (child in _xml)
+        {
+            switch (child.nodeType) {
+                case Element, Document:
+                    switch (child.nodeName)
+                    {
+                        case 'name' : name = child.firstChild().nodeValue;
+                        case 'ptype': type = child.firstChild().nodeValue;
+                    }
+                case _:
+                    type += child.nodeValue.trim();
+            }
+        }
+
+        return { name : name, type : type };
+    }
+
+    /**
+     * Parses a param element of a command.
+     * Reads the param name and its type.
+     * 
+     * @param _xml Xml to parse.
+     * @return CommandParam
+     */
+    static function parseCommandParam(_xml : Xml) : CommandParam
+    {
+        var name = '';
+        var type = '';
+
+        for (child in _xml)
+        {
+            switch (child.nodeType) {
+                // Name or GL Type element.
+                case Element, Document:
+                    switch (child.nodeName)
+                    {
+                        case 'name' : name = child.firstChild().nodeValue;
+                        case 'ptype': type += child.firstChild().nodeValue;
+                    }
+
+                // pointer attributes
+                case _:
+                    type += child.nodeValue;
+            }
+        }
+        
+        return { name : name, type : type };
     }
 }
