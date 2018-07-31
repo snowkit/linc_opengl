@@ -50,8 +50,6 @@ class Main
 {
     static var builder : StringBuilder;
 
-    static var special : Array<String>;
-
     static var glTypes = [
 
         // Core openGL types
@@ -96,7 +94,6 @@ class Main
     public static function main()
     {
         builder = new StringBuilder();
-        special = [];
 
         build(sys.io.File.getContent('gl.xml'));
 
@@ -114,8 +111,6 @@ class Main
         writeCommands(reg);
 
         writeFooter();
-
-        trace(special);
     }
 
     /**
