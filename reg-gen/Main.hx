@@ -213,18 +213,32 @@ class Main
                 var definition = parseCommand(glCommand);
 
                 // Write the haxe equivilent function
+
+                // First write out the inline function part.
                 builder.newLine();
-                builder.add('\t').add('@:native("${definition.proto.name}")').newLine();
-                builder.add('\t').add('static function ${definition.proto.name}(');
+                builder.add('\t').add('inline static function ${definition.proto.name}(');
 
                 for (i in 0...definition.param.length)
                 {
-                    builder.add('_').add(definition.param[i].name).add(' : ').add(toHaxeType(definition.param[i].type));
+                    builder.add('_').add(definition.param[i].name).add(' : ').add(toHaxeParamType(definition.param[i].type));
 
                     if (i != definition.param.length - 1) builder.add(', ');
                 }
 
-                builder.add(') : ${ toHaxeType(definition.proto.type) };').newLine();
+                builder.add(') : ${ toHaxeReturnType(definition.proto.type) }');
+
+                // Then write the untyped cpp section
+                builder.newLine();
+                builder.add('\t\t').add('{ untyped __cpp__("${definition.proto.name}(');
+
+                for (i in 0...definition.param.length)
+                {
+                    builder.add(toCppUntyped(definition.param[i].type, i));
+
+                    if (i != definition.param.length - 1) builder.add(', ');
+                }
+
+                builder.add('"); }').newLine();
             }
         }
     }
@@ -324,7 +338,66 @@ class Main
         return { name : name, type : type };
     }
 
-    static function toHaxeType(_native : String) : String
+    static function toHaxeParamType(_native : String) : String
+    {
+        // Special check for 'const char *' and various other similar ones.
+        // These can be converted to a haxe 'String'
+        if (_native == 'const GLchar *' || _native == 'const GLcharARB *') return 'String';
+
+        // Special check for non GL types.
+        // These are all void pointers of some sorts
+        if (_native == 'const void *' || _native == 'void *') return 'BytesData';
+
+        // Special check for const UInt8 pointer.
+        // This will be image data so have the haxe type be bytes data.
+        if (_native == 'const GLbyte *') return 'BytesData';
+
+        // Then check normal GL types and pointer wrappers
+
+        // Split parts by space to separate any GL types from pointer modifiers
+        // We cannot check if a string contains a string equivilent of a GL types due to ARB, and other extension types being named the same with different postfixes.
+        var typeParts = _native.split(' ');
+
+        for (part in typeParts)
+        {
+            for (type in glTypes.keys())
+            {
+                if (part == type)
+                {
+                    // Remove the GL type so we only have the pointer stuff remaining
+                    typeParts.remove(type);
+
+                    var remaining = typeParts.join('').replace(' ', '');
+                    if (remaining == '')
+                    {
+                        // If there is no remaining type data then we pass a haxe type back.
+                        if (glTypes.exists(type))
+                        {
+                            return glTypes.get(type);
+                        }
+                        else
+                        {
+                            throw 'unknown openGL type $type';
+                        }
+                    }
+                    else
+                    {
+                        // If there is still data left that means the type is wrapped as a pointer
+                        return switch (remaining)
+                        {
+                            case '*', '[2]', 'const*' : 'Array<${ glTypes.get(type) }>';
+                            case 'const**', 'const*const*' : 'Array<Array<${ glTypes.get(type) }>>';
+                            case unknown: throw 'unknown pointer type "$unknown"';
+                        }
+                    }
+                }
+            }
+        }
+
+        return 'Void';
+    }
+
+    static function toHaxeReturnType(_native : String) : String
     {
         // Special check for 'const char *' and various other similar ones.
         // These can be converted to a haxe 'String'
@@ -380,5 +453,41 @@ class Main
         }
 
         return 'Void';
+    }
+
+    static function toCppUntyped(_native : String, _argCount : Int) : String
+    {
+        // Special check for 'const char *' and various other similar ones.
+        // These can be converted to a haxe 'String'
+        if (_native == 'const GLchar *' || _native == 'const GLcharARB *') return '{$_argCount}';
+
+        // 
+        var typeParts = _native.split(' ');
+
+        for (part in typeParts)
+        {
+            for (type in glTypes.keys())
+            {
+                if (part == type)
+                {
+                    // Remove the GL type so we only have the pointer stuff remaining
+                    typeParts.remove(type);
+
+                    var remaining = typeParts.join('').replace(' ', '');
+                    if (remaining == '')
+                    {
+                        return '{$_argCount}';
+                    }
+                    else
+                    {
+                        trace('($_native)&({$_argCount}[0])');
+
+                        return '($_native)&({$_argCount}[0])';
+                    }
+                }
+            }
+        }
+
+        return '{$_argCount}';
     }
 }
