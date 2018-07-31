@@ -364,6 +364,10 @@ class Main
         // These can be converted to a haxe 'String'
         if (_native == 'const GLchar *' || _native == 'const GLcharARB *') return 'String';
 
+        // Special check for array of strings
+        // Used for shader source functions.
+        if (_native == 'const GLchar *const*' || _native == 'const GLcharARB **') return 'Array<String>';
+
         // Special check for non GL types.
         // These are all void pointers of some sorts
         if (_native == 'const void *' || _native == 'void *') return 'BytesData';
@@ -480,6 +484,9 @@ class Main
         // Special check for 'const char *' and various other similar ones.
         // These can be converted to a haxe 'String'
         if (_native == 'const GLchar *' || _native == 'const GLcharARB *') return '{$_argCount}';
+
+        // Special check for array of strings.
+        if (_native == 'const GLchar *const*' || _native == 'const GLcharARB **') return '(const GLint *)&({$_argCount}[0])';
 
         // Special check for non GL types.
         // These are all void pointers of some sorts
