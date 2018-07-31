@@ -5057,14 +5057,14 @@ extern class GL {
     // TODO functions
 
             
-        // @:native('glGetNamedBufferPointerv')
-        // static function glGetNamedBufferPointerv(buffer:Int, pname:Int, params:void**) : Void;
+        @:native('glGetNamedBufferPointerv')
+        static function glGetNamedBufferPointerv(buffer:Int, pname:Int, params:cpp.RawPointer<cpp.RawPointer<cpp.Void>>) : Void;
             
-        // @:native('glMapNamedBuffer')
-        // static function glMapNamedBuffer(buffer:Int, access:Int) : void *;
+        @:native('glMapNamedBuffer')
+        static function glMapNamedBuffer(buffer:Int, access:Int) : cpp.RawPointer<cpp.Void>;
             
-        // @:native('glMapNamedBufferRange')
-        // static function glMapNamedBufferRange(buffer:Int, offset:Int, length:Int, access:Int) : void *;
+        @:native('glMapNamedBufferRange')
+        static function glMapNamedBufferRange(buffer:Int, offset:Int, length:Int, access:Int) : cpp.RawPointer<cpp.Void>;
 
 
 //GL_ARB_draw_buffers
