@@ -4,6 +4,7 @@ import haxe.io.BytesData;
 import haxe.io.Bytes;
 
 @:keep
+@:unreflective
 @:include('linc_opengl.h')
 @:native('GLsync')
 extern class GLSync {}
