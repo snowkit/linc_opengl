@@ -212,8 +212,6 @@ class Main
             {
                 var definition = parseCommand(glCommand);
 
-                // Write the haxe equivilent function
-
                 // First write out the inline function part.
                 builder.newLine();
                 builder.add('\t').add('inline static function ${definition.proto.name}(');
@@ -229,7 +227,7 @@ class Main
 
                 // Then write the untyped cpp section
                 builder.newLine();
-                builder.add('\t\t').add('{ untyped __cpp__("${definition.proto.name}(');
+                builder.add('\t\t').add('{ return untyped __cpp__("${definition.proto.name}(');
 
                 for (i in 0...definition.param.length)
                 {
@@ -238,7 +236,24 @@ class Main
                     if (i != definition.param.length - 1) builder.add(', ');
                 }
 
-                builder.add('"); }').newLine();
+                builder.add(')"');
+
+                if (definition.param.length > 0)
+                {
+                    builder.add(', ');
+
+                    // Then finally write the haxe argument names into the untyped section.
+                    for (i in 0...definition.param.length)
+                    {
+                        builder.add('_').add(definition.param[i].name);
+
+                        if (i != definition.param.length - 1) builder.add(', ');
+                    }
+                }
+
+                // Close the untyped function
+                builder.add('); }');
+                builder.newLine();
             }
         }
     }
@@ -461,6 +476,10 @@ class Main
         // These can be converted to a haxe 'String'
         if (_native == 'const GLchar *' || _native == 'const GLcharARB *') return '{$_argCount}';
 
+        // Special check for non GL types.
+        // These are all void pointers of some sorts
+        if (_native == 'const void *' || _native == 'void *') return '($_native)&({$_argCount}[0])';
+
         // 
         var typeParts = _native.split(' ');
 
@@ -480,8 +499,6 @@ class Main
                     }
                     else
                     {
-                        trace('($_native)&({$_argCount}[0])');
-
                         return '($_native)&({$_argCount}[0])';
                     }
                 }
