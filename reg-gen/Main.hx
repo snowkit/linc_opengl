@@ -176,6 +176,15 @@ class Main
                 var value   = glEnum.get('value');
                 var comment = glEnum.get('comment');
 
+                // All enums are in hex values.
+                // If this hex value is a 64bit literal then truncate it as haxe doesn't support 64bit literals
+                // https://github.com/HaxeFoundation/haxe/issues/5150
+                // Only two enums have 64 bit literals and they're both 0xFFFFFFFFFFFF
+                if (value.length > 8)
+                {
+                    value = value.substr(0, 8);
+                }
+
                 // If this enum has a comment add it so auto completion will show it.
                 if (comment != null)
                 {
