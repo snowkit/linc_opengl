@@ -126,6 +126,7 @@ class Main
     {
         builder.add('package opengl;');
         builder.newLine();
+        builder.add('import haxe.io.BytesData');
         builder.newLine();
         builder.add('@:keep').newLine();
         builder.add('@:unreflective').newLine();
