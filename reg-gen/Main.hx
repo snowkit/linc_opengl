@@ -118,10 +118,12 @@ class Main
     public static function main()
     {
         // get the gl feature info to build.
+        // profile is optional for certain apis.
         var args = Sys.args();
-        var profile = args[0];
+        var api     = args[0];
         var major   = args[1];
         var minor   = args[2];
+        var profile = args.length > 3 ? args[3] : '';
 
         // Setup builder and feature structures.
         builder         = new StringBuilder();
@@ -135,13 +137,13 @@ class Main
         var reg = xml.firstElement();
 
         // Gather all enums and commands then write them into the string builder.
-        fetch(reg, profile, major, minor);
+        fetch(reg, api, major, minor, profile);
         write();
 
         // Save the files content.
-        sys.io.File.saveContent('GL$major$minor$profile.hx', builder.toString());
+        sys.io.File.saveContent('${api.toUpperCase()}_$major$minor$profile.hx', builder.toString());
 
-        trace('GL$major$minor$profile.hx generated');
+        trace('${api.toUpperCase()}_$major$minor$profile.hx generated');
         trace('enums    : ${featureEnums.length}');
         trace('commands : ${featureCommands.length}');
     }
@@ -153,14 +155,14 @@ class Main
      * @param _major    The requested opengl major version.
      * @param _minor    The requested opengl minor version.
      */
-    static function fetch(_registry : Xml, _profile : String, _major : String, _minor : String)
+    static function fetch(_registry : Xml, _api : String, _major : String, _minor : String, _profile : String)
     {
         // Fetch all the enums with no api attribute or the 'gl' api attribute (skipping any gles stuff)
         for (glEnums in _registry.elementsNamed('enums'))
         {
             for (glEnum in glEnums.elementsNamed('enum'))
             {
-                if (!glEnum.exists('api') || glEnum.get('api') == 'gl')
+                if (!glEnum.exists('api') || glEnum.get('api') == _api)
                 {
                     enums.set(glEnum.get('name'), glEnum);
                 }
@@ -192,8 +194,8 @@ class Main
         // Fetch all the enums and commands for the requested gl version and profile.
         for (glFeature in _registry.elementsNamed('feature'))
         {
-            // Only read the gl api (skip gles)
-            if (glFeature.get('api') != 'gl')
+            // Only read features which are in the requested api.
+            if (glFeature.get('api') != _api)
             {
                 continue;
             }
