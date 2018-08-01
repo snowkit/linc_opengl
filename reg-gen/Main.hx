@@ -1,4 +1,5 @@
 
+import haxe.ds.Map;
 import hx.strings.StringBuilder;
 
 using StringTools;
@@ -42,13 +43,23 @@ typedef CommandParam = {
 }
 
 typedef Command = {
+
     var proto : CommandProto;
+
     var param : Array<CommandParam>;
 }
 
 class Main
 {
     static var builder : StringBuilder;
+
+    static var enums : Map<String, Xml>;
+
+    static var commands : Map<String, Xml>;
+
+    static var featureEnums : Array<String>;
+
+    static var featureCommands : Array<String>;
 
     static var glTypes = [
 
@@ -93,22 +104,138 @@ class Main
 
     public static function main()
     {
-        builder = new StringBuilder();
+        // get the gl feature info to build.
+        var args = Sys.args();
+        var profile = args[0];
+        var major   = args[1];
+        var minor   = args[2];
 
-        build(sys.io.File.getContent('gl.xml'));
+        // Setup builder and feature info.
+        builder         = new StringBuilder();
+        featureEnums    = [];
+        featureCommands = [];
+
+        build(sys.io.File.getContent('gl.xml'), profile, major, minor);
 
         sys.io.File.saveContent('GL.hx', builder.toString());
     }
 
-    static function build(_xml : String)
+    static function build(_xml : String, _profile : String, _major : String, _minor : String)
     {
         var xml = Xml.parse(_xml);
         var reg = xml.firstElement();
 
+        // Gather all enums and commands
+        fetch(reg, _profile, _major, _minor);
+        write();
+
+        trace('enums : ${featureEnums.length}, commands : ${featureCommands.length}');
+
+        // Writing
+        // writeHeader();
+        // writeEnums(reg);
+        // writeCommands(reg);
+        // writeFooter();
+    }
+
+    static function fetch(_registry : Xml, _profile : String, _major : String, _minor : String)
+    {
+        enums    = new Map();
+        commands = new Map();
+
+        // Fetch all the enums with no api attribute or the 'gl' api attribute (skipping any gles stuff)
+        for (glEnums in _registry.elementsNamed('enums'))
+        {
+            for (glEnum in glEnums.elementsNamed('enum'))
+            {
+                if (!glEnum.exists('api') || glEnum.get('api') == 'gl')
+                {
+                    enums.set(glEnum.get('name'), glEnum);
+                }
+            }
+        }
+
+        // Fetch all the commands.
+        for (glCommands in _registry.elementsNamed('commands'))
+        {
+            for (glCommand in glCommands.elementsNamed('command'))
+            {
+                // Find the proto then name element.
+                // Break after the first proto and name element.
+                // There should only even be one per command but you never know.
+                for (proto in glCommand.elementsNamed('proto'))
+                {
+                    for (name in proto.elementsNamed('name'))
+                    {
+                        commands.set(name.firstChild().nodeValue, glCommand);
+
+                        break;
+                    }
+
+                    break;
+                }
+            }
+        }
+
+        // Fetch all the enums and commands for the requested gl version and profile.
+        for (glFeature in _registry.elementsNamed('feature'))
+        {
+            // Only read the gl api (skip gles)
+            if (glFeature.get('api') != 'gl')
+            {
+                continue;
+            }
+
+            // Split feature version to make sure its lower or equal to our target feature.
+            var version = glFeature.get('number').split('.');
+            if (version[0] < _major || (version[0] == _major && version[1] <= _minor))
+            {
+                // Each feature will have several 'require' tags
+                // They are new enum and commands added in this version.
+                for (glRequire in glFeature.elementsNamed('require'))
+                {
+                    for (glEnum in glRequire.elementsNamed('enum'))
+                    {
+                        featureEnums.push(glEnum.get('name'));
+                    }
+
+                    for (glCommand in glRequire.elementsNamed('command'))
+                    {
+                        featureCommands.push(glCommand.get('name'));
+                    }
+                }
+
+                // Some features will have several 'remove' tags for 'core' profiles
+                // These are enums and commands which are to be removed for core profiles.
+                for (glRemove in glFeature.elementsNamed('remove'))
+                {
+                    // Only do stuff for a remove element if the profiles match.
+                    if (glRemove.get('profile') != _profile)
+                    {
+                        continue;
+                    }
+
+                    for (glEnum in glRemove.elementsNamed('enum'))
+                    {
+                        featureEnums.remove(glEnum.get('name'));
+                    }
+
+                    for (glCommand in glRemove.elementsNamed('command'))
+                    {
+                        featureCommands.remove(glCommand.get('name'));
+                    }
+                }
+            }
+        }
+    }
+
+    static function write()
+    {
         writeHeader();
 
-        writeEnums(reg);
-        writeCommands(reg);
+        // Write this profiles enums
+
+        // Write this profiles
 
         writeFooter();
     }
@@ -119,9 +246,9 @@ class Main
      */
     static function writeHeader()
     {
-        builder.add('package opengl;');
+        builder.add('package opengl;').newLine();
         builder.newLine();
-        builder.add('import haxe.io.BytesData');
+        builder.add('import haxe.io.BytesData;').newLine();
         builder.newLine();
         builder.add('@:keep').newLine();
         builder.add('@:unreflective').newLine();

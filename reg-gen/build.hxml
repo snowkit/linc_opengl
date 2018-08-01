@@ -4,4 +4,5 @@
 
 -main Main
 
---interp
+-neko buildgl.n
+-cmd  neko buildgl.n core 4 6
