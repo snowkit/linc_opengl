@@ -1,668 +1,669 @@
+
+import haxe.ds.Map;
+import hx.strings.StringBuilder;
+
 using StringTools;
 
-typedef GLDefine = { name:String, value:Int, string:String }
-typedef GLFunction = { name:String, ret:String, string:String, args_str:String, args:Array<GLFunctionArg> }
-typedef GLFunctionArg = { name:String, type:String, gltype:String }
+typedef CommandProto = {
 
+    /**
+     * Name of the function.
+     */
+    var name : String;
 
-typedef GLVersion = {
-    major:Int,
-    minor:Int,
-    content: String,
-    defines: Array<GLDefine>,
-    functions: Array<GLFunction>
+    /**
+     * Return type of the function.
+     * Native cpp type (e.g. void, GLint, const void *).
+     */
+    var type : String;
 }
 
-typedef GLExt = {
-    name:String,
-    content:String,
-    defines: Array<GLDefine>,
-    functions: Array<GLFunction>
+typedef CommandParam = {
+
+    /**
+     * The name of the parameter.
+     */
+    var name : String;
+
+    /**
+     * Parameters native cpp type (e.g. GLenum, const GLchar *).
+     */
+    var type : String;
 }
 
-typedef GLEW = {
-    var versions:Array<GLVersion>;
-    var version_names:Array<String>;
-    var exts:Array<GLExt>;
-    var ext_names:Array<String>;
+typedef Command = {
+
+    /**
+     * The prototype for this command.
+     */
+    var proto : CommandProto;
+
+    /**
+     * All of this commands parameters.
+     */
+    var param : Array<CommandParam>;
 }
 
-class Main {
+class Main
+{
+    /**
+     * String builder to store GL.hx contents.
+     */
+    static var builder : StringBuilder;
 
-    static var glew:GLEW;
-    static var content:String;
+    /**
+     * Map of all enums found in the gl registry.
+     */
+    static var enums : Map<String, Xml>;
 
-    static var ignored = [
-        'glEdgeFlagv'
+    /**
+     * Map of all commands found in the gl registry.
+     */
+    static var commands : Map<String, Xml>;
+
+    /**
+     * All enums required by the requested openGL feature level.
+     */
+    static var featureEnums : Array<String>;
+
+    /**
+     * All commands required by the requestion openGL feature level.
+     */
+    static var featureCommands : Array<String>;
+
+    /**
+     * Map of openGL types to haxe types.
+     */
+    static var glTypes = [
+
+        // Core openGL types
+        'GLboolean'  => 'Bool',
+        'GLchar'     => 'cpp.UInt8',
+        'GLbyte'     => 'cpp.Int8',
+        'GLubyte'    => 'cpp.UInt8',
+        'GLshort'    => 'Int',
+        'GLushort'   => 'Int',
+        'GLint'      => 'Int',
+        'GLuint'     => 'Int',
+        'GLfixed'    => 'Int',
+        'GLint64'    => 'cpp.Int64',
+        'GLuint64'   => 'cpp.UInt64',
+        'GLsizei'    => 'Int',
+        'GLenum'     => 'Int',
+        'GLintptr'   => 'Int',
+        'GLsizeiptr' => 'Int',
+        'GLbitfield' => 'Int',
+        'GLfloat'    => 'Float',
+        'GLhalf'     => 'Float',
+        'GLclampf'   => 'Float',
+        'GLdouble'   => 'cpp.Float64',
+        'GLclampd'   => 'cpp.Float64',
+        'GLsync'     => 'GLSync',
+
+        // Extension types
+        'GLeglClientBufferEXT' => 'cpp.RawPointer<cpp.Void>',
+        'GLeglImageOES'        => 'cpp.RawPointer<cpp.Void>',
+        'GLhandleARB'          => 'cpp.UInt32',
+        'GLcharARB'            => 'cpp.UInt8',
+        'GLhalfARB'            => 'cpp.Float32',
+        'GLintptrARB'          => 'Int',
+        'GLsizeiptrARB'        => 'Int',
+        'GLint64EXT'           => 'cpp.Int64',
+        'GLuint64EXT'          => 'cpp.UInt64',
+        'GLhalfNV'             => 'cpp.Float32',
+        'GLvdpauSurfaceNV'     => 'Int',
+        'GLVULKANPROCNV'       => 'Int'
     ];
 
-    static function main() {
+    public static function main()
+    {
+        // get the gl feature info to build.
+        // profile is optional for certain apis.
+        var args = Sys.args();
+        var api     = args[0];
+        var major   = args[1];
+        var minor   = args[2];
+        var profile = args.length > 3 ? args[3] : '';
 
-        glew = {
-            versions:[],
-            version_names:[],
-            exts:[],
-            ext_names:[]
-        };
+        // Setup builder and feature structures.
+        builder         = new StringBuilder();
+        enums           = new Map();
+        commands        = new Map();
+        featureEnums    = [];
+        featureCommands = [];
 
-        content = sys.io.File.getContent('glew.h');
+        // Load gl registry.
+        var xml = Xml.parse(sys.io.File.getContent('gl.xml'));
+        var reg = xml.firstElement();
 
-        collect_versions();
-        collect_exts();
-        collect_defines();
-        collect_functions();
+        // Gather all enums and commands then write them into the string builder.
+        fetch(reg, api, major, minor, profile);
+        write();
 
-        write_file();
+        // Save the files content.
+        sys.io.File.saveContent('${api.toUpperCase()}_$major$minor$profile.hx', builder.toString());
 
-    } //main
-
-    static function tb(c:Int) return ''.rpad(' ', c);
-
-    static function to_haxe_type(t:String) {
-        return switch(t) {
-            case 'void': 'Void';
-            case 'GLsync': 'GLSync';
-            case 'GLbyte': 'cpp.Int8';
-            case 'GLubyte': 'cpp.UInt8';
-            case 'GLdouble','GLclampd','const GLdouble': 'cpp.Float64';
-            case 'GLfloat','GLclampf','const GLfloat', 'const GLclampf': 'cpp.Float32';
-            case 'const GLint','GLint','GLshort','GLsizei','GLenum','GLbitfield','GLclampx','GLfixed','GLsizeiptr','GLsizeiptrARB','GLintptr','GLintptrARB': 'Int';
-            case 'GLchar','const GLchar*','GLchar*', 'const GLubyte *','const GLchar* const*','const GLubyte*','const GLchar *','const GLcharARB*','GLcharARB','const GLchar * const *' : 'String';
-            case 'GLushort','GLhalf','GLhandleARB': 'UInt';
-            case 'GLuint': 'Int';
-            case 'GLboolean': 'Bool';
-            case 'GLint64EXT','GLint64': 'cpp.Int64';
-            case 'GLuint64','GLuint64EXT': 'cpp.UInt64';
-            case 'GLsizei*' : 'IntRef';
-            case _: return t;
-        }
+        trace('${api.toUpperCase()}_$major$minor$profile.hx generated');
+        trace('enums    : ${featureEnums.length}');
+        trace('commands : ${featureCommands.length}');
     }
 
-    static function sanitize_name(n:String) {
-        return switch(n) {
-            case 'in': return 'inval';
-            case _: return n;
-        }
-    }
-
-    static function chkname(n:String, val:String) {
-        return n.indexOf(val) != -1;
-    }
-
-    static function chktype(a:String) {
-        var r = false;
-        for(n in [
-            '*',
-            'GLvdpauSurfaceNV',
-            'GLLOGPROCREGAL',
-            'GLDEBUGPROC',
-            'GLbyte',
-            'GLubyte'
-            ]
-        ) r = r || chkname(a,n);
-        return r;
-    }
-
-    static var dcount = 0;
-    static var hcount = 0;
-    static var ncount = 0;
-
-    static var explicit = [
-        'glGetString',
-        'glGetStringi',
-        'glGetObjectLabelEXT'
-    ];
-
-    static function explicit_function(_fname:String, _fret:String, args:Array<GLFunctionArg>) {
-        var outargs = [];
-        for(a in args) {
-            outargs.push({ name:a.name, type:to_haxe_type(a.type), gltype:a.type });
-        }
-        var ret = {
-            native:null,
-            body:[],
-            args:outargs,
-            hidden:false,
-            wrap:true
-        };
-
-        inline function ut(val:String,?ns:Array<String>,_ret:Bool=false) {
-            if(ns == null) ns = [];
-            var nsval = ns.length>0 ? ', '+ns.join(',') : '';
-            return (_ret ? 'return ':'') + 'untyped __cpp__("$val"$nsval);';
-        }
-        inline function bc(val:String,?ns:Array<String>,_ret:Bool=false) ret.body.push(ut(val,ns,_ret));
-
-        switch(_fname) {
-            case 'glGetString':
-                bc('const char* __val = (const char*)glGetString({0}); if(!__val)__val=\\"\\"',['name']);
-                bc('::String(__val)', true);
-            case 'glGetStringi':
-                bc('const char* __val = (const char*)glGetStringi({0},{1}); if(!__val)__val=\\"\\"',['name','index']);
-                bc('::String(__val)', true);
-            case 'glGetObjectLabelEXT':
-                bc('char __dest[{0}]', ['bufSize']);
-                bc('glGetObjectLabelEXT({0},{1},{2},{3},__dest)', ['type', 'object', 'bufSize', 'length']);
-                bc('{0} = ::String(__dest)',['label']);
-            case _: ret = null;
-        }        
-
-        return ret;
-    }
-
-    static function process_function(_fname:String, _fret:String, args:Array<GLFunctionArg>) {
-
-        if(explicit.indexOf(_fname) != -1) {
-            return explicit_function(_fname, _fret, args);
-        }
-
-        var _wrap = false;
-        var _hidden = false;
-        var _genbody = false;
-        var _native = '$_fname';
-        var _body:Array<String> = null;
-        var outargs = [];
-
-        var _datatypes = [
-            'GLint*',
-            'GLuint*',
-            'GLbyte*',
-            'GLfixed*',
-            'GLshort*',
-            'GLubyte*',
-            'GLushort*',
-            'GLfloat*',
-            'GLdouble*',
-            'GLboolean*',
-            'GLint64EXT*',
-            'GLuint64EXT*',
-            'GLint64*',
-            'GLuint64*',
-            'GLsizei*',
-            'const GLsizei*',
-            'const GLclampd *',
-            'const GLint *',
-            'const GLfloat *',
-            'const GLint64*',
-            'const GLuint64*',
-            'const GLboolean*',
-            'const GLint64EXT*',
-            'const GLuint64EXT*',
-            'const GLclampf*',
-            'const GLhalf*',
-            'const GLenum*',
-            'const GLint*',
-            'const GLfloat*',
-            'const GLuint*',
-            'const GLuint *',
-            'const GLushort*',
-            'const GLubyte*',
-            'const GLdouble*',
-            'const GLbyte*',
-            'const GLshort*',
-            'const GLfixed*',
-            'const GLintptr*',
-            'const GLsizeiptr*',
-            'const GLchar * const *',
-            'const GLcharARB **',
-            'const GLchar* const *'
-        ];
-
-        var _datafunc = [
-            'glBitmap',
-            'glCallLists',
-            'glMultiDrawElements',
-            'glGetObjectLabelEXT'
-        ];
-
-        var _notdatafunc = [
-        ];
-
-        for(a in args) {
-            var _gltype = a.type;
-            if(a.name == 'void') continue;
-
-            var _skip = false;
-            var _aname = a.name;
-            var _atype = a.type;
-
-            if(_aname == '*v') {
-                _genbody = true;
-                // outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
-                _aname = 'v';
-                _atype = 'BytesData';
-                _native = null;
-                _wrap = true;
-            } else if(_atype == 'const void*' || _atype == 'void*' || _atype == 'const void *const*') {
-                _genbody = true;
-                _native = null;
-                _wrap = true;
-                // outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
-                _atype = 'BytesData';
-
-            } else if(_datatypes.indexOf(_atype) != -1) {
-                _genbody = true;
-                _native = null;
-                _wrap = true;
-                var l = _fname.length;
-                var _is_data = _datafunc.indexOf(_fname) != -1;
-                if(_is_data) {
-                    // outargs.push({ name:'?bOffset', type:'Int=0', gltype:'int' });
-                    _atype = 'BytesData';
-                } else {
-                    _atype = 'Array';
-                }
-            }
-
-            var log_hidden = false;
-            var log_hidden_force = ['glLoadTransposeMatrixdARB'];
-
-            inline function show_name() return log_hidden_force.indexOf(_fname) != -1;
-
-            if(chkname(_aname,'*')) {
-                if(log_hidden || show_name()) trace('hidden: $_fname  reason: pointer in argument name');
-                _hidden = true;
-            }
-                //convert known types
-            _atype = to_haxe_type(_atype);
-                //any complex types after convert?
-            if(chktype(_atype)) {
-                _hidden = true;
-                if(log_hidden || show_name()) trace('hidden: $_fname  reason: typecheck');
-            }
-                //first letter lower case?
-            var _first = _atype.charAt(0);
-            if(_first == '$_first'.toLowerCase()) {
-                if(_atype.indexOf('cpp.') == -1) {
-                    _hidden = true;
-                    if(log_hidden || show_name()) trace('hidden: $_fname  reason: lowercase type names');
-                }
-            }
-            
-            var _p = _aname.indexOf('[');
-            if(_p != -1) {
-                _aname = _aname.substr(0, _p);
-                _atype = 'Array<$_atype>';
-                // _hidden = true;
-                // if(log_hidden || show_name()) trace('hidden: $_fname  reason: arrays in args');
-                _wrap = true;
-            }
-
-            _aname = sanitize_name(_aname);
-
-            if(!_skip) {
-                outargs.push({ name:_aname, type:_atype, gltype:_gltype });
-            }
-
-        } //each args
-
-        if(_genbody) {
-            _body = [];
-            var _arg_names = [];
-            var _arg_items = [];
-            for(a in outargs) {
-                if(a.type == 'BytesData') {
-                    var p = (a.gltype.indexOf('*') == -1) ? '*' : '';
-                    var _bfid = _arg_items.length;
-                    // var _bfid = _bid+1;
-                    _arg_names.push('(${a.gltype}$p)&({$_bfid}[0])');
-                    // _arg_items.push('bOffset');
-                    _arg_items.push('${a.name}');
-                }  
-
-                else if(a.type == 'Array') {
-                    var _tb = a.gltype;
-                        _tb = _tb.replace('const ','');
-                        _tb = _tb.replace('const','');
-                        _tb = _tb.replace('*','');
-                        _tb = _tb.trim();
-                    var _ta = to_haxe_type(_tb);
-
-                    if(_fname == 'glShaderSourceARB')trace('$_fname $_ta $_tb');
-                    if(_ta != _tb) {
-                        a.type = 'Array<$_ta>';
-                        var p = (a.gltype.indexOf('*') == -1) ? '*' : '';
-                        _arg_names.push('(${a.gltype}$p)&({${_arg_items.length}}[0])');
-                        _arg_items.push(a.name);
-                    }
-                } else 
-                // if(a.name != '?bOffset') 
+    /**
+     * Reads all enums and commands from the gl registry then collect (and remove) enums and commands required by the requested gl feature.
+     * @param _registry The xml registry to search.
+     * @param _profile  The requested opengl profile (core or compatibility).
+     * @param _major    The requested opengl major version.
+     * @param _minor    The requested opengl minor version.
+     */
+    static function fetch(_registry : Xml, _api : String, _major : String, _minor : String, _profile : String)
+    {
+        // Fetch all the enums with no api attribute or the 'gl' api attribute (skipping any gles stuff)
+        for (glEnums in _registry.elementsNamed('enums'))
+        {
+            for (glEnum in glEnums.elementsNamed('enum'))
+            {
+                if (!glEnum.exists('api') || glEnum.get('api') == _api)
                 {
-                    _arg_names.push('{${_arg_items.length}}');
-                    _arg_items.push(a.name);
+                    enums.set(glEnum.get('name'), glEnum);
                 }
-
             }
-            var _arg_parts = '';
-            var _arg_body = _arg_names.join(', ');
-            for(_ar in _arg_items) _arg_parts += ', ' + _ar;
-
-            var _ret = '';
-            if(_fret != 'Void' && _fret != 'void') {
-                _ret = 'return ';
-            }
-
-            _body.push('${_ret}untyped __cpp__("$_fname($_arg_body)"$_arg_parts);');
         }
 
-        return {
-            native:_native,
-            body:_body,
-            args:outargs,
-            hidden:_hidden,
-            wrap:_wrap
+        // Fetch all the commands.
+        for (glCommands in _registry.elementsNamed('commands'))
+        {
+            for (glCommand in glCommands.elementsNamed('command'))
+            {
+                // Find the proto then name element.
+                // Break after the first proto and name element.
+                // There should only even be one per command but you never know.
+                for (proto in glCommand.elementsNamed('proto'))
+                {
+                    for (name in proto.elementsNamed('name'))
+                    {
+                        commands.set(name.firstChild().nodeValue, glCommand);
+
+                        break;
+                    }
+
+                    break;
+                }
+            }
         }
-    }
 
-    static function get_function(functions:Array<GLFunction>) {
-        var out = '';
-
-        var _list = [];
-        var _wrap = [];
-        var _hidden = [];
-        var _ignored = [];
-
-        for(f in functions) {
-            var _name = f.name;
-
-            if( ignored.indexOf(_name) != -1 ) {
-                _ignored.push( f.string );
+        // Fetch all the enums and commands for the requested gl version and profile.
+        for (glFeature in _registry.elementsNamed('feature'))
+        {
+            // Only read features which are in the requested api.
+            if (glFeature.get('api') != _api)
+            {
                 continue;
             }
 
-            var _args = '';
-            var _idx = 0;
-            var _fret = to_haxe_type(f.ret);
-            var _ishidden = chktype(_fret);
-            var _inf = process_function(_name, _fret, f.args);
-            for(a in _inf.args) {
-                _args += '${a.name}:${a.type}'; 
-                if(_idx < _inf.args.length-1) _args+=', ';
-                _idx++;
-            }
-
-            var _inline = (_inf.body==null) ? '' : 'inline ';
-            var _endl = (_inf.body==null) ? ';' : '\n';
-            var s = '${_inline}static function $_name($_args) : ${to_haxe_type(f.ret)}$_endl';
-            var n =  (_inf.native==null) ? '' : '@:native(\'${_inf.native}\')\n        ';
-
-            s = '$n$s';
-            if(_inf.body != null) { s += tb(10)+ '{ ${_inf.body.join('\n            ')} }'; }
-
-            if(_ishidden || _inf.hidden) {
-                _hidden.push(s.split('\n').map(function(_f){ return '\n        // ' + _f.trim(); }).join(''));
-            } else {
-                if(_inf.wrap) { _wrap.push(s); } 
-                else { _list.push(s); }
-            }
-        } //each function
-
-        for(_i in _list) {
-            out += tb(8) + '$_i\n\n';
-            ncount++;
-        }
-        out+='\n';
-        for(_i in _wrap) {
-            out += tb(8) + '$_i\n\n';
-            ncount++;
-        }
-
-        out+='\n';
-        if(_hidden.length > 0) {
-            out+='\n    // TODO functions\n\n';
-            for(_i in _hidden) {
-                out += tb(12) + '$_i\n';
-                hcount++;
-            }
-        }
-
-        if(_ignored.length > 0) {
-            out+='\n    // ignored functions\n\n';
-            for(_i in _ignored) {
-                out += tb(12) + '// $_i\n';
-                hcount++;
-            }
-        }
-        return out;
-    }
-    static function write_file() {
-
-        var out = '';
-        //package
-        out += 'package opengl;\n\n';
-        //imports
-        out += 'import haxe.io.BytesData;\nimport haxe.io.Bytes;\n\n';
-
-        out += '@:keep\n@:include(\'linc_opengl.h\')\n@:native(\'GLsync\')\nextern class GLSync {}\n\n';
-
-        out += '@:keep\nabstract IntRef(cpp.Pointer<Int>) {\n';
-        out += '    @:from static inline function fromInt(_val:Int) : IntRef return cast cpp.Pointer.addressOf(_val);\n';
-        out += '}\n\n';
-
-        out += '@:keep\n'
-            +  '@:allow(opengl.GL)\n'
-            +  '#if !display\n'
-            +  '@:build(linc.Linc.touch())\n'
-            +  '@:build(linc.Linc.xml(\'opengl\'))\n'
-            +  '#end\n'
-            +  'private extern class GL_linc {\n'
-            +  '\tprivate inline static var LINC = 1;\n'
-            +  '\t@:keep private static inline var force_bytes_include:haxe.io.Bytes = null;\n'
-            +  '}\n\n';
-
-        //extern GL
-        out += '@:keep\n@:include(\'linc_opengl.h\')\nextern class GL {\n\n';
-        out += '\t\tprivate inline static var LINC = GL_linc.LINC;\n\n';
-
-        var written_defines = [];
-
-        for(v in glew.versions) {
-            out += '//GL ${v.major}.${v.minor}\n\n';
-
-            if(v.defines.length > 0) {
-                out += '    //GL ${v.major}.${v.minor} defines\n\n';
-                for(d in v.defines) {
-                    if(written_defines.indexOf(d.name) == -1) {
-                        dcount++;
-                        written_defines.push(d.name);
-                        var s = 'inline static var ${d.name}';
-                        var skip = ['0xFFFFFFFFFFFFFFFF'];
-                        var _sk = skip.indexOf(d.string) != -1;
-                        out += tb(8) + (_sk?'// ':'') + '$s ${tb(80-s.length)} = ${d.string};\n';
+            // Split feature version to make sure its lower or equal to our target feature.
+            var version = glFeature.get('number').split('.');
+            if (version[0] < _major || (version[0] == _major && version[1] <= _minor))
+            {
+                // Each feature will have several 'require' tags
+                // They are new enum and commands added in this version.
+                for (glRequire in glFeature.elementsNamed('require'))
+                {
+                    for (glEnum in glRequire.elementsNamed('enum'))
+                    {
+                        if (!Lambda.has(featureEnums, glEnum.get('name')))
+                        {
+                            featureEnums.push(glEnum.get('name'));
+                        }
                     }
-                } //each define
-            } //any defines
 
-            if(v.functions.length > 0) {
-                out += '\n\n';
-                out += '    //GL ${v.major}.${v.minor} functions\n\n';
-                out += get_function(v.functions);
-                out += '\n\n';
-            }
-        }
-
-        out += '\n\n';
-
-        for(e in glew.exts) {
-            // if(e.name.indexOf('ARB') == -1) continue;
-            out += '//${e.name}\n\n';
-
-            if(e.defines.length>0) {
-                out += '    // ${e.name} defines\n\n';
-                for(d in e.defines) {
-                    if(written_defines.indexOf(d.name) == -1) {
-                        dcount++;
-                        written_defines.push(d.name);
-                        var s = 'inline static var ${d.name}';
-                        var skip = ['0xFFFFFFFFFFFFFFFF'];
-                        var _sk = skip.indexOf(d.string) != -1;
-                        out += tb(8) + (_sk?'// ':'') + '$s ${tb(80-s.length)} = ${d.string};\n';
+                    for (glCommand in glRequire.elementsNamed('command'))
+                    {
+                        if (!Lambda.has(featureCommands, glCommand.get('name')))
+                        {
+                            featureCommands.push(glCommand.get('name'));
+                        }
                     }
-                } //each define
-            } //any define
+                }
 
-            out += '\n\n';
+                // Some features will have several 'remove' tags for 'core' profiles
+                // These are enums and commands which are to be removed for core profiles.
+                for (glRemove in glFeature.elementsNamed('remove'))
+                {
+                    // Only do stuff for a remove element if the profiles match.
+                    if (glRemove.get('profile') != _profile)
+                    {
+                        continue;
+                    }
 
-            if(e.functions.length > 0) {
-                out += '\n\n';
-                out += '    // ${e.name} functions\n\n';
-                out += get_function(e.functions);
-                out += '\n\n';
+                    for (glEnum in glRemove.elementsNamed('enum'))
+                    {
+                        featureEnums.remove(glEnum.get('name'));
+                    }
+
+                    for (glCommand in glRemove.elementsNamed('command'))
+                    {
+                        featureCommands.remove(glCommand.get('name'));
+                    }
+                }
             }
         }
-
-        out += '\n\n}';
-
-        sys.io.File.saveContent('../opengl/GL.hx', out);
-
-        trace('defines - done: $dcount   total: $dcount');
-        trace('functions - done: $ncount  todo: $hcount  total: ${ncount+hcount}');
-
-    } //write_file
-
-    static function collect_versions() {
-
-        var r = new EReg('#ifndef GL_VERSION_(\\d)_(\\d)([\\S\\s]+?)#endif \\/\\* GL_VERSION_\\d_\\d \\*\\/', 'g');
-        var s = content;
-
-        while(r.match(s)) {
-            var major = Std.parseInt(r.matched(1));
-            var minor = Std.parseInt(r.matched(2));
-            glew.versions.push({ major:major, minor:minor, content:r.matched(3), defines:[], functions:[] });
-            glew.version_names.push('$major.$minor');
-            s = r.matchedRight();
-        }
-
-        var log_versions = false;
-        if(log_versions)
-        for( n in glew.version_names ) trace('Found GL $n');
-
-    } //collect_versions
-
-    static function collect_exts() {
-
-// #ifndef GL_ARB_ES2_compatibility
-// #define GL_ARB_ES2_compatibility 1
-// #endif /* GL_ARB_ES2_compatibility */
-
-        var r = new EReg('#ifndef (?!GL_VERSION_)(GL_.+)([\\S\\s]+?)#endif \\/\\* GL_.+ \\*\\/', 'g');
-        var s = content;
-
-        while(r.match(s)) {
-            var _name = r.matched(1);
-            var _content = r.matched(2);
-            glew.exts.push({ name:_name, content:_content, defines:[], functions:[] });
-            glew.ext_names.push('$_name');
-            s = r.matchedRight();
-        }
-
-        var log_ext = false;
-        if(log_ext)
-        for( n in glew.ext_names ) trace('Found GL ext $n');
-    
-    } //collect_exts
-
-    static function find_defines<T>(_r:EReg, _s:String, _into:Array<T>, _info:String, _log_defines:Bool=true) {
-        if(_log_defines) trace('parsing defines for $_info');
-        while(_r.match(_s)) {
-            var def = { name:_r.matched(2), value:Std.parseInt(_r.matched(3)), string:_r.matched(3) };
-            _into.push(cast def);
-            if(_log_defines) trace('    ${def.name} ${def.string}');
-            _s = _r.matchedRight();
-        } //while match
     }
 
-    static function collect_defines() {
+    /**
+     * Write the GL.hx file with the enums and commands required by the requested gl feature.
+     */
+    static function write()
+    {
+        writeHeader();
 
-        var r = new EReg('(?!#define GL_VERSION_)(#define )(GL_.+) (.+)', 'g');
-        var log_defines = false;
-        for(v in glew.versions) {
-            find_defines(r, v.content, v.defines, 'version ${v.major}.${v.minor}', log_defines);
-        } //each version
+        // Write this profiles enums
+        for (glEnum in featureEnums)
+        {
+            writeEnum(enums.get(glEnum));
+        }
 
-        for(e in glew.exts) {
-            find_defines(r, e.content, e.defines, 'ext ${e.name}', log_defines);
-        } //each ext
+        // Write this profiles
+        for (glCommand in featureCommands)
+        {
+            writeCommand(commands.get(glCommand));
+        }
+
+        writeFooter();
+    }
+
+    /**
+     * Writes the header for the class.
+     * Includes the package, GLsync extern, linc build meta data, and GL extern.
+     */
+    static function writeHeader()
+    {
+        builder.add('package opengl;').newLine();
+        builder.newLine();
+        builder.add('import haxe.io.BytesData;').newLine();
+        builder.newLine();
+        builder.add('@:keep').newLine();
+        builder.add('@:unreflective').newLine();
+        builder.add('@:include("linc_opengl.h")').newLine();
+        builder.add('@:native("GLsync")').newLine();
+        builder.add('extern class GLSync {}').newLine();
+
+        builder.newLine();
+        builder.add('@:keep').newLine();
+        builder.add('@:include("linc_opengl.h")').newLine();
+        builder.add('#if !display').newLine();
+        builder.add('@:build(linc.Linc.touch())').newLine();
+        builder.add('@:build(linc.Linc.xml("opengl"))').newLine();
+        builder.add('#end').newLine();
+        builder.add('extern class GL').newLine();
+        builder.add('{').newLine();
+        builder.newLine();
+    }
+
+    /**
+     * Writes the haxe equivalent of a openGL enum.
+     * If the enum xml contains a comment that is included as well.
+     * 
+     * @param _enum gl registry <enum> xml element.
+     */
+    static function writeEnum(_enum : Xml)
+    {
+        var name    = _enum.get('name');
+        var value   = _enum.get('value');
+        var comment = _enum.get('comment');
+
+        // All enums are in hex values.
+        // If this hex value is a 64bit literal then truncate it as haxe doesn't support 64bit literals
+        // https://github.com/HaxeFoundation/haxe/issues/5150
+        // Only a few enums have 64 bit literals and they're 0xFFFFFFFFFFFF based
+        if (value.length >= 14)
+        {
+            value = value.substr(0, 8);
+        }
+
+        // If this enum has a comment add it so auto completion will show it.
+        if (comment != null)
+        {
+            builder.add('\t').add('/**'        ).newLine();
+            builder.add('\t').add(' * $comment').newLine();
+            builder.add('\t').add(' */'        ).newLine();
+        }
+
+        builder.add('\t').add('inline static var $name = $value;').newLine();
+        builder.newLine();
+    }
+
+    /**
+     * Writes the haxe inline untyped function for a openGL command.
+     * Converts the parameter and return types to appropriate haxe types.
+     * 
+     * @param _command gl registry <command> xml element.
+     */
+    static function writeCommand(_command : Xml)
+    {
+        var definition = parseCommand(_command);
+
+        // First write out the inline function part.
+        builder.newLine();
+        builder.add('\t').add('inline static function ${definition.proto.name}(');
+
+        for (i in 0...definition.param.length)
+        {
+            builder.add('_').add(definition.param[i].name).add(' : ').add(toHaxeParamType(definition.param[i].type));
+
+            if (i != definition.param.length - 1) builder.add(', ');
+        }
+
+        builder.add(') : ${ toHaxeReturnType(definition.proto.type) }');
+
+        // Then write the untyped cpp section
+        builder.newLine();
+        builder.add('\t\t').add('{ return untyped __cpp__("${definition.proto.name}(');
+
+        for (i in 0...definition.param.length)
+        {
+            builder.add(toCppUntyped(definition.param[i].type, i));
+
+            if (i != definition.param.length - 1) builder.add(', ');
+        }
+
+        builder.add(')"');
+
+        // Then finally write the haxe argument names into the untyped section.
+        if (definition.param.length > 0)
+        {
+            builder.add(', ');
+
+            for (i in 0...definition.param.length)
+            {
+                builder.add('_').add(definition.param[i].name);
+
+                if (i != definition.param.length - 1) builder.add(', ');
+            }
+        }
+
+        // Close the untyped function
+        builder.add('); }');
+        builder.newLine();
+    }
+
+    /**
+     * Writes the footer for the GL class.
+     * Simply writes a closing curly bracket.
+     */
+    static function writeFooter()
+    {
+        builder.newLine();
+        builder.add('}').newLine();
+    }
+
+    /**
+     * Takes a XML structure defining an openGL function and reads all data from it.
+     * The returned anonymouse structure contains a command proto (name and return value) and an array of parameters (name and type).
+     * 
+     * @param _xml Xml to parse.
+     * @return Command
+     */
+    static function parseCommand(_xml : Xml) : Command
+    {
+        var proto : CommandProto = null;
+        var param = new Array<CommandParam>();
+
+        for (element in _xml.elements())
+        {
+            switch (element.nodeName)
+            {
+                case 'proto': proto = parseCommandProto(element);
+                case 'param': param.push(parseCommandParam(element));
+            }
+        }
+
+        return { proto : proto, param : param };
+    }
+
+    /**
+     * Parses the proto element of a command.
+     * Reads the function name and its return type.
+     * 
+     * @param _xml Xml to parse.
+     * @return CommandProto
+     */
+    static function parseCommandProto(_xml : Xml) : CommandProto
+    {
+        var name = '';
+        var type = '';
+
+        for (child in _xml)
+        {
+            switch (child.nodeType) {
+                case Element, Document:
+                    switch (child.nodeName)
+                    {
+                        case 'name' : name = child.firstChild().nodeValue;
+                        case 'ptype': type = child.firstChild().nodeValue;
+                    }
+                case _:
+                    type += child.nodeValue.trim();
+            }
+        }
+
+        return { name : name, type : type };
+    }
+
+    /**
+     * Parses a param element of a command.
+     * Reads the param name and its type.
+     * 
+     * @param _xml Xml to parse.
+     * @return CommandParam
+     */
+    static function parseCommandParam(_xml : Xml) : CommandParam
+    {
+        var name = '';
+        var type = '';
+
+        for (child in _xml)
+        {
+            switch (child.nodeType) {
+                // Name or GL Type element.
+                case Element, Document:
+                    switch (child.nodeName)
+                    {
+                        case 'name' : name = child.firstChild().nodeValue;
+                        case 'ptype': type += child.firstChild().nodeValue;
+                    }
+
+                // pointer attributes
+                case _:
+                    type += child.nodeValue;
+            }
+        }
         
-    } //collect_defines
+        return { name : name, type : type };
+    }
 
-    static function split_args(_arg_str:String) : Array<GLFunctionArg> {
-        var args = [];
-        _arg_str = _arg_str.trim();
-        if(_arg_str != '') {
-            var _name = '??';
-            var _type = '??';
-            var parts = _arg_str.split(',');
-            for(p in parts) {
-                p = p.trim();
-                var argparts = p.split(' ');
-                _name = argparts.pop();
-                _type = argparts.join(' ');
+    /**
+     * Converts a native cpp type into a haxe type for a command parameter.
+     * Handles several pointer types differently for user convenience on the haxe side.
+     * Will convert pointers into a Array<?> for haxe.
+     * 
+     * @param _native Native cpp type to convert.
+     * @return Haxe parameter type for the native cpp type.
+     */
+    static function toHaxeParamType(_native : String) : String
+    {
+        // Special check for 'const char *' and various other similar ones.
+        // These can be converted to a haxe 'String'
+        if (_native == 'const GLchar *' || _native == 'const GLcharARB *') return 'String';
 
-                if(_name.charAt(0) == '*') {
-                    _name = _name.substr(1);
-                    var _p = _type.split(' ');
-                    _p[_p.length-1] += '*';
-                    _type = _p.join(' ');
+        // Special check for array of strings
+        // Used for shader source functions.
+        if (_native == 'const GLchar *const*' || _native == 'const GLcharARB **') return 'Array<String>';
+
+        // Special check for non GL types.
+        // These are all void pointers of some sorts
+        if (_native == 'const void *' || _native == 'void *') return 'BytesData';
+
+        // Special check for const UInt8 pointer.
+        // This will be image data so have the haxe type be bytes data.
+        if (_native == 'const GLbyte *') return 'BytesData';
+
+        // Then check normal GL types and pointer wrappers
+
+        // Split parts by space to separate any GL types from pointer modifiers
+        // We cannot check if a string contains a string equivilent of a GL types due to ARB, and other extension types being named the same with different postfixes.
+        var typeParts = _native.split(' ');
+
+        for (part in typeParts)
+        {
+            for (type in glTypes.keys())
+            {
+                if (part == type)
+                {
+                    // Remove the GL type so we only have the pointer stuff remaining
+                    typeParts.remove(type);
+
+                    var remaining = typeParts.join('').replace(' ', '');
+                    if (remaining == '')
+                    {
+                        // If there is no remaining type data then we pass a haxe type back.
+                        if (glTypes.exists(type))
+                        {
+                            return glTypes.get(type);
+                        }
+                        else
+                        {
+                            throw 'unknown openGL type $type';
+                        }
+                    }
+                    else
+                    {
+                        // If there is still data left that means the type is wrapped as a pointer
+                        return switch (remaining)
+                        {
+                            case '*', '[2]', 'const*' : 'Array<${ glTypes.get(type) }>';
+                            case 'const**', 'const*const*' : 'Array<Array<${ glTypes.get(type) }>>';
+                            case unknown: throw 'unknown pointer type "$unknown"';
+                        }
+                    }
                 }
-                args.push({ name:_name, type:_type, gltype:_type });
             }
         }
-        return args;
+
+        return 'Void';
     }
 
-    static function find_functions<T>(r:EReg, _s:String, _into:Array<T>, _info:String, _log_functions:Bool=true) {
-        var s = _s;
-        while(r.match(s)) {
-            if(r.matched(1) != null) {
+    /**
+     * Converts a native cpp type into a haxe function return type.
+     * largely the same to the parameter type except void* pointers are converted to haxe cpp.RawPointers instead of bytes data.
+     * 
+     * @param _native Native cpp type to convert.
+     * @return Haxe return type for the native cpp type.
+     */
+    static function toHaxeReturnType(_native : String) : String
+    {
+        // Special check for 'const char *' and various other similar ones.
+        // These can be converted to a haxe 'String'
+        if (_native == 'const GLchar *' || _native == 'const GLcharARB *') return 'String';
 
-                var args = [];
-                var _name = r.matched(1);
-                var _arg_str = '';
-                var _ret_str = 'void';
-                //find the args
-                var reg = 'typedef (.+) \\(GLAPIENTRY \\* PFN${_name.toUpperCase()}PROC\\) \\((.*)\\)';
-                var fnr = new EReg(reg,'gi');
-                if(fnr.match(_s)){
-                    _ret_str = fnr.matched(1);
-                    _arg_str = fnr.matched(2);
-                    args = split_args(_arg_str);
+        // Special check for non GL types.
+        // These are all void pointers of some sorts
+        if (_native == 'const void *') return 'cpp.RawConstPointer<cpp.Void>';
+        if (_native == 'void *') return 'cpp.RawPointer<cpp.Void>';
+
+        // Then check normal GL types and pointer wrappers
+
+        // Split parts by space to separate any GL types from pointer modifiers
+        // We cannot check if a string contains a string equivilent of a GL types due to ARB, and other extension types being named the same with different postfixes.
+        var typeParts = _native.split(' ');
+
+        for (part in typeParts)
+        {
+            for (type in glTypes.keys())
+            {
+                if (part == type)
+                {
+                    // Remove the GL type so we only have the pointer stuff remaining
+                    typeParts.remove(type);
+
+                    var remaining = typeParts.join('').replace(' ', '');
+                    if (remaining == '')
+                    {
+                        // If there is no remaining type data then we pass a haxe type back.
+                        if (glTypes.exists(type))
+                        {
+                            return glTypes.get(type);
+                        }
+                        else
+                        {
+                            throw 'unknown openGL type $type';
+                        }
+                    }
+                    else
+                    {
+                        // If there is still data left that means the type is wrapped as a pointer
+                        return switch (remaining)
+                        {
+                            case '*', '[2]'    : 'cpp.RawPointer<${ glTypes.get(type) }>';
+                            case 'const*'      : 'cpp.RawConstPointer<${ glTypes.get(type) }>';
+                            case 'const**'     : 'cpp.RawPointer<cpp.RawConstPointer<${ glTypes.get(type) }>>';
+                            case 'const*const*': 'cpp.RawConstPointer<cpp.RawConstPointer<${ glTypes.get(type) }>>';
+                            case unknown: throw 'unknown pointer type "$unknown"';
+                        }
+                    }
                 }
-
-                _into.push(cast { name:_name, args:args, args_str:_arg_str, ret:_ret_str, string:r.matched(0) });
-
-                if(_log_functions) trace('    $_ret_str ${r.matched(1)}($_arg_str)');
-
-            } else if(r.matched(2) != null && r.matched(3) != null && r.matched(4) != null) {
-                var _arg_str = r.matched(4);
-                var args = split_args(_arg_str);
-                if(_log_functions) trace('    ${r.matched(3)}($_arg_str)');
-                _into.push(cast { name:r.matched(3), args_str:_arg_str, args:args, ret:r.matched(2), string:r.matched(0) });
             }
+        }
 
-            s = r.matchedRight();
-
-        } //while match
-
+        return 'Void';
     }
 
-    static function collect_functions() {
+    /**
+     * Converts a native cpp type to a haxe untyped equivalent.
+     * For basic types the untyped can just pass that type through.
+     * For pointers the bytes data / string needs to be index and converted.
+     * 
+     * @param _native   Native cpp type to convert.
+     * @param _argCount Argument index number.
+     * @return Untyped string for the provided native type.
+     */
+    static function toCppUntyped(_native : String, _argCount : Int) : String
+    {
+        // Special check for 'const char *' and various other similar ones.
+        // These can be converted to a haxe 'String'
+        if (_native == 'const GLchar *' || _native == 'const GLcharARB *') return '{$_argCount}';
 
-        var r = new EReg('#define (gl.*) GLEW_GET_FUN.*|GLAPI (.*) GLAPIENTRY (.*) [(](.*)[)]', 'g');
+        // Special check for array of strings.
+        if (_native == 'const GLchar *const*' || _native == 'const GLcharARB **') return '(const GLint *)&({$_argCount}[0])';
 
-        var log_functions = false;
+        // Special check for non GL types.
+        // These are all void pointers of some sorts
+        if (_native == 'const void *' || _native == 'void *') return '($_native)&({$_argCount}[0])';
 
-        for(v in glew.versions) {
-            if(log_functions) trace('parsing functions for version ${v.major}.${v.minor}');
-            find_functions(r, v.content, v.functions, 'version ${v.major}.${v.minor}', log_functions);
-        } //each version
+        // 
+        var typeParts = _native.split(' ');
 
-        for(e in glew.exts) {
-            if(log_functions) trace('parsing functions for ext ${e.name}');
-            find_functions(r, e.content, e.functions, 'ext ${e.name}', log_functions);
-        } //each ext
+        for (part in typeParts)
+        {
+            for (type in glTypes.keys())
+            {
+                if (part == type)
+                {
+                    // Remove the GL type so we only have the pointer stuff remaining
+                    typeParts.remove(type);
 
-    } //collect_functions
+                    var remaining = typeParts.join('').replace(' ', '');
+                    if (remaining == '')
+                    {
+                        return '{$_argCount}';
+                    }
+                    else
+                    {
+                        return '($_native)&({$_argCount}[0])';
+                    }
+                }
+            }
+        }
 
-
-} //Main
+        return '{$_argCount}';
+    }
+}
