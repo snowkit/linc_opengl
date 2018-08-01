@@ -1,8 +1,8 @@
 
 import haxe.ds.Map;
-import hx.strings.StringBuilder;
 
 using StringTools;
+using Main;
 
 typedef CommandProto = {
 
@@ -49,7 +49,7 @@ class Main
     /**
      * String builder to store GL.hx contents.
      */
-    static var builder : StringBuilder;
+    static var builder : StringBuf;
 
     /**
      * Map of all enums found in the gl registry.
@@ -126,7 +126,7 @@ class Main
         var profile = args.length > 3 ? args[3] : '';
 
         // Setup builder and feature structures.
-        builder         = new StringBuilder();
+        builder         = new StringBuf();
         enums           = new Map();
         commands        = new Map();
         featureEnums    = [];
@@ -277,26 +277,26 @@ class Main
      */
     static function writeHeader()
     {
-        builder.add('package opengl;').newLine();
-        builder.newLine();
-        builder.add('import haxe.io.BytesData;').newLine();
-        builder.newLine();
-        builder.add('@:keep').newLine();
-        builder.add('@:unreflective').newLine();
-        builder.add('@:include("linc_opengl.h")').newLine();
-        builder.add('@:native("GLsync")').newLine();
-        builder.add('extern class GLSync {}').newLine();
+        builder.append('package opengl;').newline();
+        builder.newline();
+        builder.append('import haxe.io.BytesData;').newline();
+        builder.newline();
+        builder.append('@:keep').newline();
+        builder.append('@:unreflective').newline();
+        builder.append('@:include("linc_opengl.h")').newline();
+        builder.append('@:native("GLsync")').newline();
+        builder.append('extern class GLSync {}').newline();
 
-        builder.newLine();
-        builder.add('@:keep').newLine();
-        builder.add('@:include("linc_opengl.h")').newLine();
-        builder.add('#if !display').newLine();
-        builder.add('@:build(linc.Linc.touch())').newLine();
-        builder.add('@:build(linc.Linc.xml("opengl"))').newLine();
-        builder.add('#end').newLine();
-        builder.add('extern class GL').newLine();
-        builder.add('{').newLine();
-        builder.newLine();
+        builder.newline();
+        builder.append('@:keep').newline();
+        builder.append('@:include("linc_opengl.h")').newline();
+        builder.append('#if !display').newline();
+        builder.append('@:build(linc.Linc.touch())').newline();
+        builder.append('@:build(linc.Linc.xml("opengl"))').newline();
+        builder.append('#end').newline();
+        builder.append('extern class GL').newline();
+        builder.append('{').newline();
+        builder.newline();
     }
 
     /**
@@ -323,13 +323,13 @@ class Main
         // If this enum has a comment add it so auto completion will show it.
         if (comment != null)
         {
-            builder.add('\t').add('/**'        ).newLine();
-            builder.add('\t').add(' * $comment').newLine();
-            builder.add('\t').add(' */'        ).newLine();
+            builder.append('\t').append('/**'        ).newline();
+            builder.append('\t').append(' * $comment').newline();
+            builder.append('\t').append(' */'        ).newline();
         }
 
-        builder.add('\t').add('inline static var $name = $value;').newLine();
-        builder.newLine();
+        builder.append('\t').append('inline static var $name = $value;').newline();
+        builder.newline();
     }
 
     /**
@@ -343,47 +343,47 @@ class Main
         var definition = parseCommand(_command);
 
         // First write out the inline function part.
-        builder.newLine();
-        builder.add('\t').add('inline static function ${definition.proto.name}(');
+        builder.newline();
+        builder.append('\t').append('inline static function ${definition.proto.name}(');
 
         for (i in 0...definition.param.length)
         {
-            builder.add('_').add(definition.param[i].name).add(' : ').add(toHaxeParamType(definition.param[i].type));
+            builder.append('_').append(definition.param[i].name).append(' : ').append(toHaxeParamType(definition.param[i].type));
 
-            if (i != definition.param.length - 1) builder.add(', ');
+            if (i != definition.param.length - 1) builder.append(', ');
         }
 
-        builder.add(') : ${ toHaxeReturnType(definition.proto.type) }');
+        builder.append(') : ${ toHaxeReturnType(definition.proto.type) }');
 
         // Then write the untyped cpp section
-        builder.newLine();
-        builder.add('\t\t').add('{ return untyped __cpp__("${definition.proto.name}(');
+        builder.newline();
+        builder.append('\t\t').append('{ return untyped __cpp__("${definition.proto.name}(');
 
         for (i in 0...definition.param.length)
         {
-            builder.add(toCppUntyped(definition.param[i].type, i));
+            builder.append(toCppUntyped(definition.param[i].type, i));
 
-            if (i != definition.param.length - 1) builder.add(', ');
+            if (i != definition.param.length - 1) builder.append(', ');
         }
 
-        builder.add(')"');
+        builder.append(')"');
 
         // Then finally write the haxe argument names into the untyped section.
         if (definition.param.length > 0)
         {
-            builder.add(', ');
+            builder.append(', ');
 
             for (i in 0...definition.param.length)
             {
-                builder.add('_').add(definition.param[i].name);
+                builder.append('_').append(definition.param[i].name);
 
-                if (i != definition.param.length - 1) builder.add(', ');
+                if (i != definition.param.length - 1) builder.append(', ');
             }
         }
 
         // Close the untyped function
-        builder.add('); }');
-        builder.newLine();
+        builder.append('); }');
+        builder.newline();
     }
 
     /**
@@ -392,8 +392,8 @@ class Main
      */
     static function writeFooter()
     {
-        builder.newLine();
-        builder.add('}').newLine();
+        builder.newline();
+        builder.append('}').newline();
     }
 
     /**
@@ -665,5 +665,22 @@ class Main
         }
 
         return '{$_argCount}';
+    }
+
+    // Static extension helpers for string buffers
+    // both allow the functions to be chained.
+
+    static function append(_buffer : StringBuf, _text : String) : StringBuf
+    {
+        _buffer.add(_text);
+
+        return _buffer;
+    }
+
+    static function newline(_buffer : StringBuf) : StringBuf
+    {
+        _buffer.add('\r\n');
+
+        return _buffer;
     }
 }

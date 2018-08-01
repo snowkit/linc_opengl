@@ -1,6 +1,4 @@
--cp reg-gen
-
--lib haxe-strings
+-cp gen
 
 -main Main
 
