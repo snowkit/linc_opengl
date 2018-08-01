@@ -128,14 +128,6 @@ class Main
         // Gather all enums and commands
         fetch(reg, _profile, _major, _minor);
         write();
-
-        trace('enums : ${featureEnums.length}, commands : ${featureCommands.length}');
-
-        // Writing
-        // writeHeader();
-        // writeEnums(reg);
-        // writeCommands(reg);
-        // writeFooter();
     }
 
     static function fetch(_registry : Xml, _profile : String, _major : String, _minor : String)
@@ -196,12 +188,18 @@ class Main
                 {
                     for (glEnum in glRequire.elementsNamed('enum'))
                     {
-                        featureEnums.push(glEnum.get('name'));
+                        if (!Lambda.has(featureEnums, glEnum.get('name')))
+                        {
+                            featureEnums.push(glEnum.get('name'));
+                        }
                     }
 
                     for (glCommand in glRequire.elementsNamed('command'))
                     {
-                        featureCommands.push(glCommand.get('name'));
+                        if (!Lambda.has(featureCommands, glCommand.get('name')))
+                        {
+                            featureCommands.push(glCommand.get('name'));
+                        }
                     }
                 }
 
@@ -234,8 +232,16 @@ class Main
         writeHeader();
 
         // Write this profiles enums
+        for (glEnum in featureEnums)
+        {
+            writeEnums(enums.get(glEnum));
+        }
 
         // Write this profiles
+        for (glCommand in featureCommands)
+        {
+            writeCommands(commands.get(glCommand));
+        }
 
         writeFooter();
     }
@@ -277,52 +283,31 @@ class Main
      * 
      * @param _reg XML structure to parse.
      */
-    static function writeEnums(_reg : Xml)
+    static function writeEnums(_enum : Xml)
     {
-        for (element in _reg.elementsNamed('enums'))
+        var name    = _enum.get('name');
+        var value   = _enum.get('value');
+        var comment = _enum.get('comment');
+
+        // All enums are in hex values.
+        // If this hex value is a 64bit literal then truncate it as haxe doesn't support 64bit literals
+        // https://github.com/HaxeFoundation/haxe/issues/5150
+        // Only two enums have 64 bit literals and they're both 0xFFFFFFFFFFFF
+        if (value.length >= 14)
         {
-            // Add a block header with details about the follow enum values.
-            var group   = element.get('group');
-            var comment = element.get('comment');
-            var vendor  = element.get('vendor');
-            var type    = element.get('type');
-
-            builder.newLine();
-            builder.add('\t').add('/**').newLine();
-            if (group   != null) builder.add('\t').add(' * $group'         ).newLine();
-            if (comment != null) builder.add('\t').add(' * $comment'       ).newLine();
-            if (vendor  != null) builder.add('\t').add(' * @vendor $vendor').newLine();
-            if (type    != null) builder.add('\t').add(' * @type   $type'  ).newLine();
-            builder.add('\t').add(' */').newLine();
-            builder.newLine();
-
-            // For each 'enums' block read all the sub enums
-            for (glEnum in element.elementsNamed('enum'))
-            {
-                var name    = glEnum.get('name');
-                var value   = glEnum.get('value');
-                var comment = glEnum.get('comment');
-
-                // All enums are in hex values.
-                // If this hex value is a 64bit literal then truncate it as haxe doesn't support 64bit literals
-                // https://github.com/HaxeFoundation/haxe/issues/5150
-                // Only two enums have 64 bit literals and they're both 0xFFFFFFFFFFFF
-                if (value.length > 8)
-                {
-                    value = value.substr(0, 8);
-                }
-
-                // If this enum has a comment add it so auto completion will show it.
-                if (comment != null)
-                {
-                    builder.add('\t').add('/**'        ).newLine();
-                    builder.add('\t').add(' * $comment').newLine();
-                    builder.add('\t').add(' */'        ).newLine();
-                }
-
-                builder.add('\t').add('inline static var $name = $value;').newLine();
-            }
+            value = value.substr(0, 8);
         }
+
+        // If this enum has a comment add it so auto completion will show it.
+        if (comment != null)
+        {
+            builder.add('\t').add('/**'        ).newLine();
+            builder.add('\t').add(' * $comment').newLine();
+            builder.add('\t').add(' */'        ).newLine();
+        }
+
+        builder.add('\t').add('inline static var $name = $value;').newLine();
+        builder.newLine();
     }
 
     /**
@@ -334,60 +319,54 @@ class Main
      * 
      * @param _reg XML registry to parse.
      */
-    static function writeCommands(_reg : Xml)
+    static function writeCommands(_command : Xml)
     {
         builder.newLine();
 
-        for (element in _reg.elementsNamed('commands'))
+        var definition = parseCommand(_command);
+
+        // First write out the inline function part.
+        builder.newLine();
+        builder.add('\t').add('inline static function ${definition.proto.name}(');
+
+        for (i in 0...definition.param.length)
         {
-            for (glCommand in element.elementsNamed('command'))
+            builder.add('_').add(definition.param[i].name).add(' : ').add(toHaxeParamType(definition.param[i].type));
+
+            if (i != definition.param.length - 1) builder.add(', ');
+        }
+
+        builder.add(') : ${ toHaxeReturnType(definition.proto.type) }');
+
+        // Then write the untyped cpp section
+        builder.newLine();
+        builder.add('\t\t').add('{ return untyped __cpp__("${definition.proto.name}(');
+
+        for (i in 0...definition.param.length)
+        {
+            builder.add(toCppUntyped(definition.param[i].type, i));
+
+            if (i != definition.param.length - 1) builder.add(', ');
+        }
+
+        builder.add(')"');
+
+        if (definition.param.length > 0)
+        {
+            builder.add(', ');
+
+            // Then finally write the haxe argument names into the untyped section.
+            for (i in 0...definition.param.length)
             {
-                var definition = parseCommand(glCommand);
+                builder.add('_').add(definition.param[i].name);
 
-                // First write out the inline function part.
-                builder.newLine();
-                builder.add('\t').add('inline static function ${definition.proto.name}(');
-
-                for (i in 0...definition.param.length)
-                {
-                    builder.add('_').add(definition.param[i].name).add(' : ').add(toHaxeParamType(definition.param[i].type));
-
-                    if (i != definition.param.length - 1) builder.add(', ');
-                }
-
-                builder.add(') : ${ toHaxeReturnType(definition.proto.type) }');
-
-                // Then write the untyped cpp section
-                builder.newLine();
-                builder.add('\t\t').add('{ return untyped __cpp__("${definition.proto.name}(');
-
-                for (i in 0...definition.param.length)
-                {
-                    builder.add(toCppUntyped(definition.param[i].type, i));
-
-                    if (i != definition.param.length - 1) builder.add(', ');
-                }
-
-                builder.add(')"');
-
-                if (definition.param.length > 0)
-                {
-                    builder.add(', ');
-
-                    // Then finally write the haxe argument names into the untyped section.
-                    for (i in 0...definition.param.length)
-                    {
-                        builder.add('_').add(definition.param[i].name);
-
-                        if (i != definition.param.length - 1) builder.add(', ');
-                    }
-                }
-
-                // Close the untyped function
-                builder.add('); }');
-                builder.newLine();
+                if (i != definition.param.length - 1) builder.add(', ');
             }
         }
+
+        // Close the untyped function
+        builder.add('); }');
+        builder.newLine();
     }
 
     /**
