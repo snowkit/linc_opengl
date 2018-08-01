@@ -1,19 +1,13 @@
--main Main.hx
--cpp cpp/
--cp ../
-# pick a target
--D no-debug
--D no-simplify
+-cp reg-gen
 
--D mac
-#-D windows
-#-D linux
+-lib haxe-strings
 
-# To build 32 or 64 bit
-#(if not using the default for your platform):
+-main Main
 
-#-D HXCPP_M64
-#-D HXCPP_M32
-#-debug
-#-cmd ./cpp/Main-debug
--cmd ./cpp/Main
+-neko buildgl.n
+-cmd  neko buildgl.n gl 4 6 core
+
+# arg0 - api type - OpenGL api type to build for. 'gl', 'gles1', 'gles2'
+# arg1 - major    - Major version to request.
+# arg2 - minor    - Minor version to request.
+# arg3 - profile  - profile to request. 'core', 'compatibility'. Not required for gles, defaults to compatibility.
