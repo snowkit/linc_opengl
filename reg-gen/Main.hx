@@ -12,13 +12,8 @@ typedef CommandProto = {
     var name : String;
 
     /**
-     * Parameter type.
-     * Return type is an array since there are potentially two parts to a return type.
-     * 
-     * [0] OpenGL / native return type.
-     * [1] Pointer modifier.
-     * 
-     * If return type length > 1 then the return type is a pointer instead of a primitive.
+     * Return type of the function.
+     * Native cpp type (e.g. void, GLint, const void *).
      */
     var type : String;
 }
@@ -31,36 +26,54 @@ typedef CommandParam = {
     var name : String;
 
     /**
-     * Parameter type.
-     * Return type is an array as there are potentially two parts to a parameter type.
-     * 
-     * [0] OpenGL parameter type.
-     * [1] Pointer modifier.
-     * 
-     * If return type length > 1 then the parameters type is a pointer instead of a primitive.
+     * Parameters native cpp type (e.g. GLenum, const GLchar *).
      */
     var type : String;
 }
 
 typedef Command = {
 
+    /**
+     * The prototype for this command.
+     */
     var proto : CommandProto;
 
+    /**
+     * All of this commands parameters.
+     */
     var param : Array<CommandParam>;
 }
 
 class Main
 {
+    /**
+     * String builder to store GL.hx contents.
+     */
     static var builder : StringBuilder;
 
+    /**
+     * Map of all enums found in the gl registry.
+     */
     static var enums : Map<String, Xml>;
 
+    /**
+     * Map of all commands found in the gl registry.
+     */
     static var commands : Map<String, Xml>;
 
+    /**
+     * All enums required by the requested openGL feature level.
+     */
     static var featureEnums : Array<String>;
 
+    /**
+     * All commands required by the requestion openGL feature level.
+     */
     static var featureCommands : Array<String>;
 
+    /**
+     * Map of openGL types to haxe types.
+     */
     static var glTypes = [
 
         // Core openGL types
@@ -110,31 +123,38 @@ class Main
         var major   = args[1];
         var minor   = args[2];
 
-        // Setup builder and feature info.
+        // Setup builder and feature structures.
         builder         = new StringBuilder();
+        enums           = new Map();
+        commands        = new Map();
         featureEnums    = [];
         featureCommands = [];
 
-        build(sys.io.File.getContent('gl.xml'), profile, major, minor);
-
-        sys.io.File.saveContent('GL.hx', builder.toString());
-    }
-
-    static function build(_xml : String, _profile : String, _major : String, _minor : String)
-    {
-        var xml = Xml.parse(_xml);
+        // Load gl registry.
+        var xml = Xml.parse(sys.io.File.getContent('gl.xml'));
         var reg = xml.firstElement();
 
-        // Gather all enums and commands
-        fetch(reg, _profile, _major, _minor);
+        // Gather all enums and commands then write them into the string builder.
+        fetch(reg, profile, major, minor);
         write();
+
+        // Save the files content.
+        sys.io.File.saveContent('GL$major$minor$profile.hx', builder.toString());
+
+        trace('GL$major$minor$profile.hx generated');
+        trace('enums    : ${featureEnums.length}');
+        trace('commands : ${featureCommands.length}');
     }
 
+    /**
+     * Reads all enums and commands from the gl registry then collect (and remove) enums and commands required by the requested gl feature.
+     * @param _registry The xml registry to search.
+     * @param _profile  The requested opengl profile (core or compatibility).
+     * @param _major    The requested opengl major version.
+     * @param _minor    The requested opengl minor version.
+     */
     static function fetch(_registry : Xml, _profile : String, _major : String, _minor : String)
     {
-        enums    = new Map();
-        commands = new Map();
-
         // Fetch all the enums with no api attribute or the 'gl' api attribute (skipping any gles stuff)
         for (glEnums in _registry.elementsNamed('enums'))
         {
@@ -227,6 +247,9 @@ class Main
         }
     }
 
+    /**
+     * Write the GL.hx file with the enums and commands required by the requested gl feature.
+     */
     static function write()
     {
         writeHeader();
@@ -234,13 +257,13 @@ class Main
         // Write this profiles enums
         for (glEnum in featureEnums)
         {
-            writeEnums(enums.get(glEnum));
+            writeEnum(enums.get(glEnum));
         }
 
         // Write this profiles
         for (glCommand in featureCommands)
         {
-            writeCommands(commands.get(glCommand));
+            writeCommand(commands.get(glCommand));
         }
 
         writeFooter();
@@ -275,15 +298,12 @@ class Main
     }
 
     /**
-     * Parses the openGL registry XML for 'enums' elements.
-     * Each 'enums' elements contains one or more 'enum' element which contains a name, value, and maybe a comment.
+     * Writes the haxe equivalent of a openGL enum.
+     * If the enum xml contains a comment that is included as well.
      * 
-     * This function converts writes all enums as 'inline static var' or 'inline static final' to the beginning of the GL.hx file.
-     * Comments are copied over and enums are grouped by their block with a comment header giving the group name, vendor, and any comment.
-     * 
-     * @param _reg XML structure to parse.
+     * @param _enum gl registry <enum> xml element.
      */
-    static function writeEnums(_enum : Xml)
+    static function writeEnum(_enum : Xml)
     {
         var name    = _enum.get('name');
         var value   = _enum.get('value');
@@ -292,7 +312,7 @@ class Main
         // All enums are in hex values.
         // If this hex value is a 64bit literal then truncate it as haxe doesn't support 64bit literals
         // https://github.com/HaxeFoundation/haxe/issues/5150
-        // Only two enums have 64 bit literals and they're both 0xFFFFFFFFFFFF
+        // Only a few enums have 64 bit literals and they're 0xFFFFFFFFFFFF based
         if (value.length >= 14)
         {
             value = value.substr(0, 8);
@@ -311,18 +331,13 @@ class Main
     }
 
     /**
-     * Parses the openGL XML for 'commands' elements.
-     * Each 'commands' element contains one or more 'command' element which is a openGL function.
+     * Writes the haxe inline untyped function for a openGL command.
+     * Converts the parameter and return types to appropriate haxe types.
      * 
-     * These 'command' elements contain the command name, return type, and all parameters and their types.
-     * The GL types are converted into the equivilent Haxe types and written as an extern function.
-     * 
-     * @param _reg XML registry to parse.
+     * @param _command gl registry <command> xml element.
      */
-    static function writeCommands(_command : Xml)
+    static function writeCommand(_command : Xml)
     {
-        builder.newLine();
-
         var definition = parseCommand(_command);
 
         // First write out the inline function part.
@@ -351,11 +366,11 @@ class Main
 
         builder.add(')"');
 
+        // Then finally write the haxe argument names into the untyped section.
         if (definition.param.length > 0)
         {
             builder.add(', ');
 
-            // Then finally write the haxe argument names into the untyped section.
             for (i in 0...definition.param.length)
             {
                 builder.add('_').add(definition.param[i].name);
@@ -464,6 +479,14 @@ class Main
         return { name : name, type : type };
     }
 
+    /**
+     * Converts a native cpp type into a haxe type for a command parameter.
+     * Handles several pointer types differently for user convenience on the haxe side.
+     * Will convert pointers into a Array<?> for haxe.
+     * 
+     * @param _native Native cpp type to convert.
+     * @return Haxe parameter type for the native cpp type.
+     */
     static function toHaxeParamType(_native : String) : String
     {
         // Special check for 'const char *' and various other similar ones.
@@ -527,6 +550,13 @@ class Main
         return 'Void';
     }
 
+    /**
+     * Converts a native cpp type into a haxe function return type.
+     * largely the same to the parameter type except void* pointers are converted to haxe cpp.RawPointers instead of bytes data.
+     * 
+     * @param _native Native cpp type to convert.
+     * @return Haxe return type for the native cpp type.
+     */
     static function toHaxeReturnType(_native : String) : String
     {
         // Special check for 'const char *' and various other similar ones.
@@ -585,6 +615,15 @@ class Main
         return 'Void';
     }
 
+    /**
+     * Converts a native cpp type to a haxe untyped equivalent.
+     * For basic types the untyped can just pass that type through.
+     * For pointers the bytes data / string needs to be index and converted.
+     * 
+     * @param _native   Native cpp type to convert.
+     * @param _argCount Argument index number.
+     * @return Untyped string for the provided native type.
+     */
     static function toCppUntyped(_native : String, _argCount : Int) : String
     {
         // Special check for 'const char *' and various other similar ones.
