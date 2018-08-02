@@ -1,5 +1,6 @@
 
 using StringTools;
+using Lambda;
 using Main;
 
 typedef CommandProto = {
@@ -122,6 +123,7 @@ class Main
         var major   = args[1];
         var minor   = args[2];
         var profile = args.length > 3 ? args[3] : '';
+        var exts    = args.length > 4 ? args.splice(4, args.length - 4) : [];
 
         // Setup builder and feature structures.
         builder         = new StringBuf();
@@ -135,7 +137,7 @@ class Main
         var reg = xml.firstElement();
 
         // Gather all enums and commands then write them into the string builder.
-        fetch(reg, api, major, minor, profile);
+        fetch(reg, api, major, minor, profile, exts);
         write();
 
         // Save the files content.
@@ -148,12 +150,13 @@ class Main
 
     /**
      * Reads all enums and commands from the gl registry then collect (and remove) enums and commands required by the requested gl feature.
-     * @param _registry The xml registry to search.
-     * @param _profile  The requested opengl profile (core or compatibility).
-     * @param _major    The requested opengl major version.
-     * @param _minor    The requested opengl minor version.
+     * @param _registry   The xml registry to search.
+     * @param _profile    The requested opengl profile (core or compatibility).
+     * @param _major      The requested opengl major version.
+     * @param _minor      The requested opengl minor version.
+     * @param _extensions Any extra requested extensions for these externs.
      */
-    static function fetch(_registry:Xml, _api:String, _major:String, _minor:String, _profile:String) {
+    static function fetch(_registry:Xml, _api:String, _major:String, _minor:String, _profile:String, _extensions:Array<String>) {
         // Fetch all the enums with no api attribute or the 'gl' api attribute (skipping any gles stuff)
         for(glEnums in _registry.elementsNamed('enums')) {
 
@@ -199,13 +202,12 @@ class Main
                 for(glRequire in glFeature.elementsNamed('require')) {
 
                     for(glEnum in glRequire.elementsNamed('enum')) {
-                        if(!Lambda.has(featureEnums, glEnum.get('name'))) {
+                        if(!featureEnums.has(glEnum.get('name'))) {
                             featureEnums.push(glEnum.get('name'));
                         }
                     }
-
                     for(glCommand in glRequire.elementsNamed('command')) {
-                        if(!Lambda.has(featureCommands, glCommand.get('name'))) {
+                        if(!featureCommands.has(glCommand.get('name'))) {
                             featureCommands.push(glCommand.get('name'));
                         }
                     }
@@ -223,6 +225,31 @@ class Main
                     }
                     for(glCommand in glRemove.elementsNamed('command')) {
                         featureCommands.remove(glCommand.get('name'));
+                    }
+                }
+            }
+        }
+
+        // Fetch any extra requested extensions
+        if(_extensions.length == 0) return;
+
+        for(glExtensions in _registry.elementsNamed('extensions')) {
+            for(glExtension in glExtensions.elementsNamed('extension')) {
+
+                // If the current extension has been requested add all of its enums and commands.
+                if(_extensions.has(glExtension.get('name'))) {
+                    for(glRequire in glExtension.elementsNamed('require')) {
+                        
+                        for(glEnum in glRequire.elementsNamed('enum')) {
+                            if(!featureEnums.has(glEnum.get('name'))) {
+                                featureEnums.push(glEnum.get('name'));
+                            }
+                        }
+                        for(glCommand in glRequire.elementsNamed('command')) {
+                            if(!featureCommands.has(glCommand.get('name'))) {
+                                featureCommands.push(glCommand.get('name'));
+                            }
+                        }
                     }
                 }
             }
