@@ -5,7 +5,10 @@
 -neko buildgl.n
 -cmd  neko buildgl.n gl 4 6 core
 
-# arg0 - api type - OpenGL api type to build for. 'gl', 'gles1', 'gles2'
-# arg1 - major    - Major version to request.
-# arg2 - minor    - Minor version to request.
-# arg3 - profile  - profile to request. 'core', 'compatibility'. Not required for gles, defaults to compatibility.
+# arg0 - api type   - OpenGL api type to build for. 'gl', 'gles1', 'gles2'
+# arg1 - major      - Major version to request.
+# arg2 - minor      - Minor version to request.
+# arg3 - profile    - profile to request. 'core', 'compatibility'. Not required for gles, defaults to compatibility.
+# args - extensions - Any other args are assumed to be GL extension names. These extensions will be included in the produced externs.
+
+# e.g. 'neko buildgl.n gl 4 4 core GL_ARB_direct_state_access GL_ARB_sparse_texture'
