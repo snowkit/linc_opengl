@@ -1,6 +1,7 @@
 package opengl;
 
 import haxe.io.BytesData;
+import haxe.io.Bytes;
 
 @:keep
 @:unreflective
@@ -9,13 +10,20 @@ import haxe.io.BytesData;
 extern class GLSync {}
 
 @:keep
-@:include("linc_opengl.h")
+@:allow(opengl.GL)
 #if !display
 @:build(linc.Linc.touch())
 @:build(linc.Linc.xml("opengl"))
 #end
-extern class GL
-{
+extern class GL_linc {
+	private inline static var LINC = 1;
+	@:keep private static inline var force_bytes_include:haxe.io.Bytes = null;
+}
+
+@:keep
+@:include("linc_opengl.h")
+extern class GL {
+	private inline static var LINC = GL_linc.LINC;
 
 	inline static var GL_DEPTH_BUFFER_BIT = 0x00000100;
 
@@ -4431,7 +4439,7 @@ extern class GL
 	inline static function glDebugMessageInsert(_source : Int, _type : Int, _id : Int, _severity : Int, _length : Int, _buf : String) : Void
 		{ return untyped __cpp__("glDebugMessageInsert({0}, {1}, {2}, {3}, {4}, {5})", _source, _type, _id, _severity, _length, _buf); }
 
-	inline static function glDebugMessageCallback(_callback : Void, _userParam : BytesData) : Void
+	inline static function glDebugMessageCallback(_callback : cpp.Callable<Int->Int->Int->Int->Int->cpp.ConstCharStar->cpp.RawPointer<cpp.Void>->Void>, _userParam : BytesData) : Void
 		{ return untyped __cpp__("glDebugMessageCallback({0}, (const void *)&({1}[0]))", _callback, _userParam); }
 
 	inline static function glGetDebugMessageLog(_count : Int, _bufSize : Int, _sources : Array<Int>, _types : Array<Int>, _ids : Array<Int>, _severities : Array<Int>, _lengths : Array<Int>, _messageLog : Array<cpp.UInt8>) : Int

@@ -1,6 +1,4 @@
 
-import haxe.ds.Map;
-
 using StringTools;
 using Main;
 
@@ -9,13 +7,13 @@ typedef CommandProto = {
     /**
      * Name of the function.
      */
-    var name : String;
+    var name:String;
 
     /**
      * Return type of the function.
      * Native cpp type (e.g. void, GLint, const void *).
      */
-    var type : String;
+    var type:String;
 }
 
 typedef CommandParam = {
@@ -23,12 +21,12 @@ typedef CommandParam = {
     /**
      * The name of the parameter.
      */
-    var name : String;
+    var name:String;
 
     /**
      * Parameters native cpp type (e.g. GLenum, const GLchar *).
      */
-    var type : String;
+    var type:String;
 }
 
 typedef Command = {
@@ -36,12 +34,12 @@ typedef Command = {
     /**
      * The prototype for this command.
      */
-    var proto : CommandProto;
+    var proto:CommandProto;
 
     /**
      * All of this commands parameters.
      */
-    var param : Array<CommandParam>;
+    var param:Array<CommandParam>;
 }
 
 class Main
@@ -49,27 +47,27 @@ class Main
     /**
      * String builder to store GL.hx contents.
      */
-    static var builder : StringBuf;
+    static var builder:StringBuf;
 
     /**
      * Map of all enums found in the gl registry.
      */
-    static var enums : Map<String, Xml>;
+    static var enums:Map<String, Xml>;
 
     /**
      * Map of all commands found in the gl registry.
      */
-    static var commands : Map<String, Xml>;
+    static var commands:Map<String, Xml>;
 
     /**
      * All enums required by the requested openGL feature level.
      */
-    static var featureEnums : Array<String>;
+    static var featureEnums:Array<String>;
 
     /**
-     * All commands required by the requestion openGL feature level.
+     * All commands required by the requested openGL feature level.
      */
-    static var featureCommands : Array<String>;
+    static var featureCommands:Array<String>;
 
     /**
      * Map of openGL types to haxe types.
@@ -101,8 +99,9 @@ class Main
         'GLsync'     => 'GLSync',
 
         // Extension types
-        'GLeglClientBufferEXT' => 'cpp.RawPointer<cpp.Void>',
-        'GLeglImageOES'        => 'cpp.RawPointer<cpp.Void>',
+        'GLDEBUGPROC'          => 'cpp.Callable<Int->Int->Int->Int->Int->cpp.ConstCharStar->cpp.RawPointer<cpp.Void>->Void>',
+        'GLeglClientBufferEXT' => 'BytesData',
+        'GLeglImageOES'        => 'BytesData',
         'GLhandleARB'          => 'cpp.UInt32',
         'GLcharARB'            => 'cpp.UInt8',
         'GLhalfARB'            => 'cpp.Float32',
@@ -115,8 +114,7 @@ class Main
         'GLVULKANPROCNV'       => 'Int'
     ];
 
-    public static function main()
-    {
+    public static function main() {
         // get the gl feature info to build.
         // profile is optional for certain apis.
         var args = Sys.args();
@@ -155,32 +153,27 @@ class Main
      * @param _major    The requested opengl major version.
      * @param _minor    The requested opengl minor version.
      */
-    static function fetch(_registry : Xml, _api : String, _major : String, _minor : String, _profile : String)
-    {
+    static function fetch(_registry:Xml, _api:String, _major:String, _minor:String, _profile:String) {
         // Fetch all the enums with no api attribute or the 'gl' api attribute (skipping any gles stuff)
-        for (glEnums in _registry.elementsNamed('enums'))
-        {
-            for (glEnum in glEnums.elementsNamed('enum'))
-            {
-                if (!glEnum.exists('api') || glEnum.get('api') == _api)
-                {
+        for(glEnums in _registry.elementsNamed('enums')) {
+
+            for(glEnum in glEnums.elementsNamed('enum')) {
+
+                if(!glEnum.exists('api') || glEnum.get('api') == _api) {
                     enums.set(glEnum.get('name'), glEnum);
                 }
             }
         }
 
         // Fetch all the commands.
-        for (glCommands in _registry.elementsNamed('commands'))
-        {
-            for (glCommand in glCommands.elementsNamed('command'))
-            {
+        for(glCommands in _registry.elementsNamed('commands')) {
+            for(glCommand in glCommands.elementsNamed('command')) {
+
                 // Find the proto then name element.
                 // Break after the first proto and name element.
                 // There should only even be one per command but you never know.
-                for (proto in glCommand.elementsNamed('proto'))
-                {
-                    for (name in proto.elementsNamed('name'))
-                    {
+                for(proto in glCommand.elementsNamed('proto')) {
+                    for(name in proto.elementsNamed('name')) {
                         commands.set(name.firstChild().nodeValue, glCommand);
 
                         break;
@@ -192,34 +185,27 @@ class Main
         }
 
         // Fetch all the enums and commands for the requested gl version and profile.
-        for (glFeature in _registry.elementsNamed('feature'))
-        {
+        for(glFeature in _registry.elementsNamed('feature')) {
+
             // Only read features which are in the requested api.
-            if (glFeature.get('api') != _api)
-            {
-                continue;
-            }
+            if(glFeature.get('api') != _api) continue;
 
             // Split feature version to make sure its lower or equal to our target feature.
             var version = glFeature.get('number').split('.');
-            if (version[0] < _major || (version[0] == _major && version[1] <= _minor))
-            {
+            if(version[0] < _major || (version[0] == _major && version[1] <= _minor)) {
+
                 // Each feature will have several 'require' tags
                 // They are new enum and commands added in this version.
-                for (glRequire in glFeature.elementsNamed('require'))
-                {
-                    for (glEnum in glRequire.elementsNamed('enum'))
-                    {
-                        if (!Lambda.has(featureEnums, glEnum.get('name')))
-                        {
+                for(glRequire in glFeature.elementsNamed('require')) {
+
+                    for(glEnum in glRequire.elementsNamed('enum')) {
+                        if(!Lambda.has(featureEnums, glEnum.get('name'))) {
                             featureEnums.push(glEnum.get('name'));
                         }
                     }
 
-                    for (glCommand in glRequire.elementsNamed('command'))
-                    {
-                        if (!Lambda.has(featureCommands, glCommand.get('name')))
-                        {
+                    for(glCommand in glRequire.elementsNamed('command')) {
+                        if(!Lambda.has(featureCommands, glCommand.get('name'))) {
                             featureCommands.push(glCommand.get('name'));
                         }
                     }
@@ -227,21 +213,15 @@ class Main
 
                 // Some features will have several 'remove' tags for 'core' profiles
                 // These are enums and commands which are to be removed for core profiles.
-                for (glRemove in glFeature.elementsNamed('remove'))
-                {
-                    // Only do stuff for a remove element if the profiles match.
-                    if (glRemove.get('profile') != _profile)
-                    {
-                        continue;
-                    }
+                for(glRemove in glFeature.elementsNamed('remove')) {
 
-                    for (glEnum in glRemove.elementsNamed('enum'))
-                    {
+                    // Only do stuff for a remove element if the profiles match.
+                    if (glRemove.get('profile') != _profile) continue;
+
+                    for(glEnum in glRemove.elementsNamed('enum')) {
                         featureEnums.remove(glEnum.get('name'));
                     }
-
-                    for (glCommand in glRemove.elementsNamed('command'))
-                    {
+                    for(glCommand in glRemove.elementsNamed('command')) {
                         featureCommands.remove(glCommand.get('name'));
                     }
                 }
@@ -252,19 +232,16 @@ class Main
     /**
      * Write the GL.hx file with the enums and commands required by the requested gl feature.
      */
-    static function write()
-    {
+    static function write() {
         writeHeader();
 
         // Write this profiles enums
-        for (glEnum in featureEnums)
-        {
+        for(glEnum in featureEnums) {
             writeEnum(enums.get(glEnum));
         }
 
         // Write this profiles
-        for (glCommand in featureCommands)
-        {
+        for(glCommand in featureCommands) {
             writeCommand(commands.get(glCommand));
         }
 
@@ -275,11 +252,11 @@ class Main
      * Writes the header for the class.
      * Includes the package, GLsync extern, linc build meta data, and GL extern.
      */
-    static function writeHeader()
-    {
+    static function writeHeader() {
         builder.append('package opengl;').newline();
         builder.newline();
         builder.append('import haxe.io.BytesData;').newline();
+        builder.append('import haxe.io.Bytes;').newline();
         builder.newline();
         builder.append('@:keep').newline();
         builder.append('@:unreflective').newline();
@@ -289,13 +266,22 @@ class Main
 
         builder.newline();
         builder.append('@:keep').newline();
-        builder.append('@:include("linc_opengl.h")').newline();
+        builder.append('@:allow(opengl.GL)').newline();
         builder.append('#if !display').newline();
         builder.append('@:build(linc.Linc.touch())').newline();
         builder.append('@:build(linc.Linc.xml("opengl"))').newline();
         builder.append('#end').newline();
-        builder.append('extern class GL').newline();
-        builder.append('{').newline();
+        builder.append('extern class GL_linc {').newline();
+        builder.append('\t').append('private inline static var LINC = 1;').newline();
+        builder.append('\t').append('@:keep private static inline var force_bytes_include:haxe.io.Bytes = null;').newline();
+        builder.append('}').newline();
+        builder.newline();
+
+        builder.append('@:keep').newline();
+        builder.append('@:include("linc_opengl.h")').newline();
+        builder.append('extern class GL {').newline();
+        builder.append('\t').append('private inline static var LINC = GL_linc.LINC;').newline();
+
         builder.newline();
     }
 
@@ -305,8 +291,7 @@ class Main
      * 
      * @param _enum gl registry <enum> xml element.
      */
-    static function writeEnum(_enum : Xml)
-    {
+    static function writeEnum(_enum:Xml) {
         var name    = _enum.get('name');
         var value   = _enum.get('value');
         var comment = _enum.get('comment');
@@ -315,14 +300,10 @@ class Main
         // If this hex value is a 64bit literal then truncate it as haxe doesn't support 64bit literals
         // https://github.com/HaxeFoundation/haxe/issues/5150
         // Only a few enums have 64 bit literals and they're 0xFFFFFFFFFFFF based
-        if (value.length >= 14)
-        {
-            value = value.substr(0, 8);
-        }
+        if(value.length >= 14) value = value.substr(0, 8);
 
         // If this enum has a comment add it so auto completion will show it.
-        if (comment != null)
-        {
+        if(comment != null) {
             builder.append('\t').append('/**'        ).newline();
             builder.append('\t').append(' * $comment').newline();
             builder.append('\t').append(' */'        ).newline();
@@ -338,19 +319,17 @@ class Main
      * 
      * @param _command gl registry <command> xml element.
      */
-    static function writeCommand(_command : Xml)
-    {
+    static function writeCommand(_command:Xml) {
         var definition = parseCommand(_command);
 
         // First write out the inline function part.
         builder.newline();
         builder.append('\t').append('inline static function ${definition.proto.name}(');
 
-        for (i in 0...definition.param.length)
-        {
+        for(i in 0...definition.param.length) {
             builder.append('_').append(definition.param[i].name).append(' : ').append(toHaxeParamType(definition.param[i].type));
 
-            if (i != definition.param.length - 1) builder.append(', ');
+            if(i != definition.param.length - 1) builder.append(', ');
         }
 
         builder.append(') : ${ toHaxeReturnType(definition.proto.type) }');
@@ -359,25 +338,22 @@ class Main
         builder.newline();
         builder.append('\t\t').append('{ return untyped __cpp__("${definition.proto.name}(');
 
-        for (i in 0...definition.param.length)
-        {
+        for(i in 0...definition.param.length) {
             builder.append(toCppUntyped(definition.param[i].type, i));
 
-            if (i != definition.param.length - 1) builder.append(', ');
+            if(i != definition.param.length - 1) builder.append(', ');
         }
 
         builder.append(')"');
 
         // Then finally write the haxe argument names into the untyped section.
-        if (definition.param.length > 0)
-        {
+        if(definition.param.length > 0) {
             builder.append(', ');
 
-            for (i in 0...definition.param.length)
-            {
+            for(i in 0...definition.param.length) {
                 builder.append('_').append(definition.param[i].name);
 
-                if (i != definition.param.length - 1) builder.append(', ');
+                if(i != definition.param.length - 1) builder.append(', ');
             }
         }
 
@@ -390,8 +366,7 @@ class Main
      * Writes the footer for the GL class.
      * Simply writes a closing curly bracket.
      */
-    static function writeFooter()
-    {
+    static function writeFooter() {
         builder.newline();
         builder.append('}').newline();
     }
@@ -403,21 +378,21 @@ class Main
      * @param _xml Xml to parse.
      * @return Command
      */
-    static function parseCommand(_xml : Xml) : Command
-    {
-        var proto : CommandProto = null;
+    static function parseCommand(_xml:Xml) : Command {
+        var proto:CommandProto = null;
         var param = new Array<CommandParam>();
 
-        for (element in _xml.elements())
-        {
-            switch (element.nodeName)
-            {
+        for(element in _xml.elements()) {
+            switch(element.nodeName) {
                 case 'proto': proto = parseCommandProto(element);
                 case 'param': param.push(parseCommandParam(element));
             }
         }
 
-        return { proto : proto, param : param };
+        return {
+            proto : proto,
+            param : param
+        };
     }
 
     /**
@@ -427,17 +402,14 @@ class Main
      * @param _xml Xml to parse.
      * @return CommandProto
      */
-    static function parseCommandProto(_xml : Xml) : CommandProto
-    {
+    static function parseCommandProto(_xml:Xml) : CommandProto {
         var name = '';
         var type = '';
 
-        for (child in _xml)
-        {
-            switch (child.nodeType) {
+        for(child in _xml) {
+            switch(child.nodeType) {
                 case Element, Document:
-                    switch (child.nodeName)
-                    {
+                    switch(child.nodeName) {
                         case 'name' : name = child.firstChild().nodeValue;
                         case 'ptype': type = child.firstChild().nodeValue;
                     }
@@ -446,7 +418,10 @@ class Main
             }
         }
 
-        return { name : name, type : type };
+        return {
+            name : name,
+            type : type
+        };
     }
 
     /**
@@ -456,18 +431,15 @@ class Main
      * @param _xml Xml to parse.
      * @return CommandParam
      */
-    static function parseCommandParam(_xml : Xml) : CommandParam
-    {
+    static function parseCommandParam(_xml:Xml) : CommandParam {
         var name = '';
         var type = '';
 
-        for (child in _xml)
-        {
-            switch (child.nodeType) {
+        for(child in _xml) {
+            switch(child.nodeType) {
                 // Name or GL Type element.
                 case Element, Document:
-                    switch (child.nodeName)
-                    {
+                    switch(child.nodeName) {
                         case 'name' : name = child.firstChild().nodeValue;
                         case 'ptype': type += child.firstChild().nodeValue;
                     }
@@ -478,7 +450,10 @@ class Main
             }
         }
         
-        return { name : name, type : type };
+        return {
+            name : name,
+            type : type
+        };
     }
 
     /**
@@ -489,23 +464,22 @@ class Main
      * @param _native Native cpp type to convert.
      * @return Haxe parameter type for the native cpp type.
      */
-    static function toHaxeParamType(_native : String) : String
-    {
+    static function toHaxeParamType(_native:String) : String {
         // Special check for 'const char *' and various other similar ones.
         // These can be converted to a haxe 'String'
-        if (_native == 'const GLchar *' || _native == 'const GLcharARB *') return 'String';
+        if(_native == 'const GLchar *' || _native == 'const GLcharARB *') return 'String';
 
         // Special check for array of strings
         // Used for shader source functions.
-        if (_native == 'const GLchar *const*' || _native == 'const GLcharARB **') return 'Array<String>';
+        if(_native == 'const GLchar *const*' || _native == 'const GLcharARB **') return 'Array<String>';
 
         // Special check for non GL types.
         // These are all void pointers of some sorts
-        if (_native == 'const void *' || _native == 'void *') return 'BytesData';
+        if(_native == 'const void *' || _native == 'void *') return 'BytesData';
 
         // Special check for const UInt8 pointer.
         // This will be image data so have the haxe type be bytes data.
-        if (_native == 'const GLbyte *') return 'BytesData';
+        if(_native == 'const GLbyte *') return 'BytesData';
 
         // Then check normal GL types and pointer wrappers
 
@@ -513,33 +487,26 @@ class Main
         // We cannot check if a string contains a string equivilent of a GL types due to ARB, and other extension types being named the same with different postfixes.
         var typeParts = _native.split(' ');
 
-        for (part in typeParts)
-        {
-            for (type in glTypes.keys())
-            {
-                if (part == type)
-                {
+        for(part in typeParts) {
+            for(type in glTypes.keys()) {
+                if(part == type) {
+
                     // Remove the GL type so we only have the pointer stuff remaining
                     typeParts.remove(type);
 
                     var remaining = typeParts.join('').replace(' ', '');
-                    if (remaining == '')
-                    {
+                    if(remaining == '') {
+
                         // If there is no remaining type data then we pass a haxe type back.
-                        if (glTypes.exists(type))
-                        {
+                        if (glTypes.exists(type)) {
                             return glTypes.get(type);
-                        }
-                        else
-                        {
+                        } else {
                             throw 'unknown openGL type $type';
                         }
-                    }
-                    else
-                    {
+                    } else {
+
                         // If there is still data left that means the type is wrapped as a pointer
-                        return switch (remaining)
-                        {
+                        return switch (remaining) {
                             case '*', '[2]', 'const*' : 'Array<${ glTypes.get(type) }>';
                             case 'const**', 'const*const*' : 'Array<Array<${ glTypes.get(type) }>>';
                             case unknown: throw 'unknown pointer type "$unknown"';
@@ -559,16 +526,15 @@ class Main
      * @param _native Native cpp type to convert.
      * @return Haxe return type for the native cpp type.
      */
-    static function toHaxeReturnType(_native : String) : String
-    {
+    static function toHaxeReturnType(_native:String) : String {
         // Special check for 'const char *' and various other similar ones.
         // These can be converted to a haxe 'String'
-        if (_native == 'const GLchar *' || _native == 'const GLcharARB *') return 'String';
+        if(_native == 'const GLchar *' || _native == 'const GLcharARB *') return 'String';
 
         // Special check for non GL types.
         // These are all void pointers of some sorts
-        if (_native == 'const void *') return 'cpp.RawConstPointer<cpp.Void>';
-        if (_native == 'void *') return 'cpp.RawPointer<cpp.Void>';
+        if(_native == 'const void *') return 'cpp.RawConstPointer<cpp.Void>';
+        if(_native == 'void *') return 'cpp.RawPointer<cpp.Void>';
 
         // Then check normal GL types and pointer wrappers
 
@@ -576,33 +542,26 @@ class Main
         // We cannot check if a string contains a string equivilent of a GL types due to ARB, and other extension types being named the same with different postfixes.
         var typeParts = _native.split(' ');
 
-        for (part in typeParts)
-        {
-            for (type in glTypes.keys())
-            {
-                if (part == type)
-                {
+        for(part in typeParts) {
+            for(type in glTypes.keys()) {
+                if(part == type) {
+
                     // Remove the GL type so we only have the pointer stuff remaining
                     typeParts.remove(type);
 
                     var remaining = typeParts.join('').replace(' ', '');
-                    if (remaining == '')
-                    {
+                    if (remaining == '') {
+
                         // If there is no remaining type data then we pass a haxe type back.
-                        if (glTypes.exists(type))
-                        {
+                        if (glTypes.exists(type)) {
                             return glTypes.get(type);
-                        }
-                        else
-                        {
+                        } else {
                             throw 'unknown openGL type $type';
                         }
-                    }
-                    else
-                    {
+                    } else {
+
                         // If there is still data left that means the type is wrapped as a pointer
-                        return switch (remaining)
-                        {
+                        return switch (remaining) {
                             case '*', '[2]'    : 'cpp.RawPointer<${ glTypes.get(type) }>';
                             case 'const*'      : 'cpp.RawConstPointer<${ glTypes.get(type) }>';
                             case 'const**'     : 'cpp.RawPointer<cpp.RawConstPointer<${ glTypes.get(type) }>>';
@@ -626,38 +585,32 @@ class Main
      * @param _argCount Argument index number.
      * @return Untyped string for the provided native type.
      */
-    static function toCppUntyped(_native : String, _argCount : Int) : String
-    {
+    static function toCppUntyped(_native:String, _argCount:Int) : String {
         // Special check for 'const char *' and various other similar ones.
         // These can be converted to a haxe 'String'
-        if (_native == 'const GLchar *' || _native == 'const GLcharARB *') return '{$_argCount}';
+        if(_native == 'const GLchar *' || _native == 'const GLcharARB *') return '{$_argCount}';
 
         // Special check for array of strings.
-        if (_native == 'const GLchar *const*' || _native == 'const GLcharARB **') return '(const GLint *)&({$_argCount}[0])';
+        if(_native == 'const GLchar *const*' || _native == 'const GLcharARB **') return '(const GLint *)&({$_argCount}[0])';
 
         // Special check for non GL types.
         // These are all void pointers of some sorts
-        if (_native == 'const void *' || _native == 'void *') return '($_native)&({$_argCount}[0])';
+        if(_native == 'const void *' || _native == 'void *' || _native == 'GLeglImageOES' || _native == 'GLeglClientBufferEXT') return '($_native)&({$_argCount}[0])';
 
-        // 
+        // Split parts by space to separate any GL types from pointer modifiers
+        // We cannot check if a string contains a string equivilent of a GL types due to ARB, and other extension types being named the same with different postfixes.
         var typeParts = _native.split(' ');
 
-        for (part in typeParts)
-        {
-            for (type in glTypes.keys())
-            {
-                if (part == type)
-                {
+        for(part in typeParts) {
+            for(type in glTypes.keys()) {
+                if(part == type) {
                     // Remove the GL type so we only have the pointer stuff remaining
                     typeParts.remove(type);
 
                     var remaining = typeParts.join('').replace(' ', '');
-                    if (remaining == '')
-                    {
+                    if (remaining == '') {
                         return '{$_argCount}';
-                    }
-                    else
-                    {
+                    } else {
                         return '($_native)&({$_argCount}[0])';
                     }
                 }
@@ -670,15 +623,13 @@ class Main
     // Static extension helpers for string buffers
     // both allow the functions to be chained.
 
-    static function append(_buffer : StringBuf, _text : String) : StringBuf
-    {
+    static function append(_buffer:StringBuf, _text:String) : StringBuf {
         _buffer.add(_text);
 
         return _buffer;
     }
 
-    static function newline(_buffer : StringBuf) : StringBuf
-    {
+    static function newline(_buffer:StringBuf) : StringBuf {
         _buffer.add('\r\n');
 
         return _buffer;
