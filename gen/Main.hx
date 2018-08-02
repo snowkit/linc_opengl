@@ -7,13 +7,13 @@ typedef CommandProto = {
     /**
      * Name of the function.
      */
-    var name : String;
+    var name:String;
 
     /**
      * Return type of the function.
      * Native cpp type (e.g. void, GLint, const void *).
      */
-    var type : String;
+    var type:String;
 }
 
 typedef CommandParam = {
@@ -21,12 +21,12 @@ typedef CommandParam = {
     /**
      * The name of the parameter.
      */
-    var name : String;
+    var name:String;
 
     /**
      * Parameters native cpp type (e.g. GLenum, const GLchar *).
      */
-    var type : String;
+    var type:String;
 }
 
 typedef Command = {
@@ -34,12 +34,12 @@ typedef Command = {
     /**
      * The prototype for this command.
      */
-    var proto : CommandProto;
+    var proto:CommandProto;
 
     /**
      * All of this commands parameters.
      */
-    var param : Array<CommandParam>;
+    var param:Array<CommandParam>;
 }
 
 class Main
@@ -47,27 +47,27 @@ class Main
     /**
      * String builder to store GL.hx contents.
      */
-    static var builder : StringBuf;
+    static var builder:StringBuf;
 
     /**
      * Map of all enums found in the gl registry.
      */
-    static var enums : Map<String, Xml>;
+    static var enums:Map<String, Xml>;
 
     /**
      * Map of all commands found in the gl registry.
      */
-    static var commands : Map<String, Xml>;
+    static var commands:Map<String, Xml>;
 
     /**
      * All enums required by the requested openGL feature level.
      */
-    static var featureEnums : Array<String>;
+    static var featureEnums:Array<String>;
 
     /**
      * All commands required by the requested openGL feature level.
      */
-    static var featureCommands : Array<String>;
+    static var featureCommands:Array<String>;
 
     /**
      * Map of openGL types to haxe types.
@@ -153,7 +153,7 @@ class Main
      * @param _major    The requested opengl major version.
      * @param _minor    The requested opengl minor version.
      */
-    static function fetch(_registry : Xml, _api : String, _major : String, _minor : String, _profile : String) {
+    static function fetch(_registry:Xml, _api:String, _major:String, _minor:String, _profile:String) {
         // Fetch all the enums with no api attribute or the 'gl' api attribute (skipping any gles stuff)
         for(glEnums in _registry.elementsNamed('enums')) {
 
@@ -256,6 +256,7 @@ class Main
         builder.append('package opengl;').newline();
         builder.newline();
         builder.append('import haxe.io.BytesData;').newline();
+        builder.append('import haxe.io.Bytes;').newline();
         builder.newline();
         builder.append('@:keep').newline();
         builder.append('@:unreflective').newline();
@@ -265,13 +266,22 @@ class Main
 
         builder.newline();
         builder.append('@:keep').newline();
-        builder.append('@:include("linc_opengl.h")').newline();
+        builder.append('@:allow(opengl.GL)').newline();
         builder.append('#if !display').newline();
         builder.append('@:build(linc.Linc.touch())').newline();
         builder.append('@:build(linc.Linc.xml("opengl"))').newline();
         builder.append('#end').newline();
-        builder.append('extern class GL').newline();
-        builder.append('{').newline();
+        builder.append('extern class GL_linc {').newline();
+        builder.append('\t').append('private inline static var LINC = 1;').newline();
+        builder.append('\t').append('@:keep private static inline var force_bytes_include:haxe.io.Bytes = null;').newline();
+        builder.append('}').newline();
+        builder.newline();
+
+        builder.append('@:keep').newline();
+        builder.append('@:include("linc_opengl.h")').newline();
+        builder.append('extern class GL {').newline();
+        builder.append('\t').append('private inline static var LINC = GL_linc.LINC;').newline();
+
         builder.newline();
     }
 
@@ -281,7 +291,7 @@ class Main
      * 
      * @param _enum gl registry <enum> xml element.
      */
-    static function writeEnum(_enum : Xml) {
+    static function writeEnum(_enum:Xml) {
         var name    = _enum.get('name');
         var value   = _enum.get('value');
         var comment = _enum.get('comment');
@@ -309,7 +319,7 @@ class Main
      * 
      * @param _command gl registry <command> xml element.
      */
-    static function writeCommand(_command : Xml) {
+    static function writeCommand(_command:Xml) {
         var definition = parseCommand(_command);
 
         // First write out the inline function part.
@@ -368,8 +378,8 @@ class Main
      * @param _xml Xml to parse.
      * @return Command
      */
-    static function parseCommand(_xml : Xml) : Command {
-        var proto : CommandProto = null;
+    static function parseCommand(_xml:Xml) : Command {
+        var proto:CommandProto = null;
         var param = new Array<CommandParam>();
 
         for(element in _xml.elements()) {
@@ -392,7 +402,7 @@ class Main
      * @param _xml Xml to parse.
      * @return CommandProto
      */
-    static function parseCommandProto(_xml : Xml) : CommandProto {
+    static function parseCommandProto(_xml:Xml) : CommandProto {
         var name = '';
         var type = '';
 
@@ -421,7 +431,7 @@ class Main
      * @param _xml Xml to parse.
      * @return CommandParam
      */
-    static function parseCommandParam(_xml : Xml) : CommandParam {
+    static function parseCommandParam(_xml:Xml) : CommandParam {
         var name = '';
         var type = '';
 
@@ -454,7 +464,7 @@ class Main
      * @param _native Native cpp type to convert.
      * @return Haxe parameter type for the native cpp type.
      */
-    static function toHaxeParamType(_native : String) : String {
+    static function toHaxeParamType(_native:String) : String {
         // Special check for 'const char *' and various other similar ones.
         // These can be converted to a haxe 'String'
         if(_native == 'const GLchar *' || _native == 'const GLcharARB *') return 'String';
@@ -516,7 +526,7 @@ class Main
      * @param _native Native cpp type to convert.
      * @return Haxe return type for the native cpp type.
      */
-    static function toHaxeReturnType(_native : String) : String {
+    static function toHaxeReturnType(_native:String) : String {
         // Special check for 'const char *' and various other similar ones.
         // These can be converted to a haxe 'String'
         if(_native == 'const GLchar *' || _native == 'const GLcharARB *') return 'String';
@@ -575,7 +585,7 @@ class Main
      * @param _argCount Argument index number.
      * @return Untyped string for the provided native type.
      */
-    static function toCppUntyped(_native : String, _argCount : Int) : String {
+    static function toCppUntyped(_native:String, _argCount:Int) : String {
         // Special check for 'const char *' and various other similar ones.
         // These can be converted to a haxe 'String'
         if(_native == 'const GLchar *' || _native == 'const GLcharARB *') return '{$_argCount}';
@@ -613,13 +623,13 @@ class Main
     // Static extension helpers for string buffers
     // both allow the functions to be chained.
 
-    static function append(_buffer : StringBuf, _text : String) : StringBuf {
+    static function append(_buffer:StringBuf, _text:String) : StringBuf {
         _buffer.add(_text);
 
         return _buffer;
     }
 
-    static function newline(_buffer : StringBuf) : StringBuf {
+    static function newline(_buffer:StringBuf) : StringBuf {
         _buffer.add('\r\n');
 
         return _buffer;
