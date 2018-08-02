@@ -100,8 +100,8 @@ class Main
 
         // Extension types
         'GLDEBUGPROC'          => 'cpp.Callable<Int->Int->Int->Int->Int->cpp.ConstCharStar->cpp.RawPointer<cpp.Void>->Void>',
-        'GLeglClientBufferEXT' => 'cpp.RawPointer<cpp.Void>',
-        'GLeglImageOES'        => 'cpp.RawPointer<cpp.Void>',
+        'GLeglClientBufferEXT' => 'BytesData',
+        'GLeglImageOES'        => 'BytesData',
         'GLhandleARB'          => 'cpp.UInt32',
         'GLcharARB'            => 'cpp.UInt8',
         'GLhalfARB'            => 'cpp.Float32',
@@ -585,7 +585,7 @@ class Main
 
         // Special check for non GL types.
         // These are all void pointers of some sorts
-        if(_native == 'const void *' || _native == 'void *') return '($_native)&({$_argCount}[0])';
+        if(_native == 'const void *' || _native == 'void *' || _native == 'GLeglImageOES' || _native == 'GLeglClientBufferEXT') return '($_native)&({$_argCount}[0])';
 
         // Split parts by space to separate any GL types from pointer modifiers
         // We cannot check if a string contains a string equivilent of a GL types due to ARB, and other extension types being named the same with different postfixes.
