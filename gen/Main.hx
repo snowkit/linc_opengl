@@ -99,6 +99,7 @@ class Main
         'GLsync'     => 'GLSync',
 
         // Extension types
+        'GLDEBUGPROC'          => 'cpp.Callable<Int->Int->Int->Int->Int->cpp.ConstCharStar->cpp.RawPointer<cpp.Void>->Void>',
         'GLeglClientBufferEXT' => 'cpp.RawPointer<cpp.Void>',
         'GLeglImageOES'        => 'cpp.RawPointer<cpp.Void>',
         'GLhandleARB'          => 'cpp.UInt32',
